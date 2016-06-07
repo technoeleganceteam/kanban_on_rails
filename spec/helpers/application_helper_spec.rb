@@ -26,7 +26,7 @@ describe ApplicationHelper, :type => :helper do
       @issue = create :issue, :github_labels => [[[], ['name', 'foo'], ['color', 'bar']]], :tags => ['foo']
     end
 
-    it 'return blue' do
+    it 'return css rules' do
       expect(helper.issue_tag_color(@issue, 'foo')).to eq 'background-color: #bar;color:black;'
     end
   end
