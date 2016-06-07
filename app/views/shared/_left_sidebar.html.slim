@@ -3,6 +3,6 @@
     .list-group-item.list-group-item-info 
       = t '.projects'
     - current_user.projects.order('created_at DESC').limit(5).each do |project|
-      = link_to project_url(project), :class => 'list-group-item' do
+      = link_to project_url(project), :class => 'list-group-item truncate' do
         = project.name 
-        span.badge = project.issues.size
+        .badge = project.issues.size
