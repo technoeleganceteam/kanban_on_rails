@@ -118,6 +118,10 @@ en: &all
       select_column_tags: Select column tags
       select_section_tags: Select section tags
       select_issue_tags: Select issue tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
   users:
     new:
       invite_user: Invite user
