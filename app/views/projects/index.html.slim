@@ -14,7 +14,7 @@ ul.list-group#infinite_scroll_projects
           | &nbsp;
 
       - if current_user.sync_with_bitbucket.present? && current_user.sync_with_bitbucket == true
-        = link_to (t '.stop_sync_with_github'), stop_sync_with_bitbucket_user_projects_url(current_user),
+        = link_to (t '.stop_sync_with_bitbucket'), stop_sync_with_bitbucket_user_projects_url(current_user),
           :class => 'btn btn-success btn-xs', :remote => true
 
         | &nbsp;
