@@ -18,7 +18,8 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
 
     - if issue_to_section_connection.issue.bitbucket_issue_id.present?
       | &nbsp;
-      = link_to "https://bitbucket.org/#{ issue_to_section_connection.issue.project.bitbucket_full_name }/" +\
+      = link_to "#{ Settings.bitbucket_base_url }/" +\
+        "#{ issue_to_section_connection.issue.project.bitbucket_full_name }/" +\
         "issues/#{ issue_to_section_connection.issue.bitbucket_issue_id }" do
         i.fa.fa-bitbucket
 

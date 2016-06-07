@@ -1,7 +1,8 @@
 class Project < ActiveRecord::Base
   store_accessor :meta, :github_repository_id, :github_name, :github_full_name,
     :is_github_repository, :is_bitbucket_repository, :bitbucket_name, :bitbucket_owner,
-    :bitbucket_slug, :bitbucket_full_name, :github_secret_token_for_hook, :bitbucket_secret_token_for_hook
+    :bitbucket_slug, :bitbucket_full_name, :github_secret_token_for_hook, :bitbucket_secret_token_for_hook,
+    :github_url
 
   has_many :users, :through => :user_to_project_connections
 

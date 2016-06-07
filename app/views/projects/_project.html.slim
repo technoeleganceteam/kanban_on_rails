@@ -6,7 +6,15 @@ li.list-group-item
 
     span.badge = project.issues.size
 
-  | &nbsp;
+  - if project.github_url.present?
+    | &nbsp;
+    = link_to project.github_url do
+      i.fa.fa-github
+
+  - if project.bitbucket_full_name.present?
+    | &nbsp;
+    = link_to "#{ Settings.bitbucket_base_url }/#{ project.bitbucket_full_name }" do
+      i.fa.fa-bitbucket
 
   .pull-right
     = link_to (t '.project_users'), project_users_url(project), :class => 'btn btn-default btn-xs'

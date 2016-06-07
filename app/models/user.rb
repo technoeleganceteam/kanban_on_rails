@@ -179,6 +179,8 @@ class User < ActiveRecord::Base
 
       project.github_name = repo.name
 
+      project.github_url = repo.html_url
+
       project.github_full_name = repo.full_name
 
       project.is_github_repository = true

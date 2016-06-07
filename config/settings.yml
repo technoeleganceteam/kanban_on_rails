@@ -11,3 +11,4 @@ max_column_width: 10000
 production_server_deploy_host: kanbanonrails.com
 git_repository: git@github.com:technoeleganceteam/kanban_on_rails.git
 github_repository_url: https://github.com/technoeleganceteam/kanban_on_rails
+bitbucket_base_url: https://bitbucket.com
