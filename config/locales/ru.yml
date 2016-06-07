@@ -1,0 +1,303 @@
+---
+ru:
+  github: Github
+  bitbucket: BitBucket
+  updated: обновлено
+  1_we_have_just_launched_our_service_title: Мы только что запустили наш сервис
+  shared:
+    navbar:
+      sign_in: Вход
+      sign_up: Зарегистрируйтесь
+      projects: Проекты
+      issues: Задачи
+      syncing_with_github: Синхронизация с Github ...
+      syncing_with_bitbucket: Синхронизация с Bitbucket ...
+      new_issue: Новая задача
+      edit_project: Изменить проект
+    languages_select_modal:
+      available_languages: Доступные языки
+    user_edit_menu:
+      profile: Профиль
+      site_settings: Настройки сайта
+      services: Сервисы
+    form_errors:
+      password: Пароль
+      current_password: Текущий пароль
+      name: Имя
+      base: Базовые
+      title: Название
+      user_to_project_connection: Связть пользователя с проектом
+      columns:
+        tag: Перекрытие тегов
+    new_project_modal:
+      new_project: Новый проект
+    edit_project_modal:
+      edit_project: Изменить проект
+    new_issue_modal:
+      new_issue: Новая задача
+    left_sidebar:
+      projects: Проекты
+    right_sidebar:
+      news: Новости
+      all: Все
+      read_more: Подробнее
+    translations:
+      select_column_tags: Выберите теги столбцов
+      select_section_tags: Выберите теги раздела
+      select_issue_tags: Выберите теги задачи
+  users:
+    new:
+      invite_user: Пригласить пользователя
+    form:
+      name: Имя
+      enter_user_name: Введите имя пользователя
+      email: E-mail
+      enter_user_email: Введите электронную почту пользователя
+      enter_user_password: Введите пароль пользователя
+      password: Пароль
+      save: Сохранить
+    index:
+      project: Проекты
+      users: Пользователи
+      new: Новый
+    edit:
+      name: Имя
+      enter_your_name: Введите свое имя
+      save: Сохранить
+    settings:
+      change_password: Изменение пароля
+      interface_language: Язык интерфейса
+      submit: Отправить
+    password_form:
+      new_password: Новый пароль
+      confirm_new_password: Подтвердите новый пароль
+      old_password: Старый пароль
+      change_password: Изменение пароля
+    update:
+      your_profile_was_successfully_updated: Ваш профиль был успешно обновлен
+    dashboard:
+      hello: Добро пожаловать
+      here_some_of_your_statistics: Вот немного вашей статистики
+      projects: Проекты
+  projects:
+    index:
+      projects: Проекты
+      new: Новый
+      sync_with_github: Синхронизация с GitHub
+      sync_with_bitbucket: Синхронизация с BitBucket
+      stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
+      stop_sync_with_github: Остановка синхронизации с GitHub
+    form:
+      name: Имя
+      enter_project_name: Введите имя проекта
+      save: Сохранить
+      columns: Столбцы
+      sections: Разделы
+      add: Добавить
+      github_repository_id: Github Id репозитория
+      github_full_name: Github репозиторий fullname
+      github_secret_token_for_hook: Github секретный token для создания хука
+      bitbucket_full_name: BitBucket FullName
+      bitbucket_secret_token_for_hook: BitBucket секретный token для хука
+    project:
+      edit: Редактировать
+      destroy: Удалить
+      project_issues: Задачи проекта
+      project_users: Пользователи проекта
+    section_fields:
+      remove_section: Удалить раздел
+      section_tags: Теги раздела
+      section_order: Порядок
+      or_include_all: Или включать все?
+    column_fields:
+      remove_column: Удалить столбец
+      column_tags: Теги столбца
+      column_order: Порядок
+    show:
+      next_page: Следующая страница
+  issues:
+    form:
+      title: Название
+      enter_issue_title: Введите название задачи
+      save: Сохранить
+      body: Описание
+      enter_issue_body: Введите описание задачи
+      tags: Теги
+      issue_order: Порядок
+      bitbucket_issue_id: BitBucket Id задачи
+      github_issue_id: Github Id задачи
+      github_issue_number: Github номер задачи
+    index:
+      issues: Задачи
+      sync_with_github: Синхронизация с GitHub
+      sync_with_bitbucket: Синхронизация с BitBucket
+      new: Новая
+    issue:
+      destroy: Удалить
+      edit: Редактировать
+    edit:
+      edit_issue: Изменить задачу
+    new:
+      new_issue: Новая задача
+  authentications:
+    index:
+      enabled_services: Включенные сервисы
+    authentication:
+      turned_off: Выключено
+      turn_on: Включить
+      turn_off: Выключить
+      turned_on: Включено
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Мы только что запустили наш сервис!
+      we_have_just_launched_our_service_text: Сегодня мы запускаем наш сервис так
+        что каждый может
+      sign_up: зарегистрироваться
+      and_use_it: и использовать его.
+      with_love: С любовью,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Все новости
+      read_more: Подробнее
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Добро пожаловать на Kanban On Rails
+      welcome_about_text: Здесь вы можете создать свою собственную Канбан доску и
+        синхронизировать её с Github или Bitbucket
+  pages:
+    faq:
+      faq: Часто задаваемые вопросы
+      what_is_kanban_on_rails: Что такое KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails это сервис, где вы можете создавать Kanban
+        доски и синхронизировать их с Github или Bitbucket
+      what_features_has_kanban_on_rails: Какие особенности имеет KanbanOnRails?
+      kanban_on_rails_features: Вы можете синхронизировать ваши проекты и задачи
+        с Github и Bitbucket, приглашать пользователей (например менеджеров) для вашего
+        проекта, развернуть его на своём собственном сервере
+      i_have_some_requests: У меня есть несколько пожеланий
+      you_can_write_request: Вы можете написать пожелание
+      here: сюда
+      i_have_seen_some_typo_or_wrong_translation: Я увидел опечатку или неправильный
+        перевод
+      you_can_send_pull_request_to_our: Вы можете отправить запрос на наш тянуть
+      i_have_seen_some_error: Я увидел ошибку
+      you_can_write_to_our_info_mail: Вы можете написать об этом на электронный адрес
+    about:
+      about_kanban_on_rails: О KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails это сервис, где вы можете создавать
+        Kanban доски и синхронизировать их с Github или Bitbucket
+      kanban_on_rails_features: Особенности KanbanOnRails
+      sync_with_github_and_bitbucket: Вы можете синхронизировать ваши проекты и задачи
+        с Github и Bitbucket
+      invite_users: Вы можете приглашать пользователей (например менеджеров) для вашего
+        проекта
+      open_source_code: Этот проект с открытым исходным кодом, так что вы можете развернуть
+        его на своём собственном сервере
+      we_use_open_source_and_high_technology: Мы используем передовые технологии и библиотеки с открытым исходным кодом. Мы постоянно развиваемся и стараемся сделать наш сервис лучше.
+      partners_and_investors: Мы открыты для партнёров и инвесторов. Если вы хотите сотрудничать с нами пишите на partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Вход
+        sign_up: Зарегистрируйтесь
+        didnt_receive_confirmation_instructions: Не получили инструкции подтверждения?
+        sign_in_with: Войти через
+    confirmations:
+      confirmed: Ваш аккаунт был успешно подтвержден.
+      send_instructions: Вы получите письмо с инструкциями о том, как подтвердить
+        свой емейл в течение нескольких минут.
+      send_paranoid_instructions: Если ваш адрес электронной почты существует в нашей
+        базе данных, Вы получите электронное письмо с инструкциями о том, как подтвердить
+        свой емейл в течение нескольких минут.
+      new:
+        send_mail_for_confirm_your_email: Отправить инструкцию для подтверждения вашего емейла
+        submit: Отправить
+    failure:
+      already_authenticated: Вы уже вошли в систему.
+      inactive: Ваш емейл еще не активирован.
+      invalid: Неверный адрес электронной почты или пароль.
+      locked: Ваш емейл заблокирован.
+      last_attempt: У вас есть еще одна попытка, прежде чем ваша учетная запись будет
+        заблокирована.
+      not_found_in_database: Неверный адрес электронной почты или пароль.
+      timeout: Вашей сессии истек. Пожалуйста, войдите в систему еще раз, чтобы продолжить.
+      unauthenticated: Вы должны войти или зарегистрироваться, прежде чем продолжить.
+      unconfirmed: Вы должны подтвердить свой аккаунт, прежде чем продолжить.
+    mailer:
+      confirmation_instructions:
+        subject: инструкции подтверждения
+        welcome_to_kanban_on_rails: Добро пожаловать в KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Вы можете подтвердить
+          свою электронную почту через ссылку ниже
+        confirm_my_account: Подтвердите свой e-mail
+      reset_password_instructions:
+        hello: Привет
+        subject: Сброс пароля инструкции
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Кто-то
+          запрашивает ссылку на изменение пароля. Вы можете сделать это по ссылке
+          ниже.
+        change_my_password: Изменение пароля
+        if_you_didnt_request_this_please_ignore_this_email: Если вы не запрашивали
+          это не обращайте внимания на это письмо.
+      unlock_instructions:
+        subject: Разблокировка Инструкции
+    omniauth_callbacks:
+      failure: Не удалось проверить подлинность вас от {%} рода, потому что "% {причина}".
+      success: успешно прошел проверку подлинности от {%} любезное внимание.
+    passwords:
+      no_token: Вы не можете получить доступ к этой странице, не приходя от электронной
+        почты сброса пароля. Если вы пришли из электронной почты для сброса пароля,
+        пожалуйста, убедитесь, что вы использовали полный URL при условии.
+      send_instructions: Вы получите письмо с инструкциями о том, как сбросить пароль
+        в течение нескольких минут.
+      send_paranoid_instructions: Если ваш адрес электронной почты существует в нашей
+        базе данных, вы получите ссылку для восстановления пароля на ваш адрес электронной
+        почты в течение нескольких минут.
+      updated: Ваш пароль был успешно изменен. Вы вошли в систему.
+      updated_not_active: Ваш пароль был успешно изменен.
+      new:
+        forgot_your_password: Восстановить пароль
+        reset_password: Отправить восстановить URL
+      edit:
+        change_your_password: Изменить пароль
+        new_password: Новый пароль
+        confirm_password: Подтверждение пароля
+        change_password: Изменение
+    registrations:
+      destroyed: Bye! Ваша учетная запись была успешно отменена. Мы надеемся увидеть
+        Вас снова скоро.
+      signed_up: Добро пожаловать! Вы подписались успешно.
+      signed_up_but_inactive: Вы подписались успешно. Тем не менее, мы не могли подписать
+        вас в потому, что ваша учетная запись еще не активирована.
+      signed_up_but_locked: Вы подписались успешно. Тем не менее, мы не могли подписать
+        вас в потому, что ваша учетная запись будет заблокирована.
+      signed_up_but_unconfirmed: сообщение с ссылкой для подтверждения было отправлено
+        на ваш электронный адрес. Пожалуйста, откройте ссылку, чтобы активировать
+        свою учетную запись.
+      update_needs_confirmation: Вы обновили свой аккаунт успешно, но нам нужно подтвердить
+        свой новый адрес электронной почты. Пожалуйста, проверьте свою электронную
+        почту и нажмите на ссылку подтверждения, чтобы завершить подтвердив свой новый
+        адрес электронной почты.
+      updated: Вы обновили свой аккаунт успешно.
+      new:
+        sign_up: Зарегистрируйтесь
+        name: Имя
+        password: Пароль
+        register: Зарегистрируйтесь
+    sessions:
+      signed_in: Вошли успешно.
+      signed_out: Подпись успешно.
+      new:
+        sign_in: Вход
+        password: Пароль
+        remember_me: Запомнить меня
+        forgot_your_password: Забыли пароль?
+    unlocks:
+      send_instructions: Вы получите письмо с инструкциями о том, как разблокировать
+        свой аккаунт через несколько минут.
+      send_paranoid_instructions: Если ваша учетная запись существует, то вы получите
+        письмо с инструкциями о том, как разблокировать его в течение нескольких минут.
+      unlocked: Ваш аккаунт был успешно разблокирован. Пожалуйста, войдите в систему,
+        чтобы продолжить.
+  ru: ru
+  ru_iso: ru

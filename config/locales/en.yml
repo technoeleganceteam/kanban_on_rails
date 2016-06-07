@@ -1,0 +1,359 @@
+en: &all
+  en: En
+  en_iso: en
+  af_full: Afrikaans 
+  ar_full: العربية 
+  az_full: Azərbaycan 
+  be_full: Беларуская
+  bg_full: Български
+  bn_full: বাংলা
+  bs_full: Bosanski
+  ca_full: Català
+  cs_full: Čeština
+  cy_full: Cymraeg
+  da_full: Dansk
+  de_full: Deutsch
+  el_full: Ελληνικά
+  en_full: English 
+  eo_full: Esperanto
+  es_full: Español
+  et_full: Eesti
+  eu_full: Euskara
+  fa_full: فارْسِى 
+  fi_full: Suomi
+  fr_full: Français
+  gl_full: Galego
+  he_full: עִבְרִית
+  hi_full: हिन्दी
+  hr_full: Hrvatski
+  hu_full: Magyar 
+  id_full: Bahasa Indonesia
+  is_full: Íslenska
+  it_full: italiano 
+  ja_full: 日本語
+  km_full: ភាសាខ្មែរ 
+  kn_full: ಕನ್ನಡ 
+  ko_full: 한국어 
+  lb_full: Lëtzebuergesch
+  lo_full: ພາສາລາວ
+  lt_full: lietuvių 
+  lv_full: Latviešu 
+  mk_full: македонски 
+  ml_full: മലയാളം 
+  mn_full: Монгол
+  mr-IN_full: मराठी
+  ms_full: بهاس ملايو 
+  nb_full: Norsk 
+  ne_full: नेपाली
+  nl_full: Nederlands
+  nn_full: Nynorsk
+  or_full: ଓଡ଼ିଆ 
+  pa_full: ਪੰਜਾਬੀ 
+  pl_full: Polski 
+  pt_full: Português 
+  rm_full: Rumantsch 
+  ro_full: Română 
+  ru_full: Русский
+  sk_full: Slovenský 
+  sl_full: Slovenščina
+  sr_full: Српски
+  sv_full: Svenska 
+  sw_full: Kiswahili 
+  ta_full: தமிழ் 
+  th_full: ภาษาไทย 
+  tl_full: Tagalog 
+  tr_full: Türkçe
+  tt_full: Tатар 
+  ug_full: ئۇيغۇرچە 
+  uk_full: Українська 
+  ur_full: اردو 
+  uz_full: Ўзбек
+  vi_full: Tiếng Việt
+  wo_full: Wolof 
+  zh-CN_full: 中文
+  zh-TW_full: 汉语 
+  github: Github
+  bitbucket: Bitbucket
+  updated: updated
+  1_we_have_just_launched_our_service_title: We have just launched our service
+  shared:
+    navbar:
+      sign_in: Sign in
+      sign_up: Sign up
+      projects: Projects
+      issues: Issues
+      syncing_with_github: Sync with Github...
+      syncing_with_bitbucket: Sync with Bitbucket...
+      new_issue: New issue
+      edit_project: Edit project
+    languages_select_modal:
+      available_languages: Available languages
+    user_edit_menu:
+      profile: Profile
+      site_settings: Site settings
+      services: Services
+    form_errors:
+      password: Password
+      current_password: Current password
+      password_confirmation: Password confirmation
+      name: Name
+      base: Base
+      title: Title
+      user_to_project_connection: User to project connection
+      columns:
+        tag: Tag overlapping
+    new_project_modal:
+      new_project: New project
+    edit_project_modal:
+      edit_project: Edit project
+    new_issue_modal:
+      new_issue: New issue
+    left_sidebar:
+      projects: Projects
+    right_sidebar:
+      news: News
+      all: All
+      read_more: Read more
+    translations:
+      select_column_tags: Select column tags
+      select_section_tags: Select section tags
+      select_issue_tags: Select issue tags
+  users:
+    new:
+      invite_user: Invite user
+    form:
+      name: Name
+      enter_user_name: Enter user name
+      email: Email
+      enter_user_email: Enter user email
+      enter_user_password: Enter user password
+      password: Password  
+      role: User role
+      save: Save
+    index:
+      project: Project
+      users: users
+      new: New
+    edit:
+      name: Name
+      enter_your_name: Enter your name
+      save: Save
+    settings:
+      change_password: Change password
+      interface_language: Interface language
+      submit: Submit
+    password_form:
+      new_password: New password
+      confirm_new_password: Confirm new password
+      old_password: Old password
+      change_password: Change password
+    update:
+      your_profile_was_successfully_updated: Your profile was successfully updated
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Here some of your statistics
+      projects: Projects
+  projects:
+    index:
+      projects: Projects
+      new: New
+      sync_with_github: Sync with github
+      sync_with_bitbucket: Sync with bitbucket
+      stop_sync_with_bitbucket: Stop sync with bitbucket
+      stop_sync_with_github: Stop sync with github
+    form:
+      name: Name
+      enter_project_name: Enter project name
+      save: Save
+      columns: Columns
+      sections: Sections
+      column_name: Row name
+      section_name: Section name
+      add: Add
+      column_width: Column width
+      column_height: Column height
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Github secret token for hook
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket secret token for hook
+    project:
+      edit: Edit
+      destroy: Delete
+      project_issues: Project issues
+      project_users: Project users
+    section_fields:
+      section_name: Section name
+      remove_section: Remove section
+      section_tags: Section tags
+      section_order: Order
+      or_include_all: Or include all?
+    column_fields:
+      column_name: Column name
+      remove_column: Remove column
+      max_issues_count: Max issues count in column
+      column_tags: Column tags
+      column_order: Order
+    show:
+      next_page: Next page
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Enter issue title
+      save: Save
+      body: Body
+      enter_issue_body: Enter issue body
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket issue id
+      github_issue_id: Github issue id
+      github_issue_number: Github issue number
+    index:
+      issues: issues
+      sync_with_github: Sync with github
+      sync_with_bitbucket: Sync with bitbucket
+      new: New
+    issue:
+      destroy: Delete
+      edit: Edit
+    edit:
+      edit_issue: Edit issue
+    new:
+      new_issue: New issue
+  authentications:
+    index:
+      enabled_services: Enabled services
+    authentication:
+      turned_off: Turned off
+      turn_on: Turn on
+      turn_off: Turn off
+      turned_on: Turned on
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: We have just launched our service!
+      we_have_just_launched_our_service_text: Today we launch our service so everybody can 
+      sign_up: sign up
+      and_use_it: and use it. 
+      with_love: With love,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: All news
+      read_more: Read more
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Welcome to Kanban On Rails
+      welcome_about_text: Here you can create your own Kanban board and sync it with Github or Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: What is KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails is the service where you can create Kanban boards and sync it with Github or Bitbucket 
+      what_features_has_kanban_on_rails: What features has KanbanOnRails?
+      kanban_on_rails_features: You can sync your projects and issues with Github and Bitbucket, invite users(for example managers) for your project, deploy it to your own server
+      i_have_some_requests: I have some requests
+      you_can_write_request: You can write request
+      here: here
+      i_have_seen_some_typo_or_wrong_translation: I have seen some typos or wrong translations
+      you_can_send_pull_request_to_our: You can send pull request to our
+      github_repository: github repository
+      i_have_seen_some_error: I have seen some errors
+      you_can_write_to_our_info_mail: You can write about this to our email
+    about:
+      about_kanban_on_rails: About KanbanOnRails 
+      about_kanban_on_rails_text: KanbanOnRails is the service where you can create Kanban boards and sync it with Github or Bitbucket
+      kanban_on_rails_features: KanbanOnRails features 
+      sync_with_github_and_bitbucket: You can sync your projects and issues with Github and Bitbucket
+      invite_users: You can invite users(for example managers) for your project
+      open_source_code: This project has open source code, so you can deploy it to your own server
+      we_use_open_source_and_high_technology: We use high technologies and open source libraries. We always try to get better and improve our service. 
+      partners_and_investors: We are opened for partnership and we would like to find investors. If you'd like to cooperate with us please contact us at partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_up: Sign up
+        sign_in: Sign in
+        didnt_receive_confirmation_instructions: Didn't receive confirmation instructions?
+        sign_in_with: Sign in with
+    confirmations:
+      confirmed: "Your account was successfully confirmed."
+      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
+      new:
+        send_mail_for_confirm_your_email: Send mail for confirm your email
+        submit: Submit
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid email or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account will be locked."
+      not_found_in_database: "Invalid email or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your account before continuing."
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+        welcome_to_kanban_on_rails: Welcome to KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: You can confirm your email through the link below
+        confirm_my_account: Confirm my Email
+      reset_password_instructions:
+        hello: Hello 
+        subject: "Reset password instructions"
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Someone has requests a link to change your password. You can do this through the link below.
+        change_my_password: Change my password
+        if_you_didnt_request_this_please_ignore_this_email: If you didn't request this please ignore this email.
+      unlock_instructions:
+        subject: "Unlock Instructions"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password was changed successfully. You are now signed in."
+      updated_not_active: "Your password was changed successfully."
+      new:
+        forgot_your_password: Recover your password
+        reset_password: Send recover url
+      edit:
+        change_your_password: Change your password
+        new_password: New password
+        confirm_password: Confirm password
+        change_password: Change
+    registrations:
+      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
+      updated: "You updated your account successfully."
+      new:
+        sign_up: Sign up
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        register: Sign up
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: Sign up
+        didnt_receive_confirmation_instructions: Didn't recieved confirmation instructions?
+        sign_in_with: Sign in with
+        fast_login_almost_one_click: Fast login(Almost one click)
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      new:
+        sign_in: Sign in
+        password: Password
+        remember_me: Remember me
+        forgot_your_password: Forgot your password?
+    unlocks:
+      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  all:
+    <<: *all

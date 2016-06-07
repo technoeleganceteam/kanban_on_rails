@@ -1,0 +1,22 @@
+= render 'shared/user_edit_menu'
+
+.container-fluid
+  .row
+    h4 = t '.enabled_services'
+
+    - authentications_array = @authentications.to_a
+
+    - User.omniauth_providers.each do |provider|
+      .container-fluid
+        .row
+          .col-md-2
+            b
+              = t provider
+
+          - if authentications_array.map(&:provider).include?(provider.to_s)
+            = render 'authentication',
+              :authentication => authentications_array.select { |p| p[:provider] == provider.to_s }.first,
+              :provider => provider, :include_provider => true
+          - else
+            = render 'authentication',
+              :provider => provider, :include_provider => false

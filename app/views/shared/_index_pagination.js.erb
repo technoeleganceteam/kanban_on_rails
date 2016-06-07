@@ -1,0 +1,25 @@
+<% wrapper = 'infinite_scroll_wrapper' unless defined? wrapper %>
+
+<% if defined? partial %>
+  $('#<%= wrapper %>').append('<%= j render :partial => partial, :collection => items %>');
+<% else %>
+  $('#<%= wrapper %>').append('<%= j render items %>');
+<% end %>
+
+<% if params[:section_id].present? && params[:column_id].present? %>
+  $("#section_<%= params[:section_id] %>_column_<%= params[:column_id] %>").find('.next_page_infinite_scroll').remove();
+<% else %>
+  $('.next_page_infinite_scroll').remove();
+<% end %>
+
+<% if defined? paginate_items %>
+  <% if !paginate_items.last_page? %>
+    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => paginate_items %>');
+  <% end %>
+<% else %>
+  <% if !items.last_page? %>
+    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => items %>');
+  <% end %>
+<% end %>
+
+window.loading = false;

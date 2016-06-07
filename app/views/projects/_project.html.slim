@@ -1,0 +1,26 @@
+li.list-group-item
+  = link_to project_url(project) do
+    = project.name
+
+    | &nbsp;
+
+    span.badge = project.issues.size
+
+  | &nbsp;
+
+  .pull-right
+    = link_to (t '.project_users'), project_users_url(project), :class => 'btn btn-default btn-xs'
+
+    | &nbsp;
+
+    = link_to (t '.project_issues'), project_issues_url(project), :class => 'btn btn-default btn-xs'
+    
+    | &nbsp;
+
+    = link_to (t '.edit'), edit_user_project_url(current_user, project), :class => 'btn btn-default btn-xs'
+
+    | &nbsp;
+
+    = link_to (t '.destroy'), user_project_url(current_user, project),
+      :class => 'btn btn-default btn-xs btn-danger',
+      :method => 'delete', :data => { :confirm => 'Вы уверены?' }

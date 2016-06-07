@@ -1,0 +1,28 @@
+= form_for [project, user] do |form|
+  = render 'shared/form_errors', :item => user
+
+  .form-group
+    label for = 'name' = t '.name'
+
+    = form.text_field :name, :class => 'form-control', :placeholder => (t '.enter_user_name'),
+      :required => true
+
+  .form-group
+    label for = 'email' = t '.email'
+
+    = form.email_field :email, :class => 'form-control', :placeholder => (t '.enter_user_email'),
+      :required => true
+
+  .form-group
+    label for = 'password' = t '.password'
+
+    = form.password_field :password, :class => 'form-control', :placeholder => (t '.enter_user_password'),
+      :required => true
+
+  .form-group
+    label for = 'role' = t '.role'
+
+    input.form-control [name = 'role' placeholder = (t '.enter_user_name')
+      required = 'true' value = "#{ params[:role] }"]
+
+  = form.submit (t '.save'), :class => 'btn btn-success'

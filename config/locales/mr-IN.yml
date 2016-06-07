@@ -1,0 +1,295 @@
+---
+mr-IN:
+  github: Github
+  bitbucket: Bitbucket
+  updated: सुधारित
+  shared:
+    navbar:
+      sign_in: साइन इन करा
+      sign_up: साइन अप करा
+      projects: प्रकल्प
+      issues: मुद्दे
+      new_issue: नवीन समस्या
+    languages_select_modal:
+      available_languages: उपलब्ध भाषा
+    user_edit_menu:
+      profile: प्रोफाइल
+      site_settings: साइट सेटिंग्ज
+      services: सेवा
+    form_errors:
+      password: पासवर्ड
+      current_password: वर्तमान संकेतशब्द
+      password_confirmation: पासवर्ड पुष्टी
+      name: नाव
+      base: बेस
+      title: शीर्षक
+      columns:
+        tag: टॅग होणारे
+    new_project_modal:
+      new_project: नवीन योजना
+    new_issue_modal:
+      new_issue: नवीन समस्या
+    left_sidebar:
+      projects: प्रकल्प
+    right_sidebar:
+      news: बातम्या
+      all: सर्व
+      read_more: अधिक वाचा
+    translations:
+      select_column_tags: निवडा
+      select_section_tags: निवडा
+      select_issue_tags: समस्या टॅग निवडा
+  users:
+    new:
+      invite_user: वापरकर्त्याला आमंत्रित करा
+    form:
+      name: नाव
+      enter_user_name: वापरकर्ता नाव प्रविष्ट करा
+      email: ईमेल
+      enter_user_email: वापरकर्ता ई-मेल प्रविष्ट करा
+      enter_user_password: वापरकर्ता संकेतशब्द प्रविष्ट करा
+      password: पासवर्ड
+      role: वापरकर्ता भूमिका
+      save: जतन करा
+    index:
+      project: प्रकल्प
+      users: वापरकर्ते
+      new: नवी
+    edit:
+      name: नाव
+      enter_your_name: आपले नाव प्रविष्ट करा
+      save: जतन करा
+    settings:
+      interface_language: इंटरफेस भाषा
+      submit: सबमिट
+    password_form:
+      new_password: नवीन पासवर्ड
+      confirm_new_password: नवीन पासवर्डची पुष्टी करा
+      old_password: जुना संकेतशब्द
+    update:
+      your_profile_was_successfully_updated: यशस्वीरित्या अद्यतनित केली गेली
+    dashboard:
+      hello: हॅलो
+      projects: प्रकल्प
+  projects:
+    index:
+      projects: प्रकल्प
+      new: नवी
+      stop_sync_with_bitbucket: bitbucket जुळणारे थांबवा
+      stop_sync_with_github: github जुळणारे थांबवा
+    form:
+      name: नाव
+      enter_project_name: प्रकल्प नाव प्रविष्ट करा
+      save: जतन करा
+      columns: स्तंभ
+      sections: विभाग
+      column_name: रो नाव
+      section_name: विभाग नाव
+      add: जोडा
+      column_width: स्तंभाची रुंदी
+      column_height: स्तंभ उंची
+      github_repository_id: Github भांडार आयडी
+      github_full_name: Github भांडार संपूर्णनाव
+      github_secret_token_for_hook: हुक साठी Github गुप्त खूण
+      bitbucket_full_name: Bitbucket संपूर्णनाव
+      bitbucket_secret_token_for_hook: हुक साठी Bitbucket गुप्त खूण
+    project:
+      edit: संपादित करा
+      destroy: हटवा
+      project_issues: प्रकल्प समस्या
+      project_users: प्रकल्प वापरकर्ते
+    section_fields:
+      section_name: विभाग नाव
+      remove_section: काढा विभाग
+      section_tags: कलम टॅग
+      section_order: ऑर्डर
+      or_include_all: किंवा सर्व समावेश होतो का?
+    column_fields:
+      column_name: स्तंभ नाव
+      remove_column: स्तंभ काढा
+      max_issues_count: मॅक्स समस्या स्तम्भ मध्ये गणना
+      column_tags: स्तंभ टॅग
+      column_order: ऑर्डर
+    show:
+      next_page: पुढील पृष्ठ
+  issues:
+    form:
+      title: शीर्षक
+      enter_issue_title: समस्या शीर्षक प्रविष्ट करा
+      save: जतन करा
+      body: शरीर
+      enter_issue_body: समस्या शरीर प्रविष्ट करा
+      tags: टॅग्ज
+      issue_order: ऑर्डर
+      bitbucket_issue_id: Bitbucket समस्या आयडी
+      github_issue_id: Github समस्या आयडी
+      github_issue_number: Github समस्या संख्या
+    index:
+      issues: समस्या
+      new: नवी
+    issue:
+      destroy: हटवा
+      edit: संपादित करा
+    new:
+      new_issue: नवीन समस्या
+  authentications:
+    index:
+      enabled_services: सक्षम सेवा
+    authentication:
+      turned_off: बंद
+      turn_on: चालू करा
+      turn_off: बंद करा
+      turned_on: चालू केला
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: आम्ही फक्त आमच्या सेवा सुरू आहे!
+      we_have_just_launched_our_service_text: आज आम्ही आमच्या सेवा सुरू त्यामुळे प्रत्येकाच्या
+        करू शकता
+      sign_up: साइन अप
+      and_use_it: आणि वापरावे.
+      with_love: प्रेम,
+      technoelegance_team: Technoelegance टीम
+    index:
+      all_news: सर्व बातम्या
+      read_more: अधिक वाचा
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Kanban रोजी Rails वर आपले स्वागत आहे
+  pages:
+    faq:
+      faq: नेहमी विचारले जाणारे प्रश्न
+      what_is_kanban_on_rails: KanbanOnRails काय आहे?
+      about_kanban_on_rails: KanbanOnRails आपण Kanban बोर्ड Github किंवा Bitbucket
+        सह तयार करणे आणि समक्रमण करू शकता, जेथे सेवा आहे
+      what_features_has_kanban_on_rails: काय वैशिष्ट्ये KanbanOnRails आहे?
+      kanban_on_rails_features: 'Github आणि Bitbucket आपल्या प्रकल्प आणि समस्या समक्रमित
+        करू शकतो, आपला प्रकल्प वापरकर्त्यांना (उदाहरणार्थ व्यवस्थापकांसाठी) आमंत्रित,
+        आपल्या स्वत: च्या सर्व्हरवर करण्यासाठी उपयोजित'
+      i_have_some_requests: मी काही विनंत्या आहेत
+      you_can_write_request: करू शकता
+      here: येथे
+      i_have_seen_some_typo_or_wrong_translation: मी काही टायपिंगच्या चुका किंवा अनुवाद
+        त्रास पाहिला आहेस
+      you_can_send_pull_request_to_our: आमच्या
+      github_repository: github भांडार
+      i_have_seen_some_error: मी काही त्रुटी पाहिले आहे
+    about:
+      about_kanban_on_rails: KanbanOnRails बद्दल
+      about_kanban_on_rails_text: KanbanOnRails आपण Kanban बोर्ड Github किंवा Bitbucket
+        सह तयार करणे आणि समक्रमण करू शकता, जेथे सेवा आहे
+      kanban_on_rails_features: KanbanOnRails वैशिष्ट्ये
+      sync_with_github_and_bitbucket: Github आणि Bitbucket आपल्या प्रकल्प आणि समस्या
+        समक्रमित करू शकतो
+      invite_users: आपला प्रकल्प वापरकर्त्यांना (उदाहरणार्थ व्यवस्थापकांसाठी) आमंत्रित
+        करू शकता
+      open_source_code: 'हा प्रकल्प ओपन सोअर्स कोड आहे, त्यामुळे आपण आपल्या स्वत:
+        च्या सर्व्हरवर करण्यासाठी उपयोजित करू शकता'
+      we_use_open_source_and_high_technology: आम्ही उच्च तंत्रज्ञान व ओपन सोअर्स ग्रंथालये
+        वापरण्यासाठी. आम्ही नेहमी चांगले मिळेल आणि आमच्या सेवा सुधारण्यासाठी प्रयत्न.
+      partners_and_investors: आम्ही भागीदारी उघडले आहेत आणि आम्ही गुंतवणूकदारांना
+        शोधण्यासाठी आवडेल. आपण आम्हाला सहकार्य करू इच्छित असल्यास partnership@technoelegance.com
+        येथे संपर्क साधा
+  devise:
+    shared:
+      links:
+        sign_in: साइन इन करा
+        sign_up: साइन अप करा
+        didnt_receive_confirmation_instructions: पुष्टी सूचना प्राप्त नाही काय?
+        sign_in_with: साइन इन करा सह
+        fast_login_almost_one_click: जलद प्रवेश (जवळजवळ एका क्लिक)
+    confirmations:
+      confirmed: आपले खाते यशस्वीपणे निश्चिती होते.
+      send_instructions: आपण काही मिनिटांत आपले खाते कसे पुष्टी करण्यासाठी बद्दल सूचनांसह
+        ईमेल प्राप्त होईल.
+      send_paranoid_instructions: आपला ईमेल पत्ता आमच्या डेटाबेसमध्ये अस्तित्वात असल्यास,
+        आपण काही मिनिटांमध्ये आपले खाते कसे पुष्टी करण्यासाठी बद्दल सूचनांसह ईमेल
+        प्राप्त होईल.
+      new:
+        send_mail_for_confirm_your_email: पुष्टी आपल्या ई-मेल मेल पाठवा
+        submit: सबमिट
+    failure:
+      already_authenticated: आधीच साइन इन आहात.
+      inactive: आपले खाते अद्याप सक्रिय केलेलं नाही.
+      invalid: अवैध ईमेल किंवा संकेतशब्द.
+      locked: आपले खाते लॉक केले आहे.
+      last_attempt: आपले खाते लॉक जाईल.
+      not_found_in_database: अवैध ईमेल किंवा संकेतशब्द.
+      timeout: कालबाह्य झाले आहे. सुरू ठेवण्यासाठी पुन्हा साइन इन करा.
+      unauthenticated: साइन इन करा किंवा सुरू करण्यापूर्वी साइन इन करणे आवश्यक आहे.
+      unconfirmed: सुरू करण्यापूर्वी आपल्या खात्यात निश्चित करणे आवश्यक आहे.
+    mailer:
+      confirmation_instructions:
+        subject: पुष्टीकरण सूचना
+        welcome_to_kanban_on_rails: KanbanOnRails आपले स्वागत आहे
+        you_can_confirm_your_account_email_through_the_link_below: आपण खालील दुव्यावर
+          आपल्या ईमेल पुष्टी करू शकता
+        confirm_my_account: माझे ईमेल पुष्टी करा
+      reset_password_instructions:
+        hello: हॅलो
+        subject: पासवर्ड सूचना रीसेट करा
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: कोणीतरी
+          विनंत्या तुमचा पासवर्ड बदलण्यासाठी एक दुवा आहे. आपण खालील दुव्यावर द्वारे
+          करू शकतो.
+        change_my_password: माझा संकेतशब्द बदला
+        if_you_didnt_request_this_please_ignore_this_email: आपण विनंती नाही, तर या
+          या ईमेल कडे दुर्लक्ष करा.
+      unlock_instructions:
+        subject: अनलॉक सूचना
+    omniauth_callbacks:
+      failure: '% {प्रकारची} कारण "% {कारण}" तुम्हाला प्रमाणित केलेला नाही.'
+      success: यशस्वीरित्या% {प्रकारची} खाते प्रमाणीकरण.
+    passwords:
+      no_token: या पृष्ठावरील एक पासवर्ड रीसेट ईमेल पासून येत न प्रवेश करू शकत नाही.
+        आपण संकेतशब्द रीसेट ई-मेल येतात तर, कृपया आपण प्रदान पूर्ण URL वापरली याची
+        खात्री करा.
+      send_instructions: आपण काही मिनिटांत आपला संकेतशब्द कसा रीसेट करायचा या सूचनांसह
+        ईमेल प्राप्त होईल.
+      send_paranoid_instructions: आपला ईमेल पत्ता आमच्या डेटाबेसमध्ये अस्तित्वात असल्यास,
+        आपण काही मिनिटांत आपल्या ईमेल पत्त्यावर एक संकेतशब्द पुनर्प्राप्ती दुवा प्राप्त
+        होईल.
+      updated: यशस्वीरित्या बदलले आहे. आपण आता साइन इन आहात.
+      updated_not_active: यशस्वीरित्या बदलले आहे.
+      new:
+        forgot_your_password: आपला संकेतशब्द पुनर्प्राप्त
+        reset_password: पाठवा url पुनर्प्राप्त
+      edit:
+        change_your_password: आपला पासवर्ड बदला
+        new_password: नवीन पासवर्ड
+        change_password: बदला
+    registrations:
+      destroyed: "! आपले खाते यशस्वीरित्या रद्द झाली. आम्ही लवकरच पुन्हा आपण पाहू
+        अशी आशा आहे."
+      signed_up: आपले स्वागत आहे! आपण यशस्वीरित्या साइन अप केले आहे.
+      signed_up_but_inactive: यशस्वीरित्या केले आहे. तथापि, आम्ही आपले खाते अद्याप
+        सक्रिय केलेलं नाही आपण साइन इन करू शकत नाही.
+      signed_up_but_locked: यशस्वीरित्या केले आहे. तथापि, आम्ही आपले खाते लॉक केलेले
+        आहे आपण साइन इन करू शकत नाही.
+      signed_up_but_unconfirmed: आपला ईमेल पत्त्यावर पाठविला गेला आहे. कृपया आपले
+        खाते सक्रिय दुवा उघडा.
+      update_needs_confirmation: आपण यशस्वीरित्या आपल्या खाते अद्ययावत, पण आम्ही आपले
+        नवीन ईमेल पत्ता सत्यापित करणे आवश्यक. कृपया आपला ईमेल तपासा आणि आपल्या नवीन
+        ईमेल पत्त्यावर खात्री निश्चित करण्यासाठी पुष्टी दुवा क्लिक करा.
+      updated: आपण यशस्वीरित्या आपले खाते अद्यतनित.
+      new:
+        sign_up: साइन अप करा
+        name: नाव
+        password: पासवर्ड
+        password_confirmation: पासवर्ड पुष्टी
+        register: साइन अप करा
+    sessions:
+      signed_in: यशस्वीरित्या साइन इन केले.
+      signed_out: यशस्वी साइन इन केले.
+      new:
+        sign_in: साइन इन करा
+        password: पासवर्ड
+        remember_me: मला लक्षात ठेवा
+        forgot_your_password: आपला संकेतशब्द विसरलात?
+    unlocks:
+      send_instructions: आपण काही मिनिटांत आपले खाते कसे अनलॉक करण्यासाठी बद्दल सूचनांसह
+        ईमेल प्राप्त होईल.
+      send_paranoid_instructions: आपले खाते अस्तित्वात असल्यास, आपण काही मिनिटांत
+        ते कसे अनलॉक करण्यासाठी बद्दल सूचनांसह ईमेल प्राप्त होईल.
+      unlocked: आपले खाते यशस्वीपणे अनलॉक केला गेला आहे. सुरू ठेवण्यासाठी साइन इन
+        करा.
+  mr-IN: mr-IN
+  mr-IN_iso: mr-IN

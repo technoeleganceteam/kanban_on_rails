@@ -1,0 +1,318 @@
+---
+eu:
+  github: Github
+  bitbucket: Bitbucket
+  updated: eguneratua
+  1_we_have_just_launched_our_service_title: Oraintxe gure zerbitzua martxan jarri
+    dugu
+  shared:
+    navbar:
+      sign_in: Saioa hasi
+      sign_up: Kontu
+      projects: Proiektuak
+      issues: Aleak
+      syncing_with_github: Github batera Sync ...
+      syncing_with_bitbucket: Bitbucket batera Sync ...
+      new_issue: alea New
+      edit_project: Editatu proiektua
+    languages_select_modal:
+      available_languages: Hizkuntza
+    user_edit_menu:
+      profile: Profile
+      site_settings: Gunearen ezarpenak
+      services: Zerbitzuak
+    form_errors:
+      password: Pasahitza
+      current_password: Oraingo pasahitza
+      password_confirmation: Pasahitza berrespena
+      name: izena
+      base: Base
+      title: Izenburua
+      user_to_project_connection: Erabiltzaileak konexioa proiektatzeko
+      columns:
+        tag: Tag gainjarriz
+    new_project_modal:
+      new_project: proiektu berria
+    edit_project_modal:
+      edit_project: Editatu proiektua
+    new_issue_modal:
+      new_issue: alea New
+    left_sidebar:
+      projects: Proiektuak
+    right_sidebar:
+      news: Berriak
+      all: guztiak
+      read_more: Irakurri gehiago
+    translations:
+      select_column_tags: Aukeratu zutabean etiketa
+      select_section_tags: Aukeratu atala tags
+      select_issue_tags: Aukeratu arazo tags
+  users:
+    new:
+      invite_user: Gonbidatu erabiltzaile
+    form:
+      name: izena
+      enter_user_name: Idatzi erabiltzaile-izen
+      email: Emaila
+      enter_user_email: Sartu erabiltzaile email
+      enter_user_password: Sartu erabiltzailearen pasahitza
+      password: Pasahitza
+      role: User rola
+      save: Save
+    index:
+      project: Project
+      users: erabiltzaile
+      new: New
+    edit:
+      name: izena
+      enter_your_name: Sartu zure izena
+      save: Save
+    settings:
+      change_password: Aldatu pasahitza
+      interface_language: Interface hizkuntza
+      submit: Bidali
+    password_form:
+      new_password: pasahitza New
+      confirm_new_password: Berretsi pasahitza berria
+      old_password: Old pasahitza
+      change_password: Aldatu pasahitza
+    update:
+      your_profile_was_successfully_updated: Zure profila eguneratu da
+    dashboard:
+      hello: Kaixo
+      here_some_of_your_statistics: Hemen zure estatistikak batzuk
+      projects: Proiektuak
+  projects:
+    index:
+      projects: Proiektuak
+      new: New
+      sync_with_github: github sinkronizatzea
+      sync_with_bitbucket: bitbucket sinkronizatzea
+      stop_sync_with_bitbucket: Stop bitbucket sinkronizatuta
+      stop_sync_with_github: Stop github sinkronizatuta
+    form:
+      name: izena
+      enter_project_name: Idatzi proiektuaren izena
+      save: Save
+      columns: zutabeak
+      sections: Sailak
+      column_name: gaineko name
+      section_name: artikulua name
+      add: Gehitu
+      column_width: Zutabe zabalera
+      column_height: Zutabe altuera
+      github_repository_id: Github repository id
+      github_full_name: Github repository izen osoa
+      github_secret_token_for_hook: Github kako token sekretua
+      bitbucket_full_name: Bitbucket izen osoa
+      bitbucket_secret_token_for_hook: Bitbucket kako token sekretua
+    project:
+      edit: Edit
+      destroy: ezabatu
+      project_issues: Project gaiak
+      project_users: Project erabiltzaile
+    section_fields:
+      section_name: artikulua name
+      remove_section: Kendu atala
+      section_tags: artikulua tags
+      section_order: Agindua
+      or_include_all: Edo guztiak?
+    column_fields:
+      column_name: Column name
+      remove_column: Ezabatu zutabea
+      max_issues_count: Max gai zutabean zenbatu
+      column_tags: Zutabe tags
+      column_order: Agindua
+    show:
+      next_page: Hurrengo orria
+  issues:
+    form:
+      title: Izenburua
+      enter_issue_title: Sartu alea izenburua
+      save: Save
+      body: Body
+      enter_issue_body: Sartu alea gorputza
+      tags: Tags
+      issue_order: Agindua
+      bitbucket_issue_id: Bitbucket alea id
+      github_issue_id: Github alea id
+      github_issue_number: Github zenbakian
+    index:
+      issues: gaiak
+      sync_with_github: github sinkronizatzea
+      sync_with_bitbucket: bitbucket sinkronizatzea
+      new: New
+    issue:
+      destroy: ezabatu
+      edit: Edit
+    edit:
+      edit_issue: Edit alea
+    new:
+      new_issue: alea New
+  authentications:
+    index:
+      enabled_services: Gaituta zerbitzuak
+    authentication:
+      turned_off: Segituan
+      turn_on: aktibatu
+      turn_off: itzali
+      turned_on: piztuta
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: ditugu gure zerbitzua martxan jarri!
+      we_have_just_launched_our_service_text: Gaur gure zerbitzua abiarazi dugu, beraz,
+        denek ahal
+      sign_up: saioa hasi
+      and_use_it: eta erabili.
+      with_love: Maitasuna,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Albiste guztiak
+      read_more: Irakurri gehiago
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Ongi Kanban On Rails den
+      welcome_about_text: Hemen zure Kanban taula egin eta sync sor dezakezu Github
+        edo Bitbucket batera
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Zer da KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails zerbitzura non Kanban batzordeak sortu
+        ahal izango duzu, eta sync da Github edo Bitbucket da
+      what_features_has_kanban_on_rails: Zer ezaugarri ditu KanbanOnRails?
+      kanban_on_rails_features: duzu zure proiektu eta gaiak Github eta Bitbucket
+        sinkronizatu, erabiltzaileen (adibidez kudeatzaileentzat) zure proiekturako
+        gonbidatzeko, zabaldu zure zerbitzari propioa izateko
+      i_have_some_requests: eskaerak batzuk ditut
+      you_can_write_request: eskaera idatzi ditzakezu
+      here: hemen
+      i_have_seen_some_typo_or_wrong_translation: Ikusi ditut Typos batzuk edo oker
+        itzulpenak
+      you_can_send_pull_request_to_our: zabaltzen eskaera bidali ahal izango duzu,
+        gure
+      github_repository: github repository
+      i_have_seen_some_error: Ikusi ditut akatsak batzuk
+      you_can_write_to_our_info_mail: honi buruz idatzi daiteke gure email duzu
+    about:
+      about_kanban_on_rails: KanbanOnRails buruz
+      about_kanban_on_rails_text: KanbanOnRails zerbitzura non Kanban batzordeak sortu
+        ahal izango duzu, eta sync da Github edo Bitbucket da
+      kanban_on_rails_features: KanbanOnRails ezaugarri
+      sync_with_github_and_bitbucket: duzu zure proiektu eta gaiak Github eta Bitbucket
+        sinkronizatu
+      invite_users: erabiltzaileek (adibidez kudeatzaileentzat) zure proiekturako
+        gonbidatu ditzakezu
+      open_source_code: Proiektu honek kode irekiko ditu, beraz, zabaldu zure zerbitzaria
+        behar duzu
+      we_use_open_source_and_high_technology: teknologia handiko eta kode irekiko
+        liburutegiak erabiltzen dugu. Beti saiatzen gara hobeto lortzeko eta gure
+        zerbitzua hobetzeko.
+      partners_and_investors: dugu lankidetza ireki dira eta inbertitzaile aurkitu
+        nahi dugu. zuk gurekin elkarlanean nahi baduzu jar zaitez gurekin harremanetan
+        partnership@technoelegance.com at
+  devise:
+    shared:
+      links:
+        sign_in: Saioa hasi
+        sign_up: Kontu
+        didnt_receive_confirmation_instructions: Ez al jaso baieztapen argibideak?
+        sign_in_with: Izena batekin hasi
+        fast_login_almost_one_click: Fast login (Ia inork klik)
+    confirmations:
+      confirmed: baieztatu da.
+      send_instructions: email bat jasoko duzu zure kontua baieztatzeko minutu gutxitan
+        argibideekin.
+      send_paranoid_instructions: zure posta elektronikoaren helbidea, gure datu-basean
+        existitzen bada, email bat jasoko duzu zure kontua baieztatzeko minutu gutxitan
+        argibideekin.
+      new:
+        send_mail_for_confirm_your_email: Bidali mail berretsi zure posta elektronikoan
+        submit: Bidali
+    failure:
+      already_authenticated: duzu saiorik hasi dira.
+      inactive: ez dago aktibatuta.
+      invalid: elektronikoa edo pasahitza baliogabea.
+      locked: blokeatuta dago.
+      last_attempt: saiakera bat gehiago behar duzu kontua blokeatuta aurretik.
+      not_found_in_database: elektronikoa edo pasahitza baliogabea.
+      timeout: iraungi. Mesedez, hasi saioa berriro jarraitzeko.
+      unauthenticated: daukazu saioa hasi edo saioa hasi jarraitu aurretik.
+      unconfirmed: duzu kontua baieztatzeko jarraitu aurretik.
+    mailer:
+      confirmation_instructions:
+        subject: baieztapena argibideak
+        welcome_to_kanban_on_rails: Ongi KanbanOnRails den
+        you_can_confirm_your_account_email_through_the_link_below: zure email baieztatu
+          dezakezu esteka azpitik bidez
+        confirm_my_account: Berretsi Email
+      reset_password_instructions:
+        hello: Kaixo
+        subject: Berrezarri pasahitza argibideak
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Norbaitek
+          eskaerak lotura bat zure pasahitza aldatu. Hau egin ahal izango duzu honako
+          estekaren bidez.
+        change_my_password: Pasahitza aldatu
+        if_you_didnt_request_this_please_ignore_this_email: ez bazenu eskatu honetan
+          mesedez mezu hau.
+      unlock_instructions:
+        subject: Desblokeoa Argibideak
+    omniauth_callbacks:
+      failure: Ezin autentifikatu% {mota} "% {reason}" delako.
+      success: Arrakastaz% {mota} kontutik autentifikatutako.
+    passwords:
+      no_token: Ezin orri honetan sartzeko Pasahitz gogorarazle bat datozen gabe.
+        ez duzu Pasahitz gogorarazle bat datoz bada, mesedez, ziurtatu emandako URL
+        osoa erabiltzen dituzu.
+      send_instructions: email bat jasoko duzu zure pasahitza berrezartzeko minutu
+        gutxitan azalpenekin.
+      send_paranoid_instructions: zure posta elektronikoaren helbidea, gure datu-basean
+        badago, pasahitza berreskuratzeko zure helbide elektronikoan esteka bat jasoko
+        duzu, minutu gutxi barru.
+      updated: ondo aldatu da. orain egin zara.
+      updated_not_active: ondo aldatu da.
+      new:
+        forgot_your_password: Berreskuratu Pasahitza
+        reset_password: Bidali berreskuratzeko url
+      edit:
+        change_your_password: Aldatu pasahitza
+        new_password: pasahitza New
+        confirm_password: Berretsi pasahitza
+        change_password: Aldatu
+    registrations:
+      destroyed: Bye! Zure kontua arrakastaz ezabatu. ikusiko duzu berriro laster
+        espero dugu.
+      signed_up: Ongi etorri! sinatu Arrakastaz eman duzu.
+      signed_up_but_inactive: duzu sinatu dute arrakastaz. Hala ere, ezin izan dugu
+        has dezakezu saioa zure kontua oraindik ez dago aktibatua duelako.
+      signed_up_but_locked: duzu sinatu dute arrakastaz. Hala ere, ezin izan dugu
+        has dezakezu saioa zure kontuarekin blokeatuta dagoelako.
+      signed_up_but_unconfirmed: da zure helbide elektronikora bidaliko dira. Mesedez
+        ireki esteka kontua aktibatzeko.
+      update_needs_confirmation: Kontua arrakastaz eguneratu duzu, baina zure helbide
+        elektroniko berria baieztatu behar dugu. Mesedez egiaztatu zure helbide elektronikoa
+        eta sakatu 'Baieztapen esteka honetan zure helbide elektroniko berria berretsiz
+        amaitzean.
+      updated: Kontua arrakastaz eguneratu duzu.
+      new:
+        sign_up: Kontu
+        name: izena
+        password: Pasahitza
+        password_confirmation: Pasahitza berrespena
+        register: Kontu
+    sessions:
+      signed_in: saioa hasita arrakastaz.
+      signed_out: Saioa amaitu egin da.
+      new:
+        sign_in: Saioa hasi
+        password: Pasahitza
+        remember_me: Gogora nazazu
+        forgot_your_password: ahaztu zaizu?
+    unlocks:
+      send_instructions: email bat jasoko duzu zure kontuarekin nola desblokeatzeko
+        minutu gutxitan argibideekin.
+      send_paranoid_instructions: zure kontua existitzen bada, email bat jasoko duzu
+        nola desblokeatzeko minutu gutxitan argibideekin.
+      unlocked: arrakastaz desblokeatu egin da. Mesedez, identifikatu zure burua.
+  eu: eu
+  eu_iso: eu

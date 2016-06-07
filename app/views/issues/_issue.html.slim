@@ -1,0 +1,14 @@
+li.list-group-item
+  = issue.title
+
+  | &nbsp;
+
+  .pull-right
+    = link_to (t '.edit'), edit_project_issue_url(issue.project, issue),
+      :class => 'btn btn-default btn-xs'
+    
+    | &nbsp;
+    
+    = link_to (t '.destroy'), project_issue_url(issue.project, issue),
+      :class => 'btn btn-xs btn-danger',
+      :method => 'delete', :data => { :confirm => 'Вы уверены?' }

@@ -1,0 +1,299 @@
+---
+de:
+  github: Github
+  bitbucket: Bitbucket
+  updated: aktualisiert
+  1_we_have_just_launched_our_service_title: Wir haben unseren Service ins Leben gerufen
+  shared:
+    navbar:
+      sign_in: Anmelden
+      sign_up: Registrieren
+      projects: Projekte
+      issues: Probleme
+      syncing_with_github: Sync mit Github ...
+      syncing_with_bitbucket: Sync mit Bitbucket ...
+      new_issue: Neue Ausgabe
+      edit_project: Projekt bearbeiten
+    languages_select_modal:
+      available_languages: Verfügbare Sprachen
+    user_edit_menu:
+      profile: Profil
+      site_settings: Site-Einstellungen
+      services: Dienstleistungen
+    form_errors:
+      password: Passwort
+      current_password: Aktuelles Passwort
+      password_confirmation: Passwort Bestätigung
+      name: Namen
+      base: Basis
+      title: Titel
+      user_to_project_connection: Benutzer Verbindung zu projizieren
+      columns:
+        tag: Tag überlappende
+    new_project_modal:
+      new_project: Neues Projekt
+    edit_project_modal:
+      edit_project: Projekt bearbeiten
+    new_issue_modal:
+      new_issue: Neue Ausgabe
+    left_sidebar:
+      projects: Projekte
+    right_sidebar:
+      news: Nachrichten
+      all: All
+      read_more: Lesen Sie mehr
+    translations:
+      select_column_tags: Wählen Sie Spalte Tags
+      select_section_tags: Select Abschnitt Tags
+      select_issue_tags: Wählen Sie Ausgabe-Tags
+  users:
+    new:
+      invite_user: Benutzer einladen
+    form:
+      name: Namen
+      enter_user_name: Benutzernamen eingeben
+      email: Email
+      enter_user_email: Benutzer E-Mail eingeben
+      enter_user_password: Benutzer-Passwort eingeben
+      password: Passwort
+      role: Benutzerrolle
+      save: Speichern
+    index:
+      project: Projekt
+      users: Benutzer
+      new: New
+    edit:
+      name: Namen
+      save: Speichern
+    settings:
+      change_password: Passwort ändern
+      interface_language: Interface-Sprache
+      submit: Senden
+    password_form:
+      new_password: Neues Passwort
+      old_password: Altes Passwort
+      change_password: Passwort ändern
+    update:
+      your_profile_was_successfully_updated: Ihr Profil wurde erfolgreich aktualisiert
+    dashboard:
+      hello: Hallo
+      here_some_of_your_statistics: Hier einige Ihrer Statistiken
+      projects: Projekte
+  projects:
+    index:
+      projects: Projekte
+      new: New
+      sync_with_github: Sync mit Github
+      sync_with_bitbucket: Sync mit bitbucket
+      stop_sync_with_bitbucket: Stop-Synchronisierung mit bitbucket
+      stop_sync_with_github: Stop-Synchronisierung mit Github
+    form:
+      name: Namen
+      enter_project_name: Geben Sie Projektnamen
+      save: Speichern
+      columns: Spalten
+      sections: Abschnitte
+      column_name: Row Name
+      section_name: Abschnittsname
+      add: hinzufügen
+      column_width: Spaltenbreite
+      column_height: Säulenhöhe
+      github_repository_id: Github-Repository-ID
+      github_full_name: Github-Repository fullname
+      github_secret_token_for_hook: Github geheime Token für Haken
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket geheime Token für Haken
+    project:
+      edit: bearbeiten
+      destroy: Löschen
+      project_issues: Projektfragen
+      project_users: Projektnutzer
+    section_fields:
+      section_name: Sektionsname
+      section_tags: Section-Tags
+      section_order: bestellen
+      or_include_all: Oder sind alle?
+    column_fields:
+      column_name: Spaltenname
+      max_issues_count: Max Ausgaben zählen in Spalte
+      column_tags: Column-Tags
+      column_order: bestellen
+    show:
+      next_page: Nächste Seite
+  issues:
+    form:
+      title: Titel
+      enter_issue_title: Ausgabe Titel eingeben
+      save: Speichern
+      body: Körper
+      enter_issue_body: Ausgabe Körper eingeben
+      tags: Stichworte
+      issue_order: bestellen
+      bitbucket_issue_id: Bitbucket Ausgabe id
+      github_issue_id: Github Ausgabe id
+      github_issue_number: Github Ausgabenummer
+    index:
+      issues: Fragen
+      sync_with_github: Sync mit Github
+      sync_with_bitbucket: Sync mit bitbucket
+      new: New
+    issue:
+      destroy: Löschen
+      edit: bearbeiten
+    edit:
+      edit_issue: bearbeiten Ausgabe
+    new:
+      new_issue: Neue Ausgabe
+  authentications:
+    index:
+      enabled_services: Aktiviert Dienste
+    authentication:
+      turned_off: Ausgeschaltet
+      turn_on: einschalten
+      turn_off: ausschalten
+      turned_on: Angetörnt
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: wir unseren Service nur ins Leben gerufen!
+      we_have_just_launched_our_service_text: Heute werden wir unseren Service zu
+        starten, so kann jeder
+      sign_up: anmelden
+      and_use_it: und verwenden.
+      with_love: Mit Liebe,
+      technoelegance_team: Technoelegance-Team
+    index:
+      all_news: Alle News
+      read_more: Lesen Sie mehr
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Willkommen bei Kanban On Rails
+      welcome_about_text: Sie hier Ihre eigenen Kanban Board und synchronisieren Sie
+        sie mit Github oder Bitbucket erstellen
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Was ist KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails ist der Service, wo Sie Kanban-Boards und
+        synchronisieren Sie sie mit Github oder Bitbucket erstellen
+      what_features_has_kanban_on_rails: Welche Funktionen hat KanbanOnRails?
+      kanban_on_rails_features: Sie können Ihre Projekte und Probleme mit Github und
+        Bitbucket laden Benutzer (zB Manager) für Ihr Projekt, stellen Sie es auf
+        Ihren eigenen Server synchronisieren
+      i_have_some_requests: Ich habe einige Anfragen
+      you_can_write_request: Sie Anfrage schreiben
+      here: hier
+      i_have_seen_some_typo_or_wrong_translation: Ich habe einige Fehler oder falsche
+        Übersetzungen gesehen
+      you_can_send_pull_request_to_our: Sie Pull-Anfrage schicken an unsere
+      github_repository: Github-Repository
+      i_have_seen_some_error: Ich habe einige Fehler gesehen
+      you_can_write_to_our_info_mail: Sie diesen an unsere E-Mail schreiben
+    about:
+      about_kanban_on_rails: Über KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ist der Service, wo Sie Kanban-Boards
+        und synchronisieren Sie sie mit Github oder Bitbucket erstellen
+      kanban_on_rails_features: KanbanOnRails Funktionen
+      sync_with_github_and_bitbucket: Sie können Ihre Projekte und Probleme mit Github
+        und Bitbucket synchronisieren
+      invite_users: können Sie Nutzer einladen (zB Manager) für Ihr Projekt
+      open_source_code: Dieses Projekt hat Open-Source-Code, so dass Sie es auf Ihrem
+        eigenen Server bereitstellen
+      we_use_open_source_and_high_technology: Wir verwenden Hochtechnologien und Open-Source-Bibliotheken.
+        Wir versuchen immer besser zu werden und unseren Service zu verbessern.
+      partners_and_investors: Wir sind für die Partnerschaft eröffnet, und wir möchten,
+        Investoren zu finden. Wenn Sie mit uns zusammenarbeiten möchten, kontaktieren
+        Sie uns bitte an partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Anmelden
+        sign_up: Registrieren
+        didnt_receive_confirmation_instructions: Haben Sie nicht eine Bestätigung
+          Anweisungen empfangen?
+        sign_in_with: Anmeldung mit
+        fast_login_almost_one_click: Schnell-Login (Fast ein Klick)
+    confirmations:
+      confirmed: Ihr Konto wurde erfolgreich bestätigt.
+      send_instructions: Sie erhalten eine E-Mail mit weiteren Anweisungen erhalten,
+        wie Sie Ihr Konto in wenigen Minuten zu bestätigen.
+      new:
+        submit: Senden
+    failure:
+      inactive: Ihr Konto ist noch nicht aktiviert.
+      invalid: Ungültige E-Mail oder Passwort.
+      locked: Ihr Konto ist gesperrt.
+      last_attempt: Sie einen Versuch haben, bevor Ihr Konto gesperrt wird.
+      not_found_in_database: Ungültige E-Mail oder Passwort.
+      timeout: Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut, um fortzufahren.
+      unauthenticated: Sie müssen in oder melden Sie sich anmelden, bevor Sie fortfahren.
+      unconfirmed: Sie haben Ihr Konto zu bestätigen, bevor Sie fortfahren.
+    mailer:
+      confirmation_instructions:
+        subject: Bestätigung Anweisungen
+        welcome_to_kanban_on_rails: Willkommen bei KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Sie Ihre E-Mail
+          über den Link bestätigen können unter
+      reset_password_instructions:
+        hello: Hallo
+        subject: Passwort zurücksetzen Anweisungen
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Jemand
+          hat Anfragen einen Link Ihr Passwort zu ändern. Sie können dies unten durch
+          den Link tun.
+        change_my_password: mein Passwort ändern
+        if_you_didnt_request_this_please_ignore_this_email: Wenn Sie dies bitte diese
+          E-Mail nicht angefordert haben ignorieren.
+      unlock_instructions:
+        subject: Entsperren Anleitung
+    omniauth_callbacks:
+      failure: konnte authentifizieren Sie nicht von% {Art}, weil "% {reason}".
+      success: erfolgreich von% {Art} Konto authentifiziert.
+    passwords:
+      no_token: Sie können nicht auf diese Seite zugreifen, ohne von einem Passwort-Reset-E-Mail
+        kommt. Wenn Sie von einem Passwort-Reset-E-Mail kommen, stellen Sie sicher,
+        dass Sie die vollständige URL zur Verfügung gestellt verwendet.
+      send_instructions: Sie erhalten eine E-Mail mit Anweisungen, wie Sie Ihr Passwort
+        in wenigen Minuten zurückzustellen.
+      updated: Ihr Passwort wurde erfolgreich geändert. Sie sind jetzt angemeldet.
+      updated_not_active: Ihr Passwort wurde erfolgreich geändert.
+      edit:
+        new_password: Neues Passwort
+        confirm_password: Kennwort bestätigen
+        change_password: ändern
+    registrations:
+      destroyed: Bye! Ihr Konto wurde erfolgreich abgebrochen. Wir hoffen, Sie bald
+        wieder zu sehen.
+      signed_up: Willkommen! Sie haben sich erfolgreich angemeldet.
+      signed_up_but_inactive: Sie haben sich erfolgreich angemeldet. Allerdings konnten
+        wir unterschreiben Sie nicht in, weil Ihr Konto ist noch nicht aktiviert.
+      signed_up_but_locked: Sie haben sich erfolgreich angemeldet. Allerdings konnten
+        wir unterschreiben Sie nicht in, weil Ihr Konto gesperrt ist.
+      signed_up_but_unconfirmed: eine Nachricht mit einem Bestätigungslink wurde an
+        Ihre E-Mail-Adresse gesendet. Bitte öffnen Sie den Link Ihr Konto zu aktivieren.
+      update_needs_confirmation: Sie Ihr Konto erfolgreich aktualisiert, aber wir
+        brauchen Ihre neue E-Mail-Adresse zu überprüfen. Bitte überprüfen Sie Ihre
+        E-Mail ein und klicken Sie auf den Bestätigungslink zur Bestätigung Ihrer
+        neuen E-Mail-Adresse zu bestätigen.
+      updated: Sie Ihr Konto erfolgreich aktualisiert.
+      new:
+        sign_up: Registrieren
+        name: Namen
+        password: Passwort
+        password_confirmation: Paßwortbestätigung
+        register: Registrieren
+    sessions:
+      signed_in: erfolgreich angemeldet.
+      signed_out: erfolgreich abgemeldet.
+      new:
+        sign_in: Anmelden
+        password: Passwort
+        remember_me: Erinnere dich an mich
+        forgot_your_password: Passwort vergessen?
+    unlocks:
+      send_instructions: Sie erhalten eine E-Mail mit weiteren Anweisungen erhalten,
+        wie Sie Ihr Konto in wenigen Minuten zu entsperren.
+      send_paranoid_instructions: Wenn Ihr Konto vorhanden ist, erhalten Sie eine
+        E-Mail mit weiteren Anweisungen erhalten, wie es in ein paar Minuten zu entsperren.
+      unlocked: Ihr Konto wurde erfolgreich entsperrt. Bitte melden Sie sich an, um
+        fortzufahren.
+  de: de
+  de_iso: de

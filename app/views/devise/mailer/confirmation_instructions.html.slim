@@ -1,0 +1,8 @@
+h3 = t '.welcome_to_kanban_on_rails'
+
+p = t '.you_can_confirm_your_account_email_through_the_link_below'
+
+p
+  = link_to (t '.confirm_my_account'), confirmation_url(@resource, :confirmation_token => @token)
+
+= render 'shared/email_signature'

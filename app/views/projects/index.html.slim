@@ -1,0 +1,32 @@
+ul.list-group#infinite_scroll_projects
+  li.list-group-item.list-group-item-info
+    = t '.projects'
+    .pull-right
+      - if current_user.sync_with_github.present? && current_user.sync_with_github == true
+        = link_to (t '.stop_sync_with_github'), stop_sync_with_github_user_projects_url(current_user),
+          :class => 'btn btn-success btn-xs', :remote => true
+        | &nbsp;
+      - else
+        - if current_user.has_github_account
+          = link_to (t '.sync_with_github'), sync_with_github_user_projects_url(current_user),
+            :class => 'btn btn-success btn-xs', :remote => true
+
+          | &nbsp;
+
+      - if current_user.sync_with_bitbucket.present? && current_user.sync_with_bitbucket == true
+        = link_to (t '.stop_sync_with_github'), stop_sync_with_bitbucket_user_projects_url(current_user),
+          :class => 'btn btn-success btn-xs', :remote => true
+
+        | &nbsp;
+      - else
+        - if current_user.has_bitbucket_account
+          = link_to (t '.sync_with_bitbucket'), sync_with_bitbucket_user_projects_url(current_user),
+            :class => 'btn btn-success btn-xs', :remote => true
+
+          | &nbsp;
+
+      a.btn.btn-success.btn-xs href = '#' data-target = '#new_project_modal' data-toggle = 'modal'
+        = t '.new'
+  = render @projects
+
+= paginate @projects

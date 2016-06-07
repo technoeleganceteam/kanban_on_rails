@@ -1,0 +1,13 @@
+#new_project_modal.modal.fade [ aria-hidden = 'true'
+  aria-labelledby = 'new_project_title' role = 'dialog' tabindex = '-1'] 
+  
+  .modal-dialog.modal-lg role = 'document'
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+
+        h4#new_project_title.modal-title = t '.new_project'
+      .modal-body
+        .row
+          .col-md-12
+            = render 'projects/form', :project => Project.new

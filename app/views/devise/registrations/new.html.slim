@@ -1,0 +1,39 @@
+.row
+  .col-md-6.col-md-offset-3
+    h3 = t '.sign_up'
+
+    = form_for(resource, :as => resource_name, :url => registration_url(resource_name)) do |f|
+      = render 'shared/form_errors', :item => resource
+
+      = f.hidden_field :locale, :value => I18n.locale
+
+      = f.text_field :name, :autofocus => true, :class => 'form-control',
+        :placeholder => (t '.name'), :required => true
+
+      br
+
+      = f.email_field :email, :autofocus => false, :class => 'form-control',
+        :placeholder => 'Email', :required => true
+
+      br
+
+      = f.password_field :password, :autofocus => false, :class => 'form-control',
+        :placeholder => (t '.password'), :required => true
+
+      br
+
+      = f.password_field :password_confirmation, :autofocus => false, :class => 'form-control',
+        :placeholder => (t '.password_confirmation'), :required => true
+
+      br
+      
+      = recaptcha_tags :hl => I18n.locale
+
+      br
+
+      div
+        = f.submit (t '.register'), :class => 'btn btn-success'
+
+    hr
+
+    = render 'devise/shared/links'

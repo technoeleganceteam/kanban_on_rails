@@ -1,0 +1,299 @@
+---
+sk:
+  github: Github
+  bitbucket: bitbucket
+  updated: aktualizované
+  1_we_have_just_launched_our_service_title: Práve sme spustili naše služby
+  shared:
+    navbar:
+      sign_in: Prihlásiť
+      sign_up: Zaregistruj sa
+      projects: Projekty
+      issues: Problémy
+      syncing_with_github: Synchronizácia s GitHub ...
+      syncing_with_bitbucket: Synchronizácia s bitbucket ...
+      new_issue: Nové vydanie
+      edit_project: Upraviť projekt
+    languages_select_modal:
+      available_languages: Jazyky
+    user_edit_menu:
+      profile: Profile
+      site_settings: Nastavenie webu
+      services: Služby
+    form_errors:
+      password: Password
+      current_password: Súčasné heslo
+      name: Name
+      base: Základňa
+      title: Názov
+      user_to_project_connection: Užívateľ projektovať spojenie
+      columns:
+        tag: Tag prekrývanie
+    new_project_modal:
+      new_project: Nový projekt
+    edit_project_modal:
+      edit_project: Upraviť projekt
+    new_issue_modal:
+      new_issue: Nové vydanie
+    left_sidebar:
+      projects: Projekty
+    right_sidebar:
+      news: News
+      all: Všetko
+      read_more: Čítajte viac
+    translations:
+      select_column_tags: Vybrať tagy stĺpcov
+      select_section_tags: Vybrať tagy sekcie
+      select_issue_tags: Vybrať vydávať tagy
+  users:
+    new:
+      invite_user: Pozvať užívateľa
+    form:
+      name: Name
+      enter_user_name: zadanie mena používateľa
+      email: Email
+      enter_user_email: Zadajte užívateľské e-mail
+      enter_user_password: Zadajte používateľské heslo
+      password: Password
+      save: Save
+    index:
+      project: Project
+      users: užívateľov
+      new: Nové
+    edit:
+      name: Name
+      enter_your_name: Zadajte svoje meno
+      save: Save
+    settings:
+      change_password: Zmena hesla
+      interface_language: Jazyk rozhrania
+      submit: Odoslať
+    password_form:
+      new_password: Nové heslo
+      confirm_new_password: Potvrdiť nové heslo
+      old_password: Staré heslo
+      change_password: Zmena hesla
+    update:
+      your_profile_was_successfully_updated: Váš profil bol úspešne aktualizovaný
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: tu niektoré zo svojich štatistík
+      projects: Projekty
+  projects:
+    index:
+      projects: Projekty
+      new: Nové
+      sync_with_github: Synchronizácia s github
+      sync_with_bitbucket: Synchronizácia s bitbucket
+      stop_sync_with_bitbucket: Zastavenie synchronizácie s bitbucket
+      stop_sync_with_github: Zastavenie synchronizácie s github
+    form:
+      name: Name
+      enter_project_name: Zadajte názov projektu
+      save: Save
+      columns: Stĺpce
+      sections: Oddiely
+      add: Add
+      github_repository_id: Github repository id
+      github_full_name: Github úložiska fullname
+      github_secret_token_for_hook: Github tajný token háku
+      bitbucket_full_name: bitbucket fullname
+      bitbucket_secret_token_for_hook: bitbucket tajný token háku
+    project:
+      edit: Edit
+      destroy: Zmazať
+      project_issues: problémy Project
+      project_users: užívateľov projektu
+    section_fields:
+      remove_section: Remove sekcie
+      section_tags: "§ tagy"
+      section_order: Objednávka
+      or_include_all: Alebo obsahovať všetky?
+    column_fields:
+      remove_column: Odstrániť stĺpec
+      column_tags: tagy stĺpcov
+      column_order: Objednávka
+    show:
+      next_page: Ďalšia strana
+  issues:
+    form:
+      title: Názov
+      enter_issue_title: Zadajte názov emisné
+      save: Save
+      body: telo
+      enter_issue_body: Enter vydanie telo
+      tags: Tags
+      issue_order: Objednávka
+      bitbucket_issue_id: bitbucket problém id
+      github_issue_id: Github problém id
+      github_issue_number: Github číslo vydania
+    index:
+      issues: problémy
+      sync_with_github: Synchronizácia s github
+      sync_with_bitbucket: Synchronizácia s bitbucket
+      new: Nové
+    issue:
+      destroy: Zmazať
+      edit: Edit
+    edit:
+      edit_issue: Edit problém
+    new:
+      new_issue: Nové vydanie
+  authentications:
+    index:
+      enabled_services: Povolené služby
+    authentication:
+      turned_off: Vypnuté
+      turn_on: Zapnúť
+      turn_off: Vypnúť
+      turned_on: Zapnuté
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Práve sme spustili naše služby!
+      we_have_just_launched_our_service_text: Dnes sme spustili naše služby, takže
+        každý môže
+      sign_up: zaregistrovať
+      and_use_it: a použiť ju.
+      with_love: S láskou,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Všetky aktuality
+      read_more: Čítajte viac
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Vitajte na Kanban po koľajniciach
+      welcome_about_text: Tu si môžete vytvoriť svoj vlastný Kanban dosku a synchronizovať
+        ho s GitHub alebo bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Čo je KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails je služba, kde si môžete vytvoriť Kanban
+        dosky a synchronizovať ho s GitHub alebo bitbucket
+      what_features_has_kanban_on_rails: Aké vlastnosti má KanbanOnRails?
+      kanban_on_rails_features: môžete synchronizovať vaše projekty a problémy s GitHub
+        a bitbucket, vyzve používateľa (napríklad manažérov) pre svoj projekt, nasadiť
+        ju na svoj vlastný server
+      i_have_some_requests: Mám nejaké požiadavky
+      you_can_write_request: môžete napísať požiadavku
+      here: tu
+      i_have_seen_some_typo_or_wrong_translation: Videl som nejaké preklepy, alebo
+        chybné preklady
+      you_can_send_pull_request_to_our: Môžete poslať žiadosť pull k odberu
+      github_repository: GitHub úložiska
+      i_have_seen_some_error: Videl som niektoré chyby
+      you_can_write_to_our_info_mail: Môžete písať o tom na náš email
+    about:
+      about_kanban_on_rails: O KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails je služba, kde si môžete vytvoriť
+        Kanban dosky a synchronizovať ho s GitHub alebo bitbucket
+      kanban_on_rails_features: funkcie KanbanOnRails
+      sync_with_github_and_bitbucket: môžete synchronizovať vaše projekty a problémy
+        s GitHub a bitbucket
+      invite_users: môžete pozvať používateľa (napríklad manažérov) pre svoj projekt
+      open_source_code: tento projekt má otvorený zdrojový kód, takže si môžete nasadiť
+        ju na svoj vlastný server
+      we_use_open_source_and_high_technology: Používame špičkových technológií a open
+        source knižnice. Vždy sa snažíme byť lepší a zlepšovať naše služby.
+      partners_and_investors: Sme sú otvorené spolupráci a radi by sme nájsť investorov.
+        Ak by ste chceli s nami spolupracovať, kontaktujte nás na adrese partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Prihlásiť
+        sign_up: Zaregistruj sa
+        didnt_receive_confirmation_instructions: Vari bol odoslaný potvrdzujúci informáciu?
+        sign_in_with: Prihláste sa
+        fast_login_almost_one_click: Fast login (takmer jeden klik)
+    confirmations:
+      confirmed: Váš účet bol úspešne potvrdená.
+      send_instructions: Dostanete e-mail s pokynmi, ako potvrdiť svoj účet v priebehu
+        niekoľkých minút.
+      send_paranoid_instructions: Ak existuje vaša e-mailová adresa v našej databáze,
+        dostanete e-mail s pokynmi, ako potvrdiť svoj účet v priebehu niekoľkých minút.
+      new:
+        send_mail_for_confirm_your_email: Odoslať e-mail pre potvrdenie e-mailu
+        submit: Odoslať
+    failure:
+      already_authenticated: Tie sú už prihlásení.
+      inactive: Váš účet nie je aktivovaný doteraz.
+      invalid: Neplatný e-mail alebo heslo.
+      locked: Váš účet je uzamknutý.
+      last_attempt: Máte ešte jeden pokus, ako bude váš účet uzamknutý.
+      not_found_in_database: Neplatný e-mail alebo heslo.
+      timeout: vaše relácie vypršala. Prosím, prihláste sa znovu pokračovať.
+      unauthenticated: je potrebné sa prihlásiť alebo registrovať pred pokračovaním.
+      unconfirmed: musíte potvrdiť svoj účet pred pokračovaním.
+    mailer:
+      confirmation_instructions:
+        subject: pokyny Potvrdenie
+        welcome_to_kanban_on_rails: Vitajte na KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Môžete potvrdiť
+          svoj e-mail prostredníctvom odkazu nižšie
+        confirm_my_account: Potvrdiť svoj email
+      reset_password_instructions:
+        hello: Hello
+        subject: Obnoviť návod heslo
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Niekto
+          žiada o odkaz na zmenu hesla. To možno vykonať prostredníctvom odkazu nižšie.
+        change_my_password: zmeniť svoje heslo
+        if_you_didnt_request_this_please_ignore_this_email: Ak ste si nevyžiadali
+          tento ignorujte prosím tento e-mail.
+      unlock_instructions:
+        subject: Odomknúť na obsluhu
+    omniauth_callbacks:
+      failure: Nebolo možné vás overiť z% {druh}, pretože "% {} dôvod".
+      success: úspešne overený z% {} druhu účtu.
+    passwords:
+      no_token: Nemôžete prístup k tejto stránke, bez toho, aby prišiel z e-mailu
+        na obnovenie hesla. Ak pochádzajú z e-mailu na obnovenie hesla, uistite sa,
+        že ste použili celú adresu URL k dispozícii.
+      send_instructions: Dostanete e-mail s pokynmi, ako obnoviť heslo priebehu niekoľkých
+        minút.
+      send_paranoid_instructions: Ak existuje vaša e-mailová adresa v našej databáze,
+        dostanete odkaz pre obnovenie hesla na vašu e-mailovú adresu v priebehu niekoľkých
+        minút.
+      updated: Vaše heslo bolo úspešne zmenené. Teraz ste prihlásení.
+      updated_not_active: Vaše heslo bolo úspešne zmenené.
+      new:
+        forgot_your_password: Obnoviť heslo
+        reset_password: Send obnoviť url
+      edit:
+        change_your_password: Zmena hesla
+        new_password: Nové heslo
+        confirm_password: Potvrdiť heslo
+        change_password: Zmena
+    registrations:
+      destroyed: Bye! Váš účet bol úspešne zrušený. Dúfame, že vás zase čoskoro uvidíme.
+      signed_up: Vitajte! Zaregistrovali ste úspešne.
+      signed_up_but_inactive: ste sa zaregistrovali úspešne. Avšak sme vás nemohli
+        prihlásiť, pretože váš účet ešte nie je aktivovaný.
+      signed_up_but_locked: ste sa zaregistrovali úspešne. Avšak sme vás nemohli prihlásiť,
+        pretože váš účet je uzamknutý.
+      signed_up_but_unconfirmed: správu s potvrdzovací odkaz bol odoslaný na vašu
+        e-mailovú adresu. Otvorte prosím na odkaz pre aktiváciu účtu.
+      update_needs_confirmation: Úspešne ste aktualizovali svoj účet, ale musíme overiť
+        vašu novú e-mailovú adresu. Skontrolujte svoj e-mail a kliknite na odkaz potvrdzujú,
+        aby dokončila potvrdzujúci svoju novú e-mailovú adresu.
+      updated: Úspešne ste aktualizovali svoj účet.
+      new:
+        sign_up: Zaregistruj sa
+        name: Name
+        password: Password
+        register: Zaregistruj sa
+    sessions:
+      signed_in: prihlásení úspešne.
+      signed_out: odhlásený úspešne.
+      new:
+        sign_in: Prihlásiť
+        password: Password
+        remember_me: Zapamätať
+        forgot_your_password: Zabudli ste heslo?
+    unlocks:
+      send_instructions: Dostanete e-mail s pokynmi, ako odomknúť svoj účet v priebehu
+        niekoľkých minút.
+      send_paranoid_instructions: Ak existuje váš účet, dostanete e-mail s pokynmi,
+        ako ju odomknúť v priebehu niekoľkých minút.
+      unlocked: Váš účet bol úspešne odomknutý. Prosím, prihláste sa pre pokračovanie.
+  sk: sk
+  sk_iso: sk

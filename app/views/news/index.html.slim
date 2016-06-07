@@ -1,0 +1,9 @@
+h1 = t '.all_news'
+
+p 
+  - HighVoltage.content_path = 'news/'
+  = Date.new(2017, 5, 2).strftime('%Y-%m-%d')
+  br
+  = t "#{ HighVoltage.page_ids.sort.first }_title"
+  br
+  = link_to (t '.read_more'), news_url(HighVoltage.page_ids.sort.first)

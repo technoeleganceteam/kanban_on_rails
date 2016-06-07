@@ -1,0 +1,273 @@
+---
+ml:
+  bitbucket: Bitbucket
+  updated: അപ്ഡേറ്റ്
+  1_we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു
+  shared:
+    navbar:
+      sign_in: സൈൻ
+      sign_up: ലോഗ് ഇൻ
+      projects: പ്രോജക്ടുകൾ
+      issues: പ്രശ്നങ്ങൾ
+      edit_project: എഡിറ്റ്
+    languages_select_modal:
+      available_languages: ലഭ്യമായ ഭാഷകളിൽ
+    user_edit_menu:
+      profile: പ്രൊഫൈൽ
+      site_settings: സൈറ്റ് ക്രമീകരണങ്ങൾ
+      services: സേവനങ്ങൾ
+    form_errors:
+      password: പാസ്വേഡ്
+      name: പേര്
+      base: ബേസ്
+      title: തലക്കെട്ട്
+      columns:
+        tag: ടാഗ് ഓവർലാപ്പുചെയ്യുമ്പോൾ
+    edit_project_modal:
+      edit_project: എഡിറ്റ്
+    left_sidebar:
+      projects: പ്രോജക്ടുകൾ
+    right_sidebar:
+      news: വാർത്ത
+      all: എല്ലാ
+      read_more: കൂടുതൽ വായിക്കൂ
+    translations:
+      select_column_tags: തിരഞ്ഞെടുക്കുക കോളം ടാഗുകൾ
+      select_section_tags: വിഭാഗം തിരഞ്ഞെടുക്കുക ടാഗുകൾ
+      select_issue_tags: തിരഞ്ഞെടുക്കുക പ്രശ്നം ടാഗുകൾ
+  users:
+    new:
+      invite_user: ഉപയോക്താവിനെ ക്ഷണിക്കുക
+    form:
+      name: പേര്
+      enter_user_name: ഉപയോക്തൃ നാമം നൽകുക
+      email: ഇമെയിൽ
+      enter_user_email: ഉപയോക്തൃ ഇമെയിൽ നൽകുക
+      enter_user_password: ഉപയോക്തൃ പാസ്വേഡ് നൽകുക
+      password: പാസ്വേഡ്
+      role: ഉപയോക്തൃ റോൾ
+      save: സംരക്ഷിക്കുക
+    index:
+      project: പദ്ധതി
+      users: ഉപയോക്താക്കൾ
+      new: ന്യൂ
+    edit:
+      name: പേര്
+      enter_your_name: നിങ്ങളുടെ പേര് നൽകുക
+      save: സംരക്ഷിക്കുക
+    settings:
+      change_password: മാറ്റുക
+      submit: സമർപ്പിക്കുക
+    password_form:
+      confirm_new_password: പുതിയ പാസ്വേഡ് സ്ഥിരീകരിക്കുക
+      change_password: മാറ്റുക
+    update:
+      your_profile_was_successfully_updated: വിജയകരമായി അപ്ഡേറ്റ് ചെയ്തു
+    dashboard:
+      hello: ഹലോ
+      here_some_of_your_statistics: ഇവിടെ ചില നിങ്ങളുടെ സ്ഥിതിവിവരക്കണക്കുകളുടെ
+      projects: പ്രോജക്ടുകൾ
+  projects:
+    index:
+      projects: പ്രോജക്ടുകൾ
+      new: ന്യൂ
+      sync_with_bitbucket: bitbucket സമന്വയിപ്പിക്കുക
+      stop_sync_with_bitbucket: bitbucket കൂടെ നിർത്തുക സമന്വയം
+      stop_sync_with_github: സാമൂഹികം കൂടെ നിർത്തുക സമന്വയം
+    form:
+      name: പേര്
+      enter_project_name: പ്രോജക്റ്റ് നാമം നൽകുക
+      save: സംരക്ഷിക്കുക
+      columns: നിരകൾ
+      sections: വിഭാഗങ്ങൾ
+      column_name: വരി പേര്
+      section_name: വിഭാഗം പേര്
+      add: ചേര്ക്കുക
+      column_width: നിരയുടെ വീതി
+      column_height: നിര ഉയരം
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket ഹുക്ക് വേണ്ടി രഹസ്യ ടോക്കൺ
+    project:
+      edit: എഡിറ്റ്
+      destroy: ഇല്ലാതാക്കുക
+      project_issues: പദ്ധതി പ്രശ്നങ്ങൾ
+      project_users: പദ്ധതി ഉപയോക്താക്കൾ
+    section_fields:
+      section_name: വിഭാഗം പേര്
+      remove_section: നീക്കംചെയ്യുക വിഭാഗം
+      section_tags: വിഭാഗം ടാഗുകൾ
+      section_order: ഓർഡർ
+      or_include_all: അല്ലെങ്കിൽ എല്ലാ ഉൾപ്പെടുന്നു?
+    column_fields:
+      column_name: നിരയുടെ പേര്
+      remove_column: കോളം നീക്കംചെയ്യുക
+      column_tags: നിര ടാഗുകൾ
+      column_order: ഓർഡർ
+  issues:
+    form:
+      title: തലക്കെട്ട്
+      enter_issue_title: പ്രശ്നം ശീർഷകം നൽകുക
+      save: സംരക്ഷിക്കുക
+      body: ബോഡി
+      enter_issue_body: പ്രശ്നം ശരീരം നൽകുക
+      tags: ടാഗുകൾ
+      issue_order: ഓർഡർ
+    index:
+      issues: പ്രശ്നങ്ങൾ
+      sync_with_bitbucket: bitbucket സമന്വയിപ്പിക്കുക
+      new: ന്യൂ
+    issue:
+      destroy: ഇല്ലാതാക്കുക
+      edit: എഡിറ്റ്
+    edit:
+      edit_issue: എഡിറ്റ്
+  authentications:
+    index:
+      enabled_services: പ്രവർത്തനക്ഷമമാക്കി സേവനങ്ങൾ
+    authentication:
+      turned_off: ഓഫാക്കി
+      turn_on: ഓണാക്കുക
+      turn_off: ഓഫാക്കുക
+      turned_on: ഓണാക്കി
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു!
+      we_have_just_launched_our_service_text: ഇന്ന് നമ്മുടെ സേവനം തുടങ്ങുവാനുള്ള അങ്ങനെ
+        എല്ലാവരേയും ചെയ്യാനാകും
+      sign_up: സൈൻ അപ്പ്
+      and_use_it: അതു ഉപയോഗിക്കുന്നു.
+      with_love: സ്നേഹപൂർവ്വം,
+    index:
+      read_more: കൂടുതൽ വായിക്കൂ
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Kanban ന് റെയിൽപ്പാതകൾ സ്വാഗതം
+      welcome_about_text: ഇവിടെ നിങ്ങളുടെ സ്വന്തം Kanban ബോർഡും സാമൂഹികം അല്ലെങ്കിൽ
+        Bitbucket ഉപയോഗിച്ച് സമന്വയം ഇത് സൃഷ്ടിക്കാൻ കഴിയും
+  pages:
+    faq:
+      faq: സ്ഥിരം
+      what_is_kanban_on_rails: KanbanOnRails എന്താണ്?
+      about_kanban_on_rails: KanbanOnRails നിങ്ങൾ Kanban ബോർഡുകൾ സൃഷ്ടിക്കാൻ കഴിയുന്ന
+        സർവ്വീസ് സാമൂഹികം അല്ലെങ്കിൽ Bitbucket സമന്വയത്തിൽ അത്
+      what_features_has_kanban_on_rails: എന്തു സവിശേഷതകൾ KanbanOnRails ഉണ്ട്?
+      i_have_some_requests: ഞാൻ ചില അഭ്യർത്ഥനകൾ ഒന്നുമില്ല
+      i_have_seen_some_typo_or_wrong_translation: ഞാൻ ചില ടൈപ്പോകൾക്കോ തെറ്റായ വിവർത്തനങ്ങൾ
+        കണ്ടിരിക്കുന്നു
+      github_repository: സാമൂഹികം സംഭരണിയാണ്
+      i_have_seen_some_error: ഞാൻ ചില പിശകുകൾ കണ്ടിരിക്കുന്നു
+    about:
+      about_kanban_on_rails: KanbanOnRails കുറിച്ച്
+      about_kanban_on_rails_text: KanbanOnRails നിങ്ങൾ Kanban ബോർഡുകൾ സൃഷ്ടിക്കാൻ
+        കഴിയുന്ന സർവ്വീസ് സാമൂഹികം അല്ലെങ്കിൽ Bitbucket സമന്വയത്തിൽ അത്
+      kanban_on_rails_features: KanbanOnRails സവിശേഷതകൾ
+      invite_users: നിങ്ങളുടെ പ്രോജക്റ്റിൽ ഉപയോക്താക്കളോട് (ഉദാഹരണത്തിന് മാനേജർമാർക്ക്)
+        ക്ഷണിക്കാൻ കഴിയും
+      open_source_code: ഓപ്പൺ സോഴ്സ് കോഡ് ഉണ്ട്, അതിനാൽ നിങ്ങളുടെ സ്വന്തം സെർവറിലേക്ക്
+        വിന്യസിക്കാമെന്നതിനെക്കുറിച്ച്
+      we_use_open_source_and_high_technology: നാം ഉയർന്ന സാങ്കേതിക ഓപ്പൺ സോഴ്സ് ലൈബ്രറികളും
+        ഉപയോഗിക്കുക. നാം എപ്പോഴും നല്ലത് ശ്രമിച്ചില്ല ഞങ്ങളുടെ സേവനം മെച്ചപ്പെടുത്താൻ.
+      partners_and_investors: നാം കൂട്ടുകെട്ട് തുറന്നിരിക്കുന്നു ഞങ്ങൾ നിക്ഷേപകരെ
+        കണ്ടെത്താൻ ആഗ്രഹിക്കുന്നു. നീ ഞങ്ങളെ സഹകരിക്കാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ partnership@technoelegance.com
+        ഞങ്ങളെ ബന്ധപ്പെടുക
+  devise:
+    shared:
+      links:
+        sign_in: ഇൻ
+        sign_up: ലോഗ് ഇൻ
+        didnt_receive_confirmation_instructions: സ്ഥിരീകരണ നിർദ്ദേശങ്ങൾ ലഭിച്ചില്ല.അൽപ്പ
+          ചെയ്തില്ലേ?
+        sign_in_with: ഉപയോഗിച്ച് പ്രവേശിക്കുന്നതിന്
+    confirmations:
+      confirmed: വിജയകരമായി സ്ഥിരീകരിച്ചു.
+      send_instructions: കുറച്ചു മിനിറ്റുകൾക്കുള്ളിൽ അക്കൗണ്ട് സ്ഥിരീകരിക്കാൻ എങ്ങനെ
+        നിർദ്ദേശങ്ങളടങ്ങിയ ഒരു ഇമെയിൽ ലഭിക്കും.
+      send_paranoid_instructions: നിങ്ങളുടെ ഇമെയിൽ വിലാസം ഞങ്ങളുടെ ഡാറ്റാബേസ് നിലനിൽക്കുന്നത്,
+        നിങ്ങൾ ഏതാനും മിനിറ്റുകൾക്കുള്ളിൽ നിങ്ങളുടെ അക്കൗണ്ട് സ്ഥിരീകരിക്കാൻ എങ്ങനെ
+        നിർദ്ദേശങ്ങളടങ്ങിയ ഒരു ഇമെയിൽ ലഭിക്കും.
+      new:
+        send_mail_for_confirm_your_email: നിങ്ങളുടെ ഇമെയിൽ സ്ഥിരീകരിക്കുക മെയിൽ അയയ്ക്കുക
+        submit: സമർപ്പിക്കുക
+    failure:
+      already_authenticated: ഇതിനകം പ്രവേശിച്ചിട്ടുണ്ട്.
+      inactive: ഇതുവരെ സജീവമായിട്ടില്ല.
+      invalid: "."
+      locked: പൂട്ടിയിരിക്കുന്നു.
+      last_attempt: നിങ്ങളുടെ അക്കൗണ്ട് മുമ്പിൽ ഒന്നു കൂടി ശ്രമിക്കാം ലോക്ക് ചെയ്യും
+        ഞങ്ങൾക്കുണ്ട്.
+      not_found_in_database: "."
+      timeout: കാലഹരണപ്പെട്ടു. തുടരുന്നതിനായി ദയവായി വീണ്ടും പ്രവേശിക്കുക.
+      unauthenticated: ഇൻ തുടരാനോ മുമ്പ് അപ്പ് ചെയ്യേണ്ടതുണ്ട്.
+      unconfirmed: തുടരുന്നതിന് മുമ്പായി നിങ്ങളുടെ അക്കൗണ്ട് സ്ഥിരീകരിക്കണം.
+    mailer:
+      confirmation_instructions:
+        subject: സ്ഥിരീകരണം നിർദ്ദേശങ്ങൾ
+        welcome_to_kanban_on_rails: KanbanOnRails സ്വാഗതം
+        confirm_my_account: എന്റെ ഇമെയിൽ സ്ഥിരീകരിക്കുക
+      reset_password_instructions:
+        hello: ഹലോ
+        subject: രഹസ്യവാക്ക് നിർദ്ദേശങ്ങൾ
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: ആരോ
+          നിങ്ങളുടെ പാസ്വേഡ് മാറ്റുന്നതിന് ഒരു കണ്ണി അഭ്യർത്ഥിക്കുന്നു ചെയ്തു. ചുവടെയുള്ള
+          ലിങ്ക് വഴി ഇത് ചെയ്യാനാകും.
+        change_my_password: എന്റെ പാസ്വേഡ് മാറ്റുക
+        if_you_didnt_request_this_please_ignore_this_email: നിങ്ങൾ ഈ അഭ്യർത്ഥന ചെയ്തില്ല
+          എങ്കിൽ ഈ ഇമെയിൽ ദയവായി അവഗണിക്കുക.
+      unlock_instructions:
+        subject: അൺലോക്ക് നിർദ്ദേശങ്ങൾ
+    omniauth_callbacks:
+      failure: കാരണം "% {കാരണം}"% {തരത്തിലുള്ള} നിന്ന് നിങ്ങളെ സാധൂകരിക്കാൻ കഴിഞ്ഞില്ല.
+      success: വിജയകരമായി% {തരത്തിലുള്ള} അക്കൗണ്ടിൽ നിന്ന് ആധികാരികതമായ.
+    passwords:
+      no_token: പാസ്വേഡ് പുനഃസജ്ജമാക്കൽ ഇമെയിൽ നിന്നും വരുന്ന ഇല്ലാതെ ഈ പേജ് ആക്സസ്
+        ചെയ്യാൻ കഴിയില്ല. നിങ്ങളൊരു പാസ്വേഡ് പുനഃസജ്ജമാക്കൽ ഇമെയിൽ വരുന്നു എങ്കിൽ
+        നിങ്ങൾ നൽകിയ മുഴുവൻ ഉപയോഗിച്ച ഉറപ്പുവരുത്തുക.
+      send_instructions: ഏതാനും നിമിഷങ്ങൾക്കുള്ളിൽ നിങ്ങളുടെ പാസ്വേഡ് എങ്ങനെ പുന നിർദ്ദേശങ്ങളടങ്ങിയ
+        ഒരു ഇമെയിൽ ലഭിക്കും.
+      send_paranoid_instructions: നിങ്ങളുടെ ഇമെയിൽ വിലാസം ഞങ്ങളുടെ ഡാറ്റാബേസ് നിലനിൽക്കുന്നത്,
+        നിങ്ങൾ ഏതാനും മിനിറ്റുകൾക്കുള്ളിൽ നിങ്ങളുടെ ഇമെയിൽ വിലാസത്തിൽ ഒരു പാസ്വേഡ്
+        വീണ്ടെടുക്കൽ ലിങ്ക് ലഭിക്കും.
+      updated: വിജയകരമായി മാറ്റി. നിങ്ങൾ ഇപ്പോൾ പ്രവേശിച്ചിട്ടുണ്ട്.
+      updated_not_active: വിജയകരമായി മാറ്റി.
+      new:
+        forgot_your_password: പാസ്വേഡ് വീണ്ടെടുക്കുന്നതിനും
+        reset_password: URL വീണ്ടെടുക്കാൻ അയയ്ക്കുക
+      edit:
+        change_your_password: നിങ്ങളുടെ പാസ്വേഡ് മാറ്റുക
+        confirm_password: സ്ഥിരീകരിക്കുക
+        change_password: മാറ്റുക
+    registrations:
+      destroyed: വിട! നിങ്ങളുടെ അക്കൗണ്ട് വിജയകരമായി റദ്ദാക്കി. ഞങ്ങൾ വീണ്ടും ഉടൻ
+        കാണുമെന്ന് പ്രതീക്ഷിക്കുന്നു.
+      signed_up: സ്വാഗതം നിങ്ങൾ വിജയകരമായി സൈൻ അപ്പ് ചെയ്തു.
+      signed_up_but_inactive: ". എന്നിരുന്നാലും, നിങ്ങളുടെ അക്കൗണ്ട് ആക്റ്റിവേറ്റ്
+        കാരണം നിങ്ങൾക്ക് സൈൻ കഴിഞ്ഞില്ല."
+      signed_up_but_locked: ". എന്നിരുന്നാലും, നിങ്ങളുടെ അക്കൗണ്ട് ലോക്ക് കാരണം നിങ്ങൾക്ക്
+        സൈൻ കഴിഞ്ഞില്ല."
+      signed_up_but_unconfirmed: നിങ്ങളുടെ ഇമെയിൽ വിലാസത്തിലേക്ക് അയച്ചു. നിങ്ങളുടെ
+        അക്കൗണ്ട് സജീവമാക്കുന്നതിന് ലിങ്ക് തുറക്കുക.
+      update_needs_confirmation: ", പക്ഷെ നിങ്ങളുടെ പുതിയ ഇമെയിൽ വിലാസം സ്ഥിരീകരിക്കേണ്ടതുണ്ട്.
+        നിങ്ങളുടെ ഇമെയിൽ പരിശോധിച്ച് നിങ്ങളുടെ പുതിയ ഇമെയിൽ വിലാസം സ്ഥിരീകരിക്കുന്ന
+        പരിഗണനയിലാണെന്നും സ്ഥിരീകരിക്കുന്നു ലിങ്കിൽ ക്ലിക്ക് ചെയ്യുക."
+      updated: വിജയകരമായി നിങ്ങളുടെ അക്കൗണ്ട് അപ്ഡേറ്റ്.
+      new:
+        sign_up: ലോഗ് ഇൻ
+        name: പേര്
+        password: പാസ്വേഡ്
+        register: ലോഗ് ഇൻ
+    sessions:
+      signed_in: വിജയകരമായി പ്രവേശിച്ചു.
+      signed_out: വിജയകരമായി പ്രവേശിച്ചു.
+      new:
+        sign_in: ഇൻ
+        password: പാസ്വേഡ്
+        remember_me: എന്നെ ഓർക്കുക
+        forgot_your_password: നിങ്ങളുടെ പാസ്വേഡ് മറന്നോ?
+    unlocks:
+      send_instructions: നിങ്ങൾ ഏതാനും മിനിറ്റുകൾക്കുള്ളിൽ നിങ്ങളുടെ അക്കൗണ്ട് അൺലോക്ക്
+        എങ്ങനെ നിർദ്ദേശങ്ങളടങ്ങിയ ഒരു ഇമെയിൽ ലഭിക്കും.
+      send_paranoid_instructions: നിങ്ങളുടെ അക്കൗണ്ട് നിലവിലുണ്ടെങ്കിൽ, ഏതാനും മിനിറ്റുകൾക്കുള്ളിൽ
+        നിങ്ങൾ അത് അൺലോക്ക് എങ്ങനെ നിർദ്ദേശങ്ങളടങ്ങിയ ഒരു ഇമെയിൽ ലഭിക്കും.
+      unlocked: വിജയകരമായി അൺലോക്ക് ചെയ്തു. തുടരുന്നതിന് ദയവായി പ്രവേശിക്കുക.
+  ml: ml
+  ml_iso: ml

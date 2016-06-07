@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    h3.panel-title
+      = t '.news'
+
+      .pull-right
+        = link_to (t '.all'), news_index_url, :class => 'btn btn-xs btn-success'
+  .panel-body
+    - HighVoltage.content_path = 'news/'
+    = Date.new(2016, 6, 7).strftime('%Y-%m-%d')
+    br
+    = t "#{ HighVoltage.page_ids.sort.first }_title"
+    br
+    = link_to (t '.read_more'), news_url(HighVoltage.page_ids.sort.first)

@@ -1,0 +1,15 @@
+#language_modal.modal.fade [ aria-hidden = 'true'
+  aria-labelledby = 'available_languages' role = 'dialog' tabindex = '-1'] 
+  
+  .modal-dialog role = 'document'
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+
+        h4#available_languages.modal-title = t '.available_languages'
+      .modal-body
+        .row
+          - I18n.available_locales.each do |locale|
+            .col-md-3
+              p
+                = link_to (t "#{ locale.to_s }_full"), :locale => locale

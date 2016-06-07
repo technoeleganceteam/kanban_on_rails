@@ -1,0 +1,309 @@
+---
+hu:
+  github: Github
+  bitbucket: Bitbucket
+  updated: frissítve
+  1_we_have_just_launched_our_service_title: Épp most indult a szolgáltatás
+  shared:
+    navbar:
+      sign_in: Bejelentkezés
+      sign_up: Regisztráció
+      projects: projektek
+      issues: kérdések
+      syncing_with_github: Szinkronizálás a GitHub ...
+      syncing_with_bitbucket: Sync with Bitbucket ...
+      new_issue: Új probléma
+      edit_project: Projekt szerkesztése
+    languages_select_modal:
+      available_languages: álló nyelvek
+    user_edit_menu:
+      profile: Profile
+      site_settings: Webhelybeállítások
+      services: Szolgáltatások
+    form_errors:
+      password: jelszó
+      current_password: Jelenlegi jelszó
+      password_confirmation: jelszó megerősítése
+      name: neve
+      base: Base
+      title: Cím
+      user_to_project_connection: Felhasználó vetíteni kapcsolat
+      columns:
+        tag: Tag átfedő
+    new_project_modal:
+      new_project: Új projekt
+    edit_project_modal:
+      edit_project: Projekt szerkesztése
+    new_issue_modal:
+      new_issue: Új probléma
+    left_sidebar:
+      projects: projektek
+    right_sidebar:
+      news: News
+      all: Minden
+      read_more: Bővebben
+    translations:
+      select_column_tags: Select oszlopban címkék
+      select_section_tags: Select szakaszcímkéket
+      select_issue_tags: Select kérdés címkék
+  users:
+    new:
+      invite_user: Felhasználó meghívása
+    form:
+      name: neve
+      enter_user_name: Adja meg a felhasználónevet
+      email: E-mail
+      enter_user_email: Adja meg a felhasználói e-mail
+      enter_user_password: Adja meg a felhasználói jelszót
+      password: jelszó
+      role: Felhasználó szerepe
+      save: mentése
+    index:
+      project: Project
+      users: felhasználó
+      new: Új
+    edit:
+      name: neve
+      enter_your_name: Adja meg a nevét
+      save: mentése
+    settings:
+      change_password: A jelszó megváltoztatása
+      interface_language: Interface language
+      submit: elküldése
+    password_form:
+      new_password: Új jelszó
+      confirm_new_password: Új jelszó megerősítése
+      old_password: Régi jelszó
+      change_password: A jelszó megváltoztatása
+    update:
+      your_profile_was_successfully_updated: Ön profilja sikeresen frissítve
+    dashboard:
+      hello: szia
+      here_some_of_your_statistics: Itt néhány statisztikát
+      projects: projektek
+  projects:
+    index:
+      projects: projektek
+      new: Új
+      sync_with_github: Szinkronizálás a GitHub
+      sync_with_bitbucket: Sync with bitbucket
+      stop_sync_with_bitbucket: leállítása szinkronban bitbucket
+      stop_sync_with_github: leállítása szinkronban GitHub
+    form:
+      name: neve
+      enter_project_name: Adja meg a projekt nevét
+      save: mentése
+      columns: oszlopok
+      sections: szakaszok
+      column_name: Row neve
+      section_name: Szekció neve
+      add: Add
+      column_width: oszlop szélessége
+      column_height: oszlop magassága
+      github_repository_id: GitHub repository id
+      github_full_name: GitHub repository fullname
+      github_secret_token_for_hook: Github titkos tokent horog
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket titkos tokent horog
+    project:
+      edit: szerkesztése
+      destroy: törlése
+      project_issues: Project kérdések
+      project_users: Project felhasználó
+    section_fields:
+      section_name: Szekció neve
+      remove_section: panel eltávolítása
+      section_tags: szakasz címkék
+      section_order: rendelés
+      or_include_all: Vagy az összes?
+    column_fields:
+      column_name: Oszlop neve
+      remove_column: Oszlop eltávolítása
+      max_issues_count: Max kérdések száma oszlopban
+      column_tags: oszlop címkék
+      column_order: rendelés
+    show:
+      next_page: Következő oldal
+  issues:
+    form:
+      title: Cím
+      enter_issue_title: Írja kérdés címe
+      save: mentése
+      body: Body
+      enter_issue_body: Írja kérdés test
+      tags: Címkék
+      issue_order: rendelés
+      bitbucket_issue_id: Bitbucket kérdés id
+      github_issue_id: Github kérdés id
+      github_issue_number: Github kérdés száma
+    index:
+      issues: kérdések
+      sync_with_github: Szinkronizálás a GitHub
+      sync_with_bitbucket: Sync with bitbucket
+      new: Új
+    issue:
+      destroy: törlése
+      edit: szerkesztése
+    edit:
+      edit_issue: szerkesztése kérdés
+    new:
+      new_issue: Új probléma
+  authentications:
+    index:
+      enabled_services: Engedélyezett szolgáltatások
+    authentication:
+      turned_off: kikapcsolva
+      turn_on: bekapcsolása
+      turn_off: kikapcsolása
+      turned_on: Bekapcsolva
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Épp most indult a szolgáltatás!
+      we_have_just_launched_our_service_text: Ma indítani a szolgáltatást, így mindenki
+      sign_up: regisztráljon
+      and_use_it: és használja.
+      with_love: Szeretettel,
+      technoelegance_team: Technoelegance csapat
+    index:
+      all_news: Minden hír
+      read_more: Bővebben
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Üdvözöljük Kanban on Rails
+      welcome_about_text: Itt lehet létrehozni saját Kanban fedélzeten, és szinkronizálhatja
+        a GitHub vagy Bitbucket
+  pages:
+    faq:
+      faq: GYIK
+      what_is_kanban_on_rails: Mi KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails a szolgáltatás, ahol létrehozhat Kanban
+        táblák és szinkronizálás azt GitHub vagy Bitbucket
+      what_features_has_kanban_on_rails: Mit tartalmaz olyan KanbanOnRails?
+      kanban_on_rails_features: is szinkronizálhatja projektek és problémák GitHub
+        és Bitbucket felhasználók meghívása (például a vezetők) a projekt, telepítjük
+        a saját szerver
+      i_have_some_requests: Van néhány kérést
+      you_can_write_request: írhatunk kérést
+      here: itt
+      i_have_seen_some_typo_or_wrong_translation: Láttam már néhány helyesírási vagy
+        rossz fordítás
+      you_can_send_pull_request_to_our: küldhet pull kérést a
+      github_repository: GitHub repository
+      i_have_seen_some_error: Láttam néhány hibát
+      you_can_write_to_our_info_mail: lehet írni erről az e-mail
+    about:
+      about_kanban_on_rails: A KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails a szolgáltatás, ahol létrehozhat Kanban
+        táblák és szinkronizálás azt GitHub vagy Bitbucket
+      kanban_on_rails_features: KanbanOnRails jellemzői
+      sync_with_github_and_bitbucket: is szinkronizálhatja projektek és problémák
+        GitHub és Bitbucket
+      invite_users: Meghívhat felhasználók (például a vezetők) a projekt
+      open_source_code: Ez a projekt a nyílt forráskód, így telepíteni, hogy a saját
+        szerver
+      we_use_open_source_and_high_technology: Az általunk használt magas technológiák
+        és nyílt forráskódú könyvtárakat. Igyekszünk mindig jobb és javítsa a szolgáltatás.
+      partners_and_investors: nyitottak vagyunk a partneri és szeretnénk megtalálni
+        a befektetők. Ha szeretne együttműködni velünk, kérjük, írjon nekünk partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Bejelentkezés
+        sign_up: Regisztráció
+        didnt_receive_confirmation_instructions: Nem kapta megerősítő utasítást?
+        sign_in_with: Jelentkezzen be
+        fast_login_almost_one_click: Gyors bejelentkezés (Majdnem egy kattintással)
+    confirmations:
+      confirmed: Fiókja sikeresen megerősítette.
+      send_instructions: kap egy e-mailt arról, hogy miként kell erősítenie a fiók
+        néhány perc alatt.
+      send_paranoid_instructions: Ha az e-mail cím létezik az adatbázisban, akkor
+        kap egy e-mailt arról, hogy miként kell erősítenie a fiók néhány perc alatt.
+      new:
+        send_mail_for_confirm_your_email: E-mail küldése az e-mail megerősítés
+        submit: elküldése
+    failure:
+      already_authenticated: Ön már bejelentkezett.
+      inactive: Fiókja még nincs aktiválva.
+      invalid: Rossz email cím vagy jelszó.
+      locked: Ön számlája zárolva van.
+      last_attempt: Van még egy kísérletet, mielőtt a fiók lesz zárva.
+      not_found_in_database: Rossz email cím vagy jelszó.
+      timeout: A munkamenet lejárt. Kérjük, jelentkezzen be ismét a folytatáshoz.
+      unauthenticated: be kell jelentkeznie, vagy regisztráljon a folytatás előtt.
+      unconfirmed: Meg kell erősítenie a fiók a folytatás előtt.
+    mailer:
+      confirmation_instructions:
+        subject: megerősítése utasítások
+        welcome_to_kanban_on_rails: Üdvözöljük KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: lehet megerősíteni
+          az e-mail útján az alábbi linkre
+        confirm_my_account: megerősítenek email
+      reset_password_instructions:
+        hello: szia
+        subject: Jelszó visszaállítása utasítások
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Valakinek
+          kérések egy linket, hogy változtassa meg a jelszavát. Ezt megteheti az alábbi
+          linkre.
+        change_my_password: Jelszó módosítása
+        if_you_didnt_request_this_please_ignore_this_email: Ha nem kérte ezt hagyja
+          figyelmen kívül ezt a levelet.
+      unlock_instructions:
+        subject: Unlock utasítások
+    omniauth_callbacks:
+      failure: Nem sikerült hitelesíteni Önt% {fajta} mert "% {ok}".
+      success: sikeresen azonosította a következőtől:% {fajta} venni.
+    passwords:
+      no_token: Nem lehet elérni ezt az oldalt nélkül érkező jelszó-visszaállító e.
+        Ha jön egy jelszó-visszaállító e, kérjük, győződjön meg róla, használta a
+        teljes URL-jét.
+      send_instructions: kap egy e-mailt arról, hogyan kell állítani a jelszavát,
+        néhány perc alatt.
+      send_paranoid_instructions: Ha az e-mail cím létezik az adatbázisban, akkor
+        kap egy jelszót helyreállító linket e-mail címét, néhány perc alatt.
+      updated: A jelszó megváltoztatásáról. Most már bejelentkezett.
+      updated_not_active: A jelszó megváltoztatásáról.
+      new:
+        forgot_your_password: Jelszó visszaállítása
+        reset_password: küldése vissza url
+      edit:
+        change_your_password: jelszó módosítása
+        new_password: Új jelszó
+        confirm_password: Jelszó megerősítése
+        change_password: Change
+    registrations:
+      destroyed: Bye! Az Ön fiókja sikeresen törölték. Reméljük, hogy hamarosan újra
+        találkozunk.
+      signed_up: Welcome! Ön már feliratkozott sikeresen.
+      signed_up_but_inactive: Ön feliratkozott sikeresen. Azonban nem tudtunk bejelentkezteti
+        mert fiókja még nincs aktiválva.
+      signed_up_but_locked: Ön feliratkozott sikeresen. Azonban nem tudtunk bejelentkezteti
+        mert fiókja le van zárva.
+      signed_up_but_unconfirmed: Egy üzenet egy megerősítő linket elküldtük az e-mail
+        címre. Kérjük, nyissa meg a linket, hogy aktiválja fiókját.
+      update_needs_confirmation: Te módosította fiókja sikeresen, de szükségünk van,
+        hogy ellenőrizze az új e-mail címet. Kérjük, ellenőrizze az e-mail és kattintson
+        a megerősítés linkre, hogy véglegesítse megerősíti az új e-mail címet.
+      updated: Frissítetted fiókja sikeresen.
+      new:
+        sign_up: Regisztráció
+        name: neve
+        password: jelszó
+        password_confirmation: jelszó megerősítése
+        register: Regisztráció
+    sessions:
+      signed_in: Aláírták sikeresen.
+      signed_out: Aláírt sikeresen végre.
+      new:
+        sign_in: Bejelentkezés
+        password: jelszó
+        remember_me: Emlékezz rám
+        forgot_your_password: Elfelejtette a jelszavát?
+    unlocks:
+      send_instructions: kap egy e-mailt arról, hogy miként oldja a fiók néhány perc
+        alatt.
+      send_paranoid_instructions: Ha fiókja van, akkor kap egy e-mailt arról, hogy
+        miként oldja meg néhány perc alatt.
+      unlocked: Fiókja kinyitása sikeresen. Kérjük, jelentkezzen be a folytatáshoz.
+  hu: hu
+  hu_iso: hu

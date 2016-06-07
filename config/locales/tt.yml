@@ -1,0 +1,230 @@
+---
+tt:
+  github: Github
+  bitbucket: Bitbucket
+  updated: güncellendi
+  shared:
+    navbar:
+      sign_in: Oturum açın
+      sign_up: kaydol
+      projects: Projeler
+      issues: Sorunlar
+      new_issue: Yeni konu
+      edit_project: düzenleme projesi
+    languages_select_modal:
+      available_languages: Mevcut diller
+    user_edit_menu:
+      profile: Profil
+      site_settings: Site ayarları
+      services: Hizmetler
+    form_errors:
+      password: Şifre
+      current_password: Mevcut parola
+      password_confirmation: Şifre onayı
+      name: Adı
+      base: Taban
+      title: Başlığı
+      columns:
+        tag: Etiket örtüşen
+    new_project_modal:
+      new_project: yeni proje
+    edit_project_modal:
+      edit_project: düzenleme projesi
+    new_issue_modal:
+      new_issue: Yeni konu
+    left_sidebar:
+      projects: Projeler
+    right_sidebar:
+      news: Haberleri
+      all: Tüm
+      read_more: Devamı
+    translations:
+      select_column_tags: Seç sütun etiketleri
+      select_section_tags: seç bölüm etiketleri
+      select_issue_tags: seçin sorunu etiketleri
+  users:
+    form:
+      name: Adı
+      email: E-posta
+      password: Şifre
+      role: Kullanıcı rolü
+      save: kaydet
+    index:
+      project: Projesi
+      users: kullanıcıları
+      new: Yeni
+    edit:
+      name: Adı
+      enter_your_name: Adınızı girin
+      save: kaydet
+    settings:
+      change_password: Şifre değiştir
+      interface_language: Arayüz dili
+      submit: Gönder
+    password_form:
+      new_password: Yeni şifre
+      old_password: Eski şifre
+      change_password: Şifre değiştir
+    dashboard:
+      hello: Merhaba
+      projects: Projeler
+  projects:
+    index:
+      projects: Projeler
+      new: Yeni
+    form:
+      name: Adı
+      enter_project_name: proje adını girin
+      save: kaydet
+      columns: Sütunlar
+      sections: Bölümler
+      column_name: Satır adı
+      section_name: Bölüm adı
+      add: Ekle
+      column_width: Sütun genişliği
+      column_height: Sütun yüksekliği
+      github_repository_id: Github depo kimliği
+      github_full_name: Github depo tamadı
+      bitbucket_full_name: Bitbucket tamadı
+    project:
+      edit: Düzenleme
+      destroy: Sil
+      project_issues: Proje sorunları
+      project_users: Proje kullanıcıları
+    section_fields:
+      section_name: Bölüm adı
+      remove_section: Kaldır bölümünde
+      section_tags: Bölüm etiketleri
+      section_order: Sipariş
+      or_include_all: Ya hepsini içerir?
+    column_fields:
+      column_name: Sütun adı
+      max_issues_count: Max sorunları sütununda saymak
+      column_tags: Sütun etiketleri
+      column_order: Sipariş
+    show:
+      next_page: Sonraki sayfa
+  issues:
+    form:
+      title: Başlığı
+      save: kaydet
+      body: Vücut
+      tags: Etiketler
+      issue_order: Sipariş
+      bitbucket_issue_id: Bitbucket sorunu kimliği
+      github_issue_id: Github sorunu kimliği
+      github_issue_number: Github sorunu numarası
+    index:
+      issues: sorunları
+      new: Yeni
+    issue:
+      destroy: Sil
+      edit: Düzenleme
+    edit:
+      edit_issue: düzenle sorunu
+    new:
+      new_issue: Yeni konu
+  authentications:
+    index:
+      enabled_services: Etkin hizmetler
+    authentication:
+      turned_off: kapattım
+      turn_off: kapatma
+      turned_on: üzerine döndü
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: Bugün yüzden herkes olabilir hizmetimizi
+        başlatmak
+      sign_up: kaydolmak
+      and_use_it: ve kullanın.
+      technoelegance_team: Technoelegance Takımı
+    index:
+      read_more: Devamı
+  pages:
+    faq:
+      faq: SSS
+      what_is_kanban_on_rails: KanbanOnRails nedir?
+      about_kanban_on_rails: KanbanOnRails Eğer Github veya Bitbucket ile Kanban kurulları
+        oluşturmak ve senkronize edebilirsiniz hizmet
+      i_have_some_requests: Ben bazı istekleri var
+      i_have_seen_some_typo_or_wrong_translation: Ben bazı yazım hataları ya da yanlış
+        çevirileri gördük
+      github_repository: github depo
+      i_have_seen_some_error: Ben bazı hatalar gördük
+    about:
+      about_kanban_on_rails_text: KanbanOnRails Eğer Github veya Bitbucket ile Kanban
+        kurulları oluşturmak ve senkronize edebilirsiniz hizmet
+      kanban_on_rails_features: KanbanOnRails özellikleri
+      we_use_open_source_and_high_technology: Biz yüksek teknoloji ve açık kaynak
+        kütüphaneleri kullanın. Biz her zaman daha iyi ve hizmetimizi geliştirmek
+        için çalışıyoruz.
+      partners_and_investors: Biz ortaklık için açılan ve yatırımcılar bulmak istiyorum.
+        Eğer bizimle işbirliği isterseniz partnership@technoelegance.com adresinden
+        bizimle irtibata geçin
+  devise:
+    shared:
+      links:
+        sign_in: Oturum açın
+        sign_up: kaydol
+        didnt_receive_confirmation_instructions: onay talimatı alınan değil mi?
+        fast_login_almost_one_click: Hızlı giriş (neredeyse tek bir tıklama)
+    confirmations:
+      send_instructions: "."
+      send_paranoid_instructions: e-posta adresinizi oluşturulmadı varsa, birkaç dakika
+        içinde hesabınızı onaylamak konusunda talimatları içeren bir e-posta alacaksınız.
+      new:
+        send_mail_for_confirm_your_email: onaylamak e-posta için e-posta gönder
+        submit: Gönder
+    failure:
+      invalid: Geçersiz e-posta veya şifre.
+      last_attempt: "."
+      not_found_in_database: Geçersiz e-posta veya şifre.
+    mailer:
+      confirmation_instructions:
+        subject: Onay talimatları
+        confirm_my_account: benim e-posta onaylayın
+      reset_password_instructions:
+        hello: Merhaba
+        subject: Şifreyi talimatları
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Birisi
+          isteklerini şifrenizi değiştirmek için bir bağlantı vardır. Aşağıdaki bağlantı
+          üzerinden yapabilirsiniz.
+        if_you_didnt_request_this_please_ignore_this_email: Eğer bu e-postayı görmezden
+          lütfen istemediyseniz.
+      unlock_instructions:
+        subject: kilidini Talimatlar
+    omniauth_callbacks:
+      failure: '% {tür} "% {reason}" Çünkü sizi kimlik doğrulaması olamazdı.'
+      success: başarıyla% {tür} hesabından kimlik doğrulaması.
+    passwords:
+      send_instructions: "."
+      send_paranoid_instructions: e-posta adresinizi oluşturulmadı varsa, birkaç dakika
+        içinde e-posta adresinize bir şifre kurtarma bağlantı alacaksınız.
+      new:
+        forgot_your_password: şifrenizi kurtarma
+        reset_password: Gönder url kurtarmak
+      edit:
+        change_your_password: şifrenizi değiştirin
+        new_password: Yeni şifre
+        confirm_password: Parolayı onayla
+        change_password: Değişim
+    registrations:
+      signed_up: hoş geldiniz! Sen başarıyla imzaladı.
+      new:
+        sign_up: kaydol
+        name: Adı
+        password: Şifre
+        password_confirmation: Şifre onayı
+        register: kaydol
+    sessions:
+      signed_in: başarıyla oturum açıldı.
+      signed_out: başarıyla oturum açıldı.
+      new:
+        sign_in: Oturum açın
+        password: Şifre
+        remember_me: Beni hatırla
+        forgot_your_password: Şifreni mi unuttun?
+    unlocks:
+      send_instructions: "."
+  tt: tt
+  tt_iso: tt

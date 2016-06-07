@@ -1,0 +1,285 @@
+---
+ta:
+  github: கிட்ஹப்
+  bitbucket: Bitbucket
+  updated: மேம்படுத்தப்பட்டது
+  shared:
+    navbar:
+      sign_in: உள்நுழை
+      sign_up: பதிவு
+      projects: திட்டங்கள்
+      issues: சிக்கல்கள்
+      new_issue: புதிய பிரச்சினை
+    languages_select_modal:
+      available_languages: இன்னும் மொழிகளை
+    user_edit_menu:
+      profile: செய்தது
+      site_settings: தள அமைப்புகள்
+      services: சேவைகள்
+    form_errors:
+      password: கடவுச்சொல்
+      current_password: தற்போதைய கடவுச்சொல்
+      password_confirmation: கடவுச்சொல் உறுதிப்படுத்தல்
+      name: பெயர்
+      base: பேஸ்
+      title: தலைப்பு
+      columns:
+        tag: டேக் ஒன்றுடன் ஒன்று
+    new_project_modal:
+      new_project: புதிய திட்டம்
+    new_issue_modal:
+      new_issue: புதிய பிரச்சினை
+    left_sidebar:
+      projects: திட்டங்கள்
+    right_sidebar:
+      news: செய்திகள்
+      all: அனைத்து
+      read_more: Read more
+    translations:
+      select_column_tags: தேர்வு
+      select_section_tags: தேர்வு
+      select_issue_tags: தேர்வு பிரச்சினை குறிச்சொற்களை
+  users:
+    new:
+      invite_user: அழை
+    form:
+      name: பெயர்
+      enter_user_name: பயனர் பெயரை உள்ளிடவும்
+      email: மின்னஞ்சல்
+      enter_user_email: பயனர் மின்னஞ்சல் முகவரியை உள்ளிடுங்கள்
+      enter_user_password: பயனர் கடவுச்சொல்லை உள்ளிடவும்
+      password: கடவுச்சொல்
+      role: பயனர் பங்கு
+      save: சேமி
+    index:
+      project: திட்ட
+      users: பயனர்கள்
+      new: நியூ
+    edit:
+      name: பெயர்
+      enter_your_name: உங்கள் பெயரை உள்ளிடவும்
+      save: சேமி
+    settings:
+      interface_language: இடைமுக மொழி
+      submit: சமர்ப்பிக்கவும்
+    password_form:
+      new_password: புதிய கடவுச்சொல்லை
+      confirm_new_password: புதிய கடவுச்சொல்லை உறுதி
+      old_password: பழைய கடவுச்சொல்
+    update:
+      your_profile_was_successfully_updated: வெற்றிகரமாக புதுப்பிக்கப்பட்டது
+    dashboard:
+      hello: வணக்கம்
+      projects: திட்டங்கள்
+  projects:
+    index:
+      projects: திட்டங்கள்
+      new: நியூ
+    form:
+      name: பெயர்
+      enter_project_name: திட்டம் பெயரை உள்ளிடவும்
+      save: சேமி
+      columns: பத்திகள்
+      sections: பிரிவுகள்
+      column_name: ரோ பெயர்
+      section_name: பகுதியின் பெயர்
+      add: சேர்
+      column_width: வரிசை அகலம்
+      column_height: வரிசை உயரம்
+      github_repository_id: கிட்ஹப் களஞ்சியம் ஐடி
+      github_full_name: கிட்ஹப் களஞ்சியம் முழுப்பெயரைக்
+      github_secret_token_for_hook: கிட்ஹப் கொக்கி இரகசிய டோக்கன்
+      bitbucket_full_name: Bitbucket முழுப்பெயரைக்
+      bitbucket_secret_token_for_hook: Bitbucket கொக்கி இரகசிய டோக்கன்
+    project:
+      edit: திருத்து
+      destroy: நீக்கு
+      project_issues: திட்ட பிரச்சினைகள்
+      project_users: திட்ட பயனாளிகள்
+    section_fields:
+      section_name: பகுதியின் பெயர்
+      remove_section: உள்ள Remove பிரிவில்
+      section_tags: பிரிவு குறிச்சொற்களை
+      section_order: ஆணை
+      or_include_all: அல்லது அடங்கும்?
+    column_fields:
+      column_name: வரிசை பெயர்
+      remove_column: நிரலை நீக்க
+      max_issues_count: மேக்ஸ் பிரச்சினைகள் பத்தியில் எண்ண
+      column_tags: வரிசை குறிச்சொற்களை
+      column_order: ஆணை
+    show:
+      next_page: அடுத்த பக்கம்
+  issues:
+    form:
+      title: தலைப்பு
+      enter_issue_title: பிரச்சினை தலைப்பை உள்ளிடவும்
+      save: சேமி
+      body: உடல்
+      enter_issue_body: பிரச்சினை உடல் உள்ளிடவும்
+      tags: குறிச்சொற்கள்
+      issue_order: ஆணை
+      bitbucket_issue_id: Bitbucket அடையாள
+      github_issue_id: கிட்ஹப் அடையாள
+      github_issue_number: கிட்ஹப் பிரச்சினை எண்
+    index:
+      issues: பிரச்சினைகள்
+      new: நியூ
+    issue:
+      destroy: நீக்கு
+      edit: திருத்து
+    new:
+      new_issue: புதிய பிரச்சினை
+  authentications:
+    index:
+      enabled_services: இயக்கப்பட்டது சேவைகள்
+    authentication:
+      turned_off: நிறுத்தப்பட்டுள்ளது
+      turn_on: இயக்கு
+      turn_off: அணைக்க
+      turned_on: இயக்கப்பட்டுள்ளது
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: "!"
+      we_have_just_launched_our_service_text: இன்று நாங்கள் எங்கள் சேவையை துவக்க எல்லோருக்கும்
+        முடியும்
+      sign_up: பதிவு
+      and_use_it: மற்றும் அதை பயன்படுத்த.
+      with_love: காதல்,
+      technoelegance_team: Technoelegance குழு
+    index:
+      read_more: Read more
+  pages:
+    faq:
+      faq: கேள்விகள்
+      what_is_kanban_on_rails: KanbanOnRails என்ன?
+      about_kanban_on_rails: KanbanOnRails நீங்கள் மகிழ்ச்சியா அல்லது Bitbucket கொண்டு
+        கான்பன் பலகைகள் உருவாக்க மற்றும் ஒத்திசைவு முடியும் அது சேவையாகும்
+      what_features_has_kanban_on_rails: கொண்டுள்ளது என்ன KanbanOnRails உள்ளது?
+      kanban_on_rails_features: ", கிட்ஹப் மற்றும் Bitbucket உங்கள் திட்டங்கள் மற்றும்
+        பிரச்சினைகள் ஒத்திசைக்க, உங்கள் திட்டம் பயனர் (எடுத்துக்காட்டாக, மேலாளர்கள்)
+        அழைக்க முடியும் உங்கள் சொந்த சர்வர் அதை பயன்படுத்த"
+      i_have_some_requests: நான் சில கோரிக்கைகள்
+      here: இங்கே
+      i_have_seen_some_typo_or_wrong_translation: நான் சில எழுத்துப்பிழைகள் அல்லது
+        தவறான மொழிபெயர்ப்பு பார்த்திருக்கிறேன்
+      you_can_send_pull_request_to_our: எங்கள்
+      github_repository: கிட்ஹப் களஞ்சியம்
+      i_have_seen_some_error: நான் சில பிழைகளை பார்த்திருக்கிறேன்
+    about:
+      about_kanban_on_rails: KanbanOnRails பற்றி
+      about_kanban_on_rails_text: KanbanOnRails நீங்கள் மகிழ்ச்சியா அல்லது Bitbucket
+        கொண்டு கான்பன் பலகைகள் உருவாக்க மற்றும் ஒத்திசைவு முடியும் அது சேவையாகும்
+      kanban_on_rails_features: KanbanOnRails அம்சங்கள்
+      sync_with_github_and_bitbucket: கிட்ஹப் மற்றும் Bitbucket உங்கள் திட்டங்கள்
+        மற்றும் பிரச்சினைகள் ஒத்திசைக்க முடியும்
+      invite_users: நீங்கள் உங்கள் திட்டம் பயனர் (எடுத்துக்காட்டாக, மேலாளர்கள்) அழைக்க
+        முடியும்
+      open_source_code: திறந்த மூல குறியீடு உள்ளது, எனவே நீங்கள் உங்கள் சொந்த சர்வர்
+        அதை பயன்படுத்த முடியும்
+      we_use_open_source_and_high_technology: நாம் உயர் தொழில்நுட்பங்கள் மற்றும்
+        ஓப்பன் சோர்ஸ் நூலகத்தை பயன்படுத்த. நாம் எப்போதும் சிறப்பாக கிடைக்கும் எங்கள்
+        சேவையை மேம்படுத்த முயற்சி.
+      partners_and_investors: நாம் கூட்டு திறக்கப்படுவதையும் நாங்கள் முதலீட்டாளர்களை
+        கண்டுபிடிக்க விரும்புகிறேன். நீங்கள் எங்களோடு ஒத்துழைக்க வேண்டும் விரும்பினால்
+        partnership@technoelegance.com எங்களை தொடர்பு கொள்ளவும்
+  devise:
+    shared:
+      links:
+        sign_in: உள்நுழை
+        sign_up: பதிவு
+        didnt_receive_confirmation_instructions: உறுதிப்படுத்தல் வழிமுறைகளை பெறவில்லை
+          வில்லையா?
+        fast_login_almost_one_click: வேகமான உள்நுழைவு (கிட்டத்தட்ட ஒரே கிளிக்கில்)
+    confirmations:
+      confirmed: வெற்றிகரமாக உறுதி செய்யப்பட்டது.
+      send_instructions: நீங்கள் ஒரு சில நிமிடங்களில் உங்கள் கணக்கை உறுதிப்படுத்த
+        எப்படி அறிவுறுத்தல்கள் ஒரு மின்னஞ்சல் பெறுவீர்கள்.
+      send_paranoid_instructions: உங்கள் மின்னஞ்சல் முகவரியை எமது தகவல் உள்ளது என்றால்,
+        நீங்கள் ஒரு சில நிமிடங்களில் உங்கள் கணக்கை உறுதிப்படுத்த எப்படி அறிவுறுத்தல்கள்
+        ஒரு மின்னஞ்சல் பெறுவீர்கள்.
+      new:
+        send_mail_for_confirm_your_email: உறுதி உங்கள் மின்னஞ்சல் மெயில் அனுப்பவும்
+        submit: சமர்ப்பிக்கவும்
+    failure:
+      already_authenticated: முன்பே உள்நுழைந்து.
+      inactive: இன்னும் இயக்கப்படவில்லை.
+      invalid: தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்.
+      locked: பூட்டப்பட்டுள்ளது.
+      last_attempt: "."
+      not_found_in_database: தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்.
+      timeout: காலாவதியானது. தொடர்ந்து, மீண்டும் உள்நுழையவும்.
+      unauthenticated: உள்நுழைய அல்லது தொடர்வதற்கு முன் பதிவு செய்ய வேண்டும்.
+      unconfirmed: தொடர்வதற்கு முன் உங்கள் கணக்கை உறுதிப்படுத்த வேண்டும்.
+    mailer:
+      confirmation_instructions:
+        subject: உறுதிப்படுத்தல் வழிமுறைகளை
+        confirm_my_account: என் மின்னஞ்சல் உறுதிப்படுத்தவும்
+      reset_password_instructions:
+        hello: வணக்கம்
+        subject: மீட்டமை கடவுச்சொல் வழிமுறைகளை
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: யாரோ
+          கோரிக்கைகளை உங்கள் கடவுச்சொல்லை மாற்ற ஒரு இணைப்பு உள்ளது. கீழே உள்ள இணைப்பை
+          மூலம் இதை செய்ய முடியும்.
+        change_my_password: எனது கடவுச்சொல்லை மாற்றவும்
+        if_you_didnt_request_this_please_ignore_this_email: நீங்கள் கோரவில்லை என்றால்
+          இந்த இந்த மின்னஞ்சல் புறக்கணிக்கவும்.
+      unlock_instructions:
+        subject: திறக்க வழிமுறைகள்
+    omniauth_callbacks:
+      failure: '% {வகையான} ஏனெனில் "% {காரணம்}" இருந்து நீங்கள் அங்கீகரிக்க முடியவில்லை.'
+      success: வெற்றிகரமாக% {வகையான} கணக்கில் இருந்து அங்கீகரிக்கப்படும்.
+    passwords:
+      no_token: ஒரு பாஸ்வேர்ட் ரீசெட் மின்னஞ்சலில் இருந்து வரும் இல்லாமல் இந்த பக்கம்
+        அணுக முடியாது. நீங்கள் ஒரு பாஸ்வேர்ட் ரீசெட் மின்னஞ்சலில் வரும் என்றால், நீங்கள்
+        வழங்கிய முழு URL ஐ பயன்படுத்த உறுதி செய்யவும்.
+      send_instructions: நீங்கள் ஒரு சில நிமிடங்களில் உங்கள் கடவுச்சொல்லை மீட்டமைக்க
+        எப்படி வழிமுறைகளை ஒரு மின்னஞ்சல் பெறுவீர்கள்.
+      send_paranoid_instructions: உங்கள் மின்னஞ்சல் முகவரியை எமது தகவல் உள்ளது என்றால்,
+        நீங்கள் ஒரு சில நிமிடங்களில் உங்கள் மின்னஞ்சல் முகவரியில் ஒரு கடவுச்சொல்லை
+        மீட்பு இணைப்பை பெறும்.
+      updated: வெற்றிகரமாக மாற்றப்பட்டது. நீங்கள் இப்போது உள்நுழைந்துள்ளீர்கள்.
+      updated_not_active: வெற்றிகரமாக மாற்றப்பட்டது.
+      new:
+        forgot_your_password: உங்கள் கடவுச்சொல்லை மீட்க
+        reset_password: அனுப்புக URL மீட்க
+      edit:
+        change_your_password: உங்கள் கடவுச்சொல்லை மாற்றுக
+        new_password: புதிய கடவுச்சொல்லை
+        change_password: மாற்றம்
+    registrations:
+      destroyed: "! உங்கள் கணக்கு வெற்றிகரமாக ரத்துசெய்யப்பட்டது. நாம் மீண்டும் விரைவில்
+        நீங்கள் பார்க்க நம்புகிறேன்."
+      signed_up: வரவேற்கிறோம்! நீங்கள் வெற்றிகரமாக கையெழுத்திட்டுள்ளன.
+      signed_up_but_inactive: வெற்றிகரமாக கையெழுத்திட்டுள்ளன. எனினும், உங்கள் கணக்கு
+        இன்னும் இயக்கப்படவில்லை ஏனெனில், இப்போது நீங்கள் உள்நுழைய முடியவில்லை.
+      signed_up_but_locked: வெற்றிகரமாக கையெழுத்திட்டுள்ளன. எனினும், உங்கள் கணக்கு
+        பூட்டப்பட்டுள்ளது ஏனெனில், இப்போது நீங்கள் உள்நுழைய முடியவில்லை.
+      signed_up_but_unconfirmed: உங்கள் மின்னஞ்சல் முகவரியை அனுப்பி வருகிறது. உங்கள்
+        கணக்கை செயல்படுத்த இணைப்பை திறக்க கொள்ளவும்.
+      update_needs_confirmation: ", ஆனால் நாங்கள் உங்கள் புதிய மின்னஞ்சல் முகவரியை
+        சரிபார்க்க வேண்டும். உங்கள் மின்னஞ்சல் சரிபார்த்து உங்கள் புதிய மின்னஞ்சல்
+        முகவரியை உண்மைப்படுத்துபவராக இறுதி செய்ய உறுதி இணைப்பை கிளிக் செய்து."
+      updated: "."
+      new:
+        sign_up: பதிவு
+        name: பெயர்
+        password: கடவுச்சொல்
+        password_confirmation: கடவுச்சொல் உறுதிப்படுத்தல்
+        register: பதிவு
+    sessions:
+      signed_in: வெற்றிகரமாக உள்நுழைந்துள்ளீர்கள்.
+      signed_out: வெற்றிகரமாக வெளியேறிவிட்டார்.
+      new:
+        sign_in: உள்நுழை
+        password: கடவுச்சொல்
+        remember_me: என்னை நினைவில்
+        forgot_your_password: உங்கள் கடவுச்சொல்லை மறந்து விட்டீர்களா?
+    unlocks:
+      send_instructions: நீங்கள் ஒரு சில நிமிடங்களில் உங்கள் கணக்கு திறக்க எப்படி
+        அறிவுறுத்தல்கள் ஒரு மின்னஞ்சல் பெறுவீர்கள்.
+      send_paranoid_instructions: உங்கள் கணக்கு இல்லை என்றால், நீங்கள் ஒரு சில நிமிடங்களில்
+        அதை திறக்க எப்படி அறிவுறுத்தல்கள் ஒரு மின்னஞ்சல் பெறுவீர்கள்.
+      unlocked: வெற்றிகரமாக திறக்கப்பட்டது. தொடர்ந்து இல் உள்நுழையவும்.
+  ta: ta
+  ta_iso: ta

@@ -1,0 +1,280 @@
+---
+th:
+  github: Github
+  bitbucket: Bitbucket
+  updated: การปรับปรุง
+  1_we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา
+  shared:
+    navbar:
+      sign_in: เข้าสู่ระบบ
+      sign_up: ลงทะเบียน
+      projects: โครงการ
+      issues: ปัญหา
+      syncing_with_github: Sync กับ Github ...
+      syncing_with_bitbucket: Sync กับ Bitbucket ...
+      new_issue: ปัญหาใหม่
+      edit_project: แก้ไขโครงการ
+    languages_select_modal:
+      available_languages: ภาษาที่มีจำหน่าย
+    user_edit_menu:
+      profile: ข้อมูลส่วนตัว
+      site_settings: การตั้งค่าเว็บไซต์
+      services: บริการ
+    form_errors:
+      password: รหัสผ่าน
+      current_password: รหัสผ่านปัจจุบัน
+      name: ชื่อ
+      base: ฐาน
+      title: ชื่อเรื่อง
+      user_to_project_connection: ผู้ใช้เชื่อมต่อกับโครงการ
+      columns:
+        tag: แท็กที่ทับซ้อนกัน
+    new_project_modal:
+      new_project: โครงการใหม่
+    edit_project_modal:
+      edit_project: แก้ไขโครงการ
+    new_issue_modal:
+      new_issue: ปัญหาใหม่
+    left_sidebar:
+      projects: โครงการ
+    right_sidebar:
+      news: ข่าว
+      all: ทั้งหมด
+      read_more: อ่านเพิ่มเติม
+    translations:
+      select_column_tags: เลือกแท็กคอลัมน์
+      select_section_tags: เลือกแท็กส่วน
+      select_issue_tags: เลือกแท็กปัญหา
+  users:
+    new:
+      invite_user: เชิญผู้ใช้
+    form:
+      name: ชื่อ
+      enter_user_name: ป้อนชื่อผู้ใช้
+      email: อีเมล์
+      enter_user_email: ใส่อีเมลของผู้ใช้
+      enter_user_password: ป้อนรหัสผ่านของผู้ใช้
+      password: รหัสผ่าน
+      save: บันทึก
+    index:
+      project: โครงการ
+      users: ผู้ใช้
+      new: ใหม่
+    edit:
+      name: ชื่อ
+      enter_your_name: ใส่ชื่อของคุณ
+      save: บันทึก
+    settings:
+      change_password: เปลี่ยนรหัสผ่าน
+      interface_language: ภาษาอินเตอร์เฟซ
+      submit: ส่ง
+    password_form:
+      new_password: รหัสผ่านใหม่
+      confirm_new_password: ยืนยันรหัสผ่านใหม่
+      change_password: เปลี่ยนรหัสผ่าน
+    update:
+      your_profile_was_successfully_updated: โปรไฟล์ของคุณถูกปรับปรุงเรียบร้อยแล้ว
+    dashboard:
+      hello: สวัสดี
+      here_some_of_your_statistics: นี่คือบางส่วนของสถ​​ิติของคุณ
+      projects: โครงการ
+  projects:
+    index:
+      projects: โครงการ
+      new: ใหม่
+      sync_with_github: Sync กับ GitHub
+      sync_with_bitbucket: Sync กับ bitbucket
+      stop_sync_with_bitbucket: ซิงค์หยุดกับ bitbucket
+      stop_sync_with_github: ซิงค์หยุดกับ GitHub
+    form:
+      name: ชื่อ
+      enter_project_name: ใส่ชื่อโครงการ
+      save: บันทึก
+      columns: คอลัมน์
+      sections: ส่วน
+      add: เพิ่ม
+      github_repository_id: Github พื้นที่เก็บข้อมูล ID
+      github_full_name: Github พื้นที่เก็บข้อมูลชื่อเต็ม
+      github_secret_token_for_hook: Github โทเค็นความลับเบ็ด
+      bitbucket_full_name: Bitbucket ชื่อเต็ม
+      bitbucket_secret_token_for_hook: Bitbucket โทเค็นความลับเบ็ด
+    project:
+      edit: แก้ไข
+      destroy: ลบ
+      project_issues: ปัญหาโครงการ
+      project_users: ผู้ใช้โครงการ
+    section_fields:
+      section_tags: แท็กมาตรา
+      section_order: สั่งซื้อ
+      or_include_all: หรือรวมทั้งหมดหรือไม่
+    column_fields:
+      remove_column: เอาคอลัมน์
+      max_issues_count: ปัญหาสูงสุดนับในคอลัมน์
+      column_tags: แท็กคอลัมน์
+      column_order: สั่งซื้อ
+    show:
+      next_page: หน้าถัดไป
+  issues:
+    form:
+      title: ชื่อเรื่อง
+      enter_issue_title: ป้อนชื่อปัญหา
+      save: บันทึก
+      body: ร่างกาย
+      enter_issue_body: ใส่ร่างกายปัญหา
+      tags: แท็ก
+      issue_order: สั่งซื้อ
+      bitbucket_issue_id: Bitbucket รหัสปัญหา
+      github_issue_id: Github รหัสปัญหา
+      github_issue_number: Github จำนวนปัญหา
+    index:
+      issues: ปัญหา
+      sync_with_github: Sync กับ GitHub
+      sync_with_bitbucket: Sync กับ bitbucket
+      new: ใหม่
+    issue:
+      destroy: ลบ
+      edit: แก้ไข
+    edit:
+      edit_issue: แก้ไขปัญหา
+    new:
+      new_issue: ปัญหาใหม่
+  authentications:
+    index:
+      enabled_services: บริการที่เปิดใช้งาน
+    authentication:
+      turned_off: ปิด
+      turn_on: เปิด
+      turn_off: ปิด
+      turned_on: เปิด
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา!
+      we_have_just_launched_our_service_text: วันนี้เราเปิดให้บริการของเราเพื่อให้ทุกคนสามารถทำได้
+      sign_up: ลงทะเบียน
+      and_use_it: และใช้งานได้
+      with_love: ด้วยความรัก
+      technoelegance_team: ทีม Technoelegance
+    index:
+      all_news: ข่าวทั้งหมด
+      read_more: อ่านเพิ่มเติม
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: ยินดีต้อนรับสู่ Kanban On Rails
+      welcome_about_text: ที่นี่คุณสามารถสร้างคณะกรรมการ Kanban ของคุณเองและซิงค์กับ
+        Github หรือ Bitbucket
+  pages:
+    faq:
+      faq: คำถามที่พบบ่อย
+      what_is_kanban_on_rails: KanbanOnRails คืออะไร?
+      about_kanban_on_rails: KanbanOnRails เป็นบริการที่คุณสามารถสร้างบอร์ด Kanban
+        และซิงค์กับ Github หรือ Bitbucket
+      what_features_has_kanban_on_rails: สิ่งที่มีคุณสมบัติมี KanbanOnRails?
+      kanban_on_rails_features: คุณสามารถซิงค์โครงการและปัญหาของคุณกับ Github และ
+        Bitbucket เชิญผู้ใช้ (สำหรับผู้บริหารเป็นต้น) สำหรับโครงการของคุณปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
+      i_have_some_requests: ฉันมีคำขอบาง
+      you_can_write_request: คุณสามารถเขียนคำขอ
+      here: ที่นี่
+      i_have_seen_some_typo_or_wrong_translation: ฉันได้เห็นความผิดพลาดบางส่วนหรือแปลผิด
+      you_can_send_pull_request_to_our: คุณสามารถส่งคำขอดึงของเรา
+      i_have_seen_some_error: ฉันได้เห็นข้อผิดพลาดบาง
+      you_can_write_to_our_info_mail: คุณสามารถเขียนเกี่ยวกับเรื่องนี้ไปยังอีเมลของเรา
+    about:
+      about_kanban_on_rails: เกี่ยวกับ KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails เป็นบริการที่คุณสามารถสร้างบอร์ด Kanban
+        และซิงค์กับ Github หรือ Bitbucket
+      kanban_on_rails_features: คุณสมบัติ KanbanOnRails
+      sync_with_github_and_bitbucket: คุณสามารถซิงค์โครงการและปัญหาของคุณกับ Github
+        และ Bitbucket
+      invite_users: คุณสามารถเชิญผู้ใช้ (สำหรับผู้บริหารเป็นต้น) สำหรับโครงการของคุณ
+      open_source_code: โครงการนี​​้มีรหัสที่มาเปิดเพื่อให้คุณสามารถปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
+      we_use_open_source_and_high_technology: เราใช้เทคโนโลยีชั้นสูงและห้องสมุดมาเปิด
+        เราพยายามที่จะได้รับที่ดีขึ้นและปรับปรุงบริการของเรา
+      partners_and_investors: เราจะเปิดสำหรับการเป็นหุ้นส่วนและเราต้องการที่จะหานักลงทุน
+        หากคุณต้องการที่จะให้ความร่วมมือกับเราโปรดติดต่อเราที่ partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: เข้าสู่ระบบ
+        sign_up: ลงทะเบียน
+        didnt_receive_confirmation_instructions: ไม่ได้รับการยืนยันคำแนะนำ?
+        sign_in_with: เข้าสู่ระบบด้วย
+        fast_login_almost_one_click: เข้าสู่ระบบได้อย่างรวดเร็ว (เกือบหนึ่งคลิก)
+    confirmations:
+      confirmed: บัญชีของคุณประสบความสำเร็จได้รับการยืนยัน
+      send_instructions: คุณจะได้รับอีเมลที่มีคำแนะนำเกี่ยวกับวิธีการยืนยันบัญชีของคุณในไม่กี่นาที
+      send_paranoid_instructions: ถ้าที่อยู่อีเมลของคุณที่มีอยู่ในฐานข้อมูลของเราคุณจะได้รับอีเมลที่มีคำแนะนำเกี่ยวกับวิธีการยืนยันบัญชีของคุณในไม่กี่นาที
+      new:
+        send_mail_for_confirm_your_email: ส่งอีเมล์เพื่อยืนยันอีเมลของคุณ
+        submit: ส่ง
+    failure:
+      already_authenticated: คุณลงชื่อเข้าใช้แล้ว
+      inactive: บัญชีของคุณไม่ได้เปิดใช้เลย
+      invalid: อีเมลหรือรหัสผ่านไม่ถูกต้อง
+      locked: บัญชีของคุณถูกล็อค
+      last_attempt: คุณมีความพยายามมากขึ้นก่อนที่บัญชีของคุณจะถูกล็อค
+      not_found_in_database: อีเมลหรือรหัสผ่านไม่ถูกต้อง
+      timeout: เซสชันของคุณหมดอายุ กรุณาเข้าสู่ระบบอีกครั้งเพื่อดำเนินการต่อไป
+      unauthenticated: คุณจำเป็นต้องลงชื่อเข้าใช้หรือลงทะเบียนก่อนดำเนินการต่อ
+      unconfirmed: คุณต้องยืนยันบัญชีของคุณก่อนที่จะดำเนินการต่อไป
+    mailer:
+      confirmation_instructions:
+        subject: คำแนะนำการยืนยัน
+        welcome_to_kanban_on_rails: ยินดีต้อนรับสู่ KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: คุณสามารถยืนยันอีเมลของคุณผ่านการเชื่อมโยงด้านล่าง
+        confirm_my_account: ยืนยันอีเมลของฉัน
+      reset_password_instructions:
+        hello: สวัสดี
+        subject: คำแนะนำการรีเซ็ตรหัสผ่าน
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: ใครบางคนมีการร้องขอการเชื่อมโยงการเปลี่ยนรหัสผ่านของคุณ
+          คุณสามารถทำเช่นนี้ผ่านลิงค์ข้างล่างนี้
+        change_my_password: เปลี่ยนรหัสผ่านของฉัน
+        if_you_didnt_request_this_please_ignore_this_email: หากคุณไม่ได้ร้องขอนี้โปรดละเว้นอีเมลนี้
+      unlock_instructions:
+        subject: คำแนะนำในการปลดล็อค
+    omniauth_callbacks:
+      failure: ไม่สามารถรับรองความถูกต้องคุณจาก% {} ชนิดเพราะ "เหตุผล% {}"
+      success: รับรองความถูกต้องประสบความสำเร็จจาก% บัญชี {} ชนิด
+    passwords:
+      no_token: คุณไม่สามารถเข้าถึงหน้านี้โดยไม่ต้องมาจากอีเมลรีเซ็ตรหัสผ่าน ถ้าคุณมาจากอีเมลรีเซ็ตรหัสผ่านโปรดให้แน่ใจว่าคุณใช้
+        URL แบบเต็มให้ไว้
+      send_instructions: คุณจะได้รับอีเมลที่มีคำแนะนำเกี่ยวกับวิธีการตั้งค่ารหัสผ่านของคุณในไม่กี่นาที
+      send_paranoid_instructions: ถ้าที่อยู่อีเมลของคุณที่มีอยู่ในฐานข้อมูลของเราคุณจะได้รับการเชื่อมโยงกู้คืนรหัสผ่านที่อยู่อีเมลของคุณในไม่กี่นาที
+      updated: รหัสผ่านของคุณประสบความสำเร็จในการเปลี่ยนแปลง คุณลงชื่อเข้าใช้ในขณะนี้
+      updated_not_active: รหัสผ่านของคุณประสบความสำเร็จในการเปลี่ยนแปลง
+      new:
+        forgot_your_password: กู้คืนรหัสผ่านของคุณ
+        reset_password: ส่ง URL กู้คืน
+      edit:
+        change_your_password: เปลี่ยนรหัสผ่านของคุณ
+        new_password: รหัสผ่านใหม่
+        change_password: เปลี่ยน
+    registrations:
+      destroyed: ลาก่อน! บัญชีของคุณถูกยกเลิกเรียบร้อยแล้ว เราหวังที่จะเห็นคุณอีกครั้งเร็ว
+        ๆ
+      signed_up: ยินดีต้อนรับ! คุณได้ลงทะเบียนเรียบร้อยแล้ว
+      signed_up_but_inactive: คุณได้ลงทะเบียนเรียบร้อยแล้ว อย่างไรก็ตามเราไม่สามารถลงชื่อเข้าใช้เพราะบัญชีของคุณไม่ได้เปิดใช้งาน
+      signed_up_but_locked: คุณได้ลงทะเบียนเรียบร้อยแล้ว อย่างไรก็ตามเราไม่สามารถลงชื่อเข้าใช้เนื่องจากบัญชีของคุณถูกล็อค
+      signed_up_but_unconfirmed: ข้อความที่มีลิงค์ยืนยันได้ถูกส่งไปยังที่อยู่อีเมลของคุณ
+        กรุณาเปิดการเชื่อมโยงเพื่อเปิดใช้งานบัญชีของคุณ
+      update_needs_confirmation: คุณอัปเดตบัญชีของคุณประสบความสำเร็จ แต่เราจำเป็นต้องยืนยันที่อยู่อีเมลของคุณใหม่
+        โปรดตรวจสอบอีเมลของคุณและคลิกที่ลิงค์ยืนยันที่จะจบการยืนยันที่อยู่อีเมลของคุณใหม่
+      updated: คุณอัปเดตบัญชีของคุณประสบความสำเร็จ
+      new:
+        sign_up: ลงทะเบียน
+        name: ชื่อ
+        password: รหัสผ่าน
+        register: ลงทะเบียน
+    sessions:
+      signed_in: ลงนามในการประสบความสำเร็จ
+      signed_out: ออกจากระบบเรียบร้อยแล้ว
+      new:
+        sign_in: เข้าสู่ระบบ
+        password: รหัสผ่าน
+        remember_me: Remember me
+        forgot_your_password: ลืมรหัสผ่านของคุณหรือไม่
+    unlocks:
+      send_instructions: คุณจะได้รับอีเมลที่มีคำแนะนำเกี่ยวกับวิธีการปลดล็อคบัญชีของคุณในไม่กี่นาที
+      send_paranoid_instructions: หากบัญชีของคุณอยู่คุณจะได้รับอีเมลที่มีคำแนะนำเกี่ยวกับวิธีการปลดล็อคในไม่กี่นาที
+      unlocked: บัญชีของคุณได้รับการปลดล็อคประสบความสำเร็จ กรุณาเข้าสู่ระบบเพื่อดำเนินการต่อ
+  th: th
+  th_iso: th

@@ -1,0 +1,291 @@
+---
+pl:
+  github: Github
+  bitbucket: Bitbucket
+  updated: zaktualizowane
+  1_we_have_just_launched_our_service_title: Właśnie uruchomiliśmy nasz serwis
+  shared:
+    navbar:
+      sign_in: Zaloguj się
+      sign_up: Zarejestruj się
+      issues: Zagadnienia
+      syncing_with_github: Synchronizacja z Github ...
+      syncing_with_bitbucket: Synchronizacja z Bitbucket ...
+      new_issue: Nowy numer
+      edit_project: Edycja projektu
+    languages_select_modal:
+      available_languages: Wersje
+    user_edit_menu:
+      profile: profilu
+      site_settings: Ustawienia strony
+      services: Usługi
+    form_errors:
+      password: Hasło
+      current_password: Aktualne hasło
+      name: Nazwa
+      user_to_project_connection: użytkownika do projektu połączenia
+      columns:
+        tag: Tag nakładających
+    new_project_modal:
+      new_project: Nowy projekt
+    edit_project_modal:
+      edit_project: Edycja projektu
+    new_issue_modal:
+      new_issue: Nowy numer
+    left_sidebar:
+      projects: Projekty
+    right_sidebar:
+      news: Aktualności
+      all: Wszystko
+      read_more: Czytaj więcej
+    translations:
+      select_column_tags: Wybierz znaczniki kolumn
+      select_section_tags: Wybierz tagi sekcji
+      select_issue_tags: Wybierz wydaje etykiety
+  users:
+    new:
+      invite_user: Zaproś użytkownika
+    form:
+      name: Nazwa
+      enter_user_name: Wprowadź nazwę użytkownika
+      email: email
+      enter_user_email: Podaj e-mail użytkownika
+      enter_user_password: Wprowadź hasło użytkownika
+      password: Hasło
+      save: Zapisz
+    index:
+      project: Projekt
+      new: Nowa
+    edit:
+      name: Nazwa
+      enter_your_name: Wprowadź swoją nazwę
+      save: Zapisz
+    settings:
+      interface_language: Język interfejsu
+      submit: Zatwierdź
+    password_form:
+      new_password: Nowe hasło
+      confirm_new_password: Potwierdź nowe hasło
+      old_password: Stare hasło
+    update:
+      your_profile_was_successfully_updated: Twój profil został pomyślnie zaktualizowany
+    dashboard:
+      hello: Witam
+      here_some_of_your_statistics: Oto niektóre statystyki
+      projects: Projekty
+  projects:
+    index:
+      projects: Projekty
+      new: Nowa
+      sync_with_github: Synchronizacja z github
+      sync_with_bitbucket: Synchronizacja z bitbucket
+      stop_sync_with_bitbucket: Zatrzymaj synchronizacja z bitbucket
+      stop_sync_with_github: Zatrzymaj synchronizacja z github
+    form:
+      name: Nazwa
+      enter_project_name: Wprowadź nazwę projektu
+      save: Zapisz
+      sections: Sekcje
+      add: dodawania
+      github_repository_id: Github repozytorium id
+      github_full_name: Github repozytorium fullname
+      github_secret_token_for_hook: Github tajny token hakiem
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tajny token hakiem
+    project:
+      edit: Edycja
+      destroy: Usuń
+      project_issues: kwestie projektowe
+      project_users: użytkownicy projektu
+    section_fields:
+      section_tags: tagi Sekcja
+      section_order: Zamówienie
+      or_include_all: Albo to wszystko?
+    column_fields:
+      remove_column: Usuń kolumnę
+      max_issues_count: Maks kwestie liczyć w kolumnie
+      column_tags: znaczniki kolumn
+      column_order: Zamówienie
+    show:
+      next_page: Następna strona
+  issues:
+    form:
+      enter_issue_title: Wprowadź tytuł emisyjnej
+      save: Zapisz
+      body: ciała
+      enter_issue_body: Wprowadź ciało emisyjnej
+      tags: Tagi
+      issue_order: Zamówienie
+      github_issue_number: numer wydania Github
+    index:
+      issues: kwestie
+      sync_with_github: Synchronizacja z github
+      sync_with_bitbucket: Synchronizacja z bitbucket
+      new: Nowa
+    issue:
+      destroy: Usuń
+      edit: Edycja
+    edit:
+      edit_issue: Edit Wydanie
+    new:
+      new_issue: Nowy numer
+  authentications:
+    index:
+      enabled_services: Włączone usługi
+    authentication:
+      turned_off: Wyłączony
+      turn_on: Włącz
+      turn_off: Wyłącz
+      turned_on: Włączony
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Właśnie uruchomiliśmy nasz serwis!
+      we_have_just_launched_our_service_text: Dzisiaj uruchamiamy nasz serwis tak,
+        każdy może
+      sign_up: zarejestrować
+      and_use_it: i używać go.
+      with_love: Z miłością,
+      technoelegance_team: Technoelegance zespołu
+    index:
+      all_news: Wszystkie wiadomości
+      read_more: Czytaj więcej
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Witamy Kanban On Rails
+      welcome_about_text: Tutaj można utworzyć własną Tablica Kanban i zsynchronizować
+        je z Github lub Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Co KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails jest serwis, gdzie można tworzyć tablice
+        Kanban i synchronizować je z Github lub Bitbucket
+      what_features_has_kanban_on_rails: Jakie funkcje ma KanbanOnRails?
+      kanban_on_rails_features: Ty mogą synchronizować swoje projekty i problemy z
+        Github i Bitbucket, zapraszać innych użytkowników (na przykład) dla menedżerów
+        projektu, wdrożyć go do własnego serwera
+      i_have_some_requests: mam pewne wnioski
+      you_can_write_request: Możesz napisać wniosek
+      here: tutaj
+      i_have_seen_some_typo_or_wrong_translation: Widziałem kilka literówek lub błędne
+        tłumaczenia
+      you_can_send_pull_request_to_our: można wysyłać żądania ściągania do naszego
+      i_have_seen_some_error: Widziałem kilka błędów
+      you_can_write_to_our_info_mail: Możesz napisać o tym na nasz email
+    about:
+      about_kanban_on_rails: O KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails jest serwis, gdzie można tworzyć tablice
+        Kanban i synchronizować je z Github lub Bitbucket
+      kanban_on_rails_features: funkcje KanbanOnRails
+      sync_with_github_and_bitbucket: Ty mogą synchronizować swoje projekty i problemy
+        z Github i Bitbucket
+      invite_users: Możesz zaprosić użytkowników (na przykład menedżerów) dla projektu
+      open_source_code: Projekt ten ma otwarty kod źródłowy, więc można wdrożyć go
+        na własnym serwerze
+      we_use_open_source_and_high_technology: Używamy wysokich technologii i bibliotek
+        open source. Zawsze staramy się lepiej i poprawić nasze usługi.
+      partners_and_investors: Jesteśmy otwarci na partnerstwo i chcielibyśmy, aby
+        znaleźć inwestorów. Jeśli chcesz z nami współpracować prosimy o kontakt pod
+        adresem partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Zaloguj się
+        sign_up: Zarejestruj się
+        didnt_receive_confirmation_instructions: Nie otrzymałem instrukcji potwierdzania?
+        sign_in_with: Zaloguj się
+        fast_login_almost_one_click: Szybkie logowanie (prawie jedno kliknięcie)
+    confirmations:
+      confirmed: konto zostało pomyślnie potwierdzone.
+      send_instructions: Otrzymasz e-mail z instrukcją jak potwierdzić swoje konto
+        w ciągu kilku minut.
+      send_paranoid_instructions: Jeśli Twój adres e-mail istnieje w naszej bazie
+        danych, otrzymasz e-mail z instrukcją jak potwierdzić swoje konto w ciągu
+        kilku minut.
+      new:
+        send_mail_for_confirm_your_email: Wyślij pocztę potwierdzić swój e-mail
+        submit: Zatwierdź
+    failure:
+      already_authenticated: jesteś już zalogowany.
+      inactive: Twoje konto nie zostało jeszcze aktywowane.
+      invalid: Nieprawidłowy e-mail lub hasło.
+      locked: Twoje konto jest zablokowane.
+      last_attempt: Masz jeszcze jedną próbę, zanim konto zostanie zablokowane.
+      not_found_in_database: Nieprawidłowy e-mail lub hasło.
+      timeout: Twoja sesja wygasła. Proszę zalogować się ponownie, aby kontynuować.
+      unauthenticated: musisz się zalogować lub zarejestrować się przed kontynuowaniem.
+      unconfirmed: Musisz potwierdzić swoje konto przed kontynuowaniem.
+    mailer:
+      confirmation_instructions:
+        subject: instrukcji potwierdzania
+        welcome_to_kanban_on_rails: Witamy KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Możesz potwierdzić
+          swój e-mail poprzez poniższy link
+        confirm_my_account: Potwierdź mój e-mail
+      reset_password_instructions:
+        hello: Witam
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Ktoś
+          żąda odnośnik do zmiany hasła. Można to zrobić za pomocą poniższego linku.
+        change_my_password: Zmień hasło
+        if_you_didnt_request_this_please_ignore_this_email: Jeśli nie wystąpiła ta
+          zignoruj ​​tę wiadomość.
+      unlock_instructions:
+        subject: Unlock Instrukcje
+    omniauth_callbacks:
+      failure: Nie można uwierzytelnić cię z% {rodzaju}, ponieważ "% {powód}".
+      success: pomyślnym uwierzytelnieniu z% {rodzaju} rachunku.
+    passwords:
+      no_token: nie można uzyskać dostęp do tej strony bez pochodzących z email resetowania
+        hasła. Jeśli nie pochodzą z e-mail resetowania hasła, należy upewnić się,
+        że używany pełny adres URL do tego celu.
+      send_instructions: Otrzymasz e-mail z instrukcjami, jak zresetować hasło w ciągu
+        kilku minut.
+      send_paranoid_instructions: Jeśli Twój adres e-mail istnieje w naszej bazie
+        danych, otrzymasz odnośnik do odzyskiwania hasła na adres e-mail w ciągu kilku
+        minut.
+      updated: Twoje hasło zostało pomyślnie zmienione. Jesteś teraz zalogowany.
+      updated_not_active: Twoje hasło zostało pomyślnie zmienione.
+      new:
+        forgot_your_password: Odzyskiwanie hasła
+        reset_password: Wysłać odzyskać url
+      edit:
+        change_your_password: Zmień swoje hasło
+        new_password: Nowe hasło
+        confirm_password: Potwierdź hasło
+        change_password: Zmień
+    registrations:
+      destroyed: Bye! Twoje konto zostało pomyślnie anulowane. Mamy nadzieję, że do
+        zobaczenia wkrótce.
+      signed_up: Witamy! Zarejestrowaniu się pomyślnie.
+      signed_up_but_inactive: zarejestrowaniu się pomyślnie. Jednak nie udało się
+        zalogować, ponieważ Twoje konto nie zostało jeszcze aktywowane.
+      signed_up_but_locked: zarejestrowaniu się pomyślnie. Jednak nie udało się zalogować,
+        ponieważ Twoje konto jest zablokowane.
+      signed_up_but_unconfirmed: wiadomość z linkiem potwierdzającym zostało wysłane
+        na Twój adres e-mail. Proszę otworzyć link do aktywacji konta.
+      update_needs_confirmation: Zmieniłeś swoje konto pomyślnie, ale musimy zweryfikować
+        swój nowy adres e-mail. Proszę sprawdzić pocztę i kliknij na link potwierdzenia,
+        aby sfinalizować potwierdzający nowy adres e-mail.
+      updated: Zmieniłeś swoje konto pomyślnie.
+      new:
+        sign_up: Zarejestruj się
+        name: Nazwa
+        password: Hasło
+        register: Zarejestruj się
+    sessions:
+      signed_in: Zalogowano pomyślnie.
+      signed_out: Signed się pomyślnie.
+      new:
+        sign_in: Zaloguj się
+        password: Hasło
+        remember_me: Zapamiętaj mnie
+        forgot_your_password: Nie pamiętasz hasła?
+    unlocks:
+      send_instructions: Otrzymasz e-mail z instrukcją jak odblokować konto w ciągu
+        kilku minut.
+      send_paranoid_instructions: Jeśli konto nie istnieje, otrzymasz email z instrukcją,
+        jak je odblokować w ciągu kilku minut.
+      unlocked: konto zostało odblokowane z powodzeniem. Proszę się zalogować, aby
+        kontynuować.
+  pl: pl
+  pl_iso: pl

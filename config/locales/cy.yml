@@ -1,0 +1,292 @@
+---
+cy:
+  github: Github
+  bitbucket: Bitbucket
+  updated: diweddaru
+  1_we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth
+  shared:
+    navbar:
+      sign_in: Mewngofnodi
+      sign_up: Cofrestrwch
+      projects: Prosiectau
+      issues: Materion
+      syncing_with_github: Sync gyda Github ...
+      syncing_with_bitbucket: Sync gyda Bitbucket ...
+      new_issue: rhifyn newydd
+    languages_select_modal:
+      available_languages: o ieithoedd sydd ar gael
+    user_edit_menu:
+      profile: Proffil
+      site_settings: lleoliadau Safle
+      services: Gwasanaethau
+    form_errors:
+      password: Cyfrinair
+      current_password: cyfrinair cyfredol
+      name: Enw
+      base: Sylfaen
+      title: Teitl
+      user_to_project_connection: Defnyddiwr i gysylltiad prosiect
+      columns:
+        tag: Tag gorgyffwrdd
+    new_project_modal:
+      new_project: Prosiect newydd
+    new_issue_modal:
+      new_issue: rhifyn newydd
+    left_sidebar:
+      projects: Prosiectau
+    right_sidebar:
+      news: Newyddion
+      all: Mae pob
+      read_more: Darllen mwy
+    translations:
+      select_column_tags: Dethol
+      select_issue_tags: tagiau rhifyn Dewiswch
+  users:
+    new:
+      invite_user: Gwahodd defnyddiwr
+    form:
+      name: Enw
+      enter_user_name: Rhowch enw defnyddiwr
+      email: E-bost
+      enter_user_email: Rhowch e-bost y defnyddiwr
+      enter_user_password: Rhowch cyfrinair defnyddiwr
+      password: Cyfrinair
+      save: Achub
+    index:
+      project: Prosiect
+      users: ddefnyddwyr
+      new: Newydd
+    edit:
+      name: Enw
+      enter_your_name: Rhowch eich enw
+      save: Achub
+    settings:
+      interface_language: Rhyngwyneb iaith
+      submit: Cyflwyno
+    password_form:
+      new_password: cyfrinair newydd
+      confirm_new_password: Cadarnhau cyfrinair newydd
+    update:
+      your_profile_was_successfully_updated: eich proffil ei ddiweddaru'n llwyddiannus
+    dashboard:
+      hello: Helo
+      here_some_of_your_statistics: Yma rhai o'ch ystadegau
+      projects: Prosiectau
+  projects:
+    index:
+      projects: Prosiectau
+      new: Newydd
+      sync_with_github: Sync gyda GitHub
+      sync_with_bitbucket: Sync gyda bitbucket
+      stop_sync_with_bitbucket: sync Stop gyda bitbucket
+      stop_sync_with_github: sync Stop gyda GitHub
+    form:
+      name: Enw
+      enter_project_name: Rhowch enw'r prosiect
+      save: Achub
+      columns: Colofnau
+      sections: Adrannau
+      add: Ychwanegu
+      github_full_name: Github fullname ystorfa
+      github_secret_token_for_hook: Github tocyn gyfrinach i bachyn
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tocyn gyfrinach i bachyn
+    project:
+      edit: Golygu
+      destroy: Dileu
+      project_issues: Materion Prosiect
+      project_users: ddefnyddwyr Prosiect
+    section_fields:
+      section_tags: tagiau Adran
+      section_order: Gorchymyn
+      or_include_all: Neu cynnwys yr holl?
+    column_fields:
+      remove_column: Tynnu colofn
+      max_issues_count: Materion Max cyfrif yng ngholofn
+      column_tags: tagiau Colofn
+      column_order: Gorchymyn
+    show:
+      next_page: Tudalen nesaf
+  issues:
+    form:
+      title: Teitl
+      enter_issue_title: Rhowch deitl mater
+      save: Achub
+      body: Corff
+      enter_issue_body: Rhowch mater corff
+      tags: Tags
+      issue_order: Gorchymyn
+      bitbucket_issue_id: Bitbucket mater id
+      github_issue_id: Github mater id
+      github_issue_number: Rhif rhifyn Github
+    index:
+      issues: materion
+      sync_with_github: Sync gyda GitHub
+      sync_with_bitbucket: Sync gyda bitbucket
+      new: Newydd
+    issue:
+      destroy: Dileu
+      edit: Golygu
+    edit:
+      edit_issue: Golygu rhifyn
+    new:
+      new_issue: rhifyn newydd
+  authentications:
+    index:
+      enabled_services: gwasanaethau Enabled
+    authentication:
+      turned_off: Troi i ffwrdd
+      turn_on: Trowch ar
+      turn_off: Diffoddwch
+      turned_on: Troi ar
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth!
+      we_have_just_launched_our_service_text: Heddiw, rydym yn lansio ein gwasanaeth
+        fel y gall pawb
+      sign_up: cofrestru
+      and_use_it: ac yn ei defnyddio.
+      with_love: Gyda chariad,
+    index:
+      all_news: Pob stori newyddion
+      read_more: Darllen mwy
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Croeso i Kanban Ar Rheiliau
+      welcome_about_text: Yma gallwch greu eich bwrdd Kanban eich hun a sync gyda'r
+        Github neu Bitbucket
+  pages:
+    faq:
+      faq: Cwestiynau Cyffredin
+      what_is_kanban_on_rails: Beth yw KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails yw'r gwasanaeth lle gallwch greu byrddau
+        Kanban a sync gyda'r Github neu Bitbucket
+      what_features_has_kanban_on_rails: Pa nodweddion mae gan KanbanOnRails?
+      kanban_on_rails_features: Gallwch cydamseru eich prosiectau a materion gyda
+        Github a Bitbucket, gwahodd defnyddwyr (ar gyfer rheolwyr enghraifft) ar gyfer
+        eich prosiect, defnyddio at eich gweinyddwr eich hun
+      i_have_some_requests: gennyf rai ceisiadau
+      you_can_write_request: Gallwch ysgrifennu cais
+      here: yma
+      i_have_seen_some_typo_or_wrong_translation: Rwyf wedi gweld rhai camgymeriadau
+        teipio neu cyfieithiadau anghywir
+      you_can_send_pull_request_to_our: Gallwch anfon cais tynnu at ein
+      i_have_seen_some_error: wyf wedi gweld rhai gwallau
+      you_can_write_to_our_info_mail: Gallwch ysgrifennu am hyn at ein e-bost
+    about:
+      about_kanban_on_rails: Ynglŷn KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails yw'r gwasanaeth lle gallwch greu byrddau
+        Kanban a sync gyda'r Github neu Bitbucket
+      kanban_on_rails_features: nodweddion KanbanOnRails
+      sync_with_github_and_bitbucket: Gallwch cydamseru eich prosiectau a materion
+        gyda Github a Bitbucket
+      invite_users: Gallwch gwahodd defnyddwyr (ar gyfer rheolwyr enghraifft) ar gyfer
+        eich prosiect
+      open_source_code: Mae'r prosiect hwn wedi, cod ffynhonnell agored fel y gallwch
+        ddefnyddio i'ch gweinydd eich hun
+      we_use_open_source_and_high_technology: Rydym yn defnyddio technolegau uchel
+        a llyfrgelloedd ffynhonnell agored. Rydym bob amser yn ceisio cael gwell a
+        gwella ein gwasanaeth.
+      partners_and_investors: Rydym yn cael eu hagor ar gyfer partneriaeth a byddem
+        yn hoffi i ddod o hyd i fuddsoddwyr. Os hoffech i gydweithio gyda ni, cysylltwch
+        â ni yn partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Mewngofnodi
+        sign_up: Cofrestrwch
+        didnt_receive_confirmation_instructions: Heb dderbyniwyd cyfarwyddiadau cadarnhad?
+        sign_in_with: Mewngofnodi gyda
+        fast_login_almost_one_click: login Cyflym (bron un clic)
+    confirmations:
+      confirmed: eich cyfrif ei gadarnhau yn llwyddiannus.
+      send_instructions: Byddwch yn derbyn e-bost gyda chyfarwyddiadau ynghylch sut
+        i gadarnhau eich cyfrif mewn ychydig funudau.
+      send_paranoid_instructions: Os yw eich cyfeiriad e-bost yn bodoli yn ein cronfa
+        ddata, byddwch yn derbyn e-bost gyda chyfarwyddiadau ynghylch sut i gadarnhau
+        eich cyfrif mewn ychydig funudau.
+      new:
+        send_mail_for_confirm_your_email: Anfon post ar gyfer gadarnhau eich e-bost
+        submit: Cyflwyno
+    failure:
+      already_authenticated: Rydych eisoes yn cael eu llofnodi i mewn.
+      inactive: Mae eich cyfrif yn cael ei actifadu eto.
+      invalid: e-bost annilys neu gyfrinair.
+      locked: Mae eich cyfrif yn cael ei gloi.
+      last_attempt: Mae gennych un ymgais mwy cyn y bydd eich cyfrif yn cael ei gloi.
+      not_found_in_database: e-bost annilys neu gyfrinair.
+      timeout: eich sesiwn wedi dod i ben. Mewngofnodwch eto i barhau.
+      unauthenticated: Rydych angen arwyddo mewn neu gofrestru ar cyn parhau.
+    mailer:
+      confirmation_instructions:
+        subject: cyfarwyddiadau Cadarnhad
+        welcome_to_kanban_on_rails: Croeso i KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Gallwch gadarnhau
+          eich e-bost drwy'r ddolen isod
+        confirm_my_account: Cadarnhau fy e-bost
+      reset_password_instructions:
+        hello: Helo
+        subject: cyfarwyddiadau cyfrinair Ailosod
+        change_my_password: Newid fy nghyfrinair
+        if_you_didnt_request_this_please_ignore_this_email: Os na wnaethoch chi ofyn
+          am hyn, anwybyddwch e-bost hwn.
+      unlock_instructions:
+        subject: Cyfarwyddiadau Unlock
+    omniauth_callbacks:
+      failure: Ni Allech chi ddilysu o% {fath} oherwydd "% {rheswm}".
+      success: dilysu'n llwyddiannus o% cyfrif {fath}.
+    passwords:
+      no_token: Rydych yn methu cael mynediad y dudalen hon heb ddod o e-bost i ailosod
+        eich cyfrinair. Os byddwch yn dod o e-bost i ailosod eich cyfrinair, gwnewch
+        yn siŵr eich bod yn defnyddio'r URL llawn a ddarperir.
+      send_instructions: Byddwch yn derbyn e-bost gyda chyfarwyddiadau ar sut i ailosod
+        eich cyfrinair mewn ychydig funudau.
+      send_paranoid_instructions: Os yw eich cyfeiriad e-bost yn bodoli yn ein cronfa
+        ddata, byddwch yn derbyn dolen adferiad password yn eich cyfeiriad e-bost
+        mewn ychydig funudau.
+      updated: Mae eich cyfrinair wedi newid yn llwyddiannus. Yr ydych yn awr yn cael
+        eu llofnodi i mewn.
+      updated_not_active: Mae eich cyfrinair wedi newid yn llwyddiannus.
+      new:
+        forgot_your_password: Adennill eich cyfrinair
+        reset_password: Anfon adennill url
+      edit:
+        change_your_password: Newid eich cyfrinair
+        new_password: cyfrinair newydd
+        change_password: Newid
+    registrations:
+      destroyed: Bye! Mae eich cyfrif ei ganslo yn llwyddiannus. Rydym yn gobeithio
+        gweld chi eto yn fuan.
+      signed_up: Croeso! Yr ydych wedi cofrestru yn llwyddiannus.
+      signed_up_but_inactive: Rydych wedi ymuno yn llwyddiannus. Fodd bynnag, nid
+        oeddem yn gallu llofnodi i chi mewn oherwydd nad yw eich cyfrif yn cael ei
+        actifadu eto.
+      signed_up_but_locked: Rydych wedi ymuno yn llwyddiannus. Fodd bynnag, nid oeddem
+        yn gallu llofnodi i chi mewn oherwydd bod eich cyfrif yn cael ei gloi.
+      signed_up_but_unconfirmed: Neges gyda dolen gadarnhau wedi ei anfon at eich
+        cyfeiriad ebost. Os gwelwch yn dda agor y ddolen i actifadu eich cyfrif.
+      update_needs_confirmation: Rydych yn diweddaru eich cyfrif yn llwyddiannus,
+        ond mae angen i wirio eich cyfeiriad e-bost newydd. Gwiriwch eich e-bost a
+        chlicio ar y ddolen cadarnhau i gwblhau cadarnhau eich cyfeiriad e-bost newydd.
+      updated: Rydych yn diweddaru eich cyfrif yn llwyddiannus.
+      new:
+        sign_up: Cofrestrwch
+        name: Enw
+        password: Cyfrinair
+        register: Cofrestrwch
+    sessions:
+      signed_in: Llofnodwyd yn llwyddiannus.
+      signed_out: Llofnodwyd allan yn llwyddiannus.
+      new:
+        sign_in: Mewngofnodi
+        password: Cyfrinair
+        remember_me: Cofiwch fi
+        forgot_your_password: Wedi anghofio eich cyfrinair?
+    unlocks:
+      send_instructions: Byddwch yn derbyn e-bost gyda chyfarwyddiadau ynghylch sut
+        i ddatgloi eich cyfrif mewn ychydig funudau.
+      send_paranoid_instructions: Os yw eich cyfrif yn bodoli, byddwch yn derbyn e-bost
+        gyda chyfarwyddiadau ynghylch sut i ddatgloi iddo mewn ychydig funudau.
+      unlocked: Mae eich cyfrif wedi ei datgloi llwyddiannus. Llofnodwch mewn i barhau.
+  cy: cy
+  cy_iso: cy

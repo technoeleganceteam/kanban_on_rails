@@ -1,0 +1,209 @@
+---
+ja:
+  bitbucket: のBitbucket
+  updated: 更新
+  shared:
+    navbar:
+      sign_in: ログイン
+      sign_up: サインアップ
+      projects: プロジェクト
+      issues: 問題
+      new_issue: 新しい問題
+      edit_project: 編集プロジェクト
+    languages_select_modal:
+      available_languages: 利用可能な言語
+    user_edit_menu:
+      profile: プロフィール
+      site_settings: サイトの設定
+      services: サービス
+    form_errors:
+      password: パスワード
+      name: 名前
+      base: ベース
+      title: タイトル
+      columns:
+        tag: タグの重複
+    new_project_modal:
+      new_project: 新プロジェクト
+    edit_project_modal:
+      edit_project: 編集プロジェクト
+    new_issue_modal:
+      new_issue: 新しい問題
+    left_sidebar:
+      projects: プロジェクト
+    right_sidebar:
+      news: ニュース
+      all: すべて
+      read_more: 続きを読みます
+  users:
+    form:
+      name: 名前
+      email: メール
+      role: ユーザーの役割
+      save: 保存
+    index:
+      project: プロジェクト
+      users: ユーザー
+      new: 新
+    edit:
+      name: 名前
+      enter_your_name: あなたの名前を入力します。
+      save: 保存
+    settings:
+      change_password: パスワード変更
+      interface_language: インターフェース言語
+      submit: 提出
+    password_form:
+      new_password: 新パスワード
+      old_password: 古いパスワード
+      change_password: パスワード変更
+    dashboard:
+      hello: こんにちは
+      here_some_of_your_statistics: ここではいくつかの統計情報の
+      projects: プロジェクト
+  projects:
+    index:
+      projects: プロジェクト
+      new: 新
+    form:
+      name: 名前
+      enter_project_name: は、プロジェクト名を入力します。
+      save: 保存
+      columns: 列
+      sections: セクション
+      column_name: 行名
+      section_name: セクション名
+      add: 追加
+      column_width: 列幅
+      column_height: 列の高さ
+      github_repository_id: GitHubのリポジトリID
+      github_full_name: GitHubのリポジトリのフルネーム
+      bitbucket_full_name: のBitbucketフルネーム
+      bitbucket_secret_token_for_hook: のBitbucketフックのための秘密のトークン
+    project:
+      edit: 編集
+      destroy: 削除
+      project_issues: プロジェクトの問題
+      project_users: Projectユーザー
+    section_fields:
+      section_name: セクション名
+      remove_section: 削除セクション
+      section_tags: セクションタグ
+      section_order: 注文
+      or_include_all: またはすべてが含まれていますか？
+    column_fields:
+      column_name: 列名
+      max_issues_count: 最大の問題は、列にカウント
+      column_tags: 列タグ
+      column_order: 注文
+  issues:
+    form:
+      title: タイトル
+      save: 保存
+      body: ボディ
+      tags: タグ
+      issue_order: 注文
+      bitbucket_issue_id: のBitbucket発行ID
+      github_issue_number: Githubの発行数
+    index:
+      issues: 問題
+      new: 新
+    issue:
+      destroy: 削除
+      edit: 編集
+    edit:
+      edit_issue: 編集の問題
+    new:
+      new_issue: 新しい問題
+  authentications:
+    index:
+      enabled_services: 対応サービス
+    authentication:
+      turned_off: はオフ
+      turn_off: オフにします
+      turned_on: がオン
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: 私達はちょうど私たちのサービスを開始しました！
+      we_have_just_launched_our_service_text: 今日はそう誰もがする​​ことができます私たちのサービスを開始します
+      sign_up: サインアップ
+      and_use_it: とそれを使用しています。
+      technoelegance_team: Technoeleganceチーム
+    index:
+      read_more: 続きを読みます
+  welcome:
+    index:
+      welcome_about_text: ここでは、あなた自身のかんばんボードとのGithubかのBitbucketと同期それを作成することができます
+  pages:
+    faq:
+      faq: よくある質問
+      what_is_kanban_on_rails: KanbanOnRailsは何ですか？
+      about_kanban_on_rails: KanbanOnRailsあなたはGitHubのかのBitbucketでそれをかんばんボードを作成し、同期できるサービスです
+      what_features_has_kanban_on_rails: どのような機能がKanbanOnRailsを持っていますか？
+      i_have_some_requests: 私はいくつかの要求を持っています
+      github_repository: githubのリポジトリ
+    about:
+      about_kanban_on_rails_text: KanbanOnRailsあなたはGitHubのかのBitbucketでそれをかんばんボードを作成し、同期できるサービスです
+      kanban_on_rails_features: KanbanOnRails機能
+      we_use_open_source_and_high_technology: 私たちは、高い技術とオープンソースのライブラリを使用しています。私たちは常により良い取得し、当社のサービスを改善してみてください。
+      partners_and_investors: 私たちは、パートナーシップのために開かれており、我々は投資家を見つけるしたいと思います。あなたは私たちと協力したい場合partnership@technoelegance.comまでご連絡ください。
+  devise:
+    shared:
+      links:
+        sign_in: ログイン
+        sign_up: サインアップ
+        didnt_receive_confirmation_instructions: 確認命令を受け取っていないですか？
+        fast_login_almost_one_click: ファストログイン（ほぼワンクリック）
+    confirmations:
+      send_instructions: します。
+      send_paranoid_instructions: あなたのメールアドレスが私達のデータベースに存在する場合は、あなたは数分でアカウントを確認する方法についての手順を記載したメールが届きます。
+      new:
+        send_mail_for_confirm_your_email: 確認メールのメールを送ります
+        submit: 提出
+    failure:
+      last_attempt: "。"
+    mailer:
+      confirmation_instructions:
+        subject: 確認命令
+        welcome_to_kanban_on_rails: がKanbanOnRailsへようこそ
+        confirm_my_account: 私の電子メールを確認してください
+      reset_password_instructions:
+        hello: こんにちは
+        subject: パスワードのリセット命令
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: 誰かがパスワードを変更するためのリンクを要求しています。あなたは下のリンクを介してこれを行うことができます。
+      unlock_instructions:
+        subject: ロック解除の手順
+    omniauth_callbacks:
+      failure: は％{種類} "％{理由}"理由からあなたを認証できませんでした。
+      success: 成功しました％{種類}のアカウントから認証されました。
+    passwords:
+      no_token: あなたは、パスワードリセットのメールから来ることなく、このページにアクセスすることはできません。パスワード再設定のメールから来ない場合は、あなたが提供する完全なURLを使用していることを確認してください。
+      send_instructions: します。
+      send_paranoid_instructions: あなたのメールアドレスが私達のデータベースに存在する場合は、あなたは数分であなたのメールアドレスにパスワード回復リンクを受信します。
+      new:
+        forgot_your_password: あなたのパスワードを回復
+        reset_password: 送信URLを回復します
+      edit:
+        change_your_password: あなたのパスワードを変更します
+        new_password: 新パスワード
+        confirm_password: パスワードの確認
+        change_password: 変更
+    registrations:
+      destroyed: バイバイ！アカウントが正常にキャンセルされました。私たちはすぐにまたお会いしたいと考えています。
+      signed_up: ようこそ！あなたが正常にサインアップしています。
+      new:
+        sign_up: サインアップ
+        name: 名前
+        password_confirmation: パスワードの確認
+        register: サインアップ
+    sessions:
+      signed_in: は正常に署名されました。
+      signed_out: が正常にログアウトしました。
+      new:
+        sign_in: ログイン
+        remember_me: 私を忘れないでください
+        forgot_your_password: パスワードを忘れましたか？
+    unlocks:
+      send_instructions: します。
+  ja: ja
+  ja_iso: ja

@@ -1,0 +1,309 @@
+---
+el:
+  github: Github
+  bitbucket: Bitbucket
+  updated: ενημερώθηκε
+  1_we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία μας
+  shared:
+    navbar:
+      sign_in: Σύνδεση
+      sign_up: Εγγραφείτε
+      projects: Έργα
+      issues: Θέματα
+      syncing_with_github: Συγχρονισμός με Github ...
+      syncing_with_bitbucket: Συγχρονισμός με Bitbucket ...
+      new_issue: Νέα έκδοση
+      edit_project: Επεξεργασία σχεδίου
+    languages_select_modal:
+      available_languages: Διαθέσιμες γλώσσες
+    user_edit_menu:
+      profile: Προφίλ
+      site_settings: Ρυθμίσεις ιστότοπου
+      services: Υπηρεσίες
+    form_errors:
+      password: Κωδικός
+      current_password: Τρέχων κωδικός πρόσβασης
+      name: Όνομα
+      base: Βάση
+      title: Τίτλος
+      user_to_project_connection: χρήστη να προβάλει σύνδεση
+      columns:
+        tag: Ετικέτα επικαλυπτόμενες
+    new_project_modal:
+      new_project: Νέο έργο
+    edit_project_modal:
+      edit_project: Επεξεργασία σχεδίου
+    new_issue_modal:
+      new_issue: Νέα έκδοση
+    left_sidebar:
+      projects: Έργα
+    right_sidebar:
+      news: Νέα
+      all: Όλα
+      read_more: Διαβάστε περισσότερα
+    translations:
+      select_column_tags: Επιλέξτε ετικέτες στήλης
+      select_section_tags: Επιλέξτε ετικέτες ενότητα
+      select_issue_tags: Επιλέξτε θέμα ετικέτες
+  users:
+    new:
+      invite_user: Πρόσκληση χρήστη
+    form:
+      name: Όνομα
+      enter_user_name: Πληκτρολογήστε το όνομα χρήστη
+      email: Email
+      enter_user_email: Συμπληρώστε το email του χρήστη
+      enter_user_password: Εισάγετε τον κωδικό χρήστη
+      password: Κωδικός
+      save: Αποθήκευση
+    index:
+      project: Έργου
+      users: χρήστες
+      new: Νέα
+    edit:
+      name: Όνομα
+      enter_your_name: Πληκτρολογήστε το όνομά σας
+      save: Αποθήκευση
+    settings:
+      change_password: Αλλαγή κωδικού πρόσβασης
+      interface_language: Interface γλώσσας
+      submit: Υποβολή
+    password_form:
+      new_password: Νέος κωδικός
+      confirm_new_password: Επιβεβαίωση νέου κωδικού πρόσβασης
+      old_password: Παλιός κωδικός
+      change_password: Αλλαγή κωδικού πρόσβασης
+    update:
+      your_profile_was_successfully_updated: Το προφίλ σας ενημερώθηκε με επιτυχία
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Εδώ μερικά από τα στατιστικά σας
+      projects: Έργα
+  projects:
+    index:
+      projects: Έργα
+      new: Νέα
+      sync_with_github: Συγχρονισμός με το GitHub
+      sync_with_bitbucket: Συγχρονισμός με bitbucket
+      stop_sync_with_bitbucket: Διακοπή συγχρονισμού με bitbucket
+      stop_sync_with_github: Διακοπή συγχρονισμού με το GitHub
+    form:
+      name: Όνομα
+      enter_project_name: Πληκτρολογήστε το όνομα του έργου
+      save: Αποθήκευση
+      columns: Στήλες
+      sections: Ενότητες
+      add: Add
+      github_repository_id: Github id αποθετήριο
+      github_full_name: Github Ονοματεπώνυμο αποθετήριο
+      github_secret_token_for_hook: Github μυστικό σύμβολο για γάντζο
+      bitbucket_full_name: Bitbucket Ονοματεπώνυμο
+      bitbucket_secret_token_for_hook: Bitbucket μυστικό σύμβολο για γάντζο
+    project:
+      edit: Επεξεργασία
+      destroy: Διαγραφή
+      project_issues: θέματα Έργου
+      project_users: χρήστες Έργου
+    section_fields:
+      section_tags: Ενότητα ετικέτες
+      section_order: Παραγγελία
+      or_include_all: Ή περιλαμβάνει όλα;
+    column_fields:
+      remove_column: Κατάργηση στήλης
+      max_issues_count: Max θέματα μετράνε στη στήλη
+      column_tags: ετικέτες Στήλη
+      column_order: Παραγγελία
+    show:
+      next_page: Επόμενη σελίδα
+  issues:
+    form:
+      title: Τίτλος
+      enter_issue_title: Εισάγετε τον τίτλο θέμα
+      save: Αποθήκευση
+      body: σώματος
+      enter_issue_body: Εισάγετε σώματος θέμα
+      tags: Ετικέτες
+      issue_order: Παραγγελία
+      bitbucket_issue_id: Bitbucket id θέμα
+      github_issue_id: Github id θέμα
+      github_issue_number: Github αριθμό έκδοσης
+    index:
+      issues: θέματα
+      sync_with_github: Συγχρονισμός με το GitHub
+      sync_with_bitbucket: Συγχρονισμός με bitbucket
+      new: Νέα
+    issue:
+      destroy: Διαγραφή
+      edit: Επεξεργασία
+    edit:
+      edit_issue: Επεξεργασία θέματος
+    new:
+      new_issue: Νέα έκδοση
+  authentications:
+    index:
+      enabled_services: Enabled υπηρεσίες
+    authentication:
+      turned_off: Απενεργοποίηση
+      turn_on: Ανάψτε
+      turn_off: Απενεργοποίηση
+      turned_on: Γύρισε στην
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία
+        μας!
+      we_have_just_launched_our_service_text: Σήμερα ξεκινήσει την υπηρεσία μας, ώστε
+        ο καθένας μπορεί να
+      sign_up: εγγραφείτε
+      and_use_it: και να το χρησιμοποιήσετε.
+      with_love: Με αγάπη,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Όλες οι ειδήσεις
+      read_more: Διαβάστε περισσότερα
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Καλώς ήρθατε στο Kanban On Rails
+      welcome_about_text: Εδώ μπορείτε να δημιουργήσετε το δικό σας σκάφος και συγχρονισμό
+        Kanban με Github ή Bitbucket
+  pages:
+    faq:
+      faq: Συχνές Ερωτήσεις
+      what_is_kanban_on_rails: Τι είναι KanbanOnRails;
+      about_kanban_on_rails: KanbanOnRails είναι η υπηρεσία όπου μπορείτε να δημιουργήσετε
+        πίνακες Kanban και συγχρονισμό με Github ή Bitbucket
+      what_features_has_kanban_on_rails: Τι χαρακτηριστικά έχει KanbanOnRails;
+      kanban_on_rails_features: Μπορείτε να συγχρονίσετε τα σχέδια και τα θέματα σας
+        με Github και Bitbucket, προσκαλούν τους χρήστες (π.χ. διαχειριστές) για το
+        έργο σας, να αναπτύξετε το στο δικό σας διακομιστή
+      i_have_some_requests: Έχω κάποια αιτήματα
+      you_can_write_request: Μπορείτε να γράψετε το αίτημα
+      here: εδώ
+      i_have_seen_some_typo_or_wrong_translation: Έχω δει ορισμένα λάθη ή λάθος μεταφράσεις
+      you_can_send_pull_request_to_our: Μπορείτε να στείλετε αίτημα έλξης για μας
+      i_have_seen_some_error: έχω δει κάποια λάθη
+      you_can_write_to_our_info_mail: Μπορείτε να γράψετε για αυτό στο email μας
+    about:
+      about_kanban_on_rails: Σχετικά KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails είναι η υπηρεσία όπου μπορείτε να
+        δημιουργήσετε πίνακες Kanban και συγχρονισμό με Github ή Bitbucket
+      kanban_on_rails_features: χαρακτηριστικά KanbanOnRails
+      sync_with_github_and_bitbucket: Μπορείτε να συγχρονίσετε τα σχέδια και τα θέματα
+        σας με Github και Bitbucket
+      invite_users: Μπορείτε να προσκαλέσετε τους χρήστες (π.χ. διαχειριστές) για
+        το έργο σας
+      open_source_code: Το σχέδιο αυτό ανοικτού κώδικα, ώστε να μπορείτε να αναπτύξετε
+        τη δική σας server
+      we_use_open_source_and_high_technology: Χρησιμοποιούμε υψηλής τεχνολογίας και
+        βιβλιοθήκες ανοικτού κώδικα. Προσπαθούμε πάντα να γίνουμε καλύτεροι και να
+        βελτιώσουμε τις υπηρεσίες μας.
+      partners_and_investors: Είμαστε ανοιχτοί για συνεργασία και θα θέλαμε να βρουν
+        επενδυτές. Αν θέλετε να συνεργαστούν μαζί μας, παρακαλούμε επικοινωνήστε μαζί
+        μας στο partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Σύνδεση
+        sign_up: Εγγραφείτε
+        didnt_receive_confirmation_instructions: Δεν λάβαμε οδηγίες επιβεβαίωσης;
+        sign_in_with: Σύνδεση με
+        fast_login_almost_one_click: Fast σύνδεσης (Σχεδόν ένα κλικ)
+    confirmations:
+      confirmed: Ο λογαριασμός σας επιβεβαιώθηκε με επιτυχία.
+      send_instructions: Θα λάβετε ένα e-mail με οδηγίες για το πώς να επιβεβαιώσετε
+        το λογαριασμό σας σε λίγα λεπτά.
+      send_paranoid_instructions: Αν υπάρχει διεύθυνση ηλεκτρονικού ταχυδρομείου σας
+        στη βάση μας, θα λάβετε ένα e-mail με οδηγίες για το πώς να επιβεβαιώσετε
+        το λογαριασμό σας σε λίγα λεπτά.
+      new:
+        send_mail_for_confirm_your_email: Στείλτε mail για να επιβεβαιώσει το email
+          σας
+        submit: Υποβολή
+    failure:
+      already_authenticated: Είστε ήδη συνδεδεμένοι.
+      inactive: Ο λογαριασμός σας δεν έχει ενεργοποιηθεί ακόμα.
+      invalid: Μη έγκυρο e-mail ή τον κωδικό πρόσβασης.
+      locked: Ο λογαριασμός σας έχει κλειδωθεί.
+      last_attempt: Έχετε μία ακόμη προσπάθεια πριν θα κλειδώσει το λογαριασμό σας.
+      not_found_in_database: Μη έγκυρο e-mail ή τον κωδικό πρόσβασης.
+      timeout: συνεδρία σας έληξε. Παρακαλούμε συνδεθείτε ξανά για να συνεχίσετε.
+      unauthenticated: Θα πρέπει να συνδεθείτε ή να εγγραφείτε πριν συνεχίσετε.
+      unconfirmed: Θα πρέπει να επιβεβαιώσετε τον λογαριασμό σας πριν συνεχίσετε.
+    mailer:
+      confirmation_instructions:
+        subject: οδηγίες Επιβεβαίωση
+        welcome_to_kanban_on_rails: Καλώς ήρθατε στο KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Μπορείτε να επιβεβαιώσετε
+          το email σας μέσω του παρακάτω σύνδεσμο
+        confirm_my_account: Επιβεβαίωση Email μου
+      reset_password_instructions:
+        hello: Hello
+        subject: Επαναφορά οδηγίες κωδικό
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Κάποιος
+          έχει ζητήσει ένα σύνδεσμο για να αλλάξετε τον κωδικό πρόσβασής σας. Μπορείτε
+          να το κάνετε αυτό μέσω του παρακάτω σύνδεσμο.
+        change_my_password: Αλλάξτε τον κωδικό μου
+        if_you_didnt_request_this_please_ignore_this_email: Αν δεν έχετε ζητήσει αυτό
+          παρακαλούμε να αγνοήσετε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου.
+      unlock_instructions:
+        subject: Ξεκλείδωμα Οδηγίες
+    omniauth_callbacks:
+      failure: Δεν ήταν δυνατή η ταυτότητά σας από% {είδος} γιατί "% {λόγο}".
+      success: Επιτυχής επικυρώνονται από% {είδους} λογαριασμό.
+    passwords:
+      no_token: Δεν μπορείτε να αποκτήσετε πρόσβαση σε αυτήν τη σελίδα χωρίς να έρχεται
+        από ένα μήνυμα ηλεκτρονικού ταχυδρομείου επαναφοράς κωδικού πρόσβασης. Αν
+        σας έρχονται από ένα μήνυμα ηλεκτρονικού ταχυδρομείου επαναφοράς κωδικού πρόσβασης,
+        βεβαιωθείτε ότι έχετε χρησιμοποιήσει την πλήρη διεύθυνση URL που παρέχεται.
+      send_instructions: Θα λάβετε ένα e-mail με οδηγίες για το πώς να επαναφέρετε
+        τον κωδικό πρόσβασής σας μέσα σε λίγα λεπτά.
+      send_paranoid_instructions: Αν υπάρχει διεύθυνση ηλεκτρονικού ταχυδρομείου σας
+        στη βάση μας, θα λάβετε ένα σύνδεσμο ανάκτησης κωδικού πρόσβασης στη διεύθυνση
+        ηλεκτρονικού ταχυδρομείου σας σε λίγα λεπτά.
+      updated: Ο κωδικός σας άλλαξε με επιτυχία. Τώρα είστε συνδεδεμένοι.
+      updated_not_active: Ο κωδικός σας άλλαξε με επιτυχία.
+      new:
+        forgot_your_password: ανακτήσει τον κωδικό σας
+        reset_password: Αποστολή ανακτήσει url
+      edit:
+        change_your_password: Αλλάξτε τον κωδικό σας
+        new_password: Νέος κωδικός
+        change_password: Αλλαγή
+    registrations:
+      destroyed: Αντίο! Ο λογαριασμός σας έχει ακυρωθεί με επιτυχία. Ελπίζουμε να
+        σας δούμε και πάλι σύντομα.
+      signed_up: Καλώς ήρθατε! Έχετε εγγραφεί επιτυχώς.
+      signed_up_but_inactive: Έχετε εγγραφεί επιτυχώς. Ωστόσο, δεν θα μπορούσαμε να
+        συνδεθείτε στο λογαριασμό σας, επειδή δεν έχει ενεργοποιηθεί ακόμα.
+      signed_up_but_locked: Έχετε εγγραφεί επιτυχώς. Ωστόσο, δεν θα μπορούσαμε να
+        συνδεθείτε στο λογαριασμό σας, επειδή είναι κλειδωμένο.
+      signed_up_but_unconfirmed: ένα μήνυμα με ένα σύνδεσμο επιβεβαίωσης έχει σταλεί
+        στη διεύθυνση ηλεκτρονικού ταχυδρομείου σας. Παρακαλώ ανοίξτε το σύνδεσμο
+        για να ενεργοποιήσετε το λογαριασμό σας.
+      update_needs_confirmation: Μπορείτε ενημερωμένο το λογαριασμό σας με επιτυχία,
+        αλλά πρέπει να επαληθεύσετε τη νέα διεύθυνση ηλεκτρονικού ταχυδρομείου σας.
+        Παρακαλώ ελέγξτε το email σας και κάντε κλικ στο σύνδεσμο επιβεβαίωσης για
+        να οριστικοποιήσει την επιβεβαίωση νέα διεύθυνση ηλεκτρονικού ταχυδρομείου
+        σας.
+      updated: Μπορείτε ενημερωμένο το λογαριασμό σας με επιτυχία.
+      new:
+        sign_up: Εγγραφείτε
+        name: Όνομα
+        password: Κωδικός
+        register: Εγγραφείτε
+    sessions:
+      signed_in: Υπεγράφη στην επιτυχία.
+      signed_out: Υπεγράφη με επιτυχία.
+      new:
+        sign_in: Σύνδεση
+        password: Κωδικός
+        remember_me: Να με θυμάσαι
+        forgot_your_password: Ξεχάσατε τον κωδικό σας;
+    unlocks:
+      send_instructions: Θα λάβετε ένα e-mail με οδηγίες για το πώς να ξεκλειδώσετε
+        το λογαριασμό σας σε λίγα λεπτά.
+      send_paranoid_instructions: Αν υπάρχει το λογαριασμό σας, θα λάβετε ένα e-mail
+        με οδηγίες για το πώς να το ξεκλειδώσετε μέσα σε λίγα λεπτά.
+      unlocked: Ο λογαριασμός σας έχει ξεκλειδωθεί επιτυχώς. Παρακαλούμε συνδεθείτε
+        για να συνεχίσετε.
+  el: el
+  el_iso: el

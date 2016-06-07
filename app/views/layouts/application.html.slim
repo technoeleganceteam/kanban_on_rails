@@ -1,0 +1,54 @@
+doctype html
+
+html
+  head
+    meta charset='utf-8'
+    
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+
+    meta http-equiv='X-UA-Compatible' content='IE=Edge'
+
+    title Kanban on Rails
+
+    = stylesheet_link_tag('application', :media => 'all', 'data-turbolinks-track' => true)
+
+    = javascript_include_tag('application', 'data-turbolinks-track' => true)
+
+    = csrf_meta_tags
+
+    = render 'shared/favicons'
+  body
+    = render 'shared/header'
+
+    = render 'shared/flash_messages'
+
+    .container-fluid
+      .row
+        - if params[:controller] == 'projects' && params[:action] == 'show'
+          .col-md-12
+            = yield
+        - else
+          .col-md-2
+            = render 'shared/left_sidebar'
+
+          .col-md-8
+            = yield
+
+          .col-md-2
+            = render 'shared/right_sidebar'
+
+    br
+
+    = render 'shared/languages_select_modal'
+
+    = render 'shared/translations'
+
+    = render 'shared/notification_icon'
+
+    - if user_signed_in?
+      = render 'shared/new_project_modal'
+
+      - if @project.present? && @project.persisted?
+        = render 'shared/new_issue_modal'
+
+        = render 'shared/edit_project_modal', :project => @project

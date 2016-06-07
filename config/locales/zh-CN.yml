@@ -1,0 +1,249 @@
+---
+zh-CN:
+  github: Github上
+  bitbucket: 到位桶
+  updated: 更新
+  1_we_have_just_launched_our_service_title: 我们刚刚推出了我们的服务
+  shared:
+    navbar:
+      sign_in: 登陆
+      sign_up: 注册
+      projects: 项目
+      issues: 问题
+      syncing_with_github: 同步与Github上...
+      syncing_with_bitbucket: 同步与到位桶...
+      new_issue: 新问题
+      edit_project: 编辑项目
+    languages_select_modal:
+      available_languages: 可用语言
+    user_edit_menu:
+      profile: 简介
+      site_settings: 站点设置
+      services: 服务
+    form_errors:
+      password: 密码
+      current_password: 当前密码
+      password_confirmation: 密码确认
+      base: 基地
+      title: 标题
+      user_to_project_connection: 用户投影连接
+      columns:
+        tag: 标签重叠
+    new_project_modal:
+      new_project: 新项目
+    edit_project_modal:
+      edit_project: 编辑项目
+    new_issue_modal:
+      new_issue: 新问题
+    right_sidebar:
+      news: 新闻
+      read_more: 阅读更多
+    translations:
+      select_column_tags: 选择列标签
+      select_section_tags: 选​​择部分标签
+      select_issue_tags: 选择问题标签
+  users:
+    new:
+      invite_user: 邀请用户
+    form:
+      enter_user_name: 输入用户名
+      email: 电子邮件
+      enter_user_email: 输入用户的电子邮件
+      enter_user_password: 输入用户密码
+      password: 密码
+      role: 用户角色
+    edit:
+      enter_your_name: 输入您的姓名
+    settings:
+      change_password: 更改密码
+      interface_language: 界面语言
+    password_form:
+      new_password: 新密码
+      confirm_new_password: 确认新密码
+      old_password: 旧密码
+      change_password: 更改密码
+    update:
+      your_profile_was_successfully_updated: 您的个人资料已成功更新
+    dashboard:
+      hello: 你好
+      here_some_of_your_statistics: 在这里，你的一些统计数据
+  projects:
+    index:
+      sync_with_github: 同步与github上
+      sync_with_bitbucket: 同步与到位桶
+      stop_sync_with_bitbucket: 停止同步的到位桶
+      stop_sync_with_github: 停止同步的github上
+    form:
+      enter_project_name: 输入项目名称
+      column_name: 列名
+      column_height: 柱高度
+      github_repository_id: Github上存储库id
+      github_full_name: Github上库全名
+      github_secret_token_for_hook: Github上的秘密令牌挂钩
+      bitbucket_full_name: 到位桶全名
+      bitbucket_secret_token_for_hook: 到位桶秘密令牌挂钩
+    project:
+      destroy: 删除
+      project_issues: 项目问题
+      project_users: 项目用户
+    section_fields:
+      remove_section: 删除部分
+      section_tags: 区段标记
+      section_order: 订单
+      or_include_all: 还是包括所有？
+    column_fields:
+      column_name: 列名
+      remove_column: 删除列
+      max_issues_count: 最大问题列计数
+      column_tags: 列标签
+      column_order: 订单
+    show:
+      next_page: 下一页
+  issues:
+    form:
+      title: 标题
+      enter_issue_title: 输入问题标题
+      enter_issue_body: 进入身体的问题
+      tags: 标签
+      issue_order: 订单
+      bitbucket_issue_id: 到位桶问题ID
+      github_issue_id: Github的问题ID
+      github_issue_number: Github的发行数量
+    index:
+      issues: 问题
+      sync_with_github: 同步与github上
+      sync_with_bitbucket: 同步与到位桶
+    issue:
+      destroy: 删除
+    edit:
+      edit_issue: 编辑问题
+    new:
+      new_issue: 新问题
+  authentications:
+    index:
+      enabled_services: 启用服务
+    authentication:
+      turned_off: 熄灭
+      turn_on: 开启
+      turn_off: 关闭
+      turned_on: 开机状态
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: 我们刚刚推出了我们的服务！
+      we_have_just_launched_our_service_text: 今天我们推出我们的服务，让每个人都可以
+      sign_up: 报名
+      and_use_it: 并使用它。
+      with_love: 有了爱，
+      technoelegance_team: Technoelegance团队
+    index:
+      all_news: 全部新闻
+      read_more: 阅读更多
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: 欢迎看板On Rails的
+      welcome_about_text: 在这里，你可以创建自己的看板，并同步其与Github上或到位桶
+  pages:
+    faq:
+      faq: 常见问题解答
+      what_is_kanban_on_rails: 什么是KanbanOnRails？
+      about_kanban_on_rails: KanbanOnRails在这里你可以与Github上或到位桶创建看板并实现同步服务
+      what_features_has_kanban_on_rails: 哪些功能具有KanbanOnRails？
+      kanban_on_rails_features: 您可以同步你的项目和问题进行Github上和到位桶，邀请用户（例如，经理）为您的项目，它部署到自己的服务器
+      i_have_some_requests: 我有一些要求
+      you_can_write_request: 你可以写请求
+      i_have_seen_some_typo_or_wrong_translation: 我看到了一些拼写错误或翻译错误
+      you_can_send_pull_request_to_our: 您可以发送拉要求我们
+      github_repository: GitHub的库
+      i_have_seen_some_error: 我已经看到了一些错误
+      you_can_write_to_our_info_mail: 你可以写关于这个我们的电子邮件
+    about:
+      about_kanban_on_rails: 关于KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails在这里你可以与Github上或到位桶创建看板并实现同步服务
+      kanban_on_rails_features: KanbanOnRails功能
+      sync_with_github_and_bitbucket: 您可以同步你的项目和问题进行Github上和到位桶
+      invite_users: 您可以邀请用户（例如经理）为您的项目
+      open_source_code: 这个项目具有开放的源代码，这样你就可以将其部署到自己的服务器
+      we_use_open_source_and_high_technology: 我们用高新技术和开源库。我们总是试图变得更好，改善我们的服务。
+      partners_and_investors: 我们打开了合作伙伴关系，我们希望找到投资者。如果您想与我们合作，请partnership@technoelegance.com与我们联系
+  devise:
+    shared:
+      links:
+        sign_in: 登陆
+        sign_up: 注册
+        didnt_receive_confirmation_instructions: 没有收到确认指令？
+        sign_in_with: 登陆与
+        fast_login_almost_one_click: 快速登录（几乎点击）
+    confirmations:
+      confirmed: 您的帐户已成功确认。
+      send_instructions: 您将收到一封电子邮件，了解如何确认您的帐户在几分钟内说明。
+      send_paranoid_instructions: 如果您的电子邮件地址，在我们的数据库中存在，您将收到一封电子邮件，了解如何确认您的帐户在几分钟内说明。
+      new:
+        send_mail_for_confirm_your_email: 发送邮件确认您的电子邮件
+    failure:
+      already_authenticated: 您在已签署的。
+      inactive: 您的帐户尚未激活。
+      invalid: 无效的电子邮件或密码。
+      locked: 您的帐户被锁定。
+      last_attempt: 你多了一个尝试之前，你的帐户将被锁定。
+      not_found_in_database: 无效的电子邮件或密码。
+      timeout: 您的会话过期。请重新登录才能继续。
+      unauthenticated: 您需要登录或继续之前注册。
+      unconfirmed: 你必须继续前确认您的帐户。
+    mailer:
+      confirmation_instructions:
+        subject: 确认指令
+        welcome_to_kanban_on_rails: 欢迎KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: 您可以通过下面的链接确认您的电子邮件
+        confirm_my_account: 确认我的电子邮件
+      reset_password_instructions:
+        hello: 你好
+        subject: 重置密码的说明
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: 有人做过请求链接更改密码。您可以通过下面的链接做到这一点。
+        change_my_password: 更改我的密码
+        if_you_didnt_request_this_please_ignore_this_email: 如果您没有请求此请忽略此电子邮件。
+      unlock_instructions:
+        subject: 解锁指令
+    omniauth_callbacks:
+      failure: 无法从％{}样，因为“％{}原因”验证您的身份。
+      success: 成功地从％{}实物验证帐户。
+    passwords:
+      no_token: 你不能没有从密码重置电子邮件来访问此页面。如果你来自一个密码重置邮件，请确保您使用所提供的完整的URL。
+      send_instructions: 您将收到一封电子邮件，如何在几分钟内重置密码。
+      send_paranoid_instructions: 如果您的电子邮件地址，在我们的数据库中，您将收到在几分钟内您的电子邮件地址的密码恢复链接。
+      updated: 您的密码更改成功。您现在登录。
+      updated_not_active: 您的密码更改成功。
+      new:
+        forgot_your_password: 找回密码
+        reset_password: 发送URL恢复
+      edit:
+        change_your_password: 更改密码
+        new_password: 新密码
+        confirm_password: 确认密码
+        change_password: 变化
+    registrations:
+      destroyed: 再见！您的帐户已成功取消。我们希望很快再见到你。
+      signed_up: 欢迎您！您已成功签约。
+      signed_up_but_inactive: 您已成功签约。但是，由于您的帐户尚未激活，我们不能签你进去。
+      signed_up_but_locked: 您已成功签约。但是，由于您的帐户被锁定，我们不能签你进去。
+      signed_up_but_unconfirmed: 带确认链接的邮件已发送到您的电子邮件地址。请打开激活帐户的链接。
+      update_needs_confirmation: 您已成功更新您的帐户，但我们需要验证您的新电子邮件地址。请检查您的电子邮件，并点击确认链接来完成确认新的电子邮件地址。
+      updated: 您已成功更新您的帐户。
+      new:
+        sign_up: 注册
+        password: 密码
+        password_confirmation: 密码确认
+        register: 注册
+    sessions:
+      signed_in: 签名成功。
+      signed_out: 签署了成功。
+      new:
+        sign_in: 登陆
+        password: 密码
+        remember_me: 记住我
+        forgot_your_password: 忘记密码？
+    unlocks:
+      send_instructions: 您将收到一封电子邮件，了解如何解除您的帐户在几分钟内说明。
+      send_paranoid_instructions: 如果您的帐户存在，您会收到一封电子邮件，了解如何解锁几分钟的说明。
+      unlocked: 您的帐户已经成功解锁。请登入继续。
+  zh-CN: zh-CN
+  zh-CN_iso: zh-CN

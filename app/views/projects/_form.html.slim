@@ -1,0 +1,84 @@
+= form_for [current_user, project ||= Project.new], :remote => true do |form|
+  = render 'shared/form_errors', :item => project
+
+  .form-group
+    label for = 'name' = t '.name'
+
+    = form.text_field :name, :class => 'form-control', :placeholder => (t '.enter_project_name'),
+      :required => true
+
+  .form-group
+    label for = 'column_width' = t '.column_width'
+
+    = form.number_field :column_width, :min => 1, :class => 'form-control',
+      :placeholder => (t '.column_width')
+
+  .form-group
+    label for = 'column_height' = t '.column_height'
+
+    = form.number_field :column_height, :min => 1, :class => 'form-control',
+      :placeholder => (t '.column_height')
+
+  label
+    = t '.columns'
+    | :
+  .columns
+    .form-group.sortable
+      - if project.new_record?
+        = form.fields_for :columns, project.columns.build do |column_form|
+          = render 'projects/column_fields', :f => column_form
+      - else
+        = form.fields_for :columns, project.columns do |column_form|
+          = render 'projects/column_fields', :f => column_form
+
+      = link_to_add_association (t '.add'), form, :columns, :partial => 'projects/column_fields',
+        :class => 'btn btn-success'
+  hr
+
+  label
+    = t '.sections'
+    | :
+  .sections
+    .form-group.sortable
+      - if project.new_record?
+        = form.fields_for :sections, project.sections.build do |section_form|
+          = render 'projects/section_fields', :f => section_form
+      - else
+        = form.fields_for :sections do |section_form|
+          = render 'projects/section_fields', :f => section_form
+
+      = link_to_add_association (t '.add'), form, :sections, :partial => 'projects/section_fields',
+        :class => 'btn btn-success'
+  hr
+
+  - if project.is_github_repository
+    h3 = t 'github'
+    
+    label = t '.github_repository_id'
+
+    input.form-control disabled = '' placeholder=("#{ project.github_repository_id }") type = 'text'
+
+    label = t '.github_full_name'
+
+    input.form-control disabled = '' placeholder=("#{ project.github_full_name }") type = 'text'
+
+    label = t '.github_secret_token_for_hook'
+
+    input.form-control disabled = '' placeholder=("#{ project.github_secret_token_for_hook }") type = 'text'
+    
+    br
+
+  - if project.is_bitbucket_repository
+    h3 = t 'bitbucket'
+    
+    label = t '.bitbucket_full_name'
+
+    input.form-control disabled = '' placeholder=("#{ project.bitbucket_full_name }") type = 'text'
+
+    label = t '.bitbucket_secret_token_for_hook'
+
+    input.form-control disabled = '' placeholder=("#{ project.bitbucket_secret_token_for_hook }") type = 'text'
+
+    br
+
+  = form.submit (t '.save'), :class => 'btn btn-success'

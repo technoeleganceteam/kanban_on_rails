@@ -1,0 +1,311 @@
+---
+lv:
+  github: GitHub
+  bitbucket: Bitbucket
+  updated: atjaunināts
+  1_we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu pakalpojumus
+  shared:
+    navbar:
+      sign_in: Pierakstīties
+      sign_up: Reģistrēties
+      projects: Projekti
+      issues: jautājumi
+      syncing_with_github: Sync ar GitHub ...
+      syncing_with_bitbucket: Sync ar Bitbucket ...
+      new_issue: Jauns jautājums
+      edit_project: Edit projekts
+    languages_select_modal:
+      available_languages: Pieejamās valodas
+    user_edit_menu:
+      profile: Profile
+      site_settings: Vietnes iestatījumi
+      services: Services
+    form_errors:
+      password: Paroles
+      current_password: Pašreizējā parole
+      password_confirmation: Paroles apstiprinājums
+      name: Name
+      base: Base
+      title: sadaļa
+      user_to_project_connection: Lietotājs projektu savienojumu
+      columns:
+        tag: Tag pārklāšanās
+    new_project_modal:
+      new_project: Jaunais projekts
+    edit_project_modal:
+      edit_project: Edit projekts
+    new_issue_modal:
+      new_issue: Jauns jautājums
+    left_sidebar:
+      projects: Projekti
+    right_sidebar:
+      news: News
+      all: All
+      read_more: Lasīt vairāk
+    translations:
+      select_column_tags: Izvēlieties kolonnu tagus
+      select_section_tags: Izvēlieties sadaļu tagus
+      select_issue_tags: Izvēlieties jautājums tagus
+  users:
+    new:
+      invite_user: Uzaicināt lietotāju
+    form:
+      name: Name
+      enter_user_name: Ievadiet lietotājvārdu
+      email: Email
+      enter_user_email: Ievadiet lietotāja e-pasta adresi
+      enter_user_password: Ievadiet lietotāja paroli
+      password: Paroles
+      role: Lietotāja loma
+      save: Saglabāt
+    index:
+      project: Project
+      users: lietotājiem
+      new: New
+    edit:
+      name: Name
+      enter_your_name: Ievadiet savu vārdu
+      save: Saglabāt
+    settings:
+      change_password: Mainīt paroli
+      interface_language: Interface valoda
+      submit: Iesniegt
+    password_form:
+      new_password: Jaunā parole
+      confirm_new_password: Apstiprināt jauno paroli
+      old_password: Vecā parole
+      change_password: Mainīt paroli
+    update:
+      your_profile_was_successfully_updated: Jūsu profila tika veiksmīgi atjaunināts
+    dashboard:
+      hello: Sveiki
+      here_some_of_your_statistics: Lūk daži no jūsu statistika
+      projects: Projekti
+  projects:
+    index:
+      projects: Projekti
+      new: New
+      sync_with_github: Sync ar GitHub
+      sync_with_bitbucket: Sync ar bitbucket
+      stop_sync_with_bitbucket: Stop sinhronizācija ar bitbucket
+      stop_sync_with_github: Stop sinhronizācija ar GitHub
+    form:
+      name: Name
+      enter_project_name: Ievadiet projekta nosaukumu
+      save: Saglabāt
+      columns: Kolonnas
+      sections: Sekcijas
+      column_name: Row nosaukums
+      add: Add
+      column_width: Kolonnas platums
+      column_height: Kolonnas augstums
+      github_repository_id: GitHub krātuve id
+      github_full_name: GitHub krātuve FULLNAME
+      github_secret_token_for_hook: GitHub noslēpums biļete par āķa
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket noslēpums biļete par āķa
+    project:
+      edit: rediģēšana
+      destroy: Dzēst
+      project_issues: Projekta jautājumi
+      project_users: Projekta lietotājiem
+    section_fields:
+      remove_section: Noņemt sadaļa
+      section_tags: sadaļa tagus
+      section_order: Order
+      or_include_all: vai ietver visu?
+    column_fields:
+      column_name: Kolonnas nosaukums
+      remove_column: noņemšana kolonnu
+      max_issues_count: Max jautājumi skaits slejā
+      column_tags: sleja tagus
+      column_order: Order
+    show:
+      next_page: Nākamā lapa
+  issues:
+    form:
+      title: sadaļa
+      enter_issue_title: Ievadiet jautājums titulu
+      save: Saglabāt
+      body: Body
+      enter_issue_body: Ievadiet jautājums ķermeni
+      tags: birkas
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket jautājums id
+      github_issue_id: GitHub jautājums id
+      github_issue_number: GitHub jautājums numurs
+    index:
+      issues: jautājumi
+      sync_with_github: Sync ar GitHub
+      sync_with_bitbucket: Sync ar bitbucket
+      new: New
+    issue:
+      destroy: Dzēst
+      edit: rediģēšana
+    edit:
+      edit_issue: Edit jautājums
+    new:
+      new_issue: Jauns jautājums
+  authentications:
+    index:
+      enabled_services: Enabled pakalpojumi
+    authentication:
+      turned_off: Izslēgts
+      turn_on: ieslēgšana
+      turn_off: Izslēgt
+      turned_on: Virpotas uz
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu servisu!
+      we_have_just_launched_our_service_text: Šodien mēs uzsāktu mūsu pakalpojumus,
+        lai ikviens varētu
+      sign_up: pierakstīties
+      and_use_it: un izmantot to.
+      with_love: Ar mīlestību,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Visi jaunumi
+      read_more: Lasīt vairāk
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Aicinām Kanban On Rails
+      welcome_about_text: Šeit Jūs varat izveidot savu Kanban kuģa un sinhronizēt
+        to ar GitHub vai Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Kas ir KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails ir pakalpojums, kur jūs varat izveidot
+        Kanban dēļi un sinhronizēt to ar GitHub vai Bitbucket
+      what_features_has_kanban_on_rails: Kādas iespējas ir KanbanOnRails?
+      kanban_on_rails_features: varat sinhronizēt savus projektus un problēmas ar
+        GitHub un Bitbucket, uzaicināt lietotājus (piemēram, vadītājiem), par jūsu
+        projektu, izvietot to uz savu serveri
+      i_have_some_requests: Man ir daži lūgumi
+      you_can_write_request: Jūs varat uzrakstīt pieprasījumu
+      here: šeit
+      i_have_seen_some_typo_or_wrong_translation: Es esmu redzējis dažas pārrakstīšanās
+        vai nepareizus tulkojumus
+      you_can_send_pull_request_to_our: Jūs varat nosūtīt pull pieprasījumu mūsu
+      github_repository: GitHub krātuve
+      i_have_seen_some_error: Es esmu redzējis dažas kļūdas
+      you_can_write_to_our_info_mail: Jūs varat rakstīt par to mūsu e-pastu
+    about:
+      about_kanban_on_rails: Par KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ir pakalpojums, kur jūs varat izveidot
+        Kanban dēļi un sinhronizēt to ar GitHub vai Bitbucket
+      kanban_on_rails_features: KanbanOnRails funkcijas
+      sync_with_github_and_bitbucket: varat sinhronizēt savus projektus un problēmas
+        ar GitHub un Bitbucket
+      invite_users: Jūs varat uzaicināt lietotājus (piemēram vadītājiem) jūsu projektam
+      open_source_code: Šis projekts ir atvērtā pirmkoda, lai jūs varētu izmantot
+        to savu serveri
+      we_use_open_source_and_high_technology: Mēs izmantojam augstas tehnoloģijas
+        un atvērtā koda bibliotēkas. Mēs vienmēr cenšamies, lai iegūtu labāku un uzlabot
+        mūsu pakalpojumus.
+      partners_and_investors: Mēs esam atvērti sadarbībai un mēs vēlētos atrast investorus.
+        Ja vēlaties sadarboties ar mums, lūdzu, sazinieties ar mums partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Pierakstīties
+        sign_up: Reģistrēties
+        didnt_receive_confirmation_instructions: Vai nav saņēmuši apstiprinājuma instrukcijas?
+        sign_in_with: Pierakstieties ar
+        fast_login_almost_one_click: Fast login (gandrīz vienu klikšķi)
+    confirmations:
+      confirmed: jūsu konts tika veiksmīgi apstiprināts.
+      send_instructions: jūs saņemsiet e-pastu ar norādījumiem par to, kā, lai apstiprinātu
+        savu kontu pēc dažām minūtēm.
+      send_paranoid_instructions: Ja jūsu e-pasta adrese eksistē mūsu datu bāzē, jūs
+        saņemsiet e-pastu ar norādījumiem par to, kā, lai apstiprinātu savu kontu
+        pēc dažām minūtēm.
+      new:
+        send_mail_for_confirm_your_email: Sūtīt pastu uz apstiprinātu savu e-pasta
+        submit: Iesniegt
+    failure:
+      already_authenticated: Jūs esat jau pierakstījies.
+      inactive: jūsu konts nav aktivizēts vēl.
+      invalid: Nederīga e-pastu vai paroli.
+      locked: Jūsu kontā tiek bloķēta.
+      last_attempt: Jums ir vēl viens mēģinājums, pirms jūsu konts tiks bloķēts.
+      not_found_in_database: Nederīga e-pastu vai paroli.
+      timeout: Jūsu sesija beidzās. Lūdzu, pierakstieties vēlreiz, lai turpinātu.
+      unauthenticated: jums ir nepieciešams pierakstīties vai reģistrēties pirms turpināt.
+      unconfirmed: Jūs esat, lai apstiprinātu savu kontu, pirms turpināt.
+    mailer:
+      confirmation_instructions:
+        subject: Apstiprinājums instrukcija
+        welcome_to_kanban_on_rails: Laipni lūdzam KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Jūs varat apstiprināt
+          savu e-pastu, izmantojot saiti zemāk
+        confirm_my_account: Apstiprināt manu e-pastu
+      reset_password_instructions:
+        hello: Sveiki
+        subject: Atjaunot paroli instrukcija
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Kāds
+          ir pieprasa saiti, lai mainītu paroli. To var izdarīt, izmantojot saiti
+          zemāk.
+        change_my_password: Mainīt paroli
+        if_you_didnt_request_this_please_ignore_this_email: Ja nepieprasīja šo lūdzu,
+          ignorējiet šo e-pastu.
+      unlock_instructions:
+        subject: Unlock instrukcija
+    omniauth_callbacks:
+      failure: Neizdevās autentificēt jūs no% {veida} jo "% {iemesls}".
+      success: Veiksmīgi autentiskumu no% {kind} kontā.
+    passwords:
+      no_token: Jūs nevarat piekļūt šo lapu, kas nāk no paroles atiestatīšanas e-pastu.
+        Ja jūs nākt no paroles atiestatīšanas e-pastu, lūdzu, pārliecinieties, ka
+        jūs izmanto pilnu URL.
+      send_instructions: Jūs saņemsiet e-pastu ar norādījumiem, kā nomainīt savu paroli
+        pēc dažām minūtēm.
+      send_paranoid_instructions: Ja jūsu e-pasta adrese eksistē mūsu datu bāzē, jūs
+        saņemsiet paroli atgūšana saiti savā e-pasta adresē pēc dažām minūtēm.
+      updated: Jūsu parole tika veiksmīgi mainīta. Tagad Jūs esat pierakstījies.
+      updated_not_active: Jūsu parole tika veiksmīgi mainīta.
+      new:
+        forgot_your_password: Atgūt paroli
+        reset_password: Sūtīt atgūt url
+      edit:
+        change_your_password: Mainīt paroli
+        new_password: Jaunā parole
+        confirm_password: Apstiprināt paroli
+        change_password: maiņa
+    registrations:
+      destroyed: Bye! Jūsu konts tika veiksmīgi atcelts. Mēs ceram redzēt jūs atkal
+        drīz.
+      signed_up: Laipni lūdzam! Jūs esat pierakstījies veiksmīgi.
+      signed_up_but_inactive: esat pierakstījies veiksmīgi. Tomēr mēs nevarējām jūs
+        pierakstīt, jo jūsu konts nav aktivizēts.
+      signed_up_but_locked: esat pierakstījies veiksmīgi. Tomēr mēs nevarējām jūs
+        pierakstīt, jo jūsu konts ir bloķēts.
+      signed_up_but_unconfirmed: īsziņu ar apstiprinājuma saiti tika nosūtīts uz jūsu
+        e-pasta adresi. Lūdzu atvērt saites, lai aktivizētu savu kontu.
+      update_needs_confirmation: Jūs atjauninājis savu kontu veiksmīgi, bet mums ir
+        nepieciešams, lai pārbaudītu savu jauno e-pasta adresi. Lūdzu, pārbaudiet
+        savu e-pastu un noklikšķiniet uz saites, apstiprina, lai pabeigtu, apstiprinot
+        savu jauno e-pasta adresi.
+      updated: Jūs atjauninājis savu kontu veiksmīgi.
+      new:
+        sign_up: Reģistrēties
+        name: Name
+        password: Paroles
+        password_confirmation: Paroles apstiprinājums
+        register: Reģistrēties
+    sessions:
+      signed_in: Parakstīts veiksmīgi.
+      signed_out: Parakstīts veiksmīgi.
+      new:
+        sign_in: Pierakstīties
+        password: Paroles
+        remember_me: Atcerēties mani
+        forgot_your_password: Aizmirsāt paroli?
+    unlocks:
+      send_instructions: jūs saņemsiet e-pastu ar norādījumiem par to, kā atbloķēt
+        jūsu kontu pēc dažām minūtēm.
+      send_paranoid_instructions: Ja jūsu konts eksistē, jūs saņemsiet e-pastu ar
+        norādījumiem par to, kā atbloķēt to pēc dažām minūtēm.
+      unlocked: Jūsu konts ir veiksmīgi atbloķēts. Lūdzu, pierakstieties, lai turpinātu.
+  lv: lv
+  lv_iso: lv

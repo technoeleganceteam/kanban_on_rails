@@ -1,0 +1,148 @@
+require 'rails_helper'
+
+describe User, :type => :model do
+  let(:user) { create :user, :email => 'test@mail.com' }
+
+  describe '#gravatar_url' do
+    subject { user.gravatar_url }
+
+    it { is_expected.to eq 'https://secure.gravatar.com/avatar/97dfebf4098c0f5c16bca61e2b76c373' }
+  end
+
+  describe '#avatar' do
+    subject { user.avatar }
+
+    it { is_expected.to eq 'https://secure.gravatar.com/avatar/97dfebf4098c0f5c16bca61e2b76c373' }
+  end
+
+  describe '#sync_github' do
+    before do
+      project = create :project, :github_repository_id => 123, :name => 'Some name'
+
+      user.user_to_project_connections.create :project => project, :role => 'owner'
+
+      stub_request(:get, 'https://api.github.com/user/repos').
+        with(:headers => { 'Accept' => 'application/vnd.github.v3+json',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization'=>'token token', 'Content-Type'=>'application/json',
+          'User-Agent'=>'Octokit Ruby Gem 4.3.0'}).
+        to_return(:status => 200, :headers => {}, :body => [
+          Hashie::Mash.new({
+            :id => 123,
+            :name => 'Some name',
+            :full_name => 'some/name',
+            :permissions => { :admin => true }
+          }),Hashie::Mash.new({
+            :id => 1,
+            :name => 'Some name',
+            :full_name => 'some/name',
+            :permissions => { :admin => true }
+          })])
+
+
+      stub_request(:get, 'https://api.github.com/repos/some/name/issues').
+        with(:headers => { 'Accept' => 'application/vnd.github.v3+json',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => 'token token', 'Content-Type' => 'application/json',
+          'User-Agent'=>'Octokit Ruby Gem 4.3.0'}).
+        to_return(:status => 200, :headers => {}, :body => [Hashie::Mash.new({
+          :id => 123,
+          :title => 'Some name',
+          :body => 'some/name',
+          :number => 1,
+          :labels => [{ :name => 'test' }]
+        })])
+
+      stub_request(:get, 'https://api.github.com/repos/some/name/hooks').
+        with(:headers => {'Accept' => 'application/vnd.github.v3+json',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => 'token token', 'Content-Type'=>'application/json',
+          'User-Agent'=>'Octokit Ruby Gem 4.3.0'}).
+        to_return(:status => 200, :headers => {}, :body => [Hashie::Mash.new({
+          :config => { :url => 'foo' }
+        })])
+
+      stub_request(:post, 'https://api.github.com/repos/some/name/hooks').
+        with(:body => /.*/, :headers => { 'Accept' => 'application/vnd.github.v3+json',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Authorization'=>'token token',
+          'Content-Type'=>'application/json', 'User-Agent'=>'Octokit Ruby Gem 4.3.0'}).
+        to_return(:status => 200, :body => "", :headers => {})
+
+      user.authentications.create! :uid => 123, :provider => 'github', :token => 'token'
+    end
+
+    it { expect(user.sync_github.size).to eq 8 }
+  end
+
+  describe '#sync_bitbucket' do
+    before do
+      project = create :project, :bitbucket_full_name => 'username/slug', :name => 'Some name'
+
+      user.user_to_project_connections.create :project => project, :role => 'owner'
+      
+      stub_request(:get, 'https://api.bitbucket.org/1.0/user/repositories').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :slug => 'slug',
+          :name => 'name', 
+          :owner => 'username',
+        }, {
+          :slug => 'slug2',
+          :name => 'name2', 
+          :owner => 'username',
+        }].to_json)
+
+      stub_request(:get, 'https://api.bitbucket.org/1.0/user').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => {
+          :username => 'username'
+        }.to_json.to_s)
+
+      stub_request(:get, 'https://api.bitbucket.org/1.0/repositories/username/slug/issues').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => { :issues => [{
+          :local_id => 1,
+          :title => 'Some title',
+          :content => 'Some content'
+        }]}.to_json.to_s)
+
+      stub_request(:get, 'https://api.bitbucket.org/1.0/repositories/username/slug2/issues').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => { :issues => [{
+          :local_id => 1,
+          :title => 'Some title',
+          :content => 'Some content'
+        }]}.to_json.to_s)
+
+      stub_request(:get, 'https://api.bitbucket.org/2.0/repositories/username/slug/hooks').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => {}.to_json.to_s)
+
+      stub_request(:post, "https://api.bitbucket.org/2.0/repositories/username/slug/hooks").
+        with(:body => /.*/, :headers => { 'Accept' => '*/*',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type' => 'application/x-www-form-urlencoded',
+          'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :body => {}.to_json.to_s, :headers => {})
+
+      stub_request(:get, 'https://api.bitbucket.org/2.0/repositories/username/slug2/hooks').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => {
+          :values => [{ :description => 'kanbanonrails' }]}.to_json.to_s)
+
+      project_2 = create :project, :github_repository_id => 123, :name => 'Some name'
+
+      user.user_to_project_connections.create :project => project_2, :role => 'owner'
+
+      user.authentications.create! :uid => 123, :provider => 'bitbucket', :token => 'token', :secret => 'secret'
+    end
+
+    it { expect(user.sync_bitbucket.size).to eq 8 }
+  end
+end

@@ -1,0 +1,252 @@
+---
+km:
+  github: Github
+  bitbucket: Bitbucket
+  updated: ធ្វើឱ្យទាន់សម័យ
+  1_we_have_just_launched_our_service_title: យើងទើបតែបានចាប់ផ្តើមសេវារបស់យើង
+  shared:
+    navbar:
+      sign_up: ចុះឈ្មោះ
+      projects: គម្រោង
+      issues: បញ្ហា
+      new_issue: បញ្ហាថ្មី
+      edit_project: កែសម្រួលគម្រោង
+    user_edit_menu:
+      profile: ប្រវត្តិរូប
+      services: សេវាកម្ម
+    form_errors:
+      password: ពាក្យសម្ងាត់
+      current_password: ពាក្យសម្ងាត់បច្ចុប្បន្ន
+      name: ឈ្មោះ
+      base: មូលដ្ឋាន
+      title: ចំណងជើង
+      user_to_project_connection: គម្រោងការតភ្ជាប់របស់អ្នកប្រើ
+      columns:
+        tag: ស្លាកត្រួតស៊ីគ្នា
+    new_project_modal:
+      new_project: គម្រោងថ្មី
+    edit_project_modal:
+      edit_project: កែសម្រួលគម្រោង
+    new_issue_modal:
+      new_issue: បញ្ហាថ្មី
+    left_sidebar:
+      projects: គម្រោង
+    right_sidebar:
+      news: ដំណឹង
+      all: ទាំងអស់
+      read_more: អានបន្ថែម
+    translations:
+      select_section_tags: ជ្រើសផ្នែកស្លាក
+      select_issue_tags: ជ្រើសស្លាកបញ្ហា
+  users:
+    new:
+      invite_user: អញ្ជើញអ្នកប្រើ
+    form:
+      name: ឈ្មោះ
+      enter_user_name: បញ្ចូលឈ្មោះអ្នកប្រើ
+      email: អ៊ីមែល
+      enter_user_email: បញ្ចូលអ៊ីម៉ែលរបស់អ្នកប្រើ
+      enter_user_password: បញ្ចូលពាក្យសម្ងាត់អ្នកប្រើ
+      password: ពាក្យសម្ងាត់
+      save: រក្សាទុក
+    index:
+      project: គម្រោង
+      users: អ្នកប្រើប្រាស់
+      new: ថ្មី
+    edit:
+      name: ឈ្មោះ
+      enter_your_name: បញ្ចូលឈ្មោះរបស់អ្នក
+      save: រក្សាទុក
+    settings:
+      submit: ដាក់ស្នើ
+    password_form:
+      new_password: ពាក្យសម្ងាត់ថ្មី
+      confirm_new_password: បញ្ជាក់ពាក្យសម្ងាត់ថ្មី
+    update:
+      your_profile_was_successfully_updated: ទម្រង់របស់អ្នកត្រូវបានធ្វើឱ្យទាន់សម័យដោយជោគជ័យ
+    dashboard:
+      hello: ជំរាបសួរ
+      here_some_of_your_statistics: នៅទីនេះមួយចំនួននៃស្ថិតិរបស់អ្នក
+      projects: គម្រោង
+  projects:
+    index:
+      projects: គម្រោង
+      new: ថ្មី
+      stop_sync_with_bitbucket: បញ្ឈប់សមកាលកម្មជាមួយ bitbucket
+      stop_sync_with_github: បញ្ឈប់សមកាលកម្មជាមួយ GitHub
+    form:
+      name: ឈ្មោះ
+      enter_project_name: បញ្ចូលឈ្មោះគម្រោង
+      save: រក្សាទុក
+      columns: ជួរឈរ
+      sections: ផ្នែក
+      add: បន្ថែម
+      github_full_name: ឈ្មោះពេញឃ្លាំង Github
+      github_secret_token_for_hook: សញ្ញាសម្ងាត់សម្ងាត់ Github សម្រាប់ការទំពក់
+      bitbucket_full_name: Bitbucket ឈ្មោះពេញ
+      bitbucket_secret_token_for_hook: សញ្ញាសម្ងាត់សម្ងាត់ Bitbucket សម្រាប់ការទំពក់
+    project:
+      edit: កែសម្រួល
+      destroy: លុប
+      project_issues: បញ្ហាគម្រោង
+      project_users: អ្នកប្រើប្រាស់គម្រោង
+    section_fields:
+      section_tags: ស្លាកផ្នែក
+      section_order: លំដាប់
+      or_include_all: ឬរួមបញ្ចូលទាំងអស់?
+    column_fields:
+      remove_column: យកជួរឈរ
+      max_issues_count: បញ្ហាការរាប់នៅក្នុងជួរឈរអតិបរមា
+      column_order: លំដាប់
+    show:
+      next_page: ទំព័របន្ទាប់
+  issues:
+    form:
+      title: ចំណងជើង
+      enter_issue_title: បញ្ចូលចំណងជើងជាបញ្ហា
+      save: រក្សាទុក
+      body: រាងកាយ
+      enter_issue_body: បញ្ចូលរាងកាយបញ្ហា
+      tags: ស្លាក
+      issue_order: លំដាប់
+      github_issue_number: លេខចេញផ្សាយ Github
+    index:
+      issues: បញ្ហា
+      new: ថ្មី
+    issue:
+      destroy: លុប
+      edit: កែសម្រួល
+    edit:
+      edit_issue: កែសម្រួលបញ្ហា
+    new:
+      new_issue: បញ្ហាថ្មី
+  authentications:
+    authentication:
+      turned_off: បានបិទ
+      turn_on: បើក
+      turn_off: បិទ
+      turned_on: បើក
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: យើងទើបតែបានដាក់ឱ្យដំណើរការសេវាកម្មរបស់យើង!
+      we_have_just_launched_our_service_text: សព្វថ្ងៃនេះយើងចាប់ផ្តើមសេវារបស់យើងដូច្នេះអ្នករាល់គ្នាអាចធ្វើបាន
+      sign_up: ចុះឈ្មោះ
+      and_use_it: និងប្រើវា។
+      with_love: ដោយក្ដីស្រឡាញ់,
+    index:
+      all_news: ដំណឹងទាំងអស់
+      read_more: អានបន្ថែម
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: នៅលើផ្លូវរថភ្លើង
+      welcome_about_text: ទីនេះអ្នកអាចបង្កើតក្រុមប្រឹក្សាភិបាល Kanban ផ្ទាល់ខ្លួនរបស់អ្នកនិងធ្វើសមកាលកម្មវាជាមួយនឹង
+        Github ឬ Bitbucket
+  pages:
+    faq:
+      faq: សំណួរគេសួរញឹកញាប់
+      what_is_kanban_on_rails: "?"
+      about_kanban_on_rails: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
+        Kanban វាជាមួយ Github ឬ Bitbucket
+      kanban_on_rails_features: គម្រោងអ្នកអាចធ្វើសមកាលកម្មនិងបញ្ហារបស់អ្នកជាមួយនឹង
+        Github និង Bitbucket, អញ្ជើញអ្នកប្រើ (ឧទាហរណ៍ចាត់ការទូទៅ) សម្រាប់គម្រោងរបស់អ្នក,
+        ការដាក់ពង្រាយវាទៅម៉ាស៊ីនបម្រើរបស់អ្នកផ្ទាល់
+      i_have_some_requests: ខ្ញុំមានសំណើរមួយចំនួន
+      you_can_write_request: អ្នកអាចសរសេរសំណើ
+      here: នៅទីនេះ
+      i_have_seen_some_typo_or_wrong_translation: ខ្ញុំបានឃើញមួយចំនួនឬការបកប្រែប្រកបខុស
+      you_can_send_pull_request_to_our: អ្នកអាចផ្ញើសំណើទាញទៅរបស់យើង
+      i_have_seen_some_error: ខ្ញុំបានឃើញកំហុសមួយចំនួន
+      you_can_write_to_our_info_mail: អ្នកអាចសរសេរអំពីបញ្ហានេះទៅអ៊ីម៉ែលរបស់យើង
+    about:
+      about_kanban_on_rails: អំពី KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
+        Kanban វាជាមួយ Github ឬ Bitbucket
+      kanban_on_rails_features: លក្ខណៈពិសេស KanbanOnRails
+      sync_with_github_and_bitbucket: គម្រោងអ្នកអាចធ្វើសមកាលកម្មនិងបញ្ហារបស់អ្នកជាមួយនឹង
+        Github និង Bitbucket
+      invite_users: អ្នកអាចអញ្ជើញអ្នកប្រើប្រាស់ (ឧទាហរណ៍ចាត់ការទូទៅ) សម្រាប់គម្រោងរបស់អ្នក
+      open_source_code: គម្រោងនេះមានកូដប្រភពបើកចំហ, ដូច្នេះអ្នកអាចដាក់ពង្រាយវាទៅម៉ាស៊ីនបម្រើផ្ទាល់ខ្លួនរបស់អ្នក
+      we_use_open_source_and_high_technology: យើងប្រើបច្ចេកវិទ្យាខ្ពស់និងមានបណ្ណាល័យប្រភពបើកចំហ។
+        យើងតែងតែព្យាយាមដើម្បីទទួលបានល្អប្រសើរជាងមុននិងការកែលម្អសេវារបស់យើង។
+      partners_and_investors: យើងត្រូវបានបើកសម្រាប់ភាពជាដៃគូហើយយើងចង់ស្វែងរកវិនិយោគិន។
+        ប្រសិនបើអ្នកចង់សហការជាមួយយើងសូមទាក់ទងមកយើងខ្ញុំ partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_up: ចុះឈ្មោះ
+        didnt_receive_confirmation_instructions: តើមិនទទួលបានសេចក្តីណែនាំការបញ្ជាក់?
+        fast_login_almost_one_click: ការចូលលឿន (ជិតមួយចុចកណ្តុរ)
+    confirmations:
+      confirmed: គណនីរបស់អ្នកត្រូវបានបញ្ជាក់ដោយជោគជ័យ។
+      send_instructions: អ្នកនឹងទទួលបានអ៊ីម៉ែលមួយដោយមានការណែនាំអំពីរបៀបដើម្បីបញ្ជាក់គណនីរបស់អ្នកនៅក្នុងប៉ុន្មាននាទី។
+      send_paranoid_instructions: ប្រសិនបើអាសយដ្ឋានអ៊ីមែលរបស់អ្នកមាននៅក្នុងមូលដ្ឋានទិន្នន័យរបស់យើងនោះអ្នកនឹងទទួលបានអ៊ីម៉ែលមួយដោយមានការណែនាំអំពីរបៀបដើម្បីបញ្ជាក់គណនីរបស់អ្នកនៅក្នុងប៉ុន្មាននាទី។
+      new:
+        send_mail_for_confirm_your_email: ផ្ញើសំបុត្រការអះអាងអ៊ីមែលរបស់អ្នក
+        submit: ដាក់ស្នើ
+    failure:
+      already_authenticated: អ្នកត្រូវបានចុះហត្ថលេខារួចហើយ។
+      inactive: គណនីរបស់អ្នកមិនបានធ្វើឱ្យសកម្មនៅឡើយទេ។
+      invalid: អ៊ីមែលមិនត្រឹមត្រូវឬពាក្យសម្ងាត់។
+      locked: គណនីរបស់អ្នកត្រូវបានចាក់សោ។
+      last_attempt: អ្នកមានការប៉ុនប៉ងមួយបន្ថែមទៀតមុនពេលដែលគណនីរបស់អ្នកនឹងត្រូវបានចាក់សោ។
+      not_found_in_database: អ៊ីមែលមិនត្រឹមត្រូវឬពាក្យសម្ងាត់។
+      timeout: សម័យរបស់អ្នកបានផុតកំណត់។ សូមចូលម្ដងទៀតដើម្បីបន្ត។
+      unauthenticated: អ្នកត្រូវការដើម្បីចូលឬចុះឈ្មោះមុនពេលបន្ត។
+      unconfirmed: អ្នកមានដើម្បីបញ្ជាក់គណនីរបស់អ្នកមុននឹងបន្ត។
+    mailer:
+      confirmation_instructions:
+        you_can_confirm_your_account_email_through_the_link_below: អ្នកអាចបញ្ជាក់អ៊ីមែលរបស់អ្នកតាមរយៈតំណខាងក្រោមនេះ
+        confirm_my_account: អះអាងអ៊ីមែលរបស់ខ្ញុំ
+      reset_password_instructions:
+        hello: ជំរាបសួរ
+        subject: សេចក្តីណែនាំអំពីការកំណត់ពាក្យសម្ងាត់ឡើងវិញ
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: នរណាម្នាក់មានសំណើតំណដើម្បីផ្លាស់ប្ដូរពាក្យសម្ងាត់របស់អ្នក។
+          អ្នកអាចធ្វើដូចនេះបានតាមរយៈតំណខាងក្រោម។
+        change_my_password: ផ្លាស់ប្តូរពាក្យសម្ងាត់របស់ខ្ញុំ
+        if_you_didnt_request_this_please_ignore_this_email: ប្រសិនបើអ្នកមិនស្នើសុំនេះសូមមិនអើពើអ៊ីម៉ែលនេះ។
+    omniauth_callbacks:
+      failure: មិនអាចផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវរបស់អ្នកពី% {ប្រភេទ} ដោយសារតែ "% {មូលហេតុ}"
+        ។
+    passwords:
+      no_token: អ្នកមិនអាចចូលដំណើរការទំព័រនេះដោយគ្មានមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ។
+        ប្រសិនបើអ្នកធ្វើមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ, សូមធ្វើឱ្យប្រាកដថាអ្នកបានប្រើ
+        URL ពេញលេញដែលបានផ្តល់ឱ្យ។
+      send_instructions: អ្នកនឹងទទួលបានអ៊ីម៉ែលមួយដោយមានការណែនាំអំពីរបៀបដើម្បីកំណត់ពាក្យសម្ងាត់របស់អ្នកនៅក្នុងប៉ុន្មាននាទី។
+      send_paranoid_instructions: ប្រសិនបើអាសយដ្ឋានអ៊ីមែលរបស់អ្នកមាននៅក្នុងមូលដ្ឋានទិន្នន័យរបស់យើងនោះអ្នកនឹងទទួលតំណសង្គ្រោះពាក្យសម្ងាត់នៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នកនៅក្នុងប៉ុន្មាននាទី។
+      updated: ពាក្យសម្ងាត់របស់អ្នកត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ។ ឥឡូវអ្នកបានចូល។
+      updated_not_active: ពាក្យសម្ងាត់របស់អ្នកត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ។
+      new:
+        forgot_your_password: បានវិញពាក្យសម្ងាត់របស់អ្នក
+        reset_password: ផ្ញើងើបឡើងវិញ url
+      edit:
+        change_your_password: ផ្លាស់ប្តូរពាក្យសម្ងាត់របស់អ្នក
+        new_password: ពាក្យសម្ងាត់ថ្មី
+        change_password: ការផ្លាស់ប្តូរ
+    registrations:
+      destroyed: លាសិនហើយ! គណនីរបស់អ្នកត្រូវបានលុបចោលដោយជោគជ័យ។ យើងសង្ឃឹមថានឹងឃើញអ្នកជាថ្មីម្តងទៀតក្នុងពេលឆាប់។
+      signed_up: សូមស្វាគមន៍! អ្នកបានចុះឈ្មោះដោយជោគជ័យ។
+      signed_up_but_inactive: អ្នកបានចុះឈ្មោះដោយជោគជ័យ។ ទោះយ៉ាងណាយើងមិនអាចឱ្យអ្នកចូលទេព្រោះគណនីរបស់អ្នកមិនទាន់ដំណើរការទេ។
+      signed_up_but_locked: អ្នកបានចុះឈ្មោះដោយជោគជ័យ។ ទោះយ៉ាងណាយើងមិនអាចឱ្យអ្នកចូលទេព្រោះគណនីរបស់អ្នកត្រូវបានចាក់សោ។
+      signed_up_but_unconfirmed: សារដែលមានតំណបញ្ជាក់មួយត្រូវបានផ្ញើទៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។
+        សូមបើកតំណភ្ជាប់ដើម្បីធ្វើឱ្យគណនីរបស់អ្នក។
+      update_needs_confirmation: អ្នកធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
+        សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកហើយចុចលើតំណ Confirm ដើម្បីបញ្ចប់ការបញ្ជាក់ពីអាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
+      updated: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
+      new:
+        sign_up: ចុះឈ្មោះ
+        name: ឈ្មោះ
+        password: ពាក្យសម្ងាត់
+        register: ចុះឈ្មោះ
+    sessions:
+      signed_in: បានចុះហត្ថលេខាដោយជោគជ័យ។
+      signed_out: ចេញពីការទទួលបានជោគជ័យ។
+      new:
+        password: ពាក្យសម្ងាត់
+        remember_me: ចងចាំខ្ញុំ
+        forgot_your_password: ភ្លេចពាក្យសម្ងាត់របស់អ្នក?
+    unlocks:
+      send_instructions: អ្នកនឹងទទួលបានអ៊ីម៉ែលមួយដោយមានការណែនាំអំពីរបៀបដើម្បីដោះសោគណនីរបស់អ្នកនៅក្នុងប៉ុន្មាននាទី។
+      send_paranoid_instructions: បើគណនីរបស់អ្នកមាន, អ្នកនឹងទទួលបានអ៊ីម៉ែលមួយដោយមានការណែនាំអំពីរបៀបដើម្បីដោះសោវានៅក្នុងពីរបីនាទី។
+      unlocked: គណនីរបស់អ្នកត្រូវបានដោះសោដោយជោគជ័យ។ សូមចូលដើម្បីបន្ត។
+  km: km
+  km_iso: km

@@ -1,0 +1,316 @@
+---
+tl:
+  github: Github
+  bitbucket: Bitbucket
+  updated: update
+  1_we_have_just_launched_our_service_title: Lang namin ay may inilunsad ang aming
+    serbisyo
+  shared:
+    navbar:
+      sign_in: Mag-sign in
+      sign_up: Mag-sign up
+      projects: Projects
+      issues: Isyu
+      syncing_with_github: I-sync sa Github ...
+      syncing_with_bitbucket: I-sync sa Bitbucket ...
+      new_issue: Bagong isyu
+      edit_project: Edit proyekto
+    languages_select_modal:
+      available_languages: Mga magagamit na wika
+    user_edit_menu:
+      profile: Profile
+      site_settings: setting Site
+      services: Services
+    form_errors:
+      password: Password
+      current_password: Kasalukuyang password
+      name: Pangalan
+      base: Base
+      title: Title
+      user_to_project_connection: User upang i-project connection
+      columns:
+        tag: Tag overlapping
+    new_project_modal:
+      new_project: Bagong proyekto
+    edit_project_modal:
+      edit_project: Edit proyekto
+    new_issue_modal:
+      new_issue: Bagong isyu
+    left_sidebar:
+      projects: Projects
+    right_sidebar:
+      news: News
+      all: Lahat
+      read_more: Magbasa nang higit pa
+    translations:
+      select_column_tags: Pumili column tags
+      select_section_tags: Pumili seksyon tags
+      select_issue_tags: Pumili isyu tags
+  users:
+    new:
+      invite_user: Imbitahan user
+    form:
+      name: Pangalan
+      enter_user_name: Ipasok user name
+      email: Email
+      enter_user_email: Ipasok ang email user
+      enter_user_password: Ipasok user password
+      password: Password
+      save: Save
+    index:
+      project: Project
+      new: New
+    edit:
+      name: Pangalan
+      enter_your_name: Ipasok ang iyong pangalan
+      save: Save
+    settings:
+      change_password: Baguhin ang password
+      interface_language: Interface wika
+      submit: Isumite
+    password_form:
+      new_password: New password
+      confirm_new_password: Kumpirmahin ang bagong password
+      old_password: Old password
+      change_password: Baguhin ang password
+    update:
+      your_profile_was_successfully_updated: Ang iyong profile ay matagumpay na na-update
+    dashboard:
+      hello: Kamusta
+      here_some_of_your_statistics: Narito ang ilan sa iyong mga istatistika
+      projects: Projects
+  projects:
+    index:
+      projects: Projects
+      new: New
+      sync_with_github: I-sync sa github
+      sync_with_bitbucket: I-sync sa bitbucket
+      stop_sync_with_bitbucket: Stop sync kasama bitbucket
+      stop_sync_with_github: Stop sync kasama github
+    form:
+      name: Pangalan
+      enter_project_name: Ipasok ang pangalan ng proyekto
+      save: Save
+      columns: Haligi
+      sections: Seksyon
+      add: Add
+      column_width: Haligi lapad
+      column_height: Column taas
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Github lihim token para hook
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket lihim token para hook
+    project:
+      edit: Edit
+      destroy: Burahin
+      project_issues: isyu Project
+      project_users: user Project
+    section_fields:
+      remove_section: Remove seksyon
+      section_tags: Section tags
+      section_order: Order
+      or_include_all: O isama ang lahat?
+    column_fields:
+      remove_column: Tanggalin column
+      max_issues_count: Max isyu bilangin sa hanay
+      column_tags: Column tags
+      column_order: Order
+    show:
+      next_page: Susunod na pahina
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Ipasok ang pamagat isyu
+      save: Save
+      body: Body
+      enter_issue_body: Ipasok isyu katawan
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket isyu id
+      github_issue_id: Github isyu id
+      github_issue_number: Github issue number
+    index:
+      issues: isyu
+      sync_with_github: I-sync sa github
+      sync_with_bitbucket: I-sync sa bitbucket
+      new: New
+    issue:
+      destroy: Burahin
+      edit: Edit
+    edit:
+      edit_issue: Edit isyu
+    new:
+      new_issue: Bagong isyu
+  authentications:
+    index:
+      enabled_services: Pinagana serbisyo
+    authentication:
+      turned_off: Naka-off
+      turn_on: I-on
+      turn_off: I-off
+      turned_on: Naka-on
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Lang namin ay may inilunsad ang aming
+        serbisyo!
+      we_have_just_launched_our_service_text: Ngayon kami ilunsad ang aming serbisyo
+        upang everybody Maaari
+      sign_up: mag-sign up
+      and_use_it: at gamitin ito.
+      with_love: Sa pag-ibig,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Lahat ng mga balita
+      read_more: Magbasa nang higit pa
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Maligayang pagdating sa Kanban Sa daang-bakal
+      welcome_about_text: Dito maaari kang lumikha ng iyong sariling Kanban board
+        at i-sync ito sa Github o Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Anong KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails ay ang serbisyo kung saan maaari kang lumikha
+        ng Kanban boards at i-sync ito sa Github o Bitbucket
+      what_features_has_kanban_on_rails: Ano ang mga katangian ay may KanbanOnRails?
+      kanban_on_rails_features: mo maaaring i-sync ang iyong mga proyekto at mga isyu
+        sa Github at Bitbucket, anyayahan ang mga gumagamit (halimbawa managers) para
+        sa iyong proyekto, lumawak ito sa iyong sariling server
+      i_have_some_requests: Mayroon akong ilang mga kahilingan
+      you_can_write_request: Maaari mong isulat ang kahilingan
+      here: dito
+      i_have_seen_some_typo_or_wrong_translation: ako ay may nakita ang ilang mga
+        typo o maling pagsasalin
+      you_can_send_pull_request_to_our: Maaari kang magpadala ng mga pull kahilingan
+        sa aming
+      github_repository: github repository
+      i_have_seen_some_error: ako ay may nakita ang ilang mga error
+      you_can_write_to_our_info_mail: Maaari mong isulat ang tungkol sa mga ito sa
+        aming email
+    about:
+      about_kanban_on_rails: Tungkol KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ay ang serbisyo kung saan maaari kang
+        lumikha ng Kanban boards at i-sync ito sa Github o Bitbucket
+      kanban_on_rails_features: tampok KanbanOnRails
+      sync_with_github_and_bitbucket: mo maaaring i-sync ang iyong mga proyekto at
+        mga isyu sa Github at Bitbucket
+      invite_users: Maaari mong anyayahan ang mga gumagamit (halimbawa managers) para
+        sa iyong proyekto
+      open_source_code: Ang proyektong ito ay open source code, kaya maaari mong lumawak
+        ito sa iyong sariling server
+      we_use_open_source_and_high_technology: Ginagamit namin ang mataas na teknolohiya
+        at open source mga aklatan. Lagi kaming subukan upang makakuha ng mas mahusay
+        at mapabuti ang aming mga serbisyo.
+      partners_and_investors: Kami ay binuksan para sa partnership at nais naming
+        upang mahanap mamumuhunan. Kung nais mong makipagtulungan sa amin mangyaring
+        kontakin kami sa partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Mag-sign in
+        sign_up: Mag-sign up
+        didnt_receive_confirmation_instructions: Hindi natanggap tagubilin confirmation?
+        sign_in_with: Mag-sign in sa
+        fast_login_almost_one_click: Mabilis login (Halos isang click)
+    confirmations:
+      confirmed: Ang iyong account ay matagumpay na nakumpirma na.
+      send_instructions: Makakatanggap ka ng isang email na may mga tagubilin tungkol
+        sa kung paano upang kumpirmahin ang iyong account sa loob ng ilang minuto.
+      send_paranoid_instructions: Kung ang iyong email address umiiral sa aming database,
+        makakatanggap ka ng isang email na may mga tagubilin tungkol sa kung paano
+        upang kumpirmahin ang iyong account sa loob ng ilang minuto.
+      new:
+        send_mail_for_confirm_your_email: Magpadala ng mail para kumpirmahin ang iyong
+          email
+        submit: Isumite
+    failure:
+      already_authenticated: Ikaw ay naka-sign in.
+      inactive: Ang iyong account ay hindi pa ginawang aktibo.
+      invalid: Hindi wastong email o password.
+      locked: Ang iyong account ay naka-lock.
+      last_attempt: Mayroon kang isa pang pagtatangka bago ang iyong account ay naka-lock.
+      not_found_in_database: Hindi wastong email o password.
+      timeout: Ang iyong session nag-expire. Mangyaring mag-sign in muli upang magpatuloy.
+      unauthenticated: Kailangan mong mag-sign in o mag-sign up bago magpatuloy.
+      unconfirmed: Ikaw ay magkakaroon upang kumpirmahin ang iyong account bago magpatuloy.
+    mailer:
+      confirmation_instructions:
+        subject: tagubilin Confirmation
+        welcome_to_kanban_on_rails: Maligayang pagdating sa KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Maaari mong kumpirmahin
+          ang iyong email sa pamamagitan ng link sa ibaba
+        confirm_my_account: Kumpirmahin ang aking Email
+      reset_password_instructions:
+        hello: Kamusta
+        subject: Reset tagubilin password
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Isang
+          tao ay mga kahilingan ng isang link upang baguhin ang iyong password. Maaari
+          mong gawin ito sa pamamagitan ng link sa ibaba.
+        change_my_password: Baguhin ang aking password
+        if_you_didnt_request_this_please_ignore_this_email: Kung hindi mo hiniling
+          ang mangyaring huwag pansinin ang email na ito.
+      unlock_instructions:
+        subject: Unlock Tagubilin
+    omniauth_callbacks:
+      failure: Hindi ma patotohanan ka mula sa% {uri} dahil "% {dahilan}".
+      success: Matagumpay napatotohanan mula sa% {uri} account.
+    passwords:
+      no_token: Hindi ka maaaring ma-access ang pahinang ito nang walang nagmumula
+        sa isang password reset email. Kapag kayo ay nanggaling mula sa isang password
+        reset email, mangyaring tiyakin na ginamit mo ang buong URL na ibinigay.
+      send_instructions: Makakatanggap ka ng isang email na may mga tagubilin kung
+        paano i-reset ang iyong password sa loob ng ilang minuto.
+      send_paranoid_instructions: Kung ang iyong email address umiiral sa aming database,
+        makakatanggap ka ng isang password link pagbawi sa iyong email address sa
+        loob ng ilang minuto.
+      updated: Ang iyong password ay binago matagumpay. Ikaw ngayon ay naka-sign in.
+      updated_not_active: Ang iyong password ay binago matagumpay.
+      new:
+        forgot_your_password: Ibalik muli ang iyong password
+        reset_password: Send mabawi url
+      edit:
+        change_your_password: Baguhin ang iyong password
+        new_password: New password
+        confirm_password: Kumpirmahin password
+        change_password: Baguhin
+    registrations:
+      destroyed: Bye! Ang iyong account ay matagumpay na kinansela. Umaasa kaming
+        makita ka sa lalong madaling panahon.
+      signed_up: Maligayang pagdating! Nag-sign up matagumpay.
+      signed_up_but_inactive: Nag-sign up matagumpay. Gayunpaman, hindi namin maaaring
+        mag-sign sa iyo sa dahil ang iyong account ay hindi pa ginawang aktibo.
+      signed_up_but_locked: Nag-sign up matagumpay. Gayunpaman, hindi namin maaaring
+        mag-sign sa iyo sa dahil ang iyong account ay naka-lock.
+      signed_up_but_unconfirmed: A message na may link ng pagkumpirma ay naipadala
+        na sa iyong e-mail address. Mangyaring buksan ang link upang i-activate ang
+        iyong account.
+      update_needs_confirmation: update mo ang iyong account ay matagumpay na, ngunit
+        kailangan naming i-verify ang iyong bagong email address. Mangyaring suriin
+        ang iyong email at i-click ang link kumpirmahin upang i-finalize kinukumpirma
+        ang iyong bagong email address.
+      updated: update mo ang iyong account ay matagumpay na.
+      new:
+        sign_up: Mag-sign up
+        name: Pangalan
+        password: Password
+        register: Mag-sign up
+    sessions:
+      signed_in: Naka-sign in matagumpay.
+      signed_out: Signed out matagumpay.
+      new:
+        sign_in: Mag-sign in
+        password: Password
+        remember_me: Tandaan ako
+        forgot_your_password: Nakalimutan ang Mag-
+    unlocks:
+      send_instructions: Makakatanggap ka ng isang email na may mga tagubilin tungkol
+        sa kung paano upang i-unlock ang iyong account sa loob ng ilang minuto.
+      send_paranoid_instructions: Kung umiiral ang iyong account, makakatanggap ka
+        ng isang email na may mga tagubilin tungkol sa kung paano i-unlock ito sa
+        loob ng ilang minuto.
+      unlocked: Ang iyong account ay matagumpay na-unlock. Mangyaring mag-sign in
+        upang magpatuloy.
+  tl: tl
+  tl_iso: tl

@@ -1,0 +1,302 @@
+---
+pa:
+  github: GitHub
+  bitbucket: Bitbucket
+  updated: ਅੱਪਡੇਟ ਕੀਤਾ
+  1_we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ ਹੈ
+  shared:
+    navbar:
+      sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
+      projects: ਪ੍ਰਾਜੈਕਟ
+      issues: ਮੁੱਦੇ
+      syncing_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ ...
+      syncing_with_bitbucket: Bitbucket ਨਾਲ ਸਮਕਾਲੀ ...
+      new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
+    languages_select_modal:
+      available_languages: ਉਪਲੱਬਧ ਭਾਸ਼ਾ
+    user_edit_menu:
+      profile: ਪ੍ਰੋਫ਼ਾਈਲ English
+      site_settings: ਸਾਈਟ ਸੈਟਿੰਗ
+      services: ਸਰਵਿਸਿਜ਼
+    form_errors:
+      password: ਪਾਸਵਰਡ
+      current_password: ਵਰਤਮਾਨ ਪਾਸਵਰਡ
+      password_confirmation: ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ
+      name: ਦਾ ਨਾਮ
+      base: ਬੇਸ
+      title: ਟਾਈਟਲ
+      user_to_project_connection: ਕੁਨੈਕਸ਼ਨ ਪੇਸ਼ ਕਰਨ ਲਈ ਯੂਜ਼ਰ
+      columns:
+        tag: ਟੈਗ ਓਵਰਲੈਪ
+    new_project_modal:
+      new_project: ਨਿਊ ਪ੍ਰਾਜੈਕਟ ਨੂੰ
+    new_issue_modal:
+      new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
+    left_sidebar:
+      projects: ਪ੍ਰਾਜੈਕਟ
+    right_sidebar:
+      news: ਨਿਊਜ਼
+      all: ਸਾਰੇ
+      read_more: ਹੋਰ ਪੜ੍ਹੋ
+    translations:
+      select_column_tags: ਚੁਣੋ
+      select_section_tags: ਚੁਣੋ
+      select_issue_tags: ਮੁੱਦੇ ਨੂੰ ਟੈਗ ਚੁਣੋ
+  users:
+    new:
+      invite_user: ਉਪਭੋਗੀ ਨੂੰ ਸੱਦਾ
+    form:
+      name: ਦਾ ਨਾਮ
+      enter_user_name: ਯੂਜ਼ਰ ਨੂੰ ਨਾਮ ਦਰਜ ਕਰੋ
+      email: ਈਮੇਲ
+      enter_user_email: ਯੂਜ਼ਰ ਨੂੰ ਈ-ਮੇਲ ਦਿਓ
+      enter_user_password: ਯੂਜ਼ਰ ਨੂੰ ਪਾਸਵਰਡ ਦਿਓ
+      password: ਪਾਸਵਰਡ
+      role: ਉਪਭੋਗੀ ਰੋਲ
+      save: ਸੰਭਾਲੋ
+    index:
+      project: ਪ੍ਰੋਜੈਕਟ
+      users: ਉਪਭੋਗੀ
+      new: ਨਿਊ
+    edit:
+      name: ਦਾ ਨਾਮ
+      enter_your_name: ਆਪਣੇ ਨਾਮ ਦਰਜ ਕਰੋ
+      save: ਸੰਭਾਲੋ
+    settings:
+      interface_language: ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ
+      submit: ਪੇਸ਼
+    password_form:
+      new_password: ਨਿਊ ਪਾਸਵਰਡ
+      confirm_new_password: ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ
+      old_password: ਪੁਰਾਣਾ ਪਾਸਵਰਡ
+    update:
+      your_profile_was_successfully_updated: ਸਫਲਤਾਪੂਰਕ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਹੈ
+    dashboard:
+      hello: ਹੈਲੋ
+      here_some_of_your_statistics: ਇੱਥੇ ਆਪਣੇ ਅੰਕੜੇ ਦੇ ਕੁਝ
+      projects: ਪ੍ਰਾਜੈਕਟ
+  projects:
+    index:
+      projects: ਪ੍ਰਾਜੈਕਟ
+      new: ਨਿਊ
+      sync_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ
+      sync_with_bitbucket: bitbucket ਨਾਲ ਸਮਕਾਲੀ
+    form:
+      name: ਦਾ ਨਾਮ
+      enter_project_name: ਪ੍ਰਾਜੈਕਟ ਨੂੰ ਨਾਮ ਦਰਜ ਕਰੋ
+      save: ਸੰਭਾਲੋ
+      columns: ਕਾਲਮ
+      sections: ਧਾਰਾ
+      column_name: ਕਤਾਰ ਨਾਮ
+      section_name: ਹਿੱਸਾ ਨਾਮ
+      add: ਸ਼ਾਮਲ ਕਰੋ
+      column_width: ਕਾਲਮ ਚੌੜਾਈ
+      column_height: ਕਾਲਮ ਉਚਾਈ
+      github_repository_id: GitHub ਰਿਪੋਜ਼ਟਰੀ ID
+      github_full_name: GitHub ਰਿਪੋਜ਼ਟਰੀ FULLNAME ਨੇ
+      github_secret_token_for_hook: ਹੁੱਕ ਲਈ GitHub ਗੁਪਤ ਟੋਕਨ
+      bitbucket_full_name: Bitbucket FULLNAME ਨੇ
+      bitbucket_secret_token_for_hook: ਹੁੱਕ ਲਈ Bitbucket ਗੁਪਤ ਟੋਕਨ
+    project:
+      edit: ਸੋਧ
+      destroy: ਹਟਾਓ
+      project_issues: ਪ੍ਰੋਜੈਕਟ ਮੁੱਦੇ
+      project_users: ਪ੍ਰੋਜੈਕਟ ਉਪਭੋਗੀ
+    section_fields:
+      section_name: ਹਿੱਸਾ ਨਾਮ
+      remove_section: ਹਟਾਓ ਭਾਗ
+      section_tags: ਹਿੱਸਾ ਟੈਗ
+      section_order: ਆਰਡਰ
+      or_include_all: ਜ ਸਾਰੇ ਸ਼ਾਮਲ ਹਨ?
+    column_fields:
+      column_name: ਕਾਲਮ ਨਾਮ
+      remove_column: ਕਾਲਮ ਹਟਾਓ
+      max_issues_count: ਮੈਕਸ ਮੁੱਦੇ ਕਾਲਮ ਵਿੱਚ ਗਿਣਤੀ
+      column_tags: ਕਾਲਮ ਟੈਗ
+      column_order: ਆਰਡਰ
+    show:
+      next_page: ਅੱਗੇ ਸਫ਼ਾ
+  issues:
+    form:
+      title: ਟਾਈਟਲ
+      enter_issue_title: ਮੁੱਦੇ 'ਦਾ ਸਿਰਲੇਖ ਦਿਓ
+      save: ਸੰਭਾਲੋ
+      body: ਸਰੀਰ
+      enter_issue_body: ਮੁੱਦੇ ਨੂੰ ਸਰੀਰ ਨੂੰ ਦਿਓ
+      tags: ਟੈਗਸ
+      issue_order: ਆਰਡਰ
+      bitbucket_issue_id: Bitbucket ਮੁੱਦੇ 'ID
+      github_issue_id: GitHub ਮੁੱਦੇ 'ID
+      github_issue_number: GitHub ਮੁੱਦੇ ਨੂੰ ਨੰਬਰ '
+    index:
+      issues: ਮੁੱਦੇ
+      sync_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ
+      sync_with_bitbucket: bitbucket ਨਾਲ ਸਮਕਾਲੀ
+      new: ਨਿਊ
+    issue:
+      destroy: ਹਟਾਓ
+      edit: ਸੋਧ
+    new:
+      new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
+  authentications:
+    index:
+      enabled_services: ਯੋਗ ਸੇਵਾ
+    authentication:
+      turned_off: ਬੰਦ ਕੀਤਾ ਗਿਆ
+      turn_on: ਚਾਲੂ ਕਰੋ
+      turn_off: ਬੰਦ ਕਰੋ
+      turned_on: "'ਤੇ ਬਦਲ"
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ
+        ਹੈ!
+      we_have_just_launched_our_service_text: ਅੱਜ ਸਾਨੂੰ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ, ਇਸ ਲਈ ਹਰ
+        ਕੋਈ ਕਰ ਸਕਦਾ ਹੈ
+      sign_up: ਸਾਈਨ ਅੱਪ
+      and_use_it: ਅਤੇ ਇਸ ਨੂੰ ਇਸਤੇਮਾਲ ਕਰੋ.
+      with_love: ਨੂੰ ਪਿਆਰ ਦੇ ਨਾਲ,
+      technoelegance_team: Technoelegance ਟੀਮ
+    index:
+      read_more: ਹੋਰ ਪੜ੍ਹੋ
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Kanban 'ਤੇ ਰੇਲਜ਼ ਸੁਆਗਤ ਹੈ
+      welcome_about_text: ਤੁਹਾਨੂੰ GitHub ਜ Bitbucket ਨਾਲ ਤੁਹਾਡੇ ਆਪਣੇ Kanban ਬੋਰਡ ਅਤੇ
+        ਸਿੰਕ ਇਸ ਨੂੰ ਬਣਾ ਸਕਦਾ ਹੈ
+  pages:
+    faq:
+      faq: ਸਵਾਲ
+      what_is_kanban_on_rails: KanbanOnRails ਕੀ ਹੈ?
+      about_kanban_on_rails: KanbanOnRails ਸੇਵਾ ਜਿੱਥੇ ਤੁਹਾਨੂੰ GitHub ਜ Bitbucket ਨਾਲ
+        Kanban ਬੋਰਡ ਬਣਾਉਣ ਅਤੇ ਇਸ ਨੂੰ ਸਿੰਕ ਕਰ ਸਕਦਾ ਹੈ,
+      what_features_has_kanban_on_rails: ਕੀ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ KanbanOnRails ਹੈ?
+      kanban_on_rails_features: ਆਪਣੇ ਪ੍ਰਾਜੈਕਟ ਅਤੇ GitHub ਅਤੇ Bitbucket ਨਾਲ ਮੁੱਦੇ ਸਿੰਕ
+        ਕਰ ਸਕਦਾ ਹੈ, ਤੁਹਾਡੇ ਪ੍ਰਾਜੈਕਟ ਲਈ ਉਪਭੋਗੀ (ਉਦਾਹਰਨ ਮੈਨੇਜਰ ਲਈ) ਦਾ ਸੱਦਾ, ਆਪਣੇ ਹੀ
+        ਸਰਵਰ ਕਰਨ ਲਈ ਇਸ ਨੂੰ ਸ਼ਾਮਿਲ
+      i_have_some_requests: ਮੈਨੂੰ ਕੁਝ ਬੇਨਤੀ ਹੈ
+      you_can_write_request: ਤੁਹਾਨੂੰ ਬੇਨਤੀ ਨੂੰ ਲਿਖ ਸਕਦੇ ਹੋ
+      here: ਇੱਥੇ
+      i_have_seen_some_typo_or_wrong_translation: ਮੈਨੂੰ ਕੁਝ ਗਲਤੀ ਜ ਗਲਤ ਹੈ ਅਨੁਵਾਦ ਦੇਖਿਆ
+        ਹੈ
+      you_can_send_pull_request_to_our: ਤੁਹਾਨੂੰ ਲਟਕਣ ਦੀ ਬੇਨਤੀ ਨੂੰ ਭੇਜ ਸਕਦਾ ਹੈ, ਸਾਡੇ
+      github_repository: GitHub ਰਿਪੋਜ਼ਟਰੀ
+      i_have_seen_some_error: ਮੈਨੂੰ ਕੁਝ ਗਲਤੀ ਦੇਖਿਆ ਹੈ
+      you_can_write_to_our_info_mail: ਤੁਹਾਨੂੰ ਸਾਡੇ ਈ ਨੂੰ ਇਸ ਬਾਰੇ ਲਿਖ ਸਕਦੇ
+    about:
+      about_kanban_on_rails: KanbanOnRails ਬਾਰੇ
+      about_kanban_on_rails_text: KanbanOnRails ਸੇਵਾ ਜਿੱਥੇ ਤੁਹਾਨੂੰ GitHub ਜ Bitbucket
+        ਨਾਲ Kanban ਬੋਰਡ ਬਣਾਉਣ ਅਤੇ ਇਸ ਨੂੰ ਸਿੰਕ ਕਰ ਸਕਦਾ ਹੈ,
+      kanban_on_rails_features: KanbanOnRails ਫੀਚਰ
+      sync_with_github_and_bitbucket: ਆਪਣੇ ਪ੍ਰਾਜੈਕਟ ਅਤੇ GitHub ਅਤੇ Bitbucket ਨਾਲ ਮੁੱਦੇ
+        ਸਿੰਕ ਕਰ ਸਕਦਾ ਹੈ
+      invite_users: ਨੂੰ ਸੱਦਾ ਦੇ ਸਕਦੇ
+      open_source_code: ਓਪਨ ਸਰੋਤ ਕੋਡ ਹੈ, ਇਸ ਲਈ ਤੁਹਾਨੂੰ ਆਪਣੇ ਹੀ ਸਰਵਰ ਕਰਨ ਲਈ ਇਸ ਨੂੰ
+        ਸ਼ਾਮਿਲ ਕਰ ਸਕਦੇ ਹੋ
+      we_use_open_source_and_high_technology: ਸਾਨੂੰ ਉੱਚ ਤਕਨਾਲੋਜੀ ਅਤੇ ਓਪਨ ਸਰੋਤ ਲਾਇਬਰੇਰੀ
+        ਵਰਤਦੇ ਹਨ. ਸਾਨੂੰ ਹਮੇਸ਼ਾ ਬਿਹਤਰ ਵਿੱਚ ਪ੍ਰਾਪਤ ਕਰੋ ਅਤੇ ਸਾਡੀ ਸੇਵਾ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ
+        ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ.
+      partners_and_investors: ਸਾਨੂੰ ਭਾਈਵਾਲੀ ਲਈ ਖੋਲ੍ਹਿਆ ਰਹੇ ਹਨ ਅਤੇ ਸਾਨੂੰ ਨਿਵੇਸ਼ਕ ਦਾ
+        ਪਤਾ ਕਰਨ ਲਈ ਚਾਹੁੰਦੇ ਹੋ. ਤੁਹਾਨੂੰ ਸਾਡੇ ਨਾਲ ਸਹਿਯੋਗ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ partnership@technoelegance.com
+        'ਤੇ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ
+  devise:
+    shared:
+      links:
+        sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
+        didnt_receive_confirmation_instructions: ਪੁਸ਼ਟੀ ਨਿਰਦੇਸ਼ recieved ਨਾ ਸੀ?
+        fast_login_almost_one_click: ਫਾਸਟ ਲਾਗਇਨ (ਲਗਭਗ ਇੱਕ ਹੀ ਕਲਿੱਕ ਵਿੱਚ)
+    confirmations:
+      confirmed: ਸਫਲਤਾਪੂਰਕ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ ਸੀ.
+      send_instructions: ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਰਨਾ ਹੈ,
+        ਬਾਰੇ ਨਿਰਦੇਸ਼ ਦੇ ਨਾਲ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      send_paranoid_instructions: ਤੁਹਾਡਾ ਈਮੇਲ ਪਤਾ ਸਾਡੇ ਡੇਟਾਬੇਸ ਵਿੱਚ ਮੌਜੂਦ ਹੈ, ਜੇ,
+        ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਰਨਾ ਹੈ, ਬਾਰੇ ਨਿਰਦੇਸ਼ ਦੇ ਨਾਲ
+        ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      new:
+        send_mail_for_confirm_your_email: ਪੁਸ਼ਟੀ ਆਪਣੇ ਈ-ਮੇਲ ਲਈ ਮੇਲ ਭੇਜੋ
+        submit: ਪੇਸ਼
+    failure:
+      already_authenticated: ਹੀ ਸਾਈਨ ਕਰ ਰਹੇ ਹਨ.
+      inactive: ਅਜੇ ਤੱਕ ਸਰਗਰਮ ਹੈ, ਨਾ ਹੈ.
+      invalid: ਗਲਤ ਈਮੇਲ ਜ ਪਾਸਵਰਡ.
+      locked: ਤਾਲਾਬੰਦ ਹੈ.
+      last_attempt: ਤੁਹਾਨੂੰ ਇੱਕ ਹੋਰ ਦੀ ਕੋਸ਼ਿਸ਼ ਹੈ.
+      not_found_in_database: ਗਲਤ ਈਮੇਲ ਜ ਪਾਸਵਰਡ.
+      timeout: ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ. ਜਾਰੀ ਰੱਖਣ ਲਈ ਦੁਬਾਰਾ ਸਾਈਨ ਕਰੋ.
+      unauthenticated: ਸਾਈਨ ਜ ਜਾਰੀ ਅੱਗੇ ਸਾਈਨ ਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੈ.
+      unconfirmed: ਜਾਰੀ ਅੱਗੇ ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਹੈ.
+    mailer:
+      confirmation_instructions:
+        subject: ਪੁਸ਼ਟੀ ਨਿਰਦੇਸ਼
+        welcome_to_kanban_on_rails: KanbanOnRails ਸੁਆਗਤ ਹੈ
+        you_can_confirm_your_account_email_through_the_link_below: ਤੁਹਾਨੂੰ ਹੇਠ ਲਿੰਕ
+          ਦੁਆਰਾ ਆਪਣੇ ਈ-ਮੇਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰ ਸਕਦੇ ਹੋ
+        confirm_my_account: ਮੇਰੇ ਈਮੇਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ
+      reset_password_instructions:
+        hello: ਹੈਲੋ
+        subject: ਰੀਸੈਟ ਪਾਸਵਰਡ ਨਿਰਦੇਸ਼
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: ਕਿਸੇ
+          ਮੰਗ ਨੂੰ ਆਪਣੇ ਗੁਪਤ-ਕੋਡ ਤਬਦੀਲ ਕਰਨ ਲਈ ਕਿਸੇ ਲਿੰਕ ਹੈ. ਤੁਹਾਨੂੰ ਹੇਠ ਲਿੰਕ ਦੁਆਰਾ
+          ਇਸ ਨੂੰ ਕੀ ਕਰ ਸਕਦਾ ਹੈ.
+        change_my_password: ਮੇਰੇ ਪਾਸਵਰਡ ਬਦਲੋ
+        if_you_didnt_request_this_please_ignore_this_email: ਤੁਹਾਨੂੰ ਬੇਨਤੀ ਕਰ, ਨਾ ਸੀ,
+          ਜੇ ਇਸ ਨੂੰ ਇਸ ਈਮੇਲ ਨੂੰ ਨਜ਼ਰਅੰਦਾਜ਼ ਕਰੋ.
+      unlock_instructions:
+        subject: ਤਾਲਾ ਨਿਰਦੇਸ਼
+    omniauth_callbacks:
+      failure: '% {ਕਿਸਮ} ਹੈ, ਕਿਉਕਿ "% {ਕਾਰਨ ਹੈ}" ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣਿਤ ਨਾ ਕੀਤਾ ਜਾ ਸਕਿਆ
+        ਹੈ.'
+      success: ਸਫਲਤਾਪੂਰਕ% {ਕਿਸਮ} ਖਾਤੇ ਤੱਕ ਪ੍ਰਮਾਣਿਤ.
+    passwords:
+      no_token: ਇੱਕ ਪਾਸਵਰਡ ਰੀਸੈਟ ਈਮੇਲ ਤੱਕ ਆਉਣ ਦੇ ਬਗੈਰ ਇਸ ਸਫ਼ੇ ਤੱਕ ਪਹੁੰਚ ਨਾ ਕਰ ਸਕਦਾ
+        ਹੈ. ਤੁਹਾਨੂੰ ਇੱਕ ਪਾਸਵਰਡ ਰੀਸੈਟ ਈ-ਮੇਲ ਆਏ ਹੋ, ਜੇ, ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਨੂੰ ਮੁਹੱਈਆ
+        ਪੂਰੀ URL ਨੂੰ ਵਰਤਿਆ ਕਰ, ਕਿਰਪਾ ਕਰਕੇ.
+      send_instructions: ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਆਪਣਾ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰਨ ਲਈ 'ਤੇ ਨਿਰਦੇਸ਼
+        ਦੇ ਨਾਲ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      send_paranoid_instructions: ਤੁਹਾਡਾ ਈਮੇਲ ਪਤਾ ਸਾਡੇ ਡੇਟਾਬੇਸ ਵਿੱਚ ਮੌਜੂਦ ਹੈ, ਜੇ,
+        ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਆਪਣੇ ਈ-ਮੇਲ ਪਤੇ 'ਤੇ ਇੱਕ ਪਾਸਵਰਡ ਰਿਕਵਰੀ ਲਿੰਕ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      updated: ਸਫਲਤਾਪੂਰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ ਸੀ. ਤੁਹਾਨੂੰ ਹੁਣ ਸਾਈਨ ਕਰ ਰਹੇ ਹਨ.
+      updated_not_active: ਸਫਲਤਾਪੂਰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ ਸੀ.
+      new:
+        forgot_your_password: ਆਪਣਾ ਪਾਸਵਰਡ ਮੁੜ
+        reset_password: ਭੇਜੋ URL ਨੂੰ ਮੁੜ ਪ੍ਰਾਪਤ
+      edit:
+        change_your_password: ਆਪਣਾ ਪਾਸਵਰਡ ਬਦਲੋ
+        new_password: ਨਿਊ ਪਾਸਵਰਡ
+        confirm_password: ਪੁਸ਼ਟੀ ਪਾਸਵਰਡ
+        change_password: ਬਦਲੋ
+    registrations:
+      destroyed: "! ਤੁਹਾਡਾ ਖਾਤਾ ਸਫਲਤਾਪੂਰਕ ਰੱਦ ਕਰ ਦਿੱਤਾ ਗਿਆ. ਅਸ ਤੁਹਾਨੂੰ ਮੁੜ ਕੇ ਛੇਤੀ
+        ਹੀ ਵੇਖਣ ਦੀ ਆਸ ਹੈ."
+      signed_up: ਸੁਆਗਤ ਹੈ! ਤੁਹਾਨੂੰ ਸਫਲਤਾ ਨਾਲ ਸਾਈਨ ਅਪ ਕੀਤਾ ਹੈ.
+      signed_up_but_inactive: ਸਫਲਤਾਪੂਰਕ ਸਾਈਨ ਅਪ ਕੀਤਾ ਹੈ. ਪਰ, ਸਾਨੂੰ, ਕਿਉਕਿ ਆਪਣੇ ਖਾਤੇ
+        ਨੂੰ ਅਜੇ ਸਰਗਰਮ ਨਹੀ ਹੈ ਤੁਹਾਡੇ ਵਿੱਚ ਤੇ ਦਸਤਖਤ ਨਾ ਕਰ ਸਕੇ.
+      signed_up_but_locked: ਸਫਲਤਾਪੂਰਕ ਸਾਈਨ ਅਪ ਕੀਤਾ ਹੈ. ਪਰ, ਸਾਨੂੰ, ਕਿਉਕਿ ਆਪਣੇ ਖਾਤੇ
+        ਨੂੰ ਤਾਲਾਬੰਦ ਹੈ ਤੁਹਾਡੇ ਵਿੱਚ ਤੇ ਦਸਤਖਤ ਨਾ ਕਰ ਸਕੇ.
+      signed_up_but_unconfirmed: ਆਪਣੇ ਈ-ਮੇਲ ਪਤੇ ਨੂੰ ਭੇਜਿਆ ਗਿਆ ਹੈ. ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ
+        ਖਾਤੇ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ ਲਿੰਕ ਨੂੰ ਖੋਲ੍ਹਣ.
+      update_needs_confirmation: ਤੁਹਾਨੂੰ ਆਪਣੇ ਖਾਤੇ ਦੀ ਸਫਲਤਾ ਨਾਲ ਅੱਪਡੇਟ ਕੀਤਾ ਹੈ, ਪਰ
+        ਸਾਨੂੰ ਆਪਣੇ ਨਵ ਈਮੇਲ ਪਤਾ ਤਸਦੀਕ ਕਰਨ ਦੀ ਲੋੜ ਹੈ. ਆਪਣੇ ਈ-ਮੇਲ ਚੈੱਕ ਕਰੋ ਅਤੇ ਆਪਣੇ ਨਵ
+        ਈਮੇਲ ਪਤਾ ਪੁਸ਼ਟੀ ਮੁਕੰਮਲ ਕਰਨ ਲਈ ਪੁਸ਼ਟੀ ਲਿੰਕ 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਜੀ.
+      updated: ਤੁਹਾਨੂੰ ਆਪਣੇ ਖਾਤੇ ਦੀ ਸਫਲਤਾਪੂਰਕ ਅੱਪਡੇਟ ਕੀਤਾ.
+      new:
+        sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
+        name: ਦਾ ਨਾਮ
+        password: ਪਾਸਵਰਡ
+        password_confirmation: ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ
+        register: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
+    sessions:
+      signed_in: ਸਫਲਤਾਪੂਰਕ ਵਿਚ ਦਸਤਖਤ.
+      signed_out: ਸਫਲਤਾਪੂਰਕ ਬਾਹਰ ਦਸਤਖਤ.
+      new:
+        sign_in: ਦਾਖ਼ਲਾ
+        password: ਪਾਸਵਰਡ
+        remember_me: ਮੈਨੂੰ ਯਾਦ
+        forgot_your_password: ਆਪਣਾ ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ ਹੋ?
+    unlocks:
+      send_instructions: ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਆਪਣੇ ਖਾਤੇ ਦਾ ਤਾਲਾ ਕਰਨ ਬਾਰੇ ਨਿਰਦੇਸ਼ ਦੇ
+        ਨਾਲ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      send_paranoid_instructions: ਆਪਣੇ ਖਾਤੇ ਮੌਜੂਦ ਹੈ, ਜੇ, ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟ ਵਿਚ ਇਸ
+        ਨੂੰ ਤਾਲਾ ਕਰਨ ਬਾਰੇ ਨਿਰਦੇਸ਼ ਦੇ ਨਾਲ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੇਗਾ.
+      unlocked: ਸਫਲਤਾਪੂਰਕ ਲਾਕ ਕੀਤਾ ਗਿਆ ਹੈ. ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਈਨ ਕਰੋ.
+  pa: pa
+  pa_iso: pa

@@ -1,0 +1,2 @@
+$('#authentication_<%= @authentication.provider %>').replaceWith('<%= j render 'authentication', 
+  :include_provider => false, :provider => @authentication.provider %>')

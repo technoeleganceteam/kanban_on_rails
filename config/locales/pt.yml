@@ -1,0 +1,302 @@
+---
+pt:
+  github: Github
+  bitbucket: Bitbucket
+  updated: atualizada
+  1_we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço
+  shared:
+    navbar:
+      sign_in: Entrar
+      sign_up: Registar
+      projects: Projetos
+      issues: Issues
+      syncing_with_github: Sync com o Github ...
+      syncing_with_bitbucket: sincronização com Bitbucket ...
+      new_issue: Nova edição
+      edit_project: Editar projeto
+    languages_select_modal:
+      available_languages: Línguas disponíveis
+    user_edit_menu:
+      profile: Perfil
+      site_settings: Configurações do site
+      services: Serviços
+    form_errors:
+      password: senha
+      current_password: senha atual
+      name: Nome
+      base: Base de Dados
+      title: Título
+      user_to_project_connection: do usuário para projetar conexão
+      columns:
+        tag: Tag sobreposição
+    new_project_modal:
+      new_project: Novo projeto
+    edit_project_modal:
+      edit_project: Editar projeto
+    new_issue_modal:
+      new_issue: Nova edição
+    left_sidebar:
+      projects: Projetos
+    right_sidebar:
+      news: Notícias
+      all: Todos
+      read_more: Leia mais
+    translations:
+      select_column_tags: Selecionar tags coluna
+      select_section_tags: Seleccione marcas de seção
+      select_issue_tags: Selecionar tags emissão
+  users:
+    new:
+      invite_user: Convidar usuário
+    form:
+      name: Nome
+      enter_user_name: Insira o nome de usuário
+      email: E-mail
+      enter_user_email: Digite e-mail do usuário
+      enter_user_password: Digite a senha do usuário
+      password: senha
+      save: Guardar
+    index:
+      project: Projeto
+      users: usuários
+      new: Nova
+    edit:
+      name: Nome
+      enter_your_name: Digite seu nome
+      save: Guardar
+    settings:
+      change_password: Alterar senha
+      interface_language: idioma da interface
+      submit: Enviar
+    password_form:
+      new_password: New password
+      confirm_new_password: Confirmar nova senha
+      old_password: senha antiga
+      change_password: Alterar senha
+    update:
+      your_profile_was_successfully_updated: Seu perfil foi atualizado com sucesso
+    dashboard:
+      hello: Olá
+      here_some_of_your_statistics: Aqui algumas de suas estatísticas
+      projects: Projetos
+  projects:
+    index:
+      projects: Projetos
+      new: Nova
+      sync_with_github: sincronização com github
+      sync_with_bitbucket: sincronização com bitbucket
+      stop_sync_with_bitbucket: Parar a sincronização com bitbucket
+      stop_sync_with_github: Parar a sincronização com github
+    form:
+      name: Nome
+      enter_project_name: Digite o nome do projeto
+      save: Guardar
+      columns: Colunas
+      sections: Secções
+      add: Add
+      github_repository_id: Github id repositório
+      github_full_name: Github fullname repositório
+      github_secret_token_for_hook: Github símbolo segredo por gancho
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket símbolo segredo por gancho
+    project:
+      edit: Editar
+      destroy: Excluir
+      project_issues: problemas do projeto
+      project_users: Os usuários do projeto
+    section_fields:
+      section_tags: marcas de seção
+      section_order: Order
+      or_include_all: ou incluir todos?
+    column_fields:
+      remove_column: Remover coluna
+      max_issues_count: questões Max contar na coluna
+      column_tags: etiquetas Coluna
+      column_order: Order
+    show:
+      next_page: Página seguinte
+  issues:
+    form:
+      title: Título
+      enter_issue_title: Enter título do problema
+      save: Guardar
+      body: corpo
+      enter_issue_body: entrar no corpo problema
+      tags: Etiquetas
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket problema id
+      github_issue_id: Github problema id
+      github_issue_number: número de emissão Github
+    index:
+      issues: questões
+      sync_with_github: sincronização com github
+      sync_with_bitbucket: sincronização com bitbucket
+      new: Nova
+    issue:
+      destroy: Excluir
+      edit: Editar
+    edit:
+      edit_issue: Editar assunto
+    new:
+      new_issue: Nova edição
+  authentications:
+    index:
+      enabled_services: serviços habilitados
+    authentication:
+      turned_off: Desligada
+      turn_on: Ligue
+      turn_off: Desligue
+      turned_on: Ligado
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço!
+      we_have_just_launched_our_service_text: Hoje lançamos o nosso serviço para que
+        todos possam
+      sign_up: se inscrever
+      and_use_it: e usá-lo.
+      with_love: Com amor,
+      technoelegance_team: Equipe Technoelegance
+    index:
+      all_news: Todas as notícias
+      read_more: Leia mais
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Bem-vindo ao Kanban On Rails
+      welcome_about_text: Aqui você pode criar sua própria placa Kanban e sincronizá-lo
+        com o Github ou Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: O que é KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails é o serviço onde você pode criar quadros
+        Kanban e sincronizá-lo com o Github ou Bitbucket
+      what_features_has_kanban_on_rails: O que caracteriza tem KanbanOnRails?
+      kanban_on_rails_features: Você pode sincronizar seus projetos e problemas com
+        Github e Bitbucket, convidar usuários (por exemplo gerente) para o seu projeto,
+        implantá-lo em seu próprio servidor
+      i_have_some_requests: Eu tenho alguns pedidos
+      you_can_write_request: Você pode escrever pedido
+      here: aqui
+      i_have_seen_some_typo_or_wrong_translation: Tenho visto alguns erros de digitação
+        ou traduções erradas
+      you_can_send_pull_request_to_our: Você pode enviar solicitação de recebimento
+        para a nossa
+      i_have_seen_some_error: Eu vi alguns erros
+      you_can_write_to_our_info_mail: Você pode escrever sobre isso para nosso e-mail
+    about:
+      about_kanban_on_rails: Sobre KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails é o serviço onde você pode criar quadros
+        Kanban e sincronizá-lo com o Github ou Bitbucket
+      kanban_on_rails_features: características KanbanOnRails
+      sync_with_github_and_bitbucket: Você pode sincronizar seus projetos e problemas
+        com Github e Bitbucket
+      invite_users: Você pode convidar usuários (por exemplo gerente) para o seu projeto
+      open_source_code: Este projeto tem o código-fonte aberto, para que possa implantá-lo
+        em seu próprio servidor
+      we_use_open_source_and_high_technology: Nós usamos tecnologias de ponta e bibliotecas
+        de código aberto. Nós sempre tentar obter melhor e melhorar o nosso serviço.
+      partners_and_investors: Estamos abertos para parcerias e gostaríamos de encontrar
+        investidores. Se você gostaria de cooperar com a gente, por favor contacte-nos
+        em partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Entrar
+        sign_up: Registar
+        didnt_receive_confirmation_instructions: Não recebeu instruções de confirmação?
+        sign_in_with: Entrar com
+        fast_login_almost_one_click: rápida login (Quase um clique)
+    confirmations:
+      confirmed: A sua conta foi confirmada com sucesso.
+      send_instructions: Você receberá um e-mail com instruções sobre como confirmar
+        a sua conta em poucos minutos.
+      send_paranoid_instructions: Se o seu endereço de e-mail existe no nosso banco
+        de dados, você receberá um e-mail com instruções sobre como confirmar a sua
+        conta em poucos minutos.
+      new:
+        send_mail_for_confirm_your_email: Enviar e-mail para confirmar seu e-mail
+        submit: Enviar
+    failure:
+      already_authenticated: Você já está conectado.
+      inactive: sua conta ainda não está ativada.
+      invalid: e-mail ou senha inválida.
+      locked: Sua conta está bloqueada.
+      last_attempt: Você tem mais uma tentativa antes de sua conta será bloqueada.
+      not_found_in_database: e-mail ou senha inválida.
+      timeout: sua sessão expirou. Por favor, faça login novamente para continuar.
+      unauthenticated: Você precisa fazer login ou registe-se antes de continuar.
+      unconfirmed: Você tem que confirmar a sua conta antes de continuar.
+    mailer:
+      confirmation_instructions:
+        subject: instruções de confirmação
+        welcome_to_kanban_on_rails: Bem-vindo ao KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Você pode confirmar
+          seu e-mail através do link abaixo
+        confirm_my_account: confirmar o meu e-mail
+      reset_password_instructions:
+        hello: Olá
+        subject: instruções de redefinição de senha
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Alguém
+          tem pedidos de um link para alterar sua senha. Você pode fazer isso através
+          do link abaixo.
+        change_my_password: Alterar minha senha
+        if_you_didnt_request_this_please_ignore_this_email: Se você não solicitou
+          esta ignore este e-mail.
+      unlock_instructions:
+        subject: Instruções de desbloqueio
+    omniauth_callbacks:
+      failure: Não foi possível autenticar-lo de% {tipo} porque "% {razão}".
+      success: com êxito autenticado de% conta {tipo}.
+    passwords:
+      no_token: Você não pode acessar essa página sem chegar a partir de um e-mail
+        de redefinição de senha. Se você vem de um e-mail de redefinição de senha,
+        por favor, certifique-se de que você usou o URL completo fornecido.
+      send_instructions: Você receberá um e-mail com instruções sobre como redefinir
+        sua senha em poucos minutos.
+      send_paranoid_instructions: Se o seu endereço de e-mail existe no nosso banco
+        de dados, você receberá um link de recuperação de senha no seu endereço de
+        e-mail em poucos minutos.
+      updated: Sua senha foi alterada com sucesso. Agora você está conectado.
+      updated_not_active: Sua senha foi alterada com sucesso.
+      new:
+        forgot_your_password: recuperar sua senha
+        reset_password: Enviar recuperar url
+      edit:
+        change_your_password: Mude sua senha
+        new_password: New password
+        change_password: Mudança
+    registrations:
+      destroyed: Bye! A sua conta foi cancelada com sucesso. Esperamos te ver novamente
+        em breve.
+      signed_up: Bem-vindo! Você se inscreveu com êxito.
+      signed_up_but_inactive: Você se inscreveu com êxito. No entanto, não foi possível
+        assinar você porque a sua conta ainda não está ativada.
+      signed_up_but_locked: Você se inscreveu com êxito. No entanto, não foi possível
+        assinar você porque sua conta está bloqueada.
+      signed_up_but_unconfirmed: Uma mensagem com um link de confirmação foi enviado
+        para seu endereço de e-mail. Por favor, abra o link para ativar sua conta.
+      update_needs_confirmation: Você atualizou sua conta com êxito, mas precisamos
+        confirmar seu novo endereço de e-mail. Por favor, verifique seu e-mail e clique
+        no link de confirmação para finalizar confirmar o seu novo endereço de e-mail.
+      updated: Você atualizou sua conta com êxito.
+      new:
+        sign_up: Registar
+        name: Nome
+        password: senha
+        register: Registar
+    sessions:
+      signed_in: Assinado em sucesso.
+      signed_out: Assinado com sucesso.
+      new:
+        sign_in: Entrar
+        password: senha
+        remember_me: Lembrar-me
+        forgot_your_password: Esqueceu sua senha?
+    unlocks:
+      send_instructions: Você receberá um e-mail com instruções sobre como desbloquear
+        a sua conta em poucos minutos.
+      send_paranoid_instructions: Se existe a sua conta, você receberá um e-mail com
+        instruções sobre como desbloqueá-lo em poucos minutos.
+      unlocked: Sua conta foi desbloqueado com sucesso. Faça login para continuar.
+  pt: pt
+  pt_iso: pt

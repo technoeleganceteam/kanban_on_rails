@@ -1,0 +1,8 @@
+- if user_signed_in?
+  .list-group.hidden-xs
+    .list-group-item.list-group-item-info 
+      = t '.projects'
+    - current_user.projects.order('created_at DESC').limit(5).each do |project|
+      = link_to project_url(project), :class => 'list-group-item' do
+        = project.name 
+        span.badge = project.issues.size

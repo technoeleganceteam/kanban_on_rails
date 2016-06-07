@@ -1,0 +1,11 @@
+- if include_provider
+  .col-md-10.btn-group.form-group id="authentication_#{ authentication.provider }"
+    = link_to (t '.turn_off'), user_authentication_url(@user, authentication), :method => :delete,
+      :class => 'btn btn-default'
+
+    button type="button" class="btn btn-success" disabled="disabled" = t '.turned_on'
+- else
+  .col-md-10.btn-group.form-group
+    button type="button" class="btn btn-danger" disabled = 'disabled' = t '.turned_off'
+
+    = link_to (t '.turn_on'), omniauth_authorize_path(User, provider), :class => 'btn btn-default'

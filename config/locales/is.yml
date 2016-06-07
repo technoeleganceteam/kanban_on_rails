@@ -1,0 +1,308 @@
+---
+is:
+  github: github
+  bitbucket: Bitbucket
+  updated: uppfært
+  1_we_have_just_launched_our_service_title: Við höfum bara sett þjónustu okkar
+  shared:
+    navbar:
+      sign_in: Skrá inn
+      sign_up: Skráðu þig
+      projects: Verkefni
+      issues: Issues
+      syncing_with_github: Sync með github ...
+      syncing_with_bitbucket: Sync með Bitbucket ...
+      new_issue: Nýtt tölublað
+      edit_project: Breyta verkefni
+    languages_select_modal:
+      available_languages: Laus tungumál
+    user_edit_menu:
+      profile: Profile
+      site_settings: Vefsvæðisstillingar
+      services: Services
+    form_errors:
+      password: Lykilorð
+      current_password: Núverandi lykilorð
+      name: Name
+      base: Base
+      title: Title
+      user_to_project_connection: User til verkefnisins tengingu
+      columns:
+        tag: Tag skörun
+    new_project_modal:
+      new_project: Nýtt verkefni
+    edit_project_modal:
+      edit_project: Breyta verkefni
+    new_issue_modal:
+      new_issue: New mál
+    left_sidebar:
+      projects: Verkefni
+    right_sidebar:
+      news: Fréttir
+      all: Allt
+      read_more: Lesa meira
+    translations:
+      select_column_tags: Veldu dálki merki
+      select_section_tags: Velja kafla merki
+      select_issue_tags: Veldu mál merki
+  users:
+    new:
+      invite_user: Bjóða notanda
+    form:
+      name: Name
+      enter_user_name: Sláðu inn notandanafn
+      email: Email
+      enter_user_email: Sláðu inn notandanafn netfangið
+      enter_user_password: Sláðu inn notandanafn lykilorð
+      password: Lykilorð
+      role: User hlutverk
+      save: Vista
+    index:
+      project: Project
+      users: notendur
+      new: Nýtt
+    edit:
+      name: Name
+      enter_your_name: Sláðu inn nafnið þitt
+      save: Vista
+    settings:
+      change_password: Breyta lykilorði
+      interface_language: Interface tungumál
+      submit: Senda
+    password_form:
+      new_password: Nýtt lykilorð
+      confirm_new_password: Staðfesta nýtt lykilorð
+      old_password: Gamla lykilorðið
+      change_password: Breyta lykilorði
+    update:
+      your_profile_was_successfully_updated: Prófíllinn þinn var uppfært
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Hér eru nokkrar af tölfræði þína
+      projects: Verkefni
+  projects:
+    index:
+      projects: Verkefni
+      new: Nýtt
+      sync_with_github: Sync með github
+      sync_with_bitbucket: Sync með bitbucket
+      stop_sync_with_bitbucket: Stop samstilling með bitbucket
+      stop_sync_with_github: Stop samstilling með github
+    form:
+      name: Name
+      enter_project_name: Sláðu inn heiti verkefnisins
+      save: Vista
+      columns: Dálkar
+      sections: Deildir
+      column_name: Row nafn
+      add: Bæta
+      column_width: Dálkbreidd
+      column_height: Column hæð
+      github_repository_id: github geymsla id
+      github_full_name: github geymsla FULLNAME
+      github_secret_token_for_hook: github leyndarmál tákn fyrir krók
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket leyndarmál tákn fyrir krók
+    project:
+      edit: Breyta
+      destroy: Eyða
+      project_issues: Project málefni
+      project_users: Project notendur
+    section_fields:
+      remove_section: Fjarlægja kafla
+      section_tags: Kafli merki
+      section_order: Order
+      or_include_all: Eða eru allir?
+    column_fields:
+      column_name: Column nafn
+      remove_column: Fjarlægja dálk
+      max_issues_count: Max mál að telja í dálki
+      column_tags: Column merki
+      column_order: Order
+    show:
+      next_page: Næsta síða
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Sláðu mál titil
+      save: Vista
+      body: Body
+      enter_issue_body: Sláðu mál líkama
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket mál id
+      github_issue_id: github mál id
+      github_issue_number: github mál númer
+    index:
+      issues: málefni
+      sync_with_github: Sync með github
+      sync_with_bitbucket: Sync með bitbucket
+      new: Nýtt
+    issue:
+      destroy: Eyða
+      edit: Breyta
+    edit:
+      edit_issue: Breyta mál
+    new:
+      new_issue: Nýtt tölublað
+  authentications:
+    index:
+      enabled_services: virkt þjónusta
+    authentication:
+      turned_off: Slökkt
+      turn_on: Kveikja á
+      turn_off: Slökkva
+      turned_on: kveikt á
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Við höfum bara sett þjónustu okkar!
+      we_have_just_launched_our_service_text: Í dag ætlum við að ræsa þjónustu okkar
+        svo allir geta
+      sign_up: skrá sig
+      and_use_it: og nota það.
+      with_love: Með ást,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Allar fréttir
+      read_more: Lesa meira
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Velkomin á Kanban á teinar
+      welcome_about_text: Hér getur þú búið til þína eigin Kanban borð og samstilla
+        það með github eða Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Hvað er KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails er þjónusta þar sem þú getur búið til Kanban
+        stjórnum og samstilla það með github eða Bitbucket
+      what_features_has_kanban_on_rails: Hvað lögun er KanbanOnRails?
+      kanban_on_rails_features: Þú getur samstillt verkefnum og málefni með github
+        og Bitbucket, boðið notendum (td stjórnendur) fyrir verkefnið þitt, senda
+        það til eigin miðlara
+      i_have_some_requests: Ég hef nokkrar beiðnir
+      you_can_write_request: Þú getur skrifað beiðni
+      here: hér
+      i_have_seen_some_typo_or_wrong_translation: Ég hef séð nokkrar innsláttarvillur
+        eða rangar þýðingar
+      you_can_send_pull_request_to_our: Þú getur sent rífa beiðni til okkar
+      github_repository: GitHub geymsla
+      i_have_seen_some_error: Ég hef séð nokkrar villur
+      you_can_write_to_our_info_mail: Þú getur skrifað um þetta bréf okkar
+    about:
+      about_kanban_on_rails: Um KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails er þjónusta þar sem þú getur búið
+        til Kanban stjórnum og samstilla það með github eða Bitbucket
+      kanban_on_rails_features: KanbanOnRails aðgerðir
+      sync_with_github_and_bitbucket: Þú getur samstillt verkefnum og málefni með
+        github og Bitbucket
+      invite_users: Þú getur boðið notendum (td stjórnendur) fyrir verkefnið þitt
+      open_source_code: Þetta verkefni hefur opinn uppspretta merkjamál, svo þú getur
+        sent það til eigin miðlara
+      we_use_open_source_and_high_technology: Við notum hár tækni og opinn bókasöfnum
+        uppspretta. Við reynum alltaf að fá betri og bæta þjónustuna okkar.
+      partners_and_investors: Við erum opnari fyrir samstarfi og viljum við finna
+        fjárfesta. Ef þú vilt vinna með okkur vinsamlegast hafðu samband við okkur
+        á partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Skrá inn
+        sign_up: Skráðu þig
+        didnt_receive_confirmation_instructions: Fékk ekki borist Staðfesting leiðbeiningar?
+        sign_in_with: Skráðu þig inn með
+        fast_login_almost_one_click: Fast tenging (Næstum einn smellur)
+    confirmations:
+      confirmed: reikninginn þinn tókst staðfest.
+      send_instructions: Þú munt fá tölvupóst með leiðbeiningum um hvernig á að staðfesta
+        reikninginn þinn í nokkrar mínútur.
+      send_paranoid_instructions: Ef netfangið þitt er hjá okkur, munt þú fá tölvupóst
+        með leiðbeiningum um hvernig á að staðfesta reikninginn þinn í nokkrar mínútur.
+      new:
+        send_mail_for_confirm_your_email: Senda póst til að staðfesta tölvupóstinn
+          þinn
+        submit: Senda
+    failure:
+      already_authenticated: þú ert nú þegar í.
+      inactive: Þessi reikningur er ekki virkur enn.
+      invalid: Ógilt netfang eða lykilorð.
+      locked: reikningurinn þinn er læstur.
+      last_attempt: Þú ert eina tilraun áður reikningurinn verður læst.
+      not_found_in_database: Ógilt netfang eða lykilorð.
+      timeout: setu útrunnið. Vinsamlegast skráðu þig inn aftur til að halda áfram.
+      unauthenticated: Þú þarft að skrá þig inn eða skrá þig áður en þú heldur áfram.
+      unconfirmed: Þú þarft að staðfesta reikninginn þinn áður en haldið er áfram.
+    mailer:
+      confirmation_instructions:
+        subject: Staðfesting leiðbeiningar
+        welcome_to_kanban_on_rails: Velkomin á KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Þú getur staðfesta
+          netfangið þitt í gegnum tengilinn hér fyrir neðan
+        confirm_my_account: Staðfesta tölvupóst minn
+      reset_password_instructions:
+        hello: Hello
+        subject: Endurstilla leiðbeiningar lykilorð
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Einhver
+          hefur beiðnum tengil til að breyta lykilorðinu þínu. Þú getur gert þetta
+          í gegnum tengilinn hér fyrir neðan.
+        change_my_password: Breyta lykilorðinu mínu
+        if_you_didnt_request_this_please_ignore_this_email: Ef þú baðst ekki um þetta
+          vinsamlegast hunsa þennan póst.
+      unlock_instructions:
+        subject: Aflæsa Leiðbeiningar
+    omniauth_callbacks:
+      failure: Gat ekki auðkennt þig frá% {tagi} vegna þess að "% {ástæða}".
+      success: Tókst sannvotta frá% {góður} reikning.
+    passwords:
+      no_token: Þú getur ekki aðgang að þessari síðu án þess að koma frá endurstilla
+        aðgangsorðið í tölvupósti. Ef þú kemur frá endurstilla aðgangsorðið í tölvupósti,
+        skaltu ganga úr skugga um að þú notaðir að fullu gefin upp.
+      send_instructions: Þú munt fá tölvupóst með leiðbeiningum um hvernig á að endurstilla
+        lykilorðið þitt í nokkrar mínútur.
+      send_paranoid_instructions: Ef netfangið þitt er hjá okkur, verður þú að fá
+        bata lykilorð tengil netfangið þitt í nokkrar mínútur.
+      updated: lykilorð þitt var breytt. Þú ert nú skráð í.
+      updated_not_active: lykilorð þitt var breytt.
+      new:
+        forgot_your_password: endurheimta lykilorðið
+        reset_password: Senda batna url
+      edit:
+        change_your_password: Breyta lykilorðinu þínu
+        new_password: Nýtt lykilorð
+        confirm_password: Staðfesta lykilorð
+        change_password: Breyta
+    registrations:
+      destroyed: Bye! Reikningur þinn var hætt. Við vonumst til að sjá þig aftur fljótlega.
+      signed_up: Velkomin! Þú hefur skráð þig með góðum árangri.
+      signed_up_but_inactive: þú hefur skráð þig með góðum árangri. Hins vegar gætum
+        við ekki skrá þig í því að reikningurinn er ekki ennþá virkt.
+      signed_up_but_locked: þú hefur skráð þig með góðum árangri. Hins vegar gætum
+        við ekki skrá þig í því að reikningurinn er læst.
+      signed_up_but_unconfirmed: skilaboð með staðfestingartengill hefur verið sendur
+        á netfangið þitt. Vinsamlegast opna tengilinn til að virkja reikninginn þinn.
+      update_needs_confirmation: Þú uppfært reikninginn þinn með góðum árangri, en
+        við þurfum að staðfesta nýja netfangið þitt. Vinsamlegast athugaðu tölvupóstinn
+        þinn og smelltu á staðfesti tengilinn til að ganga staðfestir netfangið þitt.
+      updated: Þú uppfært reikninginn þinn með góðum árangri.
+      new:
+        sign_up: Skráðu þig
+        name: Name
+        password: Lykilorð
+        register: Skráðu þig
+    sessions:
+      signed_in: Undirritað í góðum árangri.
+      signed_out: Undirritaður út með góðum árangri.
+      new:
+        sign_in: Skrá inn
+        password: Lykilorð
+        remember_me: Muna eftir mér
+        forgot_your_password: Gleymt lykilorð?
+    unlocks:
+      send_instructions: Þú munt fá tölvupóst með leiðbeiningum um hvernig á að opna
+        reikning þinn í nokkrar mínútur.
+      send_paranoid_instructions: Ef reikningurinn þinn er til staðar, munt þú fá
+        tölvupóst með leiðbeiningum um hvernig á að opna hana í nokkrar mínútur.
+      unlocked: reikningurinn þinn hefur verið opið með góðum árangri. Vinsamlegast
+        skráðu þig inn til að halda áfram.
+  is: is
+  is_iso: is

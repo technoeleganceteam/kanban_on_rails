@@ -1,0 +1,310 @@
+---
+sv:
+  github: Github
+  bitbucket: bitbucket
+  updated: uppdateras
+  1_we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst
+  shared:
+    navbar:
+      sign_in: Logga in
+      sign_up: Registrera dig
+      projects: Projekt
+      issues: Issues
+      syncing_with_github: Sync med Github ...
+      syncing_with_bitbucket: Sync med bitbucket ...
+      new_issue: Nyemission
+      edit_project: Redigera projektet
+    languages_select_modal:
+      available_languages: Tillgängliga språk
+    user_edit_menu:
+      profile: Profil
+      site_settings: Webbplatsinställningar
+      services: Tjänster
+    form_errors:
+      password: Lösenord
+      current_password: Nuvarande lösenord
+      name: Namn
+      base: Base
+      title: Titel
+      user_to_project_connection: Användar att projicera anslutning
+      columns:
+        tag: Tag lappande
+    new_project_modal:
+      new_project: Nytt projekt
+    edit_project_modal:
+      edit_project: Redigera projektet
+    new_issue_modal:
+      new_issue: Nyemission
+    left_sidebar:
+      projects: Projekt
+    right_sidebar:
+      news: News
+      all: All
+      read_more: Läs mer
+    translations:
+      select_column_tags: Välj kolumn taggar
+      select_section_tags: Välj avsnitt taggar
+      select_issue_tags: Välj utfärdar märkning
+  users:
+    new:
+      invite_user: inviterar användaren
+    form:
+      name: Namn
+      enter_user_name: Ange användarnamn
+      email: E
+      enter_user_email: Ange användarens e-
+      enter_user_password: Ange användarlösenord
+      password: Lösenord
+      role: användarroll
+      save: Spara
+    index:
+      project: Project
+      users: användare
+      new: New
+    edit:
+      name: Namn
+      enter_your_name: Ange ditt namn
+      save: Spara
+    settings:
+      change_password: Ändra lösenord
+      interface_language: Gränssnittsspråk
+      submit: Submit
+    password_form:
+      new_password: Nytt lösenord
+      confirm_new_password: Bekräfta nytt lösenord
+      old_password: Gammalt lösenord
+      change_password: Ändra lösenord
+    update:
+      your_profile_was_successfully_updated: Din profil har uppdaterats
+    dashboard:
+      hello: Hej
+      here_some_of_your_statistics: Här några av statistiken
+      projects: Projekt
+  projects:
+    index:
+      projects: Projekt
+      new: New
+      sync_with_github: Sync med github
+      sync_with_bitbucket: Sync med bitbucket
+      stop_sync_with_bitbucket: Stoppa synkronisering med bitbucket
+      stop_sync_with_github: Stoppa synkronisering med github
+    form:
+      name: Namn
+      enter_project_name: Ange projektnamn
+      save: Spara
+      columns: Kolumner
+      sections: Sektioner
+      column_name: Row namn
+      section_name: Avsnitt namn
+      add: Lägg
+      column_width: Kolumnbredd
+      column_height: Pelarhöjd
+      github_repository_id: Github förvaret id
+      github_full_name: Github förvaret fullname
+      github_secret_token_for_hook: Github hemliga tecken för krok
+      bitbucket_full_name: bitbucket fullname
+      bitbucket_secret_token_for_hook: bitbucket hemliga tecken för krok
+    project:
+      edit: Redigera
+      destroy: Radera
+      project_issues: Projekt frågor
+      project_users: Projekt användare
+    section_fields:
+      section_name: Avsnitt namn
+      remove_section: Ta bort avsnitt
+      section_tags: Avsnitt taggar
+      section_order: Order
+      or_include_all: eller inkludera alla?
+    column_fields:
+      column_name: Kolumnnamn
+      remove_column: Avlägsna kolonn
+      max_issues_count: Max frågor räknas i kolumn
+      column_tags: Kolumn taggar
+      column_order: Order
+    show:
+      next_page: Nästa sida
+  issues:
+    form:
+      title: Titel
+      enter_issue_title: Ange fråga titel
+      save: Spara
+      body: Kropp
+      enter_issue_body: Ange fråga kroppen
+      tags: Taggar
+      issue_order: Order
+      bitbucket_issue_id: bitbucket fråga id
+      github_issue_id: Github fråga id
+      github_issue_number: Github löpnummer
+    index:
+      issues: frågor
+      sync_with_github: Sync med github
+      sync_with_bitbucket: Sync med bitbucket
+      new: New
+    issue:
+      destroy: Radera
+      edit: Redigera
+    edit:
+      edit_issue: Redigera fråga
+    new:
+      new_issue: Nyemission
+  authentications:
+    index:
+      enabled_services: baserade tjänster
+    authentication:
+      turned_off: Avstängd
+      turn_on: Aktivera
+      turn_off: Stäng
+      turned_on: Aktiverat
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst!
+      we_have_just_launched_our_service_text: Idag lanserar vi vår service så att
+        alla kan
+      sign_up: registrera dig
+      and_use_it: och använda den.
+      with_love: Med kärlek,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Alla nyheter
+      read_more: Läs mer
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Välkommen till Kanban On Rails
+      welcome_about_text: Här kan du skapa din egen Kanban styrelse och synkronisera
+        den med Github eller bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Vad är KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails är tjänsten där du kan skapa Kanban kort
+        och synkronisera den med Github eller bitbucket
+      what_features_has_kanban_on_rails: Vilka funktioner har KanbanOnRails?
+      kanban_on_rails_features: Du kan synkronisera dina projekt och problem med Github
+        och bitbucket, bjuda in användare (till exempel chefer) för ditt projekt,
+        distribuera den till din egen server
+      i_have_some_requests: Jag har några förfrågningar
+      you_can_write_request: Du kan skriva begäran
+      here: här
+      i_have_seen_some_typo_or_wrong_translation: Jag har sett några stavfel eller
+        fel översättningar
+      you_can_send_pull_request_to_our: Du kan skicka drag förfrågan till vår
+      github_repository: github förvaret
+      i_have_seen_some_error: Jag har sett några fel
+      you_can_write_to_our_info_mail: Du kan skriva om detta till vår e-post
+    about:
+      about_kanban_on_rails: Om KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails är tjänsten där du kan skapa Kanban
+        kort och synkronisera den med Github eller bitbucket
+      kanban_on_rails_features: KanbanOnRails funktioner
+      sync_with_github_and_bitbucket: Du kan synkronisera dina projekt och problem
+        med Github och bitbucket
+      invite_users: Du kan bjuda in användare (till exempel chefer) för ditt projekt
+      open_source_code: Detta projekt har öppen källkod, så att du kan distribuera
+        den till din egen server
+      we_use_open_source_and_high_technology: Vi använder höga tekniker och bibliotek
+        med öppen källkod. Vi försöker alltid att bli bättre och förbättra vår service.
+      partners_and_investors: Vi öppnas för partnerskap och vi vill hitta investerare.
+        Om du vill samarbeta med oss ​​kontakta oss på partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Logga in
+        sign_up: Registrera dig
+        didnt_receive_confirmation_instructions: Inte fått bekräftelse instruktioner?
+        sign_in_with: Logga in med
+        fast_login_almost_one_click: Snabb inloggning (nästan ett klick)
+    confirmations:
+      confirmed: Ditt konto har bekräftats.
+      send_instructions: Du kommer att få ett e-postmeddelande med instruktioner om
+        hur att bekräfta ditt konto inom några minuter.
+      send_paranoid_instructions: Om din e-postadress finns i vår databas, kommer
+        du att få ett e-postmeddelande med instruktioner om hur att bekräfta ditt
+        konto inom några minuter.
+      new:
+        send_mail_for_confirm_your_email: Skicka e-post för att bekräfta din e-post
+        submit: Submit
+    failure:
+      already_authenticated: Du redan är inloggad.
+      inactive: Ditt konto är ännu inte aktiverad.
+      invalid: Ogiltig e-post eller lösenord.
+      locked: Ditt konto är låst.
+      last_attempt: Du har ett försök innan ditt konto kommer att låsas.
+      not_found_in_database: Ogiltig e-post eller lösenord.
+      timeout: Din session gått ut. Du måste logga in igen för att fortsätta.
+      unauthenticated: Du måste logga in eller registrera dig innan du fortsätter.
+      unconfirmed: Du måste bekräfta ditt konto innan du fortsätter.
+    mailer:
+      confirmation_instructions:
+        subject: Bekräftelse instruktioner
+        welcome_to_kanban_on_rails: Välkommen till KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Du kan bekräfta
+          din e-post via länken nedan
+        confirm_my_account: Bekräfta min E
+      reset_password_instructions:
+        hello: Hej
+        subject: återställning av lösenord instruktioner
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Någon
+          begäran en länk för att ändra ditt lösenord. Du kan göra detta via länken
+          nedan.
+        change_my_password: Ändra mitt lösenord
+        if_you_didnt_request_this_please_ignore_this_email: Om du inte har begärt
+          detta vänligen ignorera det här meddelandet.
+      unlock_instructions:
+        subject: Lås upp Instruktioner
+    omniauth_callbacks:
+      failure: Det gick inte att autentisera dig från% {slag} eftersom "% {reason}".
+      success: framgångsrikt autentiseras från% {slag} konto.
+    passwords:
+      no_token: Du kan inte komma åt den här sidan utan att komma från en återställning
+        av lösenord. Om du kommer från en återställning av lösenord, se till att du
+        har använt den fullständiga webbadressen.
+      send_instructions: Du kommer att få ett e-postmeddelande med instruktioner om
+        hur du återställer ditt lösenord inom några minuter.
+      send_paranoid_instructions: Om din e-postadress finns i vår databas, kommer
+        du att få en återställning av lösenord länk till din e-postadress i ett par
+        minuter.
+      updated: Ditt lösenord ändrats. Du är nu inloggad.
+      updated_not_active: Ditt lösenord ändrats.
+      new:
+        forgot_your_password: återställa ditt lösenord
+        reset_password: Sänd återvinna url
+      edit:
+        change_your_password: Ändra ditt lösenord
+        new_password: Nytt lösenord
+        confirm_password: Bekräfta lösenord
+        change_password: Förändring
+    registrations:
+      destroyed: Bye! Ditt konto avslutat. Vi hoppas att se dig snart igen.
+      signed_up: Välkommen! Du har registrerat dig framgångsrikt.
+      signed_up_but_inactive: Du har registrerat dig framgångsrikt. Men vi kunde inte
+        logga in dig eftersom ditt konto ännu inte är aktiverad.
+      signed_up_but_locked: Du har registrerat dig framgångsrikt. Men vi kunde inte
+        logga in dig eftersom ditt konto är låst.
+      signed_up_but_unconfirmed: Ett meddelande med en bekräftelselänk har skickats
+        till din e-postadress. Vänligen öppna länken för att aktivera ditt konto.
+      update_needs_confirmation: Du uppdaterade ditt konto framgångsrikt, men vi måste
+        verifiera din nya e-postadress. Kontrollera din e-post och klicka på bekräfta
+        länken för att slutföra bekräfta din nya e-postadress.
+      updated: Du uppdaterade ditt konto framgångsrikt.
+      new:
+        sign_up: Registrera dig
+        name: Namn
+        password: Lösenord
+        register: Registrera dig
+    sessions:
+      signed_in: Signed framgångsrikt.
+      signed_out: Signed framgångsrikt.
+      new:
+        sign_in: Logga in
+        password: Lösenord
+        remember_me: Kom ihåg mig
+        forgot_your_password: glömt lösenordet?
+    unlocks:
+      send_instructions: Du kommer att få ett e-postmeddelande med instruktioner om
+        hur man låser ditt konto inom några minuter.
+      send_paranoid_instructions: Om kontot finns, får du ett e-postmeddelande med
+        instruktioner om hur man låser upp det på några minuter.
+      unlocked: Ditt konto har låsts upp framgångsrikt. Du måste logga in för att
+        fortsätta.
+  sv: sv
+  sv_iso: sv

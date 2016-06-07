@@ -1,0 +1,21 @@
+= render 'shared/user_edit_menu'
+
+.container-fluid
+  .row
+    #change_password_notifier
+
+    h4 = t '.change_password'
+
+    = render 'password_form', :user => @user
+
+    = form_for @user, :remote => true do |form|
+      = render 'shared/form_errors', :item => @user
+
+      h4 = t '.interface_language'
+
+      
+      .form-group
+        = form.select :locale, language_options_for_settings_select, {},
+          { :class => 'form-control', :id => 'locale' }
+
+      = form.submit (t '.submit'), :class => 'btn btn-success'

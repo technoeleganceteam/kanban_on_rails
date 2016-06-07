@@ -1,0 +1,311 @@
+---
+sw:
+  github: github
+  bitbucket: bitbucket
+  updated: updated
+  1_we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu
+  shared:
+    navbar:
+      sign_in: Ingia katika
+      sign_up: Ishara ya juu
+      projects: Miradi
+      issues: Masuala
+      syncing_with_github: Sync na github ...
+      syncing_with_bitbucket: Sync na bitbucket ...
+      new_issue: New suala
+      edit_project: Hariri mradi
+    languages_select_modal:
+      available_languages: Inapatikana lugha
+    user_edit_menu:
+      profile: Profile
+      site_settings: mazingira Site
+      services: Services
+    form_errors:
+      password: Nywila
+      current_password: Nenosiri la sasa
+      password_confirmation: Nywila uthibitisho
+      name: Jina
+      base: Msingi
+      title: Title
+      user_to_project_connection: mtumiaji wa mradi uhusiano
+      columns:
+        tag: Tag ukipishana
+    new_project_modal:
+      new_project: New mradi
+    edit_project_modal:
+      edit_project: Hariri mradi
+    new_issue_modal:
+      new_issue: suala New
+    left_sidebar:
+      projects: Miradi
+    right_sidebar:
+      news: News
+      all: All
+      read_more: Soma zaidi
+    translations:
+      select_column_tags: Chagua vitambulisho safu
+      select_section_tags: Chagua vitambulisho sehemu
+      select_issue_tags: Chagua vitambulisho suala
+  users:
+    new:
+      invite_user: Alika mtumiaji
+    form:
+      name: Jina
+      enter_user_name: Kuingia jina la mtumiaji
+      email: pepe
+      enter_user_email: Kuingia user email
+      enter_user_password: Weka user password
+      password: Nywila
+      save: Save
+    index:
+      project: Project
+      users: watumiaji
+      new: New
+    edit:
+      name: Jina
+      enter_your_name: Ingiza jina lako
+      save: Save
+    settings:
+      change_password: Change password
+      interface_language: lugha Interface
+      submit: Kuwasilisha
+    password_form:
+      new_password: nenosiri New
+      confirm_new_password: Thibitisha nenosiri jipya
+      old_password: Nywila ya zamani
+      change_password: Change password
+    update:
+      your_profile_was_successfully_updated: wasifu wako mara kwa mafanikio updated
+    dashboard:
+      hello: Habari
+      here_some_of_your_statistics: Hapa baadhi ya takwimu yako
+      projects: Miradi
+  projects:
+    index:
+      projects: Miradi
+      new: New
+      sync_with_github: Sync na github
+      sync_with_bitbucket: Sync na bitbucket
+      stop_sync_with_bitbucket: Stop Sync na bitbucket
+      stop_sync_with_github: Stop Sync na github
+    form:
+      name: Jina
+      enter_project_name: Ingiza jina mradi
+      save: Save
+      columns: nguzo
+      sections: Sehemu
+      add: Add
+      column_width: Column upana
+      column_height: Column urefu
+      github_repository_id: github there id
+      github_full_name: github there majina kamili
+      github_secret_token_for_hook: github siri ishara kwa ndoano
+      bitbucket_full_name: bitbucket majina kamili
+      bitbucket_secret_token_for_hook: bitbucket siri ishara kwa ndoano
+    project:
+      edit: Hariri
+      destroy: Futa
+      project_issues: masuala Project
+      project_users: watumiaji Project
+    section_fields:
+      section_tags: vitambulisho Sehemu ya
+      section_order: Amri
+      or_include_all: Au ni pamoja na wote?
+    column_fields:
+      column_name: Column jina
+      remove_column: Ondoa safu
+      max_issues_count: Max masuala kuhesabu katika safu
+      column_tags: vitambulisho Column
+      column_order: Amri
+    show:
+      next_page: ukurasa Ifwatayo
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Weka suala kichwa
+      save: Save
+      body: Mwili
+      enter_issue_body: Weka suala mwili
+      tags: Tags
+      issue_order: Amri
+      bitbucket_issue_id: bitbucket suala id
+      github_issue_id: github suala id
+      github_issue_number: github suala idadi
+    index:
+      issues: masuala
+      sync_with_github: Sync na github
+      sync_with_bitbucket: Sync na bitbucket
+      new: New
+    issue:
+      destroy: Futa
+      edit: Hariri
+    edit:
+      edit_issue: Hariri suala
+    new:
+      new_issue: New suala
+  authentications:
+    index:
+      enabled_services: Kuwezeshwa huduma
+    authentication:
+      turned_off: Akageuka mbali
+      turn_on: Kurejea kwenye
+      turn_off: Zima
+      turned_on: Akageuka juu ya
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu!
+      we_have_just_launched_our_service_text: Leo uzinduzi wa huduma zetu ili kila
+        mtu anaweza
+      sign_up: ishara ya juu
+      and_use_it: na matumizi yake.
+      with_love: Kwa upendo,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Habari zote
+      read_more: Soma zaidi
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Karibu Kanban On Rails
+      welcome_about_text: Hapa unaweza kuunda Kanban yako mwenyewe bodi na upatanishi
+        kwa github au bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: KanbanOnRails ni nini?
+      about_kanban_on_rails: KanbanOnRails ni huduma ambapo unaweza kujenga Kanban
+        bodi na upatanishi kwa github au bitbucket
+      what_features_has_kanban_on_rails: nini makala ina KanbanOnRails?
+      kanban_on_rails_features: Unaweza kusawazisha miradi yako na masuala na github
+        na bitbucket, kukaribisha watumiaji (kwa wasimamizi mfano) kwa ajili ya mradi
+        wako, kupeleka kwa server yako mwenyewe
+      i_have_some_requests: mimi na baadhi ya maombi
+      you_can_write_request: Unaweza kuandika ombi
+      here: hapa
+      i_have_seen_some_typo_or_wrong_translation: nimeona baadhi typos au tafsiri
+        sahihi
+      you_can_send_pull_request_to_our: Unaweza kutuma ombi kuvuta kwa wetu
+      github_repository: github there
+      i_have_seen_some_error: nimeona baadhi ya makosa
+      you_can_write_to_our_info_mail: Unaweza kuandika kuhusu hili kwa barua pepe
+        yetu
+    about:
+      about_kanban_on_rails: Kuhusu KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ni huduma ambapo unaweza kujenga Kanban
+        bodi na upatanishi kwa github au bitbucket
+      kanban_on_rails_features: KanbanOnRails makala
+      sync_with_github_and_bitbucket: Unaweza kusawazisha miradi yako na masuala na
+        github na bitbucket
+      invite_users: Unaweza kualika watumiaji (kwa wasimamizi mfano) kwa ajili ya
+        mradi yako
+      open_source_code: Mradi huu ina wazi chanzo kanuni, hivyo unaweza kupeleka kwa
+        server yako mwenyewe
+      we_use_open_source_and_high_technology: Sisi kutumia teknolojia ya juu na maktaba
+        wazi chanzo. Sisi daima kujaribu kupata bora na kuboresha huduma zetu.
+      partners_and_investors: Sisi ni kufunguliwa kwa ushirikiano na tungependa kupata
+        wawekezaji. Kama Ningependa kwa kushirikiana na sisi tafadhali wasiliana nasi
+        katika partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Ingia katika
+        sign_up: Ishara ya juu
+        didnt_receive_confirmation_instructions: Je, si kimepata uthibitisho maelekezo?
+        sign_in_with: Kuingia na
+        fast_login_almost_one_click: haraka login (Karibu moja click)
+    confirmations:
+      confirmed: Akaunti yako mara kwa mafanikio alithibitisha.
+      send_instructions: You kupokea barua pepe na maelekezo kuhusu jinsi ya kuthibitisha
+        akaunti yako katika dakika chache.
+      send_paranoid_instructions: Kama anwani yako ya barua pepe ipo katika database
+        yetu, utakuwa kupokea barua pepe na maelekezo kuhusu jinsi ya kuthibitisha
+        akaunti yako katika dakika chache.
+      new:
+        send_mail_for_confirm_your_email: Tuma barua kwa kuthibitisha barua pepe yako
+        submit: Kuwasilisha
+    failure:
+      already_authenticated: Wewe ni tayari umeingia.
+      inactive: Akaunti yako si ulioamilishwa bado.
+      invalid: email batili au password.
+      locked: Akaunti yako imefungwa.
+      last_attempt: Una jaribio moja zaidi kabla ya akaunti yako itakuwa imefungwa.
+      not_found_in_database: email batili au password.
+      timeout: kikao wako muda wake. Tafadhali ingia tena kuendelea.
+      unauthenticated: Unahitaji kuingia katika au ishara ya juu kabla ya kuendelea.
+      unconfirmed: Una ili kuthibitisha akaunti yako kabla ya kuendelea.
+    mailer:
+      confirmation_instructions:
+        subject: maelekezo Confirmation
+        welcome_to_kanban_on_rails: Karibu KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Unaweza kuthibitisha
+          email yako kwa njia ya kiungo chini
+        confirm_my_account: Thibitisha pepe yangu
+      reset_password_instructions:
+        hello: Habari
+        subject: Rudisha maelekezo nywila
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Mtu
+          ana maombi kiungo kubadili password yako. Unaweza kufanya hivyo kwa njia
+          ya kiungo hapa chini.
+        change_my_password: Change password yangu
+        if_you_didnt_request_this_please_ignore_this_email: Kama hakuwa na ombi hili
+          tafadhali kupuuza email hii.
+      unlock_instructions:
+        subject: Unlock Maelekezo
+    omniauth_callbacks:
+      failure: Hakuweza kukuthibitisha kutoka% {aina} kwa sababu "% {sababu}".
+      success: Mafanikio kuthibitishwa kutoka% {aina} akaunti.
+    passwords:
+      no_token: Huwezi kupata ukurasa hii bila kuja kutoka email password reset. Kama
+        huna kuja kutoka email password reset, tafadhali kuhakikisha wewe kutumika
+        URL full zinazotolewa.
+      send_instructions: You kupokea barua pepe na maelekezo ya jinsi ya upya password
+        yako katika dakika chache.
+      send_paranoid_instructions: Kama anwani yako ya barua pepe ipo katika database
+        yetu, utakuwa kupokea password ahueni kiungo katika barua pepe yako katika
+        dakika chache.
+      updated: Neno lako la siri mara iliyopita kwa mafanikio. Wewe ni sasa umeingia
+        katika akaunti.
+      updated_not_active: Neno lako la siri mara iliyopita kwa mafanikio.
+      new:
+        forgot_your_password: Kuokoa password yako
+        reset_password: Send kupona url
+      edit:
+        change_your_password: Mabadiliko ya password yako
+        new_password: nenosiri New
+        confirm_password: Thibitisha nenosiri
+        change_password: Badilisha
+    registrations:
+      destroyed: Bye! Akaunti yako mara kwa mafanikio kufutwa. Tunatarajia kuona wewe
+        tena hivi karibuni.
+      signed_up: Karibu! Una saini kwa mafanikio.
+      signed_up_but_inactive: Umejiandisha mafanikio. Hata hivyo, sisi hakuweza kukuingiza
+        katika sababu akaunti yako bado ulioamilishwa.
+      signed_up_but_locked: Umejiandisha mafanikio. Hata hivyo, sisi hakuweza kukuingiza
+        katika sababu akaunti yako imefungwa.
+      signed_up_but_unconfirmed: ujumbe na kiungo uthibitisho ametumwa kwa barua pepe
+        yako. Tafadhali fungua kiungo kuamsha akaunti yako.
+      update_needs_confirmation: You updated akaunti yako kwa mafanikio, lakini tunahitaji
+        kuthibitisha anwani yako mpya. Tafadhali angalia barua pepe yako na bonyeza
+        kuthibitisha kiungo kukamilisha kuthibitisha anwani ya barua pepe yako mpya.
+      updated: You updated akaunti yako kwa mafanikio.
+      new:
+        sign_up: Ishara ya juu
+        name: Jina
+        password: Nywila
+        password_confirmation: Nywila uthibitisho
+        register: Ishara ya juu
+    sessions:
+      signed_in: Signed katika mafanikio.
+      signed_out: Umetolewa kwa mafanikio.
+      new:
+        sign_in: Ingia katika
+        password: Nywila
+        remember_me: Nikumbuke
+        forgot_your_password: Umesahau nywila yako?
+    unlocks:
+      send_instructions: You kupokea barua pepe na maelekezo kuhusu jinsi ya kufungua
+        akaunti yako katika dakika chache.
+      send_paranoid_instructions: Kama akaunti yako ipo, utakuwa kupokea barua pepe
+        na maelekezo kuhusu jinsi ya kufungua hiyo katika dakika chache.
+      unlocked: Akaunti yako imefunguliwa kwa mafanikio. Tafadhali ingia kuendelea.
+  sw: sw
+  sw_iso: sw

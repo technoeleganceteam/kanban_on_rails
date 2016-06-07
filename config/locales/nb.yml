@@ -1,0 +1,308 @@
+---
+nb:
+  github: Github
+  bitbucket: Bitbucket
+  updated: dikemaskini
+  1_we_have_just_launched_our_service_title: Kami baru sahaja melancarkan perkhidmatan
+    kami
+  shared:
+    navbar:
+      sign_in: Log masuk
+      sign_up: Daftar
+      projects: Projek
+      issues: Issues
+      syncing_with_github: Sync dengan Github ...
+      syncing_with_bitbucket: Sync dengan Bitbucket ...
+      new_issue: isu New
+      edit_project: Edit projek
+    languages_select_modal:
+      available_languages: Bahasa yang sedia ada
+    user_edit_menu:
+      profile: Profil
+      site_settings: Tetapan tapak
+      services: Perkhidmatan
+    form_errors:
+      password: Kata laluan
+      current_password: Kata laluan semasa
+      name: Nama
+      base: Base
+      title: Title
+      user_to_project_connection: Pengguna untuk projek sambungan
+      columns:
+        tag: Tag bertindih
+    new_project_modal:
+      new_project: Projek baru
+    edit_project_modal:
+      edit_project: Edit projek
+    new_issue_modal:
+      new_issue: isu New
+    left_sidebar:
+      projects: Projek
+    right_sidebar:
+      news: News
+      all: Semua
+      read_more: Baca lebih lanjut
+    translations:
+      select_column_tags: Pilih tag ruangan
+      select_section_tags: Pilih bahagian tag
+      select_issue_tags: Pilih isu tag
+  users:
+    new:
+      invite_user: Jemput pengguna
+    form:
+      name: Nama
+      enter_user_name: Masukkan nama pengguna
+      email: Email
+      enter_user_email: Masukkan e-mel pengguna
+      enter_user_password: Masukkan kata laluan pengguna
+      password: Kata laluan
+      save: Simpan
+    index:
+      project: Projek
+      users: pengguna
+      new: New
+    edit:
+      name: Nama
+      enter_your_name: Masukkan nama anda
+      save: Simpan
+    settings:
+      change_password: Tukar kata laluan
+      interface_language: Bahasa antara muka
+      submit: Hantar
+    password_form:
+      new_password: Kata laluan baru
+      confirm_new_password: Sahkan kata laluan baru
+      old_password: kata laluan Old
+      change_password: Tukar kata laluan
+    update:
+      your_profile_was_successfully_updated: Profil anda telah dikemas kini
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Di sini beberapa statistik anda
+      projects: Projek
+  projects:
+    index:
+      projects: Projek
+      new: New
+      sync_with_github: Sync dengan github
+      sync_with_bitbucket: Sync dengan bitbucket
+      stop_sync_with_bitbucket: Stop selari dengan bitbucket
+      stop_sync_with_github: Stop selari dengan github
+    form:
+      name: Nama
+      enter_project_name: Masukkan nama projek
+      save: Simpan
+      columns: Columns
+      sections: Seksyen
+      add: Add
+      github_repository_id: Github id repositori
+      github_full_name: Github repositori nama penuh
+      github_secret_token_for_hook: Github tanda rahsia untuk cangkuk
+      bitbucket_full_name: Bitbucket nama penuh
+      bitbucket_secret_token_for_hook: Bitbucket tanda rahsia untuk cangkuk
+    project:
+      edit: Edit
+      destroy: Padam
+      project_issues: isu Projek
+      project_users: pengguna Projek
+    section_fields:
+      section_tags: Seksyen tag
+      section_order: Order
+      or_include_all: Atau termasuk semua?
+    column_fields:
+      remove_column: Alih keluar lajur
+      max_issues_count: isu Max mengira dalam ruang
+      column_tags: tag Ruangan
+      column_order: Order
+    show:
+      next_page: Laman seterusnya
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Masukkan tajuk isu
+      save: Simpan
+      body: Badan
+      enter_issue_body: Masukkan badan isu
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket id isu
+      github_issue_id: Github id isu
+      github_issue_number: nombor isu Github
+    index:
+      issues: isu-isu
+      sync_with_github: Sync dengan github
+      sync_with_bitbucket: Sync dengan bitbucket
+      new: New
+    issue:
+      destroy: Padam
+      edit: Edit
+    edit:
+      edit_issue: Edit isu
+    new:
+      new_issue: isu New
+  authentications:
+    index:
+      enabled_services: perkhidmatan Didayakan
+    authentication:
+      turned_off: Dimatikan
+      turn_on: Hidupkan
+      turn_off: Matikan
+      turned_on: Dihidupkan
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Kami baru sahaja melancarkan perkhidmatan
+        kami!
+      we_have_just_launched_our_service_text: Hari ini kita melancarkan perkhidmatan
+        kami supaya semua orang boleh
+      sign_up: mendaftar
+      and_use_it: dan menggunakannya.
+      with_love: Dengan cinta,
+      technoelegance_team: Technoelegance pasukan
+    index:
+      all_news: Semua berita
+      read_more: Baca lebih lanjut
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Selamat datang ke Kanban On Rails
+      welcome_about_text: sini anda boleh membuat papan Kanban anda sendiri dan sync
+        dengan Github atau Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Apakah KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails adalah perkhidmatan yang mana anda boleh
+        membuat papan Kanban dan sync dengan Github atau Bitbucket
+      what_features_has_kanban_on_rails: Apa menampilkan mempunyai KanbanOnRails?
+      kanban_on_rails_features: Anda boleh menyelaraskan projek dan isu-isu anda dengan
+        Github dan Bitbucket, menjemput pengguna (untuk pengurus contoh) untuk projek
+        anda, menggunakan ia untuk pelayan anda sendiri
+      i_have_some_requests: saya mempunyai beberapa permintaan
+      you_can_write_request: Memuat permintaan
+      here: sini
+      i_have_seen_some_typo_or_wrong_translation: saya telah melihat beberapa kesilapan
+        menaip atau terjemahan salah
+      you_can_send_pull_request_to_our: Anda boleh menghantar permintaan tarik untuk
+        kami
+      github_repository: github repositori
+      i_have_seen_some_error: saya telah melihat beberapa kesilapan
+      you_can_write_to_our_info_mail: Anda boleh menulis tentang ini kepada e-mel
+        kami
+    about:
+      about_kanban_on_rails: Mengenai KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails adalah perkhidmatan yang mana anda
+        boleh membuat papan Kanban dan sync dengan Github atau Bitbucket
+      kanban_on_rails_features: ciri KanbanOnRails
+      sync_with_github_and_bitbucket: Anda boleh menyelaraskan projek dan isu-isu
+        anda dengan Github dan Bitbucket
+      invite_users: Anda boleh menjemput pengguna (bagi pengurus contoh) untuk projek
+        anda
+      open_source_code: Projek ini mempunyai kod sumber terbuka, jadi anda boleh menggunakan
+        ia untuk pelayan anda sendiri
+      we_use_open_source_and_high_technology: Kami menggunakan teknologi tinggi dan
+        perpustakaan sumber terbuka. Kami sentiasa cuba untuk menjadi lebih baik dan
+        meningkatkan perkhidmatan kami.
+      partners_and_investors: Kami dibuka untuk perkongsian dan kami ingin mencari
+        pelabur. Jika anda ingin untuk bekerjasama dengan kami sila hubungi kami di
+        partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Log masuk
+        sign_up: Daftar
+        didnt_receive_confirmation_instructions: Tidak terima arahan pengesahan?
+        sign_in_with: Daftar masuk dengan
+        fast_login_almost_one_click: login Fast (Hampir satu klik)
+    confirmations:
+      confirmed: Akaun anda telah berjaya disahkan.
+      send_instructions: Anda akan menerima e-mel dengan arahan mengenai cara untuk
+        mengesahkan akaun anda dalam beberapa minit.
+      send_paranoid_instructions: Jika alamat e-mel anda wujud dalam pangkalan data
+        kami, anda akan menerima e-mel dengan arahan mengenai cara untuk mengesahkan
+        akaun anda dalam beberapa minit.
+      new:
+        send_mail_for_confirm_your_email: Hantar mel untuk mengesahkan e-mel anda
+        submit: Hantar
+    failure:
+      already_authenticated: Anda telah log masuk.
+      inactive: Akaun anda masih belum diaktifkan.
+      invalid: e-mel Anda terlupa.
+      locked: Akaun anda dikunci.
+      last_attempt: Anda mempunyai satu lagi percubaan sebelum akaun anda akan dikunci.
+      not_found_in_database: e-mel Anda terlupa.
+      timeout: Sesi anda tamat. Sila log masuk sekali lagi untuk meneruskan.
+      unauthenticated: Anda perlu log masuk atau mendaftar sebelum meneruskan.
+      unconfirmed: Anda perlu mengesahkan akaun anda sebelum meneruskan.
+    mailer:
+      confirmation_instructions:
+        subject: arahan Pengesahan
+        welcome_to_kanban_on_rails: Selamat datang ke KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Anda boleh mengesahkan
+          e-mel anda melalui link di bawah
+        confirm_my_account: Sahkan E-mel saya
+      reset_password_instructions:
+        hello: Hello
+        subject: arahan kata laluan Reset
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Seseorang
+          permintaan pautan untuk menukar kata laluan anda. Anda boleh melakukan ini
+          melalui link di bawah.
+        change_my_password: Tukar kata laluan saya
+        if_you_didnt_request_this_please_ignore_this_email: Jika anda tidak meminta
+          ini, sila abaikan email ini.
+      unlock_instructions:
+        subject: Arahan Unlock
+    omniauth_callbacks:
+      failure: Tidak dapat mengesahkan anda daripada% {jenis} kerana "% {sebab}".
+      success: Berjaya disahkan daripada% {jenis} akaun.
+    passwords:
+      no_token: Anda tidak boleh mengakses halaman ini tanpa datang dari e-mel set
+        semula kata laluan. Jika anda datang dari e-mel set semula kata laluan, sila
+        pastikan anda menggunakan URL penuh yang diperuntukkan.
+      send_instructions: Anda akan menerima e-mel dengan arahan mengenai cara untuk
+        menetapkan semula kata laluan anda dalam beberapa minit.
+      send_paranoid_instructions: Jika alamat e-mel anda wujud dalam pangkalan data
+        kami, anda akan menerima link pemulihan kata laluan di alamat e-mel anda dalam
+        beberapa minit.
+      updated: Kata laluan anda telah berjaya diubah. Anda sekarang telah log masuk.
+      updated_not_active: Kata laluan anda telah berjaya diubah.
+      new:
+        forgot_your_password: Mendapatkan semula kata laluan anda
+        reset_password: Hantar pulih url
+      edit:
+        change_your_password: Tukar kata laluan anda
+        new_password: Kata laluan baru
+        change_password: Tukar
+    registrations:
+      destroyed: Bye! Akaun anda telah berjaya dibatalkan. Kami berharap untuk melihat
+        anda tidak lama lagi.
+      signed_up: Selamat datang! Anda telah mendaftar dengan jayanya.
+      signed_up_but_inactive: Anda telah mendaftar dengan jayanya. Walau bagaimanapun,
+        kita tidak boleh mendaftar anda kerana akaun anda masih belum diaktifkan.
+      signed_up_but_locked: Anda telah mendaftar dengan jayanya. Walau bagaimanapun,
+        kita tidak boleh mendaftar anda kerana akaun anda dikunci.
+      signed_up_but_unconfirmed: Mesej dengan pautan pengesahan telah dihantar ke
+        alamat e-mel anda. Sila buka pautan untuk mengaktifkan akaun anda.
+      update_needs_confirmation: Anda mengemas kini akaun anda dengan jayanya, tetapi
+        kami perlu mengesahkan alamat e-mel baru anda. Sila semak e-mel anda dan klik
+        pada link confirm untuk memuktamadkan mengesahkan alamat e-mel baru anda.
+      updated: Anda mengemas kini akaun anda dengan jayanya.
+      new:
+        sign_up: Daftar
+        name: Nama
+        password: Kata laluan
+        register: Daftar
+    sessions:
+      signed_in: Ditandatangani jayanya.
+      signed_out: Ditandatangani dengan jayanya.
+      new:
+        sign_in: Log masuk
+        password: Kata laluan
+        remember_me: Ingat saya
+        forgot_your_password: Lupa kata laluan anda?
+    unlocks:
+      send_instructions: Anda akan menerima e-mel dengan arahan mengenai bagaimana
+        untuk membuka akaun anda dalam beberapa minit.
+      send_paranoid_instructions: Jika akaun anda wujud, anda akan menerima e-mel
+        dengan arahan mengenai bagaimana untuk membuka kunci dalam beberapa minit.
+      unlocked: Akaun anda telah dibuka dengan jayanya. Sila log masuk untuk meneruskan.
+  nb: nb
+  nb_iso: nb

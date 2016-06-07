@@ -1,0 +1,8 @@
+- item.errors.each do |error_key, error_value|
+  div class='alert alert-danger alert-dismissable'
+    button type = 'button' class = 'close' data-dismiss = 'alert' aria-hidden = 'true' &times;
+    = t ".#{ error_key.to_s.singularize }"
+
+    | &nbsp;:&nbsp;
+    
+    = error_value

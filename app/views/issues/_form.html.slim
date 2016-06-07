@@ -1,0 +1,46 @@
+= form_for [project, issue], :remote => true do |form|
+  = render 'shared/form_errors', :item => issue
+
+  .form-group
+    label for = 'title' = t '.title'
+
+    = form.text_field :title, :class => 'form-control', :placeholder => (t '.enter_issue_title'),
+      :required => true
+
+  .form-group
+    label for = 'body' = t '.body'
+
+    = form.text_field :body, :class => 'form-control', :placeholder => (t '.enter_issue_body')
+
+  .form-group
+    label for = 'tags' = t '.tags'
+
+    br
+
+    = form.select :tags,
+      options_for_select(form.object.tags, :selected => form.object.tags), {},
+      :multiple => true, :class => 'form-control issue_tags'
+
+  - if issue.github_issue_id
+    h3 = t 'github'
+    
+    label = t '.github_issue_id'
+
+    input.form-control disabled = '' placeholder=("#{ issue.github_issue_id }") type = 'text'
+
+    label = t '.github_issue_number'
+
+    input.form-control disabled = '' placeholder=("#{ issue.github_issue_number }") type = 'text'
+
+    br
+
+  - if issue.bitbucket_issue_id
+    h3 = t 'bitbucket'
+    
+    label = t '.bitbucket_issue_id'
+
+    input.form-control disabled = '' placeholder=("#{ issue.bitbucket_issue_id }") type = 'text'
+
+    br
+
+  = form.submit (t '.save'), :class => 'btn btn-success'

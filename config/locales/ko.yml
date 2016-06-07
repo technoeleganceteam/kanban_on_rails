@@ -1,0 +1,206 @@
+---
+ko:
+  github: Github에서
+  bitbucket: 의 Bitbucket
+  updated: 업데이트
+  shared:
+    navbar:
+      sign_in: 로그인
+      sign_up: 가입
+      projects: 프로젝트
+      issues: 문제
+      new_issue: 새로운 문제
+      edit_project: 프로젝트 편집
+    languages_select_modal:
+      available_languages: 사용 가능한 언어
+    user_edit_menu:
+      profile: 프로필
+      site_settings: 사이트 설정
+      services: 서비스
+    form_errors:
+      password: 비밀
+      current_password: 현재 암호
+      password_confirmation: 비밀번호 확인
+      name: 이름
+      base: 자료
+      title: 제목
+      columns:
+        tag: 태그 중첩
+    new_project_modal:
+      new_project: 새로운 프로젝트
+    edit_project_modal:
+      edit_project: 프로젝트 편집
+    new_issue_modal:
+      new_issue: 새로운 문제
+    translations:
+      select_column_tags: 선택 항목 태그
+      select_issue_tags: 선택의 문제 태그
+  users:
+    form:
+      name: 이름
+      email: 이메일
+      role: 사용자 역할
+      save: 저장
+    index:
+      project: 프로젝트
+      users: 사용자
+      new: 새로운
+    edit:
+      name: 이름
+      enter_your_name: 이름을 입력
+    settings:
+      change_password: 비밀번호 변경
+      interface_language: 인터페이스 언어
+      submit: 제출
+    password_form:
+      new_password: 새로운 암호
+      old_password: 이전 암호
+      change_password: 비밀번호 변경
+    dashboard:
+      hello: 안녕하세요.
+      projects: 프로젝트
+  projects:
+    index:
+      projects: 프로젝트
+      new: 새로운
+    form:
+      name: 이름
+      enter_project_name: 프로젝트 이름을 입력합니다
+      save: 저장
+      columns: 열
+      sections: 섹션
+      column_name: 행 이름
+      section_name: 제 이름
+      add: 추가
+      column_width: 열 너비
+      column_height: 열 높이
+      github_repository_id: Github에서 저장소 아이디
+      github_full_name: Github에서 저장소의 전체 이름
+      bitbucket_full_name: 의 Bitbucket 전체 이름
+    project:
+      edit: 편집
+      destroy: 삭제
+      project_issues: 프로젝트 문제
+      project_users: 프로젝트 사용자
+    section_fields:
+      section_name: 제 이름
+      remove_section: 제거 섹션
+      section_tags: 섹션 태그
+      or_include_all: 아니면 모두 포함되어 있습니까?
+    column_fields:
+      column_name: 열 이름
+      max_issues_count: 최대 문제는 열에 계산
+      column_tags: 열 태그
+      column_order: 주문
+    show:
+      next_page: 다음 페이지
+  issues:
+    form:
+      title: 제목
+      save: 저장
+      body: 바디
+      tags: 태그
+      bitbucket_issue_id: 의 Bitbucket 문제 아이디
+      github_issue_id: Github에서 문제 아이디
+      github_issue_number: Github에서 문제 번호
+    index:
+      issues: 문제
+      new: 새로운
+    issue:
+      destroy: 삭제
+      edit: 편집
+    edit:
+      edit_issue: 편집 문제
+    new:
+      new_issue: 새로운 문제
+  authentications:
+    index:
+      enabled_services: 사용 서비스
+    authentication:
+      turned_off: 이 꺼져
+      turn_off: 해제
+      turned_on: 는 점등
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: 오늘 우리는 그래서 모두가 할 수있는 우리의 서비스를 시작
+      sign_up: 가입
+      and_use_it: 그것을 사용합니다.
+      technoelegance_team: Technoelegance 팀
+    index:
+      read_more: 는 더 읽기
+  pages:
+    faq:
+      i_have_seen_some_typo_or_wrong_translation: 나는 약간의 오타 나 잘못된 번역을 보았다
+      github_repository: GitHub의 저장소
+      i_have_seen_some_error: 나는 약간의 오차가 보았다
+    about:
+      about_kanban_on_rails_text: KanbanOnRails는 Github에서 또는의 Bitbucket와 함께 칸반 보드를
+        생성하고 동기화 할 수있는 서비스입니다
+      kanban_on_rails_features: KanbanOnRails 기능
+      partners_and_investors: 우리는 협력을 위해 개방하고 우리는 투자자를 찾을 싶습니다. 당신이 우리와 함께 협력하려는 경우
+        partnership@technoelegance.com로 문의하시기 바랍니다
+  devise:
+    shared:
+      links:
+        sign_in: 로그인
+        sign_up: 가입
+        didnt_receive_confirmation_instructions: 는 확인 지시를 받았습니다하지 않았다?
+        fast_login_almost_one_click: 빠른 로그인 (거의 한 번의 클릭)
+    confirmations:
+      send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 귀하의
+        계정을 확인하는 방법에 대한 지침 이메일을 받게됩니다.
+      new:
+        send_mail_for_confirm_your_email: 확인 이메일 메일 보내기
+        submit: 제출
+    failure:
+      invalid: 잘못된 이메일 또는 암호를 입력합니다.
+      last_attempt: "."
+      not_found_in_database: 잘못된 이메일 또는 암호를 입력합니다.
+    mailer:
+      confirmation_instructions:
+        subject: 확인 지침
+        confirm_my_account: 내 이메일을 확인
+      reset_password_instructions:
+        hello: 안녕하세요.
+        subject: 재설정 암호 지침
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: 누군가가
+          요청을 암호를 변경할 수있는 링크가 있습니다. 당신은 아래의 링크를 통해이 작업을 수행 할 수 있습니다.
+        if_you_didnt_request_this_please_ignore_this_email: 이이 이메일을 무시하세요 요청하지 않은
+          경우.
+      unlock_instructions:
+        subject: 잠금 해제 지침
+    omniauth_callbacks:
+      failure: 는 % {종류} "% {} 이유"때문에 당신을 인증 할 수 없습니다.
+      success: 성공적 % {종류} 계정에서 인증.
+    passwords:
+      send_instructions: "."
+      send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 당신의
+        이메일 주소로 비밀번호 복구 링크를 받게됩니다.
+      new:
+        forgot_your_password: 비밀번호를 복구
+        reset_password: 보내기 URL을 복구
+      edit:
+        change_your_password: 비밀번호를 변경
+        new_password: 새로운 암호
+        confirm_password: 암호 확인
+        change_password: 변경
+    registrations:
+      signed_up: 에 오신 것을 환영합니다! 당신은 성공적으로 서명 하였다.
+      new:
+        sign_up: 가입
+        name: 이름
+        password: 비밀
+        password_confirmation: 비밀번호 확인
+        register: 가입
+    sessions:
+      signed_in: 는 성공적으로 체결.
+      signed_out: 는 성공적으로 체결.
+      new:
+        sign_in: 로그인
+        password: 비밀
+        remember_me: 나를 기억
+        forgot_your_password: 비밀번호를 잊어 버렸습니까?
+    unlocks:
+      send_instructions: "."
+  ko: ko
+  ko_iso: ko

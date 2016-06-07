@@ -1,0 +1,297 @@
+---
+ur:
+  github: Github کے
+  bitbucket: Bitbucket
+  updated: اپ ڈیٹ
+  shared:
+    navbar:
+      sign_in: کیجئے
+      sign_up: سائن اپ کریں
+      projects: پروجیکٹس
+      issues: مسائل
+      syncing_with_github: Github کے ساتھ مطابقت پذیری ...
+      syncing_with_bitbucket: Bitbucket ساتھ مطابقت پذیری ...
+      new_issue: نیا مسئلہ
+    languages_select_modal:
+      available_languages: دستیاب زبانوں
+    user_edit_menu:
+      profile: پروفائل
+      site_settings: سائٹ کی ترتیبات
+      services: سروسز
+    form_errors:
+      password: پاس ورڈ
+      current_password: موجودہ پاس ورڈ
+      password_confirmation: پاس ورڈ تصدیق
+      name: نام
+      base: بیس
+      title: سرخی
+      user_to_project_connection: کنکشن پیش کرنے صارف
+      columns:
+        tag: ٹیگ اتیویاپی
+    new_project_modal:
+      new_project: نئے منصوبے
+    new_issue_modal:
+      new_issue: نیا مسئلہ
+    left_sidebar:
+      projects: پروجیکٹس
+    right_sidebar:
+      news: خبریں
+      all: تمام
+      read_more: مزید پڑھیں
+    translations:
+      select_column_tags: منتخب کالم ٹیگز
+      select_section_tags: منتخب سیکشن ٹیگز
+      select_issue_tags: منتخب کریں معاملے ٹیگز
+  users:
+    new:
+      invite_user: صارف کو مدعو کریں
+    form:
+      name: نام
+      enter_user_name: صارف نام درج کریں
+      email: کوارسال کریں
+      enter_user_email: صارف کا ای میل درج کریں
+      enter_user_password: صارف کے پاس ورڈ درج کریں
+      password: پاس ورڈ
+      role: یوزر کردار
+      save: محفوظ کریں
+    index:
+      project: پروجیکٹ
+      users: صارفین
+      new: نیا
+    edit:
+      name: نام
+      enter_your_name: اپنا نام درج
+      save: محفوظ کریں
+    settings:
+      interface_language: انٹرفیس کی زبان
+      submit: جمع کرائیں
+    password_form:
+      new_password: نیا پاس ورڈ
+      confirm_new_password: نئے پاس ورڈ کی توثیق کریں
+      old_password: پرانا پاس ورڈ
+    update:
+      your_profile_was_successfully_updated: کامیابی سے اپ ڈیٹ کر دیا گیا تھا
+    dashboard:
+      hello: ہیلو
+      here_some_of_your_statistics: یہاں آپ کے اعداد و شمار میں سے کچھ
+      projects: پروجیکٹس
+  projects:
+    index:
+      projects: پروجیکٹس
+      new: نیا
+      sync_with_github: گاٹہوب ساتھ مطابقت پذیری
+      sync_with_bitbucket: bitbucket ساتھ مطابقت پذیری
+      stop_sync_with_bitbucket: bitbucket ساتھ روکنے کی مطابقت پذیری
+      stop_sync_with_github: گاٹہوب ساتھ روکنے کی مطابقت پذیری
+    form:
+      name: نام
+      enter_project_name: پراجیکٹ کا نام درج کریں
+      save: محفوظ کریں
+      columns: کالم
+      sections: حصے
+      column_name: صف کے نام
+      section_name: حصے کا نام
+      add: شامل کریں
+      column_width: کالم کی چوڑائی
+      column_height: کالم اونچائی
+      github_repository_id: Github کے مخزن ID
+      github_full_name: Github کے مخزن FULLNAME
+      github_secret_token_for_hook: ہک لئے Github کے سیکرٹ ٹوکن
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: ہک لئے Bitbucket سیکرٹ ٹوکن
+    project:
+      edit: ترمیم کریں
+      destroy: چھپانا
+      project_issues: پروجیکٹ مسائل
+      project_users: پروجیکٹ صارفین
+    section_fields:
+      section_name: حصے کا نام
+      remove_section: ہٹائیں سیکشن
+      section_tags: دفعہ ٹیگز
+      section_order: آرڈر
+      or_include_all: یا تمام شامل ہیں؟
+    column_fields:
+      column_name: کالم کا نام
+      remove_column: کالم کو ہٹا دیں
+      max_issues_count: میکس مسائل کالم میں شمار
+      column_tags: کالم ٹیگز
+      column_order: آرڈر
+    show:
+      next_page: اگلا صفحہ
+  issues:
+    form:
+      title: سرخی
+      enter_issue_title: مسئلہ عنوان درج کریں
+      save: محفوظ کریں
+      body: عبارت
+      enter_issue_body: اجرا جسم میں داخل
+      tags: ٹیگز
+      issue_order: آرڈر
+      bitbucket_issue_id: Bitbucket ایشو کی شناخت
+      github_issue_id: Github کے ایشو کی شناخت
+      github_issue_number: Github کے جاری تعداد
+    index:
+      issues: مسائل
+      sync_with_github: گاٹہوب ساتھ مطابقت پذیری
+      sync_with_bitbucket: bitbucket ساتھ مطابقت پذیری
+      new: نیا
+    issue:
+      destroy: چھپانا
+      edit: ترمیم کریں
+    new:
+      new_issue: نیا مسئلہ
+  authentications:
+    index:
+      enabled_services: سہولت مہیا کی خدمات
+    authentication:
+      turned_off: بند کر دیا گیا
+      turn_on: آن کریں
+      turn_off: کو بند کر دیں
+      turned_on: کر دیا گیا
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: "!"
+      we_have_just_launched_our_service_text: آج ہم اپنے سروس شروع تو سب کر سکتے ہیں
+      sign_up: سائن اپ
+      and_use_it: اور اس کا استعمال.
+      with_love: محبت کے ساتھ،
+      technoelegance_team: Technoelegance ٹیم
+    index:
+      read_more: مزید پڑھیں
+  welcome:
+    index:
+      welcome_about_text: آپ Github کے یا Bitbucket ساتھ آپ کے اپنے Kanban بورڈ اور
+        مطابقت پذیری تشکیل دے سکتے ہیں
+  pages:
+    faq:
+      faq: عمومی سوالات
+      what_is_kanban_on_rails: KanbanOnRails کیا ہے؟
+      about_kanban_on_rails: KanbanOnRails سروس آپ Github کے یا Bitbucket ساتھ Kanban
+        بورڈز اسے تخلیق اور مطابقت پذیر کر سکتے ہیں ہے
+      what_features_has_kanban_on_rails: کیا خصوصیات KanbanOnRails ہے؟
+      kanban_on_rails_features: "، github اور Bitbucket کے ساتھ اپنے منصوبوں اور مسائل
+        کی مطابقت پذیری، اپنے منصوبے کے لئے صارفین (مثال کے مینیجرز کے لئے) مدعو کر
+        سکتے ہیں آپ کے اپنے سرور سے تعینات"
+      i_have_some_requests: میں کچھ درخواستوں ہے
+      you_can_write_request: آپ سے درخواست لکھ سکتے ہیں
+      here: یہاں
+      i_have_seen_some_typo_or_wrong_translation: میں کچھ typos یا غلط ترجمہ دیکھ
+        چکے ہیں
+      you_can_send_pull_request_to_our: ہمارے
+      github_repository: گاٹہوب مخزن
+      i_have_seen_some_error: میں کچھ غلطیاں دیکھا ہے
+      you_can_write_to_our_info_mail: تم ہماری ای میل کرنے کے لئے اس کے بارے میں لکھ
+        سکتے ہیں
+    about:
+      about_kanban_on_rails: KanbanOnRails بارے
+      about_kanban_on_rails_text: KanbanOnRails سروس آپ Github کے یا Bitbucket ساتھ
+        Kanban بورڈز اسے تخلیق اور مطابقت پذیر کر سکتے ہیں ہے
+      kanban_on_rails_features: KanbanOnRails کی خصوصیات
+      sync_with_github_and_bitbucket: github اور Bitbucket کے ساتھ اپنے منصوبوں اور
+        مسائل مطابقت پذیر کر سکتے
+      open_source_code: اوپن سورس کوڈ ہے، تو آپ کو آپ کے اپنے سرور پر تعینات کر سکتے
+        ہیں
+      we_use_open_source_and_high_technology: ہم اعلی ٹیکنالوجی اور اوپن سورس لائبریریوں
+        کا استعمال. ہم نے ہمیشہ بہتر ہو اور ہماری خدمات کو بہتر بنانے کے لئے کوشش
+        کریں.
+      partners_and_investors: ہم پارٹنرشپ لئے کھل جاتے ہیں اور ہم سرمایہ کاروں کو
+        تلاش کرنے کے لئے چاہوں گا. آپ ہمارے ساتھ تعاون کرنا چاہتے ہیں تو partnership@technoelegance.com
+        ہم سے رابطہ کریں
+  devise:
+    shared:
+      links:
+        sign_up: سائن اپ کریں
+        didnt_receive_confirmation_instructions: تصدیق کی ہدایات موصول نہیں ہوا؟
+        fast_login_almost_one_click: فاسٹ لاگ ان (تقریبا ایک کلک)
+    confirmations:
+      confirmed: کامیابی سے تصدیق کی گئی تھی.
+      send_instructions: "."
+      send_paranoid_instructions: اپنا ای میل ایڈریس ہمارے ڈیٹا بیس میں موجود ہے تو،
+        آپ کو چند منٹ میں آپ کے اکاؤنٹ کی تصدیق کرنے کے بارے میں ہدایات کے ساتھ ایک
+        ای میل وصول کریں گے.
+      new:
+        send_mail_for_confirm_your_email: کی تصدیق آپ کے ای میل کے لئے ای میل بھیجیں
+        submit: جمع کرائیں
+    failure:
+      already_authenticated: پہلے سے ہی سائن ان ہیں.
+      inactive: ابھی تک چالو نہیں ہے.
+      invalid: غلط ای میل یا پاس ورڈ.
+      locked: مقفل ہے.
+      last_attempt: تم ایک اور کوشش ہے آپ کے اکاؤنٹ بند کر دیا جائے گا اس سے پہلے.
+      not_found_in_database: غلط ای میل یا پاس ورڈ.
+      timeout: کی میعاد ختم. جاری رکھنے کے لئے دوبارہ سائن کریں.
+      unauthenticated: میں سائن ان کریں یا جاری رکھنے سے پہلے سائن اپ کرنے کی ضرورت
+        ہے.
+      unconfirmed: جاری رکھنے سے پہلے اپنے اکاؤنٹ کی تصدیق کرنے کے لئے ہے.
+    mailer:
+      confirmation_instructions:
+        subject: تصدیق کی ہدایات
+        you_can_confirm_your_account_email_through_the_link_below: آپ ذیل لنک کے ذریعے
+          آپ کے ای میل کی تصدیق کر سکتے
+        confirm_my_account: میری ای میل کی تصدیق کریں
+      reset_password_instructions:
+        hello: ہیلو
+        subject: ری سیٹ پاس ورڈ کی ہدایات
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: کسی
+          نے درخواستوں اپنا پاس ورڈ تبدیل کرنے کے لئے ایک لنک ہے. آپ نیچے دیئے گئے
+          لنک کے ذریعے ایسا کر سکتے ہیں.
+        change_my_password: اپنا پاس ورڈ تبدیل کریں
+        if_you_didnt_request_this_please_ignore_this_email: آپ سے درخواست نہیں کی
+          ہے تو اس کو یہ ای میل کو نظر انداز کریں.
+      unlock_instructions:
+        subject: انلاک ہدایات
+    omniauth_callbacks:
+      failure: سے٪ {قسم} کیونکہ "٪ {وجہ}" آپ کی تصدیق نہیں ہو سکی.
+      success: کامیابی٪ {قسم} اکاؤنٹ سے توثیق.
+    passwords:
+      no_token: ایک پاس ورڈ دوبارہ ترتیب دینے کی ای میل سے آئے بغیر اس صفحہ تک رسائی
+        نہیں کر سکتے. آپ کو ایک ای میل کے پاس ورڈ دوبارہ ترتیب سے آئے ہیں تو، براہ
+        کرم آپ کو مکمل URL فراہم کی استعمال کیا یقینی بنائیں.
+      send_instructions: "."
+      send_paranoid_instructions: اپنا ای میل ایڈریس ہمارے ڈیٹا بیس میں موجود ہے تو،
+        آپ کو چند منٹ میں آپ کے ای میل ایڈریس پر ایک پاس ورڈ وصولی لنک ملے گا.
+      updated: کامیابی سے تبدیل کر دیا گیا تھا. اب آپ سائن ان ہیں.
+      updated_not_active: کامیابی سے تبدیل کر دیا گیا تھا.
+      new:
+        forgot_your_password: اپنا پاس ورڈ کی یاد دلانا
+        reset_password: اپنا یو آر ایل کی وصولی
+      edit:
+        change_your_password: اپنا پاس ورڈ تبدیل کریں
+        new_password: نیا پاس ورڈ
+        confirm_password: پاس ورڈ کی توثیق
+        change_password: بدلیں
+    registrations:
+      destroyed: "! آپ کے اکاؤنٹ کو کامیابی سے منسوخ کر دیا گیا. ہم جلد ہی آپ کو دوبارہ
+        دیکھ کر امید ہے."
+      signed_up: آمدید! آپ نے کامیابی پر دستخط کئے ہیں.
+      signed_up_but_inactive: کامیابی پر دستخط کئے ہیں. تاہم، ہم اس وجہ سے آپ کے اکاؤنٹ
+        ابھی تک چالو نہیں کیا گیا ہے جو آپ کے دستخط نہیں کر سکتے.
+      signed_up_but_locked: کامیابی پر دستخط کئے ہیں. تاہم، ہم اس وجہ سے آپ کے اکاؤنٹ
+        بند کر دیا ہے آپ سائن ان نہیں کر سکا.
+      signed_up_but_unconfirmed: آپ کے ای میل ایڈریس پر بھیج دیا گیا ہے. اپنے اکاؤنٹ
+        کو چالو کرنے کے لئے لنک کھولنے کریں.
+      update_needs_confirmation: آپ نے کامیابی سے اپنے اکاؤنٹ سے اپ ڈیٹ کیا ہے، لیکن
+        ہم اپنے نئے ای میل ایڈریس کی تصدیق کرنے کی ضرورت ہے. اپنا ای میل چیک کریں
+        اور اپنے نئے ای میل ایڈریس کی تصدیق حتمی شکل کی تصدیق کے لنک پر کلک کریں براہ
+        مہربانی.
+      updated: آپ نے کامیابی سے اپنے اکاؤنٹ کو اپ ڈیٹ.
+      new:
+        sign_up: سائن اپ کریں
+        name: نام
+        password: پاس ورڈ
+        password_confirmation: پاس ورڈ تصدیق
+        register: سائن اپ کریں
+    sessions:
+      signed_in: کامیابی سائن ان.
+      signed_out: کامیابی سے دستخط کئے گئے.
+      new:
+        password: پاس ورڈ
+        remember_me: مجھے یاد رکھیں
+        forgot_your_password: اپنا پاس ورڈ بھول گئے ہیں؟
+    unlocks:
+      send_instructions: "."
+      send_paranoid_instructions: اپنے اکاؤنٹ موجود ہے تو، آپ کو چند منٹ میں اس کو
+        غیر مقفل کرنے کے بارے میں ہدایات کے ساتھ ایک ای میل وصول کریں گے.
+      unlocked: کامیابی سے کھلا کیا گیا ہے. جاری رکھنے کیلئے سائن ان کریں.
+  ur: ur
+  ur_iso: ur

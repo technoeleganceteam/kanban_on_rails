@@ -1,0 +1,305 @@
+---
+nn:
+  github: Github
+  bitbucket: BitBucket
+  updated: bijgewerkt
+  1_we_have_just_launched_our_service_title: We hebben zopas onze service
+  shared:
+    navbar:
+      sign_in: Inloggen
+      sign_up: Registreren
+      projects: Projecten
+      issues: Issues
+      syncing_with_github: Synchroniseren met Github ...
+      syncing_with_bitbucket: Synchroniseren met BitBucket ...
+      new_issue: Nieuwe editie
+    languages_select_modal:
+      available_languages: Beschikbare talen
+    user_edit_menu:
+      profile: Profiel
+      site_settings: Site-instellingen
+      services: Services
+    form_errors:
+      password: Password
+      current_password: Huidig ​​wachtwoord
+      password_confirmation: Wachtwoord bevestigen
+      name: Naam
+      base: Base
+      title: Titel
+      user_to_project_connection: gebruiker om verbinding te projecteren
+      columns:
+        tag: Tag overlapping
+    new_project_modal:
+      new_project: Nieuw project
+    new_issue_modal:
+      new_issue: Nieuwe editie
+    left_sidebar:
+      projects: Projecten
+    right_sidebar:
+      news: Nieuws
+      all: Alle
+      read_more: Lees verder
+    translations:
+      select_column_tags: Select kolom-tags
+      select_section_tags: Select sectie-tags
+      select_issue_tags: Select kwestie-tags
+  users:
+    new:
+      invite_user: Nodig gebruiker
+    form:
+      name: Naam
+      enter_user_name: Typ uw gebruikersnaam
+      email: Email
+      enter_user_email: Vul gebruiker e-mail
+      enter_user_password: Voer gebruikerswachtwoord
+      password: Password
+      role: Gebruiker rol
+      save: Save
+    index:
+      project: Project
+      users: gebruikers
+      new: Nieuwe
+    edit:
+      name: Naam
+      enter_your_name: Geef je naam
+      save: Save
+    settings:
+      interface_language: Interface taal
+      submit: Submit
+    password_form:
+      new_password: Nieuw wachtwoord
+      confirm_new_password: Bevestig nieuw wachtwoord
+      old_password: Oud wachtwoord
+    update:
+      your_profile_was_successfully_updated: Je profiel is bijgewerkt
+    dashboard:
+      hello: Hallo
+      here_some_of_your_statistics: Hier een aantal van uw statistieken
+      projects: Projecten
+  projects:
+    index:
+      projects: Projecten
+      new: Nieuwe
+      sync_with_github: Synchroniseren met github
+      sync_with_bitbucket: Synchroniseren met BitBucket
+      stop_sync_with_bitbucket: Stop sync met BitBucket
+      stop_sync_with_github: Stop sync met github
+    form:
+      name: Naam
+      enter_project_name: Voer de naam van het project
+      save: Save
+      columns: Columns
+      sections: Secties
+      section_name: Sectie naam
+      add: Add
+      column_width: Kolombreedte
+      column_height: Zuilhoogte
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Github geheime token voor de haak
+      bitbucket_full_name: BitBucket fullname
+      bitbucket_secret_token_for_hook: BitBucket geheime token voor de haak
+    project:
+      edit: Bewerken
+      destroy: verwijderen
+      project_issues: Project issues
+      project_users: Project gebruikers
+    section_fields:
+      section_name: Sectie naam
+      section_tags: Sectie-tags
+      section_order: Bestel
+      or_include_all: Of omvatten alle?
+    column_fields:
+      column_name: Kolomnaam
+      remove_column: Verwijder kolom
+      max_issues_count: Max kwesties tellen in kolom
+      column_tags: Column-tags
+      column_order: Bestel
+    show:
+      next_page: Volgende pagina
+  issues:
+    form:
+      title: Titel
+      enter_issue_title: Enter kwestie titel
+      save: Save
+      body: Body
+      enter_issue_body: Enter kwestie lichaam
+      tags: Tags
+      issue_order: Bestel
+      bitbucket_issue_id: BitBucket kwestie id
+      github_issue_id: Github kwestie id
+      github_issue_number: Github nummer van afgifte
+    index:
+      issues: kwesties
+      sync_with_github: Synchroniseren met github
+      sync_with_bitbucket: Synchroniseren met BitBucket
+      new: Nieuwe
+    issue:
+      destroy: verwijderen
+      edit: Bewerken
+    new:
+      new_issue: Nieuwe editie
+  authentications:
+    index:
+      enabled_services: Enabled diensten
+    authentication:
+      turned_off: Uitgeschakeld
+      turn_on: inschakelen
+      turn_off: uitschakelen
+      turned_on: Ingeschakeld
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: We hebben zopas onze service!
+      we_have_just_launched_our_service_text: Vandaag lanceren we onze service, zodat
+        iedereen kan
+      sign_up: aanmelden
+      and_use_it: en gebruiken.
+      with_love: Met liefde,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Al het nieuws
+      read_more: Lees verder
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Welcome to Kanban On Rails
+      welcome_about_text: Hier kunt u uw eigen Kanban board en synchroniseren kunt
+        maken met Github of BitBucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Wat is KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails is de service waar u Kanban borden met
+        Github of BitBucket kunt maken en synchroniseren
+      what_features_has_kanban_on_rails: Welke functies heeft KanbanOnRails?
+      kanban_on_rails_features: U kunt uw projecten en problemen met Github en BitBucket
+        synchroniseren, nodigen de gebruikers (bijvoorbeeld managers) voor uw project,
+        implementeren om uw eigen server
+      i_have_some_requests: Ik heb een aantal verzoeken
+      you_can_write_request: U kunt de aanvraag schrijven
+      here: hier
+      i_have_seen_some_typo_or_wrong_translation: Ik heb een aantal typefouten of
+        verkeerde vertalingen gezien
+      you_can_send_pull_request_to_our: U kunt pull verzoek sturen naar onze
+      github_repository: GitHub repository
+      i_have_seen_some_error: Ik heb een aantal fouten gezien
+      you_can_write_to_our_info_mail: U kunt schrijven over dit op onze e-mail
+    about:
+      about_kanban_on_rails: Over KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails is de service waar u Kanban borden
+        met Github of BitBucket kunt maken en synchroniseren
+      kanban_on_rails_features: KanbanOnRails functies
+      sync_with_github_and_bitbucket: U kunt uw projecten en problemen met Github
+        en BitBucket synchroniseren
+      invite_users: U kunt gebruikers (bijvoorbeeld managers) voor uw project uit
+        te nodigen
+      open_source_code: Dit project heeft open source-code, dus je kunt inzetten om
+        uw eigen server
+      we_use_open_source_and_high_technology: We maken gebruik van hoogwaardige technologieën
+        en open source libraries. We proberen altijd beter te worden en het verbeteren
+        van onze service.
+      partners_and_investors: Wij zijn geopend voor het partnerschap en we willen
+        investeerders te vinden. Als u wilt samenwerken met ons neem contact met ons
+        op partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Inloggen
+        sign_up: Registreren
+        didnt_receive_confirmation_instructions: Niet ontvangen bevestiging instructies?
+        sign_in_with: Log in met
+        fast_login_almost_one_click: Fast login (Bijna één klik)
+    confirmations:
+      confirmed: Je account werd met succes bevestigd.
+      send_instructions: U ontvangt een e-mail met instructies over hoe u uw account
+        in een paar minuten te bevestigen.
+      send_paranoid_instructions: Als uw e-mailadres bestaat in onze database, ontvangt
+        u een e-mail met instructies over hoe u uw account in een paar minuten te
+        bevestigen.
+      new:
+        send_mail_for_confirm_your_email: Mail voor bevestiging van uw e-mail
+        submit: Submit
+    failure:
+      already_authenticated: Je bent al aangemeld.
+      inactive: Je account is nog niet geactiveerd.
+      invalid: Ongeldig e-mailadres of wachtwoord.
+      locked: Je account is geblokkeerd.
+      last_attempt: Je hebt nog één poging voordat uw account wordt geblokkeerd.
+      not_found_in_database: Ongeldig e-mailadres of wachtwoord.
+      timeout: Uw sessie verlopen. Meld u aan om verder te gaan.
+      unauthenticated: Je moet inloggen of registreren voordat u verder gaat.
+      unconfirmed: U moet uw account te bevestigen alvorens verder te gaan.
+    mailer:
+      confirmation_instructions:
+        subject: Bevestiging instructies
+        welcome_to_kanban_on_rails: Welkom bij KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: U kunt uw e-mail
+          te bevestigen via onderstaande link
+        confirm_my_account: bevestigen mijn Email
+      reset_password_instructions:
+        hello: Hallo
+        subject: Reset wachtwoord instructies
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Iemand
+          moet verzoeken een link om uw wachtwoord te wijzigen. U kunt dit doen via
+          onderstaande link.
+        change_my_password: Mijn wachtwoord wijzigen
+        if_you_didnt_request_this_please_ignore_this_email: Als u niet vragen dit
+          negeer deze e-mail.
+      unlock_instructions:
+        subject: Unlock Instructies
+    omniauth_callbacks:
+      failure: Kunt u niet verifiëren van% {soort} omdat "% {} reden".
+      success: succesvol geauthenticeerd van% {soort} account.
+    passwords:
+      no_token: U kunt deze pagina niet openen zonder uit een wachtwoord reset e-mail.
+        Als je komt uit een wachtwoord reset e-mail, zorg ervoor dat u de volledige
+        URL gebruikt.
+      send_instructions: U ontvangt een e-mail met instructies over hoe u uw wachtwoord
+        opnieuw in een paar minuten.
+      send_paranoid_instructions: Als uw e-mailadres bestaat in onze database, krijgt
+        u een password recovery link aan uw e-mailadres te ontvangen in een paar minuten.
+      updated: Uw wachtwoord werd met succes gewijzigd. U bent nu aangemeld.
+      updated_not_active: Uw wachtwoord werd met succes gewijzigd.
+      new:
+        forgot_your_password: Herstel uw wachtwoord
+        reset_password: Send herstellen url
+      edit:
+        change_your_password: Wijzig uw wachtwoord
+        new_password: Nieuw wachtwoord
+        confirm_password: Wachtwoord bevestigen
+        change_password: Change
+    registrations:
+      destroyed: Bye! Je account is succesvol geannuleerd. Wij hopen u binnenkort
+        weer te zien.
+      signed_up: Welkom! U heeft zich aangemeld.
+      signed_up_but_inactive: U heeft zich aangemeld. Echter, we konden u niet aanmelden
+        omdat uw account nog niet is geactiveerd.
+      signed_up_but_locked: U heeft zich aangemeld. Echter, we konden u niet aanmelden
+        omdat uw account is geblokkeerd.
+      signed_up_but_unconfirmed: Een bericht met een bevestigingslink is verzonden
+        naar uw e-mailadres. Open de link om je account te activeren.
+      update_needs_confirmation: Je uw account bijgewerkt, maar we moeten uw nieuwe
+        e-mailadres te verifiëren. Controleer uw e-mail en klik op de bevestiging
+        link naar ronden bevestiging van uw nieuwe e-mailadres.
+      updated: Je uw account bijgewerkt met succes.
+      new:
+        sign_up: Registreren
+        name: Naam
+        password: Password
+        password_confirmation: Wachtwoord bevestigen
+        register: Registreren
+    sessions:
+      signed_in: Ondertekend in succes.
+      signed_out: Ondertekend met succes.
+      new:
+        sign_in: Inloggen
+        password: Password
+        remember_me: Remember me
+        forgot_your_password: Wachtwoord vergeten?
+    unlocks:
+      send_instructions: U ontvangt een e-mail met instructies over hoe u uw account
+        in een paar minuten te ontgrendelen.
+      send_paranoid_instructions: Als uw account bestaat, ontvangt u een e-mail met
+        instructies over hoe om het te maken in een paar minuten.
+      unlocked: Je account is succesvol ontgrendeld. Meld u aan om door te gaan.
+  nn: nn
+  nn_iso: nn

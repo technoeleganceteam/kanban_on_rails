@@ -1,0 +1,8 @@
+/.bundle
+/log/*.log
+/tmp
+/coverage
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

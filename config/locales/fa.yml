@@ -1,0 +1,295 @@
+---
+fa:
+  github: گیتهاب
+  bitbucket: Bitbucket
+  updated: به روز
+  1_we_have_just_launched_our_service_title: ما فقط راه اندازی خدمات ما
+  shared:
+    navbar:
+      sign_in: ورود
+      sign_up: ثبت نام
+      projects: پروژه
+      issues: مسائل
+      syncing_with_github: همگام سازی با گیتهاب ...
+      syncing_with_bitbucket: همگام سازی با Bitbucket ...
+      new_issue: موضوع جدید
+      edit_project: پروژه ویرایش
+    languages_select_modal:
+      available_languages: زبان های موجود
+    user_edit_menu:
+      profile: مشخصات
+      site_settings: تنظیمات سایت
+      services: خدمات
+    form_errors:
+      password: رمز عبور
+      current_password: کلمه عبور فعلی
+      name: نام
+      base: پایه
+      title: عنوان
+      user_to_project_connection: کاربر به پروژه اتصال
+      columns:
+        tag: برچسب با هم تداخل دارند
+    new_project_modal:
+      new_project: پروژه جدید
+    edit_project_modal:
+      edit_project: پروژه ویرایش
+    new_issue_modal:
+      new_issue: موضوع جدید
+    left_sidebar:
+      projects: پروژه
+    right_sidebar:
+      news: اخبار
+      all: همه
+      read_more: ادامه مطلب
+    translations:
+      select_column_tags: انتخاب
+      select_section_tags: انتخاب
+      select_issue_tags: برچسب ها موضوع را انتخاب کنید
+  users:
+    new:
+      invite_user: دعوت از کاربر
+    form:
+      name: نام
+      email: ایمیل
+      enter_user_password: رمز عبور کاربر را وارد کنید
+      password: رمز عبور
+      save: ذخیره
+    index:
+      project: پروژه
+      users: کاربران
+      new: جدید
+    edit:
+      name: نام
+      enter_your_name: نام خود را وارد کنید
+      save: ذخیره
+    settings:
+      change_password: تغییر رمز عبور
+      interface_language: زبان رابط
+      submit: ارسال
+    password_form:
+      new_password: رمز عبور جدید
+      confirm_new_password: تکرار رمز عبور جدید
+      change_password: تغییر رمز عبور
+    update:
+      your_profile_was_successfully_updated: پروفایل شما با موفقیت به روز شد
+    dashboard:
+      hello: سلام
+      here_some_of_your_statistics: اینجا برخی از آمار خود را
+      projects: پروژه
+  projects:
+    index:
+      projects: پروژه
+      new: جدید
+      sync_with_github: همگام سازی با GitHub
+      sync_with_bitbucket: همگام سازی با bitbucket
+      stop_sync_with_bitbucket: توقف همگامسازی با bitbucket
+      stop_sync_with_github: توقف همگامسازی با GitHub
+    form:
+      name: نام
+      enter_project_name: نام پروژه را وارد کنید
+      save: ذخیره
+      columns: ستون
+      sections: بخش
+      add: اضافه
+      github_repository_id: گیتهاب شناسه مخزن
+      github_full_name: گیتهاب نام کامل مخزن
+      github_secret_token_for_hook: گیتهاب رمز مخفی برای قلاب
+      bitbucket_full_name: Bitbucket نام کامل
+      bitbucket_secret_token_for_hook: Bitbucket رمز مخفی برای قلاب
+    project:
+      edit: ویرایش
+      destroy: حذف
+      project_issues: مسائل پروژه
+      project_users: کاربران پروژه
+    section_fields:
+      section_tags: بخش برچسب ها
+      section_order: سفارش
+      or_include_all: یا شامل همه؟
+    column_fields:
+      remove_column: حذف ستون
+      max_issues_count: مسائل حداکثر در تعداد ستون
+      column_tags: برچسب ها ستون
+      column_order: سفارش
+    show:
+      next_page: صفحه بعدی
+  issues:
+    form:
+      title: عنوان
+      enter_issue_title: را وارد کنید
+      save: ذخیره
+      body: بدن
+      enter_issue_body: را وارد کنید
+      tags: برچسب ها
+      issue_order: سفارش
+      bitbucket_issue_id: Bitbucket شناسه موضوع
+      github_issue_id: گیتهاب شناسه موضوع
+      github_issue_number: گیتهاب تعداد موضوع
+    index:
+      issues: مسائل
+      sync_with_github: همگام سازی با GitHub
+      sync_with_bitbucket: همگام سازی با bitbucket
+      new: جدید
+    issue:
+      destroy: حذف
+      edit: ویرایش
+    new:
+      new_issue: موضوع جدید
+  authentications:
+    index:
+      enabled_services: خدمات فعال
+    authentication:
+      turned_off: خاموش
+      turn_on: روشن
+      turn_off: خاموش
+      turned_on: روشن
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: ما فقط راه اندازی سرویس های ما!
+      we_have_just_launched_our_service_text: امروز ما خدمات ما راه اندازی، بنابراین
+        هر کس می تواند
+      sign_up: ثبت نام
+      and_use_it: و استفاده از آن.
+      with_love: با عشق،
+      technoelegance_team: Technoelegance تیم
+    index:
+      all_news: اخبار
+      read_more: ادامه مطلب
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: به Kanban و در آهن خوش آمدید
+      welcome_about_text: اینجا شما می توانید هیئت مدیره Kanban خود و همگام سازی آن
+        با گیتهاب یا Bitbucket ایجاد
+  pages:
+    faq:
+      what_is_kanban_on_rails: KanbanOnRails چیست؟
+      about_kanban_on_rails: KanbanOnRails خدمات که در آن شما می توانید از تخته Kanban
+        و با GitHub یا Bitbucket ایجاد و همگام سازی آن است
+      what_features_has_kanban_on_rails: چه ویژگی های دارد KanbanOnRails؟
+      kanban_on_rails_features: شما می توانید پروژه ها و مسائل خود را با GitHub و
+        Bitbucket همگام، دعوت از کاربران (برای مدیران به عنوان مثال) برای پروژه خود
+        را، استقرار آن را به سرور خود را
+      i_have_some_requests: من برخی از درخواست ها
+      you_can_write_request: شما می توانید درخواست ارسال
+      here: اینجا
+      i_have_seen_some_typo_or_wrong_translation: من را دیده اند، برخی از غلط املایی
+        و یا ترجمه اشتباه
+      you_can_send_pull_request_to_our: شما می توانید درخواست کشش به ارسال ما
+      i_have_seen_some_error: من را دیده اند، برخی از اشتباهات
+      you_can_write_to_our_info_mail: شما می توانید در مورد این را به ایمیل ما ارسال
+    about:
+      about_kanban_on_rails: درباره KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails خدمات که در آن شما می توانید از تخته
+        Kanban و با GitHub یا Bitbucket ایجاد و همگام سازی آن است
+      kanban_on_rails_features: ویژگی های KanbanOnRails
+      sync_with_github_and_bitbucket: شما می توانید پروژه ها و مسائل خود را با GitHub
+        و Bitbucket همگام
+      invite_users: شما می توانید کاربران (برای مدیران به عنوان مثال) برای پروژه خود
+        را دعوت
+      open_source_code: این پروژه دارای کد منبع باز است، بنابراین شما می توانید آن
+        را به سرور خود را استقرار
+      we_use_open_source_and_high_technology: ما با استفاده از فن آوری بالا و کتابخانه
+        منبع باز است. ما همیشه سعی کنید تا بهتر و بهبود خدمات ما.
+      partners_and_investors: ما برای همکاری باز کرد و ما دوست داریم که به پیدا کردن
+        سرمایه گذاران. اگر شما می خواهم به همکاری با ما با ما تماس بگیرید در partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: ورود
+        sign_up: ثبت نام
+        didnt_receive_confirmation_instructions: آیا دستورالعمل تایید دریافت نیست؟
+        sign_in_with: ورود به سیستم با
+        fast_login_almost_one_click: ورود سریع (تقریبا یک کلیک)
+    confirmations:
+      confirmed: حساب شما با موفقیت تایید شد.
+      send_instructions: شما یک ایمیل با دستورالعمل در مورد چگونگی اعلام حساب خود
+        را در چند دقیقه دریافت خواهید کرد.
+      send_paranoid_instructions: اگر آدرس ایمیل شما در پایگاه داده ما وجود دارد،
+        شما یک ایمیل با دستورالعمل در مورد چگونگی اعلام حساب خود را در چند دقیقه دریافت
+        خواهید کرد.
+      new:
+        send_mail_for_confirm_your_email: ارسال ایمیل برای تایید ایمیل خود را
+        submit: ارسال
+    failure:
+      already_authenticated: شما در حال حاضر در امضا کردند.
+      inactive: حساب شما هنوز فعال نشده است.
+      invalid: ایمیل نامعتبر یا رمز عبور.
+      locked: حساب شما قفل شده است.
+      last_attempt: شما باید یک بار دیگر تا قبل حساب خود را قفل شده است.
+      not_found_in_database: ایمیل نامعتبر یا رمز عبور.
+      timeout: جلسه شما منقضی شد. لطفا دوباره وارد شوید به ادامه.
+      unauthenticated: شما نیاز به سیستم وارد شوید یا ثبت نام قبل از ادامه.
+      unconfirmed: شما باید برای تایید حساب خود را قبل از ادامه.
+    mailer:
+      confirmation_instructions:
+        subject: دستورالعمل تایید
+        welcome_to_kanban_on_rails: به KanbanOnRails خوش آمدید
+        you_can_confirm_your_account_email_through_the_link_below: شما می توانید ایمیل
+          خود را از طریق لینک زیر اعلام می
+        confirm_my_account: تکرار ایمیل من
+      reset_password_instructions:
+        hello: سلام
+        subject: دستورالعمل تنظیم مجدد رمز ورود
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: کسی
+          درخواست یک لینک به تغییر رمز عبور خود را. شما می توانید این را از طریق لینک
+          زیر انجام دهید.
+        change_my_password: رمز عبور من را تغییر دهید
+        if_you_didnt_request_this_please_ignore_this_email: اگر شما درخواست که این
+          مدیر چشم پوشی از این ایمیل.
+      unlock_instructions:
+        subject: دستورالعمل باز کردن
+    omniauth_callbacks:
+      failure: تواند شما را از٪ {} نوع به دلیل "٪ {دلیل}" را authentication نماید.
+      success: موفقیت از٪ {} نوع تصدیق حساب.
+    passwords:
+      no_token: شما می توانید این صفحه را بدون از یک ایمیل تنظیم مجدد رمز عبور دسترسی
+        پیدا کنید. اگر شما از یک ایمیل تنظیم مجدد رمز عبور، لطفا مطمئن شوید که شما
+        با استفاده از URL کامل ارائه شده است.
+      send_instructions: شما یک ایمیل با دستورالعمل در مورد نحوه تنظیم مجدد رمز عبور
+        خود را در چند دقیقه دریافت خواهید کرد.
+      send_paranoid_instructions: اگر آدرس ایمیل شما در پایگاه داده ما وجود دارد،
+        شما یک لینک بازیابی رمز عبور به آدرس ایمیل خود را در چند دقیقه دریافت خواهید
+        کرد.
+      updated: رمز عبور شما موفقیت تغییر کرد. شما در حال حاضر در امضا کردند.
+      updated_not_active: رمز عبور شما موفقیت تغییر کرد.
+      new:
+        forgot_your_password: بازیابی رمز عبور خود را
+        reset_password: ارسال بازیابی آدرس
+      edit:
+        change_your_password: تغییر رمز عبور خود را
+        new_password: رمز عبور جدید
+        change_password: تغییر
+    registrations:
+      destroyed: خداحافظ! حساب شما با موفقیت لغو شد. ما امیدواریم که به شما دوباره
+        به زودی ببینید.
+      signed_up: خوش آمدید! شما موفقیت را امضا کرده اند.
+      signed_up_but_inactive: شما با موفقیت امضا کرده اند. با این حال، ما می تواند
+        شما را امضا نکند در به دلیل اینکه حساب خود را هنوز فعال نشده است.
+      signed_up_but_locked: شما با موفقیت امضا کرده اند. با این حال، ما می تواند شما
+        را امضا نکند در به دلیل اینکه حساب شما قفل شده است.
+      signed_up_but_unconfirmed: یک پیام با لینک تایید شده است به آدرس ایمیل شما ارسال
+        می شود. لطفا لینک به فعال شدن حساب خود را باز کنید.
+      update_needs_confirmation: حساب خود را بهروز موفقیت است، اما ما باید تأیید آدرس
+        ایمیل جدید خود را. لطفا ایمیل خود را چک کنید و با کلیک بر روی لینک تایید برای
+        نهایی تایید آدرس ایمیل جدید خود را.
+      updated: حساب خود را بهروز موفقیت.
+      new:
+        sign_up: ثبت نام
+        name: نام
+        password: رمز عبور
+        register: ثبت نام
+    sessions:
+      signed_in: امضا در موفقیت.
+      signed_out: خروج از موفقیت.
+      new:
+        sign_in: ورود
+        password: رمز عبور
+        remember_me: مرا به خاطر بسپار
+        forgot_your_password: رمز عبور خود را فراموش کرده اید؟
+    unlocks:
+      send_instructions: شما یک ایمیل با دستورالعمل در مورد چگونگی باز کردن حساب خود
+        را در چند دقیقه دریافت خواهید کرد.
+      send_paranoid_instructions: اگر حساب شما وجود دارد، شما یک ایمیل با دستورالعمل
+        در مورد چگونگی آن را باز در چند دقیقه دریافت خواهید کرد.
+      unlocked: حساب شما با موفقیت باز شده است. لطفا به سیستم وارد شوید به ادامه.
+  fa: fa
+  fa_iso: fa

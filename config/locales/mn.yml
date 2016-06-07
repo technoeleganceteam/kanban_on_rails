@@ -1,0 +1,285 @@
+---
+mn:
+  github: Github
+  bitbucket: Bitbucket
+  updated: шинэчлэгдсэн
+  shared:
+    navbar:
+      sign_in: Дансаа ашиглах
+      sign_up: бүртгүүлэх
+      projects: төслүүд
+      issues: асуудлууд
+      new_issue: Нью асуудал
+      edit_project: засварлах төсөл
+    languages_select_modal:
+      available_languages: Боломжит хэл
+    user_edit_menu:
+      profile: мэдээлэл
+      site_settings: Сайтын тохиргоо
+      services: үйлчилгээ
+    form_errors:
+      password: Нууц үг
+      current_password: Одоогийн нууц үг
+      password_confirmation: Нууц үг баталгаажуулах
+      name: нэр
+      base: үндсэн
+      title: нэр
+      columns:
+        tag: Tag давхардсан
+    new_project_modal:
+      new_project: Шинэ төсөл
+    edit_project_modal:
+      edit_project: засварлах төсөл
+    new_issue_modal:
+      new_issue: Нью асуудал
+    left_sidebar:
+      projects: төслүүд
+    right_sidebar:
+      news: мэдээ
+      all: мэдээлэл
+      read_more: Дэлгэрэнгүй
+    translations:
+      select_column_tags: сонгоно багана хаягууд
+      select_section_tags: сонгоно хэсэг хаягууд
+      select_issue_tags: сонгох асуудал хаягууд
+  users:
+    new:
+      invite_user: ав
+    form:
+      name: нэр
+      enter_user_name: оруулна уу
+      email: И-мэйл
+      enter_user_email: оруулна уу
+      enter_user_password: оруулна уу
+      password: Нууц үг
+      role: Хэрэглэгчийн үүрэг
+      save: Save
+    index:
+      project: төсөл
+      users: хэрэглэгчид
+      new: Нью-
+    edit:
+      name: нэр
+      enter_your_name: Та нэрээ оруулна уу
+      save: Save
+    settings:
+      interface_language: интерфэйс хэл
+      submit: оруулах
+    password_form:
+      new_password: Шинэ нууц үг
+      confirm_new_password: баталгаажуулна
+      old_password: Хуучин нууц үг
+    update:
+      your_profile_was_successfully_updated: амжилттай шинэчлэгдсэн
+    dashboard:
+      hello: Сайн байна уу
+      projects: төслүүд
+  projects:
+    index:
+      projects: төслүүд
+      new: Нью-
+    form:
+      name: нэр
+      enter_project_name: төсөл нэрийг оруулна уу
+      save: Save
+      columns: багана
+      sections: Бүлэг
+      column_name: Мөр нэр
+      section_name: Хэсэг нэр
+      add: нэмэх
+      column_width: Багана өргөн
+      column_height: Багана өндөр
+      github_repository_id: Github архивын дугаар
+      github_full_name: Github архивын fullname
+      bitbucket_full_name: Bitbucket fullname
+    project:
+      edit: Засварлах
+      destroy: устгах
+      project_issues: Төслийн асуудлууд
+      project_users: Төслийн хэрэглэгчид
+    section_fields:
+      section_name: Хэсэг нэр
+      remove_section: Remove хэсэг
+      section_tags: хэсэг хаягууд
+      section_order: захиалах
+      or_include_all: Эсвэл бүх багтаасан?
+    column_fields:
+      column_name: Багана нэр
+      remove_column: ав
+      max_issues_count: Макс асуудал баганаас тоолох
+      column_tags: Багана хаягууд
+      column_order: захиалах
+    show:
+      next_page: Дараагийн хуудас
+  issues:
+    form:
+      title: нэр
+      enter_issue_title: оруулна уу
+      save: Save
+      body: байгууллага
+      enter_issue_body: оруулна уу
+      tags: хаягууд
+      issue_order: захиалах
+      bitbucket_issue_id: Bitbucket асуудал дугаар
+      github_issue_id: Github асуудал дугаар
+      github_issue_number: Github асуудал тоо
+    index:
+      issues: асуудлууд
+      new: Нью-
+    issue:
+      destroy: устгах
+      edit: Засварлах
+    edit:
+      edit_issue: Засах асуудал
+    new:
+      new_issue: Нью асуудал
+  authentications:
+    index:
+      enabled_services: идэвхжсэн үйлчилгээ
+    authentication:
+      turned_off: унтраасан
+      turn_on: асаана
+      turn_off: унтрааж
+      turned_on: дээр болсон
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: "!"
+      we_have_just_launched_our_service_text: Өнөөдөр бид үйлчилгээг эхлүүлэх болохоор
+        хүн бүр болно
+      sign_up: дээр гарын үсэг зурах
+      and_use_it: ", түүнийг ашиглах хэрэгтэй."
+      with_love: хайр нь,
+      technoelegance_team: Technoelegance баг
+    index:
+      all_news: мэдээлэл мэдээ
+      read_more: Дэлгэрэнгүй
+  pages:
+    faq:
+      faq: Тусламж
+      what_is_kanban_on_rails: KanbanOnRails гэж юу вэ?
+      about_kanban_on_rails: KanbanOnRails үйлчилгээ Та Github эсвэл Bitbucket нь
+        Kanban самбар бий болгох, зурах болно л юм
+      what_features_has_kanban_on_rails: онцлог нь юу KanbanOnRails байна вэ?
+      kanban_on_rails_features: ", Github болон Bitbucket нь таны төсөл, асуудлыг
+        синхрон болно таны төслийн хэрэглэгч (жишээ нь менежерүүдийн хувьд) урьж,
+        өөрийн серверт байрлуулах"
+      i_have_some_requests: Би зарим нэг хүсэлт байна
+      here: энд
+      i_have_seen_some_typo_or_wrong_translation: Би зарим нэг алдаа, буруу орчуулга
+        үзсэн
+      you_can_send_pull_request_to_our: манай
+      github_repository: github архивын
+      i_have_seen_some_error: Би зарим нэг алдаа үзсэн
+    about:
+      about_kanban_on_rails: KanbanOnRails тухай
+      about_kanban_on_rails_text: KanbanOnRails үйлчилгээ Та Github эсвэл Bitbucket
+        нь Kanban самбар бий болгох, зурах болно л юм
+      kanban_on_rails_features: KanbanOnRails онцлог
+      sync_with_github_and_bitbucket: Github болон Bitbucket нь таны төсөл, асуудлыг
+        синхрон болно
+      invite_users: урьж болно
+      open_source_code: нээлттэй эх кодтой байдаг, тиймээс та өөрийн сервер дээр байрлуулах
+        болно
+      we_use_open_source_and_high_technology: Бид өндөр технологи, нээлттэй эх сангуудыг
+        ашиглана уу. Бид үргэлж сайн авч, манай үйлчилгээг сайжруулах гэж оролддог.
+      partners_and_investors: Бид хамтран нээсэн, бид хөрөнгө оруулагчдыг олох хүсч
+        байна. Та бидэнтэй хамтран ажиллахыг хүсч байгаа бол partnership@technoelegance.com
+        хаягаар бидэнтэй холбоо барина уу!
+  devise:
+    shared:
+      links:
+        sign_up: бүртгүүлэх
+        didnt_receive_confirmation_instructions: баталгаажуулах заавар -г тээх биш
+          үү?
+        fast_login_almost_one_click: Хурдан нэвтрэх (бараг нэг дарж)
+    confirmations:
+      confirmed: амжилттай батлагдсан байна.
+      send_instructions: "."
+      send_paranoid_instructions: Таны и-мэйл хаяг манай мэдээллийн санд байгаа бол,
+        та хэдхэн минутын дотор таны бүртгэлийг хэрхэн баталгаажуулах талаар заавар
+        бүхий и-мэйл хүлээн авах болно.
+      new:
+        send_mail_for_confirm_your_email: баталгаажуулах Таны и-мэйл захидлыг илгээх
+        submit: оруулах
+    failure:
+      already_authenticated: аль хэдийн-д гарын үсэг зурсан байна.
+      inactive: хараахан идэвхжүүлсэн байна.
+      invalid: Буруу и-мэйл эсвэл нууц үг.
+      locked: түгжигдсэн байна.
+      last_attempt: "."
+      not_found_in_database: Буруу и-мэйл эсвэл нууц үг.
+      timeout: хугацаа нь дууссан. үргэлжлүүлэхийн тулд дахин нэвтрэн орно уу.
+      unauthenticated: "-д гарын үсэг зурах, эсвэл цааш үргэлжлүүлэхээсээ өмнө бүртгүүлэх
+        хэрэгтэй."
+      unconfirmed: үргэлжлүүлэхээсээ өмнө таны бүртгэлийг баталгаажуулах хэрэгтэй.
+    mailer:
+      confirmation_instructions:
+        subject: Батлах заавар
+        confirm_my_account: миний И-мэйл баталгаажуулна
+      reset_password_instructions:
+        hello: Сайн байна уу
+        subject: Нууц үгээ сэргээнэ үү заавар
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Хэн
+          нэгэн хүсэлт нууц үгээ солих холбоос юм. Та доорх холбоосоор дамжуулан үүнийг
+          хийж чадна.
+        change_my_password: өөрчлөх
+        if_you_didnt_request_this_please_ignore_this_email: та хүсэлт аваагүй бол
+          энэ нь энэ и-мэйл хэрэгсэхгүй үү.
+      unlock_instructions:
+        subject: Unlock заавар
+    omniauth_callbacks:
+      failure: '% {төрөл} "% {шалтгаан}", учир нь та нарыг баталгаажуулах чадсангүй.'
+      success: амжилттай% {төрөл} данснаас нэвтрүүлдэг.
+    passwords:
+      no_token: нууц үг дахин и-мэйл ирж ч энэ хуудсанд нэвтэрч чадахгүй. Хэрэв та
+        нууц үг сэргээх и-мэйл ирсэн бол, та нар өгсөн бүрэн URL-г ашигласан эсэхийг
+        шалгана уу.
+      send_instructions: "."
+      send_paranoid_instructions: Таны и-мэйл хаяг манай мэдээллийн санд байгаа бол,
+        та хэдхэн минутын дотор таны и-мэйл хаягаар нь нууц үг сэргээх холбоосыг хүлээн
+        авах болно.
+      updated: амжилттай өөрчлөгдсөн. Та одоо гарын үсэг зурсан байна.
+      updated_not_active: амжилттай өөрчлөгдсөн.
+      new:
+        forgot_your_password: нууц үгээ сэргээнэ
+        reset_password: илгээх URL-г сэргээх
+      edit:
+        change_your_password: нууц үгээ өөрчлөх
+        new_password: Шинэ нууц үг
+        confirm_password: баталгаажуул Нууц үг
+        change_password: өөрчлөлт
+    registrations:
+      destroyed: "! Таны бүртгэл амжилттай цуцалсан байна. Бид удахгүй дахин таныг
+        харж гэж найдаж байна."
+      signed_up: тавтай морилно уу! Та амжилттай хүртэл гарын үсэг зурсан байна.
+      signed_up_but_inactive: амжилттай дээр гарын үсэг зурсан байна. Гэсэн хэдий
+        ч, бид таны данс хараахан идэвхжээгүй байх, учир нь та нарыг гарын үсэг чадсангүй.
+      signed_up_but_locked: амжилттай дээр гарын үсэг зурсан байна. Гэсэн хэдий ч,
+        бид таны данс түгжигдсэн байна, учир нь та нарыг гарын үсэг чадсангүй.
+      signed_up_but_unconfirmed: баталгаажуулах холбоос бүхий зурваст таны и-мэйл
+        хаяг руу илгээсэн байна. Таны бүртгэлээ идэвхжүүлэх холбоосыг нээнэ үү.
+      update_needs_confirmation: ", гэхдээ бид та шинэ и-мэйл хаягаа баталгаажуулах
+        хэрэгтэй. Таны и-мэйл шалгаж, та шинэ и-мэйл хаягаа баталгаажуулах эцэслэн
+        баталгаа холбоос дээр дарна уу."
+      updated: "."
+      new:
+        sign_up: бүртгүүлэх
+        name: нэр
+        password: Нууц үг
+        password_confirmation: Нууц үг баталгаажуулах
+        register: бүртгүүлэх
+    sessions:
+      signed_in: амжилттай онд гарын үсэг зурсан.
+      signed_out: амжилттай гарын үсэг зурав.
+      new:
+        sign_in: Дансаа ашиглах
+        password: Нууц үг
+        remember_me: Намайг сана
+        forgot_your_password: Нууц үгээ мартсан?
+    unlocks:
+      send_instructions: "."
+      send_paranoid_instructions: таны бүртгэл байхгүй бол та хэдхэн минутын дотор
+        л нээхийн тулд яаж талаар заавар бүхий и-мэйл хүлээн авах болно.
+      unlocked: амжилттай түгжигдээгүй байна. үргэлжлүүлэхийн тулд нэвтэрч орно уу.
+  mn: mn
+  mn_iso: mn

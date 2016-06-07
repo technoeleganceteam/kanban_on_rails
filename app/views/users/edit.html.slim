@@ -1,0 +1,17 @@
+= render 'shared/user_edit_menu'
+
+br
+
+.row
+  .col-md-4
+    = image_tag @user.avatar, :class => 'width-100-percent'
+
+    = form_for @user, :remote => true do |form|
+      = render 'shared/form_errors', :item => @user
+      
+      .form-group
+        label for = 'name' = t '.name'
+
+        = form.text_field :name, :class => 'form-control', :placeholder => (t '.enter_your_name')
+
+      = form.submit (t '.save'), :class => 'btn btn-success'

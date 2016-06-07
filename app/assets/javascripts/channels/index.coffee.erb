@@ -1,0 +1,8 @@
+#= require cable
+#= require_self
+#= require_tree .
+
+@App ||= {}
+
+if Cookies.get('signed_in') and Cookies.get('signed_in') == '1'
+  App.cable = Cable.createConsumer('<%= Settings.websockets.url %>')

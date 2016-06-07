@@ -1,0 +1,232 @@
+---
+uz:
+  github: Github
+  bitbucket: Bitbucket
+  updated: yangilangan
+  shared:
+    navbar:
+      sign_in: Sign in
+      sign_up: o't
+      projects: loyihalari
+      issues: masalalar
+      new_issue: Yangi masala
+      edit_project: Edit loyiha
+    languages_select_modal:
+      available_languages: Mavjud tillar
+    user_edit_menu:
+      profile: Profile
+      site_settings: Sayt sozlamalari
+      services: Xizmatlar
+    form_errors:
+      password: Parol
+      current_password: joriy parol
+      password_confirmation: Parolni tasdiqlash
+      name: nomi
+      base: Base
+      title: nomi
+      columns:
+        tag: Tag Ziddiyatli
+    new_project_modal:
+      new_project: Yangi loyiha
+    edit_project_modal:
+      edit_project: Edit loyiha
+    new_issue_modal:
+      new_issue: Yangi masala
+    left_sidebar:
+      projects: loyihalari
+    right_sidebar:
+      news: Yangiliklar
+      all: Barcha
+      read_more: Davomi
+    translations:
+      select_column_tags: tanlang ustun teglar
+      select_section_tags: tanlang qism teglar
+      select_issue_tags: tanlang masala teglar
+  users:
+    form:
+      name: nomi
+      email: Email
+      password: Parol
+      role: Foydalanuvchi roli
+      save: saqlash
+    index:
+      project: loyihasi
+      users: foydalanuvchilar
+      new: Yangi
+    edit:
+      name: nomi
+      enter_your_name: Ismingizni kiriting
+      save: saqlash
+    settings:
+      change_password: o'zgartirish parol
+      interface_language: Interface tili
+      submit: Submit
+    password_form:
+      new_password: Yangi parol
+      old_password: Eski parol
+      change_password: o'zgartirish parol
+    dashboard:
+      hello: Salom
+      projects: loyihalari
+  projects:
+    index:
+      projects: loyihalari
+      new: Yangi
+    form:
+      name: nomi
+      enter_project_name: loyiha nomini kiriting
+      save: saqlash
+      columns: ustunlar
+      sections: Bo'limlar
+      column_name: Row nomi
+      section_name: Bo'lim nomi
+      add: Add
+      column_width: Ustun kengligi
+      column_height: Ustun balandligi
+      github_repository_id: Github jihozi id
+      github_full_name: Github jihozi FULLNAME
+      bitbucket_full_name: Bitbucket FULLNAME
+    project:
+      edit: Edit
+      destroy: o'chirish
+      project_issues: Project masalalar
+      project_users: Project foydalanuvchilar
+    section_fields:
+      section_name: Bo'lim nomi
+      remove_section: O'chirish qism
+      section_tags: Bo'lim teglar
+      section_order: tartibi
+      or_include_all: Yoki barcha o'z ichiga oladi?
+    column_fields:
+      column_name: Ustun nomi
+      max_issues_count: Max masalalar ustuniga hisoblash
+      column_tags: Ustun teglar
+      column_order: tartibi
+    show:
+      next_page: Keyingi sahifa
+  issues:
+    form:
+      title: nomi
+      save: saqlash
+      body: Kuzov
+      tags: Tags
+      issue_order: tartibi
+      bitbucket_issue_id: Bitbucket masala id
+      github_issue_id: Github masala id
+      github_issue_number: Github masala soni
+    index:
+      issues: masalalar
+      new: Yangi
+    issue:
+      destroy: o'chirish
+      edit: Edit
+    edit:
+      edit_issue: Edit masala
+    new:
+      new_issue: Yangi masala
+  authentications:
+    index:
+      enabled_services: Yoqilgan xizmatlar
+    authentication:
+      turned_off: o'chirilgan
+      turn_off: o'chiring
+      turned_on: yoqilgan
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: Bugun biz shuning uchun har bir kishi
+        jon bizning servisdan
+      sign_up: ro'yxatdan
+      and_use_it: va uni ishlatish.
+      technoelegance_team: Technoelegance Team
+    index:
+      read_more: Davomi
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: KanbanOnRails nima?
+      about_kanban_on_rails: KanbanOnRails siz Github yoki Bitbucket bilan Kanban
+        platalar yaratish va sinxronlash mumkin xizmati
+      i_have_some_requests: Men ba'zi talablarini bor
+      i_have_seen_some_typo_or_wrong_translation: Men ba'zi matn terish xatosi yoki
+        noto'g'ri tarjimalarni ko'rdim
+      github_repository: Github jihozi
+      i_have_seen_some_error: Men ba'zi xatolar ko'rdim
+    about:
+      about_kanban_on_rails_text: KanbanOnRails siz Github yoki Bitbucket bilan Kanban
+        platalar yaratish va sinxronlash mumkin xizmati
+      kanban_on_rails_features: KanbanOnRails xususiyatlari
+      we_use_open_source_and_high_technology: Biz yuqori texnologiyalar va ochiq kodli
+        kutubxona foydalaning. Biz har doim yaxshi bo'lsin va bizning xizmat yaxshilash
+        uchun harakat qiling.
+      partners_and_investors: Biz sheriklik uchun ochilgan va biz sarmoyadorlar topish
+        istardim. Biz bilan hamkorlik qilmoqchiman, agar partnership@technoelegance.com
+        bizga murojaat qiling
+  devise:
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: o't
+        didnt_receive_confirmation_instructions: tasdiqlash ko'rsatmalar qabul qo'ymadimi?
+        fast_login_almost_one_click: Fast kirish (deyarli bir marta bosish)
+    confirmations:
+      send_instructions: "."
+      send_paranoid_instructions: Sizning e-mail manzil bizning ma'lumotlar bazasida
+        mavjud bo'lsa, bir necha daqiqa ichida sizning hisob tasdiqlash haqida ko'rsatmalar
+        bilan bir xat olasiz.
+      new:
+        send_mail_for_confirm_your_email: tasdiq Sizning e-mail uchun pochta yuborish
+        submit: Submit
+    failure:
+      invalid: Noto'g'ri elektron pochta yoki parol.
+      last_attempt: "."
+      not_found_in_database: Noto'g'ri elektron pochta yoki parol.
+    mailer:
+      confirmation_instructions:
+        subject: tasdiqlash ko'rsatmalar
+        confirm_my_account: mening Email tasdiqlang
+      reset_password_instructions:
+        hello: Salom
+        subject: Reset Parolni ko'rsatmalar
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Kimdir
+          so'rovlarini Parolni o'zgartirish uchun, bir bog'dan bor. Siz quyidagi link
+          orqali buni mumkin.
+        if_you_didnt_request_this_please_ignore_this_email: siz bu elektron pochta
+          e'tiborsizlik iltimos so'raman bo'lsangiz.
+      unlock_instructions:
+        subject: Unlock ko'rsatmalar
+    omniauth_callbacks:
+      failure: '% {turdagi} "% {sababi}" chunki sizni haqiqiyligini tekshirib bo''lmadi.'
+      success: muvaffaqiyatli% {mehribon} hisobingizdan sahih.
+    passwords:
+      send_instructions: "."
+      send_paranoid_instructions: Sizning e-mail manzil bizning ma'lumotlar bazasida
+        mavjud bo'lsa, bir necha daqiqa ichida sizning elektron pochta manzili, bir
+        parol tiklash link olasiz.
+      new:
+        forgot_your_password: Parolni qayta qo'lga
+        reset_password: Send url sog'ayib
+      edit:
+        change_your_password: Parolni o'zgartirish
+        new_password: Yangi parol
+        confirm_password: Parolni tasdiqlang
+        change_password: Change
+    registrations:
+      signed_up: Xush kelibsiz! Siz muvaffaqiyatli imzolagan.
+      new:
+        sign_up: o't
+        name: nomi
+        password: Parol
+        password_confirmation: Parolni tasdiqlash
+        register: o't
+    sessions:
+      signed_in: muvaffaqiyatli kirgansiz.
+      signed_out: muvaffaqiyatli amalga imzo.
+      new:
+        sign_in: Sign in
+        password: Parol
+        remember_me: meni eslab
+        forgot_your_password: Parolni unutdingizmi?
+    unlocks:
+      send_instructions: "."
+  uz: uz
+  uz_iso: uz

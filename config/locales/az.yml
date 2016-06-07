@@ -1,0 +1,230 @@
+---
+az:
+  github: Github
+  bitbucket: Bitbucket
+  updated: yenilənir
+  shared:
+    navbar:
+      sign_in: Sign in
+      sign_up: ol
+      projects: Layihələr
+      issues: Issues
+      new_issue: yeni emissiyası
+      edit_project: Edit layihə
+    languages_select_modal:
+      available_languages: Mövcud diller
+    user_edit_menu:
+      profile: Profile
+      site_settings: Site parametrləri
+      services: Services
+    form_errors:
+      password: Password
+      current_password: Cari parol
+      password_confirmation: Password təsdiq
+      name: Adı
+      base: Base
+      title: Title
+      columns:
+        tag: Tag üst-üstə
+    new_project_modal:
+      new_project: yeni layihə
+    edit_project_modal:
+      edit_project: Edit layihə
+    new_issue_modal:
+      new_issue: yeni emissiyası
+    left_sidebar:
+      projects: Layihələr
+    right_sidebar:
+      news: News
+      all: Bütün
+      read_more: Daha ətraflı
+    translations:
+      select_column_tags: Select sütun tags
+      select_section_tags: Select bölmə tags
+      select_issue_tags: Select məsələ tags
+  users:
+    form:
+      name: Adı
+      email: Email
+      password: Password
+      role: İstifadəçi rolu
+      save: Save
+    index:
+      project: Project
+      users: users
+      new: New
+    edit:
+      name: Adı
+      enter_your_name: Adınızı daxil edin
+      save: Save
+    settings:
+      change_password: Change parol
+      interface_language: Interface language
+      submit: təqdim
+    password_form:
+      new_password: Yeni şifrə
+      old_password: Old parol
+      change_password: Change parol
+    dashboard:
+      hello: Hello
+      projects: Layihələr
+  projects:
+    index:
+      projects: Layihələr
+      new: New
+    form:
+      name: Adı
+      enter_project_name: layihə adını daxil edin
+      save: Save
+      columns: Columns
+      sections: Bölmələr
+      column_name: Row adı
+      section_name: Bölmə adı
+      add: Add
+      column_width: Sütun width
+      column_height: sütun boyu
+      github_repository_id: Github depo id
+      github_full_name: Github depo fullname
+      bitbucket_full_name: Bitbucket fullname
+    project:
+      edit: Edit
+      destroy: sil
+      project_issues: Project məsələlər
+      project_users: Layihə istifadəçilər
+    section_fields:
+      section_name: Bölmə adı
+      remove_section: Sil bölmə
+      section_tags: Bölmə tags
+      section_order: Order
+      or_include_all: ya bütün daxildir?
+    column_fields:
+      column_name: Sütun adı
+      max_issues_count: Max məsələlər sütun saymaq
+      column_tags: Sütun tags
+      column_order: Order
+    show:
+      next_page: Sonrakı səhifə
+  issues:
+    form:
+      title: Title
+      save: Save
+      body: Body
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket məsələ id
+      github_issue_id: Github məsələ id
+      github_issue_number: Github məsələ sayı
+    index:
+      issues: məsələlər
+      new: New
+    issue:
+      destroy: sil
+      edit: Edit
+    edit:
+      edit_issue: Edit məsələ
+    new:
+      new_issue: yeni emissiyası
+  authentications:
+    index:
+      enabled_services: Enabled xidmətlər
+    authentication:
+      turned_off: söndürüldükdə
+      turn_off: söndürün
+      turned_on: on çevirdilər
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: Bu gün biz belə hamı bilərsiniz Bizim
+        xidmət başlamaq
+      sign_up: qeydiyyatdan
+      and_use_it: və istifadə edin.
+      technoelegance_team: Technoelegance Team
+    index:
+      read_more: Daha ətraflı
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: KanbanOnRails nədir?
+      about_kanban_on_rails: KanbanOnRails siz Github ya Bitbucket ilə Kanban lövhələri
+        yaratmaq və sync bilər xidmət
+      i_have_some_requests: Mən sorğu
+      i_have_seen_some_typo_or_wrong_translation: Mən bəzi hatası və ya yanlış tərcümə
+        gördük
+      github_repository: GitHub depo
+      i_have_seen_some_error: Mən bəzi səhvlər gördük
+    about:
+      about_kanban_on_rails_text: KanbanOnRails siz Github ya Bitbucket ilə Kanban
+        lövhələri yaratmaq və sync bilər xidmət
+      kanban_on_rails_features: KanbanOnRails xüsusiyyətləri
+      we_use_open_source_and_high_technology: Biz yüksək texnologiyalar və açıq mənbə
+        kitabxana istifadə edin. Biz həmişə daha yaxşı almaq və bizim xidmət yaxşılaşdırılması
+        üçün çalışırıq.
+      partners_and_investors: Biz tərəfdaşlıq açılır və biz investorlar tapmaq istəyirəm.
+        Siz bizimlə əməkdaşlıq etmək istəyirsinizsə partnership@technoelegance.com
+        bizə müraciət edin
+  devise:
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: ol
+        didnt_receive_confirmation_instructions: təsdiq təlimat aldim deyil mi?
+        fast_login_almost_one_click: Fast giriş (demək olar ki, bir klik)
+    confirmations:
+      send_instructions: "."
+      send_paranoid_instructions: Sizin e-mail bizim məlumat bazasında varsa, siz
+        bir neçə dəqiqə hesabı təsdiq haqqında təlimat ilə bir e-poçt alacaq.
+      new:
+        send_mail_for_confirm_your_email: təsdiq e-poçt üçün poçt göndər
+        submit: təqdim
+    failure:
+      invalid: Yanlış e-poçt və ya parol.
+      last_attempt: "."
+      not_found_in_database: Yanlış e-poçt və ya parol.
+    mailer:
+      confirmation_instructions:
+        subject: təsdiqi təlimat
+        confirm_my_account: e-poçt təsdiq
+      reset_password_instructions:
+        hello: Hello
+        subject: Reset parol təlimat
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Biri
+          diləklərini Parolu dəyişdirmək üçün bir keçid var. Siz aşağıdakı link vasitəsilə
+          bunu edə bilərsiniz.
+        if_you_didnt_request_this_please_ignore_this_email: siz bu e-poçt ignore edin
+          tələb etmədi.
+      unlock_instructions:
+        subject: Unlock Təlimatlar
+    omniauth_callbacks:
+      failure: '% {cür} "% {səbəb}" Çünki sizi kimlik bilmədi.'
+      success: Uğurla% {cür} hesabınızdan təsdiq.
+    passwords:
+      send_instructions: "."
+      send_paranoid_instructions: Sizin e-mail bizim məlumat bazasında varsa, bir
+        neçə dəqiqə sizin e-mail bir parol bərpa link alacaqsınız.
+      new:
+        forgot_your_password: Şifrəni bərpa
+        reset_password: Send url bərpa
+      edit:
+        change_your_password: Parolu dəyiş
+        new_password: Yeni şifrə
+        confirm_password: təsdiq parol
+        change_password: Change
+    registrations:
+      signed_up: xoş gəlmisiniz! Siz müvəffəqiyyətlə qeydiyyatdan keçdiniz.
+      new:
+        sign_up: ol
+        name: Adı
+        password: Password
+        password_confirmation: Password təsdiq
+        register: ol
+    sessions:
+      signed_in: uğurla imza atdı.
+      signed_out: uğurla həyata imzalandı.
+      new:
+        sign_in: Sign in
+        password: Password
+        remember_me: yadda saxla
+        forgot_your_password: Şifrəni unutmusan?
+    unlocks:
+      send_instructions: "."
+  az: az
+  az_iso: az

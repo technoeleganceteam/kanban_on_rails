@@ -1,0 +1,307 @@
+---
+bg:
+  github: Github
+  bitbucket: Bitbucket
+  updated: актуализиран
+  1_we_have_just_launched_our_service_title: Вече стартирахме нашата услуга
+  shared:
+    navbar:
+      sign_in: Вход
+      sign_up: Регистрирайте се
+      projects: Проекти
+      issues: Проблеми
+      syncing_with_github: Sync с Github ...
+      syncing_with_bitbucket: Sync с Bitbucket ...
+      new_issue: New въпрос
+      edit_project: Edit проект
+    languages_select_modal:
+      available_languages: Налични езици
+    user_edit_menu:
+      profile: профил
+      site_settings: Настройки на сайта
+      services: Услуги
+    form_errors:
+      password: парола
+      current_password: Текуща парола
+      name: Име
+      base: Base
+      title: Title
+      user_to_project_connection: Потребителят връзка с проект
+      columns:
+        tag: Tag припокриване
+    new_project_modal:
+      new_project: New проект
+    edit_project_modal:
+      edit_project: Edit проект
+    new_issue_modal:
+      new_issue: New въпрос
+    left_sidebar:
+      projects: Проекти
+    right_sidebar:
+      news: новини
+      all: All
+      read_more: Прочетете повече
+    translations:
+      select_column_tags: Изберете колоните тагове
+      select_section_tags: Изберете раздел тагове
+      select_issue_tags: Изберете проблема тагове
+  users:
+    new:
+      invite_user: Поканете потребител
+    form:
+      name: Име
+      enter_user_name: Въведете потребителско име
+      email: Email
+      enter_user_email: Въведете потребителското имейл
+      enter_user_password: Въведете потребителското парола
+      password: парола
+      save: Save
+    index:
+      project: Project
+      users: потребители
+      new: New
+    edit:
+      name: Име
+      enter_your_name: Въведете името си
+      save: Save
+    settings:
+      change_password: Промяна на паролата
+      interface_language: език Interface
+      submit: Подайте
+    password_form:
+      new_password: Нова парола
+      confirm_new_password: Потвърждаване на новата парола
+      old_password: Стария парола
+      change_password: Промяна на паролата
+    update:
+      your_profile_was_successfully_updated: ви профил бе актуализиран успешно
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Ето някои от вашите статистики
+      projects: Проекти
+  projects:
+    index:
+      projects: Проекти
+      new: New
+      sync_with_github: Sync с GitHub
+      sync_with_bitbucket: Sync с bitbucket
+      stop_sync_with_bitbucket: Спиране на синхронизирането с bitbucket
+      stop_sync_with_github: Спиране на синхронизирането с GitHub
+    form:
+      name: Име
+      enter_project_name: Въведете името на проекта
+      save: Save
+      columns: Колони
+      sections: раздели
+      add: Add
+      github_repository_id: Github хранилище ID
+      github_full_name: Github хранилище FULLNAME
+      github_secret_token_for_hook: Github тайна знак за кука
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket тайна знак за кука
+    project:
+      edit: Edit
+      destroy: Изтриване
+      project_issues: въпроси по проекта
+      project_users: участници в проекта
+    section_fields:
+      section_tags: Раздел тагове
+      section_order: Поръчка
+      or_include_all: Или да включва всички?
+    column_fields:
+      remove_column: Премахване на колона
+      max_issues_count: Макс въпроси разчитат в колона
+      column_tags: Колона тагове
+      column_order: Поръчка
+    show:
+      next_page: Следваща страница
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Въведете заглавие въпрос
+      save: Save
+      body: Body
+      enter_issue_body: Въведете въпрос тяло
+      tags: Tags
+      issue_order: Поръчка
+      bitbucket_issue_id: Bitbucket въпрос ID
+      github_issue_id: Github въпрос ID
+      github_issue_number: брой Github въпрос
+    index:
+      issues: въпроси
+      sync_with_github: Sync с GitHub
+      sync_with_bitbucket: Sync с bitbucket
+      new: New
+    issue:
+      destroy: Изтриване
+      edit: Edit
+    edit:
+      edit_issue: Edit въпрос
+    new:
+      new_issue: New въпрос
+  authentications:
+    index:
+      enabled_services: Активирани услуги
+    authentication:
+      turned_off: Изключен
+      turn_on: Включете
+      turn_off: Изключване
+      turned_on: Оказа на
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Вече стартирахме нашата услуга!
+      we_have_just_launched_our_service_text: Днес стартираме нашата услуга, така
+        че всеки да може да
+      sign_up: регистрирате
+      and_use_it: и да го използвате.
+      with_love: С любов,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Всички новини
+      read_more: Прочетете повече
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Добре дошли в Kanban On Rails
+      welcome_about_text: Тук можете да създадете своя собствена борда Kanban и да
+        я синхронизирате с Github или Bitbucket
+  pages:
+    faq:
+      faq: Отговори
+      what_is_kanban_on_rails: Какво е KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails е услуга, където можете да създадете Kanban
+        дъски и да я синхронизирате с Github или Bitbucket
+      what_features_has_kanban_on_rails: Какво отличава има KanbanOnRails?
+      kanban_on_rails_features: Можете да синхронизирате вашите проекти и проблеми
+        с Github и Bitbucket, покани потребители (например мениджъри) за вашия проект,
+        да го разположи на вашия собствен сървър
+      i_have_some_requests: имам някои искания
+      you_can_write_request: Можете да напишете молба
+      here: тук
+      i_have_seen_some_typo_or_wrong_translation: Аз съм виждал някои правописни грешки
+        или неправилни преводи
+      you_can_send_pull_request_to_our: Можете да изпратите заявка дърпане в нашия
+      github_repository: GitHub хранилище
+      i_have_seen_some_error: Аз съм виждал няколко грешки
+      you_can_write_to_our_info_mail: Можете да пиша за това в нашия имейл
+    about:
+      about_kanban_on_rails: За KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails е услуга, където можете да създадете
+        Kanban дъски и да я синхронизирате с Github или Bitbucket
+      kanban_on_rails_features: функции KanbanOnRails
+      sync_with_github_and_bitbucket: Можете да синхронизирате вашите проекти и проблеми
+        с Github и Bitbucket
+      invite_users: Можете да каните потребители (например мениджъри) за вашия проект
+      open_source_code: Този проект има отворен код, така че можете да го разположи
+        на вашия собствен сървър
+      we_use_open_source_and_high_technology: Ние използваме високи технологии и библиотеки
+        с отворен код. Ние винаги се опитваме да се получи по-добре и подобряване
+        на обслужването.
+      partners_and_investors: Ние сме отворени за партньорство и ние бихме искали
+        да се намери инвеститори. Ако искате да си сътрудничат с нас, моля свържете
+        се с нас на partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Вход
+        sign_up: Регистрирайте се
+        didnt_receive_confirmation_instructions: Не си получил инструкции за потвърждение?
+        sign_in_with: Вход с
+        fast_login_almost_one_click: Fast вход (Почти един клик)
+    confirmations:
+      confirmed: Вашето внимание бе успешно потвърдена.
+      send_instructions: Вие ще получите имейл с инструкции за това как да потвърдите
+        профила си в рамките на няколко минути.
+      send_paranoid_instructions: Ако съществува мейл адреса си в нашата база данни,
+        вие ще получите имейл с инструкции за това как да потвърдите профила си в
+        рамките на няколко минути.
+      new:
+        send_mail_for_confirm_your_email: Изпрати мейл за да потвърдите своя имейл
+        submit: Подайте
+    failure:
+      already_authenticated: Вие вече сте влезли.
+      inactive: Профилът Ви не е активиран още.
+      invalid: Невалиден имейл или парола.
+      locked: Вашето внимание е заключена.
+      last_attempt: Имате още един опит, преди профилът ви ще бъде заключена.
+      not_found_in_database: Невалиден имейл или парола.
+      timeout: Вашата сесия е изтекла. Моля, влезте отново, за да продължите.
+      unauthenticated: Трябва да влезете в профила си или се регистрирате, преди да
+        продължите.
+      unconfirmed: Трябва да потвърдите профила си, преди да продължи.
+    mailer:
+      confirmation_instructions:
+        subject: инструкции за потвърждение
+        welcome_to_kanban_on_rails: Добре дошли в KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Можете да проверите
+          електронната си поща чрез линка по-долу
+        confirm_my_account: Потвърди ми Email
+      reset_password_instructions:
+        hello: Hello
+        subject: Reset инструкции парола
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Някой
+          има заявки за връзка, за да промените паролата си. Можете да направите това
+          чрез линка по-долу.
+        change_my_password: Променете паролата си
+        if_you_didnt_request_this_please_ignore_this_email: Ако не сте поискали това
+          моля игнорирайте този имейл.
+      unlock_instructions:
+        subject: Отключи Инструкции
+    omniauth_callbacks:
+      failure: Не можа ли удостоверяване от% {вид} защото "% {причина}".
+      success: Успешно заверено от% {вид} сметка.
+    passwords:
+      no_token: Нямате достъп до тази страница, без да влиза от имейл за възстановяване
+        на паролата. Ако все пак идват от имейл за възстановяване на паролата, моля,
+        не забравяйте да се използва пълния URL условие.
+      send_instructions: Вие ще получите имейл с инструкции как да смените паролата
+        си в рамките на няколко минути.
+      send_paranoid_instructions: Ако съществува мейл адреса си в нашата база данни,
+        ще получите линк за възстановяване на парола при вашия имейл адрес в рамките
+        на няколко минути.
+      updated: Вашата парола е променена успешно. Вече сте влезли.
+      updated_not_active: Вашата парола е променена успешно.
+      new:
+        forgot_your_password: Възстановяване на парола
+        reset_password: Изпрати възстанови URL
+      edit:
+        change_your_password: Промяна на паролата
+        new_password: Нова парола
+        confirm_password: Потвърди парола
+        change_password: Промяна
+    registrations:
+      destroyed: Чао! Профилът ви е успешно анулирана. Надяваме се да ви видя отново
+        скоро.
+      signed_up: Добре дошли! Вие сте се регистрирали успешно.
+      signed_up_but_inactive: сте се регистрирали успешно. Въпреки това, ние не може
+        да влезете в защото профилът ви още не е активирана.
+      signed_up_but_locked: сте се регистрирали успешно. Въпреки това, ние не може
+        да влезете в, тъй като профилът ви е заключен.
+      signed_up_but_unconfirmed: се съобщение с линк за потвърждение е изпратено до
+        вашия имейл адрес. Моля, отворете връзката, за да активирате профила си.
+      update_needs_confirmation: Можете актуализира профила си успешно, но ние трябва
+        да потвърдите новия си имейл адрес. Моля, проверете електронната си поща и
+        кликнете върху линка за потвърждение, за да финализира потвърждаващ новия
+        си имейл адрес.
+      updated: Можете актуализира профила си успешно.
+      new:
+        sign_up: Регистрирайте се
+        name: Име
+        password: парола
+        register: Регистрирайте се
+    sessions:
+      signed_in: Подписано в успешно.
+      signed_out: Подписано успешно.
+      new:
+        sign_in: Вход
+        password: парола
+        remember_me: Запомни ме
+        forgot_your_password: Забравена парола?
+    unlocks:
+      send_instructions: Вие ще получите имейл с инструкции за това как да отключите
+        профила си в рамките на няколко минути.
+      send_paranoid_instructions: Ако съществува профила си, вие ще получите имейл
+        с инструкции за това как да го отключите след няколко минути.
+      unlocked: Профилът ви е отключена успешно. Моля, влезте в профила си, за да
+        продължите.
+  bg: bg
+  bg_iso: bg

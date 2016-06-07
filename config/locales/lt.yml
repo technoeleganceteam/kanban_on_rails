@@ -1,0 +1,315 @@
+---
+lt:
+  github: Github
+  bitbucket: Bitbucket
+  updated: atnaujino
+  1_we_have_just_launched_our_service_title: Mes ką tik pradėjo savo paslaugas
+  shared:
+    navbar:
+      sign_in: Registruotis
+      sign_up: Užsiregistruoti
+      projects: Projektai
+      issues: klausimai
+      syncing_with_github: sinchronizuoti su GitHub ...
+      syncing_with_bitbucket: sinchronizuoti su Bitbucket ...
+      new_issue: Naujas numeris
+      edit_project: Redaguoti projektas
+    languages_select_modal:
+      available_languages: Galimos kalbos
+    user_edit_menu:
+      profile: profilis
+      site_settings: Svetainės nustatymai
+      services: Paslaugos
+    form_errors:
+      password: Slaptažodžių
+      current_password: Dabartinis slaptažodis
+      password_confirmation: Slaptažodžio patvirtinimas
+      name: Vardas
+      base: bazė
+      title: Pavadinimas
+      user_to_project_connection: Vartotojas projekto ryšį
+      columns:
+        tag: Gairė sutapimas
+    new_project_modal:
+      new_project: Naujas projektas
+    edit_project_modal:
+      edit_project: Redaguoti projektas
+    new_issue_modal:
+      new_issue: Naujas numeris
+    left_sidebar:
+      projects: Projektai
+    right_sidebar:
+      news: Naujienos
+      all: Visi
+      read_more: Skaityti daugiau
+    translations:
+      select_column_tags: Pasirinkite stulpelio žymės
+      select_section_tags: Pasirinkite skyrių žymės
+      select_issue_tags: Pasirinkite numerį žymės
+  users:
+    new:
+      invite_user: Pakviesti vartotoją
+    form:
+      name: Vardas
+      enter_user_name: Įveskite vartotojo vardą
+      email: paštas
+      enter_user_email: Įveskite vartotojo laišką
+      enter_user_password: Įveskite vartotojo slaptažodį
+      password: Slaptažodžių
+      role: Vartotojas vaidmuo
+      save: Išsaugoti
+    index:
+      project: projektas
+      users: vartotojai
+      new: Nauja
+    edit:
+      name: Vardas
+      enter_your_name: Įveskite savo vardą
+      save: Išsaugoti
+    settings:
+      change_password: Keisti slaptažodį
+      interface_language: Sąsajos kalba
+      submit: Pateikti
+    password_form:
+      new_password: Naujas slaptažodis
+      confirm_new_password: Patvirtinkite naują slaptažodį
+      old_password: Senas slaptažodis
+      change_password: Keisti slaptažodį
+    update:
+      your_profile_was_successfully_updated: Jūsų profilis buvo sėkmingai atnaujintas
+    dashboard:
+      hello: Sveiki
+      here_some_of_your_statistics: Čia kai kurie iš jūsų statistiką
+      projects: Projektai
+  projects:
+    index:
+      projects: Projektai
+      new: Nauja
+      sync_with_github: sinchronizuoti su GitHub
+      sync_with_bitbucket: sinchronizuoti su bitbucket
+      stop_sync_with_bitbucket: Sustabdyti sinchronizavimą su bitbucket
+      stop_sync_with_github: Sustabdyti sinchronizavimą su GitHub
+    form:
+      name: Vardas
+      enter_project_name: Įveskite projekto pavadinimas
+      save: Išsaugoti
+      columns: stulpeliai
+      sections: Profiliai
+      column_name: Eilutės pavadinimas
+      add: Pridėti
+      column_width: stulpelio plotį
+      column_height: skiltis aukštis
+      github_repository_id: Github saugykla ID
+      github_full_name: Github saugykla FULLNAME
+      github_secret_token_for_hook: Github paslaptis žetonas už kabliuko
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket paslaptis žetonas už kabliuko
+    project:
+      edit: Redaguoti
+      destroy: Ištrinti
+      project_issues: Projekto klausimai
+      project_users: Projekto vartotojai
+    section_fields:
+      remove_section: Pašalinti skyrius
+      section_tags: žymės skyrius
+      section_order: Užsakyti
+      or_include_all: ar įtraukti visi?
+    column_fields:
+      column_name: Stulpelio pavadinimas
+      remove_column: Pašalinti stulpelį
+      max_issues_count: Max klausimai skaičiuoti skiltyje
+      column_tags: žymės skiltis
+      column_order: Užsakyti
+    show:
+      next_page: Kitas puslapis
+  issues:
+    form:
+      title: Pavadinimas
+      enter_issue_title: Įveskite emisijos titulą
+      save: Išsaugoti
+      body: Kūno
+      enter_issue_body: Įveskite emisijos kūną
+      tags: Žymos
+      issue_order: Užsakyti
+      bitbucket_issue_id: Bitbucket klausimas ID
+      github_issue_id: Github klausimas ID
+      github_issue_number: Github Išdavimo numeris
+    index:
+      issues: klausimai
+      sync_with_github: sinchronizuoti su GitHub
+      sync_with_bitbucket: sinchronizuoti su bitbucket
+      new: Nauja
+    issue:
+      destroy: Ištrinti
+      edit: Redaguoti
+    edit:
+      edit_issue: Redaguoti klausimas
+    new:
+      new_issue: Naujas numeris
+  authentications:
+    index:
+      enabled_services: Įjungta paslaugos
+    authentication:
+      turned_off: Išjungtas
+      turn_on: Įjunkite
+      turn_off: Išjunkite
+      turned_on: Įjungiama
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Mes ką tik pradėjo savo paslaugas!
+      we_have_just_launched_our_service_text: Šiandien mes pradėti mūsų paslaugą,
+        todėl kiekvienas gali
+      sign_up: užsiregistruoti
+      and_use_it: ir naudoti jį.
+      with_love: Su meile,
+      technoelegance_team: Technoelegance komanda
+    index:
+      all_news: Visos naujienos
+      read_more: Skaityti daugiau
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Sveiki Kanban bėgiais
+      welcome_about_text: Čia Jūs galite sukurti savo Kanban lenta ir sinchronizuoti
+        jį su GitHub ar Bitbucket
+  pages:
+    faq:
+      faq: DUK
+      what_is_kanban_on_rails: Kas yra KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails tai paslauga, kur Jūs galite sukurti Kanban
+        lentos ir sinchronizuoti jį su GitHub ar Bitbucket
+      what_features_has_kanban_on_rails: Kas yra turi KanbanOnRails?
+      kanban_on_rails_features: galite sinchronizuoti savo projektus ir problemas
+        su GitHub ir Bitbucket kviesti vartotojus (pavyzdžiui vadovų) savo projektui,
+        diegti jį į savo serverį
+      i_have_some_requests: aš turiu keletą prašymus
+      you_can_write_request: Jūs galite rašyti prašymą
+      here: čia
+      i_have_seen_some_typo_or_wrong_translation: aš mačiau keletą rašybos ar neteisingus
+        vertimus
+      you_can_send_pull_request_to_our: Galite siųsti traukos prašymą į mūsų
+      github_repository: GitHub saugykloje
+      i_have_seen_some_error: aš mačiau klaidų
+      you_can_write_to_our_info_mail: Jūs galite rašyti apie tai į mūsų elektroninio
+        pašto
+    about:
+      about_kanban_on_rails: Apie KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails tai paslauga, kur Jūs galite sukurti
+        Kanban lentos ir sinchronizuoti jį su GitHub ar Bitbucket
+      kanban_on_rails_features: KanbanOnRails funkcijos
+      sync_with_github_and_bitbucket: galite sinchronizuoti savo projektus ir problemas
+        su GitHub ir Bitbucket
+      invite_users: Jūs galite pakviesti vartotojus (pavyzdžiui vadovų) savo projektui
+      open_source_code: Šis projektas atviro kodo, todėl jūs galite įdiegti ją į savo
+        serverį
+      we_use_open_source_and_high_technology: Mes naudojame aukštas technologijas
+        ir atviro kodo bibliotekas. Mes visada stengiamės geriau ir pagerinti savo
+        paslaugas.
+      partners_and_investors: Esame atviri partnerystės ir mes norėtume rasti investuotojų.
+        Jei norite su mumis bendradarbiauti, susisiekite su mumis adresu partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Registruotis
+        sign_up: Užsiregistruoti
+        didnt_receive_confirmation_instructions: Neradote gavau patvirtinimo instrukcijas?
+        sign_in_with: Prisijungti su
+        fast_login_almost_one_click: Greitas Slapyvardis (Beveik vienas paspaudimas)
+    confirmations:
+      confirmed: Jūsų Paskyra buvo sėkmingai patvirtinta.
+      send_instructions: Jūs gausite elektroninį laišką su instrukcijomis, apie tai,
+        kaip patvirtinti savo sąskaitą per kelias minutes.
+      send_paranoid_instructions: Jei Jūsų el.pašto adresas yra mūsų duomenų bazėje,
+        Jūs gausite elektroninį laišką su instrukcijomis, apie tai, kaip patvirtinti
+        savo sąskaitą per kelias minutes.
+      new:
+        send_mail_for_confirm_your_email: Siųsti paštą patvirtinti savo elektroninio
+          pašto
+        submit: Pateikti
+    failure:
+      already_authenticated: Jūs jau esate prisiregistravęs.
+      inactive: Jūsų sąskaita nėra aktyvuota dar.
+      invalid: Neteisingas el.pašto arba slaptažodis.
+      locked: paskyra yra užblokuota.
+      last_attempt: Jūs turite dar vienas bandymas prieš jūsų sąskaita bus užrakinta.
+      not_found_in_database: Neteisingas el.pašto arba slaptažodis.
+      timeout: Jūsų sesija pasibaigė. Prašome prisijungti vėl tęsti.
+      unauthenticated: jums reikia prisijungti arba užsiregistruoti prieš tęsiant.
+      unconfirmed: turite patvirtinti savo sąskaitą, prieš tęsiant.
+    mailer:
+      confirmation_instructions:
+        subject: Patvirtinimo instrukcijos
+        welcome_to_kanban_on_rails: Sveiki KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: galite patvirtinti
+          savo elektroninio pašto adresą per žemiau esančią nuorodą
+        confirm_my_account: Patvirtinkite mano elektroninio pašto
+      reset_password_instructions:
+        hello: Sveiki
+        subject: Atstatyti slaptažodį instrukcijos
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Kažkas
+          turi prašo nuorodą keisti slaptažodį. Jūs galite tai padaryti per žemiau
+          esančią nuorodą.
+        change_my_password: Pakeiskite slaptažodį
+        if_you_didnt_request_this_please_ignore_this_email: Jei neprašėte tai prašom
+          nekreipti dėmesio į šį laišką.
+      unlock_instructions:
+        subject: Atrakinti instrukcijos
+    omniauth_callbacks:
+      failure: Nepavyko autentifikuoti jus iš% {pobūdžio} nes "% {priežastis}".
+      success: sėkmingai patvirtinta iš% {natūra} sąskaitą.
+    passwords:
+      no_token: Jūs negalite Patekti į šį puslapį be ateina iš naujo slaptažodžio
+        paštu. Jei ateina iš naujo slaptažodžio paštu, prašome įsitikinkite, kad jums
+        naudoti visą URL.
+      send_instructions: Jūs gausite elektroninį laišką su instrukcijomis, kaip pakeisti
+        slaptažodį per kelias minutes.
+      send_paranoid_instructions: Jei Jūsų el.pašto adresas yra mūsų duomenų bazėje,
+        Jūs gausite slaptažodžio atkūrimo nuorodą savo elektroninio pašto adresą per
+        kelias minutes.
+      updated: Jūsų slaptažodis buvo sėkmingai pakeistas. Dabar jūs esate prisijungęs.
+      updated_not_active: Jūsų slaptažodis buvo sėkmingai pakeistas.
+      new:
+        forgot_your_password: Atkurti slaptažodį
+        reset_password: Siųsti susigrąžinti url
+      edit:
+        change_your_password: Pakeiskite slaptažodį
+        new_password: Naujas slaptažodis
+        confirm_password: Pakartokite slaptažodį
+        change_password: Pakeisti
+    registrations:
+      destroyed: bye! Jūsų Paskyra buvo sėkmingai atšauktas. Mes tikimės, kad jums
+        dar kartą netrukus.
+      signed_up: Sveiki! Jūs jau užsiregistravote sėkmingai.
+      signed_up_but_inactive: jūs jau užsiregistravote sėkmingai. Tačiau mes negalėjo
+        pasirašyti jums, nes jūsų sąskaitos dar neaktyvuota.
+      signed_up_but_locked: jūs jau užsiregistravote sėkmingai. Tačiau mes negalėjo
+        pasirašyti jums, nes jūsų sąskaita yra užblokuota.
+      signed_up_but_unconfirmed: žinutę su patvirtinimo nuoroda buvo išsiųstas į jūsų
+        elektroninio pašto adresą. Prašome atidaryti nuorodą aktyvuoti savo sąskaitą.
+      update_needs_confirmation: Jūs atnaujinote savo paskyros sėkmingai, tačiau mes
+        turime patvirtinti savo naują elektroninio pašto adresą. Prašome pasitikrinti
+        savo elektroninį paštą ir paspauskite ant Patvirtinti nuorodą baigti patvirtindamas
+        savo naują elektroninio pašto adresą.
+      updated: Jūs atnaujinote savo paskyros sėkmingai.
+      new:
+        sign_up: Užsiregistruoti
+        name: Vardas
+        password: Slaptažodžių
+        password_confirmation: Slaptažodžio patvirtinimas
+        register: Užsiregistruoti
+    sessions:
+      signed_in: Pasirašyta sėkmingai.
+      signed_out: Išregistruotos sėkmingai.
+      new:
+        sign_in: Registruotis
+        password: Slaptažodžių
+        remember_me: Įsiminti mane
+        forgot_your_password: Pamiršote slaptažodį?
+    unlocks:
+      send_instructions: Jūs gausite elektroninį laišką su instrukcijomis, apie tai,
+        kaip atrakinti savo sąskaitą per kelias minutes.
+      send_paranoid_instructions: Jei paskyra yra, jūs gausite laišką su nurodymais,
+        kaip jį atrakinti per kelias minutes.
+      unlocked: Jūsų paskyra buvo atrakinta sėkmingai. Prašome prisijungti, kad galėtumėte
+        tęsti.
+  lt: lt
+  lt_iso: lt

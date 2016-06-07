@@ -1,0 +1,7 @@
+h1 = "#{ t '.hello' }, #{ @user.name }"
+
+h3
+  = t '.here_some_of_your_statistics'
+  | :
+
+p = link_to "#{ t '.projects' }: #{ @user.projects.size }", user_projects_url(@user)

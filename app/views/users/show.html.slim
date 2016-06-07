@@ -1,0 +1,7 @@
+.row
+  .col-md-3
+    .thumbnail
+      = image_tag @user.avatar, :class => 'width-100-percent'
+
+      .caption
+        p = @user.name

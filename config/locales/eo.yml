@@ -1,0 +1,308 @@
+---
+eo:
+  github: GitHub
+  bitbucket: Bitbucket
+  updated: ĝisdatigita
+  1_we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon
+  shared:
+    navbar:
+      sign_in: Ensaluti
+      sign_up: Registriĝi
+      projects: Projektoj
+      issues: Issues
+      syncing_with_github: Sync kun GitHub ...
+      syncing_with_bitbucket: Sync kun Bitbucket ...
+      new_issue: Nova eldono
+      edit_project: Redakti projekto
+    languages_select_modal:
+      available_languages: Disponeblaj lingvoj
+    user_edit_menu:
+      profile: Profilo
+      site_settings: retejo fiksojn
+      services: Servoj
+    form_errors:
+      password: Pasvorto
+      current_password: Nuna pasvorton
+      password_confirmation: Pasvorto konfirmo
+      name: Nomo
+      base: Bazo
+      title: Titolo
+      user_to_project_connection: Uzanto projekti ligo
+      columns:
+        tag: Tag imbrikitaj
+    new_project_modal:
+      new_project: Nova projekto
+    edit_project_modal:
+      edit_project: Redakti projekto
+    new_issue_modal:
+      new_issue: Nova eldono
+    left_sidebar:
+      projects: Projektoj
+    right_sidebar:
+      news: Novaĵoj
+      all: Ĉiuj
+      read_more: Legu pli
+    translations:
+      select_column_tags: Elekti kolumnon etikedoj
+      select_section_tags: Elekti sekcion etikedoj
+      select_issue_tags: Elektu temon etikedoj
+  users:
+    new:
+      invite_user: Invitu uzanto
+    form:
+      name: Nomo
+      enter_user_name: Entajpu salutnomon
+      email: Retpoŝto
+      enter_user_email: Entajpu uzanto retpoŝto
+      enter_user_password: Entajpu uzanto pasvorton
+      password: Pasvorto
+      role: Uzanto rolon
+      save: Konservi
+    index:
+      project: Projekto
+      users: uzantoj
+      new: Nova
+    edit:
+      name: Nomo
+      enter_your_name: Entajpu vian nomon
+      save: Konservi
+    settings:
+      change_password: Ŝanĝi pasvorton
+      interface_language: Interfaco lingvo
+      submit: Proponu
+    password_form:
+      new_password: Nova pasvorto
+      confirm_new_password: Konfirmu novan pasvorton
+      old_password: Malnova pasvorton
+      change_password: Ŝanĝi pasvorton
+    update:
+      your_profile_was_successfully_updated: Via profilo estis sukcese ĝisdatigita
+    dashboard:
+      hello: Saluton
+      here_some_of_your_statistics: Jen kelkaj el viaj statistikoj
+      projects: Projektoj
+  projects:
+    index:
+      projects: Projektoj
+      new: Nova
+      sync_with_github: Sync kun GitHub
+      sync_with_bitbucket: Sync kun bitbucket
+      stop_sync_with_bitbucket: Stop sincronía kun bitbucket
+      stop_sync_with_github: Stop sincronía kun GitHub
+    form:
+      name: Nomo
+      enter_project_name: Entajpu projekto nomon
+      save: Konservi
+      columns: Kolumnoj
+      sections: Sekcioj
+      column_name: Vico nomon
+      section_name: Sekcio nomon
+      add: aldoni
+      column_width: Kolumno larĝo
+      column_height: Kolumno alteco
+      github_repository_id: GitHub deponejo identigilo
+      github_full_name: GitHub deponejo fullname
+      github_secret_token_for_hook: GitHub sekretan signon por hoko
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket sekretan signon por hoko
+    project:
+      edit: Redakti
+      destroy: Delete
+      project_issues: Projekto temoj
+      project_users: Projekto uzantoj
+    section_fields:
+      section_name: Sekcio nomon
+      remove_section: Forigi sekcio
+      section_tags: Sekcio etikedoj
+      section_order: Ordo
+      or_include_all: Aŭ inkluzivi ĉiuj?
+    column_fields:
+      column_name: Kolumno nomo
+      remove_column: Forigi kolumno
+      max_issues_count: Max temoj kalkuli en kolumno
+      column_tags: Kolumno etikedoj
+      column_order: Ordo
+    show:
+      next_page: Sekva paĝo
+  issues:
+    form:
+      title: Titolo
+      enter_issue_title: Entajpu temo titolo
+      save: Konservi
+      body: Korpo
+      enter_issue_body: Entajpu temo korpo
+      tags: Etikedoj
+      issue_order: Ordo
+      bitbucket_issue_id: Bitbucket temo identigilo
+      github_issue_id: GitHub temo identigilo
+      github_issue_number: GitHub temo nombro
+    index:
+      issues: temoj
+      sync_with_github: Sync kun GitHub
+      sync_with_bitbucket: Sync kun bitbucket
+      new: Nova
+    issue:
+      destroy: Delete
+      edit: Redakti
+    edit:
+      edit_issue: Redakti temo
+    new:
+      new_issue: Nova eldono
+  authentications:
+    index:
+      enabled_services: Enabled servoj
+    authentication:
+      turned_off: malŝaltita
+      turn_on: Turnu on
+      turn_off: Elŝalti
+      turned_on: ŝaltis
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon!
+      we_have_just_launched_our_service_text: Hodiaŭ ĵeti nia servo por ĉiuj povas
+      sign_up: subskriboj
+      and_use_it: kaj uzi ĝin.
+      with_love: Kun amo,
+      technoelegance_team: Technoelegance Teamo
+    index:
+      all_news: Ĉiuj novaĵoj
+      read_more: Legu pli
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Bonvenon Kanban an Reloj
+      welcome_about_text: Tie vi povas krei vian propran Kanban estraro kaj sinkronigita
+        per GitHub aŭ Bitbucket
+  pages:
+    faq:
+      faq: Demandoj
+      what_is_kanban_on_rails: Kio estas KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails estas la servo kie vi povas krei Kanban
+        tabuloj kaj sinkronigita per GitHub aŭ Bitbucket
+      what_features_has_kanban_on_rails: Kio prezentas havas KanbanOnRails?
+      kanban_on_rails_features: Vi povas sinkronigi viajn projektojn kaj problemojn
+        kun GitHub kaj Bitbucket, inviti uzantojn (ekzemple manaĝeroj) por via projekto,
+        disfaldi ĝin al via propra servilo
+      i_have_some_requests: Mi havas kelkajn petojn
+      you_can_write_request: Vi povas skribi peton
+      here: tie
+      i_have_seen_some_typo_or_wrong_translation: Mi vidis iuj tajperarojn aŭ erara
+        tradukoj
+      you_can_send_pull_request_to_our: Vi povas sendi tiro peton al nia
+      github_repository: GitHub deponejo
+      i_have_seen_some_error: Mi vidis kelkaj eraroj
+      you_can_write_to_our_info_mail: Vi povas skribi pri tio al nia retpoŝta
+    about:
+      about_kanban_on_rails: Pri KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails estas la servo kie vi povas krei Kanban
+        tabuloj kaj sinkronigita per GitHub aŭ Bitbucket
+      kanban_on_rails_features: KanbanOnRails karakterizaĵoj
+      sync_with_github_and_bitbucket: Vi povas sinkronigi viajn projektojn kaj problemojn
+        kun GitHub kaj Bitbucket
+      invite_users: Vi povas inviti uzantojn (ekzemple manaĝeroj) por via projekto
+      open_source_code: Tiu projekto havas malfermita fontkodo, do vi povas disfaldi
+        ĝin al via propra servilo
+      we_use_open_source_and_high_technology: Ni uzas altan teknologioj kaj malferma
+        fonto bibliotekoj. Ni ĉiam provas akiri pli bonan kaj plibonigi nian servon.
+      partners_and_investors: Ni estas malfermitaj por partnereco kaj ni ŝatus trovi
+        investantojn. Se vi ŝatus kunlabori kun ni bonvolu kontakti nin ĉe partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Ensaluti
+        sign_up: Registriĝi
+        didnt_receive_confirmation_instructions: Ne ricevita konfirmo instrukcioj?
+        sign_in_with: Ensaluti kun
+        fast_login_almost_one_click: Rapida ensaluto (Preskaŭ unu alklako)
+    confirmations:
+      confirmed: Via konto estis sukcese konfirmita.
+      send_instructions: Vi ricevos retpoŝton kun instrukcioj pri kiel konfirmi vian
+        konton post kelkaj minutoj.
+      send_paranoid_instructions: Se via retadreso ekzistas en nia datumbazo, vi ricevos
+        retpoŝton kun instrukcioj pri kiel konfirmi vian konton post kelkaj minutoj.
+      new:
+        send_mail_for_confirm_your_email: Sendu poŝton por konfirmi vian retpoŝtan
+        submit: Proponu
+    failure:
+      already_authenticated: Vi jam ensalutis.
+      inactive: Via konto ne aktivigitaj ankoraŭ.
+      invalid: Nevalida retpoŝto aŭ pasvorto.
+      locked: Via konto estas ŝlosita.
+      last_attempt: Vi havas unu pli provon antaŭ via konto estos ŝlosita.
+      not_found_in_database: Nevalida retpoŝto aŭ pasvorto.
+      timeout: Via seanco eksvalidiĝis. Bonvolu ensaluti denove por daŭrigi.
+      unauthenticated: Vi devas ensaluti aŭ aliĝu antaŭ daŭrigi.
+      unconfirmed: Vi devas konfirmi vian konton antaŭ ol daŭrigi.
+    mailer:
+      confirmation_instructions:
+        subject: Konfirmo instrukcioj
+        welcome_to_kanban_on_rails: Bonvenon KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Vi povas konfirmi
+          vian retpoŝtan tra la ligilon sube
+        confirm_my_account: Konfirmi mian Retpoŝto
+      reset_password_instructions:
+        hello: Saluton
+        subject: Restarigi pasvorton instrukcioj
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Iu
+          havas petojn ligilon por ŝanĝi vian pasvorton. Vi povas fari tion per la
+          suba ligilo.
+        change_my_password: Ŝanĝi mian pasvorton
+        if_you_didnt_request_this_please_ignore_this_email: Se vi ne petis ĉi bonvolu
+          ignori ĉi tiun retpoŝton.
+      unlock_instructions:
+        subject: Malŝlosi Instrukcioj
+    omniauth_callbacks:
+      failure: Ne povis aŭtentigi vin de% {speco} ĉar "% {kialo}".
+      success: Sukcese aŭtentikigita de% {speco} konton.
+    passwords:
+      no_token: Vi ne povas atingi la paĝon sen venanta de pasvorta ŝanĝo retpoŝto.
+        Se vi venas de pasvorta ŝanĝo retpoŝto, bonvolu certigi vin uzi la plenan
+        URL provizita.
+      send_instructions: Vi ricevos retpoŝton kun instrukcioj pri kiel restartigi
+        vian pasvorton post kelkaj minutoj.
+      send_paranoid_instructions: Se via retadreso ekzistas en nia datumbazo, vi ricevos
+        pasvorton reakiro ligilon ĉe via retadreso en kelkaj minutoj.
+      updated: Via pasvorto estis sukcese ŝanĝita. Vi nun ensalutis.
+      updated_not_active: Via pasvorto estis sukcese ŝanĝita.
+      new:
+        forgot_your_password: Retrovi pasvorton
+        reset_password: Sendu rekuperi url
+      edit:
+        change_your_password: Ŝanĝu pasvorton
+        new_password: Nova pasvorto
+        confirm_password: Konfirmu pasvorton
+        change_password: Ŝanĝo
+    registrations:
+      destroyed: Bye! Via konto estis sukcese nuligis. Ni esperas revidi vin baldaŭ.
+      signed_up: Bonvenon! Vi jam subskribis sukcese.
+      signed_up_but_inactive: Vi jam subskribis sukcese. Tamen, ni ne povis subskribi
+        vin pro via konto ankoraŭ ne aktivigita.
+      signed_up_but_locked: Vi jam subskribis sukcese. Tamen, ni ne povis subskribi
+        vin pro via konto estas ŝlosita.
+      signed_up_but_unconfirmed: Mesaĝo kun konfirma ligilo estas sendita al via retpoŝta
+        adreso. Bonvolu malfermi la ligilon por aktivigi vian konton.
+      update_needs_confirmation: Vi ĝisdatigita via konto sukcese, sed ni devas kontroli
+        vian novan retadreson. Bonvolu kontroli vian retpoŝton kaj klakon sur la konfirma
+        ligilo fini konfirmante vian novan retadreson.
+      updated: Vi ĝisdatigita via konto sukcese.
+      new:
+        sign_up: Registriĝi
+        name: Nomo
+        password: Pasvorto
+        password_confirmation: Pasvorto konfirmo
+        register: Registriĝi
+    sessions:
+      signed_in: Subskribita en sukcese.
+      signed_out: Subskribita eksteren sukcese.
+      new:
+        sign_in: Ensaluti
+        password: Pasvorto
+        remember_me: Memoru min
+        forgot_your_password: vi forgesis vian pasvorton?
+    unlocks:
+      send_instructions: Vi ricevos retpoŝton kun instrukcioj pri kiel malŝlosi vian
+        konton post kelkaj minutoj.
+      send_paranoid_instructions: Se via konto ekzistas, vi ricevos retpoŝton kun
+        instrukcioj pri kiel malŝlosi ĝin post kelkaj minutoj.
+      unlocked: Via konto estas malŝlosita sukcese. Bonvolu ensaluti por daŭrigi.
+  eo: eo
+  eo_iso: eo

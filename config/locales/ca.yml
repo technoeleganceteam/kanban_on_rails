@@ -1,0 +1,294 @@
+---
+ca:
+  github: Github
+  bitbucket: Bitbucket
+  updated: s'actualitzen
+  1_we_have_just_launched_our_service_title: Acabem de llançar el nostre servei
+  shared:
+    navbar:
+      sign_in: Entrada
+      sign_up: Registra't
+      projects: Projectes
+      syncing_with_github: sincronització amb Github ...
+      syncing_with_bitbucket: sincronització amb Bitbucket ...
+      new_issue: nou tema
+      edit_project: Edita projecte
+    languages_select_modal:
+      available_languages: Idiomes disponibles
+    user_edit_menu:
+      profile: Perfil
+      site_settings: configuració del lloc
+      services: Serveis
+    form_errors:
+      password: contrasenya
+      current_password: contrasenya actual
+      name: Nom
+      base: Base
+      title: Títol
+      user_to_project_connection: usuari a la connexió del projecte
+      columns:
+        tag: Tag solapament
+    new_project_modal:
+      new_project: Nou projecte
+    edit_project_modal:
+      edit_project: Edita projecte
+    new_issue_modal:
+      new_issue: nou tema
+    left_sidebar:
+      projects: Projectes
+    right_sidebar:
+      news: Notícies
+      all: Tot
+    translations:
+      select_column_tags: columna Seleccionar
+      select_section_tags: Seleccionar etiquetes de secció
+      select_issue_tags: Seleccioneu les etiquetes d'emissió
+  users:
+    new:
+      invite_user: Convidar un usuari
+    form:
+      name: Nom
+      enter_user_name: Introdueix el nom d'usuari
+      enter_user_email: Introdueixi correu electrònic de l'usuari
+      enter_user_password: Introduïu la contrasenya d'usuari
+      password: contrasenya
+      save: Desar
+    index:
+      new: Nova
+    edit:
+      name: Nom
+      enter_your_name: Si us plau introduïu
+      save: Desar
+    settings:
+      change_password: Canviar contrasenya
+      interface_language: idioma de la interfície
+      submit: Enviar
+    password_form:
+      new_password: La nova
+      confirm_new_password: Confirmar nova contrasenya
+      old_password: Contrasenya antiga
+      change_password: Canviar contrasenya
+    update:
+      your_profile_was_successfully_updated: seu perfil s'ha actualitzat correctament
+    dashboard:
+      hello: Hola
+      here_some_of_your_statistics: Aquí algunes de les seves estadístiques
+      projects: Projectes
+  projects:
+    index:
+      projects: Projectes
+      new: Nova
+      sync_with_github: sincronització amb github
+      sync_with_bitbucket: sincronització amb bitbucket
+      stop_sync_with_bitbucket: Aturar la sincronització amb bitbucket
+      stop_sync_with_github: Aturar la sincronització amb github
+    form:
+      name: Nom
+      enter_project_name: Introdueix el nom del projecte
+      save: Desar
+      sections: Seccions
+      add: Afegir
+      github_repository_id: Github repositori d'Identificació
+      github_full_name: Github repositori nom_complet
+      github_secret_token_for_hook: Github element secret per al ganxo
+      bitbucket_full_name: Bitbucket nom_complet
+      bitbucket_secret_token_for_hook: Bitbucket element secret per al ganxo
+    project:
+      project_issues: problemes del projecte
+    section_fields:
+      section_tags: etiquetes de secció
+      section_order: Ordre
+      or_include_all: o incloure tots?
+    column_fields:
+      remove_column: Traieu la columna
+      max_issues_count: qüestions Max compten a la columna
+      column_tags: etiquetes de columna
+      column_order: Ordre
+    show:
+      next_page: Pàgina següent
+  issues:
+    form:
+      title: Títol
+      enter_issue_title: Introduir el títol qüestió
+      save: Desar
+      body: Cos
+      enter_issue_body: entrar al cos tema
+      tags: Etiquetes
+      issue_order: Ordre
+      bitbucket_issue_id: Bitbucket tema Identificació
+      github_issue_id: Github tema Identificació
+      github_issue_number: nombre d'emissió Github
+    index:
+      issues: qüestions
+      sync_with_github: sincronització amb github
+      sync_with_bitbucket: sincronització amb bitbucket
+      new: Nova
+    new:
+      new_issue: nou tema
+  authentications:
+    index:
+      enabled_services: serveis habilitats
+    authentication:
+      turned_off: S'apaga
+      turn_on: Enceneu
+      turn_off: Desactiveu
+      turned_on: encesos
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Acabem de llançar el nostre servei!
+      we_have_just_launched_our_service_text: Avui llançar el nostre servei perquè
+        tothom pugui
+      sign_up: inscriure
+      and_use_it: i utilitzar-lo.
+      with_love: Amb amor,
+      technoelegance_team: equip Technoelegance
+    index:
+      all_news: Totes les notícies
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Benvingut a Kanban On Rails
+      welcome_about_text: Aquí pot crear el seu propi tauler Kanban i sincronitzar
+        amb Github o Bitbucket
+  pages:
+    faq:
+      faq: "| La"
+      what_is_kanban_on_rails: El que és KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails és el servei on es pot crear taulers Kanban
+        i sincronitzar amb Github o Bitbucket
+      what_features_has_kanban_on_rails: Quines característiques té KanbanOnRails?
+      kanban_on_rails_features: Vostè pot sincronitzar els seus projectes i problemes
+        amb Github i Bitbucket, convidar als usuaris (per exemple, els gerents) per
+        al seu projecte, desplegar-lo en el seu propi servidor
+      i_have_some_requests: Tinc algunes peticions
+      you_can_write_request: Vostè pot escriure sol·licitud
+      here: aquí
+      i_have_seen_some_typo_or_wrong_translation: He vist alguns errors tipogràfics
+        o traduccions errònies
+      you_can_send_pull_request_to_our: Podeu enviar sol·licitud d'extracció en el
+        nostre
+      i_have_seen_some_error: He vist alguns errors
+      you_can_write_to_our_info_mail: Vostè pot escriure sobre això al nostre correu
+        electrònic
+    about:
+      about_kanban_on_rails: Sobre KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails és el servei on es pot crear taulers
+        Kanban i sincronitzar amb Github o Bitbucket
+      kanban_on_rails_features: característiques KanbanOnRails
+      sync_with_github_and_bitbucket: Vostè pot sincronitzar els seus projectes i
+        problemes amb Github i Bitbucket
+      invite_users: Es pot convidar els usuaris (per exemple, els gerents) per al
+        seu projecte
+      open_source_code: Aquest projecte té codi font obert, de manera que es pot implementar
+        en el seu propi servidor
+      we_use_open_source_and_high_technology: Utilitzem altes tecnologies i llibreries
+        de codi obert. Sempre intentem millorar i millorar el nostre servei.
+      partners_and_investors: estem oberts a la col·laboració i ens agradaria trobar
+        inversors. Si vol col·laborar amb nosaltres, si us plau contacti amb nosaltres
+        a partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Entrada
+        sign_up: Registra't
+        didnt_receive_confirmation_instructions: No vam rebre instruccions de confirmació?
+        sign_in_with: Entra amb
+        fast_login_almost_one_click: entrada ràpida (gairebé un clic)
+    confirmations:
+      confirmed: El teu compte ha estat confirmada satisfactòriament.
+      send_instructions: Vostè rebrà un correu electrònic amb instruccions sobre com
+        confirmar el seu compte en pocs minuts.
+      send_paranoid_instructions: Si la vostra adreça de correu electrònic existeix
+        a la nostra base de dades, rebrà un correu electrònic amb instruccions sobre
+        com confirmar el seu compte en pocs minuts.
+      new:
+        send_mail_for_confirm_your_email: Enviar mail per confirmar el seu correu
+          electrònic
+        submit: Enviar
+    failure:
+      already_authenticated: Ja ha iniciat sessió.
+      inactive: El teu compte no està activada encara.
+      invalid: correu electrònic o contrasenya no vàlids.
+      locked: El teu compte està bloquejat.
+      last_attempt: Tens un intent més abans que el seu compte serà bloquejat.
+      not_found_in_database: correu electrònic o contrasenya no vàlids.
+      timeout: seva sessió ha finalitzat. Si us plau entreu de nou per continuar.
+      unauthenticated: iniciï la seva sessió o registrar-se abans de continuar.
+      unconfirmed: ", han de ser confirmats compte abans de continuar."
+    mailer:
+      confirmation_instructions:
+        subject: instruccions de confirmació
+        welcome_to_kanban_on_rails: Benvingut a KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: 'Podeu confirmar
+          el seu correu electrònic mitjançant el següent enllaç:'
+        confirm_my_account: confirmar la vostra adreça electrònica
+      reset_password_instructions:
+        hello: Hola
+        subject: instruccions de restabliment de contrasenya
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Algú
+          té peticions d'un enllaç per canviar la contrasenya. Pot fer-ho a través
+          del següent enllaç.
+        change_my_password: Canviar contrasenya
+        if_you_didnt_request_this_please_ignore_this_email: Si no ha sol·licitat aquest
+          favor, ignora aquest missatge.
+      unlock_instructions:
+        subject: Instruccions de desbloqueig
+    omniauth_callbacks:
+      failure: no es va poder autenticar de% {tipus} perquè "% {raó}".
+      success: èxit autenticats de% {} tipus de compte.
+    passwords:
+      no_token: No pot accedir a aquesta pàgina sense que ve d'un missatge de restabliment
+        de contrasenya. Si ve d'un missatge de restabliment de contrasenya, si us
+        plau assegureu-vos que va utilitzar la URL proporcionada.
+      send_instructions: Vostè rebrà un correu electrònic amb instruccions sobre com
+        restablir la contrasenya en uns pocs minuts.
+      send_paranoid_instructions: Si la vostra adreça de correu electrònic existeix
+        a la nostra base de dades, rebrà un enllaç de recuperació de contrasenya a
+        la seva adreça de correu electrònic en uns pocs minuts.
+      updated: La contrasenya s'ha canviat correctament. Ara està iniciat sessió.
+      updated_not_active: La contrasenya s'ha canviat correctament.
+      new:
+        forgot_your_password: Recuperar la seva contrasenya
+        reset_password: Enviar recuperar URL
+      edit:
+        change_your_password: Canvieu la contrasenya
+        new_password: La nova
+        confirm_password: Confirmar contrasenya
+        change_password: Canvi
+    registrations:
+      destroyed: Bye! El seu compte s'ha cancel·lat correctament. Esperem veure-li
+        de nou aviat.
+      signed_up: Benvingut! Que s'hagi registrat amb èxit.
+      signed_up_but_inactive: que s'hagi registrat amb èxit. No obstant això, no es
+        podia iniciar sessió perquè el compte encara no està activada.
+      signed_up_but_locked: que s'hagi registrat amb èxit. No obstant això, no s'ha
+        pogut iniciar sessió causa que el seu compte està bloquejat.
+      signed_up_but_unconfirmed: Un missatge amb un enllaç de confirmació ha estat
+        enviat a la seva adreça de correu electrònic. Si us plau, obriu l'enllaç per
+        activar el seu compte.
+      update_needs_confirmation: Ha actualitzat el seu compte amb èxit, però que necessita
+        per verificar la seva nova adreça de correu electrònic. Si us plau, consultar
+        el seu correu electrònic i feu clic a l'enllaç de confirmació per finalitzar
+        confirmant la seva nova adreça de correu electrònic.
+      updated: Ha actualitzat el seu compte correctament.
+      new:
+        sign_up: Registra't
+        name: Nom
+        password: contrasenya
+        register: Registra't
+    sessions:
+      signed_in: signat en èxit.
+      signed_out: tancat la sessió amb èxit.
+      new:
+        sign_in: Entrada
+        password: contrasenya
+        remember_me: Recordar
+        forgot_your_password: Ha oblidat la seva contrasenya?
+    unlocks:
+      send_instructions: Vostè rebrà un correu electrònic amb instruccions sobre com
+        desbloquejar el seu compte en pocs minuts.
+      send_paranoid_instructions: Si existeix la compte, rebrà un correu electrònic
+        amb instruccions sobre com desbloquejar-en pocs minuts.
+      unlocked: El teu compte ha estat desbloquejat amb èxit. Si us plau entreu per
+        continuar.
+  ca: ca
+  ca_iso: ca

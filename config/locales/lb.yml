@@ -1,0 +1,297 @@
+---
+lb:
+  github: Github
+  bitbucket: Bitbucket
+  updated: aktualiséiert
+  1_we_have_just_launched_our_service_title: Mir hu just eise Service lancéiert
+  shared:
+    navbar:
+      sign_in: Umellen
+      sign_up: Aschreiwen
+      projects: Projetën
+      issues: séng
+      syncing_with_github: Synchroniséiert mat Github ...
+      syncing_with_bitbucket: Synchroniséiert mat Bitbucket ...
+      new_issue: New Fro
+      edit_project: Edit Projet
+    languages_select_modal:
+      available_languages: Disponibel Sproochen
+    user_edit_menu:
+      profile: Profil
+      site_settings: Site Astellungen
+      services: Services
+    form_errors:
+      password: Passwuert
+      current_password: Aktuell Passwuert
+      password_confirmation: Passwuert Confirmatioun
+      name: Numm
+      base: Base
+      title: Title
+      user_to_project_connection: De Benotzerkont Verbindung zu Projet
+      columns:
+        tag: Tag phpNuke
+    new_project_modal:
+      new_project: New Projet
+    edit_project_modal:
+      edit_project: Edit Projet
+    new_issue_modal:
+      new_issue: New Fro
+    left_sidebar:
+      projects: Projetën
+    right_sidebar:
+      news: Annonce
+      all: All
+      read_more: Weiderliesen méi
+    translations:
+      select_column_tags: En Kolonn Tags
+      select_section_tags: En Rubrik Tags
+      select_issue_tags: En Thema Tags
+  users:
+    new:
+      invite_user: Benotzer Invitéiert
+    form:
+      name: Numm
+      enter_user_name: Usernumm Fëllt
+      email: Email
+      enter_user_email: Benotzer Mail Fëllt
+      enter_user_password: Benotzer Passwuert Fëllt
+      password: Passwuert
+      role: De Benotzerkont Roll
+      save: späicheren
+    index:
+      project: Project
+      users: Benotzer
+      new: New
+    edit:
+      name: Numm
+      save: späicheren
+    settings:
+      change_password: Passwuert änneren
+      interface_language: Letzebuerger Sprooch
+      submit: Schéckt
+    password_form:
+      new_password: Neit Passwuert
+      old_password: Old Passwuert
+      change_password: Passwuert änneren
+    update:
+      your_profile_was_successfully_updated: Deng Profil war erfollegräich aktualiséiert
+    dashboard:
+      hello: Moien
+      here_some_of_your_statistics: Hei e puer vun Äre Statistiken
+      projects: Projetën
+  projects:
+    index:
+      projects: Projetën
+      new: New
+      sync_with_github: Synchroniséiert mat github
+      sync_with_bitbucket: Synchroniséiert mat bitbucket
+      stop_sync_with_bitbucket: Stop synchroniséiert mat bitbucket
+      stop_sync_with_github: Stop synchroniséiert mat github
+    form:
+      name: Numm
+      enter_project_name: Gitt Projet Numm
+      save: späicheren
+      columns: Kolonnen
+      sections: Moment
+      column_name: erlaben, Russland Numm
+      section_name: Section Numm
+      add: Foto
+      column_width: Kolonn Breet
+      column_height: Kolonn Héicht
+      github_repository_id: Github Commons id
+      github_full_name: Github Commons fullname
+      github_secret_token_for_hook: Github geheime symbolesch fir Héil
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket geheime symbolesch fir Héil
+    project:
+      edit: Edit
+      destroy: läschen
+      project_issues: Project Problemer
+      project_users: Project Benotzer
+    section_fields:
+      section_name: Section Numm
+      section_tags: Section Tags
+      section_order: Uerdnung
+      or_include_all: Oder och all?
+    column_fields:
+      column_name: Kolonn Numm
+      max_issues_count: Max Problemer zielen zu Kolonn
+      column_tags: Kolonn Tags
+      column_order: Uerdnung
+    show:
+      next_page: Nächst Säit
+  issues:
+    form:
+      title: Title
+      enter_issue_title: Fro Titel Fëllt
+      save: späicheren
+      body: Body
+      enter_issue_body: Thema Kierper Fëllt
+      tags: Tags
+      issue_order: Uerdnung
+      bitbucket_issue_id: Bitbucket Fro id
+      github_issue_id: Github Fro id
+      github_issue_number: Github Thema Nummer
+    index:
+      issues: Problemer
+      sync_with_github: Synchroniséiert mat github
+      sync_with_bitbucket: Synchroniséiert mat bitbucket
+      new: New
+    issue:
+      destroy: läschen
+      edit: Edit
+    edit:
+      edit_issue: Edit Fro
+    new:
+      new_issue: New Fro
+  authentications:
+    index:
+      enabled_services: Ugeschalt Servicer
+    authentication:
+      turned_off: Aus ugefaangen
+      turn_on: Dréint op
+      turn_off: Dréint ugefaangen
+      turned_on: Aus op
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Mir eisem Service just lancéiert hunn!
+      we_have_just_launched_our_service_text: Haut mir eise Service lancéiert sou
+        kann jiddereen
+      sign_up: opzemaachen
+      and_use_it: a se benotzt.
+      with_love: Mat Léift,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: All Neiegkeeten
+      read_more: Weiderliesen méi
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Wëllkomm Kanban op Schinne
+      welcome_about_text: Dir hei Är eege Kanban Comité an synchroniséiert et mat
+        Github oder Bitbucket schafe kënnen
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Wat ass KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails ass den Service wou Dir Kanban Plattformen
+        an synchroniséiert et mat Github oder Bitbucket schafe kënnen
+      what_features_has_kanban_on_rails: Wat Fonctiounen huet KanbanOnRails?
+      kanban_on_rails_features: Dir kënnt Är Projeten an Themen mat Github an Bitbucket,
+        invitéieren Benotzer (zum Beispill Manager) fir Äre Projet, ronn et zu Ärem
+        eegenen Server synchroniséiert
+      i_have_some_requests: Ech hunn e puer Demanden
+      you_can_write_request: Dir Demande schreiwen kann
+      here: hei
+      i_have_seen_some_typo_or_wrong_translation: Ech hunn e puer typos oder falsch
+        Iwwersetzungen gesinn
+      you_can_send_pull_request_to_our: Dir zitt Demande schécken kann un eise
+      github_repository: github Commons
+      i_have_seen_some_error: Ech hun e puer Feeler ze gesinn
+      you_can_write_to_our_info_mail: Dir iwwer dëse eis Email schreiwen kann
+    about:
+      about_kanban_on_rails: Iwwer KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ass den Service wou Dir Kanban Plattformen
+        an synchroniséiert et mat Github oder Bitbucket schafe kënnen
+      kanban_on_rails_features: KanbanOnRails Fonctiounen
+      sync_with_github_and_bitbucket: Dir kënnt Är Projeten an Themen mat Github an
+        Bitbucket synchroniséiert
+      invite_users: kënnt Dir Benotzer invitéieren (zum Beispill Manager) fir Äre
+        Projet
+      open_source_code: Dëse Projet huet Open Source Code, sou kënnt Dir et op Är
+        eegen Server ronn
+      we_use_open_source_and_high_technology: Mir benotzen héich Technologien an Open
+        Source Bibliothéiken. Mir probéieren ëmmer besser ze kréien an eisem Service
+        ze verbesseren.
+      partners_and_investors: Mir si fir Partnerschaft opgemaach a mir gären Investisseuren
+        ze fannen. Wann Dir mat eis ze kooperéieren wéilt mellt eis um partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Umellen
+        sign_up: Aschreiwen
+        didnt_receive_confirmation_instructions: Huet net Confirmatioun kritt recieved?
+        sign_in_with: Umellen mat
+        fast_login_almost_one_click: Fast Login (Bal ee klickt)
+    confirmations:
+      confirmed: Äre Kont gouf erfollegräich confirméiert.
+      send_instructions: Dir wäert eng Email mat Instruktioune ronn kréien, wéi Äre
+        Kont an e puer Minutten ze confirméieren.
+      new:
+        submit: Schéckt
+    failure:
+      inactive: Däi Benotzerkont ass nach net ageschalt.
+      invalid: Invalid Email oder Passwuert.
+      locked: Däi Benotzerkont ass gespaart.
+      last_attempt: Dir eng méi ofgefaangen hunn ier Äre Kont gespaart ginn.
+      not_found_in_database: Invalid Email oder Passwuert.
+      timeout: Är Sessioun ofgelaf. Weg ënnerschreiwen an erëm weiderfueren.
+      unauthenticated: Dir braucht an oder Zeechen bis Zeechen ier weider.
+      unconfirmed: Dir hutt Äre Kont ze confirméieren, ier weider.
+    mailer:
+      confirmation_instructions:
+        subject: Confirmatioun kritt
+        welcome_to_kanban_on_rails: Wëllkomm KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Dir Är Email duerch
+          de Link confirméieren kann ënnert
+      reset_password_instructions:
+        hello: Moien
+        subject: Passwuert zrécksetzen Uweisungen
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Eng
+          Persoun huet faasse Link Äert Passwuert ze änneren. Du kanns dat ënnendrënner
+          duerch de Link maachen.
+        change_my_password: mäi Passwuert änneren
+        if_you_didnt_request_this_please_ignore_this_email: Wann dir dat weg dës Email
+          net Demande gemaach ignoréieren.
+      unlock_instructions:
+        subject: Spär Instruktioune
+    omniauth_callbacks:
+      failure: Kënnt authentifizéieren Iech net aus% {Aart} well "% {Grond}".
+      success: Réussite vun% {Aart} Kont versoen.
+    passwords:
+      no_token: Dir kënnt net dat Säit Zougang ouni aus engem Passwuert Compteur Mail
+        nächste. Wann Dir aus engem Passwuert Compteur Email maachen kommen, wann
+        ech glift sécherstellen Dir d'voll URL gëtt benotzt.
+      send_instructions: Dir wäert eng Email mat Instruktioune kréien wéi ärt Passwuert
+        an e puer Minutten ze Compteur.
+      updated: Äert Passwuert huet geännert. Dir sidd elo ënnerschriwen.
+      updated_not_active: Äert Passwuert huet geännert.
+      edit:
+        new_password: Neit Passwuert
+        confirm_password: Confirmatioun vum Passwuert
+        change_password: Uertschaft
+    registrations:
+      destroyed: Bye! Äre Kont gouf erfollegräich annuléiert. Mir hoffen Iech erem
+        séier ze gesinn.
+      signed_up: Wëllkomm! Dir hutt erfollegräich ofgeschloss.
+      signed_up_but_inactive: Dir hutt erfollegräich ofgeschloss. Allerdéngs hätt,
+        mir Zeechen Dir net an well Äre Kont ass nach net ageschalt.
+      signed_up_but_locked: Dir hutt erfollegräich ofgeschloss. Allerdéngs hätt, mir
+        Zeechen Dir net an well Äre Kont gespaart gëtt.
+      signed_up_but_unconfirmed: Eng Message mat engem Certificat Link huet fir Är
+        Email Adress geschéckt ginn. Sot Open de Link Äre Kont ze aktivéieren.
+      update_needs_confirmation: Dir Äre Kont erfollegräich aktualiséiert, mee mir
+        brauchen Är nei Email Adress z'iwwerpréiwen. Iwwerpréift weg är Email a klickt
+        op de confirméieren Link confirméiert Är nei Email Adress ze finaliséieren.
+      updated: Dir Äre Kont erfollegräich aktualiséiert.
+      new:
+        sign_up: Aschreiwen
+        name: Numm
+        password: Passwuert
+        password_confirmation: Passwuert Confirmatioun
+        register: Aschreiwen
+    sessions:
+      signed_in: erfollegräich matgedeelt an.
+      signed_out: erfollegräich matgedeelt eraus.
+      new:
+        sign_in: Umellen
+        password: Passwuert
+        remember_me: Vergiess mech
+        forgot_your_password: Passwuert vergiess?
+    unlocks:
+      send_instructions: Dir wäert eng Email mat Instruktioune ronn kréien, wéi Äre
+        Kont an e puer Minutten ze Spär.
+      send_paranoid_instructions: Wann Äre Kont existéiert, kritt Dir eng E-Mail mat
+        Instruktioune ronn kréien, wéi et an e puer Minutten ze Spär.
+      unlocked: Äre Kont gouf erfollegräich opgehuewen. Weg ënnerschreiwen a weidergespillt.
+  lb: lb
+  lb_iso: lb

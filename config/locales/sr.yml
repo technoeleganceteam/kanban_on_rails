@@ -1,0 +1,308 @@
+---
+sr:
+  github: Гитхуб
+  bitbucket: Битбуцкет
+  updated: ажуриран
+  1_we_have_just_launched_our_service_title: Управо смо покренули наш сервис
+  shared:
+    navbar:
+      sign_in: Пријавите се
+      sign_up: Сигн уп
+      projects: Пројекти
+      issues: питања
+      syncing_with_github: Синхронизација са гитхуб ...
+      syncing_with_bitbucket: Синхронизација са Битбуцкет ...
+      new_issue: Нови број
+      edit_project: измена пројекат
+    languages_select_modal:
+      available_languages: Доступни језици
+    user_edit_menu:
+      profile: Профил
+      site_settings: сајта подешавања
+      services: услуги
+    form_errors:
+      password: Лозинка
+      current_password: Тренутна лозинка
+      name: Име
+      base: База
+      title: Наслов
+      user_to_project_connection: Корисник пројектовати везу
+      columns:
+        tag: Ознака преклапање
+    new_project_modal:
+      new_project: Нови пројекат
+    edit_project_modal:
+      edit_project: измена пројекат
+    new_issue_modal:
+      new_issue: Нови број
+    left_sidebar:
+      projects: Пројекти
+    right_sidebar:
+      news: Новости
+      all: Све
+      read_more: Опширније
+    translations:
+      select_column_tags: Селецт колона ознаке
+      select_section_tags: Изаберите одељак ознаке
+      select_issue_tags: Селецт издаје ознаке
+  users:
+    new:
+      invite_user: Позови корисника
+    form:
+      name: Име
+      enter_user_name: Унесите корисничко име
+      email: е-маил
+      enter_user_email: Унесите корисничко емаил
+      enter_user_password: Унесите корисничку лозинку
+      password: Лозинка
+      role: улога корисника
+      save: Сачувај
+    index:
+      project: Пројекат
+      users: корисника
+      new: Нова
+    edit:
+      name: Име
+      enter_your_name: Унесите своје име
+      save: Сачувај
+    settings:
+      change_password: Промена лозинке
+      interface_language: Језик интерфејса
+      submit: Пошаљи
+    password_form:
+      new_password: Нова лозинка
+      confirm_new_password: Потврди нову лозинку
+      old_password: Стара лозинка
+      change_password: Промена лозинке
+    update:
+      your_profile_was_successfully_updated: Профил је успешно ажурирана
+    dashboard:
+      hello: Поздрав
+      here_some_of_your_statistics: Ево неких од ваших статистике
+      projects: Пројекти
+  projects:
+    index:
+      projects: Пројекти
+      new: Нова
+      sync_with_github: Синхронизација са ГитХуб
+      sync_with_bitbucket: Синхронизација са Битбуцкет
+      stop_sync_with_bitbucket: стоп синхронизација са Битбуцкет
+      stop_sync_with_github: стоп синхронизација са ГитХуб
+    form:
+      name: Име
+      enter_project_name: Унесите назив пројекта
+      save: Сачувај
+      columns: Колоне
+      sections: Секције
+      column_name: Ред име
+      section_name: Секција име
+      add: Додај
+      column_width: Колона ширина
+      column_height: Колона висина
+      github_repository_id: Гитхуб складиште ИД
+      github_full_name: Гитхуб складиште ФУЛЛНАМЕ
+      github_secret_token_for_hook: Гитхуб тајни токен за куку
+      bitbucket_full_name: Битбуцкет ФУЛЛНАМЕ
+      bitbucket_secret_token_for_hook: Битбуцкет тајни токен за куку
+    project:
+      edit: Мик
+      destroy: Делете
+      project_issues: питања Пројецт
+      project_users: Корисници пројекта
+    section_fields:
+      section_name: Секција име
+      remove_section: Уклонити секција
+      section_tags: Члан ознаке
+      section_order: Ордер
+      or_include_all: Или укључују све?
+    column_fields:
+      column_name: Колона име
+      remove_column: Ремове колону
+      max_issues_count: Максимални број питања рачунати у колони
+      column_tags: Цолумн ознаке
+      column_order: Ордер
+    show:
+      next_page: Следећа страна
+  issues:
+    form:
+      title: Наслов
+      enter_issue_title: Ентер наслов иссуе
+      save: Сачувај
+      body: Тело
+      enter_issue_body: Ентер иссуе тело
+      tags: Ознаке
+      issue_order: Ордер
+      bitbucket_issue_id: Битбуцкет питање? Ид
+      github_issue_id: Гитхуб питање? Ид
+      github_issue_number: Гитхуб број проблем
+    index:
+      issues: питања
+      sync_with_github: Синхронизација са ГитХуб
+      sync_with_bitbucket: Синхронизација са Битбуцкет
+      new: Нова
+    issue:
+      destroy: Делете
+      edit: Мик
+    edit:
+      edit_issue: измена питање
+    new:
+      new_issue: Нови број
+  authentications:
+    index:
+      enabled_services: Омогућено услуге
+    authentication:
+      turned_off: Искључено је
+      turn_on: Укључите
+      turn_off: Искључите
+      turned_on: укључен и
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Управо смо покренули наш сервис!
+      we_have_just_launched_our_service_text: Данас смо покренули наше услуге тако
+        да сви могу
+      sign_up: сигн уп
+      and_use_it: и користити га.
+      with_love: Са љубављу,
+      technoelegance_team: Тецхноелеганце тима
+    index:
+      all_news: Све вести
+      read_more: Опширније
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Добродошли на Канбан на шинама
+      welcome_about_text: Овде можете направити свој властити КАНБАН одбор и синхронизацију
+        га са гитхуб или Битбуцкет
+  pages:
+    faq:
+      faq: Често
+      what_is_kanban_on_rails: Шта је КанбанОнРаилс?
+      about_kanban_on_rails: КанбанОнРаилс је сервис где можете креирати КАНБАН одборе
+        и синхронизација га са гитхуб или Битбуцкет
+      what_features_has_kanban_on_rails: Шта има има КанбанОнРаилс?
+      kanban_on_rails_features: Иоу могу да синхронизују своје пројекте и проблеме
+        са гитхуб и Битбуцкет, позивамо кориснике (на пример менаџере) за свој пројекат,
+        распоредити га у свом серверу
+      i_have_some_requests: Имам неке захтеве
+      you_can_write_request: Можете написати захтев
+      here: овде
+      i_have_seen_some_typo_or_wrong_translation: сам неке грешке у куцању или погрешне
+        преводе
+      you_can_send_pull_request_to_our: можете послати пулл захтев за наш
+      github_repository: гитхуб складиште
+      i_have_seen_some_error: сам неке грешке
+      you_can_write_to_our_info_mail: можете писати о томе на наш емаил
+    about:
+      about_kanban_on_rails: О КанбанОнРаилс
+      about_kanban_on_rails_text: КанбанОнРаилс је сервис где можете креирати КАНБАН
+        одборе и синхронизација га са гитхуб или Битбуцкет
+      kanban_on_rails_features: КанбанОнРаилс карактеристике
+      sync_with_github_and_bitbucket: Иоу могу да синхронизују своје пројекте и проблеме
+        са гитхуб и Битбуцкет
+      invite_users: можете позвати кориснике (на пример менаџере) за свој пројекат
+      open_source_code: Овај пројекат има отворени изворни код, тако да га можете
+        развити на свом серверу
+      we_use_open_source_and_high_technology: Ми користимо високе технологије и опен
+        соурце библиотеке. Ми увек покушавамо да боље и побољшати наше услуге.
+      partners_and_investors: Отворени смо за партнерство и желели бисмо да пронађу
+        инвеститоре. Ако желите да сарађујете са нама контактирајте нас на партнерсхип@тецхноелеганце.цом
+  devise:
+    shared:
+      links:
+        sign_in: Пријавите се
+        sign_up: Сигн уп
+        didnt_receive_confirmation_instructions: Није примио упутства потврде?
+        sign_in_with: Пријавите се са
+        fast_login_almost_one_click: Брзо пријављивање (скоро један клик)
+    confirmations:
+      confirmed: свог налога је успешно потврђен.
+      send_instructions: ћете добити емаил са упутствима о томе како да потврди свој
+        рачун за неколико минута.
+      send_paranoid_instructions: Ако ваш емаил адреса постоји у нашој бази, убрзо
+        ћете добити емаил са упутствима о томе како да потврди свој рачун за неколико
+        минута.
+      new:
+        send_mail_for_confirm_your_email: Пошаљи поруку за потврди свој емаил
+        submit: Пошаљи
+    failure:
+      already_authenticated: сте већ пријављени у.
+      inactive: Ваш налог још увек није активиран.
+      invalid: Погрешна емаил или лозинка.
+      locked: Ваш налог је закључан.
+      last_attempt: Имате још један покушај пре него што ваш налог ће бити закључан.
+      not_found_in_database: Погрешна емаил или лозинка.
+      timeout: Сесија је истекла. Молимо пријавите се поново за наставак.
+      unauthenticated: Потребно је да се пријавите или региструјете пре него што наставите.
+      unconfirmed: треба да потврдите свој налог пре него што наставите.
+    mailer:
+      confirmation_instructions:
+        subject: инструкције Потврда
+        welcome_to_kanban_on_rails: Добродошли у КанбанОнРаилс
+        you_can_confirm_your_account_email_through_the_link_below: можете потврдити
+          своју е-пошту преко линка испод
+        confirm_my_account: потврдим моју емаил
+      reset_password_instructions:
+        hello: Поздрав
+        subject: ресет пассворд упутства
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Неко
+          има тражи везу да бисте променили лозинку. То можете учинити преко линка
+          испод.
+        change_my_password: Промени лозинку
+        if_you_didnt_request_this_please_ignore_this_email: Ако нисте затражили ово
+          занемарите ову поруку.
+      unlock_instructions:
+        subject: Унлоцк Упутство
+    omniauth_callbacks:
+      failure: Није могао да те аутентификације% {врсте} јер "% {разлог}".
+      success: Успешно овјерен од% {кинд} налог.
+    passwords:
+      no_token: не можете да приступите овој страници без долази из поновно постављање
+        лозинке. Ако не долазе из поновно постављање лозинке е-поште, проверите да
+        ли сте користили пуну УРЛ-а.
+      send_instructions: ћете добити емаил са упутствима о томе како да поништите
+        лозинку за неколико минута.
+      send_paranoid_instructions: Ако ваш емаил адреса постоји у нашој бази, добићете
+        Пассворд Рецовери линк на Вашу емаил адресу за неколико минута.
+      updated: Лозинка је успешно промењена. Сада сте у.
+      updated_not_active: Лозинка је успешно промењена.
+      new:
+        forgot_your_password: Опоравак лозинку
+        reset_password: Пошаљи опорави урл
+      edit:
+        change_your_password: Промена лозинке
+        new_password: Нова лозинка
+        confirm_password: Потврди лозинку
+        change_password: Промена
+    registrations:
+      destroyed: Бие! Ваш налог отказан. Надамо се да ћемо се поново видети ускоро.
+      signed_up: Добродошли! Сте се успешно.
+      signed_up_but_inactive: сте се успешно. Међутим, нисмо могли да вас пријави
+        јер налог још није активиран.
+      signed_up_but_locked: сте се успешно. Међутим, нисмо могли да вас пријави јер
+        ваш рачун је закључан.
+      signed_up_but_unconfirmed: поруку са линком за потврду је послат на вашу емаил
+        адресу. Молимо отворите линк да бисте активирали свој налог.
+      update_needs_confirmation: сте успешно ажуриран свој налог, али морамо да потврдимо
+        своју нову емаил адресу. Проверите е-пошту и кликните на потврди везу да заврши
+        потврђујући своју нову емаил адресу.
+      updated: Ажурирали свој налог успешно.
+      new:
+        sign_up: Сигн уп
+        name: Име
+        password: Лозинка
+        register: Сигн уп
+    sessions:
+      signed_in: Потписан у успешно.
+      signed_out: Сигнед успјешно.
+      new:
+        sign_in: Пријавите се
+        password: Лозинка
+        remember_me: Запамти ме
+        forgot_your_password: Заборавили сте лозинку?
+    unlocks:
+      send_instructions: ћете добити емаил са упутствима о томе како да откључате
+        налог за неколико минута.
+      send_paranoid_instructions: Ако постоји налог, добићете емаил са упутствима
+        о томе како да га откључали за неколико минута.
+      unlocked: Ваш налог је успешно откључана. Пријавите се да бисте наставили.
+  sr: sr
+  sr_iso: sr

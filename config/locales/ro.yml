@@ -1,0 +1,303 @@
+---
+ro:
+  github: Github
+  bitbucket: BitBucket
+  updated: actualizat
+  1_we_have_just_launched_our_service_title: Am lansat serviciul nostru
+  shared:
+    navbar:
+      sign_in: Conectați-vă
+      sign_up: Inscrie-te
+      projects: Proiecte
+      issues: Probleme
+      syncing_with_github: Sincronizare cu Github ...
+      syncing_with_bitbucket: Sincronizare cu BitBucket ...
+      new_issue: problemă nouă
+      edit_project: Editare proiect
+    languages_select_modal:
+      available_languages: Limbi disponibile
+    user_edit_menu:
+      profile: Profilul
+      site_settings: Setările site-ului
+      services: Servicii
+    form_errors:
+      password: parolă
+      current_password: Parola curentă
+      name: Nume
+      base: Base
+      title: Titlu
+      user_to_project_connection: utilizator pentru a proiecta conexiunea
+      columns:
+        tag: Tag suprapunere
+    new_project_modal:
+      new_project: proiect nou
+    edit_project_modal:
+      edit_project: Editare proiect
+    new_issue_modal:
+      new_issue: problemă nouă
+    left_sidebar:
+      projects: Proiecte
+    right_sidebar:
+      news: Știri
+      all: Toate
+      read_more: Citește mai mult
+    translations:
+      select_column_tags: Selectați etichetele de coloană
+      select_section_tags: Selectați etichetele secțiune
+      select_issue_tags: Selectați problema tag-uri
+  users:
+    new:
+      invite_user: Invitați utilizator
+    form:
+      name: Nume
+      enter_user_name: Introduceți numele de utilizator
+      email: E-mail
+      enter_user_email: Introduceți e-mail utilizator
+      enter_user_password: Introduceți parola de utilizator
+      password: parolă
+      save: Salvare
+    index:
+      project: Project
+      users: utilizatori
+      new: Nou
+    edit:
+      name: Nume
+      enter_your_name: Introduceți numele
+      save: Salvare
+    settings:
+      change_password: Schimbare parolă
+      interface_language: Limbă interfață
+      submit: Trimite
+    password_form:
+      new_password: parolă nouă
+      confirm_new_password: Confirmă parola nouă
+      old_password: parola veche
+      change_password: Schimbare parolă
+    update:
+      your_profile_was_successfully_updated: Profilul tău a fost actualizat cu succes
+    dashboard:
+      hello: Bună ziua
+      here_some_of_your_statistics: Aici unele dintre statisticile
+      projects: Proiecte
+  projects:
+    index:
+      projects: Proiecte
+      new: Nou
+      sync_with_github: Sincronizare cu github
+      sync_with_bitbucket: Sincronizare cu BitBucket
+      stop_sync_with_bitbucket: Opriți sincronizarea cu BitBucket
+      stop_sync_with_github: Opriți sincronizarea cu github
+    form:
+      name: Nume
+      enter_project_name: Introduceți numele proiectului
+      save: Salvare
+      columns: Coloane
+      sections: Secțiuni
+      add: Adaugă
+      github_repository_id: Github depozit id
+      github_full_name: Github depozit FULLNAME
+      github_secret_token_for_hook: Github semn secret cârlig
+      bitbucket_full_name: BitBucket FULLNAME
+      bitbucket_secret_token_for_hook: BitBucket semn secret cârlig
+    project:
+      edit: Edit
+      destroy: Ștergeți
+      project_issues: probleme de proiect
+      project_users: utilizatori Project
+    section_fields:
+      section_tags: tag-uri Secțiunea
+      section_order: Ordine
+      or_include_all: Sau includ toate?
+    column_fields:
+      remove_column: Eliminați coloana
+      max_issues_count: probleme Max conta în coloana
+      column_tags: tag-uri Coloana
+      column_order: Ordine
+    show:
+      next_page: Pagina următoare
+  issues:
+    form:
+      title: Titlu
+      enter_issue_title: Introduceți titlul problemă
+      save: Salvare
+      body: tot corpul
+      enter_issue_body: Enter organism problemă
+      tags: Tag-uri
+      issue_order: Comandă
+      bitbucket_issue_id: BitBucket problemă id
+      github_issue_id: Github problemă id
+      github_issue_number: număr problemă Github
+    index:
+      issues: probleme
+      sync_with_github: Sincronizare cu github
+      sync_with_bitbucket: Sincronizare cu BitBucket
+      new: Nou
+    issue:
+      destroy: Ștergeți
+      edit: Editați
+    edit:
+      edit_issue: Editare
+    new:
+      new_issue: problemă nouă
+  authentications:
+    index:
+      enabled_services: servicii activate
+    authentication:
+      turned_off: Oprit
+      turn_on: Activați
+      turn_off: Dezactivați
+      turned_on: Pornit
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Am lansat serviciul nostru!
+      we_have_just_launched_our_service_text: Astăzi vă vom lansa serviciul nostru,
+        astfel încât oricine poate
+      sign_up: Înregistrează-te
+      and_use_it: și să o folosească.
+      with_love: Cu dragoste,
+      technoelegance_team: Technoelegance Echipa
+    index:
+      all_news: Toate știrile
+      read_more: Citește mai mult
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Bine ati venit la Kanban pe șine
+      welcome_about_text: Aici vă puteți crea propriul dvs. bord și de sincronizare
+        Kanban cu Github sau BitBucket
+  pages:
+    faq:
+      faq: Întrebări frecvente
+      what_is_kanban_on_rails: Ce este KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails este serviciul în cazul în care vă puteți
+        crea panouri Kanban și sincronizați-l cu Github sau BitBucket
+      what_features_has_kanban_on_rails: Ce caracteristici are KanbanOnRails?
+      kanban_on_rails_features: Puteți sincroniza proiectele și problemele cu Github
+        și BitBucket, invitați utilizatori (de exemplu manageri) pentru proiectul
+        dumneavoastră, implementați propriul server
+      i_have_some_requests: Am niște solicitări
+      you_can_write_request: Puteți scrie cerere
+      here: aici
+      i_have_seen_some_typo_or_wrong_translation: Am văzut unele greșeli de tipar
+        sau traduceri greșite
+      you_can_send_pull_request_to_our: Puteți trimite cererea trage noastre
+      i_have_seen_some_error: Am văzut unele erori
+      you_can_write_to_our_info_mail: Puteți scrie despre acest lucru la e-mail
+    about:
+      about_kanban_on_rails: Despre KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails este serviciul în cazul în care vă
+        puteți crea panouri Kanban și sincronizați-l cu Github sau BitBucket
+      kanban_on_rails_features: Caracteristici KanbanOnRails
+      sync_with_github_and_bitbucket: Puteți sincroniza proiectele și problemele cu
+        Github și BitBucket
+      invite_users: Puteți invita utilizatori (de exemplu manageri) pentru proiectul
+        dumneavoastră
+      open_source_code: Acest proiect are cod open source, astfel încât să puteți
+        implementa pe propriul server
+      we_use_open_source_and_high_technology: Noi folosim tehnologii înalte și biblioteci
+        open source. Noi încercăm întotdeauna să obțineți mai bine și de a îmbunătăți
+        serviciul.
+      partners_and_investors: Suntem deschiși pentru parteneriat și ne-ar dori să
+        găsească investitori. Dacă doriți să coopereze cu noi, vă rugăm să ne contactați
+        la partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Conectați-vă
+        sign_up: Inscrie-te
+        didnt_receive_confirmation_instructions: Nu a primit instrucțiuni de confirmare?
+        sign_in_with: Conectați-vă cu
+        fast_login_almost_one_click: rapid de conectare (aproape un singur clic)
+    confirmations:
+      confirmed: Contul dvs. a fost confirmat cu succes.
+      send_instructions: Vei primi un e-mail cu instrucțiuni despre cum să confirmați
+        contul dvs. în câteva minute.
+      send_paranoid_instructions: În cazul în care există adresa de e-mail în baza
+        noastră de date, veți primi un e-mail cu instrucțiuni despre cum să confirmați
+        contul dvs. în câteva minute.
+      new:
+        send_mail_for_confirm_your_email: Trimitere e-mail pentru confirmare un e-mail
+        submit: Trimite
+    failure:
+      already_authenticated: Sunteți deja conectat.
+      inactive: Contul dvs. nu este activat încă.
+      invalid: e-mail nevalidă sau o parolă.
+      locked: Contul dvs. este blocat.
+      last_attempt: Mai aveți o încercare înainte ca contul dvs. va fi blocat.
+      not_found_in_database: e-mail nevalidă sau o parolă.
+      timeout: Sesiunea a expirat. Vă rugăm să vă conectați din nou pentru a continua.
+      unauthenticated: Trebuie să vă conectați sau înregistrați-vă înainte de a continua.
+      unconfirmed: Trebuie să vă confirmați contul înainte de a continua.
+    mailer:
+      confirmation_instructions:
+        subject: Instrucțiuni de confirmare
+        welcome_to_kanban_on_rails: Bine ati venit la KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Puteți confirma
+          un e-mail prin link-ul de mai jos
+        confirm_my_account: Confirmați mea de e-mail
+      reset_password_instructions:
+        hello: Bună ziua
+        subject: Instrucțiuni de resetare a parolei
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Cineva
+          are un link de cereri de schimbare a parolei. Puteți face acest lucru prin
+          link-ul de mai jos.
+        change_my_password: schimba parola
+        if_you_didnt_request_this_please_ignore_this_email: Dacă nu ați solicitat
+          acest lucru, vă rugăm să ignorați acest e-mail.
+      unlock_instructions:
+        subject: Instrucțiuni Deblocare
+    omniauth_callbacks:
+      failure: nu a putut autentifica la {% fel} deoarece "% {motiv}".
+      success: autentificat cu succes la {%} fel de cont.
+    passwords:
+      no_token: Nu puteți accesa această pagină, fără a veni dintr-un e-mail de resetare
+        a parolei. Dacă nu provin dintr-un e-mail de resetare a parolei, vă rugăm
+        să asigurați-vă că ați folosit URL-ul complet furnizat.
+      send_instructions: Vei primi un e-mail cu instrucțiuni privind modul de resetare
+        a parolei în câteva minute.
+      send_paranoid_instructions: În cazul în care există adresa de e-mail în baza
+        noastră de date, veți primi un link de recuperare a parolei la adresa de e-mail
+        în câteva minute.
+      updated: Parola ta a fost schimbată cu succes. Acum sunteți conectat.
+      updated_not_active: Parola ta a fost schimbată cu succes.
+      new:
+        forgot_your_password: Recuperare parola
+        reset_password: Trimite recupera URL-ul
+      edit:
+        change_your_password: Schimbarea parolei
+        new_password: parolă nouă
+        change_password: Schimbare
+    registrations:
+      destroyed: Pa! Contul dvs. a fost anulat. Sperăm să vă vedem din nou în curând.
+      signed_up: Bine ai venit! V-ați înscris cu succes.
+      signed_up_but_inactive: V-ați înscris cu succes. Cu toate acestea, nu te putem
+        conecta, deoarece contul dvs. nu este încă activat.
+      signed_up_but_locked: V-ați înscris cu succes. Cu toate acestea, nu te putem
+        conecta, deoarece contul dvs. este blocat.
+      signed_up_but_unconfirmed: Un mesaj cu un link de confirmare a fost trimis la
+        adresa de e-mail. Vă rugăm să deschideți link-ul pentru a activa contul.
+      update_needs_confirmation: Ați actualizat contul dvs. cu succes, dar trebuie
+        să verificăm dacă noua adresă de e-mail. Vă rugăm să verificați e-mail-ul
+        și faceți clic pe link-ul de confirmare pentru a finaliza noua confirmare
+        a adresei de e-mail.
+      updated: Ați actualizat contul cu succes.
+      new:
+        sign_up: Inscrie-te
+        name: Nume
+        password: parola
+        register: Inscrie-te
+    sessions:
+      signed_in: Conectat cu succes.
+      signed_out: semnat cu succes.
+      new:
+        sign_in: Conectați-vă
+        password: parolă
+        remember_me: Tine-ma minte
+        forgot_your_password: Ai uitat parola?
+    unlocks:
+      send_instructions: Vei primi un e-mail cu instrucțiuni despre modul în care
+        pentru a debloca contul în câteva minute.
+      send_paranoid_instructions: Dacă există contul dvs., veți primi un e-mail cu
+        instrucțiuni despre cum să-l debloca în câteva minute.
+      unlocked: Contul dvs. a fost deblocat cu succes. Vă rugăm sign in pentru a continua.
+  ro: ro
+  ro_iso: ro

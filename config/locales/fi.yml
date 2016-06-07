@@ -1,0 +1,305 @@
+---
+fi:
+  github: Github
+  bitbucket: Bitbucket
+  updated: päivitetty
+  1_we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelumme
+  shared:
+    navbar:
+      sign_in: Kirjaudu sisään
+      sign_up: Rekisteröidy
+      projects: Projects
+      issues: Issues
+      syncing_with_github: synkronointi Github ...
+      syncing_with_bitbucket: synkronointi Bitbucket ...
+      new_issue: Uusmerkintä
+      edit_project: Edit projekti
+    languages_select_modal:
+      available_languages: Käytettävissä olevat kielet
+    user_edit_menu:
+      profile: Profile
+      site_settings: Sivustoasetukset
+      services: Palvelut
+    form_errors:
+      password: Salasana
+      current_password: Nykyinen salasana
+      password_confirmation: Salasanan vahvistus
+      name: Name
+      base: Base
+      title: Otsikko
+      user_to_project_connection: Käyttäjä hankkeen yhteys
+      columns:
+        tag: Tag päällekkäisiä
+    new_project_modal:
+      new_project: Uusi projekti
+    edit_project_modal:
+      edit_project: Edit projekti
+    new_issue_modal:
+      new_issue: Uusmerkintä
+    left_sidebar:
+      projects: Projects
+    right_sidebar:
+      news: News
+      all: Kaikki
+      read_more: Lue lisää
+    translations:
+      select_column_tags: Valitse sarake tunnisteet
+      select_section_tags: Valitse osiotunnisteita
+      select_issue_tags: Valitse myöntää leimat
+  users:
+    new:
+      invite_user: Kutsu käyttäjä
+    form:
+      name: Name
+      enter_user_name: Anna käyttäjätunnus
+      email: Sähköposti
+      enter_user_email: Anna käyttäjän sähköpostiosoite
+      enter_user_password: Anna käyttäjän salasana
+      password: Salasana
+      role: User rooli
+      save: Tallenna
+    index:
+      project: Project
+      users: käyttäjät
+      new: Uusi
+    edit:
+      name: Name
+      enter_your_name: Kirjoita nimesi
+      save: Tallenna
+    settings:
+      change_password: Vaihda salasana
+      interface_language: Käyttöliittymän kieli
+      submit: Lähetä
+    password_form:
+      new_password: Uusi salasana
+      confirm_new_password: Vahvista uusi salasana
+      old_password: Vanha salasana
+      change_password: Vaihda salasana
+    update:
+      your_profile_was_successfully_updated: Profiilisi on päivitetty
+    dashboard:
+      hello: Hei
+      here_some_of_your_statistics: Tässä joitakin tilastojen
+      projects: Projects
+  projects:
+    index:
+      projects: Projects
+      new: Uusi
+      sync_with_github: synkronointi github
+      sync_with_bitbucket: synkronointi bitbucket
+      stop_sync_with_bitbucket: Pysäytä synkronointi bitbucket
+      stop_sync_with_github: Pysäytä synkronointi github
+    form:
+      name: Name
+      enter_project_name: Anna projektin nimi
+      save: Tallenna
+      columns: sarakkeet
+      sections: pääluokat
+      column_name: Row nimi
+      section_name: "§ nimi"
+      add: Lisää
+      column_width: Sarakeleveys
+      column_height: sarake korkeus
+      github_repository_id: Github arkistoon id
+      github_full_name: Github arkistoon fullname
+      github_secret_token_for_hook: Github salaustunnus koukku
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket salaustunnus koukku
+    project:
+      edit: Edit
+      destroy: Poista
+      project_issues: Project kysymyksiä
+      project_users: Project käyttäjää
+    section_fields:
+      section_name: "§ nimi"
+      remove_section: Poista osio
+      section_tags: "§ tunnisteet"
+      section_order: Tilaa
+      or_include_all: Tai sisältävät kaikki?
+    column_fields:
+      column_name: sarake name
+      remove_column: Poista sarake
+      max_issues_count: Max kysymyksiä laskea sarakkeessa
+      column_tags: sarake tunnisteet
+      column_order: Tilaa
+    show:
+      next_page: Seuraava
+  issues:
+    form:
+      title: Otsikko
+      enter_issue_title: Anna kysymys otsikko
+      save: Tallenna
+      body: Body
+      enter_issue_body: Anna kysymys elin
+      tags: Tunnisteet
+      issue_order: Tilaa
+      bitbucket_issue_id: Bitbucket kysymys id
+      github_issue_id: Github kysymys id
+      github_issue_number: Github kysymys numero
+    index:
+      issues: kysymykset
+      sync_with_github: synkronointi github
+      sync_with_bitbucket: synkronointi bitbucket
+      new: Uusi
+    issue:
+      destroy: Poista
+      edit: Edit
+    edit:
+      edit_issue: Edit kysymys
+    new:
+      new_issue: Uusmerkintä
+  authentications:
+    index:
+      enabled_services: Käytössä palvelut
+    authentication:
+      turned_off: Pois päältä
+      turn_on: Ota
+      turn_off: Sammuta
+      turned_on: Päällä
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelustamme!
+      we_have_just_launched_our_service_text: Tänään aloittaa palvelumme niin kaikki
+        voivat
+      sign_up: rekisteröityä
+      and_use_it: ja käyttää sitä.
+      with_love: Rakkaudella
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Kaikki uutiset
+      read_more: Lue lisää
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Tervetuloa Kanban on Rails
+      welcome_about_text: Täällä voit luoda oman Kanban hallituksen ja synkronoimaan
+        sen Github tai Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Mikä on KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails on palvelu, jossa voit luoda Kanban levyt
+        ja synkronoimaan sen Github tai Bitbucket
+      what_features_has_kanban_on_rails: mitä ominaisuuksia on KanbanOnRails?
+      kanban_on_rails_features: Voit synkronoida projekteja ja ongelmia Github ja
+        Bitbucket, kutsua käyttäjiä (esim johtaja) projektin, ottaa sen omalle palvelimelle
+      i_have_some_requests: Minulla on joitakin pyyntöjä
+      you_can_write_request: Voit kirjoittaa pyynnön
+      here: täällä
+      i_have_seen_some_typo_or_wrong_translation: Olen nähnyt joitakin kirjoitusvirheitä
+        tai väärin käännöksiä
+      you_can_send_pull_request_to_our: Voit lähettää vetää pyyntö meille
+      github_repository: github arkistoon
+      i_have_seen_some_error: Olen nähnyt joitakin virheitä
+      you_can_write_to_our_info_mail: Voit kirjoittaa tästä meidän sähköpostitse
+    about:
+      about_kanban_on_rails: Tietoja KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails on palvelu, jossa voit luoda Kanban
+        levyt ja synkronoimaan sen Github tai Bitbucket
+      kanban_on_rails_features: KanbanOnRails ominaisuudet
+      sync_with_github_and_bitbucket: Voit synkronoida projekteja ja ongelmia Github
+        ja Bitbucket
+      invite_users: Voit kutsua käyttäjiä (esim johtaja) projektin
+      open_source_code: Tämä hanke on avoimen lähdekoodin, joten voit ottaa sen omalle
+        palvelimelle
+      we_use_open_source_and_high_technology: Käytämme korkean teknologian ja avoimen
+        lähdekoodin kirjastoja. Olemme aina yrittää saada paremmin ja parantaa palvelua.
+      partners_and_investors: Olemme avataan kumppanuutta ja haluaisimme löytää sijoittajia.
+        Jos haluat tehdä yhteistyötä kanssamme ota yhteyttä osoitteeseen partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Kirjaudu sisään
+        sign_up: Rekisteröidy
+        didnt_receive_confirmation_instructions: Ei Vastaanotetut vahvistusta ohjeita?
+        sign_in_with: Kirjaudu sisään
+        fast_login_almost_one_click: Fast kirjautuminen (lähes yhdellä klikkauksella)
+    confirmations:
+      confirmed: Tilisi onnistuneesti vahvistettu.
+      send_instructions: Saat sähköpostiisi ohjeet siitä, miten vahvistaa tilille
+        muutamassa minuutissa.
+      send_paranoid_instructions: Jos sähköpostiosoite on olemassa meidän tietokantaan,
+        saat sähköpostiisi ohjeet siitä, miten vahvistaa tilille muutamassa minuutissa.
+      new:
+        send_mail_for_confirm_your_email: Lähetä postia vahvista sähköpostiviesti
+        submit: Lähetä
+    failure:
+      already_authenticated: Olet jo kirjautunut sisään.
+      inactive: Tiliäsi ei ole aktivoitu vielä.
+      invalid: Virheellinen sähköpostiosoite tai salasana.
+      locked: Tilisi on lukittu.
+      last_attempt: Jäljellä on yksi yritys ennen tilin lukitaan.
+      not_found_in_database: Virheellinen sähköpostiosoite tai salasana.
+      timeout: Istunto vanhentunut. Kirjaudu sisään jatkaaksesi.
+      unauthenticated: Sinun täytyy kirjautua sisään tai rekisteröityä ennen jatkamista.
+      unconfirmed: Sinun täytyy vahvistaa tilisi ennen jatkamista.
+    mailer:
+      confirmation_instructions:
+        subject: Vahvistus ohjeet
+        welcome_to_kanban_on_rails: Tervetuloa KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Voit vahvistaa
+          sähköpostiosoitteesi alla olevasta linkistä
+        confirm_my_account: Vahvista minun Sähköposti
+      reset_password_instructions:
+        hello: Hei
+        subject: Nollaa salasana ohjeet
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Joku
+          on pyyntöjä linkki vaihtaa salasana. Voit tehdä tämän alla olevasta linkistä.
+        change_my_password: Salasanan muuttaminen
+        if_you_didnt_request_this_please_ignore_this_email: Jos et pyytänyt tätä jätä
+          tämä sähköposti.
+      unlock_instructions:
+        subject: Unlock Ohjeet
+    omniauth_callbacks:
+      failure: voitu todentaa teitä% {kind} koska "% {reason}".
+      success: Onnistuneesti todennettu välillä% {kind} tilin.
+    passwords:
+      no_token: Et voi käyttää tätä sivua ilman lähtöisin salasanan sähköpostitse.
+        Jos et kotoisin salasanan sähköpostin, varmista että käytetään koko URL säädetty.
+      send_instructions: Saat sähköpostiisi ohjeet uuden salasanan muutamassa minuutissa.
+      send_paranoid_instructions: Jos sähköpostiosoite on olemassa meidän tietokantaan,
+        saat salasananpalautuslinkkiä sähköpostiosoitteesi muutamassa minuutissa.
+      updated: Salasanan vaihto onnistui. Olet nyt kirjautunut sisään.
+      updated_not_active: Salasanan vaihto onnistui.
+      new:
+        forgot_your_password: Palauta salasana
+        reset_password: Lähetä toipua url
+      edit:
+        change_your_password: Vaihda salasana
+        new_password: Uusi salasana
+        confirm_password: Vahvista salasana
+        change_password: Muuta
+    registrations:
+      destroyed: Bye! Tilisi peruutus onnistui. Toivottavasti näemme taas pian.
+      signed_up: Tervetuloa! Olet kirjautunut onnistuneesti.
+      signed_up_but_inactive: Olet rekisteröitynyt onnistuneesti. Emme kuitenkaan
+        voi kirjautua teitä, koska tilisi ei ole vielä aktivoitu.
+      signed_up_but_locked: Olet rekisteröitynyt onnistuneesti. Emme kuitenkaan voi
+        kirjautua teitä, koska tilisi on lukittu.
+      signed_up_but_unconfirmed: viesti vahvistuksen linkki on lähetetty sähköpostiosoitteesi.
+        Ole hyvä ja avaa linkin tilin aktivoimiseksi.
+      update_needs_confirmation: Voit päivittänyt tilin onnistuneesti, mutta meidän
+        täytyy vahvistaa uusi sähköpostiosoitteesi. Tarkista sähköpostisi ja klikkaa
+        vahvista linkkiä viimeistellä vahvistaa uusi sähköpostiosoitteesi.
+      updated: Voit päivittänyt tilin onnistuneesti.
+      new:
+        sign_up: Rekisteröidy
+        name: Name
+        password: Salasana
+        password_confirmation: Salasanan vahvistus
+        register: Rekisteröidy
+    sessions:
+      signed_in: Sisäänkirjautuminen onnistui.
+      signed_out: Allekirjoitettu ulos onnistuneesti.
+      new:
+        sign_in: Kirjaudu sisään
+        password: Salasana
+        remember_me: Muista minut
+        forgot_your_password: Unohtuiko salasana?
+    unlocks:
+      send_instructions: Saat sähköpostiisi ohjeet siitä, miten avata tilin muutamassa
+        minuutissa.
+      send_paranoid_instructions: Jos tili on olemassa, saat sähköpostiisi ohjeet
+        siitä, miten avata se muutamassa minuutissa.
+      unlocked: Tilisi on auki onnistuneesti. Kirjaudu sisään jatkaaksesi.
+  fi: fi
+  fi_iso: fi

@@ -1,0 +1,304 @@
+---
+vi:
+  github: Github
+  bitbucket: Bitbucket
+  updated: cập nhật
+  1_we_have_just_launched_our_service_title: Chúng tôi đã vừa tung ra dịch vụ của
+    chúng tôi
+  shared:
+    navbar:
+      sign_in: Đăng nhập
+      sign_up: Đăng ký
+      projects: dự án
+      issues: vấn đề
+      syncing_with_github: Sync với Github ...
+      syncing_with_bitbucket: Sync với Bitbucket ...
+      new_issue: vấn đề mới
+      edit_project: Chỉnh sửa dự án
+    languages_select_modal:
+      available_languages: Ngôn ngữ có sẵn
+    user_edit_menu:
+      profile: hồ sơ
+      site_settings: thiết lập trang web
+      services: Dịch vụ
+    form_errors:
+      password: Mật khẩu
+      current_password: mật khẩu hiện tại
+      name: Tên
+      base: cơ sở
+      title: Tiêu đề
+      user_to_project_connection: tài để kết nối dự án
+      columns:
+        tag: Tag chồng chéo
+    new_project_modal:
+      new_project: dự án mới
+    edit_project_modal:
+      edit_project: Chỉnh sửa dự án
+    new_issue_modal:
+      new_issue: vấn đề mới
+    right_sidebar:
+      news: Tin tức
+      all: Tất cả
+      read_more: Đọc thêm
+    translations:
+      select_column_tags: Chọn thẻ cột
+      select_section_tags: Chọn thẻ phần
+      select_issue_tags: Chọn thẻ phát hành
+  users:
+    new:
+      invite_user: Mời người dùng
+    form:
+      name: Tên
+      enter_user_name: Nhập tên người dùng
+      email: Email
+      enter_user_email: Nhập email người dùng
+      enter_user_password: Nhập mật khẩu người dùng
+      password: Mật khẩu
+      save: Lưu
+    index:
+      new: mới
+    edit:
+      name: Tên
+      enter_your_name: Nhập tên của bạn
+      save: Lưu
+    settings:
+      change_password: Thay đổi mật khẩu
+      interface_language: ngôn ngữ giao diện
+      submit: Gửi
+    password_form:
+      new_password: mật khẩu mới
+      confirm_new_password: Xác nhận mật khẩu mới
+      old_password: Mật khẩu cũ
+      change_password: Thay đổi mật khẩu
+    update:
+      your_profile_was_successfully_updated: Hồ sơ của bạn đã được cập nhật thành
+        công
+    dashboard:
+      hello: Xin chào
+      here_some_of_your_statistics: Dưới đây một số số liệu thống kê của bạn
+  projects:
+    index:
+      new: mới
+      sync_with_github: Sync với github
+      sync_with_bitbucket: Sync với bitbucket
+      stop_sync_with_bitbucket: Dừng đồng bộ hóa với bitbucket
+      stop_sync_with_github: Dừng đồng bộ hóa với github
+    form:
+      name: Tên
+      enter_project_name: Nhập tên dự án
+      save: Lưu
+      columns: Cột
+      sections: mục
+      add: Add
+      github_repository_id: Github kho id
+      github_full_name: Github kho fullname
+      github_secret_token_for_hook: Github mã bí mật cho móc
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket mã bí mật cho móc
+    project:
+      edit: Sửa
+      destroy: Xóa
+      project_issues: vấn đề dự án
+      project_users: dự án
+    section_fields:
+      section_tags: thẻ mục
+      section_order: thứ tự
+      or_include_all: Hoặc bao gồm tất cả?
+    column_fields:
+      remove_column: Xóa cột
+      max_issues_count: vấn đề Max đếm trong cột
+      column_tags: thẻ Cột
+      column_order: thứ tự
+    show:
+      next_page: Trang tiếp theo
+  issues:
+    form:
+      title: Tiêu đề
+      enter_issue_title: Nhập tiêu đề vấn đề
+      save: Lưu
+      body: Body
+      enter_issue_body: Nhập vấn đề cơ thể
+      tags: khóa
+      issue_order: thứ tự
+      bitbucket_issue_id: Bitbucket vấn đề id
+      github_issue_id: Github vấn đề id
+      github_issue_number: số vấn đề Github
+    index:
+      issues: vấn đề
+      sync_with_github: Sync với github
+      sync_with_bitbucket: Sync với bitbucket
+      new: mới
+    issue:
+      destroy: Xóa
+      edit: Sửa
+    edit:
+      edit_issue: Sửa vấn đề
+    new:
+      new_issue: vấn đề mới
+  authentications:
+    index:
+      enabled_services: dịch vụ Bật
+    authentication:
+      turned_off: Turned off
+      turn_on: Bật
+      turn_off: Tắt
+      turned_on: Quay về
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Chúng tôi đã vừa tung ra dịch vụ của
+        chúng tôi!
+      we_have_just_launched_our_service_text: Hôm nay chúng ta khởi động dịch vụ của
+        chúng tôi để tất cả mọi người có thể
+      sign_up: đăng ký
+      and_use_it: và sử dụng nó.
+      with_love: Với tình yêu,
+      technoelegance_team: Technoelegance Đội
+    index:
+      all_news: Tất cả tin tức
+      read_more: Đọc thêm
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Chào mừng bạn đến Kanban On Rails
+      welcome_about_text: Ở đây bạn có thể tạo bảng Kanban riêng của bạn và đồng bộ
+        nó với Github hoặc Bitbucket
+  pages:
+    faq:
+      faq: Hỏi đáp
+      what_is_kanban_on_rails: KanbanOnRails là gì?
+      about_kanban_on_rails: KanbanOnRails là dịch vụ mà bạn có thể tạo bảng Kanban
+        và đồng bộ nó với Github hoặc Bitbucket
+      what_features_has_kanban_on_rails: gì các tính năng có KanbanOnRails?
+      kanban_on_rails_features: Bạn có thể đồng bộ các dự án và các vấn đề của bạn
+        với Github và Bitbucket, mời người dùng (đối với các nhà quản lý chẳng hạn)
+        cho dự án của bạn, triển khai nó đến máy chủ của riêng bạn
+      i_have_some_requests: Tôi có một số yêu cầu
+      you_can_write_request: Bạn có thể viết thư yêu cầu
+      here: đây
+      i_have_seen_some_typo_or_wrong_translation: Tôi đã thấy một số lỗi chính tả
+        hoặc dịch sai
+      you_can_send_pull_request_to_our: Bạn có thể gửi yêu cầu để kéo chúng tôi
+      i_have_seen_some_error: Tôi đã thấy một số lỗi
+      you_can_write_to_our_info_mail: Bạn có thể viết về điều này để email của chúng
+        tôi
+    about:
+      about_kanban_on_rails: Về KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails là dịch vụ mà bạn có thể tạo bảng
+        Kanban và đồng bộ nó với Github hoặc Bitbucket
+      kanban_on_rails_features: tính năng KanbanOnRails
+      sync_with_github_and_bitbucket: Bạn có thể đồng bộ các dự án và các vấn đề của
+        bạn với Github và Bitbucket
+      invite_users: Bạn có thể mời người sử dụng (cho các nhà quản lý chẳng hạn) cho
+        dự án của bạn
+      open_source_code: Dự án này có mã nguồn mở, vì vậy bạn có thể triển khai nó
+        đến máy chủ của riêng bạn
+      we_use_open_source_and_high_technology: Chúng tôi sử dụng công nghệ cao và các
+        thư viện mã nguồn mở. Chúng tôi luôn cố gắng để có được tốt hơn và cải thiện
+        dịch vụ của chúng tôi.
+      partners_and_investors: Chúng tôi đang mở ra cho quan hệ đối tác và chúng tôi
+        muốn tìm nhà đầu tư. Nếu bạn muốn hợp tác với chúng tôi xin vui lòng liên
+        hệ với chúng tôi tại partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Đăng nhập
+        sign_up: Đăng ký
+        didnt_receive_confirmation_instructions: Không nhận được hướng dẫn xác nhận?
+        sign_in_with: Đăng nhập bằng
+        fast_login_almost_one_click: nhanh đăng nhập (Hầu như một cú nhấp chuột)
+    confirmations:
+      confirmed: Tài khoản của bạn đã được xác nhận thành công.
+      send_instructions: Bạn sẽ nhận được một email hướng dẫn về làm thế nào để xác
+        nhận tài khoản của bạn trong một vài phút.
+      send_paranoid_instructions: Nếu địa chỉ email của bạn tồn tại trong cơ sở dữ
+        liệu của chúng tôi, bạn sẽ nhận được một email hướng dẫn về làm thế nào để
+        xác nhận tài khoản của bạn trong một vài phút.
+      new:
+        send_mail_for_confirm_your_email: Gửi mail để xác nhận email của bạn
+        submit: Gửi
+    failure:
+      already_authenticated: Bạn đã đăng nhập.
+      inactive: tài khoản của bạn không được kích hoạt chưa.
+      invalid: email không hợp lệ hoặc mật khẩu.
+      locked: Tài khoản của bạn bị khóa.
+      last_attempt: Bạn có một nỗ lực nhiều hơn nữa trước khi tài khoản của bạn sẽ
+        bị khóa.
+      not_found_in_database: email không hợp lệ hoặc mật khẩu.
+      timeout: Phiên của bạn đã hết hạn. Vui lòng đăng nhập để tiếp tục.
+      unauthenticated: Bạn cần đăng nhập hoặc đăng ký trước khi tiếp tục.
+      unconfirmed: Bạn phải xác nhận tài khoản của bạn trước khi tiếp tục.
+    mailer:
+      confirmation_instructions:
+        subject: hướng dẫn Chứng nhận
+        welcome_to_kanban_on_rails: Chào mừng bạn đến KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Bạn có thể xác
+          nhận email của bạn thông qua các liên kết bên dưới
+        confirm_my_account: Xác nhận Email của tôi
+      reset_password_instructions:
+        hello: Xin chào
+        subject: hướng dẫn Reset password
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Một
+          người nào đó có yêu cầu một liên kết để thay đổi mật khẩu của bạn. Bạn có
+          thể làm điều này thông qua các liên kết dưới đây.
+        change_my_password: Thay đổi mật khẩu của tôi
+        if_you_didnt_request_this_please_ignore_this_email: Nếu bạn không yêu cầu
+          này, xin hãy bỏ qua email này.
+      unlock_instructions:
+        subject: Hướng dẫn Mở khóa
+    omniauth_callbacks:
+      failure: Không thể xác thực bạn từ% {} loại vì "% {reason}".
+      success: chứng thực thành công từ% {} loại tài khoản.
+    passwords:
+      no_token: Bạn không thể truy cập vào trang này mà không đến từ một email thiết
+        lập lại mật khẩu. Nếu bạn đến từ một email thiết lập lại mật khẩu, hãy chắc
+        chắn rằng bạn sử dụng URL đầy đủ cung cấp.
+      send_instructions: Bạn sẽ nhận được một email với hướng dẫn về làm thế nào để
+        thiết lập lại mật khẩu của bạn trong một vài phút.
+      send_paranoid_instructions: Nếu địa chỉ email của bạn tồn tại trong cơ sở dữ
+        liệu của chúng tôi, bạn sẽ nhận được một liên kết khôi phục mật khẩu tại địa
+        chỉ email của bạn trong một vài phút.
+      updated: Mật khẩu của bạn đã được thay đổi thành công. Bây giờ bạn đã đăng nhập.
+      updated_not_active: Mật khẩu của bạn đã được thay đổi thành công.
+      new:
+        forgot_your_password: Khôi phục mật khẩu của bạn
+        reset_password: Gửi phục hồi url
+      edit:
+        change_your_password: Thay đổi mật khẩu của bạn
+        new_password: mật khẩu mới
+        change_password: đổi
+    registrations:
+      destroyed: Bye! Tài khoản của bạn đã bị hủy bỏ thành công. Mong rằng chúng tôi
+        sẽ sớm gặp lại bạn.
+      signed_up: Chào mừng bạn! Bạn đã đăng ký thành công.
+      signed_up_but_inactive: Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không
+        thể đăng nhập cho bạn bởi vì tài khoản của bạn chưa được kích hoạt.
+      signed_up_but_locked: Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không
+        thể đăng nhập cho bạn bởi vì tài khoản của bạn bị khóa.
+      signed_up_but_unconfirmed: Một thông điệp có liên kết xác nhận đã được gửi đến
+        địa chỉ email của bạn. Hãy mở link để kích hoạt tài khoản của bạn.
+      update_needs_confirmation: Bạn cập nhật tài khoản của bạn thành công, nhưng
+        chúng ta cần phải xác minh địa chỉ email mới của bạn. Hãy kiểm tra email của
+        bạn và nhấp vào liên kết xác nhận để hoàn tất xác nhận địa chỉ email mới của
+        bạn.
+      updated: Bạn cập nhật tài khoản của bạn thành công.
+      new:
+        sign_up: Đăng ký
+        name: Tên
+        password: Mật khẩu
+        register: Đăng ký
+    sessions:
+      signed_in: ký nhập thành công.
+      signed_out: đã đăng xuất thành công.
+      new:
+        sign_in: Đăng nhập
+        password: Mật khẩu
+        remember_me: Ghi nhớ tôi
+        forgot_your_password: Quên mật khẩu của bạn?
+    unlocks:
+      send_instructions: Bạn sẽ nhận được một email hướng dẫn về làm thế nào để mở
+        khóa tài khoản của bạn trong một vài phút.
+      send_paranoid_instructions: Nếu tài khoản của bạn tồn tại, bạn sẽ nhận được
+        một email hướng dẫn về làm thế nào để mở khóa nó trong một vài phút.
+      unlocked: Tài khoản của bạn đã được mở khóa thành công. Vui lòng đăng nhập để
+        tiếp tục.
+  vi: vi
+  vi_iso: vi

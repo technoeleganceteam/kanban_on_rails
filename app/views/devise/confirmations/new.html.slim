@@ -1,0 +1,18 @@
+.row
+  .col-md-6.col-md-offset-3
+    h3 = t '.send_mail_for_confirm_your_email'
+
+    = form_for(resource, :as => resource_name, :url => confirmation_url(resource_name)) do |f|
+      = render 'shared/form_errors', :item => resource
+
+      = f.email_field :email, :autofocus => true,
+        :class => 'form-control', :placeholder => 'Email', :required => true
+
+      br
+
+      div
+        = f.submit (t '.submit'), :class => 'btn btn-success'
+
+      hr
+
+      = render 'devise/shared/links'

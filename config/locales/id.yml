@@ -1,0 +1,301 @@
+---
+id:
+  github: Github
+  bitbucket: Bitbucket
+  updated: diperbarui
+  1_we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan kami
+  shared:
+    navbar:
+      sign_in: Masuk
+      sign_up: Daftar
+      projects: Proyek
+      issues: Masalah
+      syncing_with_github: Sync dengan Github ...
+      syncing_with_bitbucket: Sync dengan Bitbucket ...
+      new_issue: masalah New
+      edit_project: Mengedit proyek
+    languages_select_modal:
+      available_languages: Bahasa yang tersedia
+    user_edit_menu:
+      profile: Profil
+      site_settings: pengaturan Site
+      services: Layanan
+    form_errors:
+      password: Sandi
+      current_password: sandi sekarang
+      name: Nama
+      base: Basis
+      title: Judul
+      user_to_project_connection: Pengguna untuk proyek sambungan
+      columns:
+        tag: Tag tumpang tindih
+    new_project_modal:
+      new_project: proyek New
+    edit_project_modal:
+      edit_project: Mengedit proyek
+    new_issue_modal:
+      new_issue: masalah New
+    left_sidebar:
+      projects: Proyek
+    right_sidebar:
+      news: Berita
+      all: Semua
+      read_more: Baca lebih lanjut
+    translations:
+      select_column_tags: Pilih tag kolom
+      select_section_tags: Pilih bagian tag
+      select_issue_tags: Pilih masalah tag
+  users:
+    new:
+      invite_user: Undang pengguna
+    form:
+      name: Nama
+      enter_user_name: Masukkan nama pengguna
+      email: Email
+      enter_user_email: Masukkan email pengguna
+      enter_user_password: Masukkan password user
+      password: Sandi
+      save: bintang
+    index:
+      project: Proyek
+      users: pengguna
+      new: New
+    edit:
+      name: Nama
+      enter_your_name: Masukkan nama Anda
+      save: bintang
+    settings:
+      change_password: Ubah password
+      interface_language: bahasa Antarmuka
+      submit: Kirim
+    password_form:
+      new_password: New password
+      confirm_new_password: Konfirmasi kata sandi baru
+      change_password: Ubah password
+    update:
+      your_profile_was_successfully_updated: Profil Anda berhasil diperbarui
+    dashboard:
+      hello: Hello
+      here_some_of_your_statistics: Berikut beberapa statistik
+      projects: Proyek
+  projects:
+    index:
+      projects: Proyek
+      new: New
+      sync_with_github: Sync dengan github
+      sync_with_bitbucket: Sync dengan bitbucket
+      stop_sync_with_bitbucket: Hentikan sinkronisasi dengan bitbucket
+      stop_sync_with_github: Hentikan sinkronisasi dengan github
+    form:
+      name: Nama
+      enter_project_name: Masukkan nama proyek
+      save: bintang
+      columns: Kolom
+      sections: Bagian
+      add: Tambah
+      github_full_name: fullname repositori Github
+      github_secret_token_for_hook: Github tanda rahasia untuk kait
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tanda rahasia untuk kait
+    project:
+      edit: Mengedit
+      destroy: Hapus
+      project_issues: masalah Project
+      project_users: pengguna Project
+    section_fields:
+      section_tags: tag Bagian
+      section_order: Pesanan
+      or_include_all: Atau mencakup semua?
+    column_fields:
+      remove_column: Hapus kolom
+      max_issues_count: masalah Max menghitung dalam kolom
+      column_tags: tag Kolom
+      column_order: Pesanan
+    show:
+      next_page: Halaman berikutnya
+  issues:
+    form:
+      title: Judul
+      enter_issue_title: Masukkan judul masalah
+      save: bintang
+      body: Tubuh
+      enter_issue_body: Masukkan masalah tubuh
+      tags: Tags
+      issue_order: Pesanan
+      bitbucket_issue_id: Bitbucket masalah id
+      github_issue_id: Github masalah id
+      github_issue_number: nomor isu Github
+    index:
+      issues: masalah
+      sync_with_github: Sync dengan github
+      sync_with_bitbucket: Sync dengan bitbucket
+      new: New
+    issue:
+      destroy: Hapus
+      edit: Mengedit
+    edit:
+      edit_issue: Sunting masalah
+    new:
+      new_issue: masalah New
+  authentications:
+    index:
+      enabled_services: layanan Diaktifkan
+    authentication:
+      turned_off: Dimatikan
+      turn_on: Aktifkan
+      turn_off: Matikan
+      turned_on: Dihidupkan
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan
+        kami!
+      we_have_just_launched_our_service_text: Hari ini kami meluncurkan layanan kami
+        sehingga semua orang bisa
+      sign_up: mendaftar
+      and_use_it: dan menggunakannya.
+      with_love: Dengan cinta,
+    index:
+      all_news: Semua berita
+      read_more: Baca lebih lanjut
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Selamat Datang Kanban On Rails
+      welcome_about_text: Di sini Anda dapat membuat papan Kanban Anda sendiri dan
+        sinkronisasi dengan Github atau Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Apa KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails adalah layanan di mana Anda dapat membuat
+        Kanban papan dan sinkronisasi dengan Github atau Bitbucket
+      what_features_has_kanban_on_rails: Apa fitur memiliki KanbanOnRails?
+      kanban_on_rails_features: Anda dapat menyinkronkan proyek dan masalah dengan
+        Github dan Bitbucket, mengundang pengguna (misalnya manajer) untuk proyek
+        Anda, menyebarkan ke server Anda sendiri
+      i_have_some_requests: Saya punya beberapa permintaan
+      you_can_write_request: Anda dapat menulis permintaan
+      here: sini
+      i_have_seen_some_typo_or_wrong_translation: Saya telah melihat beberapa kesalahan
+        ketik atau terjemahan yang salah
+      you_can_send_pull_request_to_our: Anda dapat mengirim permintaan tarik ke kami
+      github_repository: github repositori
+      i_have_seen_some_error: Saya telah melihat beberapa kesalahan
+      you_can_write_to_our_info_mail: Anda dapat menulis tentang ini untuk email kami
+    about:
+      about_kanban_on_rails: Tentang KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails adalah layanan di mana Anda dapat
+        membuat Kanban papan dan sinkronisasi dengan Github atau Bitbucket
+      kanban_on_rails_features: fitur KanbanOnRails
+      sync_with_github_and_bitbucket: Anda dapat menyinkronkan proyek dan masalah
+        dengan Github dan Bitbucket
+      invite_users: Anda dapat mengundang pengguna (misalnya manajer) untuk proyek
+        Anda
+      open_source_code: Proyek ini memiliki kode sumber terbuka, sehingga Anda dapat
+        menyebarkan ke server Anda sendiri
+      we_use_open_source_and_high_technology: Kami menggunakan teknologi tinggi dan
+        perpustakaan open source. Kami selalu mencoba untuk mendapatkan yang lebih
+        baik dan meningkatkan layanan kami.
+      partners_and_investors: Kami dibuka untuk kemitraan dan kami ingin mencari investor.
+        Jika Anda ingin bekerja sama dengan kami silahkan hubungi kami di partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Masuk
+        sign_up: Mendaftar
+        didnt_receive_confirmation_instructions: Tidak menerima petunjuk konfirmasi?
+        sign_in_with: Masuk dengan
+        fast_login_almost_one_click: Cepat login (Hampir satu kali klik)
+    confirmations:
+      confirmed: Akun Anda telah berhasil dikonfirmasi.
+      send_instructions: Anda akan menerima email dengan petunjuk tentang cara untuk
+        mengkonfirmasi akun Anda dalam beberapa menit.
+      send_paranoid_instructions: Jika alamat email Anda ada di database kami, Anda
+        akan menerima email dengan petunjuk tentang cara untuk mengkonfirmasi akun
+        Anda dalam beberapa menit.
+      new:
+        send_mail_for_confirm_your_email: Kirim surat untuk mengkonfirmasi email Anda
+        submit: Kirim
+    failure:
+      already_authenticated: Anda sudah masuk.
+      inactive: Akun Anda belum diaktifkan.
+      invalid: email atau sandi tidak valid.
+      locked: Akun Anda terkunci.
+      last_attempt: Anda memiliki satu kesempatan lagi sebelum akun Anda akan dikunci.
+      not_found_in_database: email atau sandi tidak valid.
+      timeout: Sesi Anda berakhir. Harap masuk lagi untuk melanjutkan.
+      unauthenticated: Anda harus masuk atau mendaftar sebelum melanjutkan.
+      unconfirmed: Anda harus mengkonfirmasi akun Anda sebelum melanjutkan.
+    mailer:
+      confirmation_instructions:
+        subject: petunjuk Konfirmasi
+        welcome_to_kanban_on_rails: Selamat Datang KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Anda dapat mengkonfirmasi
+          email Anda melalui link di bawah ini
+        confirm_my_account: Konfirmasi Email saya
+      reset_password_instructions:
+        hello: Hello
+        subject: petunjuk sandi ulang
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Seseorang
+          memiliki permintaan link untuk mengubah password Anda. Anda dapat melakukan
+          ini melalui link di bawah ini.
+        change_my_password: Ubah kata sandi
+        if_you_didnt_request_this_please_ignore_this_email: Jika Anda tidak meminta
+          ini abaikan email ini.
+      unlock_instructions:
+        subject: Instruksi Aktifkan
+    omniauth_callbacks:
+      failure: Tidak dapat mengotentikasi Anda dari% {jenis} karena "% {alasan}".
+      success: Berhasil dikonfirmasi dari% {jenis} akun.
+    passwords:
+      no_token: Anda tidak dapat mengakses halaman ini tanpa datang dari email reset
+        password. Jika Anda datang dari email reset password, pastikan Anda menggunakan
+        URL yang disediakan.
+      send_instructions: Anda akan menerima email dengan petunjuk tentang cara untuk
+        mereset password Anda dalam beberapa menit.
+      send_paranoid_instructions: Jika alamat email Anda ada di database kami, Anda
+        akan menerima link pemulihan sandi di alamat email Anda dalam beberapa menit.
+      updated: sandi Anda berhasil diubah. Anda sekarang masuk.
+      updated_not_active: sandi Anda berhasil diubah.
+      new:
+        forgot_your_password: Memulihkan password Anda
+        reset_password: Kirim pulih url
+      edit:
+        change_your_password: Ubah password Anda
+        new_password: New password
+        change_password: Perubahan
+    registrations:
+      destroyed: Bye! Akun Anda telah berhasil dibatalkan. Kami berharap untuk bertemu
+        lagi segera.
+      signed_up: Selamat! Anda telah mendaftar berhasil.
+      signed_up_but_inactive: Anda telah mendaftar berhasil. Namun, kita tidak bisa
+        masuk Anda karena akun Anda belum diaktifkan.
+      signed_up_but_locked: Anda telah mendaftar berhasil. Namun, kita tidak bisa
+        masuk Anda karena akun Anda terkunci.
+      signed_up_but_unconfirmed: Sebuah pesan dengan link konfirmasi telah dikirim
+        ke alamat email Anda. Silahkan buka link untuk mengaktifkan account Anda.
+      update_needs_confirmation: Anda memperbarui akun Anda berhasil, tetapi kita
+        perlu memverifikasi alamat email baru Anda. Silahkan cek email Anda dan klik
+        pada link konfirmasi untuk menyelesaikan mengkonfirmasi alamat email baru
+        Anda.
+      updated: Anda memperbarui akun Anda berhasil.
+      new:
+        sign_up: Mendaftar
+        name: Nama
+        password: Sandi
+        register: Mendaftar
+    sessions:
+      signed_in: Masuk berhasil.
+      signed_out: Signed keluar berhasil.
+      new:
+        sign_in: Masuk
+        password: Sandi
+        remember_me: Ingat saya
+        forgot_your_password: Lupa kata sandi Anda?
+    unlocks:
+      send_instructions: Anda akan menerima email dengan petunjuk tentang cara untuk
+        membuka akun Anda dalam beberapa menit.
+      send_paranoid_instructions: Jika akun Anda ada, Anda akan menerima email dengan
+        petunjuk tentang cara membuka kunci dalam beberapa menit.
+      unlocked: Akun Anda telah dibuka berhasil. Tolong masuk untuk melanjutkan.
+  id: id
+  id_iso: id

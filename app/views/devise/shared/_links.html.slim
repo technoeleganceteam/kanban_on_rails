@@ -1,0 +1,17 @@
+div
+  - if controller_name != 'sessions' 
+    = link_to (t '.sign_in'), new_session_path(resource_name), :class => 'btn btn-default btn-block'
+    
+  - if controller_name != 'registrations'
+    = link_to (t '.sign_up'), new_registration_path(resource_name), :class => 'btn btn-default btn-block'
+
+  - if controller_name != 'confirmations'
+    = link_to (t '.didnt_receive_confirmation_instructions'), new_confirmation_path(resource_name),
+      :class => 'btn btn-default btn-block'
+    
+  = link_to omniauth_authorize_path(resource_name, :github), :class => 'btn btn-info btn-block' do
+    i.fa.fa-github
+    | &nbsp;
+    = t '.sign_in_with'
+    | &nbsp;
+    = t 'github'

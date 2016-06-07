@@ -1,0 +1,7 @@
+ul.nav.nav-pills.nav-justified
+  li class = '#{ 'active' if params[:action] == 'edit' && params[:controller] == 'users' }'
+    = link_to (t '.profile'), edit_user_url(@user)
+  li class = '#{ 'active' if params[:action] == 'settings' && params[:controller] == 'users' }'
+    = link_to (t '.site_settings'), settings_user_url(@user)
+  li class = '#{ 'active' if params[:controller] == 'authentications' }'
+    = link_to (t '.services'), user_authentications_url(@user)

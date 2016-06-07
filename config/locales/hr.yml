@@ -1,0 +1,303 @@
+---
+hr:
+  github: Github
+  bitbucket: Bitbucket
+  updated: ažurirana
+  1_we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis
+  shared:
+    navbar:
+      sign_in: Prijava
+      sign_up: Prijavite se
+      projects: projekti
+      issues: pitanja
+      syncing_with_github: Sinkronizacija s GitHub ...
+      syncing_with_bitbucket: Sinkronizacija s Bitbucket ...
+      new_issue: Novi broj
+      edit_project: Uredi projekt
+    languages_select_modal:
+      available_languages: Dostupni jezici
+    user_edit_menu:
+      profile: profil
+      site_settings: Postavke web-lokacije
+      services: Usluge
+    form_errors:
+      password: Lozinka
+      current_password: Trenutna lozinka
+      name: Ime
+      base: Base
+      title: Naslov
+      user_to_project_connection: Korisnik projicirati vezu
+      columns:
+        tag: Tag preklapanje
+    new_project_modal:
+      new_project: Novi projekt
+    edit_project_modal:
+      edit_project: Uredi projekt
+    new_issue_modal:
+      new_issue: Novi broj
+    left_sidebar:
+      projects: projekti
+    right_sidebar:
+      news: Novosti
+      all: Sve
+      read_more: Opširnije
+    translations:
+      select_column_tags: Odaberite oznake stupaca
+      select_section_tags: Odaberite odjeljak oznake
+      select_issue_tags: Odaberite izdavanje oznake
+  users:
+    new:
+      invite_user: Pozovi korisnika
+    form:
+      name: Ime
+      enter_user_name: Unesite korisničko ime
+      email: E-mail
+      enter_user_email: Unesite e-mail korisnički
+      enter_user_password: Unesite korisničke lozinke
+      password: Lozinka
+      role: Uloga korisnika
+      save: Save
+    index:
+      project: projekta
+      users: korisnici
+      new: Novo
+    edit:
+      name: Ime
+      enter_your_name: Unesite svoje ime
+      save: Save
+    settings:
+      change_password: Promjena lozinke
+      interface_language: jezik sučelja
+      submit: Pošalji
+    password_form:
+      new_password: Nova lozinka
+      confirm_new_password: Potvrdite novu lozinku
+      old_password: Stara lozinka
+      change_password: Promjena lozinke
+    update:
+      your_profile_was_successfully_updated: Vaš profil je uspješno ažurirana
+    dashboard:
+      hello: Pozdrav
+      here_some_of_your_statistics: Evo neke svoje statistike
+      projects: projekti
+  projects:
+    index:
+      projects: projekti
+      new: Novo
+      sync_with_github: Sinkronizacija s GitHub
+      sync_with_bitbucket: Sinkronizacija s bitbucket
+      stop_sync_with_bitbucket: Zaustavi sinkronizaciju s bitbucket
+      stop_sync_with_github: Zaustavi sinkronizaciju s GitHub
+    form:
+      name: Ime
+      enter_project_name: Unesite naziv projekta
+      save: Save
+      columns: Kolumne
+      sections: Sekcije
+      add: Add
+      github_repository_id: Github repozitorij id
+      github_full_name: Github repozitorij fullname
+      github_secret_token_for_hook: Github tajni token za kuku
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tajni token za kuku
+    project:
+      edit: Uredi
+      destroy: Brisanje
+      project_issues: pitanja Projekt
+      project_users: korisnik Projekt
+    section_fields:
+      remove_section: Ukloni odjeljak
+      section_tags: Odjeljak oznake
+      section_order: narudžbe
+      or_include_all: Ili su svi?
+    column_fields:
+      remove_column: Ukloni stupac
+      max_issues_count: Maksimalni pitanja računati u stupcu
+      column_tags: stupca oznake
+      column_order: narudžbe
+    show:
+      next_page: Sljedeća stranica
+  issues:
+    form:
+      title: Naslov
+      enter_issue_title: Unesite naslov izdanja
+      save: Save
+      body: Tijelo
+      enter_issue_body: Enter izdanja tijelo
+      tags: Tagovi
+      issue_order: narudžbe
+      bitbucket_issue_id: Bitbucket problem id
+      github_issue_id: Github problem id
+      github_issue_number: broj Github problem
+    index:
+      issues: pitanja
+      sync_with_github: Sinkronizacija s GitHub
+      sync_with_bitbucket: Sinkronizacija s bitbucket
+      new: Novo
+    issue:
+      destroy: Brisanje
+      edit: Uredi
+    edit:
+      edit_issue: Edit pitanje
+    new:
+      new_issue: Novi broj
+  authentications:
+    index:
+      enabled_services: omogućena usluga
+    authentication:
+      turned_off: Isključeno
+      turn_on: Uključivanje
+      turn_off: Isključi
+      turned_on: uključili
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis!
+      we_have_just_launched_our_service_text: Danas smo pokrenuli našu uslugu tako
+        da svatko može
+      sign_up: prijaviti
+      and_use_it: i koristiti ga.
+      with_love: S ljubavlju,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: sve vijesti
+      read_more: Opširnije
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Dobrodošli na Kanban na tračnice
+      welcome_about_text: Ovdje možete stvoriti svoj vlastiti Kanban ploče i sinkronizirati
+        s GitHub ili Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Što je KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails je servis na kojem možete stvoriti Kanban
+        ploče i sinkronizaciju ga GitHub ili Bitbucket
+      what_features_has_kanban_on_rails: Što ima ima KanbanOnRails?
+      kanban_on_rails_features: možete sinkronizirati svoje projekte i probleme s
+        GitHub i Bitbucket, pozvati korisnika (na primjer managera) za svoj projekt,
+        to rasporediti na vlastitom poslužitelju
+      i_have_some_requests: imam neke zahtjeve
+      you_can_write_request: možete pisati zahtjev
+      here: ovdje
+      i_have_seen_some_typo_or_wrong_translation: Vidio sam neke greške u pisanju
+        ili u krivu prijevodi
+      you_can_send_pull_request_to_our: možete poslati zahtjev za povlačenje na naš
+      github_repository: Github repozitorij
+      i_have_seen_some_error: vidio sam neke greške
+      you_can_write_to_our_info_mail: možete pisati o tome na našu e-mail
+    about:
+      about_kanban_on_rails: O KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails je servis na kojem možete stvoriti
+        Kanban ploče i sinkronizaciju ga GitHub ili Bitbucket
+      kanban_on_rails_features: KanbanOnRails značajke
+      sync_with_github_and_bitbucket: možete sinkronizirati svoje projekte i probleme
+        s GitHub i Bitbucket
+      invite_users: možete pozvati korisnika (na primjer managera) za svoj projekt
+      open_source_code: Ovaj projekt ima otvoreni izvorni kod, tako da možete ga rasporediti
+        na svoj server
+      we_use_open_source_and_high_technology: Koristimo vrhunske tehnologije i open
+        source biblioteke. Uvijek pokušati dobiti bolje i poboljšati naše usluge.
+      partners_and_investors: Otvoreni smo za partnerstvo i želimo pronaći investitora.
+        Ako želite surađivati ​​s nama kontaktirajte nas na partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Prijava
+        sign_up: Prijavite se
+        didnt_receive_confirmation_instructions: Nije dobio upute potvrde?
+        sign_in_with: Prijavite se u
+        fast_login_almost_one_click: Brzo prijava (gotovo jedan klik)
+    confirmations:
+      confirmed: Vaš korisnički račun je uspješno potvrđena.
+      send_instructions: primit ćete poruku e-pošte s uputama o tome kako bi potvrdili
+        svoj račun u nekoliko minuta.
+      send_paranoid_instructions: Ako je adresa postoje u našoj bazi podataka, primit
+        ćete poruku e-pošte s uputama o tome kako bi potvrdili svoj račun u nekoliko
+        minuta.
+      new:
+        send_mail_for_confirm_your_email: pošalji mail za potvrditi svoju e
+        submit: Pošalji
+    failure:
+      already_authenticated: ste već prijavljeni.
+      inactive: Vaš korisnički račun još nije aktiviran.
+      invalid: Neispravna e-mail ili lozinka.
+      locked: Vaš korisnički račun je zaključan.
+      last_attempt: Imate još jedan pokušaj prije nego što Vaš račun će biti zaključana.
+      not_found_in_database: Neispravna e-mail ili lozinka.
+      timeout: Vaša je sesija istekla. Prijavite se da biste nastavili.
+      unauthenticated: morate se prijaviti ili registrirati prije nego što nastavite.
+      unconfirmed: morate potvrditi svoj račun prije nastavka.
+    mailer:
+      confirmation_instructions:
+        subject: upute za potvrdu
+        welcome_to_kanban_on_rails: Dobrodošli na KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: možete potvrditi
+          svoju e-mail putem linka ispod
+        confirm_my_account: Potvrdi moj e-mail
+      reset_password_instructions:
+        hello: Pozdrav
+        subject: upute za ponovno postavljanje lozinke
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Netko
+          zatraži link za mijenjanje lozinke. To možete učiniti putem veze u nastavku.
+        change_my_password: Promijeni lozinku
+        if_you_didnt_request_this_please_ignore_this_email: Ako niste zatražili, zanemarite
+          ovu poruku.
+      unlock_instructions:
+        subject: Otključaj Upute
+    omniauth_callbacks:
+      failure: Ne mogu ti provjeriti autentičnost od% {vrste} jer "% {reason}".
+      success: Uspješno ovjerena od% {rod} računu.
+    passwords:
+      no_token: ne možete pristupiti ovoj stranici ne dolazi iz e-pošte za poništavanje
+        zaporke. Ako dolaze iz e-pošte za poništavanje zaporke, provjerite jeste li
+        koristili punu URL-a.
+      send_instructions: primit ćete poruku e-pošte s uputama o tome kako da biste
+        poništili zaporku za nekoliko minuta.
+      send_paranoid_instructions: Ako je adresa postoje u našoj bazi podataka, primit
+        ćete link za oporavak zaporke na Vašu e-mail adresu za nekoliko minuta.
+      updated: ste lozinku uspješno je promijenjena. Sada ste prijavljeni.
+      updated_not_active: ste lozinku uspješno je promijenjena.
+      new:
+        forgot_your_password: Oporavak lozinku
+        reset_password: Pošalji oporaviti url
+      edit:
+        change_your_password: Promjena zaporke
+        new_password: Nova lozinka
+        confirm_password: Potvrda lozinke
+        change_password: Promjena
+    registrations:
+      destroyed: Bye! Vaš korisnički račun je uspješno otkazan. Nadamo se da ćemo
+        vas uskoro opet vidjeti.
+      signed_up: Dobrodošli! Prijavili ste se uspješno.
+      signed_up_but_inactive: ste se uspješno. Međutim, ne možemo vas prijaviti jer
+        Vaš račun još nije aktiviran.
+      signed_up_but_locked: ste se uspješno. Međutim, ne možemo vas prijaviti jer
+        je račun zaključan.
+      signed_up_but_unconfirmed: poruku s linkom za potvrdu poslana na vašu e-mail
+        adresu. Molimo otvorite link za aktivaciju korisničkog računa.
+      update_needs_confirmation: podesite korisnički račun je uspješno, ali moramo
+        potvrditi svoju novu adresu e-pošte. Provjerite e-poštu i kliknite na poveznicu
+        potvrđuju da dovrši potvrđujući svoju novu adresu e-pošte.
+      updated: podesite korisnički račun je uspješno.
+      new:
+        sign_up: Prijavite se
+        name: Ime
+        password: Lozinka
+        register: Prijavite se
+    sessions:
+      signed_in: Potpisan uspješno.
+      signed_out: Odjavljen uspješno.
+      new:
+        sign_in: Prijava
+        password: Lozinka
+        remember_me: Zapamti me
+        forgot_your_password: Zaboravili ste lozinku?
+    unlocks:
+      send_instructions: primit ćete poruku e-pošte s uputama o tome kako otključati
+        svoj račun u nekoliko minuta.
+      send_paranoid_instructions: Ako postoji vaš račun, primit ćete poruku e-pošte
+        s uputama o tome kako ga otključati u nekoliko minuta.
+      unlocked: Vaš korisnički račun je uspješno otključan. Prijavite se da biste
+        nastavili.
+  hr: hr
+  hr_iso: hr

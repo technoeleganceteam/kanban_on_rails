@@ -1,0 +1,13 @@
+site_url: http://localhost:3000
+websockets:
+  url: /cable
+  domain: http://localhost:3000
+mailer:
+  from: info@kanbanonrails.com
+  from_name: '"KanbanOnRails" <info@kanbanonrails.com>'
+max_string_field_size: 255
+max_text_field_size: 2000
+max_column_width: 10000
+production_server_deploy_host: kanbanonrails.com
+git_repository: git@bitbucket.org:flutylove/kanban_on_rails
+github_repository_url: https://github.com/technoeleganceteam/kanban_on_rails

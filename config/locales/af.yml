@@ -1,0 +1,304 @@
+---
+af:
+  github: GitHub
+  bitbucket: Bitbucket
+  updated: opgedateer
+  1_we_have_just_launched_our_service_title: Ons het net begin ons diens
+  shared:
+    navbar:
+      sign_in: Teken in
+      sign_up: Sluit aan
+      projects: Projekte
+      issues: Kwessies
+      syncing_with_github: Sync met GitHub ...
+      syncing_with_bitbucket: Sync met Bitbucket ...
+      new_issue: Nuwe uitgawe
+    languages_select_modal:
+      available_languages: Beskikbare tale
+    user_edit_menu:
+      profile: Profiel
+      site_settings: Site instellings
+      services: Dienste
+    form_errors:
+      password: wagwoord
+      current_password: Huidige wagwoord
+      password_confirmation: wagwoord bevestiging
+      name: Naam
+      base: Base
+      title: titel
+      user_to_project_connection: gebruiker om konneksie te projekteer
+      columns:
+        tag: Tag oorvleueling
+    new_project_modal:
+      new_project: Nuwe projek
+    new_issue_modal:
+      new_issue: Nuwe uitgawe
+    left_sidebar:
+      projects: Projekte
+    right_sidebar:
+      news: Nuus
+      all: Alle
+      read_more: Lees meer
+    translations:
+      select_column_tags: Kies kolom tags
+      select_section_tags: Kies artikel tags
+      select_issue_tags: Kies kwessie tags
+  users:
+    new:
+      invite_user: Nooi gebruiker
+    form:
+      name: Naam
+      enter_user_name: Gee gebruikersnaam
+      email: E
+      enter_user_email: Gee gebruiker e-pos
+      enter_user_password: Gee gebruiker wagwoord
+      password: wagwoord
+      role: Gebruiker rol
+      save: Save
+    index:
+      project: Projek
+      users: gebruikers
+      new: Nuwe
+    edit:
+      name: Naam
+      enter_your_name: Tik jou naam
+      save: Save
+    settings:
+      interface_language: Interface taal
+      submit: Stuur
+    password_form:
+      new_password: Nuwe wagwoord
+      confirm_new_password: Bevestig nuwe wagwoord
+      old_password: Ou wagwoord
+    update:
+      your_profile_was_successfully_updated: Jou profiel is suksesvol opgedateer
+    dashboard:
+      hello: Hallo
+      here_some_of_your_statistics: Hier 'n paar van jou statistiek
+      projects: Projekte
+  projects:
+    index:
+      projects: Projekte
+      new: Nuwe
+      sync_with_github: Sync met GitHub
+      sync_with_bitbucket: Sync met bitbucket
+      stop_sync_with_bitbucket: Stop harmonie met bitbucket
+      stop_sync_with_github: Stop harmonie met GitHub
+    form:
+      name: Naam
+      enter_project_name: Gee naam projek
+      save: Save
+      columns: kolomme
+      sections: Artikels
+      section_name: Artikel naam
+      add: Voeg
+      column_width: Kolomwydte
+      column_height: Kolom hoogte
+      github_repository_id: GitHub bewaarplek ID
+      github_full_name: GitHub bewaarplek FULLNAME
+      github_secret_token_for_hook: GitHub geheime teken vir haak
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket geheime teken vir haak
+    project:
+      edit: wysig
+      destroy: Verwyder
+      project_issues: Projek kwessies
+      project_users: Projek gebruikers
+    section_fields:
+      section_name: Artikel naam
+      section_tags: Artikel tags
+      section_order: Bestel
+      or_include_all: Of sluit al?
+    column_fields:
+      column_name: kolom naam
+      remove_column: Verwyder kolom
+      max_issues_count: Max kwessies tel in kolom
+      column_tags: Kolom tags
+      column_order: Bestel
+    show:
+      next_page: Volgende
+  issues:
+    form:
+      title: titel
+      enter_issue_title: Tik kwessie titel
+      save: Save
+      body: Liggaam
+      enter_issue_body: Tik kwessie liggaam
+      tags: Tags
+      issue_order: Bestel
+      bitbucket_issue_id: Bitbucket kwessie ID
+      github_issue_id: GitHub kwessie ID
+      github_issue_number: GitHub kwessie aantal
+    index:
+      issues: kwessies
+      sync_with_github: Sync met GitHub
+      sync_with_bitbucket: Sync met bitbucket
+      new: Nuwe
+    issue:
+      destroy: Verwyder
+      edit: wysig
+    new:
+      new_issue: Nuwe uitgawe
+  authentications:
+    index:
+      enabled_services: aangeskakel dienste
+    authentication:
+      turned_off: Afgeskakel
+      turn_on: Skakel
+      turn_off: Skakel
+      turned_on: Turned op
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Ons het net begin ons diens!
+      we_have_just_launched_our_service_text: Vandag loods ons ons diens sodat almal
+        kan
+      sign_up: teken
+      and_use_it: en gebruik dit.
+      with_love: Met liefde,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Alle nuus
+      read_more: Lees meer
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Welkom by Kanban on Rails
+      welcome_about_text: Hier jy jou eie Kanban raad en sync dit kan skep met GitHub
+        of Bitbucket
+  pages:
+    faq:
+      faq: Vrae
+      what_is_kanban_on_rails: Wat is KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails is die diens waar jy Kanban style met GitHub
+        of Bitbucket kan skep en sync dit
+      what_features_has_kanban_on_rails: Watter eienskappe het KanbanOnRails?
+      kanban_on_rails_features: Jy kan jou projekte en probleme met GitHub en Bitbucket
+        pas nie, nooi gebruikers (byvoorbeeld bestuurders) vir jou projek, sit dit
+        op jou eie bediener
+      i_have_some_requests: Ek het 'n paar versoeke
+      you_can_write_request: Jy kan versoek skryf
+      here: hier
+      i_have_seen_some_typo_or_wrong_translation: Ek het 'n paar spelfoute of verkeerde
+        vertalings gesien
+      you_can_send_pull_request_to_our: Jy kan trek versoek stuur aan ons
+      github_repository: GitHub bewaarplek
+      i_have_seen_some_error: Ek het 'n paar foute gesien
+      you_can_write_to_our_info_mail: Jy kan skryf oor dit vir ons e-pos
+    about:
+      about_kanban_on_rails: Oor KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails is die diens waar jy Kanban style
+        met GitHub of Bitbucket kan skep en sync dit
+      kanban_on_rails_features: KanbanOnRails funksies
+      sync_with_github_and_bitbucket: Jy kan jou projekte en probleme met GitHub en
+        Bitbucket sync
+      invite_users: Jy kan gebruikers (byvoorbeeld bestuurders) vir jou projek te
+        nooi
+      open_source_code: Hierdie projek het open source code, sodat jy kan dit te ontplooi
+        om jou eie bediener
+      we_use_open_source_and_high_technology: Ons maak gebruik van hoë tegnologie
+        en open source biblioteke. Ons het altyd probeer om beter te kry en die verbetering
+        van ons diens.
+      partners_and_investors: Ons is oop vir samewerking en ons wil graag om beleggers
+        te vind. As jy wil om saam te werk met ons kontak ons ​​asseblief by partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Teken in
+        sign_up: Sluit aan
+        didnt_receive_confirmation_instructions: Het nie ontvang bevestiging instruksies?
+        sign_in_with: Teken in met
+        fast_login_almost_one_click: Fast inskrywing (Byna een kliek)
+    confirmations:
+      confirmed: Jou rekening is suksesvol bevestig.
+      send_instructions: Jy sal 'n e-pos ontvang met instruksies oor hoe om jou rekening
+        in 'n paar minute te bevestig.
+      send_paranoid_instructions: As jou e-posadres bestaan ​​in ons databasis, sal
+        jy 'n e-pos ontvang met instruksies oor hoe om jou rekening in 'n paar minute
+        te bevestig.
+      new:
+        send_mail_for_confirm_your_email: Stuur pos na bevestig jou e-pos
+        submit: Stuur
+    failure:
+      already_authenticated: Jy is reeds aangemeld.
+      inactive: Jou rekening is nog nie geaktiveer.
+      invalid: Ongeldige e-pos of wagwoord.
+      locked: Jou rekening is gesluit.
+      last_attempt: Jy het nog 'n poging voor jou rekening sal gesluit.
+      not_found_in_database: Ongeldige e-pos of wagwoord.
+      timeout: Jou sessie verstryk. Meld asseblief aan weer om voort te gaan.
+      unauthenticated: Jy moet in teken of teken voordat u verder gaan.
+      unconfirmed: Jy moet jou rekening te bevestig voordat u verder gaan.
+    mailer:
+      confirmation_instructions:
+        subject: Bevestiging instruksies
+        welcome_to_kanban_on_rails: Welkom by KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Jy kan jou e-pos
+          te bevestig deur die onderstaande skakel
+        confirm_my_account: Bevestig my e-pos
+      reset_password_instructions:
+        hello: Hallo
+        subject: Herstel wagwoord instruksies
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Iemand
+          het versoeke 'n skakel om jou wagwoord te verander. Jy kan dit doen deur
+          die skakel hieronder.
+        change_my_password: verander my wagwoord
+        if_you_didnt_request_this_please_ignore_this_email: As jy nie wil hierdie
+          ignoreer asseblief hierdie e-pos.
+      unlock_instructions:
+        subject: ontsluit instruksies
+    omniauth_callbacks:
+      failure: Kan jy nie kontroleer van% {soort} omdat "% {rede}".
+      success: suksesvol bevestig vanaf% {soort} rekening.
+    passwords:
+      no_token: Jy kan nie toegang tot hierdie bladsy sonder afkomstig van 'n wagwoord
+        in te stel e-pos. As jy kom uit 'n wagwoord in te stel e-pos, maak asseblief
+        seker dat jy die volle URL verskaf word.
+      send_instructions: Jy sal 'n e-pos ontvang met instruksies oor hoe om jou wagwoord
+        te herstel in 'n paar minute.
+      send_paranoid_instructions: As jou e-posadres bestaan ​​in ons databasis, sal
+        jy 'n wagwoord herstel skakel na jou e-pos adres te ontvang in 'n paar minute.
+      updated: Jou wagwoord is suksesvol verander. Jy is nou onderteken.
+      updated_not_active: Jou wagwoord is suksesvol verander.
+      new:
+        forgot_your_password: Herstel jou wagwoord
+        reset_password: Stuur herstel url
+      edit:
+        change_your_password: verander jou wagwoord
+        new_password: Nuwe wagwoord
+        confirm_password: Bevestig wagwoord
+        change_password: Verandering
+    registrations:
+      destroyed: Bye! Jou rekening is suksesvol gekanselleer. Ons hoop om jou weer
+        te sien gou.
+      signed_up: Welkom! Jy het suksesvol aangesluit.
+      signed_up_but_inactive: Jy het suksesvol aangesluit. Maar ons kan jy nie inteken
+        nie omdat jou rekening nog nie geaktiveer.
+      signed_up_but_locked: Jy het suksesvol aangesluit. Maar ons kan jy nie inteken
+        nie omdat jou rekening is gesluit.
+      signed_up_but_unconfirmed: "'n boodskap met 'n bevestiging skakel gestuur na
+        jou e-posadres. Kyk asseblief na die skakel na jou rekening te aktiveer."
+      update_needs_confirmation: jy jou rekening suksesvol opgedateer, maar ons nodig
+        het om jou nuwe epos adres te kontroleer. Gaan asseblief jou e-pos en klik
+        op die bevestiging skakel na finaliseer bevestig jou nuwe e-posadres.
+      updated: jy jou rekening opgedateer suksesvol.
+      new:
+        sign_up: Sluit aan
+        name: Naam
+        password: wagwoord
+        password_confirmation: wagwoord bevestiging
+        register: Sluit aan
+    sessions:
+      signed_in: geteken te suksesvol.
+      signed_out: Geteken uit suksesvol.
+      new:
+        sign_in: Teken in
+        password: wagwoord
+        remember_me: Onthou my
+        forgot_your_password: Jy jou wagwoord vergeet?
+    unlocks:
+      send_instructions: Jy sal 'n e-pos ontvang met instruksies oor hoe om jou rekening
+        in 'n paar minute te ontsluit.
+      send_paranoid_instructions: As jou rekening bestaan, sal jy 'n e-pos ontvang
+        met instruksies oor hoe om dit te ontsluit in 'n paar minute.
+      unlocked: U rekening is suksesvol ontsluit. Meld asseblief aan om voort te gaan.
+  af: af
+  af_iso: af

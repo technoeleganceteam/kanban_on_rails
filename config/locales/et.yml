@@ -1,0 +1,306 @@
+---
+et:
+  github: Github
+  bitbucket: Bitbucket
+  updated: uuendatud
+  1_we_have_just_launched_our_service_title: Oleme just käivitanud meie teenus
+  shared:
+    navbar:
+      sign_in: Logi sisse
+      sign_up: Registreeru
+      projects: projektid
+      issues: küsimused
+      syncing_with_github: Sync Github ...
+      syncing_with_bitbucket: Sync Bitbucket ...
+      new_issue: Uus teema
+      edit_project: Edit projekti
+    languages_select_modal:
+      available_languages: Võimalikud keeled
+    user_edit_menu:
+      profile: profiil
+      site_settings: Saidi seaded
+      services: teenused
+    form_errors:
+      password: salasõna
+      current_password: Praegune parool
+      password_confirmation: salasõna kinnitus
+      name: Nimi
+      base: Base
+      title: Pealkiri
+      user_to_project_connection: Kasutaja projekti ühendus
+      columns:
+        tag: Tag kattuvad
+    new_project_modal:
+      new_project: Uus projekt
+    edit_project_modal:
+      edit_project: Edit projekti
+    new_issue_modal:
+      new_issue: Uus teema
+    left_sidebar:
+      projects: projektid
+    right_sidebar:
+      news: Uudised
+      all: Kõik
+      read_more: Loe edasi
+    translations:
+      select_column_tags: Vali veerg sildid
+      select_section_tags: Vali paragrahvi sildid
+      select_issue_tags: Vali teema sildid
+  users:
+    new:
+      invite_user: Kutsu kasutaja
+    form:
+      name: Nimi
+      enter_user_name: Sisesta kasutajatunnus
+      email: Post
+      enter_user_email: Sisesta kasutaja e-posti
+      enter_user_password: Sisesta parool
+      password: salasõna
+      role: Kasutaja roll
+      save: Salvesta
+    index:
+      project: Project
+      users: kasutajad
+      new: Uus
+    edit:
+      name: Nimi
+      enter_your_name: Sisesta oma nimi
+      save: Salvesta
+    settings:
+      change_password: Muuda parooli
+      interface_language: Interface language
+      submit: Esita
+    password_form:
+      new_password: Uus parool
+      confirm_new_password: Kinnita uus parool
+      old_password: Vana parool
+      change_password: Muuda parooli
+    update:
+      your_profile_was_successfully_updated: Sinu profiil edukalt uuendatud
+    dashboard:
+      hello: Tere
+      here_some_of_your_statistics: Siin mõned statistika
+      projects: projektid
+  projects:
+    index:
+      projects: projektid
+      new: Uus
+      sync_with_github: Sync github
+      sync_with_bitbucket: Sync bitbucket
+      stop_sync_with_bitbucket: Stopp sünkroonis bitbucket
+      stop_sync_with_github: Stopp sünkroonis github
+    form:
+      name: Nimi
+      enter_project_name: Sisesta projekti nimi
+      save: Salvesta
+      columns: veerud
+      sections: jaod
+      column_name: Row nimi
+      section_name: jaos nimi
+      add: Add
+      column_width: Veeru laius
+      column_height: posti kõrgus
+      github_repository_id: Github hoidla id
+      github_full_name: Github hoidla fullname
+      github_secret_token_for_hook: Github saladus sümboolne jaoks konks
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket saladus sümboolne jaoks konks
+    project:
+      edit: Edit
+      destroy: Kustuta
+      project_issues: Project küsimusi
+      project_users: Project kasutajad
+    section_fields:
+      section_name: jaos nimi
+      remove_section: Eemaldada sektsiooni
+      section_tags: jaos sildid
+      section_order: Telli
+      or_include_all: või kaasata kõik?
+    column_fields:
+      column_name: veerg nimi
+      remove_column: Eemalda veerg
+      max_issues_count: Max küsimusi loota veerus
+      column_tags: veerg sildid
+      column_order: Telli
+    show:
+      next_page: Järgmine lehekülg
+  issues:
+    form:
+      title: Pealkiri
+      enter_issue_title: Sisesta teema pealkirja
+      save: Salvesta
+      body: Body
+      enter_issue_body: Sisesta küsimust keha
+      tags: Sildid
+      issue_order: Telli
+      bitbucket_issue_id: Bitbucket küsimus id
+      github_issue_id: Github küsimus id
+      github_issue_number: Github küsimus number
+    index:
+      issues: küsimusi
+      sync_with_github: Sync github
+      sync_with_bitbucket: Sync bitbucket
+      new: Uus
+    issue:
+      destroy: Kustuta
+      edit: Edit
+    edit:
+      edit_issue: Edit küsimus
+    new:
+      new_issue: Uus teema
+  authentications:
+    index:
+      enabled_services: Lubatud teenused
+    authentication:
+      turned_off: Välja lülitatud
+      turn_on: Lülitage
+      turn_off: Lülitage
+      turned_on: sisse lülitatud
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Oleme just käivitanud meie teenust!
+      we_have_just_launched_our_service_text: Täna me käivitada meie teenust nii,
+        et igaüks saab
+      sign_up: logida
+      and_use_it: ja seda kasutada.
+      with_love: Armastusega,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Kõik uudised
+      read_more: Loe edasi
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Welcome to Kanban Rails
+      welcome_about_text: Siin saab luua oma Kanban pardal ja sync seda Github või
+        Bitbucket
+  pages:
+    faq:
+      faq: KKK
+      what_is_kanban_on_rails: Mis on KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails on teenus, kus saate luua Kanban lauad
+        ja sync seda Github või Bitbucket
+      what_features_has_kanban_on_rails: Millised omadused on KanbanOnRails?
+      kanban_on_rails_features: Saate sünkroonida oma projekte ja küsimusi Github
+        ja Bitbucket kutsuda kasutajad (näiteks juhid) oma projekti, juurutada seda
+        oma serverisse
+      i_have_some_requests: Mul on mõned taotlused
+      you_can_write_request: Võite kirjutada taotluse
+      here: siin
+      i_have_seen_some_typo_or_wrong_translation: ma olen näinud mõningaid kirjavigu
+        või vale tõlked
+      you_can_send_pull_request_to_our: Võite saata pull soovi meie
+      github_repository: github varamu
+      i_have_seen_some_error: ma olen näinud mõningaid vigu
+      you_can_write_to_our_info_mail: Võite kirjutada sellest, et meie e-posti
+    about:
+      about_kanban_on_rails: üle KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails on teenus, kus saate luua Kanban lauad
+        ja sync seda Github või Bitbucket
+      kanban_on_rails_features: KanbanOnRails omadused
+      sync_with_github_and_bitbucket: Saate sünkroonida oma projekte ja küsimusi Github
+        ja Bitbucket
+      invite_users: Võite kutsuda kasutajad (näiteks juhid) oma projekti
+      open_source_code: See projekt on avatud lähtekoodiga, nii et saate kasutada
+        seda oma serverisse
+      we_use_open_source_and_high_technology: Me kasutame kõrgtehnoloogia ja avatud
+        lähtekoodiga raamatukogud. Me püüame alati parem ja parandada meie teenust.
+      partners_and_investors: Oleme avatud partnerluse ja tahaksime leida investoreid.
+        Kui soovite meiega koostööd võtke meiega partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Logi sisse
+        sign_up: Registreeru
+        didnt_receive_confirmation_instructions: Ei saanud vastava kinnituse juhiseid?
+        sign_in_with: Logi sisse
+        fast_login_almost_one_click: Fast login (peaaegu ühe klõpsuga)
+    confirmations:
+      confirmed: Sinu konto kinnitatakse.
+      send_instructions: Sa saad talle juhiseid, kuidas kinnitada oma konto mõne minuti.
+      send_paranoid_instructions: Kui teie e-posti aadress on olemas meie andmebaasis,
+        saate talle juhiseid, kuidas kinnitada oma konto mõne minuti.
+      new:
+        send_mail_for_confirm_your_email: Saada posti Kinnita oma e-
+        submit: Esita
+    failure:
+      already_authenticated: Sa juba allkirjastatud.
+      inactive: Konto pole aktiveeritud veel.
+      invalid: Vigane e-posti või parooliga.
+      locked: Sinu konto on lukustatud.
+      last_attempt: Sa pead veel üks katse enne teie konto lukustatakse.
+      not_found_in_database: Vigane e-posti või parooliga.
+      timeout: Teie sessioon aegunud. Palun logi uuesti jätkata.
+      unauthenticated: Sa pead sisse logida või registreeruda enne jätkamist.
+      unconfirmed: Sa pead kinnitama oma konto enne jätkamist.
+    mailer:
+      confirmation_instructions:
+        subject: Kinnitus juhiseid
+        welcome_to_kanban_on_rails: Welcome to KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Võite kinnitada
+          oma e-posti kaudu linki
+        confirm_my_account: Kinnita oma Email
+      reset_password_instructions:
+        hello: Tere
+        subject: Reset parooli juhised
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Keegi
+          peab taotlusi link oma parooli muuta. Seda saab teha läbi linki.
+        change_my_password: Muuda oma parooli
+        if_you_didnt_request_this_please_ignore_this_email: Kui te ei taotlenud seda
+          siis ignoreeri seda e-posti.
+      unlock_instructions:
+        subject: Unlock juhised
+    omniauth_callbacks:
+      failure: Autentimine ebaõnnestus teid% {liiki} sest "% {reason}".
+      success: edukalt autenditud% {liiki} konto.
+    passwords:
+      no_token: ei saa pääseda sellele lehele ilma pärit paroolilähestusketast e.
+        Kui sul ei tulnud paroolilähestusketast e-posti, siis veenduge, et kasutada
+        täielikult URLi.
+      send_instructions: Sa saad e-kirja juhistega, kuidas taastada oma parooli mõne
+        minuti.
+      send_paranoid_instructions: Kui teie e-posti aadress on olemas meie andmebaasis,
+        saate taasta parool link oma e-posti aadress mõne minuti.
+      updated: oma parooli muudeti edukalt. Oled nüüd sisse logitud.
+      updated_not_active: oma parooli muudeti edukalt.
+      new:
+        forgot_your_password: taastada oma parooli
+        reset_password: Saada taastuda url
+      edit:
+        change_your_password: Muuda oma parooli
+        new_password: Uus parool
+        confirm_password: Kinnita parool
+        change_password: muutus
+    registrations:
+      destroyed: Bye! Sinu konto on tühistatud. Loodame, et näeme varsti jälle.
+      signed_up: Tere! Sa ei ole sisse edukalt.
+      signed_up_but_inactive: Registreerusite edukalt. Kuid me ei saa sisse logida,
+        sest teie konto ei ole veel aktiveeritud.
+      signed_up_but_locked: Registreerusite edukalt. Kuid me ei saa sisse logida,
+        sest konto on lukustatud.
+      signed_up_but_unconfirmed: sisaldav sõnum kinnitus link on saadetud e-posti
+        aadress. Palun avage link aktiveerida oma konto.
+      update_needs_confirmation: Värskendasite konto on edukalt, kuid meil on vaja
+        kontrollida endale e-posti aadressi. Palun kontrollige oma e-posti ja vajuta
+        kinnitavad link lõpule kinnitades endale e-posti aadressi.
+      updated: Värskendasite konto edukalt.
+      new:
+        sign_up: Registreeru
+        name: Nimi
+        password: salasõna
+        password_confirmation: salasõna kinnitus
+        register: Registreeru
+    sessions:
+      signed_in: Allkirjastatud edukalt.
+      signed_out: Allkirjastatud edukalt läbi.
+      new:
+        sign_in: Logi sisse
+        password: salasõna
+        remember_me: Mäleta mind
+        forgot_your_password: Unustasid oma parooli?
+    unlocks:
+      send_instructions: Sa saad talle juhiseid, kuidas avada oma kontole mõne minuti.
+      send_paranoid_instructions: Kui teie konto on olemas, siis saab talle juhiseid,
+        kuidas seda avada mõne minuti.
+      unlocked: Sinu konto on lukustamata edukalt. Palun logi sisse, et jätkata.
+  et: et
+  et_iso: et

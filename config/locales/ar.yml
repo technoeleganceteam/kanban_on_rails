@@ -1,0 +1,290 @@
+---
+ar:
+  github: جيثب
+  bitbucket: Bitbucket
+  updated: تحديثها
+  1_we_have_just_launched_our_service_title: لقد بدأت للتو خدمتنا
+  shared:
+    navbar:
+      sign_in: تسجيل الدخول
+      sign_up: اشترك
+      projects: مشاريع
+      issues: قضايا
+      syncing_with_github: تزامن مع جيثب ...
+      syncing_with_bitbucket: تزامن مع Bitbucket ...
+      new_issue: قضية جديدة
+    languages_select_modal:
+      available_languages: اللغات المتاحة
+    user_edit_menu:
+      profile: الملف الشخصي
+      site_settings: إعدادات الموقع
+      services: الخدمات
+    form_errors:
+      password: كلمة المرور
+      current_password: كلمة المرور الحالية
+      name: اسم
+      base: قاعدة
+      title: عنوان
+      user_to_project_connection: العضو في اتصال المشروع
+      columns:
+        tag: بطاقة تداخل
+    new_project_modal:
+      new_project: مشروع جديد
+    new_issue_modal:
+      new_issue: قضية جديدة
+    left_sidebar:
+      projects: مشاريع
+    right_sidebar:
+      news: أخبار
+      all: جميع
+      read_more: إقرأ المزيد
+    translations:
+      select_column_tags: حدد علامات العمود
+      select_section_tags: اختر العلامات المقطع
+      select_issue_tags: اختر قضية علامات
+  users:
+    new:
+      invite_user: دعوة المستخدم
+    form:
+      name: اسم
+      enter_user_name: أدخل اسم المستخدم
+      email: البريد الإلكتروني
+      enter_user_email: أدخل البريد الإلكتروني للمستخدم
+      enter_user_password: أدخل المستخدم كلمة السر
+      password: كلمة المرور
+      save: حفظ
+    index:
+      project: مشروع
+      users: المستخدمين
+      new: جديد
+    edit:
+      name: اسم
+      enter_your_name: أدخل اسمك
+      save: حفظ
+    settings:
+      change_password: تغيير كلمة المرور
+      interface_language: لغة الواجهة
+      submit: إرسال
+    password_form:
+      new_password: كلمة المرور الجديدة
+      confirm_new_password: تأكيد كلمة المرور الجديدة
+      old_password: كلمة المرور القديمة
+      change_password: تغيير كلمة المرور
+    update:
+      your_profile_was_successfully_updated: ملفك الشخصي تم تحديثها بنجاح
+    dashboard:
+      hello: مرحبا
+      here_some_of_your_statistics: هنا بعض الإحصاءات الخاصة بك
+      projects: مشاريع
+  projects:
+    index:
+      projects: مشاريع
+      new: جديد
+      sync_with_github: تزامن مع جيثب
+      sync_with_bitbucket: تزامن مع bitbucket
+      stop_sync_with_bitbucket: تزامن وقف مع bitbucket
+      stop_sync_with_github: تزامن وقف مع جيثب
+    form:
+      name: اسم
+      enter_project_name: أدخل اسم المشروع
+      save: حفظ
+      columns: أعمدة
+      sections: الأقسام
+      add: إضافة
+      github_repository_id: جيثب مستودع معرف
+      github_full_name: جيثب مستودع FULLNAME
+      github_secret_token_for_hook: جيثب رمز سري لهوك
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket رمز سري لهوك
+    project:
+      edit: تحرير
+      destroy: حذف
+      project_issues: القضايا المشروع
+      project_users: المستخدمين مشروع
+    section_fields:
+      section_tags: علامات القسم
+      section_order: ترتيب
+      or_include_all: أم تشمل كل شيء؟
+    column_fields:
+      remove_column: إزالة العمود
+      column_tags: علامات العمود
+      column_order: ترتيب
+    show:
+      next_page: الصفحة التالية
+  issues:
+    form:
+      title: عنوان
+      enter_issue_title: أدخل عنوان الموضوع
+      save: حفظ
+      body: الجسم
+      enter_issue_body: أدخل الجسم قضية
+      tags: الكلمات
+      issue_order: ترتيب
+      bitbucket_issue_id: Bitbucket قضية الهوية
+      github_issue_id: جيثب قضية الهوية
+      github_issue_number: العدد رقم جيثب
+    index:
+      issues: القضايا
+      sync_with_github: تزامن مع جيثب
+      sync_with_bitbucket: تزامن مع bitbucket
+      new: جديد
+    issue:
+      destroy: حذف
+      edit: تحرير
+    new:
+      new_issue: قضية جديدة
+  authentications:
+    index:
+      enabled_services: خدمات تمكين
+    authentication:
+      turned_off: تم إيقافه
+      turn_on: تشغيل
+      turn_off: إيقاف
+      turned_on: تحولت على
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: لقد بدأت للتو الخدمات لدينا!
+      we_have_just_launched_our_service_text: اليوم نطلق خدمتنا حتى يمكن الجميع
+      sign_up: الاشتراك
+      and_use_it: واستخدامها.
+      with_love: مع الحب،
+    index:
+      all_news: كل الأخبار
+      read_more: إقرأ المزيد
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: مرحبا بكم في كانبان على القضبان
+      welcome_about_text: هنا يمكنك إنشاء الخاصة مجلس كانبان الخاص بك، وتزامن ذلك
+        مع جيثب أو Bitbucket
+  pages:
+    faq:
+      faq: التعليمات
+      what_is_kanban_on_rails: ما هو KanbanOnRails؟
+      about_kanban_on_rails: KanbanOnRails هي خدمة حيث يمكنك إنشاء مجالس كانبان، وتزامن
+        ذلك مع جيثب أو Bitbucket
+      what_features_has_kanban_on_rails: ما يتميز ديه KanbanOnRails؟
+      kanban_on_rails_features: يمكنك مزامنة المشاريع الخاصة بك والقضايا جيثب وBitbucket،
+        دعوة المستخدمين (للمدراء سبيل المثال) لمشروعك، نشر على الخادم الخاص بك
+      i_have_some_requests: لدي بعض الطلبات
+      you_can_write_request: يمكنك إرسال طلب
+      here: هنا
+      i_have_seen_some_typo_or_wrong_translation: لقد رأيت بعض الأخطاء المطبعية أو
+        ترجمة خاطئة
+      you_can_send_pull_request_to_our: يمكنك إرسال طلب سحب لدينا
+      github_repository: جيثب مستودع
+      i_have_seen_some_error: لقد رأيت بعض الأخطاء
+      you_can_write_to_our_info_mail: يمكنك الكتابة عن هذا البريد الإلكتروني لدينا
+    about:
+      about_kanban_on_rails: معلومات KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails هي خدمة حيث يمكنك إنشاء مجالس كانبان،
+        وتزامن ذلك مع جيثب أو Bitbucket
+      kanban_on_rails_features: ميزات KanbanOnRails
+      sync_with_github_and_bitbucket: يمكنك مزامنة المشاريع الخاصة بك والقضايا جيثب
+        وBitbucket
+      invite_users: يمكنك دعوة المستخدمين (للمدراء سبيل المثال) لمشروعك
+      open_source_code: هذا المشروع لديه فتح شفرة المصدر، حتى تتمكن من نشرها على الخادم
+        الخاص بك
+      we_use_open_source_and_high_technology: نحن نستخدم التكنولوجيا العالية والمكتبات
+        مفتوحة المصدر. نحن دائما في محاولة للحصول على أفضل وتحسين خدماتنا.
+      partners_and_investors: يتم فتحها ونحن للشراكة ونود أن العثور على مستثمرين.
+        إذا كنت ترغب في التعاون معنا يرجى الاتصال بنا على partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: تسجيل الدخول
+        sign_up: اشترك
+        didnt_receive_confirmation_instructions: لم تلقوا تعليمات التأكيد؟
+        sign_in_with: تسجيل الدخول مع
+        fast_login_almost_one_click: تسجيل الدخول السريع (تقريبا بنقرة واحدة)
+    confirmations:
+      confirmed: حسابك وأكد بنجاح.
+      send_instructions: سوف تتلقى رسالة بريد إلكتروني مع تعليمات حول كيفية تأكيد
+        حسابك في بضع دقائق.
+      send_paranoid_instructions: في حالة وجود عنوان البريد الإلكتروني الخاص بك في
+        قاعدة بياناتنا، سوف تتلقى رسالة بريد إلكتروني مع تعليمات حول كيفية تأكيد حسابك
+        في بضع دقائق.
+      new:
+        send_mail_for_confirm_your_email: إرسال البريد لتأكيد البريد الإلكتروني الخاص
+          بك
+        submit: إرسال
+    failure:
+      already_authenticated: أنت وقعت بالفعل في.
+      inactive: حسابك لم يتم تفعيله بعد.
+      invalid: البريد الإلكتروني غير صالح أو كلمة المرور.
+      locked: حسابك مقفل.
+      last_attempt: لديك محاولة واحدة أخرى قبل أن يكون مؤمنا حسابك.
+      not_found_in_database: البريد الإلكتروني غير صالح أو كلمة المرور.
+      timeout: جلستك انتهت. يرجى تسجيل الدخول مرة أخرى للمتابعة.
+      unauthenticated: تحتاج لتسجيل الدخول أو الاشتراك قبل المتابعة.
+      unconfirmed: لديك لتأكيد حسابك قبل المتابعة.
+    mailer:
+      confirmation_instructions:
+        subject: تعليمات تأكيد
+        welcome_to_kanban_on_rails: مرحبا بكم في KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: يمكنك التأكد من
+          البريد الإلكتروني من خلال الرابط أدناه
+        confirm_my_account: تأكيد البريد الإلكتروني الخاص بي
+      reset_password_instructions:
+        hello: مرحبا
+        subject: تعليمات إعادة تعيين كلمة المرور
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: شخص
+          ما لديه رابطا لتغيير كلمة المرور الخاصة بك الطلبات. يمكنك القيام بذلك من
+          خلال الرابط أدناه.
+        change_my_password: تغيير كلمة المرور الخاصة بي
+        if_you_didnt_request_this_please_ignore_this_email: إذا لم تطلب هذا الرجاء
+          تجاهل هذا البريد الإلكتروني.
+      unlock_instructions:
+        subject: تعليمات فتح
+    omniauth_callbacks:
+      failure: لا يمكن مصادقتك من٪ {نوع} لأن "٪ {السبب}".
+      success: مصادقة بنجاح من٪ {نوع} حساب.
+    passwords:
+      no_token: لا يمكنك الوصول إلى هذه الصفحة دون قادمة من البريد الإلكتروني إعادة
+        تعيين كلمة المرور. إذا كنت لا تأتي من البريد الإلكتروني إعادة تعيين كلمة المرور،
+        من فضلك تأكد من استخدام عنوان URL الكامل المقدمة.
+      send_instructions: سوف تتلقى رسالة بريد إلكتروني مع تعليمات حول كيفية إعادة
+        ضبط كلمة المرور الخاصة بك في بضع دقائق.
+      send_paranoid_instructions: في حالة وجود عنوان البريد الإلكتروني الخاص بك في
+        قاعدة بياناتنا، سوف تتلقى وصلة استعادة كلمة السر على عنوان البريد الإلكتروني
+        الخاص بك في بضع دقائق.
+      new:
+        forgot_your_password: نسيت كلمة السر الخاصة بك
+        reset_password: إرسال استعادة رابط
+      edit:
+        change_your_password: تغيير كلمة المرور الخاصة بك
+        new_password: كلمة المرور الجديدة
+        change_password: تغيير
+    registrations:
+      destroyed: وداعا! تم إلغاء حسابك بنجاح. ونحن نأمل أن نراكم مرة أخرى قريبا.
+      signed_up: أهلا وسهلا! كنت قد وقعت بنجاح.
+      signed_up_but_inactive: لقد وقعت بنجاح. ومع ذلك، لم نتمكن من تسجيل دخولك لحسابك
+        لم يتم تنشيطه بعد.
+      signed_up_but_locked: لقد وقعت بنجاح. ومع ذلك، لم نتمكن من تسجيل دخولك بسبب
+        تأمين حسابك.
+      signed_up_but_unconfirmed: رسالة مع رابط التأكيد تم إرسالها إلى عنوان البريد
+        الإلكتروني الخاص بك. يرجى فتح الرابط لتفعيل حسابك.
+      update_needs_confirmation: يمكنك تحديث حسابك بنجاح، لكننا بحاجة للتحقق من عنوان
+        بريدك الإلكتروني الجديد. يرجى التحقق من البريد الإلكتروني الخاص بك وانقر على
+        الرابط تأكيد لوضع اللمسات الأخيرة تؤكد عنوان بريدك الإلكتروني الجديد.
+      updated: يمكنك تحديث حسابك بنجاح.
+      new:
+        sign_up: اشترك
+        name: اسم
+        password: كلمة المرور
+        register: اشترك
+    sessions:
+      signed_in: توقيع الدخول بنجاح.
+      signed_out: توقيع بنجاح.
+      new:
+        sign_in: تسجيل الدخول
+        password: كلمة المرور
+        remember_me: تذكرني
+        forgot_your_password: نسيت كلمة المرور؟
+    unlocks:
+      send_instructions: سوف تتلقى رسالة بريد إلكتروني مع تعليمات حول كيفية فتح حساب
+        الخاص بك في بضع دقائق.
+      send_paranoid_instructions: في حالة وجود حسابك، سوف تتلقى رسالة بريد إلكتروني
+        مع تعليمات حول كيفية فتحه في بضع دقائق.
+      unlocked: حسابك تم إلغاء بنجاح. الرجاء تسجيل الدخول للمتابعة.
+  ar: ar
+  ar_iso: ar

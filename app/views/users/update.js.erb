@@ -1,0 +1,9 @@
+<% if @user.errors.present? %>
+  $('#edit_user_<%= @user.id %>').replaceWith('<%= j render 'password_form', :user => @user %>');
+<% else %>
+  <% flash[:notice] = t '.your_profile_was_successfully_updated' if @user.errors.size == 0 %>
+
+  $('html,body').scrollTop(0);
+
+  location.reload();
+<% end %>

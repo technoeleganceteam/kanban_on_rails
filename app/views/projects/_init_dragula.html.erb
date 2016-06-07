@@ -1,0 +1,8 @@
+<script>
+  <% @project.sections.each do |s| %>
+    init_dragula(<%= @columns.map{ |c| "section_#{ s.id }_column_#{ c.id }" }.to_json.html_safe %>,
+      <%= @project.id %>, <%= current_user.id %>);
+
+    init_infinite_scroll(<%= @columns.map { |c| "section_#{ s.id }_column_#{ c.id }" }.to_json.html_safe %>)
+  <% end %>
+</script>

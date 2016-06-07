@@ -1,0 +1,35 @@
+div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
+  id = "issue_#{ issue_to_section_connection.issue.id }"]
+  h5 
+    = issue_to_section_connection.issue.title
+
+    - if issue_to_section_connection.issue.github_issue_number.present?
+      | &nbsp;
+      small.blue = issue_to_section_connection.issue.github_issue_number
+  p
+    - if issue_to_section_connection.issue.github_issue_html_url.present?
+      = link_to issue_to_section_connection.issue.github_issue_html_url do
+        i.fa.fa-github
+    - if issue_to_section_connection.issue.github_issue_comments_count.present?
+      | &nbsp;
+      i.fa.fa-comments
+      | &nbsp;
+      = issue_to_section_connection.issue.github_issue_comments_count
+
+    - if issue_to_section_connection.issue.bitbucket_issue_id.present?
+      | &nbsp;
+      = link_to "https://bitbucket.org/#{ issue_to_section_connection.issue.project.bitbucket_full_name }/" +\
+        "issues/#{ issue_to_section_connection.issue.bitbucket_issue_id }" do
+        i.fa.fa-bitbucket
+
+    - if issue_to_section_connection.issue.bitbucket_issue_comment_count.present?
+      | &nbsp;
+      i.fa.fa-comments
+      | &nbsp;
+      = issue_to_section_connection.issue.bitbucket_issue_comment_count
+
+    br
+    - if issue_to_section_connection.issue.tags.present?
+      - issue_to_section_connection.issue.tags.each do |tag|
+        span.label.label-default = tag
+        | &nbsp;

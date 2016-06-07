@@ -1,0 +1,26 @@
+.navbar.navbar-inverse.navbar-static-top.navbar_customized role='navigation' 
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to root_url do
+        .navbar-brand Kanban on Rails
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li class = '#{ 'active' if params[:controller] == 'pages' && params[:id] == 'about' }'
+          = link_to page_url('about')
+            i.fa.fa-info-circle
+        li class = '#{ 'active' if params[:controller] == 'pages' && params[:id] == 'faq' }'
+          = link_to page_url('faq')
+            i.fa.fa-question-circle
+        li
+          = link_to Settings.github_repository_url do
+            i.fa.fa-github
+        li
+          a href = '#' data-target='#language_modal' data-toggle='modal'
+            i.fa.fa-language.fa-lg
+            | &nbsp;
+            = t I18n.locale
+      = render 'shared/navbar'

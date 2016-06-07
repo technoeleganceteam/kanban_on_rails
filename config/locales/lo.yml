@@ -1,0 +1,282 @@
+---
+lo:
+  github: GitHub
+  bitbucket: Bitbucket
+  updated: ປັບປຸງ
+  1_we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ
+  shared:
+    navbar:
+      sign_in: ເຂົ້າສູ່ລະບົບ
+      sign_up: ຂຽນເຂົ້າເຖິງ
+      projects: ໂຄງການ
+      issues: ບັນຫາ
+      syncing_with_github: Sync ກັບ GitHub ...
+      syncing_with_bitbucket: Sync ກັບ Bitbucket ...
+      new_issue: ບັນຫາໃຫມ່
+      edit_project: ແກ້ໄຂໂຄງການ
+    languages_select_modal:
+      available_languages: ພາສາທີ່ໃຊ້
+    user_edit_menu:
+      profile: ຂໍ້ມູນ
+      site_settings: ການຕັ້ງຄ່າເວັບໄຊ
+      services: ບໍລິການ
+    form_errors:
+      password: ລະຫັດຜ່ານ
+      current_password: ລະຫັດຜ່ານປັດຈຸບັນ
+      name: ຊື່
+      base: ຖານ
+      title: Title
+      user_to_project_connection: User ກັບໂຄງການເຊື່ອມຕໍ່
+      columns:
+        tag: Tag overlapping
+    new_project_modal:
+      new_project: ໂຄງການໃຫມ່
+    edit_project_modal:
+      edit_project: ແກ້ໄຂໂຄງການ
+    new_issue_modal:
+      new_issue: ບັນຫາໃຫມ່
+    left_sidebar:
+      projects: ໂຄງການ
+    right_sidebar:
+      news: News
+      all: ທັງຫມົດ
+      read_more: ອ່ານເພີ່ມເຕີມ
+    translations:
+      select_column_tags: ເລືອກ tags ຖັນ
+      select_section_tags: ເລືອກ tags ພາກ
+      select_issue_tags: ເລືອກ tags ບັນຫາ
+  users:
+    new:
+      invite_user: ເຊີນຜູ້ໃຊ້
+    form:
+      name: ຊື່
+      enter_user_name: ກະລຸນາໃສ່ຊື່ຜູ້ໃຊ້
+      email: Email
+      enter_user_email: ກະລຸນາໃສ່ອີເມວຂອງຜູ້ໃຊ້
+      enter_user_password: ກະລຸນາໃສ່ລະຫັດຜ່ານຂອງຜູ້ໃຊ້
+      password: ລະຫັດຜ່ານ
+      save: ບັນທຶກ
+    index:
+      project: Project
+      users: ຜູ້ໃຊ້
+      new: ໃຫມ່
+    edit:
+      name: ຊື່
+      enter_your_name: ກະລຸນາໃສ່ຊື່ຂອງທ່ານ
+      save: ບັນທຶກ
+    settings:
+      change_password: ການປ່ຽນແປງລະຫັດຜ່ານ
+      interface_language: ພາສາ ​​Interface
+      submit: ຍື່ນສະເຫນີການ
+    password_form:
+      new_password: ລະຫັດຜ່ານໃຫມ່
+      confirm_new_password: ຢືນຢັນລະຫັດຜ່ານໃຫມ່
+      change_password: ການປ່ຽນແປງລະຫັດຜ່ານ
+    update:
+      your_profile_was_successfully_updated: profile ຂອງທ່ານໄດ້ຖືກປັບປຸງຢ່າງສໍາເລັດຜົນ
+    dashboard:
+      hello: ສະບາຍດີ
+      here_some_of_your_statistics: ຕໍ່ໄປນີ້ເປັນສະຖິຕິຂອງທ່ານ
+      projects: ໂຄງການ
+  projects:
+    index:
+      projects: ໂຄງການ
+      new: ໃຫມ່
+      sync_with_github: Sync ກັບ GitHub
+      sync_with_bitbucket: Sync ກັບ bitbucket
+      stop_sync_with_bitbucket: sync Stop ກັບ bitbucket
+      stop_sync_with_github: sync Stop ກັບ GitHub
+    form:
+      name: ຊື່
+      enter_project_name: ກະລຸນາໃສ່ຊື່ໂຄງການ
+      save: ບັນທຶກ
+      columns: Columns
+      sections: Sections
+      add: Add
+      github_repository_id: GitHub repository id
+      github_full_name: GitHub repository ຊື່ເຕັມຂອງ
+      github_secret_token_for_hook: GitHub token ລັບສໍາລັບການສຽງ
+      bitbucket_full_name: Bitbucket ຊື່ເຕັມຂອງ
+      bitbucket_secret_token_for_hook: Bitbucket token ລັບສໍາລັບການສຽງ
+    project:
+      edit: ແກ້ໄຂ
+      destroy: ລົບ
+      project_issues: ບັນຫາໂຄງການ
+      project_users: ຜູ້ໃຊ້ໂຄງການ
+    section_fields:
+      section_tags: tags Section
+      section_order: Order
+      or_include_all: ຫຼືປະກອບມີທັງຫມົດ?
+    column_fields:
+      remove_column: ອອກຄໍລໍາ
+      max_issues_count: ບັນຫານ້ໍານັບໃນຖັນ
+      column_tags: tags Column
+      column_order: Order
+    show:
+      next_page: ຫນ້າຖັດໄປ
+  issues:
+    form:
+      title: Title
+      enter_issue_title: ກະລຸນາໃສ່ຊື່ບັນຫາ
+      save: ບັນທຶກ
+      body: ຮ່າງກາຍ
+      enter_issue_body: ກະລຸນາໃສ່ຮ່າງກາຍບັນຫາ
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket ບັນຫາ id
+      github_issue_id: GitHub ບັນຫາ id
+      github_issue_number: GitHub ຈໍານວນບັນຫາ
+    index:
+      issues: ບັນຫາ
+      sync_with_github: Sync ກັບ GitHub
+      sync_with_bitbucket: Sync ກັບ bitbucket
+      new: ໃຫມ່
+    issue:
+      destroy: ລົບ
+      edit: ແກ້ໄຂ
+    edit:
+      edit_issue: ແກ້ໄຂບັນຫາ
+    new:
+      new_issue: ບັນຫາໃຫມ່
+  authentications:
+    index:
+      enabled_services: ການບໍລິການ
+    authentication:
+      turned_off: ປິດ
+      turn_on: ເຮັດໃຫ້ສຸດ
+      turn_off: ປິດ
+      turned_on: ກ່ຽວກັບການຫັນ
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ!
+      we_have_just_launched_our_service_text: ມື້ນີ້ພວກເຮົາເປີດບໍລິການຂອງພວກເຮົາສະນັ້ນທຸກຄົນສາມາດເຮັດໄດ້
+      sign_up: ເຂົ້າເຖິງ
+      and_use_it: ແລະນໍາໃຊ້ມັນ.
+      with_love: ດ້ວຍຄວາມຮັກ,
+      technoelegance_team: Team Technoelegance
+    index:
+      all_news: ຂ່າວທັງຫມົດ
+      read_more: ອ່ານເພີ່ມເຕີມ
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: ຍິນດີຕ້ອນຮັບ Kanban ກ່ຽວກັບ Rails
+      welcome_about_text: ໃນທີ່ນີ້ທ່ານສາມາດສ້າງຄະນະກໍາມະ Kanban ຂອງທ່ານເອງແລະ sync
+        ກັບ GitHub ຫຼື Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: KanbanOnRails ເປັນແນວໃດ?
+      about_kanban_on_rails: KanbanOnRails ເປັນບໍລິການທີ່ທ່ານສາມາດສ້າງຫມວດຫມູ່ Kanban
+        ແລະ sync ກັບ GitHub ຫຼື Bitbucket
+      what_features_has_kanban_on_rails: ຈະເປັນແນວໃດລັກສະນະມີ KanbanOnRails?
+      kanban_on_rails_features: ທ່ານສາມາດ sync ໂຄງການແລະບັນຫາຂອງທ່ານກັບ GitHub ແລະ
+        Bitbucket, ເຊື້ອເຊີນຜູ້ນໍາໃຊ້ (ສໍາລັບການຄຸ້ມຄອງການຍົກຕົວຢ່າງ) ສໍາລັບໂຄງການຂອງທ່ານ,
+        ປະຕິບັດມັນກັບເຄື່ອງແມ່ຂ່າຍຂອງທ່ານເອງ
+      i_have_some_requests: ຂ້າພະເຈົ້າມີການຮ້ອງຂໍບາງ
+      you_can_write_request: ທ່ານສາມາດຂຽນຄໍາຮ້ອງຂໍ
+      here: ນີ້
+      i_have_seen_some_typo_or_wrong_translation: ຂ້າພະເຈົ້າໄດ້ເຫັນ typos ຫຼືການແປພາສາບໍ່ຖືກຕ້ອງ
+      you_can_send_pull_request_to_our: ທ່ານສາມາດສົ່ງຄໍາຮ້ອງຂໍການດຶງການຂອງພວກເຮົາ
+      i_have_seen_some_error: ຂ້າພະເຈົ້າໄດ້ເຫັນຄວາມຜິດພາດບາງ
+      you_can_write_to_our_info_mail: ທ່ານສາມາດຂຽນກ່ຽວກັບເລື່ອງນີ້ໄປຫາອີເມວຂອງພວກເຮົາ
+    about:
+      about_kanban_on_rails: ກ່ຽວກັບ KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails ເປັນບໍລິການທີ່ທ່ານສາມາດສ້າງຫມວດຫມູ່
+        Kanban ແລະ sync ກັບ GitHub ຫຼື Bitbucket
+      kanban_on_rails_features: ຄຸນນະສົມບັດ KanbanOnRails
+      sync_with_github_and_bitbucket: ທ່ານສາມາດ sync ໂຄງການແລະບັນຫາຂອງທ່ານກັບ GitHub
+        ແລະ Bitbucket
+      invite_users: ທ່ານສາມາດເຊື້ອເຊີນຜູ້ນໍາໃຊ້ (ສໍາລັບການຄຸ້ມຄອງການຍົກຕົວຢ່າງ) ສໍາລັບໂຄງການຂອງທ່ານ
+      open_source_code: ໂຄງການນີ້ມີລະຫັດແຫຼ່ງເປີດ, ດັ່ງນັ້ນທ່ານສາມາດປັບໃຊ້ມັນກັບເຄື່ອງແມ່ຂ່າຍຂອງທ່ານເອງ
+      we_use_open_source_and_high_technology: ພວກເຮົານໍາໃຊ້ເຕັກໂນໂລຊີສູງແລະຫ້ອງສະຫມຸດເປັນແຫຼ່ງເປີດ.
+        ພວກເຮົາສະເຫມີພະຍາຍາມເພື່ອໃຫ້ໄດ້ຮັບທີ່ດີກວ່າແລະການປັບປຸງການບໍລິການຂອງພວກເຮົາ.
+      partners_and_investors: ພວກເຮົາເປີດບໍລິການການຮ່ວມມືແລະພວກເຮົາຈະຕ້ອງການເພື່ອຊອກຫານັກລົງທຶນ.
+        ຖ້າຫາກວ່າທ່ານຕ້ອງການທີ່ຈະຮ່ວມມືກັບພວກເຮົາກະລຸນາຕິດຕໍ່ຫາພວກເຮົາທີ່ partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: ເຂົ້າສູ່ລະບົບ
+        sign_up: ຂຽນເຂົ້າເຖິງ
+        didnt_receive_confirmation_instructions: ບໍ່ໄດ້ຮັບຄໍາແນະນໍາການຢັ້ງຢືນ?
+        sign_in_with: ຂຽນເຂົ້າໃນກັບ
+        fast_login_almost_one_click: ເຂົ້າສູ່ລະບົບໄວ (ເກືອບຫນຶ່ງຄລິກ)
+    confirmations:
+      confirmed: ບັນຊີຂອງທ່ານໄດ້ຖືກຢືນຢັນສົບຜົນສໍາເລັດ.
+      send_instructions: ທ່ານຈະໄດ້ຮັບອີເມລ໌ທີ່ມີຄໍາແນະນໍາກ່ຽວກັບວິທີການຢືນຢັນບັນຊີຂອງທ່ານໃນສອງສາມນາທີ.
+      send_paranoid_instructions: ຖ້າຫາກວ່າທີ່ຢູ່ອີເມວຂອງທ່ານຢູ່ໃນຖານຂໍ້ມູນຂອງພວກເຮົາ,
+        ທ່ານຈະໄດ້ຮັບອີເມລ໌ທີ່ມີຄໍາແນະນໍາກ່ຽວກັບວິທີການຢືນຢັນບັນຊີຂອງທ່ານໃນສອງສາມນາທີ.
+      new:
+        send_mail_for_confirm_your_email: ສົ່ງອີເມວການຍືນຍັນອີເມວຂອງທ່ານ
+        submit: ຍື່ນສະເຫນີການ
+    failure:
+      already_authenticated: ເຈົ້າຍັງບໍ່ໄດ້ເຊັນສັນຍາໃນ.
+      inactive: ບັນຊີຂອງທ່ານບໍ່ໄດ້ເປີດນໍາໃຊ້ເທື່ອ.
+      invalid: ອີເມວບໍ່ຖືກຕ້ອງຫລືລະຫັດຜ່ານ.
+      locked: ບັນຊີຂອງທ່ານໄດ້ຖືກລັອກ.
+      last_attempt: ທ່ານມີຄວາມພະຍາຍາມເພີ່ມເຕີມກ່ອນທີ່ຈະບັນຊີຂອງທ່ານຈະໄດ້ຮັບການມີຊາຍແດນຕິດ.
+      not_found_in_database: ອີເມວບໍ່ຖືກຕ້ອງຫລືລະຫັດຜ່ານ.
+      timeout: ກອງປະຊຸມຂອງທ່ານຫມົດອາຍຸແລ້ວ. ກະລຸນາເຂົ້າສູ່ລະບົບອີກເທື່ອຫນຶ່ງທີ່ຈະສືບຕໍ່.
+      unauthenticated: ທ່ານຈໍາເປັນຕ້ອງເຂົ້າສູ່ລະບົບຫລືລົງທະບຽນກ່ອນທີ່ຈະສືບຕໍ່.
+      unconfirmed: ທ່ານມີເພື່ອຢືນຢັນບັນຊີຂອງທ່ານກ່ອນທີ່ຈະດໍາເນີນການຕໍ່.
+    mailer:
+      confirmation_instructions:
+        subject: ຄໍາແນະນໍາການຢັ້ງຢືນ
+        welcome_to_kanban_on_rails: ຍິນດີຕ້ອນຮັບ KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: ທ່ານສາມາດຢືນຢັນອີເມວຂອງທ່ານໂດຍຜ່ານການເຊື່ອມຕໍ່ຂ້າງລຸ່ມນີ້
+        confirm_my_account: ຢືນຢັນອີເມວຂອງຂ້າພະເຈົ້າ
+      reset_password_instructions:
+        hello: ສະບາຍດີ
+        subject: ຄໍາແນະນໍາລະຫັດຜ່ານ Reset
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: ມີບາງຄົນໄດ້ຮ້ອງຂໍການເຊື່ອມຕໍ່ກັບການປ່ຽນແປງລະຫັດຜ່ານຂອງທ່ານ.
+          ທ່ານສາມາດເຮັດໄດ້ໂດຍຜ່ານການເຊື່ອມຕໍ່ຂ້າງລຸ່ມນີ້.
+        change_my_password: ການປ່ຽນແປງລະຫັດຜ່ານຂອງຂ້າພະເຈົ້າ
+        if_you_didnt_request_this_please_ignore_this_email: ຖ້າຫາກວ່າທ່ານບໍ່ໄດ້ຮ້ອງຂໍນີ້ກະລຸນາບໍ່ສົນໃຈອີເມວນີ້.
+      unlock_instructions:
+        subject: ຄໍາແນະນໍາ Unlock
+    omniauth_callbacks:
+      failure: ບໍ່ສາມາດແທ້ຈິງທີ່ທ່ານຈາກ% {ປະເພດ} ເພາະວ່າ "% {ເຫດຜົນ}".
+      success: authenticated ສົບຜົນສໍາເລັດຈາກ% ບັນຊີ {ປະເພດ}.
+    passwords:
+      no_token: ທ່ານບໍ່ສາມາດເຂົ້າເຖິງຫນ້ານີ້ໂດຍບໍ່ມີການມາຈາກອີເມວປ່ຽນລະຫັດຜ່ານ. ຖ້າຫາກວ່າທ່ານມາຈາກ
+        email ປັບລະຫັດຜ່ານກະລຸນາເຮັດໃຫ້ແນ່ໃຈວ່າທ່ານໄດ້ນໍາໃຊ້ URL ເຕັມສະຫນອງໃຫ້.
+      send_instructions: ທ່ານຈະໄດ້ຮັບອີເມລ໌ທີ່ມີຄໍາແນະນໍາກ່ຽວກັບວິທີການປັບລະຫັດຜ່ານຂອງທ່ານໃນສອງສາມນາທີ.
+      send_paranoid_instructions: ຖ້າຫາກວ່າທີ່ຢູ່ອີເມວຂອງທ່ານຢູ່ໃນຖານຂໍ້ມູນຂອງພວກເຮົາ,
+        ທ່ານຈະໄດ້ຮັບການເຊື່ອມຕໍ່ການຟື້ນຕົວລະຫັດຜ່ານທີ່ຢູ່ອີເມວຂອງທ່ານໃນສອງສາມນາທີ.
+      updated: ລະຫັດຜ່ານຂອງທ່ານໄດ້ຖືກປ່ຽນແປງສົບຜົນສໍາເລັດ. ທ່ານກໍາລັງຢູ່ໃນປັດຈຸບັນໃນ.
+      updated_not_active: ລະຫັດຜ່ານຂອງທ່ານໄດ້ຖືກປ່ຽນແປງສົບຜົນສໍາເລັດ.
+      new:
+        forgot_your_password: ການກູ້ຄືນລະຫັດຜ່ານຂອງທ່ານ
+        reset_password: ແນະຟື້ນຕົວ url
+      edit:
+        change_your_password: ການປ່ຽນແປງລະຫັດຜ່ານຂອງທ່ານ
+        new_password: ລະຫັດຜ່ານໃຫມ່
+        change_password: ການປ່ຽນແປງ
+    registrations:
+      destroyed: Bye! ບັນຊີຂອງທ່ານໄດ້ຖືກຍົກເລີກຢ່າງສໍາເລັດຜົນ. ພວກເຮົາຫວັງວ່າເພື່ອເຂົ້າໄປເບິ່ງທ່ານອີກເທື່ອຫນຶ່ງໃນໄວໆນີ້.
+      signed_up: ຍິນດີຕ້ອນຮັບ! ທ່ານໄດ້ເຊັນຂຶ້ນຢ່າງສໍາເລັດຜົນ.
+      signed_up_but_inactive: ທ່ານໄດ້ລົງທະບຽນສົບຜົນສໍາເລັດ. ຢ່າງໃດກໍຕາມ, ພວກເຮົາບໍ່ສາມາດເຂົ້າສູ່ລະບົບທ່ານໃນເນື່ອງຈາກວ່າບັນຊີຂອງທ່ານແມ່ນຍັງບໍ່ທັນເປີດໃຊ້ວຽກ.
+      signed_up_but_locked: ທ່ານໄດ້ລົງທະບຽນສົບຜົນສໍາເລັດ. ຢ່າງໃດກໍຕາມ, ພວກເຮົາບໍ່ສາມາດເຂົ້າສູ່ລະບົບທ່ານໃນເນື່ອງຈາກວ່າບັນຊີຂອງທ່ານແມ່ນມີຊາຍແດນຕິດ.
+      signed_up_but_unconfirmed: ຂໍ້ຄວາມທີ່ມີການເຊື່ອມຕໍ່ການຢັ້ງຢືນເປັນ A ໄດ້ຖືກສົ່ງໄປທີ່ຢູ່ອີເມວຂອງທ່ານ.
+        ກະລຸນາເປີດການເຊື່ອມຕໍ່ໃນການກະຕຸ້ນບັນຊີຂອງທ່ານ.
+      update_needs_confirmation: ທ່ານປັບປຸງບັນຊີຂອງທ່ານສົບຜົນສໍາເລັດ, ແຕ່ພວກເຮົາຈໍາເປັນຕ້ອງໄດ້ຢືນຢັນທີ່ຢູ່ອີເມວຂອງທ່ານໃຫມ່.
+        ກະລຸນາກວດສອບອີເມວຂອງທ່ານແລະຄລິກໃສ່ການເຊື່ອມຕໍ່ຢືນຢັນທີ່ຈະສິ້ນສຸດການຢືນຢັນທີ່ຢູ່ອີເມວຂອງທ່ານໃຫມ່.
+      updated: ທ່ານປັບປຸງບັນຊີຂອງທ່ານສົບຜົນສໍາເລັດ.
+      new:
+        sign_up: ຂຽນເຂົ້າເຖິງ
+        name: ຊື່
+        password: ລະຫັດຜ່ານ
+        register: ຂຽນເຂົ້າເຖິງ
+    sessions:
+      signed_in: ສູ່ລະບົບສົບຜົນສໍາເລັດ.
+      signed_out: ເຊັນອອກສົບຜົນສໍາເລັດ.
+      new:
+        sign_in: ເຂົ້າສູ່ລະບົບ
+        password: ລະຫັດຜ່ານ
+        remember_me: ຈືຂໍ້ມູນການຂ້າພະເຈົ້າ
+        forgot_your_password: ລືມລະຫັດຜ່ານຂອງທ່ານ?
+    unlocks:
+      send_instructions: ທ່ານຈະໄດ້ຮັບອີເມລ໌ທີ່ມີຄໍາແນະນໍາກ່ຽວກັບວິທີການປົດລັອກບັນຊີຂອງທ່ານໃນສອງສາມນາທີ.
+      send_paranoid_instructions: ຖ້າຫາກວ່າບັນຊີຂອງທ່ານຢູ່, ທ່ານຈະໄດ້ຮັບອີເມລ໌ທີ່ມີຄໍາແນະນໍາກ່ຽວກັບວິທີປົດລັອກໃນບໍ່ເທົ່າໃດນາທີ.
+      unlocked: ບັນຊີຂອງທ່ານໄດ້ຮັບການປົດລັອກສົບຜົນສໍາເລັດ. ກະລຸນາເຂົ້າສູ່ລະບົບທີ່ຈະສືບຕໍ່.
+  lo: lo
+  lo_iso: lo

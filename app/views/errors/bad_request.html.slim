@@ -1,0 +1,29 @@
+doctype html
+html lang = '#{ t "#{ I18n.locale }_iso" }'
+  head
+    meta charset='utf-8'
+
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+
+    meta http-equiv='X-UA-Compatible' content='IE=Edge'
+
+    title = t '.bad_request'
+
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true,
+      :defer => 'defer', :async => true, :debug => false
+
+    = render 'shared/favicons'
+  body
+    .container
+      .row.text-center
+        h3 = t '.request_result'
+      
+        h1 400
+      
+        p = t '.bad_request_description'
+
+        = link_to (t '.go_to_root'), root_url

@@ -1,0 +1,31 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: kanban_on_rails_development
+  username: <%= Settings.postgresql.username %>
+  password: <%= Settings.postgresql.password %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: kanban_on_rails_test
+  username: <%= Settings.postgresql.username %>
+  password: <%= Settings.postgresql.password %>
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  pool: 25
+  database: kanban_on_rails_staging
+  username: <%= Settings.postgresql.username %>
+  password: <%= Settings.postgresql.password %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 25
+  database: kanban_on_rails_production
+  username: <%= Settings.postgresql.username %>
+  password: <%= Settings.postgresql.password %>

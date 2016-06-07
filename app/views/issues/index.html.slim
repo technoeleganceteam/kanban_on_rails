@@ -1,0 +1,11 @@
+ul.list-group#infinite_scroll_wrapper
+  li.list-group-item.list-group-item-info
+    = @project.name
+    | &nbsp;
+    = t '.issues'
+
+    .pull-right
+      = link_to (t '.new'), new_project_issue_url(@project), :class => 'btn btn-success btn-xs'
+  = render @issues
+
+= paginate @issues

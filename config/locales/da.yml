@@ -1,0 +1,308 @@
+---
+da:
+  github: Github
+  bitbucket: Bitbucket
+  updated: opdateret
+  1_we_have_just_launched_our_service_title: Vi har netop lanceret vores service
+  shared:
+    navbar:
+      sign_in: Log ind
+      sign_up: Tilmeld dig
+      projects: Projekter
+      issues: Issues
+      syncing_with_github: Synkroniser med Github ...
+      syncing_with_bitbucket: Synkroniser med Bitbucket ...
+      new_issue: Nyt emne
+      edit_project: Rediger projekt
+    languages_select_modal:
+      available_languages: Ledige sprog
+    user_edit_menu:
+      profile: Profil
+      site_settings: Websiteindstillinger
+      services: Services
+    form_errors:
+      password: Password
+      current_password: Aktuel adgangskode
+      name: Navn
+      base: Base
+      title: Titel
+      user_to_project_connection: Bruger til projekt tilslutning
+      columns:
+        tag: Tag overlappende
+    new_project_modal:
+      new_project: Nyt projekt
+    edit_project_modal:
+      edit_project: Rediger projekt
+    new_issue_modal:
+      new_issue: Nyt emne
+    left_sidebar:
+      projects: Projekter
+    right_sidebar:
+      news: Nyheder
+      all: Alle
+      read_more: Læs mere
+    translations:
+      select_column_tags: Vælg kolonne tags
+      select_section_tags: Vælg sektion tags
+      select_issue_tags: Vælg udstede tags
+  users:
+    new:
+      invite_user: Inviter bruger
+    form:
+      name: Navn
+      enter_user_name: Indtast brugernavn
+      email: Email
+      enter_user_email: Indtast bruger e-mail
+      enter_user_password: Indtast brugeradgangskoden
+      password: Password
+      role: Bruger rolle
+      save: Gem
+    index:
+      project: Projekt
+      users: brugere
+      new: Ny
+    edit:
+      name: Navn
+      enter_your_name: Indtast dit navn
+      save: Gem
+    settings:
+      change_password: Skift adgangskode
+      interface_language: interface sprog
+      submit: Indsend
+    password_form:
+      new_password: Ny adgangskode
+      confirm_new_password: Bekræft ny adgangskode
+      old_password: Gammel adgangskode
+      change_password: Skift adgangskode
+    update:
+      your_profile_was_successfully_updated: Din profil er opdateret
+    dashboard:
+      hello: Hej
+      here_some_of_your_statistics: Her nogle af dine statistikker
+      projects: Projekter
+  projects:
+    index:
+      projects: Projekter
+      new: Ny
+      sync_with_github: Synkroniser med GitHub
+      sync_with_bitbucket: Synkroniser med Bitbucket
+      stop_sync_with_bitbucket: Stop synkronisering med Bitbucket
+      stop_sync_with_github: Stop synkronisering med GitHub
+    form:
+      name: Navn
+      enter_project_name: Indtast projektnavn
+      save: Gem
+      columns: Kolonner
+      sections: Sektioner
+      column_name: Row navn
+      section_name: Afsnit navn
+      add: Tilføj
+      column_width: Kolonnebredde
+      column_height: Spaltehøjde
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Github hemmelige token for krog
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket hemmelige token for krog
+    project:
+      edit: Rediger
+      destroy: Slet
+      project_issues: Projekt spørgsmål
+      project_users: Project brugere
+    section_fields:
+      section_name: Afsnit navn
+      remove_section: Fjern sektion
+      section_tags: Afsnit tags
+      section_order: Order
+      or_include_all: Eller omfatte alle?
+    column_fields:
+      column_name: Kolonne navn
+      remove_column: Fjern kolonne
+      max_issues_count: Maks spørgsmål tæller i kolonne
+      column_tags: Kolonne tags
+      column_order: Order
+    show:
+      next_page: Næste side
+  issues:
+    form:
+      title: Titel
+      enter_issue_title: Indtast problem titel
+      save: Gem
+      body: Krop
+      enter_issue_body: Indtast problem krop
+      tags: Tags
+      issue_order: Order
+      bitbucket_issue_id: Bitbucket problem id
+      github_issue_id: Github problem id
+      github_issue_number: Github udstedelsesnummer
+    index:
+      issues: spørgsmål
+      sync_with_github: Synkroniser med GitHub
+      sync_with_bitbucket: Synkroniser med Bitbucket
+      new: Ny
+    issue:
+      destroy: Slet
+      edit: Rediger
+    edit:
+      edit_issue: Rediger emne
+    new:
+      new_issue: Nyt emne
+  authentications:
+    index:
+      enabled_services: Aktiverede tjenester
+    authentication:
+      turned_off: Slukket
+      turn_on: Tænd
+      turn_off: Sluk
+      turned_on: Skruet på
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Vi har netop lanceret vores service!
+      we_have_just_launched_our_service_text: I dag lancerer vi vores service, så
+        alle kan
+      sign_up: tilmelde dig
+      and_use_it: og bruge det.
+      with_love: Med kærlighed,
+      technoelegance_team: Technoelegance Team
+    index:
+      all_news: Alle nyheder
+      read_more: Læs mere
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Velkommen til Kanban On Rails
+      welcome_about_text: Her kan du oprette din egen Kanban bord og synkronisere
+        den med Github eller Bitbucket
+  pages:
+    faq:
+      faq: FAQ
+      what_is_kanban_on_rails: Hvad er KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails er service, hvor du kan oprette Kanban
+        boards og synkronisere den med Github eller Bitbucket
+      what_features_has_kanban_on_rails: Hvilke funktioner har KanbanOnRails?
+      kanban_on_rails_features: Du kan synkronisere dine projekter og problemer med
+        Github og Bitbucket, invitere brugere (for eksempel manager) til dit projekt,
+        implementere det til din egen server
+      i_have_some_requests: Jeg har nogle anmodninger
+      you_can_write_request: Du kan skrive anmodning
+      here: her
+      i_have_seen_some_typo_or_wrong_translation: Jeg har set nogle stavefejl eller
+        forkerte oversættelser
+      you_can_send_pull_request_to_our: Du kan sende pull anmodning til vores
+      github_repository: github repository
+      i_have_seen_some_error: Jeg har set nogle fejl
+      you_can_write_to_our_info_mail: Du kan skrive om dette til vores e-mail
+    about:
+      about_kanban_on_rails: Om KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails er service, hvor du kan oprette Kanban
+        boards og synkronisere den med Github eller Bitbucket
+      kanban_on_rails_features: KanbanOnRails funktioner
+      sync_with_github_and_bitbucket: Du kan synkronisere dine projekter og problemer
+        med Github og Bitbucket
+      invite_users: Du kan invitere brugere (for eksempel manager) til dit projekt
+      open_source_code: Dette projekt har open source-kode, så du kan installere det
+        på din egen server
+      we_use_open_source_and_high_technology: Vi bruger høje teknologier og open source-biblioteker.
+        Vi forsøger altid at få det bedre og forbedre vores service.
+      partners_and_investors: Vi er åbnet for partnerskab, og vi vil gerne finde investorer.
+        Hvis du gerne vil samarbejde med os kan du kontakte os på partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Log ind
+        sign_up: Tilmeld dig
+        didnt_receive_confirmation_instructions: Ikke modtaget en bekræftelse?
+        sign_in_with: Log ind med
+        fast_login_almost_one_click: Fast login (Næsten ét klik)
+    confirmations:
+      confirmed: Din konto blev bekræftet.
+      send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan at
+        bekræfte din konto i et par minutter.
+      send_paranoid_instructions: Hvis din e-mailadresse findes i vores database,
+        vil du modtage en e-mail med instruktioner om, hvordan at bekræfte din konto
+        i et par minutter.
+      new:
+        send_mail_for_confirm_your_email: Send mail til bekræfte din e-mail
+        submit: Indsend
+    failure:
+      already_authenticated: Du er allerede logget ind.
+      inactive: Din konto er ikke aktiveret endnu.
+      invalid: Ugyldig email eller password.
+      locked: Din konto er låst.
+      last_attempt: Du har endnu et forsøg, før din konto vil blive låst.
+      not_found_in_database: Ugyldig email eller password.
+      timeout: Din session er udløbet. Log ind igen for at fortsætte.
+      unauthenticated: Du skal logge på eller tilmelde dig, før du fortsætter.
+      unconfirmed: Du skal bekræfte din konto, før du fortsætter.
+    mailer:
+      confirmation_instructions:
+        subject: Bekræftelse instruktioner
+        welcome_to_kanban_on_rails: Velkommen til KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Du kan bekræfte
+          din e-mail via nedenstående link
+        confirm_my_account: Bekræft min e-mail
+      reset_password_instructions:
+        hello: Hej
+        subject: Nulstil instruktioner adgangskode
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Nogen
+          anmodninger et link til at ændre din adgangskode. Du kan gøre dette via
+          linket nedenfor.
+        change_my_password: Ændre mit password
+        if_you_didnt_request_this_please_ignore_this_email: Hvis du ikke har anmodet
+          dette venligst ignorere denne e-mail.
+      unlock_instructions:
+        subject: Unlock Instruktioner
+    omniauth_callbacks:
+      failure: Kunne ikke godkende dig fra% {slags} fordi "% {årsag}".
+      success: Succesfuld autentificeret fra% {slags} konto.
+    passwords:
+      no_token: Du kan ikke få adgang til denne side uden at komme fra en nulstilling
+        af adgangskoden email. Hvis du kommer fra en nulstilling af adgangskode email,
+        skal du sørge for du har brugt den fulde URL forudsat.
+      send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du
+        nulstiller din adgangskode i et par minutter.
+      send_paranoid_instructions: Hvis din e-mailadresse findes i vores database,
+        vil du modtage et password opsving link på din e-mailadresse i et par minutter.
+      updated: Din adgangskode blev ændret med succes. Du er nu logget ind.
+      updated_not_active: Din adgangskode blev ændret med succes.
+      new:
+        forgot_your_password: Gendan din adgangskode
+        reset_password: Send genvinde url
+      edit:
+        change_your_password: Skift din adgangskode
+        new_password: Ny adgangskode
+        confirm_password: Bekræft adgangskode
+        change_password: Change
+    registrations:
+      destroyed: Bye! Din konto blev annulleret. Vi håber at se dig igen snart.
+      signed_up: Velkommen! Du har tilmeldt dig med succes.
+      signed_up_but_inactive: Du har tilmeldt dig med succes. Men vi kunne ikke logge
+        dig på, fordi din konto er endnu ikke aktiveret.
+      signed_up_but_locked: Du har tilmeldt dig med succes. Men vi kunne ikke logge
+        dig på, fordi din konto er låst.
+      signed_up_but_unconfirmed: En meddelelse med en bekræftelse link er blevet sendt
+        til din e-mail-adresse. Åbn linket for at aktivere din konto.
+      update_needs_confirmation: Du opdateret din konto med succes, men vi er nødt
+        til at bekræfte din nye e-mail-adresse. Tjek din e-mail og klik på Bekræft
+        link for at færdiggøre bekræfter din nye e-mail-adresse.
+      updated: Du opdateret din konto med succes.
+      new:
+        sign_up: Tilmeld dig
+        name: Navn
+        password: Password
+        register: Tilmeld dig
+    sessions:
+      signed_in: Logget ind med succes.
+      signed_out: Signeret med succes.
+      new:
+        sign_in: Log ind
+        password: Password
+        remember_me: Husk mig
+        forgot_your_password: du glemt din adgangskode?
+    unlocks:
+      send_instructions: Du modtager en e-mail med instruktioner om, hvordan du låser
+        din konto i et par minutter.
+      send_paranoid_instructions: Hvis der findes på din konto, vil du modtage en
+        e-mail med instruktioner om, hvordan at låse den op i et par minutter.
+      unlocked: Din konto er blevet låst op med succes. Log ind for at fortsætte.
+  da: da
+  da_iso: da

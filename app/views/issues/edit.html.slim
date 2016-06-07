@@ -1,0 +1,8 @@
+h3
+  = t '.edit_issue'
+
+  | &nbsp;
+
+  = "\"#{ @issue.title }\""
+
+= render 'form', :issue => @issue, :project => @issue.project

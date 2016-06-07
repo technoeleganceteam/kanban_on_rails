@@ -1,0 +1,303 @@
+---
+bn:
+  github: গিটহাব
+  bitbucket: Bitbucket
+  updated: আপডেট
+  1_we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করেছে
+  shared:
+    navbar:
+      sign_in: নিদর্শন
+      sign_up: সাইন আপ করুন
+      projects: প্রকল্প
+      issues: সমস্যা
+      syncing_with_github: গিটহাব সঙ্গে সিঙ্ক ...
+      syncing_with_bitbucket: Bitbucket সঙ্গে সিঙ্ক ...
+      new_issue: নতুন ইস্যু
+    languages_select_modal:
+      available_languages: প্রাপ্তি সাধ্য ভাষাসমূহ
+    user_edit_menu:
+      profile: প্রোফাইল
+      site_settings: সাইট সেটিংস
+      services: সার্ভিস
+    form_errors:
+      password: পাসওয়ার্ড
+      current_password: বর্তমান পাসওয়ার্ড
+      password_confirmation: পাসওয়ার্ড নিশ্চিতকরণ
+      name: নাম
+      base: বেজ
+      title: শিরোনাম
+      user_to_project_connection: সংযোগ প্রকল্পের নিচে
+      columns:
+        tag: ট্যাগ ওভারল্যাপিং
+    new_project_modal:
+      new_project: নতুন প্রোজেক্ট
+    new_issue_modal:
+      new_issue: নতুন ইস্যু
+    left_sidebar:
+      projects: প্রকল্প
+    right_sidebar:
+      news: সংবাদ
+      all: সকল
+      read_more: Read more
+    translations:
+      select_column_tags: নির্বাচন
+      select_section_tags: নির্বাচন
+      select_issue_tags: ইস্যু ট্যাগ নির্বাচন করুন
+  users:
+    new:
+      invite_user: ব্যবহারকারীকে আমন্ত্রণ
+    form:
+      name: নাম
+      enter_user_name: ব্যবহারকারীর নাম লিখুন
+      email: ইমেইল
+      enter_user_email: ব্যবহারকারীর ই-মেইল লিখুন
+      enter_user_password: ব্যবহারকারীর পাসওয়ার্ড লিখুন
+      password: পাসওয়ার্ড
+      role: ব্যবহারকারী ভূমিকা
+      save: সংরক্ষণ
+    index:
+      project: প্রকল্প
+      users: ব্যবহারকারীগণ
+      new: নতুন
+    edit:
+      name: নাম
+      enter_your_name: আপনার নাম লিখুন
+      save: সংরক্ষণ
+    settings:
+      interface_language: ইন্টারফেস ভাষা
+      submit: জমা
+    password_form:
+      new_password: নতুন পাসওয়ার্ড
+      confirm_new_password: নতুন পাসওয়ার্ড নিশ্চিত করুন
+      old_password: প্রাচীন পাসওয়ার্ড
+    update:
+      your_profile_was_successfully_updated: সফলভাবে আপডেট করা হয়েছে
+    dashboard:
+      hello: হ্যালো
+      here_some_of_your_statistics: এখানে আপনার পরিসংখ্যান কিছু
+      projects: প্রকল্প
+  projects:
+    index:
+      projects: প্রকল্প
+      new: নতুন
+      sync_with_github: GitHub সঙ্গে সিঙ্ক
+      sync_with_bitbucket: bitbucket সঙ্গে সিঙ্ক
+    form:
+      name: নাম
+      enter_project_name: প্রকল্পের নাম লিখুন
+      save: সংরক্ষণ
+      columns: কলাম
+      sections: সেকশনস
+      column_name: সারি নাম
+      section_name: অনুচ্ছেদ নাম
+      add: যোগ
+      column_width: কলাম প্রস্থ
+      column_height: কলাম উচ্চতা
+      github_repository_id: গিটহাব সংগ্রহস্থলে আইডি
+      github_full_name: গিটহাব সংগ্রহস্থলে FULLNAME
+      github_secret_token_for_hook: হুক জন্য গিটহাব গোপন টোকেন
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: হুক জন্য Bitbucket গোপন টোকেন
+    project:
+      edit: সম্পাদনা
+      destroy: মুছুন
+      project_issues: প্রকল্প সমস্যা
+      project_users: প্রকল্প ব্যবহারকারী
+    section_fields:
+      section_name: অনুচ্ছেদ নাম
+      remove_section: করে Remove অধ্যায়
+      section_tags: অনুচ্ছেদ ট্যাগ
+      section_order: অর্ডার
+      or_include_all: অথবা সমস্ত অন্তর্ভুক্ত?
+    column_fields:
+      column_name: কলামের নাম
+      remove_column: কলাম সরান
+      max_issues_count: ম্যাক্স বিষয় কলামে গণনা
+      column_tags: কলাম ট্যাগ
+      column_order: অর্ডার
+    show:
+      next_page: পরবর্তী পাতা
+  issues:
+    form:
+      title: শিরোনাম
+      enter_issue_title: ইস্যু শিরোনাম লিখুন
+      save: সংরক্ষণ
+      body: দেহ
+      enter_issue_body: ইস্যু শরীর লিখুন
+      tags: ট্যাগ্স
+      issue_order: অর্ডার
+      bitbucket_issue_id: Bitbucket ইস্যু আইডি
+      github_issue_id: গিটহাব ইস্যু আইডি
+      github_issue_number: গিটহাব ইস্যু নম্বর
+    index:
+      issues: সমস্যা
+      sync_with_github: GitHub সঙ্গে সিঙ্ক
+      sync_with_bitbucket: bitbucket সঙ্গে সিঙ্ক
+      new: নতুন
+    issue:
+      destroy: মুছুন
+      edit: সম্পাদনা
+    new:
+      new_issue: নতুন ইস্যু
+  authentications:
+    index:
+      enabled_services: Enabled সেবা
+    authentication:
+      turned_off: বন্ধ পরিণত
+      turn_on: চালু
+      turn_off: বন্ধ করুন
+      turned_on: চালু
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করা হয়েছে!
+      we_have_just_launched_our_service_text: আজ আমরা আমাদের সেবা চালু যাতে সবাই পারেন
+      sign_up: সাইন আপ
+      and_use_it: এবং এটি ব্যবহার করুন.
+      with_love: ভালবাসার সাথে,
+      technoelegance_team: Technoelegance টিম
+    index:
+      read_more: Read more
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Kanban উপর পাগল স্বাগতম
+      welcome_about_text: আপনি গিটহাব বা Bitbucket সঙ্গে আপনার নিজের Kanban বোর্ড
+        এবং সিঙ্ক তৈরি করতে পারেন
+  pages:
+    faq:
+      faq: অনবরত জিজ্ঞাসিত প্রশ্ন
+      what_is_kanban_on_rails: KanbanOnRails কী?
+      about_kanban_on_rails: KanbanOnRails সেবা যেখানে আপনি গিটহাব বা Bitbucket সঙ্গে
+        Kanban বোর্ড তৈরি এবং এটি সিঙ্ক করতে পারেন
+      what_features_has_kanban_on_rails: কি অতিরিক্ত বৈশিষ্ট্যগুলিও উপস্থিত রয়েছে
+        KanbanOnRails হয়েছে?
+      kanban_on_rails_features: আপনার প্রকল্প এবং গিটহাব এবং Bitbucket সঙ্গে বিষয়
+        সিঙ্ক করতে পারেন, আপনার প্রকল্পের জন্য ব্যবহারকারীদের (উদাহরণস্বরূপ পরিচালকদের
+        জন্য) কে দাওয়াত দেন, আপনার নিজের সার্ভারে এটি স্থাপন
+      i_have_some_requests: আমি কিছু অনুরোধ
+      you_can_write_request: আপনি অনুরোধ লিখতে পারেন
+      here: এখানে
+      i_have_seen_some_typo_or_wrong_translation: আমি কিছু টাইপস বা ভুল অনুবাদের দেখেছি
+      you_can_send_pull_request_to_our: আপনি টান অনুরোধ পাঠাতে পারেন আমাদের
+      github_repository: GitHub সংগ্রহস্থলের
+      i_have_seen_some_error: আমি কিছু ত্রুটি দেখা হয়েছে
+      you_can_write_to_our_info_mail: আপনি আমাদের ইমেইল করতে এই সম্পর্কে লিখতে পারেন
+    about:
+      about_kanban_on_rails: KanbanOnRails সম্পর্কে
+      about_kanban_on_rails_text: KanbanOnRails সেবা যেখানে আপনি গিটহাব বা Bitbucket
+        সঙ্গে Kanban বোর্ড তৈরি এবং এটি সিঙ্ক করতে পারেন
+      kanban_on_rails_features: KanbanOnRails বৈশিষ্ট্য
+      sync_with_github_and_bitbucket: আপনার প্রকল্প এবং গিটহাব এবং Bitbucket সঙ্গে
+        বিষয় সিঙ্ক করতে পারেন
+      invite_users: আমন্ত্রণ জানাতে পারেন
+      open_source_code: ওপেন সোর্স কোড আছে, যাতে আপনি আপনার নিজস্ব সার্ভারে এটি স্থাপন
+        করতে পারে
+      we_use_open_source_and_high_technology: আমরা উচ্চ প্রযুক্তির এবং ওপেন সোর্স
+        লাইব্রেরি ব্যবহার. আমরা সবসময় ভাল পেতে এবং আমাদের পরিষেবা উন্নত করার চেষ্টা
+        করুন.
+      partners_and_investors: আমরা অংশীদারিত্ব জন্য খুলে দেওয়া হয় এবং আমরা বিনিয়োগকারীদের
+        খুঁজে পেতে চাই. আপনি আমাদের সঙ্গে সহযোগিতা করতে চান তাহলে partnership@technoelegance.com
+        এ আমাদের সাথে যোগাযোগ করুন
+  devise:
+    shared:
+      links:
+        sign_in: নিদর্শন
+        sign_up: সাইন আপ করুন
+        didnt_receive_confirmation_instructions: নিশ্চিতকরণ নির্দেশাবলী গ্রহন করেছিলাম
+          ঠিক বলেছি না?
+        fast_login_almost_one_click: ফাস্ট লগইন (প্রায় এক ক্লিক করুন)
+    confirmations:
+      confirmed: সফলভাবে নিশ্চিত করা হয়.
+      send_instructions: আপনি কয়েক মিনিটের মধ্যে আপনার অ্যাকাউন্ট নিশ্চিত করতে কিভাবে
+        সম্পর্কে নির্দেশাবলী সহ একটি ইমেল পাবেন.
+      send_paranoid_instructions: আপনার ই-মেইল ঠিকানা আমাদের ডাটাবেসের মধ্যে উপস্থিত
+        থাকে, তাহলে আপনি কয়েক মিনিটের মধ্যে আপনার অ্যাকাউন্ট নিশ্চিত করতে কিভাবে
+        সম্পর্কে নির্দেশাবলী সহ একটি ইমেল পাবেন.
+      new:
+        send_mail_for_confirm_your_email: নিশ্চিত আপনার ইমেল জন্য মেইল ​​পাঠান
+        submit: জমা
+    failure:
+      already_authenticated: ইতিমধ্যে সাইন ইন আছেন.
+      inactive: এখনো সক্রিয় হয়নি.
+      invalid: অবৈধ ইমেল বা পাসওয়ার্ড.
+      locked: লক করা আছে.
+      last_attempt: আপনি আরও একটি প্রয়াস আছে.
+      not_found_in_database: অবৈধ ইমেল বা পাসওয়ার্ড.
+      timeout: মেয়াদ শেষ. অব্যাহত রাখার জন্য পুনরায় সাইন ইন করুন.
+      unauthenticated: সাইন ইন বা চালিয়ে যাওয়ার আগে সাইন আপ করতে হবে.
+      unconfirmed: চালিয়ে যাওয়ার আগে আপনার অ্যাকাউন্ট নিশ্চিত করতে হবে.
+    mailer:
+      confirmation_instructions:
+        subject: নিশ্চিতকরণ নির্দেশাবলী
+        welcome_to_kanban_on_rails: KanbanOnRails স্বাগতম
+        you_can_confirm_your_account_email_through_the_link_below: আপনি নীচের লিঙ্কে
+          মাধ্যমে আপনার ইমেইল ঠিকানা নিশ্চিত করতে
+        confirm_my_account: আমার নিশ্চিত ইমেইল
+      reset_password_instructions:
+        hello: হ্যালো
+        subject: রিসেট পাসওয়ার্ড নির্দেশাবলী
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: কেউ
+          অনুরোধ আপনার পাসওয়ার্ড পরিবর্তন করার জন্য একটি লিঙ্ক রয়েছে. আপনি নীচের
+          লিঙ্কে মাধ্যমে এটি করতে পারেন.
+        change_my_password: আমার পাসওয়ার্ড পরিবর্তন করুন
+        if_you_didnt_request_this_please_ignore_this_email: আপনি অনুরোধ না করে থাকেন
+          এই ইমেল উপেক্ষা করুন.
+      unlock_instructions:
+        subject: আনলক নির্দেশনা
+    omniauth_callbacks:
+      failure: '% {ধরনের} কারণ "% {কারণ}" থেকে আপনি পরিচয় প্রমাণ করা যায়নি.'
+      success: সফলভাবে% {ধরনের} অ্যাকাউন্ট থেকে অনুমোদন যাচাই.
+    passwords:
+      no_token: একটি পাসওয়ার্ড রিসেট ইমেল থেকে আসছে ছাড়া এই পৃষ্ঠায় প্রবেশ করতে
+        পারবে না. আপনাকে একটি পাসওয়ার্ড রিসেট ইমেল থেকে আসে না, তাহলে নিশ্চিত আপনি
+        উপলব্ধ পূর্ণ URL ব্যবহৃত করতে দয়া করে.
+      send_instructions: আপনি কিভাবে একটি কয়েক মিনিটের মধ্যে আপনার পাসওয়ার্ড পুনরায়
+        সেট করার জন্য নির্দেশাবলী সহ একটি ইমেল পাবেন.
+      send_paranoid_instructions: আপনার ই-মেইল ঠিকানা আমাদের ডাটাবেসের মধ্যে উপস্থিত
+        থাকে, তাহলে আপনি কয়েক মিনিটের মধ্যে আপনার ইমেল ঠিকানায় একটি পাসওয়ার্ড পুনরুদ্ধার
+        লিঙ্ক পাবেন.
+      updated: সফলভাবে পরিবর্তন হয়েছে. এখন আপনি সাইন ইন আছেন.
+      updated_not_active: সফলভাবে পরিবর্তন হয়েছে.
+      new:
+        forgot_your_password: আপনার পাসওয়ার্ড উদ্ধার করুন
+        reset_password: পাঠান url টি পুনরুদ্ধার
+      edit:
+        change_your_password: আপনার পাসওয়ার্ড পরিবর্তন করুন
+        new_password: নতুন পাসওয়ার্ড
+        confirm_password: নিশ্চিত পাসওয়ার্ড
+        change_password: পরিবর্তন
+    registrations:
+      destroyed: "! আপনার অ্যাকাউন্ট সফলভাবে বাতিল করা হয়েছে. আশা করি শীঘ্রই আবার
+        দেখা হবে তোমার সাথে."
+      signed_up: স্বাগতম! আপনি সফলভাবে সাইন আপ করেছেন.
+      signed_up_but_inactive: সফলভাবে সাইন আপ করেছেন. যাইহোক, আমরা কারণ আপনার অ্যাকাউন্টটি
+        এখনও সক্রিয় নয় আপনি সাইন ইন করতে পারেন নি.
+      signed_up_but_locked: সফলভাবে সাইন আপ করেছেন. যাইহোক, আমরা কারণ আপনার অ্যাকাউন্ট
+        লক করা হয় যখন আপনি সাইন ইন করতে পারেন নি.
+      signed_up_but_unconfirmed: আপনার ই-মেইল ঠিকানায় পাঠানো হয়েছে. অনুগ্রহ করে
+        আপনার অ্যাকাউন্ট সক্রিয় করার জন্য লিঙ্ক খুলুন.
+      update_needs_confirmation: আপনি আপনার অ্যাকাউন্ট সফলভাবে আপডেট, কিন্তু আমরা
+        আপনার নতুন ই-মেইল ঠিকানা যাচাই করতে হবে. আপনার ইমেইল চেক করুন এবং আপনার নতুন
+        ই-মেইল ঠিকানা প্রতিপাদক চূড়ান্ত করতে নিশ্চিত লিঙ্কে ক্লিক করুন.
+      updated: আপনি আপনার অ্যাকাউন্ট সফলভাবে আপডেট করা হয়েছে.
+      new:
+        sign_up: সাইন আপ করুন
+        name: নাম
+        password: পাসওয়ার্ড
+        password_confirmation: পাসওয়ার্ড নিশ্চিতকরণ
+        register: সাইন আপ করুন
+    sessions:
+      signed_in: সফলভাবে সাইন ইন করুন.
+      signed_out: সফলভাবে সাইন আউট করা.
+      new:
+        sign_in: নিদর্শন
+        password: পাসওয়ার্ড
+        remember_me: আমাকে মনে রেখো
+        forgot_your_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
+    unlocks:
+      send_instructions: আপনি কিভাবে একটি কয়েক মিনিটের মধ্যে আপনার অ্যাকাউন্ট আনলক
+        সম্পর্কে নির্দেশাবলী সহ একটি ইমেল পাবেন.
+      send_paranoid_instructions: আপনার অ্যাকাউন্ট উপস্থিত থাকলে, আপনি কিভাবে একটি
+        কয়েক মিনিটের মধ্যে এটি আনলক সম্পর্কে নির্দেশাবলী সহ একটি ইমেল পাবেন.
+      unlocked: সফলভাবে আনলক করা হয়েছে. অবিরত সাইন ইন করুন.
+  bn: bn
+  bn_iso: bn

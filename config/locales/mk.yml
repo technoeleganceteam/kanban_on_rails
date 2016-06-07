@@ -1,0 +1,305 @@
+---
+mk:
+  github: Github
+  bitbucket: Bitbucket
+  updated: ажурираат
+  1_we_have_just_launched_our_service_title: Ние имаме само лансиран нашиот сервис
+  shared:
+    navbar:
+      sign_in: Најави се Регистрирај се
+      sign_up: Регистрирај се на Facebook
+      projects: Проекти
+      issues: прашања
+      syncing_with_github: Sync со Github ...
+      syncing_with_bitbucket: Sync со Bitbucket ...
+      new_issue: нова емисија
+      edit_project: Уреди проектот
+    languages_select_modal:
+      available_languages: достапни јазици
+    user_edit_menu:
+      profile: профил
+      site_settings: поставувања на сајтот
+      services: услуги
+    form_errors:
+      password: Лозинка
+      current_password: Моментална лозинка
+      name: Име
+      base: база
+      title: Наслов
+      user_to_project_connection: пристап поврзување со проектот
+      columns:
+        tag: Таг преклопување
+    new_project_modal:
+      new_project: Нов проект
+    edit_project_modal:
+      edit_project: Уреди проектот
+    new_issue_modal:
+      new_issue: нова емисија
+    left_sidebar:
+      projects: Проекти
+    right_sidebar:
+      news: Вести
+      all: Сите
+      read_more: Прочитај повеќе
+    translations:
+      select_column_tags: Изберете колона тагови
+      select_section_tags: изберете го делот тагови
+      select_issue_tags: Изберете прашање тагови
+  users:
+    new:
+      invite_user: Покани корисник
+    form:
+      name: Име
+      enter_user_name: Внесете корисничко име
+      email: Е-пошта
+      enter_user_email: внесување корисничко e-mail
+      enter_user_password: Внесете лозинка
+      password: Лозинка
+      save: Зачувај
+    index:
+      project: проектот
+      users: корисници
+      new: Нови
+    edit:
+      name: Име
+      enter_your_name: Внесете го вашето име
+      save: Зачувај
+    settings:
+      change_password: Промена на лозинка
+      interface_language: јазик интерфејс
+      submit: Поднесе
+    password_form:
+      new_password: Нова лозинка
+      confirm_new_password: Потврди ја новата лозинка
+      old_password: Стара лозинка
+      change_password: Промена на лозинка
+    update:
+      your_profile_was_successfully_updated: Твојот профил е успешно ажурирана
+    dashboard:
+      hello: Здраво
+      here_some_of_your_statistics: Еве некои од вашите статистики
+      projects: Проекти
+  projects:
+    index:
+      projects: Проекти
+      new: Нови
+      sync_with_github: Sync со GitHub
+      sync_with_bitbucket: Sync со bitbucket
+      stop_sync_with_bitbucket: Стоп синхронизација со bitbucket
+      stop_sync_with_github: Стоп синхронизација со GitHub
+    form:
+      name: Име
+      enter_project_name: Внесете име на проектот
+      save: Зачувај
+      columns: Колумни
+      sections: Секции
+      add: Add
+      github_repository_id: Github складиштето проект
+      github_full_name: Github складиштето цело име
+      github_secret_token_for_hook: Github тајна знак за кука
+      bitbucket_full_name: Bitbucket цело име
+      bitbucket_secret_token_for_hook: Bitbucket тајна знак за кука
+    project:
+      edit: Уреди
+      destroy: Избриши
+      project_issues: прашања проектот
+      project_users: корисници на проектот
+    section_fields:
+      section_tags: Дел тагови
+      section_order: нарачка
+      or_include_all: или вклучуваат сите?
+    column_fields:
+      remove_column: Отстрани колона
+      max_issues_count: Макс прашања смета во колона
+      column_tags: Колона тагови
+      column_order: нарачка
+    show:
+      next_page: Следна страница
+  issues:
+    form:
+      title: Наслов
+      enter_issue_title: Внесете наслов прашање
+      save: Зачувај
+      body: тело
+      enter_issue_body: Внесете прашање тело
+      tags: Тагови
+      issue_order: нарачка
+      bitbucket_issue_id: Bitbucket издавање лични
+      github_issue_id: Github издавање лични
+      github_issue_number: број Github прашање
+    index:
+      issues: прашања
+      sync_with_github: Sync со GitHub
+      sync_with_bitbucket: Sync со bitbucket
+      new: Нови
+    issue:
+      destroy: Избриши
+      edit: Уреди
+    edit:
+      edit_issue: Уреди прашање
+    new:
+      new_issue: нова емисија
+  authentications:
+    index:
+      enabled_services: "-от за услуги"
+    authentication:
+      turned_off: Исклучен
+      turn_on: Вклучете
+      turn_off: Исклучување
+      turned_on: Превртена на
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: Ние само започна нашите услуги!
+      we_have_just_launched_our_service_text: Денес ние започне нашиот сервис, така
+        што секој може да
+      sign_up: регистрирате
+      and_use_it: и го користат.
+      with_love: Со љубов,
+      technoelegance_team: Technoelegance тимот
+    index:
+      all_news: Сите вести
+      read_more: Прочитај повеќе
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: Добредојдовте на Kanban on Rails
+      welcome_about_text: Овде можете да креирате своја сопствена одбор Kanban и синхронизација
+        со тоа Github или Bitbucket
+  pages:
+    faq:
+      faq: Најчесто поставувани прашања
+      what_is_kanban_on_rails: Што е KanbanOnRails?
+      about_kanban_on_rails: KanbanOnRails е сервис каде што може да се создаде Kanban
+        одбори и синхронизација со тоа Github или Bitbucket
+      what_features_has_kanban_on_rails: Какви функции има KanbanOnRails?
+      kanban_on_rails_features: Можете да синхронизирате вашите проекти и проблеми
+        со Github и Bitbucket, покани корисници (на пример менаџери) за вашиот проект,
+        да го распореди на вашиот сопствен сервер
+      i_have_some_requests: имам некои барања
+      you_can_write_request: Можете да напишете барање
+      here: тука
+      i_have_seen_some_typo_or_wrong_translation: Сум видел некои грешки или погрешни
+        преводи
+      you_can_send_pull_request_to_our: Можете да испратите барање за повлекување
+        на нашите
+      github_repository: github складиштето
+      i_have_seen_some_error: имам гледано и некои грешки
+      you_can_write_to_our_info_mail: Можете да пишувам за тоа на нашата e-mail
+    about:
+      about_kanban_on_rails: За KanbanOnRails
+      about_kanban_on_rails_text: KanbanOnRails е сервис каде што може да се создаде
+        Kanban одбори и синхронизација со тоа Github или Bitbucket
+      kanban_on_rails_features: карактеристики KanbanOnRails
+      sync_with_github_and_bitbucket: Можете да синхронизирате вашите проекти и проблеми
+        со Github и Bitbucket
+      invite_users: Можете да поканите корисници (на пример менаџери) за вашиот проект
+      open_source_code: Овој проект има отворен изворен код, па можете да го распореди
+        на вашиот сопствен сервер
+      we_use_open_source_and_high_technology: Ние користиме високо технологии и библиотеки
+        со отворен код. Ние секогаш се трудиме да се подобри и да ги подобриме нашите
+        услуги.
+      partners_and_investors: Ние сме отворени за соработка и ние би сакале да се
+        најдат инвеститори. Ако би сакале да соработуваат со нас, ве молиме контактирајте
+        не на partnership@technoelegance.com
+  devise:
+    shared:
+      links:
+        sign_in: Најави се Регистрирај се
+        sign_up: Регистрирај се на Facebook
+        didnt_receive_confirmation_instructions: Не ги стекнав инструкции потврда?
+        sign_in_with: Пријавете се со
+        fast_login_almost_one_click: Брз најавување (Речиси еден клик)
+    confirmations:
+      confirmed: Вашата сметка е успешно потврдена.
+      send_instructions: Ќе добиете е-маил со инструкции за тоа како да го потврдите
+        вашата сметка во неколку минути.
+      send_paranoid_instructions: Ако постои вашата e-mail адреса во нашата база на
+        податоци, ќе добиете е-маил со инструкции за тоа како да го потврдите вашата
+        сметка во неколку минути.
+      new:
+        send_mail_for_confirm_your_email: Прати е-пошта за да потврдите вашата е-мејл
+        submit: Поднесе
+    failure:
+      already_authenticated: Веќе сте најавени.
+      inactive: Вашата сметка не е активирана уште.
+      invalid: Неважечка е-пошта или лозинка.
+      locked: Вашата сметка е заклучена.
+      last_attempt: Имате уште еден обид пред вашиот профил ќе бидат заклучени.
+      not_found_in_database: Неважечка е-пошта или лозинка.
+      timeout: Вашата сесија истече. Ве молиме најавете се за да продолжите.
+      unauthenticated: Вие треба да се најавите или регистрирате пред да продолжите.
+      unconfirmed: мора да го потврдите вашата сметка пред да продолжите.
+    mailer:
+      confirmation_instructions:
+        subject: инструкции Потврда
+        welcome_to_kanban_on_rails: Добредојдовте KanbanOnRails
+        you_can_confirm_your_account_email_through_the_link_below: Можете да ја потврдите
+          вашата е-мејл преку линкот подолу
+        confirm_my_account: Потврди мојата е-маил
+      reset_password_instructions:
+        hello: Здраво
+        subject: Ресетирај инструкции лозинка
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Некој
+          мора барања линк за да ја смените вашата лозинка. Можете да го правиме ова
+          преку линкот подолу.
+        change_my_password: променам мојата лозинка
+        if_you_didnt_request_this_please_ignore_this_email: Ако не си ги побара тие
+          ве молиме игнорира оваа порака.
+      unlock_instructions:
+        subject: Отклучи Инструкции
+    omniauth_callbacks:
+      failure: Не може да се идентификувате од% {} вид, бидејќи "% {причина}".
+      success: успешно логиран од% {} вид сметка.
+    passwords:
+      no_token: Не можете да пристапите на оваа страница без да доаѓаат од е-мејл
+        ресетирање на лозинка. Ако не доаѓаат од е-мејл ресетирање на лозинка, ве
+        молиме бидете сигурни дека ќе се користи целосната URL.
+      send_instructions: Ќе добиете е-маил со инструкции за тоа како да ја ресетирате
+        вашата лозинка за неколку минути.
+      send_paranoid_instructions: Ако постои вашата e-mail адреса во нашата база на
+        податоци, ќе добиете линк за наплата на лозинка на вашата e-mail адреса во
+        неколку минути.
+      updated: Лозинката е сменета успешно. Вие сега се најавени.
+      updated_not_active: Лозинката е сменета успешно.
+      new:
+        forgot_your_password: го направите вашата лозинка
+        reset_password: Испрати опорави url
+      edit:
+        change_your_password: Промена на вашата лозинка
+        new_password: Нова лозинка
+        confirm_password: Потврди ја лозинката
+        change_password: промени
+    registrations:
+      destroyed: Чао! Вашата сметка е успешно откажани. Се надеваме дека ќе се видиме
+        повторно наскоро.
+      signed_up: Добредојдовте! Ќе се регистрираш успешно.
+      signed_up_but_inactive: Се регистриравте успешно. Сепак, ние не би можеле да
+        се регистрирате во предвид, бидејќи сеуште не е активирана.
+      signed_up_but_locked: Се регистриравте успешно. Сепак, ние не би можеле да се
+        регистрирате во затоа што вашата сметка е заклучена.
+      signed_up_but_unconfirmed: порака со линк за потврда е испратена на вашата email
+        адреса. Ве молиме отворете линк за активирање на вашиот профил.
+      update_needs_confirmation: Вие ажурира вашиот профил успешно, но ние треба да
+        се провери вашата нова адреса. Ве молиме проверете ја вашата е-мејл и кликнете
+        на линкот за потврда за финализирање потврдува вашата нова адреса.
+      updated: Вие ажурира вашиот профил успешно.
+      new:
+        sign_up: Регистрирај се на Facebook
+        name: Име
+        password: Лозинка
+        register: Регистрирај се на Facebook
+    sessions:
+      signed_in: Најавени успешно.
+      signed_out: Потпишан успешно.
+      new:
+        sign_in: Најави се Регистрирај се
+        password: Лозинка
+        remember_me: Запомни ме
+        forgot_your_password: Ја заборавивте лозинката?
+    unlocks:
+      send_instructions: Ќе добиете е-маил со инструкции за тоа како да го отклучите
+        вашиот профил во неколку минути.
+      send_paranoid_instructions: Ако постои на вашиот профил, ќе добиете е-маил со
+        инструкции за тоа како да го отклучите во неколку минути.
+      unlocked: Вашата сметка е отклучен успешно. Ве молиме најавете се за да продолжите.
+  mk: mk
+  mk_iso: mk

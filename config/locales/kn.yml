@@ -1,0 +1,300 @@
+---
+kn:
+  github: Github
+  bitbucket: Bitbucket
+  updated: ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ
+  shared:
+    navbar:
+      sign_in: ಸೈನ್ ಇನ್
+      sign_up: ಸೈನ್ ಅಪ್
+      projects: ಯೋಜನೆಗಳು
+      issues: ತೊಂದರೆಗಳು
+      syncing_with_github: Github ಸಿಂಕ್ ...
+      syncing_with_bitbucket: Bitbucket ಸಿಂಕ್ ...
+      new_issue: ಹೊಸ ಸಂಚಿಕೆ
+    languages_select_modal:
+      available_languages: ಲಭ್ಯವಿರುವ ಭಾಷೆಗಳು
+    user_edit_menu:
+      profile: ಪ್ರೊಫೈಲ್
+      site_settings: ಸೈಟ್ ಸೆಟ್ಟಿಂಗ್ಸ್
+      services: ಸೇವೆಗಳು
+    form_errors:
+      password: ಪಾಸ್ವರ್ಡ್
+      current_password: ಪ್ರಸ್ತುತ ಪಾಸ್ವರ್ಡ್
+      password_confirmation: ಪಾಸ್ವರ್ಡ್ ದೃಢೀಕರಣ
+      name: ಹೆಸರು
+      base: ಬೇಸ್
+      title: ಶೀರ್ಷಿಕೆ
+      user_to_project_connection: ಬಳಕೆದಾರ ಸಂಪರ್ಕ ಅಭಿವ್ಯಕ್ತಗೊಳಿಸಲು
+      columns:
+        tag: ಟ್ಯಾಗ್ ಅತಿಕ್ರಮಿಸುವ
+    new_project_modal:
+      new_project: ಹೊಸ ಯೋಜನೆಯ
+    new_issue_modal:
+      new_issue: ಹೊಸ ಸಂಚಿಕೆ
+    left_sidebar:
+      projects: ಯೋಜನೆಗಳು
+    right_sidebar:
+      news: ನ್ಯೂಸ್
+      all: ಎಲ್ಲಾ
+      read_more: ಹೆಚ್ಚು ಓದಿ
+    translations:
+      select_column_tags: ಆಯ್ಕೆ
+      select_section_tags: ಆಯ್ಕೆ
+      select_issue_tags: ಸಮಸ್ಯೆಯನ್ನು ಟ್ಯಾಗ್ಗಳನ್ನು ಆಯ್ಕೆ
+  users:
+    new:
+      invite_user: ಬಳಕೆದಾರರಿಗೆ ಆಹ್ವಾನ
+    form:
+      name: ಹೆಸರು
+      enter_user_name: ಬಳಕೆದಾರ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
+      email: ಇಮೇಲ್
+      enter_user_email: ಬಳಕೆದಾರ ಇಮೇಲ್ ನಮೂದಿಸಿ
+      enter_user_password: ಬಳಕೆದಾರ ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ
+      password: ಪಾಸ್ವರ್ಡ್
+      role: ಬಳಕೆದಾರ ಪಾತ್ರ
+      save: ಉಳಿಸಿ
+    index:
+      project: ಪ್ರಾಜೆಕ್ಟ್
+      users: ಬಳಕೆದಾರರು
+      new: ಹೊಸ
+    edit:
+      name: ಹೆಸರು
+      enter_your_name: ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
+      save: ಉಳಿಸಿ
+    settings:
+      interface_language: ಸಂಪರ್ಕ ಭಾಷೆ
+      submit: ಸಲ್ಲಿಸಿ
+    password_form:
+      new_password: ಹೊಸ ಗುಪ್ತಪದವನ್ನು
+      confirm_new_password: ಹೊಸ ಪಾಸ್ವರ್ಡ್ ದೃಢೀಕರಿಸಿ
+      old_password: ಹಳೆಯ ಪಾಸ್ವರ್ಡ್
+    update:
+      your_profile_was_successfully_updated: ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲಾಗಿದೆ
+    dashboard:
+      hello: ಹಲೋ
+      projects: ಯೋಜನೆಗಳು
+  projects:
+    index:
+      projects: ಯೋಜನೆಗಳು
+      new: ಹೊಸ
+      sync_with_github: GitHub ಸಿಂಕ್
+      sync_with_bitbucket: bitbucket ಸಿಂಕ್
+    form:
+      name: ಹೆಸರು
+      enter_project_name: ಯೋಜನೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
+      save: ಉಳಿಸಿ
+      columns: ಅಂಕಣ
+      sections: ಪರಿಚ್ಛೇದ
+      column_name: ರೋ ಹೆಸರು
+      section_name: ವಿಭಾಗ ಹೆಸರು
+      add: ಸೇರಿಸು
+      column_width: ಅಂಕಣ ಅಗಲ
+      column_height: ಅಂಕಣ ಎತ್ತರ
+      github_repository_id: GitHub ಭಂಡಾರ ಐಡಿ
+      github_full_name: GitHub ಭಂಡಾರ ಪೂರ್ಣಹೆಸರು
+      bitbucket_full_name: Bitbucket ಪೂರ್ಣಹೆಸರು
+    project:
+      edit: ಸಂಪಾದಿಸಿ
+      destroy: ಅಳಿಸಿ
+      project_issues: ಪ್ರಾಜೆಕ್ಟ್ ಸಮಸ್ಯೆಗಳು
+      project_users: ಪ್ರಾಜೆಕ್ಟ್ ಬಳಕೆದಾರರು
+    section_fields:
+      section_name: ವಿಭಾಗ ಹೆಸರು
+      remove_section: ತೆಗೆದುಹಾಕಿ ವಿಭಾಗ
+      section_tags: ವಿಭಾಗ ಟ್ಯಾಗ್ಗಳು
+      section_order: ಆರ್ಡರ್
+      or_include_all: ಅಥವಾ ಎಲ್ಲಾ ಸೇರಿವೆ?
+    column_fields:
+      column_name: ಅಂಕಣ ಹೆಸರು
+      remove_column: ಕಾಲಮ್ ತೆಗೆದುಹಾಕಿ
+      max_issues_count: ಮ್ಯಾಕ್ಸ್ ಸಮಸ್ಯೆಗಳು ಅಂಕಣದಲ್ಲಿ ಎಣಿಕೆ
+      column_tags: ಅಂಕಣ ಟ್ಯಾಗ್ಗಳು
+      column_order: ಆರ್ಡರ್
+    show:
+      next_page: ಮುಂದಿನ ಪುಟ
+  issues:
+    form:
+      title: ಶೀರ್ಷಿಕೆ
+      enter_issue_title: ನಮೂದಿಸಿ ಸಮಸ್ಯೆಯನ್ನು ಶೀರ್ಷಿಕೆ
+      save: ಉಳಿಸಿ
+      body: ದೇಹ
+      enter_issue_body: ನಮೂದಿಸಿ ಸಮಸ್ಯೆಯನ್ನು ದೇಹದ
+      tags: ಟ್ಯಾಗ್ಗಳು
+      issue_order: ಆರ್ಡರ್
+      bitbucket_issue_id: Bitbucket ಸಮಸ್ಯೆಯನ್ನು ಐಡಿ
+      github_issue_id: GitHub ಸಂಚಿಕೆ ಐಡಿ
+      github_issue_number: GitHub ಸಂಚಿಕೆ ಸಂಖ್ಯೆ
+    index:
+      issues: ಸಮಸ್ಯೆಗಳು
+      sync_with_github: GitHub ಸಿಂಕ್
+      sync_with_bitbucket: bitbucket ಸಿಂಕ್
+      new: ಹೊಸ
+    issue:
+      destroy: ಅಳಿಸಿ
+      edit: ಸಂಪಾದಿಸಿ
+    new:
+      new_issue: ಹೊಸ ಸಂಚಿಕೆ
+  authentications:
+    index:
+      enabled_services: ಶಕ್ತಗೊಂಡಿದೆ ಸೇವೆಗಳು
+    authentication:
+      turned_off: ಆಫ್ ಮಾಡಿ
+      turn_on: ಆನ್ ಮಾಡಿ
+      turn_off: ಆಫ್ ಮಾಡಿ
+      turned_on: ಆನ್
+  news:
+    1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_title: "!"
+      we_have_just_launched_our_service_text: ಇಂದು ನಾವು ನಮ್ಮ ಸೇವೆ ಆರಂಭಿಸಲು ಆದ್ದರಿಂದ
+        ಎಲ್ಲರೂ ಮಾಡಬಹುದು
+      sign_up: ಸೈನ್ ಅಪ್
+      and_use_it: ಮತ್ತು ಅದನ್ನು ಬಳಸಿ.
+      with_love: ಪ್ರೀತಿಯನ್ನು,
+      technoelegance_team: Technoelegance ತಂಡ
+    index:
+      all_news: ಎಲ್ಲಾ ಸುದ್ದಿ
+      read_more: ಹೆಚ್ಚು ಓದಿ
+  welcome:
+    index:
+      welcome_to_kanban_on_rails: ಕನ್ಬನ್ ಮೇಲೆ ಹಳಿಗಳ ಸ್ವಾಗತ
+      welcome_about_text: ಇಲ್ಲಿ ನೀವು GitHub ಅಥವಾ Bitbucket ನಿಮ್ಮ ಸ್ವಂತ ಕನ್ಬನ್ ಬೋರ್ಡ್
+        ಮತ್ತು ಸಿಂಕ್ ರಚಿಸಬಹುದು
+  pages:
+    faq:
+      faq: ಎಫ್ಎಕ್ಯೂ
+      what_is_kanban_on_rails: KanbanOnRails ಏನು?
+      about_kanban_on_rails: KanbanOnRails ನೀವು GitHub ಅಥವಾ Bitbucket ಜೊತೆ ಕನ್ಬನ್
+        ಮಂಡಳಿಗಳು ರಚಿಸಲು ಮತ್ತು ಸಿಂಕ್ ಅಲ್ಲಿ ಇದು ಸೇವೆಯಾಗಿದೆ
+      what_features_has_kanban_on_rails: ಯಾವ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು KanbanOnRails ಹೊಂದಿದೆ?
+      kanban_on_rails_features: ", Github ಮತ್ತು Bitbucket ನಿಮ್ಮ ಯೋಜನೆಗಳು ಮತ್ತು ಸಮಸ್ಯೆಗಳನ್ನು
+        ಸಿಂಕ್ ನಿಮ್ಮ ಯೋಜನೆಗೆ ಬಳಕೆದಾರರು (ಉದಾಹರಣೆಗೆ ವ್ಯವಸ್ಥಾಪಕರಿಗೆ) ಆಹ್ವಾನಿಸಬಹುದು ನಿಮ್ಮ
+        ಸ್ವಂತ ಸರ್ವರ್ ಅದನ್ನು ನಿಯೋಜಿಸಲು"
+      i_have_some_requests: ನಾನು ಕೆಲವು ವಿನಂತಿಗಳನ್ನು ಹೊಂದಿದ್ದರೆ
+      you_can_write_request: ನೀವು ವಿನಂತಿಯನ್ನು ಬರೆಯಬಹುದು
+      here: ಇಲ್ಲಿ
+      i_have_seen_some_typo_or_wrong_translation: ನಾನು ಕೆಲವು ಟೈಪೊಸ್ ಅಥವಾ ತಪ್ಪು ಅನುವಾದಗಳು
+        ಕಂಡ
+      you_can_send_pull_request_to_our: ನೀವು ಪುಲ್ ವಿನಂತಿಯನ್ನು ಕಳುಹಿಸಬಹುದು ನಮ್ಮ
+      github_repository: GitHub ಭಂಡಾರ
+      i_have_seen_some_error: ನಾನು ಕೆಲವು ದೋಷಗಳನ್ನು ಕಂಡ
+      you_can_write_to_our_info_mail: ನೀವು ನಮ್ಮ ಇಮೇಲ್ ಈ ಬಗ್ಗೆ ಬರೆಯಬಹುದು
+    about:
+      about_kanban_on_rails: KanbanOnRails ಬಗ್ಗೆ
+      about_kanban_on_rails_text: KanbanOnRails ನೀವು GitHub ಅಥವಾ Bitbucket ಜೊತೆ
+        ಕನ್ಬನ್ ಮಂಡಳಿಗಳು ರಚಿಸಲು ಮತ್ತು ಸಿಂಕ್ ಅಲ್ಲಿ ಇದು ಸೇವೆಯಾಗಿದೆ
+      kanban_on_rails_features: KanbanOnRails ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು
+      sync_with_github_and_bitbucket: Github ಮತ್ತು Bitbucket ನಿಮ್ಮ ಯೋಜನೆಗಳು ಮತ್ತು
+        ಸಮಸ್ಯೆಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಬಹುದು
+      invite_users: ನಿಮ್ಮ ಯೋಜನೆಗೆ ಬಳಕೆದಾರರು (ಉದಾಹರಣೆಗೆ ವ್ಯವಸ್ಥಾಪಕರಿಗೆ) ಆಹ್ವಾನಿಸಬಹುದು
+      open_source_code: ಈ ಯೋಜನೆಯ ತೆರೆದ ಮೂಲ ಕೋಡ್ ಹೊಂದಿದೆ, ನೀವು ನಿಮ್ಮ ಸ್ವಂತ ಸರ್ವರ್
+        ಅದನ್ನು ನಿಯೋಜಿಸಲು ಮಾಡಬಹುದು
+      we_use_open_source_and_high_technology: ನಾವು ಉನ್ನತ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಮತ್ತು ಮುಕ್ತ
+        ಮೂಲ ಗ್ರಂಥಾಲಯಗಳು ಬಳಸಿ. ನಾವು ಯಾವಾಗಲೂ ಉತ್ತಮ ಪಡೆಯಲು ಮತ್ತು ನಮ್ಮ ಸೇವೆ ಸುಧಾರಿಸಲು
+        ಪ್ರಯತ್ನಿಸಿ.
+      partners_and_investors: ನಾವು ಪಾಲುದಾರಿಕೆಗಾಗಿ ತೆರೆದು ನಮಗೆ ಹೂಡಿಕೆದಾರರು ಹುಡುಕಲು
+        ಇಚ್ಚಿಸುತ್ತೇವೆ. ನೀವು ನಮ್ಮೊಂದಿಗೆ ಸಹಕಾರ ಬಯಸಿದರೆ ದಯವಿಟ್ಟು partnership@technoelegance.com
+        ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ
+  devise:
+    shared:
+      links:
+        sign_in: ಸೈನ್ ಇನ್
+        sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+        didnt_receive_confirmation_instructions: ದೃಢೀಕರಣ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿಲ್ಲ
+          ಮಾಡಲಿಲ್ಲ?
+        sign_in_with: ಸೈನ್ ಇನ್ ಮಾಡಿ
+        fast_login_almost_one_click: ಫಾಸ್ಟ್ ಲಾಗಿನ್ (ಬಹುತೇಕ ಒಂದು ಕ್ಲಿಕ್)
+    confirmations:
+      confirmed: ಯಶಸ್ವಿಯಾಗಿ ದೃಢಪಡಿಸಿದರು.
+      send_instructions: ನೀವು ಕೆಲವು ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ದೃಢೀಕರಿಸಲು ಬಗ್ಗೆ
+        ಸೂಚನೆಗಳೊಂದಿಗೆ ಇಮೇಲ್ ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      send_paranoid_instructions: ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮ್ಮ ಡೇಟಾಬೇಸ್ ಅಸ್ತಿತ್ವದಲ್ಲಿದ್ದರೆ,
+        ನೀವು ಕೆಲವು ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ದೃಢೀಕರಿಸಲು ಬಗ್ಗೆ ಸೂಚನೆಗಳೊಂದಿಗೆ ಇಮೇಲ್
+        ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      new:
+        send_mail_for_confirm_your_email: ದೃಢೀಕರಿಸಿ ನಿಮ್ಮ ಇಮೇಲ್ ಮೇಲ್ ಕಳುಹಿಸಿ
+        submit: ಸಲ್ಲಿಸಿ
+    failure:
+      already_authenticated: ಈಗಾಗಲೇ ಸೈನ್ ಇನ್.
+      inactive: ಇನ್ನೂ ಸಕ್ರಿಯಗೊಂಡಿಲ್ಲ.
+      invalid: ಅಮಾನ್ಯ ಇಮೇಲ್ ಅಥವಾ ಪಾಸ್ವರ್ಡ್.
+      locked: ಲಾಕ್.
+      last_attempt: ನೀವು ಒಂದಕ್ಕಿಂತ ಪ್ರಯತ್ನ ಹೊಂದಿವೆ.
+      not_found_in_database: ಅಮಾನ್ಯ ಇಮೇಲ್ ಅಥವಾ ಪಾಸ್ವರ್ಡ್.
+      timeout: ಅವಧಿ. ಮುಂದುವರಿಸಲು ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡಿ.
+      unauthenticated: ಸೈನ್ ಇನ್ ಅಥವಾ ಮುಂದುವರೆಯುವ ಮೊದಲು ಸೈನ್ ಅಪ್ ಅಗತ್ಯವಿದೆ.
+      unconfirmed: ಮುಂದುವರೆಯುವ ಮೊದಲು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಖಚಿತಪಡಿಸಲು ಹೊಂದಿವೆ.
+    mailer:
+      confirmation_instructions:
+        subject: ದೃಢೀಕರಣ ಸೂಚನೆಗಳನ್ನು
+        welcome_to_kanban_on_rails: KanbanOnRails ಸ್ವಾಗತ
+        you_can_confirm_your_account_email_through_the_link_below: ಕೆಳಗಿನ ಲಿಂಕ್ ಮೂಲಕ
+          ನಿಮ್ಮ ಇಮೇಲ್ ನಿರ್ದಿಷ್ಟಪಡಿಸುತ್ತದೆ
+        confirm_my_account: ನನ್ನ ಇಮೇಲ್ ದೃಢೀಕರಿಸಿ
+      reset_password_instructions:
+        hello: ಹಲೋ
+        subject: ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ ಸೂಚನೆಗಳನ್ನು
+        someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: ಯಾರೋ
+          ವಿನಂತಿಗಳನ್ನು ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸಲು ಲಿಂಕ್ ಹೊಂದಿದೆ. ಕೆಳಗಿನ ಲಿಂಕ್ ಮೂಲಕ
+          ಈ ಮಾಡಬಹುದು.
+        change_my_password: ನನ್ನ ಪಾಸ್ವರ್ಡ್ ಬದಲಿಸಿ
+        if_you_didnt_request_this_please_ignore_this_email: ನೀವು ವಿನಂತಿಸದಿದ್ದರೆ ಈ
+          ಇಮೇಲ್ ನಿರ್ಲಕ್ಷಿಸಿ ದಯವಿಟ್ಟು.
+      unlock_instructions:
+        subject: ಅನ್ಲಾಕ್ ಸೂಚನೆಗಳು
+    omniauth_callbacks:
+      failure: '% {ರೀತಿಯ} ಏಕೆಂದರೆ "% {ಕಾರಣ}" ನೀವು ದೃಢೀಕರಿಸಲಾಗಲಿಲ್ಲ.'
+      success: ಯಶಸ್ವಿಯಾಗಿ% {ರೀತಿಯ} ಖಾತೆಯಿಂದ ಪ್ರಮಾಣೀಕೃತ.
+    passwords:
+      no_token: ಪಾಸ್ವರ್ಡ್ ರೀಸೆಟ್ ಇಮೇಲ್ ಬರುವ ಈ ಪುಟವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ನೀವು
+        ಪಾಸ್ವರ್ಡ್ ರೀಸೆಟ್ ಇಮೇಲ್ ಬರುತ್ತವೆ ವೇಳೆ, ನೀವು ಒದಗಿಸಿದ ಪೂರ್ಣ URL ಗಳನ್ನು ಬಳಸಲಾಗುವುದಿಲ್ಲ
+        ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.
+      send_instructions: ನೀವು ಕೆಲವು ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಲು ಹೇಗೆ
+        ಸೂಚನೆಗಳೊಂದಿಗೆ ಇಮೇಲ್ ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      send_paranoid_instructions: ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮ್ಮ ಡೇಟಾಬೇಸ್ ಅಸ್ತಿತ್ವದಲ್ಲಿದ್ದರೆ,
+        ನೀವು ಕೆಲವು ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸಕ್ಕೆ ಪಾಸ್ವರ್ಡ್ ಚೇತರಿಕೆ ಲಿಂಕ್ ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      updated: ಯಶಸ್ವಿಯಾಗಿ ಬದಲಾಯಿಸಲಾಗಿದೆ. ಈಗ ನೀವು ಸೈನ್ ಇನ್ ಮಾಡಿರುವಿರಿ.
+      updated_not_active: ಯಶಸ್ವಿಯಾಗಿ ಬದಲಾಯಿಸಲಾಗಿದೆ.
+      new:
+        forgot_your_password: ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ಚೇತರಿಸಿಕೊಳ್ಳಲು
+        reset_password: ಕಳುಹಿಸಿ URL ಚೇತರಿಸಿಕೊಳ್ಳಲು
+      edit:
+        change_your_password: ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ಬದಲಾಯಿಸಿ
+        new_password: ಹೊಸ ಗುಪ್ತಪದವನ್ನು
+        change_password: ಬದಲಾವಣೆ
+    registrations:
+      destroyed: "! ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ರದ್ದಾಯಿತು. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ಮತ್ತೆ
+        ನೀವು ನೋಡಲು ಭಾವಿಸುತ್ತೇವೆ."
+      signed_up: ಸ್ವಾಗತ! ನೀವು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ ಸಹಿ.
+      signed_up_but_inactive: ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ ಸಹಿ. ಆದರೆ, ನಾವು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಇನ್ನೂ
+        ಸಕ್ರಿಯ ಏಕೆಂದರೆ ನೀವು ಸೈನ್ ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.
+      signed_up_but_locked: ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ ಸಹಿ. ಆದರೆ, ನಾವು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಲಾಕ್ ಏಕೆಂದರೆ
+        ನೀವು ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಲಿಲ್ಲ.
+      signed_up_but_unconfirmed: ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ
+        ಖಾತೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಲಿಂಕ್ ತೆರೆಯಲು.
+      update_needs_confirmation: ", ಆದರೆ ನಿಮ್ಮ ಹೊಸ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಿ ಅಗತ್ಯವಿದೆ.
+        ನಿಮ್ಮ ಇಮೇಲ್ ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಹೊಸ ಇಮೇಲ್ ವಿಳಾಸ ದೃಢೀಕರಿಸಿದ ಕೊನೆಗೊಳಿಸಲು
+        ಖಚಿತಪಡಿಸಿ ಲಿಂಕ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
+      updated: "."
+      new:
+        sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+        name: ಹೆಸರು
+        password: ಪಾಸ್ವರ್ಡ್
+        password_confirmation: ಪಾಸ್ವರ್ಡ್ ದೃಢೀಕರಣ
+        register: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+    sessions:
+      signed_in: ಯಶಸ್ವಿಯಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ.
+      signed_out: ಯಶಸ್ವಿಯಾಗಿ ಹೊರ ಬರಲಾಗಿದೆ.
+      new:
+        sign_in: ಸೈನ್ ಇನ್
+        password: ಪಾಸ್ವರ್ಡ್
+        remember_me: ನನ್ನ ನೆನಪಿಡಿ
+        forgot_your_password: ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಮರೆತಿರಾ?
+    unlocks:
+      send_instructions: ನೀವು ಕೆಲವು ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು ಹೇಗೆ
+        ಸೂಚನೆಗಳೊಂದಿಗೆ ಇಮೇಲ್ ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      send_paranoid_instructions: ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಸ್ತಿತ್ವದಲ್ಲಿದ್ದರೆ, ನೀವು ಕೆಲವು
+        ನಿಮಿಷಗಳಲ್ಲಿ ಅದನ್ನು ಅನ್ಲಾಕ್ ಹೇಗೆ ಸೂಚನೆಗಳೊಂದಿಗೆ ಇಮೇಲ್ ಸ್ವೀಕರಿಸುತ್ತೀರಿ.
+      unlocked: ಯಶಸ್ವಿಯಾಗಿ ಅನ್ಲಾಕ್ ಮಾಡಲಾಗಿದೆ. ಮುಂದುವರಿಸಲು ಸೈನ್ ಇನ್ ಮಾಡಿ.
+  kn: kn
+  kn_iso: kn
