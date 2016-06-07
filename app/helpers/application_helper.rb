@@ -15,4 +15,14 @@ module ApplicationHelper
 
     column.max_issues_count > column.issue_to_section_connections.size ? 'blue' : 'red'
   end
+
+  def issue_tag_color(issue, tag)
+    return if !issue.present? || !tag.present?
+
+    return unless issue.github_labels.present?
+
+    labels = issue.github_labels.select { |label| label[1].last == tag }
+
+    "background-color: ##{ labels[0][2].last };color:black;" if labels[0].present?
+  end
 end
