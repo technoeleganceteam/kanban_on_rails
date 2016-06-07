@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
       (render :status => 422, :nothing => true) and return
     end
 
-    @project.parse_issue_params_from_webhook(params[:issue]) if params[:issue].present?
+    @project.parse_issue_params_from_github_webhook(params[:issue]) if params[:issue].present?
 
     (render :status => 200, :nothing => true) and return
   end
