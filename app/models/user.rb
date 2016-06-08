@@ -191,21 +191,24 @@ class User < ActiveRecord::Base
 
   def sync_github_issues(client)
     projects.where("meta -> 'is_github_repository' = 'true'").each do |project|
-      client.list_issues(project.github_full_name).each do |github_issue|
-        issue = project.issues.where("meta ->> 'github_issue_id' = '?'", github_issue.id).first 
+      begin
+        client.list_issues(project.github_full_name).each do |github_issue|
+          issue = project.issues.where("meta ->> 'github_issue_id' = '?'", github_issue.id).first 
 
-        issue = project.issues.build.tap { |i| i.github_issue_id = github_issue.id } unless issue.present?
+          issue = project.issues.build.tap { |i| i.github_issue_id = github_issue.id } unless issue.present?
 
-        issue.assign_attributes(
-          :title => github_issue.title,
-          :body => github_issue.body,
-          :github_issue_comments_count => github_issue.comments,
-          :github_issue_html_url => github_issue.html_url,
-          :tags => github_issue.labels.map(&:name),
-          :github_labels => github_issue.labels,
-          :github_issue_number => github_issue.number)
+          issue.assign_attributes(
+            :title => github_issue.title,
+            :body => github_issue.body,
+            :github_issue_comments_count => github_issue.comments,
+            :github_issue_html_url => github_issue.html_url,
+            :tags => github_issue.labels.map(&:name),
+            :github_labels => github_issue.labels,
+            :github_issue_number => github_issue.number)
 
-        issue.save!
+          issue.save!
+        end
+      rescue Octokit::NotFound
       end
     end
   end
