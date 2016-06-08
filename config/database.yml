@@ -10,7 +10,7 @@ test:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: kanban_on_rails_test
+  database: <%= Settings.postgresql.test_database_name %>
   username: <%= Settings.postgresql.username %>
   password: <%= Settings.postgresql.password %>
 
