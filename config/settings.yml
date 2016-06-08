@@ -13,8 +13,8 @@ git_repository: git@github.com:technoeleganceteam/kanban_on_rails.git
 github_repository_url: https://github.com/technoeleganceteam/kanban_on_rails
 bitbucket_base_url: https://bitbucket.com
 postgresql:
-  username: someusername
-  password: somepassword
+  username: postgres
+  password:
 secret_key_base: 66dfbcd8b3a121137d2195ae39f7d63b0e1eb9e05018b73e5e8dee29576f2f1cf2ab8c008d002547e8976eb9efd1a023054f63aa6d6247e3ec3bb49cac8b5631
 secret_token: 66dfbcd8b3a121137d2195ae39f7d63b0e1eb9e05018b73e5e8dee29576f2f1cf2ab8c008d002547e8976eb9efd1a023054f63aa6d6247e3ec3bb49cac8b5631
 webhook_host:  http://66432e6d.ngrok.io
