@@ -67,7 +67,7 @@ ru:
     settings:
       change_password: Изменение пароля
       interface_language: Язык интерфейса
-      submit: Отправить
+      submit: Сохранить
     password_form:
       new_password: Новый пароль
       confirm_new_password: Подтвердите новый пароль
@@ -94,10 +94,14 @@ ru:
       columns: Столбцы
       sections: Разделы
       add: Добавить
+      column_name: Название столбца
+      section_name: Название секции
+      column_width: Ширина столбца
+      column_height: Высота столбца
       github_repository_id: Github Id репозитория
-      github_full_name: Github репозиторий fullname
+      github_full_name: Полное название репозитория на Github
       github_secret_token_for_hook: Github секретный token для создания хука
-      bitbucket_full_name: BitBucket FullName
+      bitbucket_full_name: BitBucket полное название
       bitbucket_secret_token_for_hook: BitBucket секретный token для хука
     project:
       edit: Редактировать
@@ -105,14 +109,17 @@ ru:
       project_issues: Задачи проекта
       project_users: Пользователи проекта
     section_fields:
+      section_name: Название секции
       remove_section: Удалить раздел
       section_tags: Теги раздела
       section_order: Порядок
       or_include_all: Или включать все?
     column_fields:
+      column_name: Название столбца
       remove_column: Удалить столбец
       column_tags: Теги столбца
       column_order: Порядок
+      max_issues_count: Максимальное кол-во задач
     show:
       next_page: Следующая страница
   issues:
@@ -179,14 +186,15 @@ ru:
       here: сюда
       i_have_seen_some_typo_or_wrong_translation: Я увидел опечатку или неправильный
         перевод
-      you_can_send_pull_request_to_our: Вы можете отправить запрос на наш тянуть
+      you_can_send_pull_request_to_our: Вы можете отправить Pull Request в наш 
       i_have_seen_some_error: Я увидел ошибку
+      github_repository: Github репозиторий
       you_can_write_to_our_info_mail: Вы можете написать об этом на электронный адрес
     about:
       about_kanban_on_rails: О KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails это сервис, где вы можете создавать
         Kanban доски и синхронизировать их с Github или Bitbucket
-      kanban_on_rails_features: Особенности KanbanOnRails
+      kanban_on_rails_features: Возможности KanbanOnRails
       sync_with_github_and_bitbucket: Вы можете синхронизировать ваши проекты и задачи
         с Github и Bitbucket
       invite_users: Вы можете приглашать пользователей (например менеджеров) для вашего
@@ -299,5 +307,5 @@ ru:
         письмо с инструкциями о том, как разблокировать его в течение нескольких минут.
       unlocked: Ваш аккаунт был успешно разблокирован. Пожалуйста, войдите в систему,
         чтобы продолжить.
-  ru: ru
+  ru: Ру
   ru_iso: ru
