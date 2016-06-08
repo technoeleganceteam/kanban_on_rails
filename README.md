@@ -1,6 +1,9 @@
 # KanbanOnRails
 [![Build Status](https://travis-ci.org/technoeleganceteam/kanban_on_rails.svg?branch=master)](https://travis-ci.org/technoeleganceteam/kanban_on_rails)
+[![Coverage Status](https://coveralls.io/repos/github/technoeleganceteam/kanban_on_rails/badge.svg?branch=master)](https://coveralls.io/github/technoeleganceteam/kanban_on_rails?branch=master)
+
 **KanbanOnRails** is a complete open source solution for creating Kanban boards built with Ruby on Rails.
+
 ![Example Kanban board](https://raw.githubusercontent.com/technoeleganceteam/kanban_on_rails/master/app/assets/images/welcome_image_example.jpg "Example Kanban board")
 
 ### Features
@@ -62,3 +65,4 @@ After local installation you can run specs with command ```rake spec```
 Fork this repository, create a branch with some feature or bug fix, ensure that all tests are passed by running command ```rake spec``` push your branch and then create Pull Request for this repository.
 ### Licence
 MIT License
+
