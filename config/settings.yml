@@ -6,7 +6,7 @@ mailer:
   from: info@kanbanonrails.com
   from_name: '"KanbanOnRails" <info@kanbanonrails.com>'
 max_string_field_size: 255
-max_text_field_size: 10000
+max_text_field_size: 65536
 max_column_width: 10000
 production_server_deploy_host: kanbanonrails.com
 git_repository: git@github.com:technoeleganceteam/kanban_on_rails.git
