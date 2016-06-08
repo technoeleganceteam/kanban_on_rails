@@ -26,7 +26,7 @@ To install this application to your server you need these services and packages:
 You can deploy it with Capistrano(config is in repository) and Puppet provisioning. May be in some future we put puppet module for this project to open source too.
 
 ### Local installation
-Installation is quite simple if you have already some expierence with Ruby on Rails applications. Here an example for Ubuntu:
+Installation is quite simple if you have already some experience with Ruby on Rails applications. Here an example for Ubuntu:
 #### Ubuntu(14.04)
 ##### RVM
 ```bash
