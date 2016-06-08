@@ -30,8 +30,8 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
       | &nbsp;
       = issue.bitbucket_issue_comment_count
 
-    br
-    - if issue.tags.present?
+  - if issue.tags.present?
+    p
       - issue.tags.each do |tag|
         span.label.label-default style = "#{ issue_tag_color(issue, tag) }" = tag
-        | &nbsp;
+        br

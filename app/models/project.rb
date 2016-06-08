@@ -40,13 +40,14 @@ class Project < ActiveRecord::Base
 
     issue = issues.build.tap { |i| i.github_issue_id = params[:id].to_i } unless issue.present?
 
-    issue.title = params[:title]
-
-    issue.body = params[:body] if params[:body].present?
-
-    issue.tags = params[:labels].map { |l| l[:name] } if params[:labels].present?
-
-    issue.github_issue_number = params[:number].to_i
+    issue.assign_attributes(
+      :title => params[:title],
+      :body => params[:body],
+      :github_issue_comments_count => params[:comments],
+      :github_issue_html_url => params[:html_url],
+      :tags => params[:labels].to_a.map { |l| l[:name] },
+      :github_labels => params[:labels].to_a.map(&:to_a),
+      :github_issue_number => params[:number].to_i)
 
     issue.save!
   end

@@ -185,7 +185,7 @@ class User < ActiveRecord::Base
 
       project.is_github_repository = true
 
-      project.save
+      project.save!
     end
   end
 
@@ -196,21 +196,16 @@ class User < ActiveRecord::Base
 
         issue = project.issues.build.tap { |i| i.github_issue_id = github_issue.id } unless issue.present?
 
-        issue.title = github_issue.title
+        issue.assign_attributes(
+          :title => github_issue.title,
+          :body => github_issue.body,
+          :github_issue_comments_count => github_issue.comments,
+          :github_issue_html_url => github_issue.html_url,
+          :tags => github_issue.labels.map(&:name),
+          :github_labels => github_issue.labels,
+          :github_issue_number => github_issue.number)
 
-        issue.body = github_issue.body
-
-        issue.github_issue_comments_count = github_issue.comments
-
-        issue.github_issue_html_url = github_issue.html_url
-
-        issue.tags = github_issue.labels.map(&:name)
-
-        issue.github_labels = github_issue.labels
-
-        issue.github_issue_number = github_issue.number
-
-        issue.save
+        issue.save!
       end
     end
   end
