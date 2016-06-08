@@ -5,6 +5,7 @@ script:
   - bundle exec rake spec
 services:
   - postgresql
+  - redis-server
 addons:
   postgresql: "9.4"
 before_script:
