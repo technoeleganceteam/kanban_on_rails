@@ -18,6 +18,8 @@ html
 
     = render 'shared/favicons'
   body
+    = render 'shared/counters' if Rails.env.production?
+
     = render 'shared/header'
 
     = render 'shared/flash_messages'

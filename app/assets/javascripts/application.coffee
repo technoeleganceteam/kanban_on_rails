@@ -10,4 +10,5 @@
 #= require js-routes
 #= require html.sortable
 #= require noty
+#= require counters
 #= require shared
