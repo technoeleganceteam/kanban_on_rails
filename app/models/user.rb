@@ -158,7 +158,7 @@ class User < ActiveRecord::Base
 
     return false unless authentication.present?
 
-    Octokit::Client.new(:access_token => authentication.token)
+    Octokit::Client.new(:access_token => authentication.token, :auto_paginate => true)
   end
 
   def sync_github_projects(client)
