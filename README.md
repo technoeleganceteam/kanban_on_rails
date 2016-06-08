@@ -1,10 +1,12 @@
 # KanbanOnRails
 **KanbanOnRails** is a complete open source solution for creating Kanban boards built with Ruby on Rails.
 ![Example Kanban board](https://raw.githubusercontent.com/technoeleganceteam/kanban_on_rails/master/app/assets/images/welcome_image_example.jpg "Example Kanban board")
+
 ### Features
 - **Integration with Bitbucket and Github.** Your projects and issues can be synced with these services. All changes with issues will be synced via webhooks and api.
 - **Inviting users to your projects** You can invite user that has no Github or Gitlab account to your project as manager for example, so he will not see your project code but he will see your issues.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
+
 ### System dependencies
 To install this application to your server you need these services and packages:
 - PostgreSQL
