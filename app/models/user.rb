@@ -110,6 +110,7 @@ class User < ActiveRecord::Base
 
   def create_bitbucket_hook(client)
     projects.where("meta -> 'is_bitbucket_repository' = 'true'").each do |project|
+      begin
       project.bitbucket_secret_token_for_hook ||= SecureRandom.hex(20)
 
       project.save
@@ -134,7 +135,7 @@ class User < ActiveRecord::Base
                 :host => Settings.webhook_host), :events => ['issue:created', 'issue:updated'],
                 :active => true }) 
         end
-      rescue BitBucket::Error::Unauthorized, BitBucket::Error::Forbidden
+      rescue BitBucket::Error::Unauthorized, BitBucket::Error::Forbidden, BitBucket::Error::NotFound
       end
     end
   end
