@@ -1,4 +1,5 @@
 # KanbanOnRails
+[![Build Status](https://travis-ci.org/technoeleganceteam/kanban_on_rails.svg?branch=master)](https://travis-ci.org/technoeleganceteam/kanban_on_rails)
 **KanbanOnRails** is a complete open source solution for creating Kanban boards built with Ruby on Rails.
 ![Example Kanban board](https://raw.githubusercontent.com/technoeleganceteam/kanban_on_rails/master/app/assets/images/welcome_image_example.jpg "Example Kanban board")
 
