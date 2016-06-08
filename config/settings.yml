@@ -21,3 +21,13 @@ webhook_host:  http://66432e6d.ngrok.io
 devise:
   secret_key: xerwerj32n23jrtnewqwfwkosapdsmqekci4rik13jkc3bo2932njriwkpodsmdfadmasoiq32k4erwd9oewkinrgeijofemknfgrei23439i4urfnediiewnfrweinf
   pepper: 94kmdfkgngfewmfdijn1m32ewrnrm23eooooowoorn2m33333133333333efn23o2394rijnkkmlhfin2m3kefv9ojfmekwwwdvsiokslvinofep234rnfdimpoqekla
+omniauth:
+  github:
+    id: someid
+    secret: somesecret
+  bitbucket:
+    key: somekey
+    secret: somesecret
+recaptcha:
+  public_key: somekey
+  private_key: someprivatekey
