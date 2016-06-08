@@ -3,6 +3,6 @@ rvm:
   - 2.2.5
   - 2.3.1
 script:
-  - rake spec
+  - bundle exec rake spec
 services:
   - postgresql
