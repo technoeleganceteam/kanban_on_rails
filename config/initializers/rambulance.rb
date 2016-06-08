@@ -1,3 +1,5 @@
+include ApplicationHelper
+
 Rambulance.setup do |config|
 
   # List of pairs of exception/corresponding http status. In Rails, the default

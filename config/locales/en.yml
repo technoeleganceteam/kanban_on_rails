@@ -271,6 +271,41 @@ en: &all
       open_source_code: This project has open source code, so you can deploy it to your own server
       we_use_open_source_and_high_technology: We use high technologies and open source libraries. We always try to get better and improve our service. 
       partners_and_investors: We are opened for partnership and we would like to find investors. If you'd like to cooperate with us please contact us at partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Request result
+      bad_request_description: The server cannot or will not process the request due to an apparent client error
+      go_to_root: Go to root
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Request result
+      unprocessable_entity_description: The request was well-formed but was unable to be followed due to semantic errors
+      go_to_root: Go to root
+    not_found:
+      not_found: Not Found
+      request_result: Request result
+      not_found_description: The requested resource could not be found but may be available in the future
+      go_to_root: Go to root
+    forbidden:
+      forbidden: Forbidden
+      request_result: Request result
+      forbidden_description: The request was a valid request, but the server is refusing to respond to it
+      go_to_root: Go to root
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Request result
+      internal_server_error_description: Something went wrong. We will fix it as soon as possible.
+      go_to_root: Go to root
   devise:
     shared:
       links:
