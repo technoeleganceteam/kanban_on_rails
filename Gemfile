@@ -92,6 +92,7 @@ group :test do
   gem 'webmock'
   gem 'database_cleaner'
   gem 'simplecov', :require => false
+  gem 'coveralls', :require => false
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'hashie'
