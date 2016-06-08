@@ -9,9 +9,10 @@ div
     = link_to (t '.didnt_receive_confirmation_instructions'), new_confirmation_path(resource_name),
       :class => 'btn btn-default btn-block'
     
-  = link_to omniauth_authorize_path(resource_name, :github), :class => 'btn btn-info btn-block' do
-    i.fa.fa-github
-    | &nbsp;
-    = t '.sign_in_with'
-    | &nbsp;
-    = t 'github'
+  - [:bitbucket, :github].each do |provider|
+    = link_to omniauth_authorize_path(resource_name, provider), :class => 'btn btn-info btn-block' do
+      i class = "fa fa-#{ provider }"
+      | &nbsp;
+      = t '.sign_in_with'
+      | &nbsp;
+      = t provider
