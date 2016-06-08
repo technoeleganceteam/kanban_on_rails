@@ -110,7 +110,6 @@ class User < ActiveRecord::Base
 
   def create_bitbucket_hook(client)
     projects.where("meta -> 'is_bitbucket_repository' = 'true'").each do |project|
-      begin
       project.bitbucket_secret_token_for_hook ||= SecureRandom.hex(20)
 
       project.save
