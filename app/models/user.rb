@@ -215,20 +215,23 @@ class User < ActiveRecord::Base
 
   def create_github_hook(client)
     projects.where("meta -> 'is_github_repository' = 'true'").each do |project|
-      project.github_secret_token_for_hook ||= SecureRandom.hex(20)
+      begin
+        project.github_secret_token_for_hook ||= SecureRandom.hex(20)
 
-      project.save
+        project.save
 
-      hook = client.hooks(project.github_full_name).select do |hook|
-        hook.config[:url] == Rails.application.routes.url_helpers.
-          payload_from_github_project_url(project, :host => Settings.webhook_host) 
-      end.first
+        hook = client.hooks(project.github_full_name).select do |hook|
+          hook.config[:url] == Rails.application.routes.url_helpers.
+            payload_from_github_project_url(project, :host => Settings.webhook_host) 
+        end.first
 
-      client.create_hook(project.github_full_name, 'web',
-        { :url => Rails.application.routes.url_helpers.
-          payload_from_github_project_url(project, :host => Settings.webhook_host),
-          :secret => project.github_secret_token_for_hook, :content_type => 'json' },
-        { :events => ['issues'] }) unless hook.present? 
+        client.create_hook(project.github_full_name, 'web',
+          { :url => Rails.application.routes.url_helpers.
+            payload_from_github_project_url(project, :host => Settings.webhook_host),
+            :secret => project.github_secret_token_for_hook, :content_type => 'json' },
+          { :events => ['issues'] }) unless hook.present? 
+      rescue Octokit::NotFound
+      end
     end
   end
 
