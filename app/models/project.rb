@@ -36,7 +36,7 @@ class Project < ActiveRecord::Base
   def parse_issue_params_from_github_webhook(params)
     return if !params[:id].present? || !params[:number].present? || !params[:title].present?
 
-    issue = issues.where("meta ->> 'github_issue_id' = '?'", params[:id].to_i).first 
+    issue = issues.where("meta ->> 'github_issue_id' = '?'", params[:id].to_i).first
 
     issue = issues.build.tap { |i| i.github_issue_id = params[:id].to_i } unless issue.present?
 
@@ -55,7 +55,7 @@ class Project < ActiveRecord::Base
   def parse_issue_params_from_bitbucket_webhook(params)
     return if !params[:id].present? || !params[:title].present?
 
-    issue = issues.where("meta ->> 'bitbucket_issue_id' = '?'", params[:id]).first 
+    issue = issues.where("meta ->> 'bitbucket_issue_id' = '?'", params[:id]).first
 
     issue = issues.build.tap { |i| i.github_issue_id = params[:id] } unless issue.present?
 
@@ -74,7 +74,7 @@ class Project < ActiveRecord::Base
 
   def column_tags_overlapping
     if columns.map(&:tags).map{ |t| t.reject(&:empty?) }.combination(2).map{ |t1, t2| t1 & t2 }.flatten.size > 0
-      errors.add(:base, (I18n.t '.tags_overlapping_error')) 
+      errors.add(:base, (I18n.t '.shared.form_errors.columns.tag'))
     end
   end
 end
