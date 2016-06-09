@@ -2,7 +2,7 @@
 
 div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
   id = "issue_#{ issue.id }"]
-  h5 
+  h5.truncate 
     = issue.title
 
     - if issue.github_issue_number.present?
@@ -10,7 +10,7 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
       small.blue = issue.github_issue_number
     small.pull-right
       = link_to edit_project_issue_url(issue.project, issue), :remote => true do
-        i.fa.fa-pencil
+        i.fa.fa-pencil.fa-lg
   p
     - if issue.github_issue_html_url.present?
       = link_to issue.github_issue_html_url do
