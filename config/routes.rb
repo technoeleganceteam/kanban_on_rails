@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
     resources :users, :except => [:edit, :update, :destroy, :show]
 
-    post :payload_from_github, :payload_from_bitbucket, :on => :member
+    post :payload_from_github, :payload_from_bitbucket, :payload_from_gitlab, :on => :member
   end
 
   resources :news, :only => [:index, :show]

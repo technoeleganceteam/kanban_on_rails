@@ -243,6 +243,8 @@ Devise.setup do |config|
 
   config.omniauth :bitbucket, Settings.omniauth.bitbucket.key, Settings.omniauth.bitbucket.secret
 
+  config.omniauth :gitlab, Settings.omniauth.gitlab.key, Settings.omniauth.gitlab.secret,
+    :client_options => Settings.omniauth.gitlab.client_options.to_h
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

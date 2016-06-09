@@ -35,6 +35,8 @@ gem 'omniauth-bitbucket'
 # until fix this issue https://github.com/bitbucket-rest-api/bitbucket/issues/67
 gem 'bitbucket_rest_api', :git => 'https://github.com/technoeleganceteam/bitbucket.git'
 gem 'postmark-rails'
+gem 'omniauth-gitlab'
+gem 'gitlab'
 
 gem 'sass-rails'
 gem 'uglifier'

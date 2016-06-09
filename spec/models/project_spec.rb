@@ -11,4 +11,8 @@ RSpec.describe Project, :type => :model do
   describe '#parse_issue_params_from_bitbucket_webhook' do
     it { expect(project.parse_issue_params_from_bitbucket_webhook({:id => 1, :title => 'Some title'})).to eq true }
   end
+
+  describe '#parse_issue_params_from_gitlab_webhook' do
+    it { expect(project.parse_issue_params_from_gitlab_webhook({:id => 1, :title => 'Some title'})).to eq true }
+  end
 end

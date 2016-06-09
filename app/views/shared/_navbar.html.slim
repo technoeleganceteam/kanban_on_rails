@@ -57,7 +57,7 @@
       = link_to (t '.sign_in'), new_user_session_url, :class => 'btn btn-default navbar-btn'
 
       - User.omniauth_providers.each do |provider|
-        = link_to omniauth_authorize_path(:user, provider), :data => { :no_turbolink => true },
+        = link_to omniauth_authorize_path(:user, provider, :locale => nil), :data => { :no_turbolink => true },
           :class => 'btn btn-default navbar-btn' do
 
           i [class = "fa fa-#{ provider }"]

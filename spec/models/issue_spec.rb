@@ -55,6 +55,38 @@ RSpec.describe Issue, :type => :model do
     end
   end
 
+  describe '#sync_with_github' do
+    context 'when new issue' do
+      before do 
+        stub_request(:post, "https://gitlab.com/api/v3/projects//issues").
+          with(:body => "title=Some%20title&description=&labels=",
+            :headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+          to_return(:status => 200, :headers => {}, :body => { :id => '1' }.to_json.to_s)
+        
+        user.authentications.create! :uid => 123, :provider => 'gitlab', :token => 'token',
+          :gitlab_private_token => 'token'
+      end
+
+      it { expect(user_to_issue_connection.issue.sync_with_gitlab(user.id)).to eq true }
+    end
+
+    context 'when existing issue' do
+      before do 
+        stub_request(:put, "https://gitlab.com/api/v3/projects//issues/1").
+          with(:body => "title=Some%20title&description=&labels=",
+            :headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+          to_return(:status => 200, :body => "", :headers => {})
+
+        user.authentications.create! :uid => 123, :provider => 'gitlab', :token => 'token',
+          :gitlab_private_token => 'token'
+
+        user_to_issue_connection.issue.update_attributes(:gitlab_issue_id => 1)
+      end
+
+      it { expect(user_to_issue_connection.issue.sync_with_gitlab(user.id)).to eq false }
+    end
+  end
+
   describe '#sync_with_bitbucket' do
     context 'when new issue' do
       before do 

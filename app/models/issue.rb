@@ -2,7 +2,8 @@ class Issue < ActiveRecord::Base
   include EmptyArrayRemovable
 
   store_accessor :meta, :github_issue_id, :github_issue_number, :bitbucket_issue_id,
-    :github_issue_comments_count, :github_issue_html_url, :github_labels, :bitbucket_issue_comment_count
+    :github_issue_comments_count, :github_issue_html_url, :github_labels, :bitbucket_issue_comment_count,
+    :gitlab_issue_id
 
   has_many :users, :through => :user_to_issue_connections
 
@@ -79,6 +80,26 @@ class Issue < ActiveRecord::Base
     end
   end
 
+  def sync_with_gitlab(user_id)
+    user = User.where(:id => user_id).first
+
+    return unless user.present?
+
+    client = user.gitlab_client
+
+    return unless client.present?
+
+    if gitlab_issue_id.present?
+      client.edit_issue(project.gitlab_repository_id, gitlab_issue_id, { :title => title,
+        :description => body, :labels => tags.join(',') })
+    else
+      result = client.create_issue(project.gitlab_repository_id, title,
+        { :description => body, :labels => tags.join(',') })
+
+      update_attributes!(:gitlab_issue_id => result.id)
+    end
+  end
+
   def parse_attributes_for_update(attributes)
     { :id => attributes[:id], :tags => parse_tags(attributes[:source_column_id], attributes[:target_column_id]) }
   end
@@ -92,6 +113,8 @@ class Issue < ActiveRecord::Base
       SyncGithubIssueWorker.perform_async(issue_id, user_id) if issue.project.is_github_repository
 
       SyncBitbucketIssueWorker.perform_async(issue_id, user_id) if issue.project.is_bitbucket_repository
+
+      SyncGitlabIssueWorker.perform_async(issue_id, user_id) if issue.project.is_gitlab_repository
 
       NotificationWorker.perform_async(issue_id, user_id)
     end

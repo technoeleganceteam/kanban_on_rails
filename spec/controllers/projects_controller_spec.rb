@@ -28,6 +28,8 @@ RSpec.describe ProjectsController, :type => :controller do
 
   it { should route(:post, '/projects/1/payload_from_bitbucket').to(:action => :payload_from_bitbucket, :id => 1) }
 
+  it { should route(:post, '/projects/1/payload_from_gitlab').to(:action => :payload_from_gitlab, :id => 1) }
+
   it { should route(:get, '/users/1/projects/1/edit').to(:action => :edit, :id => 1, :user_id => 1) }
 
   it { should route(:patch, '/users/1/projects/1').to(:action => :update, :id => 1, :user_id => 1) }
@@ -79,10 +81,13 @@ RSpec.describe ProjectsController, :type => :controller do
 
       it { expect(response.body).to be_blank }
     end
+  end
 
-    context 'when some payload present' do
+  describe 'POST payload_from_gitlab' do
+    before { post :payload_from_gitlab, :id => connection.project,
+      :object_attributes => { :foo => 'bar' } }
 
-    end
+    it { expect(response.body).to be_blank }
   end
 
   context 'Confirmed user' do

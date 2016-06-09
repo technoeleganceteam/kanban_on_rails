@@ -2,7 +2,8 @@ class Project < ActiveRecord::Base
   store_accessor :meta, :github_repository_id, :github_name, :github_full_name,
     :is_github_repository, :is_bitbucket_repository, :bitbucket_name, :bitbucket_owner,
     :bitbucket_slug, :bitbucket_full_name, :github_secret_token_for_hook, :bitbucket_secret_token_for_hook,
-    :github_url
+    :github_url, :gitlab_url, :gitlab_repository_id, :gitlab_name, :gitlab_full_name, :is_gitlab_repository,
+    :gitlab_secret_token_for_hook
 
   has_many :users, :through => :user_to_project_connections
 
@@ -62,6 +63,20 @@ class Project < ActiveRecord::Base
     issue.title = params[:title]
 
     issue.body = params[:content][:raw] if params[:content].present? && params[:content][:raw]
+
+    issue.save!
+  end
+
+  def parse_issue_params_from_gitlab_webhook(params)
+    return if !params[:id].present? || !params[:title].present?
+
+    issue = issues.where("meta ->> 'gitlab_issue_id' = '?'", params[:id].to_i).first
+
+    issue = issues.build.tap { |i| i.gitlab_issue_id = params[:id].to_i } unless issue.present?
+
+    issue.assign_attributes(
+      :title => params[:title],
+      :body => params[:description])
 
     issue.save!
   end

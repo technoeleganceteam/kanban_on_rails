@@ -3,6 +3,8 @@ require 'rails_helper'
 describe User, :type => :model do
   let(:user) { create :user, :email => 'test@mail.com' }
 
+  let(:user2) { create :user }
+
   describe '#gravatar_url' do
     subject { user.gravatar_url }
 
@@ -74,6 +76,75 @@ describe User, :type => :model do
     it { expect(user.sync_github.size).to eq 8 }
   end
 
+  describe '#sync_gitlab' do
+    before do
+      project = create :project, :gitlab_repository_id => 1, :name => 'Some name'
+
+      user2.user_to_project_connections.create :project => project, :role => 'owner'
+
+      stub_request(:get, "https://gitlab.com/api/v3/projects").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :id => 1,
+          :name => 'name', 
+          :owner => { 'name' => 'username' },
+        }, {
+          :id => 2,
+          :name => 'name2', 
+          :owner => { 'name' => 'username2' },
+        }].to_json)
+
+      stub_request(:get, "https://gitlab.com/api/v3/user").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => {
+          :name => 'name', 
+          :owner => { 'name' => 'username' },
+        }.to_json)
+
+      stub_request(:get, "https://gitlab.com/api/v3/projects/1/issues").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :id => 1,
+          :title => 'title' 
+        }].to_json)
+
+      stub_request(:get, "https://gitlab.com/api/v3/projects/2/issues").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :id => 1,
+          :title => 'title' 
+        }].to_json)
+
+      stub_request(:post, "https://gitlab.com/api/v3/projects/1/hooks").
+        with(:body => /.*/, :headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :url => 'http://example.com'
+        }].to_json)
+
+      stub_request(:get, "https://gitlab.com/api/v3/projects/1/hooks").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :url => 'http://example.com'
+        }].to_json)
+
+      stub_request(:get, "https://gitlab.com/api/v3/projects/2/hooks").
+        with(:headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :url => 'http://example.com'
+        }].to_json)
+
+      stub_request(:post, "https://gitlab.com/api/v3/projects/2/hooks").
+        with(:body => /.*/,
+        :headers => {'Accept'=>'application/json', 'Private-Token'=>'token'}).
+        to_return(:status => 200, :body => "", :headers => {})
+
+      user.authentications.create! :uid => 123, :provider => 'gitlab', :token => 'token',
+        :gitlab_private_token => 'token'
+    end
+
+    it { expect(user.sync_gitlab.size).to eq 8 }
+  end
+
   describe '#sync_bitbucket' do
     before do
       project = create :project, :bitbucket_full_name => 'username/slug', :name => 'Some name'
@@ -93,6 +164,18 @@ describe User, :type => :model do
           :owner => 'username',
         }].to_json)
 
+      stub_request(:get, "https://api.bitbucket.org/1.0/user/repositories").
+        with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type'=>'application/json', 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :slug => 'slug',
+          :name => 'name', 
+          :owner => 'username',
+        }, {
+          :slug => 'slug2',
+          :name => 'name2', 
+          :owner => 'username',
+        }].to_json)
 
       stub_request(:get, 'https://api.bitbucket.org/1.0/user').
         with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',

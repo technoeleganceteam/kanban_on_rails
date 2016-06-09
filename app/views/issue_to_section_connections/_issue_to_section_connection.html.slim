@@ -33,6 +33,12 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
       | &nbsp;
       = issue.bitbucket_issue_comment_count
 
+    - if issue.gitlab_issue_id.present?
+      | &nbsp;
+      = link_to "#{ Settings.gitlab_base_url }/" +\
+        "#{ issue.project.gitlab_full_name }/issues/#{ issue.gitlab_issue_id }" do
+        i.fa.fa-gitlab
+
   - if issue.tags.present?
     p
       - issue.tags.each do |tag|

@@ -74,6 +74,7 @@ en: &all
   zh-TW_full: 汉语 
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: updated
   1_we_have_just_launched_our_service_title: We have just launched our service
   shared:

@@ -1,4 +1,6 @@
 class Authentication < ActiveRecord::Base
+  store_accessor :meta, :gitlab_private_token
+
   belongs_to :user
 
   validates :provider, :uid, :token, :presence => true
@@ -24,7 +26,8 @@ class Authentication < ActiveRecord::Base
         a.assign_attributes(
           :meta => params.to_json,
           :token => params[:credentials].try(:[], :token),
-          :secret => params[:credentials].try(:[], :secret)
+          :secret => params[:credentials].try(:[], :secret),
+          :gitlab_private_token => params['extra'].try(:[], 'raw_info').try(:[], 'private_token')
         )
       end
     end
@@ -53,6 +56,8 @@ class Authentication < ActiveRecord::Base
     user.has_github_account = (user.authentications.where(:provider => 'github').size > 0) 
 
     user.has_bitbucket_account = (user.authentications.where(:provider => 'bitbucket').size > 0) 
+
+    user.has_gitlab_account = (user.authentications.where(:provider => 'gitlab').size > 0) 
 
     user.save
   end

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  store_accessor :meta, :sync_with_github, :sync_with_bitbucket, :has_github_account, :has_bitbucket_account
+  store_accessor :meta, :sync_with_github, :sync_with_bitbucket, :has_github_account, :has_bitbucket_account,
+    :gitlab_endpoing, :sync_with_gitlab, :has_gitlab_account
 
   devise :database_authenticatable, :registerable, :confirmable, :async,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
@@ -29,6 +30,96 @@ class User < ActiveRecord::Base
     avatar_url.present? ? avatar_url : gravatar_url
   end
 
+  def sync_gitlab
+    return unless (client = gitlab_client)
+
+    sync_gitlab_projects(client)
+
+    sync_gitlab_issues(client)
+
+    create_gitlab_hook(client)
+
+    self.update_attribute(:sync_with_gitlab, false)
+
+    broadcast_stop_sync_notification('github')
+  end
+
+  def sync_gitlab_projects(client)
+    client.projects.auto_paginate.each do |repo|
+      project = Project.where("meta ->> 'gitlab_repository_id' = '?'", repo.id).first
+
+      project = Project.new.tap { |p| p.gitlab_repository_id = repo.id } unless project.present?
+
+      u_t_p_c = if project.persisted? 
+        project.user_to_project_connections.where(:user_id => id).first_or_initialize
+      else
+        project.user_to_project_connections.build(:user_id => id)
+      end
+
+      u_t_p_c.role = repo.owner.name == client.user.name ? 'owner' : 'member'
+
+      project.name = repo.name
+
+      project.gitlab_name = repo.name
+
+      project.gitlab_url = repo.web_url
+
+      project.gitlab_full_name = repo.path_with_namespace
+
+      project.is_gitlab_repository = true
+
+      project.save!
+    end
+  end
+
+  def sync_gitlab_issues(client)
+    projects.where("meta -> 'is_gitlab_repository' = 'true'").each do |project|
+      client.issues(project.gitlab_repository_id).auto_paginate.each do |gitlab_issue|
+        issue = project.issues.where("meta ->> 'gitlab_issue_id' = '?'", gitlab_issue.id).first 
+
+        issue = project.issues.build.tap { |i| i.gitlab_issue_id = gitlab_issue.id } unless issue.present?
+
+        issue.assign_attributes(
+          :title => gitlab_issue.title,
+          :body => gitlab_issue.description,
+          :tags => gitlab_issue.labels)
+
+        issue.save!
+      end
+    end
+  end
+
+  def create_gitlab_hook(client)
+    projects.where("meta -> 'is_gitlab_repository' = 'true'").each do |project|
+      begin
+        project.gitlab_secret_token_for_hook ||= SecureRandom.hex(20)
+
+        project.save
+
+        hook = client.project_hooks(project.gitlab_repository_id).select do |hook|
+          hook.url == Rails.application.routes.url_helpers.
+            payload_from_gitlab_project_url(project, :secure_token => project.gitlab_secret_token_for_hook,
+              :host => Settings.webhook_host) 
+        end.first
+
+        client.add_project_hook(project.gitlab_repository_id, Rails.application.routes.url_helpers.
+          payload_from_gitlab_project_url(project, :secure_token => project.gitlab_secret_token_for_hook,
+            :host => Settings.webhook_host), { :issues_events => 1, :push_events => 0 }) unless hook.present? 
+      rescue Octokit::NotFound
+      end
+    end
+  end
+
+  def gitlab_client
+    authentication = authentications.where(:provider => 'gitlab').first 
+
+    return false unless authentication.present?
+
+    Gitlab.endpoint = gitlab_endpoing.present? ? gitlab_endpoing : 'https://gitlab.com/api/v3'
+
+    Gitlab.tap { |client| client.private_token = authentication.gitlab_private_token }
+  end
+
   def sync_bitbucket
     return unless (client = bitbucket_client).present?
 
@@ -40,7 +131,7 @@ class User < ActiveRecord::Base
 
     self.update_attribute(:sync_with_bitbucket, false)
 
-    send_end_sync_bitbucket_notification
+    broadcast_stop_sync_notification('bitbucket')
   end
 
   def bitbucket_client
@@ -150,7 +241,7 @@ class User < ActiveRecord::Base
 
     self.update_attribute(:sync_with_github, false)
 
-    send_end_sync_github_notification
+    broadcast_stop_sync_notification('github')
   end
 
   def github_client
@@ -246,14 +337,6 @@ class User < ActiveRecord::Base
   end
 
   private
-
-  def send_end_sync_github_notification
-    broadcast_stop_sync_notification('github')
-  end
-
-  def send_end_sync_bitbucket_notification
-    broadcast_stop_sync_notification('bitbucket')
-  end
 
   def broadcast_stop_sync_notification(provider)
     ActionCable.server.broadcast "user_notifications_#{ id }",

@@ -1,16 +1,18 @@
 class ProjectsController < ApplicationController
-  load_and_authorize_resource :user, :except => [:payload_from_bitbucket, :payload_from_github]
+  load_and_authorize_resource :user, :except => [:payload_from_bitbucket,
+    :payload_from_github, :payload_from_gitlab]
 
   load_resource :project, :through => :user, :shallow => true
 
   authorize_resource :project, :through => :user, :shallow => true,
-    :except => [:payload_from_github, :payload_from_bitbucket]
+    :except => [:payload_from_github, :payload_from_bitbucket, :payload_from_gitlab]
 
   before_filter :handle_issues_attributes, :only => [:update]
 
   before_filter :assign_owner, :only => [:create]
 
-  skip_before_filter :verify_authenticity_token, :only => [:payload_from_github, :payload_from_bitbucket]
+  skip_before_filter :verify_authenticity_token, :only => [:payload_from_github,
+    :payload_from_bitbucket, :payload_from_gitlab]
 
   def index
     @projects = @user.projects.order('created_at DESC').page(params[:page])
@@ -64,6 +66,16 @@ class ProjectsController < ApplicationController
   def payload_from_bitbucket
     if params[:secure_token] == @project.bitbucket_secret_token_for_hook
       @project.parse_issue_params_from_bitbucket_webhook(params[:issue]) if params[:issue].present?
+    end
+
+    render :status => 200, :nothing => true
+  end
+
+  def payload_from_gitlab
+    if params[:secure_token] == @project.gitlab_secret_token_for_hook
+      if params[:object_attributes].present?
+        @project.parse_issue_params_from_gitlab_webhook(params[:object_attributes]) 
+      end
     end
 
     render :status => 200, :nothing => true
