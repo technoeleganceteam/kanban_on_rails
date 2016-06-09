@@ -33,7 +33,7 @@ gem 'octokit'
 gem 'cocoon'
 gem 'omniauth-bitbucket'
 # until fix this issue https://github.com/bitbucket-rest-api/bitbucket/issues/67
-gem 'bitbucket_rest_api', :git => 'https://github.com/bitbucket-rest-api/bitbucket.git'
+gem 'bitbucket_rest_api', :git => 'https://github.com/technoeleganceteam/bitbucket.git'
 gem 'postmark-rails'
 
 gem 'sass-rails'

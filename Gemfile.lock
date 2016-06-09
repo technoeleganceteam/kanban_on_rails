@@ -1,16 +1,4 @@
 GIT
-  remote: https://github.com/bitbucket-rest-api/bitbucket.git
-  revision: 650c0a47b728749fc595cc890da3b3c73800dc5e
-  specs:
-    bitbucket_rest_api (0.1.7)
-      faraday (~> 0.9.0)
-      faraday_middleware (~> 0.9.0)
-      hashie
-      multi_json (>= 1.7.5, < 2.0)
-      nokogiri (>= 1.5.2)
-      simple_oauth
-
-GIT
   remote: https://github.com/rails/actioncable.git
   revision: 265535ce93402d81cf621ef6c794cd9d25bc279e
   ref: 265535
@@ -31,6 +19,18 @@ GIT
   specs:
     turbolinks (3.0.0)
       coffee-rails
+
+GIT
+  remote: https://github.com/technoeleganceteam/bitbucket.git
+  revision: 503ae118bb06bd5f7f07dd19385f93bbfab689d5
+  specs:
+    bitbucket_rest_api (0.1.7)
+      faraday (~> 0.9.0)
+      faraday_middleware (~> 0.9.0)
+      hashie
+      multi_json (>= 1.7.5, < 2.0)
+      nokogiri (>= 1.5.2)
+      simple_oauth
 
 GEM
   remote: https://rubygems.org/

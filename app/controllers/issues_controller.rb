@@ -23,6 +23,8 @@ class IssuesController < ApplicationController
 
   def create
     if @issue.save
+      enqueue_issue_sync
+
       redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
     else
       render :new
@@ -31,6 +33,8 @@ class IssuesController < ApplicationController
 
   def update
     if @issue.update_attributes(issue_params)
+      enqueue_issue_sync
+
       redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
     else
       render :edit
@@ -51,5 +55,9 @@ class IssuesController < ApplicationController
 
   def assign_user
     @issue.user_to_issue_connections.build(:user_id => current_user.id, :role => 'creator')
+  end
+
+  def enqueue_issue_sync
+    Issue.user_change_issue(@issue.id, current_user.id)
   end
 end

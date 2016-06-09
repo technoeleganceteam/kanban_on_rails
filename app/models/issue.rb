@@ -37,12 +37,6 @@ class Issue < ActiveRecord::Base
       project.columns.where(:id => target_column_id.to_i).first.try(:tags).to_a
   end
 
-  def enqueue_issue_sync(user_id)
-    return unless github_issue_id.present?
-
-    SyncGithubIssueWorker.perform_async(id, user_id)
-  end
-
   def sync_with_github(user_id)
     user = User.where(:id => user_id).first
 
@@ -52,7 +46,37 @@ class Issue < ActiveRecord::Base
 
     return unless client.present?
 
-    client.update_issue(project.github_full_name, github_issue_number, :labels => tags)
+    if github_issue_number.present?
+      client.update_issue(project.github_full_name, github_issue_number,
+        :title => title, :body => body, :labels => tags)
+    else
+      result = client.create_issue(project.github_full_name, title, body, :labels => tags)
+
+      update_attributes(:github_issue_id => result.try(:id),
+        :github_issue_number => result.try(:number),
+        :github_issue_comments_count => result.try(:comments),
+        :github_issue_html_url => result.try(:html_url),
+        :github_labels => result.try(:labels))
+    end
+  end
+
+  def sync_with_bitbucket(user_id)
+    user = User.where(:id => user_id).first
+
+    return unless user.present?
+
+    client = user.bitbucket_client
+
+    return unless client.present?
+
+    if bitbucket_issue_id.present?
+      client.issues.edit(project.bitbucket_owner, project.bitbucket_slug, bitbucket_issue_id,
+        'title' => title, 'content' => body)
+    else
+      result = client.issues.create(project.bitbucket_owner, project.bitbucket_slug, { 'title' => title })
+
+      update_attributes!(:bitbucket_issue_id => result.id)
+    end
   end
 
   def parse_attributes_for_update(attributes)
@@ -65,7 +89,9 @@ class Issue < ActiveRecord::Base
 
       return unless issue.present?
 
-      issue.enqueue_issue_sync(user_id) if issue.github_issue_id.present?
+      SyncGithubIssueWorker.perform_async(issue_id, user_id) if issue.project.is_github_repository
+
+      SyncBitbucketIssueWorker.perform_async(issue_id, user_id) if issue.project.is_bitbucket_repository
 
       NotificationWorker.perform_async(issue_id, user_id)
     end

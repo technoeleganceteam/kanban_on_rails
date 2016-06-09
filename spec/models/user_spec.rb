@@ -80,9 +80,9 @@ describe User, :type => :model do
 
       user.user_to_project_connections.create :project => project, :role => 'owner'
       
-      stub_request(:get, 'https://api.bitbucket.org/1.0/user/repositories').
-        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
+      stub_request(:get, "https://api.bitbucket.org/1.0/user/repositories?user=username").
+        with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type'=>'application/json', 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
         to_return(:status => 200, :headers => {}, :body => [{
           :slug => 'slug',
           :name => 'name', 
@@ -92,6 +92,7 @@ describe User, :type => :model do
           :name => 'name2', 
           :owner => 'username',
         }].to_json)
+
 
       stub_request(:get, 'https://api.bitbucket.org/1.0/user').
         with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -135,6 +136,13 @@ describe User, :type => :model do
           'Authorization' => /.*/, 'User-Agent'=>'BitBucket Ruby Gem 0.1.7'}).
         to_return(:status => 200, :headers => {}, :body => {
           :values => [{ :description => 'kanbanonrails' }]}.to_json.to_s)
+
+      stub_request(:post, "https://api.bitbucket.org/2.0/repositories/username/slug/hooks").
+        with(:body => /.*/, :headers => { 'Accept' => '*/*',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type' => 'application/json',
+          'User-Agent' => 'BitBucket Ruby Gem 0.1.7'}).
+        to_return(:status => 200, :headers => {}, :body => {}.to_json.to_s)
 
       project_2 = create :project, :github_repository_id => 123, :name => 'Some name'
 
