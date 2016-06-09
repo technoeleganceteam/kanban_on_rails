@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
 
     self.update_attribute(:sync_with_gitlab, false)
 
-    broadcast_stop_sync_notification('github')
+    broadcast_stop_sync_notification('gitlab')
   end
 
   def sync_gitlab_projects(client)

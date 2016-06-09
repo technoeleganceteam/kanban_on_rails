@@ -16,6 +16,13 @@
         | &nbsp;
         i.fa.fa-refresh.fa-spin.fa-fw
 
+    - if current_user.has_gitlab_account && current_user.sync_with_gitlab
+      = link_to user_projects_url(current_user),
+        :class => 'btn btn-default navbar-btn', :id => 'navbar_gitlab_sync_info' do
+        = t '.syncing_with_gitlab'
+        | &nbsp;
+        i.fa.fa-refresh.fa-spin.fa-fw
+
     a.btn.btn-success.navbar-btn href = '#' data-target = '#new_project_modal' data-toggle = 'modal'
       i.fa.fa-plus
 
