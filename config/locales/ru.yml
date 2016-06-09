@@ -146,6 +146,8 @@ ru:
       edit_issue: Изменить задачу
     new:
       new_issue: Новая задача
+    issue_modal:
+      issue: Задача
   authentications:
     index:
       enabled_services: Включенные сервисы

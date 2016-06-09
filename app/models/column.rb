@@ -14,6 +14,7 @@ class Column < ActiveRecord::Base
   end
 
   def column_issues_for_section(section_id)
-    issue_to_section_connections.where(:section_id => section_id.to_i).order('issue_order ASC').includes(:issue)
+    issue_to_section_connections.where(:section_id => section_id.to_i).
+      order('issue_order ASC').includes(:issue => :project)
   end
 end

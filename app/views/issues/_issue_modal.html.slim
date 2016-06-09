@@ -1,0 +1,13 @@
+#issue_modal.modal.fade [ aria-hidden = 'true'
+  aria-labelledby = 'issue_title' role = 'dialog' tabindex = '-1'] 
+  
+  .modal-dialog role = 'document'
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+
+        h4#issue_title.modal-title = (t '.issue')
+      .modal-body
+        .row
+          .col-md-12
+            #issue_form

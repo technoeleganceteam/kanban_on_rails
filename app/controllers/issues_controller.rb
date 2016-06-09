@@ -23,7 +23,7 @@ class IssuesController < ApplicationController
 
   def create
     if @issue.save
-      redirect_to project_url(@issue.project), :turbolinks => true
+      redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
     else
       render :new
     end
@@ -31,7 +31,7 @@ class IssuesController < ApplicationController
 
   def update
     if @issue.update_attributes(issue_params)
-      redirect_to project_url(@issue.project), :turbolinks => true
+      redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
     else
       render :edit
     end

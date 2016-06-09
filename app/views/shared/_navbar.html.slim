@@ -21,18 +21,18 @@
 
   - if params[:controller] == 'projects' && params[:action] == 'show' && can?(:create, Issue)
     | &nbsp;"
-    a.btn.btn-success href = '#' data-target = '#new_issue_modal' data-toggle = 'modal'
+    = link_to new_project_issue_url(@project), :remote => true, :class => 'btn btn-success' do
       = t '.new_issue'
       | &nbsp;
       i.fa.fa-plus
 
-    - if @project.present?
-      | &nbsp;
-      a.btn.btn-default href = '#' data-target = '#edit_project_modal' data-toggle = 'modal'
-        = t '.edit_project'
-        | &nbsp;"
-        = @project.name
-        | "
+  - if params[:controller] == 'projects' && params[:action] == 'show'
+    | &nbsp;
+    a.btn.btn-default href = '#' data-target = '#edit_project_modal' data-toggle = 'modal'
+      = t '.edit_project'
+      | &nbsp;"
+      = @project.name
+      | "
 
   ul.nav.navbar-nav.navbar-right
     li class = '#{ 'active' if params[:action] == 'dashboard'  }'

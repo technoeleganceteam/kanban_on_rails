@@ -224,6 +224,8 @@ en: &all
       edit_issue: Edit issue
     new:
       new_issue: New issue
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Enabled services

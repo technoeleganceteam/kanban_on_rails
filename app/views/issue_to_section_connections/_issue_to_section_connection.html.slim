@@ -8,6 +8,9 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
     - if issue.github_issue_number.present?
       | &nbsp;
       small.blue = issue.github_issue_number
+    small.pull-right
+      = link_to edit_project_issue_url(issue.project, issue), :remote => true do
+        i.fa.fa-pencil
   p
     - if issue.github_issue_html_url.present?
       = link_to issue.github_issue_html_url do

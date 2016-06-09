@@ -47,10 +47,10 @@ html
 
     = render 'shared/notification_icon'
 
+    = render 'issues/issue_modal'
+
     - if user_signed_in?
       = render 'shared/new_project_modal'
 
       - if @project.present? && @project.persisted?
-        = render 'shared/new_issue_modal'
-
         = render 'shared/edit_project_modal', :project => @project

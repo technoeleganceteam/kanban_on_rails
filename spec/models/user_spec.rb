@@ -21,7 +21,7 @@ describe User, :type => :model do
 
       user.user_to_project_connections.create :project => project, :role => 'owner'
 
-      stub_request(:get, 'https://api.github.com/user/repos').
+      stub_request(:get, 'https://api.github.com/user/repos?per_page=100').
         with(:headers => { 'Accept' => 'application/vnd.github.v3+json',
           'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Authorization'=>'token token', 'Content-Type'=>'application/json',
@@ -40,7 +40,7 @@ describe User, :type => :model do
           })])
 
 
-      stub_request(:get, 'https://api.github.com/repos/some/name/issues').
+      stub_request(:get, 'https://api.github.com/repos/some/name/issues?per_page=100').
         with(:headers => { 'Accept' => 'application/vnd.github.v3+json',
           'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Authorization' => 'token token', 'Content-Type' => 'application/json',
@@ -53,7 +53,7 @@ describe User, :type => :model do
           :labels => [{ :name => 'test' }]
         })])
 
-      stub_request(:get, 'https://api.github.com/repos/some/name/hooks').
+      stub_request(:get, 'https://api.github.com/repos/some/name/hooks?per_page=100').
         with(:headers => {'Accept' => 'application/vnd.github.v3+json',
           'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Authorization' => 'token token', 'Content-Type'=>'application/json',
