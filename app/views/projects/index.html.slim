@@ -25,6 +25,18 @@ ul.list-group#infinite_scroll_projects
 
           | &nbsp;
 
+      - if current_user.sync_with_gitlab.present? && current_user.sync_with_gitlab == true
+        = link_to (t '.stop_sync_with_gitlab'), stop_sync_with_gitlab_user_projects_url(current_user),
+          :class => 'btn btn-success btn-xs', :remote => true
+
+        | &nbsp;
+      - else
+        - if current_user.has_gitlab_account
+          = link_to (t '.sync_with_gitlab'), sync_with_gitlab_user_projects_url(current_user),
+            :class => 'btn btn-success btn-xs', :remote => true
+
+          | &nbsp;
+
       a.btn.btn-success.btn-xs href = '#' data-target = '#new_project_modal' data-toggle = 'modal'
         = t '.new'
   = render @projects

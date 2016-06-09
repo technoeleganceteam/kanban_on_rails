@@ -26,6 +26,14 @@ class ProjectsController < ApplicationController
     redirect_to user_projects_url(@user), :turbolinks => true
   end
 
+  def sync_with_gitlab
+    current_user.update_attribute(:sync_with_gitlab, true)
+
+    SyncGitlabWorker.perform_async(@user.id)
+
+    redirect_to user_projects_url(@user), :turbolinks => true
+  end
+
   def sync_with_bitbucket
     current_user.update_attribute(:sync_with_bitbucket, true)
     
@@ -36,6 +44,12 @@ class ProjectsController < ApplicationController
 
   def stop_sync_with_github
     current_user.update_attribute(:sync_with_github, false)
+
+    redirect_to user_projects_url(@user), :turbolinks => true
+  end
+
+  def stop_sync_with_gitlab
+    current_user.update_attribute(:sync_with_gitlab, false)
 
     redirect_to user_projects_url(@user), :turbolinks => true
   end

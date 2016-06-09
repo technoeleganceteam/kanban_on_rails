@@ -15,6 +15,8 @@ RSpec.describe ProjectsController, :type => :controller do
 
   it { should route(:get, '/users/1/projects/sync_with_github').to(:action => :sync_with_github, :user_id => 1) }
 
+  it { should route(:get, '/users/1/projects/sync_with_gitlab').to(:action => :sync_with_gitlab, :user_id => 1) }
+
   it { should route(:get, '/users/1/projects/sync_with_bitbucket').
     to(:action => :sync_with_bitbucket, :user_id => 1) }
 
@@ -109,6 +111,16 @@ RSpec.describe ProjectsController, :type => :controller do
       end
     end
 
+    describe 'GET sync_with_gitlab' do
+      before { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }
+
+      it do
+        expect(response.body).to eq(
+          "Turbolinks.visit('http://test.host/users/#{ user.id }/projects');"
+        )
+      end
+    end
+
     describe 'GET sync_with_bitbucket' do
       before { xhr :get, :sync_with_bitbucket, :id => connection.project.id, :user_id => user, :format => :js }
 
@@ -121,6 +133,17 @@ RSpec.describe ProjectsController, :type => :controller do
 
     describe 'GET stop_sync_with_github' do
       before { xhr :get, :stop_sync_with_github,
+        :id => connection.project.id, :user_id => user, :format => :js }
+
+      it do
+        expect(response.body).to eq(
+          "Turbolinks.visit('http://test.host/users/#{ user.id }/projects');"
+        )
+      end
+    end
+
+    describe 'GET stop_sync_with_gitlab' do
+      before { xhr :get, :stop_sync_with_gitlab,
         :id => connection.project.id, :user_id => user, :format => :js }
 
       it do
@@ -321,6 +344,11 @@ RSpec.describe ProjectsController, :type => :controller do
 
     describe 'GET sync_with_github' do
       it { expect { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }.
+        to raise_error(CanCan::AccessDenied) }
+    end
+
+    describe 'GET sync_with_gitlab' do
+      it { expect { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }.
         to raise_error(CanCan::AccessDenied) }
     end
 

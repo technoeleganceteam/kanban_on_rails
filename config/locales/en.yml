@@ -163,6 +163,7 @@ en: &all
       projects: Projects
       new: New
       sync_with_github: Sync with github
+      sync_with_github: Sync with gitlab
       sync_with_bitbucket: Sync with bitbucket
       stop_sync_with_bitbucket: Stop sync with bitbucket
       stop_sync_with_github: Stop sync with github

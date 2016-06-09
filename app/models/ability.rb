@@ -29,11 +29,15 @@ class Ability
 
       can :sync_with_github, Project
 
+      can :sync_with_gitlab, Project
+
       can :sync_with_bitbucket, Project
 
       can :stop_sync_with_github, Project
 
       can :stop_sync_with_bitbucket, Project
+
+      can :stop_sync_with_gitlab, Project
 
       can :manage, Project do |project|
         project.user_to_project_connections.where(:user_id => user.id, :role => 'owner').first.present?
