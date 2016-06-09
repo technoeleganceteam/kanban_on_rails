@@ -16,6 +16,11 @@ li.list-group-item
     = link_to "#{ Settings.bitbucket_base_url }/#{ project.bitbucket_full_name }" do
       i.fa.fa-bitbucket
 
+  - if project.gitlab_full_name.present?
+    | &nbsp;
+    = link_to "#{ Settings.gitlab_base_url }/#{ project.gitlab_full_name }" do
+      i.fa.fa-gitlab
+
   .pull-right
     = link_to (t '.project_users'), project_users_url(project), :class => 'btn btn-default btn-xs'
 
