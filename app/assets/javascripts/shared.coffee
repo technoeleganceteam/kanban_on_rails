@@ -62,17 +62,17 @@ set_sortable_positions = ->
       $(@).find('.order').last().find('input').val(i + 1)
 
 window.init_infinite_scroll = (ids) ->
+  window.loading = false
+
   for id in ids
-    window.loading = false
+    do (id) ->
+      $("##{ id }").scroll (e) ->
+        url = $("##{ id }").find('.next_page_infinite_scroll').attr('href')
 
-    $("##{ id }").scroll (e) ->
-      url = $("##{ id }").find('.next_page_infinite_scroll').attr('href')
+        if window.loading == false && url && ($(@).scrollTop() + $(@).innerHeight() >= $(@)[0].scrollHeight)
+          window.loading = true
 
-      if window.loading == false && url && ($(@).scrollTop() + $(@).innerHeight() >= $(@)[0].scrollHeight)
-        window.loading = true
-
-        $.getScript(url)
-      return
+          $.getScript(url)
 
 init_functions = ->
   init_tags()
