@@ -13,6 +13,7 @@ git_repository: git@github.com:technoeleganceteam/kanban_on_rails.git
 github_repository_url: https://github.com/technoeleganceteam/kanban_on_rails
 bitbucket_base_url: https://bitbucket.com
 gitlab_base_url: https://gitlab.com
+gitlab_endpoint: https://gitlab.com/api/v3
 postgresql:
   test_database_name: travis_ci_test
   username: postgres

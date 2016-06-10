@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   store_accessor :meta, :sync_with_github, :sync_with_bitbucket, :has_github_account, :has_bitbucket_account,
-    :gitlab_endpoing, :sync_with_gitlab, :has_gitlab_account
+    :sync_with_gitlab, :has_gitlab_account
 
   devise :database_authenticatable, :registerable, :confirmable, :async,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
@@ -114,7 +114,7 @@ class User < ActiveRecord::Base
 
     return false unless authentication.present?
 
-    Gitlab.endpoint = gitlab_endpoing.present? ? gitlab_endpoing : 'https://gitlab.com/api/v3'
+    Gitlab.endpoint = Settings.gitlab_endpoint
 
     Gitlab.tap { |client| client.private_token = authentication.gitlab_private_token }
   end
