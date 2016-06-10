@@ -30,18 +30,20 @@ class User < ActiveRecord::Base
     avatar_url.present? ? avatar_url : gravatar_url
   end
 
-  def sync_gitlab
-    return unless (client = gitlab_client)
+  %w(gitlab github bitbucket).each do |provider|
+    define_method "sync_#{ provider }" do
+      return unless (client = send("#{ provider }_client"))
 
-    sync_gitlab_projects(client)
+      send("sync_#{ provider }_projects", client)
 
-    sync_gitlab_issues(client)
+      send("sync_#{ provider }_issues", client)
 
-    create_gitlab_hook(client)
+      send("create_#{ provider }_hook", client)
 
-    self.update_attribute(:sync_with_gitlab, false)
+      self.update_attribute("sync_with_#{ provider }", false)
 
-    broadcast_stop_sync_notification('gitlab')
+      broadcast_stop_sync_notification(provider)
+    end
   end
 
   def sync_gitlab_projects(client)
@@ -58,15 +60,12 @@ class User < ActiveRecord::Base
 
       u_t_p_c.role = repo.owner.name == client.user.name ? 'owner' : 'member'
 
-      project.name = repo.name
-
-      project.gitlab_name = repo.name
-
-      project.gitlab_url = repo.web_url
-
-      project.gitlab_full_name = repo.path_with_namespace
-
-      project.is_gitlab_repository = true
+      project.assign_attributes(
+        :name => repo.name,
+        :gitlab_name => repo.name,
+        :gitlab_url => repo.web_url,
+        :gitlab_full_name => repo.path_with_namespace,
+        :is_gitlab_repository => true)
 
       project.save!
     end
@@ -120,20 +119,6 @@ class User < ActiveRecord::Base
     Gitlab.tap { |client| client.private_token = authentication.gitlab_private_token }
   end
 
-  def sync_bitbucket
-    return unless (client = bitbucket_client).present?
-
-    sync_bitbucket_projects(client)
-
-    sync_bitbucket_issues(client)
-
-    create_bitbucket_hook(client)
-
-    self.update_attribute(:sync_with_bitbucket, false)
-
-    broadcast_stop_sync_notification('bitbucket')
-  end
-
   def bitbucket_client
     authentication = authentications.where(:provider => 'bitbucket').first 
 
@@ -161,15 +146,12 @@ class User < ActiveRecord::Base
       u_t_p_c.role = (repo.owner == client.user_api.profile.try(:[], 'user').try(:[], 'username')) ? 'owner' :
         'member'
 
-      project.name ||= repo.name
-
-      project.bitbucket_name = repo.name
-
-      project.bitbucket_slug = repo.slug
-
-      project.bitbucket_owner = repo.owner
-
-      project.is_bitbucket_repository = true
+      project.assign_attributes(
+        :name => repo.name,
+        :bitbucket_name => repo.name,
+        :bitbucket_slug => repo.slug,
+        :bitbucket_owner => repo.owner,
+        :is_bitbucket_repository => true)
 
       project.save!
     end
@@ -186,11 +168,10 @@ class User < ActiveRecord::Base
             issue = project.issues.build.tap { |i| i.bitbucket_issue_id = bitbucket_issue.local_id } 
           end
 
-          issue.title = bitbucket_issue.title
-
-          issue.body = bitbucket_issue.content
-
-          issue.bitbucket_issue_comment_count = bitbucket_issue.comment_count
+          issue.assign_attributes(
+            :title => bitbucket_issue.title,
+            :body => bitbucket_issue.content,
+            :bitbucket_issue_comment_count => bitbucket_issue.comment_count)
 
           issue.save!
         end
@@ -230,20 +211,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def sync_github
-    return unless (client = github_client).present?
-
-    sync_github_projects(client)
-
-    sync_github_issues(client)
-
-    create_github_hook(client)
-
-    self.update_attribute(:sync_with_github, false)
-
-    broadcast_stop_sync_notification('github')
-  end
-
   def github_client
     authentication = authentications.where(:provider => 'github').first 
 
@@ -266,15 +233,12 @@ class User < ActiveRecord::Base
 
       u_t_p_c.role = repo.permissions[:admin] == true ? 'owner' : 'member'
 
-      project.name ||= repo.name
-
-      project.github_name = repo.name
-
-      project.github_url = repo.html_url
-
-      project.github_full_name = repo.full_name
-
-      project.is_github_repository = true
+      project.update_attributes(
+        :name => repo.name,
+        :github_name => repo.name,
+        :github_url => repo.html_url,
+        :github_full_name => repo.full_name,
+        :is_github_repository => true)
 
       project.save!
     end
