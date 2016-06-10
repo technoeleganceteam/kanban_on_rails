@@ -7,8 +7,8 @@
 ![Example Kanban board](https://raw.githubusercontent.com/technoeleganceteam/kanban_on_rails/master/app/assets/images/welcome_image_example.jpg "Example Kanban board")
 
 ### Features
-- **Integration with Bitbucket and Github.** Your projects and issues can be synced with these services. All changes with issues will be synced via webhooks and api.
-- **Inviting users to your projects** You can invite user that has no Github or Gitlab account to your project as manager for example, so he will not see your project code but he will see your issues.
+- **Integration with Github, Bitbucket and Gitlab.** Your projects and issues can be synced with these services. All changes with issues will be synced via webhooks and api.
+- **Inviting users to your projects** You can invite user that has no Github, Bitbucket or Gitlab account to your project as manager for example, so he will not see your project code but he will see your issues.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
 
 ### System dependencies
@@ -58,7 +58,9 @@ sudo apt-get install redis-server
 ```
 After installation packages listed above you should clone this github repository to your computer and run ```bundle install``` at the root of the project directory. Create file ```config/settings.local.yml``` with your local settings and run ```rake db:migrate```  
 ### How to deploy to your server
-Easiest way is to clone this repository to your computer, check that your server meets dependencies listed above and run ```cap deploy production``` from your computer. You can also create Github or Bitbucket Oauth app and specify it credentials in omniauth section in ```config/settings.local.yml``` on your server.
+Easiest way is to clone this repository to your computer, check that your server meets dependencies listed above and run ```cap deploy production``` from your computer. You can also create Github, Bitbucket or Gitlab Oauth app and specify it credentials in omniauth section in ```config/settings.local.yml``` on your server.
+### Hot to integrate with your own Gitlab server
+If you'd like to integrate with your own Gitlab server, first you must deploy this service to your server too and then you must specify Settings.omniauth.gitlab.client_options of gitlab service. It contains 3 keys: site(url of your gitlab service), authorize_url(usually '/oauth/authorize') and token_url(usually '/oauth/token'). After this you could sign in with your Gitlab service and use your own Gitlab service api to sync your projects. 
 ### How to run test suite
 After local installation you can run specs with command ```rake spec```
 ### How to contribute
