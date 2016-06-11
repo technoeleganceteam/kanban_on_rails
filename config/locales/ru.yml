@@ -83,10 +83,12 @@ ru:
     index:
       projects: Проекты
       new: Новый
+      sync_with_gitlub: Синхронизация с Gitlab
       sync_with_github: Синхронизация с GitHub
       sync_with_bitbucket: Синхронизация с BitBucket
       stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
       stop_sync_with_github: Остановка синхронизации с GitHub
+      stop_sync_with_gitlab: Остановка синхронизации с Gitlab
     form:
       name: Имя
       enter_project_name: Введите имя проекта

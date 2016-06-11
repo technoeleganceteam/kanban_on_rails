@@ -163,11 +163,12 @@ en: &all
     index:
       projects: Projects
       new: New
-      sync_with_github: Sync with github
-      sync_with_github: Sync with gitlab
-      sync_with_bitbucket: Sync with bitbucket
-      stop_sync_with_bitbucket: Stop sync with bitbucket
-      stop_sync_with_github: Stop sync with github
+      sync_with_github: Sync with Github
+      sync_with_gitlab: Sync with Gitlab
+      sync_with_bitbucket: Sync with Bitbucket
+      stop_sync_with_bitbucket: Stop sync with Bitbucket
+      stop_sync_with_github: Stop sync with Github
+      stop_sync_with_gitlab: Stop sync with Gitlab
     form:
       name: Name
       enter_project_name: Enter project name
