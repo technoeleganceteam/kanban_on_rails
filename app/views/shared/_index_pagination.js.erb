@@ -14,11 +14,11 @@
 
 <% if defined? paginate_items %>
   <% if !paginate_items.last_page? %>
-    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => paginate_items %>');
+    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => paginate_items, :section_id => section_id, :board_id => board_id, :column_id => column_id %>');
   <% end %>
 <% else %>
   <% if !items.last_page? %>
-    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => items %>');
+    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => items, :section_id => section_id, :board_id => board_id, :column_id => column_id %>');
   <% end %>
 <% end %>
 
