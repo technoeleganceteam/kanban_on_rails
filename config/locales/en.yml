@@ -125,6 +125,8 @@ en: &all
       info: Info
       mailer: Mailer
       technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Next page
   users:
     new:
       invite_user: Invite user

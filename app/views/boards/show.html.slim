@@ -22,9 +22,8 @@
         id = "section_#{ section.id }_column_#{ column.id }"]
         = render column.column_issues_for_section(section.id).page(params[:page])
 
-        = link_to_next_page column.column_issues_for_section(section.id).page(params[:page]), (t '.next_page'),
-          :class => 'next_page_infinite_scroll hidden', :remote => true,
-          :params => { :section_id => section.id, :column_id => column.id,
-            :controller => :issues, :action => :index, :board_id => @board.id }
+        = render 'shared/pagination_link',
+          :items => column.column_issues_for_section(section.id).page(params[:page]),
+          :section_id => section.id, :column_id => column.id, :board_id => @board.id
 
 = render 'init_dragula'

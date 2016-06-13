@@ -46,6 +46,8 @@ ru:
       select_column_tags: Выберите теги столбцов
       select_section_tags: Выберите теги раздела
       select_issue_tags: Выберите теги задачи
+    pagination_link:
+      next_page: Следующая страница
   users:
     new:
       invite_user: Пригласить пользователя
