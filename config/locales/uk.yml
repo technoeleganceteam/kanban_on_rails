@@ -2,6 +2,7 @@
 uk:
   github: Github
   bitbucket: BitBucket
+  gitlab: Gitlab
   updated: оновлення
   1_we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс
   shared:
@@ -11,9 +12,11 @@ uk:
       projects: Проекти
       issues: питання
       syncing_with_github: Синхронізація з Github ...
+      syncing_with_gitlab: Синхронізація з Gitlab ...
       syncing_with_bitbucket: Синхронізація з Bitbucket ...
       new_issue: Новий випуск
       edit_project: Змінити проект
+      boards: Дошки
     languages_select_modal:
       available_languages: Доступні мови
     user_edit_menu:
@@ -24,7 +27,7 @@ uk:
       password: Пароль
       current_password: Поточний пароль
       name: Ім'я
-      base: Базовий
+      base: Base
       title: Назва
       user_to_project_connection: Користувач проекту підключення
       columns:
@@ -36,15 +39,21 @@ uk:
     new_issue_modal:
       new_issue: Новий випуск
     left_sidebar:
-      projects: Проекти
+      boards: плати
     right_sidebar:
       news: Новини
       all: Все
       read_more: Детальніше
-    translations:
+    javascript_global_variables:
       select_column_tags: Виберіть мітки стовпців
-      select_section_tags: Виберіть мітки розділу
+      select_section_tags: Виберіть теги розділу
       select_issue_tags: Виберіть теги випуск
+    email_signature:
+      info: Інформація
+      mailer: Мейлер
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Наступна сторінка
   users:
     new:
       invite_user: Запросити користувача
@@ -52,13 +61,13 @@ uk:
       name: Ім'я
       enter_user_name: Введіть ім'я користувача
       email: E-mail
-      enter_user_email: Введіть електронну пошту користувача
+      enter_user_email: Вхід користувача електронної пошти
       enter_user_password: Введіть пароль користувача
       password: Пароль
       save: Зберегти
     index:
       project: проекту
-      users: користувачі
+      users: користувачів
       new: Новий
     edit:
       name: Ім'я
@@ -79,14 +88,17 @@ uk:
       hello: Привіт
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
+      boards: Дошки
   projects:
     index:
       projects: Проекти
       new: Новий
-      sync_with_github: Синхронізація з GitHub
-      sync_with_bitbucket: Синхронізація з BitBucket
-      stop_sync_with_bitbucket: Зупинка синхронізації з BitBucket
-      stop_sync_with_github: Зупинка синхронізації з GitHub
+      sync_with_github: Синхронізація з Github
+      sync_with_gitlab: Синхронізація з Gitlab
+      sync_with_bitbucket: Синхронізація з Bitbucket
+      stop_sync_with_bitbucket: Зупинка синхронізації з Bitbucket
+      stop_sync_with_github: Зупинка синхронізації з Github
+      stop_sync_with_gitlab: Зупинка синхронізації з Gitlab
     form:
       name: Ім'я
       enter_project_name: Введіть ім'я проекту
@@ -114,7 +126,13 @@ uk:
       column_tags: мітки стовпців
       column_order: Замовити
     show:
-      next_page: Наступна сторінка
+      project: проекту
+      related_boards: Схожі дошки
+      project_issues: питання проекту
+      project_users: користувачів проекту
+      new: Новий
+    project_modal:
+      project: проекту
   issues:
     form:
       title: Назва
@@ -127,6 +145,7 @@ uk:
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
       github_issue_number: Github номер випуску
+      project: проекту
     index:
       issues: питання
       sync_with_github: Синхронізація з GitHub
@@ -139,6 +158,8 @@ uk:
       edit_issue: Змінити питання
     new:
       new_issue: Новий випуск
+    issue_modal:
+      issue: Випуск
   authentications:
     index:
       enabled_services: Включені послуги
@@ -164,9 +185,38 @@ uk:
       welcome_to_kanban_on_rails: Ласкаво просимо на канбан On Rails
       welcome_about_text: Тут ви можете створити свій власний рада канбан і синхронізувати
         його з Github або Bitbucket
+  boards:
+    board_modal:
+      board: Рада
+    form:
+      name: Ім'я
+      enter_board_name: Введіть ім'я дошка
+      columns: Стовпці
+      add: Додати
+      sections: Розділи
+      save: Зберегти
+      projects: Проекти
+    section_fields:
+      remove_section: Видалити розділ
+      section_tags: Розділ теги
+      section_order: Замовити
+      or_include_all: Або включати в себе все?
+    column_fields:
+      remove_column: Видалити стовпець
+      column_tags: теги стовпців
+      column_order: Замовити
+    show:
+      next_page: Наступна сторінка
+    index:
+      boards: Дошки
+      new: Новий
+    board:
+      board_users: Користувачі
+      edit: Редагувати
+      destroy: Destroy
   pages:
     faq:
-      faq: Часті питання
+      faq: FAQ
       what_is_kanban_on_rails: Що таке KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails це сервіс, де ви можете створювати Kanban
         дошки і синхронізувати його з Github або Bitbucket
@@ -199,6 +249,47 @@ uk:
       partners_and_investors: Ми відкриті для партнерства, і ми хотіли б знайти інвесторів.
         Якщо ви хочете співпрацювати з нами, будь ласка, зв'яжіться з нами за адресою
         partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: вже було підтверджено, будь ласка, спробуйте увійти в
+      confirmation_period_expired: має бути підтверджено протягом періоду% {}, будь
+        ласка, запитайте новий
+      expired: закінчився, будь ласка, запитайте новий
+      not_found: не знайдені
+      not_locked: ні заблокований
+      not_saved:
+        one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
+        other: "% {число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Запит результату
+      bad_request_description: Сервер не може або не буде обробляти запит через очевидну
+        помилки клієнта
+      go_to_root: Перейти до кореня
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Запит результату
+      unprocessable_entity_description: Це прохання було добре освічена, але не зміг
+        слідувати через семантичних помилок
+      go_to_root: Перейти до кореня
+    not_found:
+      not_found: не найден
+      request_result: Запит результату
+      not_found_description: запитаний ресурс не може бути знайдений, але можуть бути
+        доступні в майбутньому
+      go_to_root: Перейти до кореня
+    forbidden:
+      forbidden: Заборонене
+      request_result: Запит результату
+      forbidden_description: Це прохання було дійсний запит, але сервер відмовляється
+        відповідати на нього
+      go_to_root: Перейти до кореня
+    internal_server_error:
+      internal_server_error: Внутрішня помилка сервера
+      request_result: Запит результату
+      internal_server_error_description: Щось пішло не так. Ми будемо це виправити
+        якомога швидше.
+      go_to_root: Перейти до кореня
   devise:
     shared:
       links:
@@ -206,11 +297,11 @@ uk:
         sign_up: Увійдіть
         didnt_receive_confirmation_instructions: Чи не отримали підтвердження інструкції?
         sign_in_with: Вхід з використанням
-        fast_login_almost_one_click: Швидкий Ввійти (майже один клік)
+        fast_login_almost_one_click: Швидкий Логін (майже один клік)
     confirmations:
       confirmed: ваш аккаунт був успішно підтверджений.
-      send_instructions: Ви отримаєте лист з інструкціями про те, як підтвердити свій
-        рахунок протягом декількох хвилин.
+      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
+        про те, як підтвердити свій рахунок протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, Ви отримаєте повідомлення електронної пошти з інструкціями про
         те, як підтвердити свій рахунок протягом декількох хвилин.
@@ -234,7 +325,7 @@ uk:
         welcome_to_kanban_on_rails: Ласкаво просимо в KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Ви можете підтвердити
           свою електронну пошту через посилання нижче
-        confirm_my_account: Підтвердіть свій e-mail
+        confirm_my_account: Підтвердити Email
       reset_password_instructions:
         hello: Привіт
         subject: Скидання пароля інструкції
@@ -244,7 +335,7 @@ uk:
         if_you_didnt_request_this_please_ignore_this_email: Якщо ви не замовляли це
           не звертайте уваги на цей лист.
       unlock_instructions:
-        subject: Розблокування Інструкції
+        subject: розблокування Інструкції
     omniauth_callbacks:
       failure: Неможливо перевірити справжність вас від {%} роду, тому що "% {причина}".
       success: успішно пройшов перевірку автентичності від {%} люб'язне увагу.
@@ -252,8 +343,8 @@ uk:
       no_token: Ви не можете отримати доступ до цієї сторінки, не приходячи від електронної
         пошти скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
         будь ласка, переконайтеся, що ви використовували повний URL за умови.
-      send_instructions: Ви отримаєте лист з інструкціями про те, як скинути пароль
-        протягом декількох хвилин.
+      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
+        про те, як скинути пароль протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, ви отримаєте посилання для відновлення пароля на вашу адресу електронної
         пошти протягом декількох хвилин.
@@ -266,7 +357,7 @@ uk:
         change_your_password: Змінити пароль
         new_password: Новий пароль
         confirm_password: Підтвердження пароля
-        change_password: Зміна
+        change_password: Змінити
     registrations:
       destroyed: Bye! Ваш обліковий запис була успішно скасовано. Ми сподіваємося
         побачити вас знову найближчим часом.
@@ -290,15 +381,15 @@ uk:
         register: Увійдіть
     sessions:
       signed_in: Увійшли успішно.
-      signed_out: Підпис успішно.
+      signed_out: Вихід виконаний успішно.
       new:
         sign_in: Вхід
         password: Пароль
         remember_me: Запам'ятати мене
         forgot_your_password: Забули пароль?
     unlocks:
-      send_instructions: Ви отримаєте лист з інструкціями про те, як розблокувати
-        свій аккаунт через кілька хвилин.
+      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
+        про те, як розблокувати свій аккаунт через кілька хвилин.
       send_paranoid_instructions: Якщо ваш обліковий запис існує, то ви отримаєте
         лист з інструкціями про те, як розблокувати його протягом декількох хвилин.
       unlocked: Ваш аккаунт був успішно розблоковано. Будь ласка, увійдіть в систему,

@@ -2,6 +2,7 @@
 kn:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ
   shared:
     navbar:
@@ -10,8 +11,10 @@ kn:
       projects: ಯೋಜನೆಗಳು
       issues: ತೊಂದರೆಗಳು
       syncing_with_github: Github ಸಿಂಕ್ ...
+      syncing_with_gitlab: Gitlab ಸಿಂಕ್ ...
       syncing_with_bitbucket: Bitbucket ಸಿಂಕ್ ...
       new_issue: ಹೊಸ ಸಂಚಿಕೆ
+      boards: ಮಂಡಳಿಗಳು
     languages_select_modal:
       available_languages: ಲಭ್ಯವಿರುವ ಭಾಷೆಗಳು
     user_edit_menu:
@@ -33,15 +36,21 @@ kn:
     new_issue_modal:
       new_issue: ಹೊಸ ಸಂಚಿಕೆ
     left_sidebar:
-      projects: ಯೋಜನೆಗಳು
+      boards: ಮಂಡಳಿಗಳು
     right_sidebar:
       news: ನ್ಯೂಸ್
       all: ಎಲ್ಲಾ
       read_more: ಹೆಚ್ಚು ಓದಿ
-    translations:
+    javascript_global_variables:
       select_column_tags: ಆಯ್ಕೆ
       select_section_tags: ಆಯ್ಕೆ
       select_issue_tags: ಸಮಸ್ಯೆಯನ್ನು ಟ್ಯಾಗ್ಗಳನ್ನು ಆಯ್ಕೆ
+    email_signature:
+      info: ಮಾಹಿತಿ
+      mailer: ಮೈಲೇರ್
+      technoelegance: Technoelegance ಲಿಮಿಟೆಡ್
+    pagination_link:
+      next_page: ಮುಂದಿನ ಪುಟ
   users:
     new:
       invite_user: ಬಳಕೆದಾರರಿಗೆ ಆಹ್ವಾನ
@@ -74,12 +83,11 @@ kn:
     dashboard:
       hello: ಹಲೋ
       projects: ಯೋಜನೆಗಳು
+      boards: ಮಂಡಳಿಗಳು
   projects:
     index:
       projects: ಯೋಜನೆಗಳು
       new: ಹೊಸ
-      sync_with_github: GitHub ಸಿಂಕ್
-      sync_with_bitbucket: bitbucket ಸಿಂಕ್
     form:
       name: ಹೆಸರು
       enter_project_name: ಯೋಜನೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
@@ -112,7 +120,14 @@ kn:
       column_tags: ಅಂಕಣ ಟ್ಯಾಗ್ಗಳು
       column_order: ಆರ್ಡರ್
     show:
-      next_page: ಮುಂದಿನ ಪುಟ
+      project: ಪ್ರಾಜೆಕ್ಟ್
+      related_boards: ಸಂಬಂಧಿತ ಮಂಡಳಿಗಳು
+      project_info: ಪ್ರಾಜೆಕ್ಟ್ ಮಾಹಿತಿಯನ್ನು
+      project_issues: ಪ್ರಾಜೆಕ್ಟ್ ಸಮಸ್ಯೆಗಳು
+      project_users: ಪ್ರಾಜೆಕ್ಟ್ ಬಳಕೆದಾರರು
+      new: ಹೊಸ
+    project_modal:
+      project: ಪ್ರಾಜೆಕ್ಟ್
   issues:
     form:
       title: ಶೀರ್ಷಿಕೆ
@@ -125,6 +140,7 @@ kn:
       bitbucket_issue_id: Bitbucket ಸಮಸ್ಯೆಯನ್ನು ಐಡಿ
       github_issue_id: GitHub ಸಂಚಿಕೆ ಐಡಿ
       github_issue_number: GitHub ಸಂಚಿಕೆ ಸಂಖ್ಯೆ
+      project: ಪ್ರಾಜೆಕ್ಟ್
     index:
       issues: ಸಮಸ್ಯೆಗಳು
       sync_with_github: GitHub ಸಿಂಕ್
@@ -135,6 +151,8 @@ kn:
       edit: ಸಂಪಾದಿಸಿ
     new:
       new_issue: ಹೊಸ ಸಂಚಿಕೆ
+    issue_modal:
+      issue: ಸಂಚಿಕೆ
   authentications:
     index:
       enabled_services: ಶಕ್ತಗೊಂಡಿದೆ ಸೇವೆಗಳು
@@ -160,6 +178,40 @@ kn:
       welcome_to_kanban_on_rails: ಕನ್ಬನ್ ಮೇಲೆ ಹಳಿಗಳ ಸ್ವಾಗತ
       welcome_about_text: ಇಲ್ಲಿ ನೀವು GitHub ಅಥವಾ Bitbucket ನಿಮ್ಮ ಸ್ವಂತ ಕನ್ಬನ್ ಬೋರ್ಡ್
         ಮತ್ತು ಸಿಂಕ್ ರಚಿಸಬಹುದು
+  boards:
+    board_modal:
+      board: ಬೋರ್ಡ್
+    form:
+      name: ಹೆಸರು
+      enter_board_name: ಬೋರ್ಡ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
+      column_width: ಅಂಕಣ ಅಗಲ
+      column_height: ಅಂಕಣ ಎತ್ತರ
+      columns: ಅಂಕಣ
+      add: ಸೇರಿಸು
+      sections: ಪರಿಚ್ಛೇದ
+      save: ಉಳಿಸಿ
+      projects: ಯೋಜನೆಗಳು
+    section_fields:
+      section_name: ವಿಭಾಗ ಹೆಸರು
+      remove_section: ತೆಗೆದುಹಾಕಿ ವಿಭಾಗ
+      section_tags: ವಿಭಾಗ ಟ್ಯಾಗ್ಗಳು
+      section_order: ಆರ್ಡರ್
+      or_include_all: ಅಥವಾ ಎಲ್ಲಾ ಸೇರಿವೆ?
+    column_fields:
+      column_name: ಅಂಕಣ ಹೆಸರು
+      remove_column: ಕಾಲಮ್ ತೆಗೆದುಹಾಕಿ
+      max_issues_count: ಮ್ಯಾಕ್ಸ್ ಸಮಸ್ಯೆಗಳು ಅಂಕಣದಲ್ಲಿ ಎಣಿಕೆ
+      column_tags: ಅಂಕಣ ಟ್ಯಾಗ್ಗಳು
+      column_order: ಆರ್ಡರ್
+    show:
+      next_page: ಮುಂದಿನ ಪುಟ
+    index:
+      boards: ಮಂಡಳಿಗಳು
+      new: ಹೊಸ
+    board:
+      board_users: ಬಳಕೆದಾರರು
+      edit: ಸಂಪಾದಿಸಿ
+      destroy: ನಾಶ
   pages:
     faq:
       faq: ಎಫ್ಎಕ್ಯೂ
@@ -195,6 +247,45 @@ kn:
       partners_and_investors: ನಾವು ಪಾಲುದಾರಿಕೆಗಾಗಿ ತೆರೆದು ನಮಗೆ ಹೂಡಿಕೆದಾರರು ಹುಡುಕಲು
         ಇಚ್ಚಿಸುತ್ತೇವೆ. ನೀವು ನಮ್ಮೊಂದಿಗೆ ಸಹಕಾರ ಬಯಸಿದರೆ ದಯವಿಟ್ಟು partnership@technoelegance.com
         ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ
+  errors:
+    messages:
+      already_confirmed: ಈಗಾಗಲೇ ದೃಢಪಡಿಸಿದರು, ದಯವಿಟ್ಟು ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ
+      confirmation_period_expired: "% {ಅವಧಿಯಲ್ಲಿ} ಖಚಿತವಾಗುತ್ತದೆ ಅಗತ್ಯವಿದೆ, ಹೊಸದನ್ನು
+        ಮನವಿ ಮಾಡಿ"
+      expired: ಮುಕ್ತಾಯಗೊಂಡಿದೆ ಹೊಸದನ್ನು ಮನವಿ ಮಾಡಿ
+      not_found: ಕಂಡುಬಂದಿಲ್ಲ
+      not_locked: ಲಾಕ್ ಮಾಡಲಾಗಿಲ್ಲ
+      not_saved:
+        one: '1 ದೋಷ ಉಳಿಸುವಲ್ಲಿ ಈ% {ಸಂಪನ್ಮೂಲ} ನಿಷೇಧಿಸಲಾಗಿದೆ:'
+        other: "% {ಎಣಿಕೆ} ಉಳಿಸುವಲ್ಲಿ ಈ% {ಸಂಪನ್ಮೂಲ} ನಿಷೇಧಿಸಲಾಗಿದೆ ದೋಷಗಳು:"
+    bad_request:
+      bad_request: ಕೆಟ್ಟ ವಿನಂತಿ
+      request_result: ವಿನಂತಿ ಪರಿಣಾಮವಾಗಿ
+      bad_request_description: ಕಾರಣ ಒಂದು ಸ್ಪಷ್ಟ ಕ್ಲೈಂಟ್ ದೋಷ
+      go_to_root: ಮೂಲ ಹೋಗಿ
+    unprocessable_entity:
+      unprocessable_entity: ಸಂಸ್ಕರಿಸಲಾಗದ ಸ್ಥಿತಿಗೆ ಎಂಟಿಟಿ
+      request_result: ವಿನಂತಿ ಪರಿಣಾಮವಾಗಿ
+      unprocessable_entity_description: ಚೆನ್ನಾಗಿ ರಚಿಸಲಾದ ಆದರೆ ಕಾರಣ ಲಾಕ್ಷಣಿಕ ದೋಷಗಳನ್ನು
+        ಅನುಸರಿಸಬೇಕಾದ ಸಾಧ್ಯವಾಗಲಿಲ್ಲ
+      go_to_root: ಮೂಲ ಹೋಗಿ
+    not_found:
+      not_found: ಕಂಡುಬಂದಿಲ್ಲ
+      request_result: ವಿನಂತಿ ಪರಿಣಾಮವಾಗಿ
+      not_found_description: ಕಂಡುಹಿಡಿಯಲಾಗುವುದಿಲ್ಲ ಆದರೆ ಭವಿಷ್ಯದಲ್ಲಿ ದೊರೆಯುತ್ತದೆ
+      go_to_root: ಮೂಲ ಹೋಗಿ
+    forbidden:
+      forbidden: ಫರ್ಬಿಡನ್
+      request_result: ವಿನಂತಿ ಪರಿಣಾಮವಾಗಿ
+      forbidden_description: ಮಾನ್ಯ ವಿನಂತಿಯನ್ನು, ಆದರೆ ಸರ್ವರ್ ಪ್ರತಿಕ್ರಿಯಿಸಲು ನಿರಾಕರಿಸಿ
+        ಇದೆ
+      go_to_root: ಮೂಲ ಹೋಗಿ
+    internal_server_error:
+      internal_server_error: ಆಂತರಿಕ ಸರ್ವರ್ ದೋಷ
+      request_result: ವಿನಂತಿ ಪರಿಣಾಮವಾಗಿ
+      internal_server_error_description: ಯಾವುದೋ ತಪ್ಪು ಸಂಭವಿಸಿದೆ. ನಾವು ಸಾಧ್ಯವಾದಷ್ಟು
+        ಬೇಗ ಅದನ್ನು ಸರಿಪಡಿಸಲು ಮಾಡುತ್ತದೆ.
+      go_to_root: ಮೂಲ ಹೋಗಿ
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 id:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: diperbarui
   1_we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan kami
   shared:
@@ -11,9 +12,11 @@ id:
       projects: Proyek
       issues: Masalah
       syncing_with_github: Sync dengan Github ...
+      syncing_with_gitlab: Sync dengan Gitlab ...
       syncing_with_bitbucket: Sync dengan Bitbucket ...
       new_issue: masalah New
       edit_project: Mengedit proyek
+      boards: Boards
     languages_select_modal:
       available_languages: Bahasa yang tersedia
     user_edit_menu:
@@ -36,15 +39,20 @@ id:
     new_issue_modal:
       new_issue: masalah New
     left_sidebar:
-      projects: Proyek
+      boards: Boards
     right_sidebar:
       news: Berita
       all: Semua
       read_more: Baca lebih lanjut
-    translations:
+    javascript_global_variables:
       select_column_tags: Pilih tag kolom
       select_section_tags: Pilih bagian tag
       select_issue_tags: Pilih masalah tag
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd
+    pagination_link:
+      next_page: Halaman berikutnya
   users:
     new:
       invite_user: Undang pengguna
@@ -78,14 +86,17 @@ id:
       hello: Hello
       here_some_of_your_statistics: Berikut beberapa statistik
       projects: Proyek
+      boards: Boards
   projects:
     index:
       projects: Proyek
       new: New
-      sync_with_github: Sync dengan github
-      sync_with_bitbucket: Sync dengan bitbucket
-      stop_sync_with_bitbucket: Hentikan sinkronisasi dengan bitbucket
-      stop_sync_with_github: Hentikan sinkronisasi dengan github
+      sync_with_github: Sync dengan Github
+      sync_with_gitlab: Sync dengan Gitlab
+      sync_with_bitbucket: Sync dengan Bitbucket
+      stop_sync_with_bitbucket: Hentikan sinkronisasi dengan Bitbucket
+      stop_sync_with_github: Hentikan sinkronisasi dengan Github
+      stop_sync_with_gitlab: Hentikan sinkronisasi dengan Gitlab
     form:
       name: Nama
       enter_project_name: Masukkan nama proyek
@@ -112,7 +123,13 @@ id:
       column_tags: tag Kolom
       column_order: Pesanan
     show:
-      next_page: Halaman berikutnya
+      project: Proyek
+      related_boards: papan Terkait
+      project_issues: masalah Project
+      project_users: pengguna Project
+      new: New
+    project_modal:
+      project: Proyek
   issues:
     form:
       title: Judul
@@ -125,6 +142,7 @@ id:
       bitbucket_issue_id: Bitbucket masalah id
       github_issue_id: Github masalah id
       github_issue_number: nomor isu Github
+      project: Proyek
     index:
       issues: masalah
       sync_with_github: Sync dengan github
@@ -137,6 +155,8 @@ id:
       edit_issue: Sunting masalah
     new:
       new_issue: masalah New
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: layanan Diaktifkan
@@ -162,6 +182,33 @@ id:
       welcome_to_kanban_on_rails: Selamat Datang Kanban On Rails
       welcome_about_text: Di sini Anda dapat membuat papan Kanban Anda sendiri dan
         sinkronisasi dengan Github atau Bitbucket
+  boards:
+    form:
+      name: Nama
+      enter_board_name: Masukkan nama papan
+      columns: Kolom
+      add: Tambah
+      sections: Bagian
+      save: bintang
+      projects: Proyek
+    section_fields:
+      section_tags: tag Bagian
+      section_order: Pesanan
+      or_include_all: Atau mencakup semua?
+    column_fields:
+      remove_column: Hapus kolom
+      max_issues_count: masalah Max menghitung dalam kolom
+      column_tags: tag Kolom
+      column_order: Pesanan
+    show:
+      next_page: Halaman berikutnya
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Pengguna
+      edit: Mengedit
+      destroy: Hancurkan
   pages:
     faq:
       faq: FAQ
@@ -197,6 +244,41 @@ id:
         baik dan meningkatkan layanan kami.
       partners_and_investors: Kami dibuka untuk kemitraan dan kami ingin mencari investor.
         Jika Anda ingin bekerja sama dengan kami silahkan hubungi kami di partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: sudah dikonfirmasi, coba masuk
+      confirmation_period_expired: perlu dikonfirmasi dalam% {periode}, minta yang
+        baru
+      expired: telah berakhir, silakan meminta yang baru
+      not_found: tidak ditemukan
+      not_locked: tidak terkunci
+      not_saved:
+        one: '1 kesalahan dilarang% ini {sumber daya} tidak disimpan:'
+        other: "% {count} kesalahan dilarang% ini {sumber daya} tidak disimpan:"
+    bad_request:
+      bad_request_description: Server tidak dapat atau tidak akan memproses permintaan
+        karena kesalahan klien jelas
+      go_to_root: Buka akar
+    unprocessable_entity:
+      unprocessable_entity: dapat diproses Entity
+      unprocessable_entity_description: Permintaan itu terbentuk dengan baik tetapi
+        tidak dapat diikuti karena kesalahan semantik
+      go_to_root: Buka akar
+    not_found:
+      not_found: Tidak Ditemukan
+      not_found_description: sumber daya yang diminta tidak dapat ditemukan tetapi
+        mungkin tersedia di masa depan
+      go_to_root: Buka akar
+    forbidden:
+      forbidden: Terlarang
+      forbidden_description: Permintaan itu permintaan yang valid, tapi server menolak
+        untuk menanggapi itu
+      go_to_root: Buka akar
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Ada yang tidak beres. Kami akan memperbaikinya
+        sesegera mungkin.
+      go_to_root: Buka akar
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 pl:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: zaktualizowane
   1_we_have_just_launched_our_service_title: Właśnie uruchomiliśmy nasz serwis
   shared:
@@ -10,9 +11,11 @@ pl:
       sign_up: Zarejestruj się
       issues: Zagadnienia
       syncing_with_github: Synchronizacja z Github ...
+      syncing_with_gitlab: Synchronizacja z Gitlab ...
       syncing_with_bitbucket: Synchronizacja z Bitbucket ...
       new_issue: Nowy numer
       edit_project: Edycja projektu
+      boards: Boards
     languages_select_modal:
       available_languages: Wersje
     user_edit_menu:
@@ -33,15 +36,20 @@ pl:
     new_issue_modal:
       new_issue: Nowy numer
     left_sidebar:
-      projects: Projekty
+      boards: Boards
     right_sidebar:
       news: Aktualności
       all: Wszystko
       read_more: Czytaj więcej
-    translations:
+    javascript_global_variables:
       select_column_tags: Wybierz znaczniki kolumn
       select_section_tags: Wybierz tagi sekcji
       select_issue_tags: Wybierz wydaje etykiety
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Następna strona
   users:
     new:
       invite_user: Zaproś użytkownika
@@ -73,14 +81,17 @@ pl:
       hello: Witam
       here_some_of_your_statistics: Oto niektóre statystyki
       projects: Projekty
+      boards: Boards
   projects:
     index:
       projects: Projekty
       new: Nowa
-      sync_with_github: Synchronizacja z github
-      sync_with_bitbucket: Synchronizacja z bitbucket
-      stop_sync_with_bitbucket: Zatrzymaj synchronizacja z bitbucket
-      stop_sync_with_github: Zatrzymaj synchronizacja z github
+      sync_with_github: Synchronizacja z Github
+      sync_with_gitlab: Synchronizacja z Gitlab
+      sync_with_bitbucket: Synchronizacja z Bitbucket
+      stop_sync_with_bitbucket: Zatrzymaj synchronizacja z Bitbucket
+      stop_sync_with_github: Zatrzymaj synchronizacja z Github
+      stop_sync_with_gitlab: Zatrzymaj synchronizacja z Gitlab
     form:
       name: Nazwa
       enter_project_name: Wprowadź nazwę projektu
@@ -107,7 +118,13 @@ pl:
       column_tags: znaczniki kolumn
       column_order: Zamówienie
     show:
-      next_page: Następna strona
+      project: Projekt
+      related_boards: Podobne tablice
+      project_issues: kwestie projektowe
+      project_users: użytkownicy projektu
+      new: Nowa
+    project_modal:
+      project: Projekt
   issues:
     form:
       enter_issue_title: Wprowadź tytuł emisyjnej
@@ -117,6 +134,7 @@ pl:
       tags: Tagi
       issue_order: Zamówienie
       github_issue_number: numer wydania Github
+      project: Projekt
     index:
       issues: kwestie
       sync_with_github: Synchronizacja z github
@@ -129,6 +147,8 @@ pl:
       edit_issue: Edit Wydanie
     new:
       new_issue: Nowy numer
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Włączone usługi
@@ -154,6 +174,33 @@ pl:
       welcome_to_kanban_on_rails: Witamy Kanban On Rails
       welcome_about_text: Tutaj można utworzyć własną Tablica Kanban i zsynchronizować
         je z Github lub Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Nazwa
+      enter_board_name: Wprowadź nazwę płyty
+      add: dodawania
+      sections: Sekcje
+      save: Zapisz
+      projects: Projekty
+    section_fields:
+      section_tags: tagi Sekcja
+      section_order: Zamówienie
+      or_include_all: Albo to wszystko?
+    column_fields:
+      remove_column: Usuń kolumnę
+      max_issues_count: Maks kwestie liczyć w kolumnie
+      column_tags: znaczniki kolumn
+      column_order: Zamówienie
+    show:
+      next_page: Następna strona
+    index:
+      boards: Boards
+      new: Nowa
+    board:
+      edit: Edycja
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -187,6 +234,39 @@ pl:
       partners_and_investors: Jesteśmy otwarci na partnerstwo i chcielibyśmy, aby
         znaleźć inwestorów. Jeśli chcesz z nami współpracować prosimy o kontakt pod
         adresem partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: została już potwierdzona, spróbuj zalogować się
+      confirmation_period_expired: musi być potwierdzony w% {okres}, prosimy o założenie
+        nowego
+      expired: wygasła, prosimy o założenie nowego
+      not_found: Nie znaleziono
+      not_locked: nie został zablokowany
+      not_saved:
+        one: '1 błąd zabronione tę% {} z zasobów zapisywane:'
+        other: "% {count} błędów zabronionych ten zasób% {} z zapisywane:"
+    bad_request:
+      bad_request_description: Serwer nie może lub nie będzie przetwarzać żądania
+        z powodu błędu pozornej klienta
+      go_to_root: Idź do korzenia
+    unprocessable_entity:
+      unprocessable_entity: niedające się przetwarzać Entity
+      unprocessable_entity_description: wniosek został sformułowany, ale nie był w
+        stanie być stosowane ze względu na błędy semantyczne
+      go_to_root: Idź do korzenia
+    not_found:
+      not_found_description: Żądany zasób nie został odnaleziony, ale mogą być dostępne
+        w przyszłości
+      go_to_root: Idź do korzenia
+    forbidden:
+      forbidden_description: Wniosek został ważny wniosek, ale serwer odmawia odpowiedzi
+        na to
+      go_to_root: Idź do korzenia
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Coś poszło nie tak. Będziemy to naprawić
+        jak najszybciej.
+      go_to_root: Idź do korzenia
   devise:
     shared:
       links:

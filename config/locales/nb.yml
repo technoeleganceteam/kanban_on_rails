@@ -2,6 +2,7 @@
 nb:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: dikemaskini
   1_we_have_just_launched_our_service_title: Kami baru sahaja melancarkan perkhidmatan
     kami
@@ -12,9 +13,11 @@ nb:
       projects: Projek
       issues: Issues
       syncing_with_github: Sync dengan Github ...
+      syncing_with_gitlab: Sync dengan Gitlab ...
       syncing_with_bitbucket: Sync dengan Bitbucket ...
       new_issue: isu New
       edit_project: Edit projek
+      boards: Boards
     languages_select_modal:
       available_languages: Bahasa yang sedia ada
     user_edit_menu:
@@ -37,15 +40,20 @@ nb:
     new_issue_modal:
       new_issue: isu New
     left_sidebar:
-      projects: Projek
+      boards: Boards
     right_sidebar:
       news: News
       all: Semua
       read_more: Baca lebih lanjut
-    translations:
+    javascript_global_variables:
       select_column_tags: Pilih tag ruangan
       select_section_tags: Pilih bahagian tag
       select_issue_tags: Pilih isu tag
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Laman seterusnya
   users:
     new:
       invite_user: Jemput pengguna
@@ -80,14 +88,17 @@ nb:
       hello: Hello
       here_some_of_your_statistics: Di sini beberapa statistik anda
       projects: Projek
+      boards: Boards
   projects:
     index:
       projects: Projek
       new: New
-      sync_with_github: Sync dengan github
-      sync_with_bitbucket: Sync dengan bitbucket
-      stop_sync_with_bitbucket: Stop selari dengan bitbucket
-      stop_sync_with_github: Stop selari dengan github
+      sync_with_github: Sync dengan Github
+      sync_with_gitlab: Sync dengan Gitlab
+      sync_with_bitbucket: Sync dengan Bitbucket
+      stop_sync_with_bitbucket: Stop selari dengan Bitbucket
+      stop_sync_with_github: Stop selari dengan Github
+      stop_sync_with_gitlab: Stop selari dengan Gitlab
     form:
       name: Nama
       enter_project_name: Masukkan nama projek
@@ -115,7 +126,13 @@ nb:
       column_tags: tag Ruangan
       column_order: Order
     show:
-      next_page: Laman seterusnya
+      project: Projek
+      related_boards: papan Berkaitan
+      project_issues: isu Projek
+      project_users: pengguna Projek
+      new: New
+    project_modal:
+      project: Projek
   issues:
     form:
       title: Title
@@ -128,6 +145,7 @@ nb:
       bitbucket_issue_id: Bitbucket id isu
       github_issue_id: Github id isu
       github_issue_number: nombor isu Github
+      project: Projek
     index:
       issues: isu-isu
       sync_with_github: Sync dengan github
@@ -140,6 +158,8 @@ nb:
       edit_issue: Edit isu
     new:
       new_issue: isu New
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: perkhidmatan Didayakan
@@ -166,6 +186,35 @@ nb:
       welcome_to_kanban_on_rails: Selamat datang ke Kanban On Rails
       welcome_about_text: sini anda boleh membuat papan Kanban anda sendiri dan sync
         dengan Github atau Bitbucket
+  boards:
+    board_modal:
+      board: Lembaga
+    form:
+      name: Nama
+      enter_board_name: Masukkan nama lembaga
+      columns: Columns
+      add: Add
+      sections: Seksyen
+      save: Simpan
+      projects: Projek
+    section_fields:
+      section_tags: Seksyen tag
+      section_order: Order
+      or_include_all: Atau termasuk semua?
+    column_fields:
+      remove_column: Alih keluar lajur
+      max_issues_count: isu Max mengira dalam ruang
+      column_tags: tag Ruangan
+      column_order: Order
+    show:
+      next_page: Laman seterusnya
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Pengguna
+      edit: Edit
+      destroy: menghancurkan
   pages:
     faq:
       faq: FAQ
@@ -204,6 +253,41 @@ nb:
       partners_and_investors: Kami dibuka untuk perkongsian dan kami ingin mencari
         pelabur. Jika anda ingin untuk bekerjasama dengan kami sila hubungi kami di
         partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: sudah disahkan, sila cuba log masuk
+      confirmation_period_expired: perlu disahkan dalam% {tempoh}, sila minta yang
+        baru
+      expired: telah tamat, sila minta yang baru
+      not_found: tidak dijumpai
+      not_locked: tidak dikunci
+      not_saved:
+        one: '1 ralat dilarang% ini {sumber} daripada disimpan:'
+        other: "% {count} kesilapan dilarang% {sumber} ini daripada disimpan:"
+    bad_request:
+      bad_request_description: Pelayan tidak boleh atau tidak akan memproses permintaan
+        itu disebabkan oleh kesilapan pelanggan jelas
+      go_to_root: Pergi ke akar
+    unprocessable_entity:
+      unprocessable_entity: Tidak boleh diproses Entity
+      unprocessable_entity_description: permintaan itu dibentuk dengan baik tetapi
+        tidak mampu untuk diikuti kerana kesilapan semantik
+      go_to_root: Pergi ke akar
+    not_found:
+      not_found: Not Found
+      not_found_description: Sumber yang diminta tidak ditemui tetapi mungkin di masa
+        depan
+      go_to_root: Pergi ke akar
+    forbidden:
+      forbidden: Larangan
+      forbidden_description: permintaan itu adalah permintaan yang sah, tetapi pelayan
+        enggan untuk bertindak balas kepada ia
+      go_to_root: Pergi ke akar
+    internal_server_error:
+      internal_server_error: Ralat Pelayan Dalaman
+      internal_server_error_description: sesuatu yang tidak kena. Kami akan menetapkan
+        secepat yang mungkin.
+      go_to_root: Pergi ke akar
   devise:
     shared:
       links:

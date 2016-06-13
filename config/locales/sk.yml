@@ -2,6 +2,7 @@
 sk:
   github: Github
   bitbucket: bitbucket
+  gitlab: Gitlab
   updated: aktualizované
   1_we_have_just_launched_our_service_title: Práve sme spustili naše služby
   shared:
@@ -11,9 +12,11 @@ sk:
       projects: Projekty
       issues: Problémy
       syncing_with_github: Synchronizácia s GitHub ...
+      syncing_with_gitlab: Synchronizácia s Gitlab ...
       syncing_with_bitbucket: Synchronizácia s bitbucket ...
       new_issue: Nové vydanie
       edit_project: Upraviť projekt
+      boards: dosky
     languages_select_modal:
       available_languages: Jazyky
     user_edit_menu:
@@ -36,15 +39,21 @@ sk:
     new_issue_modal:
       new_issue: Nové vydanie
     left_sidebar:
-      projects: Projekty
+      boards: dosky
     right_sidebar:
       news: News
       all: Všetko
       read_more: Čítajte viac
-    translations:
+    javascript_global_variables:
       select_column_tags: Vybrať tagy stĺpcov
       select_section_tags: Vybrať tagy sekcie
       select_issue_tags: Vybrať vydávať tagy
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Ďalšia strana
   users:
     new:
       invite_user: Pozvať užívateľa
@@ -79,14 +88,17 @@ sk:
       hello: Hello
       here_some_of_your_statistics: tu niektoré zo svojich štatistík
       projects: Projekty
+      boards: dosky
   projects:
     index:
       projects: Projekty
       new: Nové
-      sync_with_github: Synchronizácia s github
+      sync_with_github: Synchronizácia s GitHub
+      sync_with_gitlab: Synchronizácia s Gitlab
       sync_with_bitbucket: Synchronizácia s bitbucket
       stop_sync_with_bitbucket: Zastavenie synchronizácie s bitbucket
-      stop_sync_with_github: Zastavenie synchronizácie s github
+      stop_sync_with_github: Zastavenie synchronizácie s GitHub
+      stop_sync_with_gitlab: Zastavenie synchronizácie s Gitlab
     form:
       name: Name
       enter_project_name: Zadajte názov projektu
@@ -114,7 +126,13 @@ sk:
       column_tags: tagy stĺpcov
       column_order: Objednávka
     show:
-      next_page: Ďalšia strana
+      project: Project
+      related_boards: Súvisiace dosky
+      project_issues: problémy Project
+      project_users: užívateľov projektu
+      new: Nové
+    project_modal:
+      project: Project
   issues:
     form:
       title: Názov
@@ -127,6 +145,7 @@ sk:
       bitbucket_issue_id: bitbucket problém id
       github_issue_id: Github problém id
       github_issue_number: Github číslo vydania
+      project: Project
     index:
       issues: problémy
       sync_with_github: Synchronizácia s github
@@ -139,6 +158,8 @@ sk:
       edit_issue: Edit problém
     new:
       new_issue: Nové vydanie
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Povolené služby
@@ -164,6 +185,35 @@ sk:
       welcome_to_kanban_on_rails: Vitajte na Kanban po koľajniciach
       welcome_about_text: Tu si môžete vytvoriť svoj vlastný Kanban dosku a synchronizovať
         ho s GitHub alebo bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Zadajte názov dosky
+      columns: Stĺpce
+      add: Add
+      sections: Oddiely
+      save: Save
+      projects: Projekty
+    section_fields:
+      remove_section: Remove sekcie
+      section_tags: "§ tagy"
+      section_order: Objednávka
+      or_include_all: Alebo obsahovať všetky?
+    column_fields:
+      remove_column: Odstrániť stĺpec
+      column_tags: tagy stĺpcov
+      column_order: Objednávka
+    show:
+      next_page: Ďalšia strana
+    index:
+      boards: dosky
+      new: Nové
+    board:
+      board_users: Užívatelia
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -197,6 +247,40 @@ sk:
         source knižnice. Vždy sa snažíme byť lepší a zlepšovať naše služby.
       partners_and_investors: Sme sú otvorené spolupráci a radi by sme nájsť investorov.
         Ak by ste chceli s nami spolupracovať, kontaktujte nás na adrese partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: už bolo potvrdené, prosím, skúste sa prihlásiť
+      confirmation_period_expired: byť potvrdené v% {období}, prosím, požiadať o nové
+      expired: vypršala, prosím, požiadať o nové
+      not_found: nebol nájdený
+      not_locked: neboli zamknuté
+      not_saved:
+        one: '1 chyba zakázané tento% {} prostriedkov z ukladania:'
+        other: "% {count} Kvôli chybám nebol tento% {} zdroj z ukladaný:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: server nemôže alebo nechce spracovať požiadavku z dôvodu
+        zjavnej chyby klienta
+      go_to_root: Prejsť na koreni
+    unprocessable_entity:
+      unprocessable_entity: nespracovateľné Entity
+      unprocessable_entity_description: žiadosť bola dobre tvarované, ale nemohol
+        byť dodržané kvôli sémantické chyby
+      go_to_root: Prejsť na koreni
+    not_found:
+      not_found: Not Found
+      not_found_description: Požadovaný zdroj nebol nájdený, ale môže byť v budúcnosti
+        k dispozícii
+      go_to_root: Prejsť na koreni
+    forbidden:
+      forbidden: Forbidden
+      forbidden_description: bola požiadavka platný požiadavka, ale server odmieta
+        reagovať na to
+      go_to_root: Prejsť na koreni
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Niečo sa pokazilo. Budeme to opraviť čo najskôr.
+      go_to_root: Prejsť na koreni
   devise:
     shared:
       links:

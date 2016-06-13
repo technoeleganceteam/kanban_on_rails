@@ -2,6 +2,7 @@
 sv:
   github: Github
   bitbucket: bitbucket
+  gitlab: Gitlab
   updated: uppdateras
   1_we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst
   shared:
@@ -11,9 +12,11 @@ sv:
       projects: Projekt
       issues: Issues
       syncing_with_github: Sync med Github ...
+      syncing_with_gitlab: Sync med Gitlab ...
       syncing_with_bitbucket: Sync med bitbucket ...
       new_issue: Nyemission
       edit_project: Redigera projektet
+      boards: Boards
     languages_select_modal:
       available_languages: Tillgängliga språk
     user_edit_menu:
@@ -36,15 +39,21 @@ sv:
     new_issue_modal:
       new_issue: Nyemission
     left_sidebar:
-      projects: Projekt
+      boards: Boards
     right_sidebar:
       news: News
       all: All
       read_more: Läs mer
-    translations:
+    javascript_global_variables:
       select_column_tags: Välj kolumn taggar
       select_section_tags: Välj avsnitt taggar
       select_issue_tags: Välj utfärdar märkning
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Nästa sida
   users:
     new:
       invite_user: inviterar användaren
@@ -80,14 +89,17 @@ sv:
       hello: Hej
       here_some_of_your_statistics: Här några av statistiken
       projects: Projekt
+      boards: Boards
   projects:
     index:
       projects: Projekt
       new: New
-      sync_with_github: Sync med github
+      sync_with_github: Sync med Github
+      sync_with_gitlab: Sync med Gitlab
       sync_with_bitbucket: Sync med bitbucket
       stop_sync_with_bitbucket: Stoppa synkronisering med bitbucket
-      stop_sync_with_github: Stoppa synkronisering med github
+      stop_sync_with_github: Stoppa synkronisering med Github
+      stop_sync_with_gitlab: Stoppa synkronisering med Gitlab
     form:
       name: Namn
       enter_project_name: Ange projektnamn
@@ -122,7 +134,14 @@ sv:
       column_tags: Kolumn taggar
       column_order: Order
     show:
-      next_page: Nästa sida
+      project: Project
+      related_boards: Liknande brädor
+      project_info: Project info
+      project_issues: Projekt frågor
+      project_users: Projekt användare
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Titel
@@ -135,6 +154,7 @@ sv:
       bitbucket_issue_id: bitbucket fråga id
       github_issue_id: Github fråga id
       github_issue_number: Github löpnummer
+      project: Project
     index:
       issues: frågor
       sync_with_github: Sync med github
@@ -147,6 +167,8 @@ sv:
       edit_issue: Redigera fråga
     new:
       new_issue: Nyemission
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: baserade tjänster
@@ -172,6 +194,40 @@ sv:
       welcome_to_kanban_on_rails: Välkommen till Kanban On Rails
       welcome_about_text: Här kan du skapa din egen Kanban styrelse och synkronisera
         den med Github eller bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Namn
+      enter_board_name: Ange board namn
+      column_width: Kolumnbredd
+      column_height: Pelarhöjd
+      columns: Kolumner
+      add: Lägg
+      sections: Sektioner
+      save: Spara
+      projects: Projekt
+    section_fields:
+      section_name: Avsnitt namn
+      remove_section: Ta bort avsnitt
+      section_tags: Avsnitt taggar
+      section_order: Order
+      or_include_all: eller inkludera alla?
+    column_fields:
+      column_name: Kolumnnamn
+      remove_column: Avlägsna kolonn
+      max_issues_count: Max frågor räknas i kolumn
+      column_tags: Kolumn taggar
+      column_order: Order
+    show:
+      next_page: Nästa sida
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Användare
+      edit: Redigera
+      destroy: förstöra
   pages:
     faq:
       faq: FAQ
@@ -205,6 +261,46 @@ sv:
         med öppen källkod. Vi försöker alltid att bli bättre och förbättra vår service.
       partners_and_investors: Vi öppnas för partnerskap och vi vill hitta investerare.
         Om du vill samarbeta med oss ​​kontakta oss på partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: redan bekräftat, försök att logga in
+      confirmation_period_expired: måste bekräftas inom% {period}, begär en ny
+      expired: har löpt ut, kan du begära en ny
+      not_found: hittades inte
+      not_locked: var inte låst
+      not_saved:
+        one: 'ett fel förbjudet här% {resurs} från sparas:'
+        other: "% {count} fel förbjudna denna% {resurs} från sparas:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Request resultat
+      bad_request_description: Servern kan inte eller inte kommer att behandla begäran
+        på grund av en uppenbar klient fel
+      go_to_root: Gå till roten
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Request resultat
+      unprocessable_entity_description: Begäran var välformade men kunde inte följas
+        på grund av semantiska fel
+      go_to_root: Gå till roten
+    not_found:
+      not_found: Not Found
+      request_result: Request resultat
+      not_found_description: Den begärda resursen kunde inte hittas men kan vara tillgängliga
+        i framtiden
+      go_to_root: Gå till roten
+    forbidden:
+      forbidden: Forbidden
+      request_result: Request resultat
+      forbidden_description: Begäran var en giltig begäran, men servern vägrar att
+        svara på det
+      go_to_root: Gå till roten
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Request resultat
+      internal_server_error_description: Något gick fel. Vi kommer att fixa det så
+        fort som möjligt.
+      go_to_root: Gå till roten
   devise:
     shared:
       links:

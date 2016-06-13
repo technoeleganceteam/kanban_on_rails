@@ -2,6 +2,7 @@
 el:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ενημερώθηκε
   1_we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία μας
   shared:
@@ -11,9 +12,11 @@ el:
       projects: Έργα
       issues: Θέματα
       syncing_with_github: Συγχρονισμός με Github ...
+      syncing_with_gitlab: Συγχρονισμός με Gitlab ...
       syncing_with_bitbucket: Συγχρονισμός με Bitbucket ...
       new_issue: Νέα έκδοση
       edit_project: Επεξεργασία σχεδίου
+      boards: Πίνακες
     languages_select_modal:
       available_languages: Διαθέσιμες γλώσσες
     user_edit_menu:
@@ -36,15 +39,21 @@ el:
     new_issue_modal:
       new_issue: Νέα έκδοση
     left_sidebar:
-      projects: Έργα
+      boards: Πίνακες
     right_sidebar:
       news: Νέα
       all: Όλα
       read_more: Διαβάστε περισσότερα
-    translations:
+    javascript_global_variables:
       select_column_tags: Επιλέξτε ετικέτες στήλης
       select_section_tags: Επιλέξτε ετικέτες ενότητα
       select_issue_tags: Επιλέξτε θέμα ετικέτες
+    email_signature:
+      info: Πληροφορίες
+      mailer: Μέιλερ
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Επόμενη σελίδα
   users:
     new:
       invite_user: Πρόσκληση χρήστη
@@ -79,14 +88,17 @@ el:
       hello: Hello
       here_some_of_your_statistics: Εδώ μερικά από τα στατιστικά σας
       projects: Έργα
+      boards: Πίνακες
   projects:
     index:
       projects: Έργα
       new: Νέα
-      sync_with_github: Συγχρονισμός με το GitHub
-      sync_with_bitbucket: Συγχρονισμός με bitbucket
-      stop_sync_with_bitbucket: Διακοπή συγχρονισμού με bitbucket
-      stop_sync_with_github: Διακοπή συγχρονισμού με το GitHub
+      sync_with_github: Συγχρονισμός με Github
+      sync_with_gitlab: Συγχρονισμός με Gitlab
+      sync_with_bitbucket: Συγχρονισμός με Bitbucket
+      stop_sync_with_bitbucket: Διακοπή συγχρονισμού με Bitbucket
+      stop_sync_with_github: Διακοπή συγχρονισμού με Github
+      stop_sync_with_gitlab: Διακοπή συγχρονισμού με Gitlab
     form:
       name: Όνομα
       enter_project_name: Πληκτρολογήστε το όνομα του έργου
@@ -114,7 +126,13 @@ el:
       column_tags: ετικέτες Στήλη
       column_order: Παραγγελία
     show:
-      next_page: Επόμενη σελίδα
+      project: Έργου
+      related_boards: Σχετικές πίνακες
+      project_issues: θέματα Έργου
+      project_users: χρήστες Έργου
+      new: Νέα
+    project_modal:
+      project: Έργου
   issues:
     form:
       title: Τίτλος
@@ -127,6 +145,7 @@ el:
       bitbucket_issue_id: Bitbucket id θέμα
       github_issue_id: Github id θέμα
       github_issue_number: Github αριθμό έκδοσης
+      project: Έργου
     index:
       issues: θέματα
       sync_with_github: Συγχρονισμός με το GitHub
@@ -139,6 +158,8 @@ el:
       edit_issue: Επεξεργασία θέματος
     new:
       new_issue: Νέα έκδοση
+    issue_modal:
+      issue: Τεύχος
   authentications:
     index:
       enabled_services: Enabled υπηρεσίες
@@ -165,6 +186,35 @@ el:
       welcome_to_kanban_on_rails: Καλώς ήρθατε στο Kanban On Rails
       welcome_about_text: Εδώ μπορείτε να δημιουργήσετε το δικό σας σκάφος και συγχρονισμό
         Kanban με Github ή Bitbucket
+  boards:
+    board_modal:
+      board: Διοικητικό Συμβούλιο
+    form:
+      name: Όνομα
+      enter_board_name: Πληκτρολογήστε το όνομα του σκάφους
+      columns: Στήλες
+      add: Add
+      sections: Ενότητες
+      save: Αποθήκευση
+      projects: Έργα
+    section_fields:
+      section_tags: Ενότητα ετικέτες
+      section_order: Παραγγελία
+      or_include_all: Ή περιλαμβάνει όλα;
+    column_fields:
+      remove_column: Κατάργηση στήλης
+      max_issues_count: Max θέματα μετράνε στη στήλη
+      column_tags: ετικέτες Στήλη
+      column_order: Παραγγελία
+    show:
+      next_page: Επόμενη σελίδα
+    index:
+      boards: Πίνακες
+      new: Νέα
+    board:
+      board_users: Χρήστες
+      edit: Επεξεργασία
+      destroy: Καταστρέψτε
   pages:
     faq:
       faq: Συχνές Ερωτήσεις
@@ -199,6 +249,42 @@ el:
       partners_and_investors: Είμαστε ανοιχτοί για συνεργασία και θα θέλαμε να βρουν
         επενδυτές. Αν θέλετε να συνεργαστούν μαζί μας, παρακαλούμε επικοινωνήστε μαζί
         μας στο partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: είχε ήδη επιβεβαιωθεί, παρακαλώ προσπαθήστε να συνδεθείτε
+      confirmation_period_expired: πρέπει να επιβεβαιωθεί μέσα σε% {περιόδου}, παρακαλούμε
+        να ζητήσετε ένα νέο
+      expired: έχει λήξει, παρακαλούμε ζητήστε ένα νέο
+      not_found: δεν βρέθηκε
+      not_locked: δεν ήταν κλειδωμένη
+      not_saved:
+        one: '1 λάθος απαγορεύεται αυτό το% {πηγή} από το να σωθεί:'
+        other: "% {μετράνε} λάθη απαγορεύονται αυτό το% {πηγή} από το να σωθεί:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: Ο διακομιστής δεν μπορεί ή δεν θα επεξεργαστεί το αίτημα
+        οφείλεται σε εμφανές σφάλμα πελάτη
+      go_to_root: Πηγαίνετε στο ριζικό
+    unprocessable_entity:
+      unprocessable_entity: δυνατότητα επεξεργασίας Οντότητα
+      unprocessable_entity_description: Το αίτημα ήταν καλοσχηματισμένα, αλλά δεν
+        ήταν σε θέση να ακολουθούνται λόγω σημασιολογικά λάθη
+      go_to_root: Πηγαίνετε στο ριζικό
+    not_found:
+      not_found: Δεν Βρέθηκε
+      not_found_description: Ο πόρος που ζητήθηκε δεν μπορεί να βρεθεί, αλλά μπορεί
+        να είναι διαθέσιμες στο μέλλον
+      go_to_root: Πηγαίνετε στο ριζικό
+    forbidden:
+      forbidden: Απαγορευμένη
+      forbidden_description: Το αίτημα ήταν ένα έγκυρο αίτημα, αλλά ο διακομιστής
+        αρνείται να απαντήσει σε αυτό
+      go_to_root: Πηγαίνετε στο ριζικό
+    internal_server_error:
+      internal_server_error: Εσωτερικό σφάλμα διακομιστή
+      internal_server_error_description: Κάτι πήγε στραβά. Εμείς θα το διορθώσουμε
+        το συντομότερο δυνατόν.
+      go_to_root: Πηγαίνετε στο ριζικό
   devise:
     shared:
       links:

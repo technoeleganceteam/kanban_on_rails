@@ -2,6 +2,7 @@
 th:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: การปรับปรุง
   1_we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา
   shared:
@@ -11,9 +12,11 @@ th:
       projects: โครงการ
       issues: ปัญหา
       syncing_with_github: Sync กับ Github ...
+      syncing_with_gitlab: Sync กับ Gitlab ...
       syncing_with_bitbucket: Sync กับ Bitbucket ...
       new_issue: ปัญหาใหม่
       edit_project: แก้ไขโครงการ
+      boards: บอร์ด
     languages_select_modal:
       available_languages: ภาษาที่มีจำหน่าย
     user_edit_menu:
@@ -36,15 +39,20 @@ th:
     new_issue_modal:
       new_issue: ปัญหาใหม่
     left_sidebar:
-      projects: โครงการ
+      boards: บอร์ด
     right_sidebar:
       news: ข่าว
       all: ทั้งหมด
       read_more: อ่านเพิ่มเติม
-    translations:
+    javascript_global_variables:
       select_column_tags: เลือกแท็กคอลัมน์
       select_section_tags: เลือกแท็กส่วน
       select_issue_tags: เลือกแท็กปัญหา
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance จำกัด
+    pagination_link:
+      next_page: หน้าถัดไป
   users:
     new:
       invite_user: เชิญผู้ใช้
@@ -78,14 +86,17 @@ th:
       hello: สวัสดี
       here_some_of_your_statistics: นี่คือบางส่วนของสถ​​ิติของคุณ
       projects: โครงการ
+      boards: บอร์ด
   projects:
     index:
       projects: โครงการ
       new: ใหม่
-      sync_with_github: Sync กับ GitHub
-      sync_with_bitbucket: Sync กับ bitbucket
-      stop_sync_with_bitbucket: ซิงค์หยุดกับ bitbucket
-      stop_sync_with_github: ซิงค์หยุดกับ GitHub
+      sync_with_github: Sync กับ Github
+      sync_with_gitlab: Sync กับ Gitlab
+      sync_with_bitbucket: Sync กับ Bitbucket
+      stop_sync_with_bitbucket: ซิงค์หยุดกับ Bitbucket
+      stop_sync_with_github: ซิงค์หยุดกับ Github
+      stop_sync_with_gitlab: ซิงค์หยุดกับ Gitlab
     form:
       name: ชื่อ
       enter_project_name: ใส่ชื่อโครงการ
@@ -113,7 +124,13 @@ th:
       column_tags: แท็กคอลัมน์
       column_order: สั่งซื้อ
     show:
-      next_page: หน้าถัดไป
+      project: โครงการ
+      related_boards: บอร์ดที่เกี่ยวข้อง
+      project_issues: ปัญหาโครงการ
+      project_users: ผู้ใช้โครงการ
+      new: ใหม่
+    project_modal:
+      project: โครงการ
   issues:
     form:
       title: ชื่อเรื่อง
@@ -126,6 +143,7 @@ th:
       bitbucket_issue_id: Bitbucket รหัสปัญหา
       github_issue_id: Github รหัสปัญหา
       github_issue_number: Github จำนวนปัญหา
+      project: โครงการ
     index:
       issues: ปัญหา
       sync_with_github: Sync กับ GitHub
@@ -138,6 +156,8 @@ th:
       edit_issue: แก้ไขปัญหา
     new:
       new_issue: ปัญหาใหม่
+    issue_modal:
+      issue: ฉบับ
   authentications:
     index:
       enabled_services: บริการที่เปิดใช้งาน
@@ -162,6 +182,33 @@ th:
       welcome_to_kanban_on_rails: ยินดีต้อนรับสู่ Kanban On Rails
       welcome_about_text: ที่นี่คุณสามารถสร้างคณะกรรมการ Kanban ของคุณเองและซิงค์กับ
         Github หรือ Bitbucket
+  boards:
+    form:
+      name: ชื่อ
+      enter_board_name: ป้อนชื่อคณะกรรมการ
+      columns: คอลัมน์
+      add: เพิ่ม
+      sections: ส่วน
+      save: บันทึก
+      projects: โครงการ
+    section_fields:
+      section_tags: แท็กมาตรา
+      section_order: สั่งซื้อ
+      or_include_all: หรือรวมทั้งหมดหรือไม่
+    column_fields:
+      remove_column: เอาคอลัมน์
+      max_issues_count: ปัญหาสูงสุดนับในคอลัมน์
+      column_tags: แท็กคอลัมน์
+      column_order: สั่งซื้อ
+    show:
+      next_page: หน้าถัดไป
+    index:
+      boards: บอร์ด
+      new: ใหม่
+    board:
+      board_users: ผู้ใช้
+      edit: แก้ไข
+      destroy: ทำลาย
   pages:
     faq:
       faq: คำถามที่พบบ่อย
@@ -191,6 +238,37 @@ th:
         เราพยายามที่จะได้รับที่ดีขึ้นและปรับปรุงบริการของเรา
       partners_and_investors: เราจะเปิดสำหรับการเป็นหุ้นส่วนและเราต้องการที่จะหานักลงทุน
         หากคุณต้องการที่จะให้ความร่วมมือกับเราโปรดติดต่อเราที่ partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: ได้รับการยืนยันแล้วโปรดลองลงชื่อเข้าใช้
+      confirmation_period_expired: ความต้องการที่จะได้รับการยืนยันภายในระยะเวลา% {}
+        โปรดขอใหม่
+      expired: หมดอายุแล้วโปรดขอรหัสผ่านใหม่
+      not_found: ไม่พบ
+      not_locked: ไม่ได้ล็อค
+      not_saved:
+        one: 'ข้อผิดพลาด 1% นี้ห้าม {} ทรัพยากรจากการถูกบันทึกไว้:'
+        other: "% {} นับข้อผิดพลาดต้องห้ามนี้% {} ทรัพยากรจากการถูกบันทึกไว้:"
+    bad_request:
+      bad_request: ร้องขอไม่ถูกต้อง
+      bad_request_description: เซิร์ฟเวอร์ไม่สามารถหรือจะไม่ดำเนินการตามคำขอเนื่องจากข้อผิดพลาดของลูกค้าที่ชัดเจน
+      go_to_root: ไปที่ราก
+    unprocessable_entity:
+      unprocessable_entity: ไม่สามารถประมวลผล Entity
+      unprocessable_entity_description: คำขอเป็นรูปแบบที่ดี แต่ก็ไม่สามารถที่จะปฏิบัติตามเนื่องจากข้อผิดพลาดความหมาย
+      go_to_root: ไปที่ราก
+    not_found:
+      not_found: ไม่พบ
+      not_found_description: ทรัพยากรที่ร้องขอไม่พบ แต่อาจจะมีในอนาคต
+      go_to_root: ไปที่ราก
+    forbidden:
+      forbidden: พระราชวังต้องห้าม
+      forbidden_description: คำขอเป็นคำขอที่ถูกต้อง แต่เซิร์ฟเวอร์ปฏิเสธที่จะตอบสนองต่อมัน
+      go_to_root: ไปที่ราก
+    internal_server_error:
+      internal_server_error: ข้อผิดพลาดภายในเซิร์ฟเวอร์
+      internal_server_error_description: บางอย่างผิดพลาด เราจะแก้ไขได้โดยเร็วที่สุดเท่าที่เป็นไปได้
+      go_to_root: ไปที่ราก
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 bg:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: актуализиран
   1_we_have_just_launched_our_service_title: Вече стартирахме нашата услуга
   shared:
@@ -11,9 +12,11 @@ bg:
       projects: Проекти
       issues: Проблеми
       syncing_with_github: Sync с Github ...
+      syncing_with_gitlab: Sync с Gitlab ...
       syncing_with_bitbucket: Sync с Bitbucket ...
       new_issue: New въпрос
       edit_project: Edit проект
+      boards: Табла
     languages_select_modal:
       available_languages: Налични езици
     user_edit_menu:
@@ -36,15 +39,21 @@ bg:
     new_issue_modal:
       new_issue: New въпрос
     left_sidebar:
-      projects: Проекти
+      boards: Табла
     right_sidebar:
       news: новини
       all: All
       read_more: Прочетете повече
-    translations:
+    javascript_global_variables:
       select_column_tags: Изберете колоните тагове
       select_section_tags: Изберете раздел тагове
       select_issue_tags: Изберете проблема тагове
+    email_signature:
+      info: Info
+      mailer: Мейлър
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Следваща страница
   users:
     new:
       invite_user: Поканете потребител
@@ -79,14 +88,17 @@ bg:
       hello: Hello
       here_some_of_your_statistics: Ето някои от вашите статистики
       projects: Проекти
+      boards: Табла
   projects:
     index:
       projects: Проекти
       new: New
-      sync_with_github: Sync с GitHub
-      sync_with_bitbucket: Sync с bitbucket
-      stop_sync_with_bitbucket: Спиране на синхронизирането с bitbucket
-      stop_sync_with_github: Спиране на синхронизирането с GitHub
+      sync_with_github: Sync с Github
+      sync_with_gitlab: Sync с Gitlab
+      sync_with_bitbucket: Sync с Bitbucket
+      stop_sync_with_bitbucket: Спиране на синхронизирането с Bitbucket
+      stop_sync_with_github: Спиране на синхронизирането с Github
+      stop_sync_with_gitlab: Спиране на синхронизирането с Gitlab
     form:
       name: Име
       enter_project_name: Въведете името на проекта
@@ -114,7 +126,13 @@ bg:
       column_tags: Колона тагове
       column_order: Поръчка
     show:
-      next_page: Следваща страница
+      project: Project
+      related_boards: Свързани дъски
+      project_issues: въпроси по проекта
+      project_users: участници в проекта
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -127,6 +145,7 @@ bg:
       bitbucket_issue_id: Bitbucket въпрос ID
       github_issue_id: Github въпрос ID
       github_issue_number: брой Github въпрос
+      project: Project
     index:
       issues: въпроси
       sync_with_github: Sync с GitHub
@@ -139,6 +158,8 @@ bg:
       edit_issue: Edit въпрос
     new:
       new_issue: New въпрос
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Активирани услуги
@@ -164,6 +185,35 @@ bg:
       welcome_to_kanban_on_rails: Добре дошли в Kanban On Rails
       welcome_about_text: Тук можете да създадете своя собствена борда Kanban и да
         я синхронизирате с Github или Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Име
+      enter_board_name: Въведете име борда
+      columns: Колони
+      add: Add
+      sections: раздели
+      save: Save
+      projects: Проекти
+    section_fields:
+      section_tags: Раздел тагове
+      section_order: Поръчка
+      or_include_all: Или да включва всички?
+    column_fields:
+      remove_column: Премахване на колона
+      max_issues_count: Макс въпроси разчитат в колона
+      column_tags: Колона тагове
+      column_order: Поръчка
+    show:
+      next_page: Следваща страница
+    index:
+      boards: Табла
+      new: New
+    board:
+      board_users: Потребители
+      edit: Edit
+      destroy: Унищожи
   pages:
     faq:
       faq: Отговори
@@ -199,6 +249,42 @@ bg:
       partners_and_investors: Ние сме отворени за партньорство и ние бихме искали
         да се намери инвеститори. Ако искате да си сътрудничат с нас, моля свържете
         се с нас на partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: вече бе потвърдено, моля опитайте да влезете в
+      confirmation_period_expired: трябва да бъде потвърдена в рамките% {период},
+        моля да поиска нова
+      expired: е изтекъл, моля да поиска нова
+      not_found: не е намерен
+      not_locked: не беше заключена
+      not_saved:
+        one: '1 грешка забранено този% {ресурс} не се запазват:'
+        other: "% {брои} грешки забранени тази% {ресурс} да бъде спасен:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: Сървърът не може или не ще придвижи искането поради
+        грешка видно клиент
+      go_to_root: Отиди до корен
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      unprocessable_entity_description: Искането беше добре оформени, но не успя да
+        се следват поради семантични грешки
+      go_to_root: Отиди до корен
+    not_found:
+      not_found: не е намерена
+      not_found_description: Исканият ресурс не може да бъде намерен, но може да бъде
+        на разположение в бъдеще
+      go_to_root: Отиди до корен
+    forbidden:
+      forbidden: Забраненият
+      forbidden_description: Искането беше валидно заявление, но сървърът отказва
+        да отговори на него
+      go_to_root: Отиди до корен
+    internal_server_error:
+      internal_server_error: Вътрешна грешка в сървъра
+      internal_server_error_description: Нещо се обърка. Ние ще го поправим възможно
+        най-скоро.
+      go_to_root: Отиди до корен
   devise:
     shared:
       links:

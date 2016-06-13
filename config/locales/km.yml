@@ -2,6 +2,7 @@
 km:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ធ្វើឱ្យទាន់សម័យ
   1_we_have_just_launched_our_service_title: យើងទើបតែបានចាប់ផ្តើមសេវារបស់យើង
   shared:
@@ -11,6 +12,7 @@ km:
       issues: បញ្ហា
       new_issue: បញ្ហាថ្មី
       edit_project: កែសម្រួលគម្រោង
+      boards: Board របស់
     user_edit_menu:
       profile: ប្រវត្តិរូប
       services: សេវាកម្ម
@@ -30,14 +32,19 @@ km:
     new_issue_modal:
       new_issue: បញ្ហាថ្មី
     left_sidebar:
-      projects: គម្រោង
+      boards: Board របស់
     right_sidebar:
       news: ដំណឹង
       all: ទាំងអស់
       read_more: អានបន្ថែម
-    translations:
+    javascript_global_variables:
       select_section_tags: ជ្រើសផ្នែកស្លាក
       select_issue_tags: ជ្រើសស្លាកបញ្ហា
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance ចំកាត់
+    pagination_link:
+      next_page: ទំព័របន្ទាប់
   users:
     new:
       invite_user: អញ្ជើញអ្នកប្រើ
@@ -68,12 +75,14 @@ km:
       hello: ជំរាបសួរ
       here_some_of_your_statistics: នៅទីនេះមួយចំនួននៃស្ថិតិរបស់អ្នក
       projects: គម្រោង
+      boards: Board របស់
   projects:
     index:
       projects: គម្រោង
       new: ថ្មី
-      stop_sync_with_bitbucket: បញ្ឈប់សមកាលកម្មជាមួយ bitbucket
-      stop_sync_with_github: បញ្ឈប់សមកាលកម្មជាមួយ GitHub
+      stop_sync_with_bitbucket: បញ្ឈប់សមកាលកម្មជាមួយ Bitbucket
+      stop_sync_with_github: បញ្ឈប់សមកាលកម្មជាមួយ Github
+      stop_sync_with_gitlab: បញ្ឈប់សមកាលកម្មជាមួយ Gitlab
     form:
       name: ឈ្មោះ
       enter_project_name: បញ្ចូលឈ្មោះគម្រោង
@@ -89,7 +98,6 @@ km:
       edit: កែសម្រួល
       destroy: លុប
       project_issues: បញ្ហាគម្រោង
-      project_users: អ្នកប្រើប្រាស់គម្រោង
     section_fields:
       section_tags: ស្លាកផ្នែក
       section_order: លំដាប់
@@ -99,7 +107,13 @@ km:
       max_issues_count: បញ្ហាការរាប់នៅក្នុងជួរឈរអតិបរមា
       column_order: លំដាប់
     show:
-      next_page: ទំព័របន្ទាប់
+      project: គម្រោង
+      related_boards: ក្រុមប្រឹក្សាដែលទាក់ទង
+      project_issues: បញ្ហាគម្រោង
+      project_users: អ្នកប្រើប្រាស់គម្រោង
+      new: ថ្មី
+    project_modal:
+      project: គម្រោង
   issues:
     form:
       title: ចំណងជើង
@@ -110,6 +124,7 @@ km:
       tags: ស្លាក
       issue_order: លំដាប់
       github_issue_number: លេខចេញផ្សាយ Github
+      project: គម្រោង
     index:
       issues: បញ្ហា
       new: ថ្មី
@@ -120,6 +135,8 @@ km:
       edit_issue: កែសម្រួលបញ្ហា
     new:
       new_issue: បញ្ហាថ្មី
+    issue_modal:
+      issue: បញ្ហា
   authentications:
     authentication:
       turned_off: បានបិទ
@@ -141,6 +158,32 @@ km:
       welcome_to_kanban_on_rails: នៅលើផ្លូវរថភ្លើង
       welcome_about_text: ទីនេះអ្នកអាចបង្កើតក្រុមប្រឹក្សាភិបាល Kanban ផ្ទាល់ខ្លួនរបស់អ្នកនិងធ្វើសមកាលកម្មវាជាមួយនឹង
         Github ឬ Bitbucket
+  boards:
+    form:
+      name: ឈ្មោះ
+      enter_board_name: បញ្ចូលឈ្មោះក្រុមប្រឹក្សាភិបាល
+      columns: ជួរឈរ
+      add: បន្ថែម
+      sections: ផ្នែក
+      save: រក្សាទុក
+      projects: គម្រោង
+    section_fields:
+      section_tags: ស្លាកផ្នែក
+      section_order: លំដាប់
+      or_include_all: ឬរួមបញ្ចូលទាំងអស់?
+    column_fields:
+      remove_column: យកជួរឈរ
+      max_issues_count: បញ្ហាការរាប់នៅក្នុងជួរឈរអតិបរមា
+      column_order: លំដាប់
+    show:
+      next_page: ទំព័របន្ទាប់
+    index:
+      boards: Board របស់
+      new: ថ្មី
+    board:
+      board_users: អ្នកប្រើ
+      edit: កែសម្រួល
+      destroy: បំផ្លាញ
   pages:
     faq:
       faq: សំណួរគេសួរញឹកញាប់
@@ -170,6 +213,35 @@ km:
         យើងតែងតែព្យាយាមដើម្បីទទួលបានល្អប្រសើរជាងមុននិងការកែលម្អសេវារបស់យើង។
       partners_and_investors: យើងត្រូវបានបើកសម្រាប់ភាពជាដៃគូហើយយើងចង់ស្វែងរកវិនិយោគិន។
         ប្រសិនបើអ្នកចង់សហការជាមួយយើងសូមទាក់ទងមកយើងខ្ញុំ partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: រួចទៅហើយត្រូវបានបញ្ជាក់សូមសាកល្បងចូល
+      confirmation_period_expired: ដែលត្រូវការឱ្យត្រូវបានបញ្ជាក់នៅក្នុង% {រយៈពេល},
+        សូមស្នើសុំថ្មីមួយ
+      expired: បានផុតកំណត់សូមស្នើសុំថ្មីមួយ
+      not_locked: មិនត្រូវបានចាក់សោ
+      not_saved:
+        one: '1 កំហុសបានហាមឃាត់% នេ​​ះ {ធនធាន} ពីការរក្សាទុក:'
+        other: "% {COUNT} កំហុសបានហាមឃាត់នេះ% {ធនធាន} ពីការរក្សាទុក:"
+    bad_request:
+      bad_request_description: ម៉ាស៊ីនបម្រើមិនអាចឬនឹងមិនដំណើរការសំណើនេះដោយសារតែមានកំហុសកម្មវិធីជាក់ស្តែង
+      go_to_root: ចូលទៅកាន់ការជា root
+    unprocessable_entity:
+      unprocessable_entity_description: សំណើនេះគឺល្អបានបង្កើតឡើងប៉ុន្តែនាងមិនត្រូវបានអនុវត្តតាមជាដោយសារកំហុស
+        semantic
+      go_to_root: ចូលទៅកាន់ការជា root
+    not_found:
+      not_found: រកមិនឃើញ
+      not_found_description: ធនធានដែលបានស្នើមិនអាចត្រូវបានរកឃើញប៉ុន្តែអាចនឹងមានក្នុងពេលអនាគត
+      go_to_root: ចូលទៅកាន់ការជា root
+    forbidden:
+      forbidden: ហាមឃាត់
+      forbidden_description: សំណើនេះគឺជាការស្នើរសុំត្រឹមត្រូវប៉ុន្តែម៉ាស៊ីនបម្រើត្រូវបានបដិសេធមិនឆ្លើយតបទៅនឹងវា
+      go_to_root: ចូលទៅកាន់ការជា root
+    internal_server_error:
+      internal_server_error: កំហុសក្នុងការម៉ាស៊ីនបម្រើផ្ទៃក្នុង
+      internal_server_error_description: មានអ្វីមួយមិនប្រក្រតី។ យើងនឹងដោះស្រាយវាបានឆាប់តាមដែលអាចធ្វើទៅបាន។
+      go_to_root: ចូលទៅកាន់ការជា root
   devise:
     shared:
       links:
@@ -229,7 +301,7 @@ km:
       signed_up_but_locked: អ្នកបានចុះឈ្មោះដោយជោគជ័យ។ ទោះយ៉ាងណាយើងមិនអាចឱ្យអ្នកចូលទេព្រោះគណនីរបស់អ្នកត្រូវបានចាក់សោ។
       signed_up_but_unconfirmed: សារដែលមានតំណបញ្ជាក់មួយត្រូវបានផ្ញើទៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។
         សូមបើកតំណភ្ជាប់ដើម្បីធ្វើឱ្យគណនីរបស់អ្នក។
-      update_needs_confirmation: អ្នកធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
+      update_needs_confirmation: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
         សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកហើយចុចលើតំណ Confirm ដើម្បីបញ្ចប់ការបញ្ជាក់ពីអាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
       updated: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
       new:

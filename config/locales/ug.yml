@@ -2,6 +2,7 @@
 ug:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: güncellendi
   shared:
     navbar:
@@ -11,6 +12,7 @@ ug:
       issues: Sorunlar
       new_issue: Yeni konu
       edit_project: düzenleme projesi
+      boards: Kurulları
     languages_select_modal:
       available_languages: Mevcut diller
     user_edit_menu:
@@ -33,15 +35,21 @@ ug:
     new_issue_modal:
       new_issue: Yeni konu
     left_sidebar:
-      projects: Projeler
+      boards: Kurulları
     right_sidebar:
       news: Haberleri
       all: Tüm
       read_more: Devamı
-    translations:
+    javascript_global_variables:
       select_column_tags: Seç sütun etiketleri
       select_section_tags: seç bölüm etiketleri
       select_issue_tags: seçin sorunu etiketleri
+    email_signature:
+      info: Bilgisi
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Sonraki sayfa
   users:
     form:
       name: Adı
@@ -68,6 +76,7 @@ ug:
     dashboard:
       hello: Merhaba
       projects: Projeler
+      boards: Kurulları
   projects:
     index:
       projects: Projeler
@@ -103,7 +112,14 @@ ug:
       column_tags: Sütun etiketleri
       column_order: Sipariş
     show:
-      next_page: Sonraki sayfa
+      project: Projesi
+      related_boards: İlgili panoları
+      project_info: Proje bilgisi
+      project_issues: Proje sorunları
+      project_users: Proje kullanıcıları
+      new: Yeni
+    project_modal:
+      project: Projesi
   issues:
     form:
       title: Başlığı
@@ -114,6 +130,7 @@ ug:
       bitbucket_issue_id: Bitbucket sorunu kimliği
       github_issue_id: Github sorunu kimliği
       github_issue_number: Github sorunu numarası
+      project: Projesi
     index:
       issues: sorunları
       new: Yeni
@@ -124,6 +141,8 @@ ug:
       edit_issue: düzenle sorunu
     new:
       new_issue: Yeni konu
+    issue_modal:
+      issue: Sayı
   authentications:
     index:
       enabled_services: Etkin hizmetler
@@ -140,6 +159,38 @@ ug:
       technoelegance_team: Technoelegance Takımı
     index:
       read_more: Devamı
+  boards:
+    board_modal:
+      board: Kurulu
+    form:
+      name: Adı
+      column_width: Sütun genişliği
+      column_height: Sütun yüksekliği
+      columns: Sütunlar
+      add: Ekle
+      sections: Bölümler
+      save: kaydet
+      projects: Projeler
+    section_fields:
+      section_name: Bölüm adı
+      remove_section: Kaldır bölümünde
+      section_tags: Bölüm etiketleri
+      section_order: Sipariş
+      or_include_all: Ya hepsini içerir?
+    column_fields:
+      column_name: Sütun adı
+      max_issues_count: Max sorunları sütununda saymak
+      column_tags: Sütun etiketleri
+      column_order: Sipariş
+    show:
+      next_page: Sonraki sayfa
+    index:
+      boards: Kurulları
+      new: Yeni
+    board:
+      board_users: Kullanıcılar
+      edit: Düzenleme
+      destroy: yok
   pages:
     faq:
       faq: SSS
@@ -161,6 +212,39 @@ ug:
       partners_and_investors: Biz ortaklık için açılan ve yatırımcılar bulmak istiyorum.
         Eğer bizimle işbirliği isterseniz partnership@technoelegance.com adresinden
         bizimle irtibata geçin
+  errors:
+    messages:
+      already_confirmed: zaten teyit edildi, oturum açmayı deneyin
+      confirmation_period_expired: "% {dönem} içinde teyit edilmesi gerekir yeni bir
+        isteyin"
+      expired: ", yeni bir isteyin"
+      not_found: bulunamadı
+      not_locked: kilitli değildi
+      not_saved:
+        one: '1 hata kaydedilmesini bu% {kaynak} yasak:'
+        other: "% kaydedilmesini bu% {kaynak} yasak hataları {count}:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Talep sonucu
+      go_to_root: köküne git
+    unprocessable_entity:
+      unprocessable_entity: İşlenemeyen Varlık
+      request_result: Talep sonucu
+      go_to_root: köküne git
+    not_found:
+      not_found: Bulunamadı
+      request_result: Talep sonucu
+      go_to_root: köküne git
+    forbidden:
+      forbidden: Yasak
+      request_result: Talep sonucu
+      go_to_root: köküne git
+    internal_server_error:
+      internal_server_error: Dahili Sunucu Hatası
+      request_result: Talep sonucu
+      internal_server_error_description: Bir şeyler ters gitti. Biz en kısa sürede
+        bunu çözecektir.
+      go_to_root: köküne git
   devise:
     shared:
       links:

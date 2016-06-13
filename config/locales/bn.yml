@@ -2,6 +2,7 @@
 bn:
   github: গিটহাব
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: আপডেট
   1_we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করেছে
   shared:
@@ -11,8 +12,10 @@ bn:
       projects: প্রকল্প
       issues: সমস্যা
       syncing_with_github: গিটহাব সঙ্গে সিঙ্ক ...
+      syncing_with_gitlab: Gitlab সঙ্গে সিঙ্ক ...
       syncing_with_bitbucket: Bitbucket সঙ্গে সিঙ্ক ...
       new_issue: নতুন ইস্যু
+      boards: বোর্ড
     languages_select_modal:
       available_languages: প্রাপ্তি সাধ্য ভাষাসমূহ
     user_edit_menu:
@@ -34,15 +37,21 @@ bn:
     new_issue_modal:
       new_issue: নতুন ইস্যু
     left_sidebar:
-      projects: প্রকল্প
+      boards: বোর্ড
     right_sidebar:
       news: সংবাদ
       all: সকল
       read_more: Read more
-    translations:
+    javascript_global_variables:
       select_column_tags: নির্বাচন
       select_section_tags: নির্বাচন
       select_issue_tags: ইস্যু ট্যাগ নির্বাচন করুন
+    email_signature:
+      info: তথ্য
+      mailer: মেইলার
+      technoelegance: Technoelegance লিমিটেড
+    pagination_link:
+      next_page: পরবর্তী পাতা
   users:
     new:
       invite_user: ব্যবহারকারীকে আমন্ত্রণ
@@ -76,12 +85,11 @@ bn:
       hello: হ্যালো
       here_some_of_your_statistics: এখানে আপনার পরিসংখ্যান কিছু
       projects: প্রকল্প
+      boards: বোর্ড
   projects:
     index:
       projects: প্রকল্প
       new: নতুন
-      sync_with_github: GitHub সঙ্গে সিঙ্ক
-      sync_with_bitbucket: bitbucket সঙ্গে সিঙ্ক
     form:
       name: নাম
       enter_project_name: প্রকল্পের নাম লিখুন
@@ -116,7 +124,14 @@ bn:
       column_tags: কলাম ট্যাগ
       column_order: অর্ডার
     show:
-      next_page: পরবর্তী পাতা
+      project: প্রকল্প
+      related_boards: সংশ্লিষ্ট বোর্ড
+      project_info: প্রকল্প তথ্য
+      project_issues: প্রকল্প সমস্যা
+      project_users: প্রকল্প ব্যবহারকারী
+      new: নতুন
+    project_modal:
+      project: প্রকল্প
   issues:
     form:
       title: শিরোনাম
@@ -129,6 +144,7 @@ bn:
       bitbucket_issue_id: Bitbucket ইস্যু আইডি
       github_issue_id: গিটহাব ইস্যু আইডি
       github_issue_number: গিটহাব ইস্যু নম্বর
+      project: প্রকল্প
     index:
       issues: সমস্যা
       sync_with_github: GitHub সঙ্গে সিঙ্ক
@@ -139,6 +155,8 @@ bn:
       edit: সম্পাদনা
     new:
       new_issue: নতুন ইস্যু
+    issue_modal:
+      issue: ইস্যু
   authentications:
     index:
       enabled_services: Enabled সেবা
@@ -162,6 +180,40 @@ bn:
       welcome_to_kanban_on_rails: Kanban উপর পাগল স্বাগতম
       welcome_about_text: আপনি গিটহাব বা Bitbucket সঙ্গে আপনার নিজের Kanban বোর্ড
         এবং সিঙ্ক তৈরি করতে পারেন
+  boards:
+    board_modal:
+      board: বোর্ড
+    form:
+      name: নাম
+      enter_board_name: বোর্ড নাম লিখুন
+      column_width: কলাম প্রস্থ
+      column_height: কলাম উচ্চতা
+      columns: কলাম
+      add: যোগ
+      sections: সেকশনস
+      save: সংরক্ষণ
+      projects: প্রকল্প
+    section_fields:
+      section_name: অনুচ্ছেদ নাম
+      remove_section: করে Remove অধ্যায়
+      section_tags: অনুচ্ছেদ ট্যাগ
+      section_order: অর্ডার
+      or_include_all: অথবা সমস্ত অন্তর্ভুক্ত?
+    column_fields:
+      column_name: কলামের নাম
+      remove_column: কলাম সরান
+      max_issues_count: ম্যাক্স বিষয় কলামে গণনা
+      column_tags: কলাম ট্যাগ
+      column_order: অর্ডার
+    show:
+      next_page: পরবর্তী পাতা
+    index:
+      boards: বোর্ড
+      new: নতুন
+    board:
+      board_users: ব্যবহারকারীরা
+      edit: সম্পাদনা
+      destroy: ধ্বংস করো
   pages:
     faq:
       faq: অনবরত জিজ্ঞাসিত প্রশ্ন
@@ -197,10 +249,48 @@ bn:
       partners_and_investors: আমরা অংশীদারিত্ব জন্য খুলে দেওয়া হয় এবং আমরা বিনিয়োগকারীদের
         খুঁজে পেতে চাই. আপনি আমাদের সঙ্গে সহযোগিতা করতে চান তাহলে partnership@technoelegance.com
         এ আমাদের সাথে যোগাযোগ করুন
+  errors:
+    messages:
+      already_confirmed: ইতিমধ্যে নিশ্চিত করা হয়, সাইন ইন করার চেষ্টা করুন
+      confirmation_period_expired: দরকার% {সময়ের} মধ্যে নিশ্চিত করা হবে, একটি নতুন
+        একটি অনুরোধ করুন
+      expired: মেয়াদপূর্তী, একটি নতুন একটি অনুরোধ করুন
+      not_found: পাওয়া যায়নি
+      not_locked: লক হয় নি
+      not_saved:
+        one: '1 ত্রুটি উদ্ধার হওয়া থেকে এই% {রিসোর্স} নিষিদ্ধ:'
+        other: "% {গণনা} উদ্ধার হওয়া থেকে এই% {রিসোর্স} নিষিদ্ধ ত্রুটি:"
+    bad_request:
+      bad_request: খারাপ অনুরোধ
+      request_result: অনুরোধ ফল
+      bad_request_description: কারণে একটি আপাত ক্লায়েন্ট ত্রুটির
+      go_to_root: রুট যান
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable সত্তা
+      request_result: অনুরোধ ফল
+      unprocessable_entity_description: সুগঠিত ছিল কিন্তু শব্দার্থিক ত্রুটির কারণে
+        অনুসরণীয় করতে পারেনি
+      go_to_root: রুট যান
+    not_found:
+      not_found: Not Found
+      request_result: অনুরোধ ফল
+      not_found_description: খুঁজে পাওয়া যাবে না, তবে ভবিষ্যতে পাওয়া যেতে পারে
+      go_to_root: রুট যান
+    forbidden:
+      forbidden: Forbidden
+      request_result: অনুরোধ ফল
+      forbidden_description: একটি ভ্যালিড রিকোয়েস্ট ছিল, কিন্তু সার্ভার এ রিকোয়েস্টের
+        জন্য রিস্পন্স করতে অসম্মতি জানাচ্ছে
+      go_to_root: রুট যান
+    internal_server_error:
+      internal_server_error: অভ্যন্তরীণ সার্ভার সমস্যা
+      request_result: অনুরোধ ফল
+      internal_server_error_description: কিছু গন্ডগোল হয়েছে. আমরা এটা যত তাড়াতাড়ি
+        সম্ভব ঠিক করবে.
+      go_to_root: রুট যান
   devise:
     shared:
       links:
-        sign_in: নিদর্শন
         sign_up: সাইন আপ করুন
         didnt_receive_confirmation_instructions: নিশ্চিতকরণ নির্দেশাবলী গ্রহন করেছিলাম
           ঠিক বলেছি না?
@@ -289,7 +379,6 @@ bn:
       signed_in: সফলভাবে সাইন ইন করুন.
       signed_out: সফলভাবে সাইন আউট করা.
       new:
-        sign_in: নিদর্শন
         password: পাসওয়ার্ড
         remember_me: আমাকে মনে রেখো
         forgot_your_password: আপনার পাসওয়ার্ড ভুলে গেছেন?

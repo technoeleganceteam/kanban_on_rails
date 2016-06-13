@@ -2,6 +2,7 @@
 da:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: opdateret
   1_we_have_just_launched_our_service_title: Vi har netop lanceret vores service
   shared:
@@ -11,9 +12,11 @@ da:
       projects: Projekter
       issues: Issues
       syncing_with_github: Synkroniser med Github ...
+      syncing_with_gitlab: Synkroniser med Gitlab ...
       syncing_with_bitbucket: Synkroniser med Bitbucket ...
       new_issue: Nyt emne
       edit_project: Rediger projekt
+      boards: Boards
     languages_select_modal:
       available_languages: Ledige sprog
     user_edit_menu:
@@ -36,15 +39,21 @@ da:
     new_issue_modal:
       new_issue: Nyt emne
     left_sidebar:
-      projects: Projekter
+      boards: Boards
     right_sidebar:
       news: Nyheder
       all: Alle
       read_more: Læs mere
-    translations:
+    javascript_global_variables:
       select_column_tags: Vælg kolonne tags
       select_section_tags: Vælg sektion tags
       select_issue_tags: Vælg udstede tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Næste side
   users:
     new:
       invite_user: Inviter bruger
@@ -80,14 +89,17 @@ da:
       hello: Hej
       here_some_of_your_statistics: Her nogle af dine statistikker
       projects: Projekter
+      boards: Boards
   projects:
     index:
       projects: Projekter
       new: Ny
-      sync_with_github: Synkroniser med GitHub
+      sync_with_github: Synkroniser med Github
+      sync_with_gitlab: Synkroniser med Gitlab
       sync_with_bitbucket: Synkroniser med Bitbucket
       stop_sync_with_bitbucket: Stop synkronisering med Bitbucket
-      stop_sync_with_github: Stop synkronisering med GitHub
+      stop_sync_with_github: Stop synkronisering med Github
+      stop_sync_with_gitlab: Stop synkronisering med Gitlab
     form:
       name: Navn
       enter_project_name: Indtast projektnavn
@@ -122,7 +134,14 @@ da:
       column_tags: Kolonne tags
       column_order: Order
     show:
-      next_page: Næste side
+      project: Projekt
+      related_boards: Relaterede brædder
+      project_info: Projekt info
+      project_issues: Projekt spørgsmål
+      project_users: Project brugere
+      new: Ny
+    project_modal:
+      project: Projekt
   issues:
     form:
       title: Titel
@@ -135,6 +154,7 @@ da:
       bitbucket_issue_id: Bitbucket problem id
       github_issue_id: Github problem id
       github_issue_number: Github udstedelsesnummer
+      project: Projekt
     index:
       issues: spørgsmål
       sync_with_github: Synkroniser med GitHub
@@ -147,6 +167,8 @@ da:
       edit_issue: Rediger emne
     new:
       new_issue: Nyt emne
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Aktiverede tjenester
@@ -172,6 +194,40 @@ da:
       welcome_to_kanban_on_rails: Velkommen til Kanban On Rails
       welcome_about_text: Her kan du oprette din egen Kanban bord og synkronisere
         den med Github eller Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Navn
+      enter_board_name: Indtast bord navn
+      column_width: Kolonnebredde
+      column_height: Spaltehøjde
+      columns: Kolonner
+      add: Tilføj
+      sections: Sektioner
+      save: Gem
+      projects: Projekter
+    section_fields:
+      section_name: Afsnit navn
+      remove_section: Fjern sektion
+      section_tags: Afsnit tags
+      section_order: Order
+      or_include_all: Eller omfatte alle?
+    column_fields:
+      column_name: Kolonne navn
+      remove_column: Fjern kolonne
+      max_issues_count: Maks spørgsmål tæller i kolonne
+      column_tags: Kolonne tags
+      column_order: Order
+    show:
+      next_page: Næste side
+    index:
+      boards: Boards
+      new: Ny
+    board:
+      board_users: Brugere
+      edit: Rediger
+      destroy: Ødelæg
   pages:
     faq:
       faq: FAQ
@@ -205,6 +261,47 @@ da:
         Vi forsøger altid at få det bedre og forbedre vores service.
       partners_and_investors: Vi er åbnet for partnerskab, og vi vil gerne finde investorer.
         Hvis du gerne vil samarbejde med os kan du kontakte os på partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: blev allerede bekræftet, kan du prøve at logge ind
+      confirmation_period_expired: skal bekræftes inden for% {periode}, bedes du anmode
+        om en ny
+      expired: er udløbet, skal du anmode om en ny
+      not_found: ikke fundet
+      not_locked: var ikke låst
+      not_saved:
+        one: 'en fejl forbudt denne% {ressource} i at blive gemt:'
+        other: "% {count} fejl forbudt denne% {ressource} fra at blive gemt:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Anmodning resultat
+      bad_request_description: Serveren ikke kan eller vil ikke behandle anmodningen
+        på grund af en tilsyneladende klient fejl
+      go_to_root: Gå til roden
+    unprocessable_entity:
+      unprocessable_entity: Kan ikke behandles Entity
+      request_result: Anmodning resultat
+      unprocessable_entity_description: Anmodningen var velformede, men var ude af
+        stand til at blive fulgt på grund af semantiske fejl
+      go_to_root: Gå til roden
+    not_found:
+      not_found: ikke fundet
+      request_result: Anmodning resultat
+      not_found_description: Den ønskede ressource blev ikke fundet, men kan være
+        til rådighed i fremtiden
+      go_to_root: Gå til roden
+    forbidden:
+      forbidden: Forbidden
+      request_result: Anmodning resultat
+      forbidden_description: Anmodningen var en gyldig anmodning, men serveren nægter
+        at svare på det
+      go_to_root: Gå til roden
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Anmodning resultat
+      internal_server_error_description: Noget gik galt. Vi vil ordne det så hurtigt
+        som muligt.
+      go_to_root: Gå til roden
   devise:
     shared:
       links:

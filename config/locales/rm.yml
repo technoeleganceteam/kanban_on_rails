@@ -2,6 +2,7 @@
 rm:
   github: Github
   bitbucket: Bitbucket
+  gitlab: gitlab
   updated: atualizada
   1_we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço
   shared:
@@ -11,9 +12,11 @@ rm:
       projects: Projetos
       issues: Issues
       syncing_with_github: Sync com o Github ...
+      syncing_with_gitlab: sincronização com gitlab ...
       syncing_with_bitbucket: sincronização com Bitbucket ...
       new_issue: Nova edição
       edit_project: Editar projeto
+      boards: Boards
     languages_select_modal:
       available_languages: Línguas disponíveis
     user_edit_menu:
@@ -36,15 +39,21 @@ rm:
     new_issue_modal:
       new_issue: Nova edição
     left_sidebar:
-      projects: Projetos
+      boards: Boards
     right_sidebar:
       news: Notícias
       all: Todos
       read_more: Leia mais
-    translations:
+    javascript_global_variables:
       select_column_tags: Selecionar tags coluna
       select_section_tags: Seleccione marcas de seção
       select_issue_tags: Selecionar tags emissão
+    email_signature:
+      info: Informações
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Página seguinte
   users:
     new:
       invite_user: Convidar usuário
@@ -79,14 +88,17 @@ rm:
       hello: Olá
       here_some_of_your_statistics: Aqui algumas de suas estatísticas
       projects: Projetos
+      boards: Boards
   projects:
     index:
       projects: Projetos
       new: Nova
-      sync_with_github: sincronização com github
-      sync_with_bitbucket: sincronização com bitbucket
-      stop_sync_with_bitbucket: Parar a sincronização com bitbucket
-      stop_sync_with_github: Parar a sincronização com github
+      sync_with_github: Sync com o Github
+      sync_with_gitlab: sincronização com gitlab
+      sync_with_bitbucket: sincronização com Bitbucket
+      stop_sync_with_bitbucket: Parar a sincronização com Bitbucket
+      stop_sync_with_github: Parar a sincronização com o Github
+      stop_sync_with_gitlab: Parar a sincronização com gitlab
     form:
       name: Nome
       enter_project_name: Digite o nome do projeto
@@ -114,7 +126,13 @@ rm:
       column_tags: etiquetas Coluna
       column_order: Order
     show:
-      next_page: Página seguinte
+      project: Projeto
+      related_boards: placas Relacionados
+      project_issues: problemas do projeto
+      project_users: Os usuários do projeto
+      new: Nova
+    project_modal:
+      project: Projeto
   issues:
     form:
       title: Título
@@ -127,6 +145,7 @@ rm:
       bitbucket_issue_id: Bitbucket problema id
       github_issue_id: Github problema id
       github_issue_number: número de emissão Github
+      project: Projeto
     index:
       issues: questões
       sync_with_github: sincronização com github
@@ -139,6 +158,8 @@ rm:
       edit_issue: Editar assunto
     new:
       new_issue: Nova edição
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: serviços habilitados
@@ -164,6 +185,35 @@ rm:
       welcome_to_kanban_on_rails: Bem-vindo ao Kanban On Rails
       welcome_about_text: Aqui você pode criar sua própria placa Kanban e sincronizá-lo
         com o Github ou Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Nome
+      enter_board_name: Inserir o nome do bordo
+      columns: Colunas
+      add: Add
+      sections: Secções
+      save: Guardar
+      projects: Projetos
+    section_fields:
+      section_tags: marcas de seção
+      section_order: Order
+      or_include_all: ou incluir todos?
+    column_fields:
+      remove_column: Remover coluna
+      max_issues_count: questões Max contar na coluna
+      column_tags: etiquetas Coluna
+      column_order: Order
+    show:
+      next_page: Página seguinte
+    index:
+      boards: Boards
+      new: Nova
+    board:
+      board_users: Usuários
+      edit: Editar
+      destroy: Destruir
   pages:
     faq:
       faq: FAQ
@@ -198,6 +248,41 @@ rm:
       partners_and_investors: Estamos abertos para parcerias e gostaríamos de encontrar
         investidores. Se você gostaria de cooperar com a gente, por favor contacte-nos
         em partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: já foi confirmado, por favor tente fazer login
+      confirmation_period_expired: deve ser confirmado dentro de% {período}, por favor,
+        solicitar um novo
+      expired: expirou, por favor solicitar um novo
+      not_found: não encontrado
+      not_locked: não estava trancada
+      not_saved:
+        one: '1 erro proibido este% {recurso} de ser salvo:'
+        other: "% {count} erros proibidas este% {recurso} de ser salvo:"
+    bad_request:
+      bad_request_description: O servidor não pode ou não irá processar o pedido devido
+        a um erro cliente aparente
+      go_to_root: Ir para raiz
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entidade
+      unprocessable_entity_description: O pedido foi bem formado, mas não pôde ser
+        seguido devido a erros semânticos
+      go_to_root: Ir para raiz
+    not_found:
+      not_found: não encontrado
+      not_found_description: O recurso solicitado não foi encontrado, mas podem estar
+        disponíveis no futuro
+      go_to_root: Ir para raiz
+    forbidden:
+      forbidden: Proibida
+      forbidden_description: O pedido foi um pedido válido, mas o servidor está se
+        recusando a responder a ela
+      go_to_root: Ir para raiz
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Algo deu errado. Vamos corrigi-lo o mais
+        rapidamente possível.
+      go_to_root: Ir para raiz
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 lo:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ປັບປຸງ
   1_we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ
   shared:
@@ -11,9 +12,11 @@ lo:
       projects: ໂຄງການ
       issues: ບັນຫາ
       syncing_with_github: Sync ກັບ GitHub ...
+      syncing_with_gitlab: Sync ກັບ Gitlab ...
       syncing_with_bitbucket: Sync ກັບ Bitbucket ...
       new_issue: ບັນຫາໃຫມ່
       edit_project: ແກ້ໄຂໂຄງການ
+      boards: ບອດ
     languages_select_modal:
       available_languages: ພາສາທີ່ໃຊ້
     user_edit_menu:
@@ -36,15 +39,20 @@ lo:
     new_issue_modal:
       new_issue: ບັນຫາໃຫມ່
     left_sidebar:
-      projects: ໂຄງການ
+      boards: ບອດ
     right_sidebar:
       news: News
       all: ທັງຫມົດ
       read_more: ອ່ານເພີ່ມເຕີມ
-    translations:
+    javascript_global_variables:
       select_column_tags: ເລືອກ tags ຖັນ
       select_section_tags: ເລືອກ tags ພາກ
       select_issue_tags: ເລືອກ tags ບັນຫາ
+    email_signature:
+      mailer: Mailer
+      technoelegance: Technoelegance ກັດ
+    pagination_link:
+      next_page: ຫນ້າຖັດໄປ
   users:
     new:
       invite_user: ເຊີນຜູ້ໃຊ້
@@ -78,14 +86,17 @@ lo:
       hello: ສະບາຍດີ
       here_some_of_your_statistics: ຕໍ່ໄປນີ້ເປັນສະຖິຕິຂອງທ່ານ
       projects: ໂຄງການ
+      boards: ບອດ
   projects:
     index:
       projects: ໂຄງການ
       new: ໃຫມ່
       sync_with_github: Sync ກັບ GitHub
-      sync_with_bitbucket: Sync ກັບ bitbucket
-      stop_sync_with_bitbucket: sync Stop ກັບ bitbucket
+      sync_with_gitlab: Sync ກັບ Gitlab
+      sync_with_bitbucket: Sync ກັບ Bitbucket
+      stop_sync_with_bitbucket: sync Stop ກັບ Bitbucket
       stop_sync_with_github: sync Stop ກັບ GitHub
+      stop_sync_with_gitlab: sync Stop ກັບ Gitlab
     form:
       name: ຊື່
       enter_project_name: ກະລຸນາໃສ່ຊື່ໂຄງການ
@@ -113,7 +124,13 @@ lo:
       column_tags: tags Column
       column_order: Order
     show:
-      next_page: ຫນ້າຖັດໄປ
+      project: Project
+      related_boards: ຫມວດຫມູ່ທີ່ກ່ຽວຂ້ອງ
+      project_issues: ບັນຫາໂຄງການ
+      project_users: ຜູ້ໃຊ້ໂຄງການ
+      new: ໃຫມ່
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -126,6 +143,7 @@ lo:
       bitbucket_issue_id: Bitbucket ບັນຫາ id
       github_issue_id: GitHub ບັນຫາ id
       github_issue_number: GitHub ຈໍານວນບັນຫາ
+      project: Project
     index:
       issues: ບັນຫາ
       sync_with_github: Sync ກັບ GitHub
@@ -138,6 +156,8 @@ lo:
       edit_issue: ແກ້ໄຂບັນຫາ
     new:
       new_issue: ບັນຫາໃຫມ່
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: ການບໍລິການ
@@ -162,6 +182,33 @@ lo:
       welcome_to_kanban_on_rails: ຍິນດີຕ້ອນຮັບ Kanban ກ່ຽວກັບ Rails
       welcome_about_text: ໃນທີ່ນີ້ທ່ານສາມາດສ້າງຄະນະກໍາມະ Kanban ຂອງທ່ານເອງແລະ sync
         ກັບ GitHub ຫຼື Bitbucket
+  boards:
+    form:
+      name: ຊື່
+      enter_board_name: ກະລຸນາໃສ່ຊື່ຄະນະກໍາມະ
+      columns: Columns
+      add: Add
+      sections: Sections
+      save: ບັນທຶກ
+      projects: ໂຄງການ
+    section_fields:
+      section_tags: tags Section
+      section_order: Order
+      or_include_all: ຫຼືປະກອບມີທັງຫມົດ?
+    column_fields:
+      remove_column: ອອກຄໍລໍາ
+      max_issues_count: ບັນຫານ້ໍານັບໃນຖັນ
+      column_tags: tags Column
+      column_order: Order
+    show:
+      next_page: ຫນ້າຖັດໄປ
+    index:
+      boards: ບອດ
+      new: ໃຫມ່
+    board:
+      board_users: ຜູ້ໃຊ້
+      edit: ແກ້ໄຂ
+      destroy: ທໍາລາຍ
   pages:
     faq:
       faq: FAQ
@@ -192,6 +239,37 @@ lo:
         ພວກເຮົາສະເຫມີພະຍາຍາມເພື່ອໃຫ້ໄດ້ຮັບທີ່ດີກວ່າແລະການປັບປຸງການບໍລິການຂອງພວກເຮົາ.
       partners_and_investors: ພວກເຮົາເປີດບໍລິການການຮ່ວມມືແລະພວກເຮົາຈະຕ້ອງການເພື່ອຊອກຫານັກລົງທຶນ.
         ຖ້າຫາກວ່າທ່ານຕ້ອງການທີ່ຈະຮ່ວມມືກັບພວກເຮົາກະລຸນາຕິດຕໍ່ຫາພວກເຮົາທີ່ partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: ໄດ້ຮັບການຢັ້ງຢືນແລ້ວ, ກະລຸນາພະຍາຍາມເຂົ້າສູ່ລະບົບ
+      confirmation_period_expired: ຕ້ອງໄດ້ຮັບການຢັ້ງຢືນພາຍໃນ% {ໄລຍະເວລາ}, ກະລຸນາຂໍເປັນຫນຶ່ງໃນໃຫມ່
+      expired: ໄດ້ຫມົດອາຍຸແລ້ວ, ກະລຸນາຂໍເປັນຫນຶ່ງໃນໃຫມ່
+      not_found: ບໍ່ໄດ້ພົບເຫັນ
+      not_locked: ບໍ່ໄດ້ມີຊາຍແດນຕິດ
+      not_saved:
+        one: '1 error ຫ້າມ% ນີ້ {resource} ຈາກຈະຖືກບັນທືກ:'
+        other: "% {ນັບ} ຄວາມຜິດພາດຫ້າມ% ນີ້ {resource} ຈາກຈະຖືກບັນທືກ:"
+    bad_request:
+      bad_request: ຂໍ Bad
+      bad_request_description: ເຄື່ອງແມ່ຂ່າຍທີ່ສາມາດຫຼືບໍ່ຈະຮ້ອງຂໍການອັນເນື່ອງມາຈາກຄວາມຜິດພາດຂອງລູກຄ້າປາກົດຂື້ນ
+      go_to_root: ໄປທີ່ຮາກ
+    unprocessable_entity:
+      unprocessable_entity: ທີ່ຍັງບໍ່ໄດ້ນິຕິບຸກຄົນ
+      unprocessable_entity_description: ການຮ້ອງຂໍແມ່ນດີສ້າງຕັ້ງຂຶ້ນແຕ່ບໍ່ສາມາດໄດ້ຮັບການປະຕິບັດຕາມຍ້ອນຄວາມຜິດພາດ
+        semantic
+      go_to_root: ໄປທີ່ຮາກ
+    not_found:
+      not_found: ບໍ່ພົບ
+      not_found_description: ການຊັບພະຍາກອນຂໍບໍ່ສາມາດພົບເຫັນແຕ່ອາດຈະມີໃນອະນາຄົດ
+      go_to_root: ໄປທີ່ຮາກ
+    forbidden:
+      forbidden: ຕ້ອງຫ້າມ
+      forbidden_description: ການຮ້ອງຂໍແມ່ນການຮ້ອງຂໍທີ່ຖືກຕ້ອງ, ແຕ່ວ່າເຄື່ອງແມ່ຂ່າຍແມ່ນການປະຕິເສດທີ່ຈະຕອບສະຫນອງຕໍ່ກັບມັນ
+      go_to_root: ໄປທີ່ຮາກ
+    internal_server_error:
+      internal_server_error: Error Server ພາຍໃນ
+      internal_server_error_description: ບາງສິ່ງບາງຢ່າງໄດ້ຜິດພາດ. ພວກເຮົາຈະແກ້ໄຂໄດ້ໃນທັນທີທີ່ເປັນໄປໄດ້.
+      go_to_root: ໄປທີ່ຮາກ
   devise:
     shared:
       links:

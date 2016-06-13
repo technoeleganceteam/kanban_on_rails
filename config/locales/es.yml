@@ -2,6 +2,7 @@
 es:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: actualizan
   1_we_have_just_launched_our_service_title: Acabamos de lanzar nuestro servicio
   shared:
@@ -10,9 +11,11 @@ es:
       sign_up: Regístrate
       projects: Proyectos
       syncing_with_github: sincronización con Github ...
+      syncing_with_gitlab: sincronización con Gitlab ...
       syncing_with_bitbucket: sincronización con Bitbucket ...
       new_issue: nuevo tema
       edit_project: Editar proyecto
+      boards: Juntas
     languages_select_modal:
       available_languages: Idiomas disponibles
     user_edit_menu:
@@ -34,15 +37,19 @@ es:
       edit_project: Editar proyecto
     new_issue_modal:
       new_issue: nuevo tema
-    left_sidebar:
-      projects: Proyectos
     right_sidebar:
       news: Noticias
       all: Todo
-    translations:
+    javascript_global_variables:
       select_column_tags: columna Seleccionar
       select_section_tags: Seleccionar etiquetas de sección
       select_issue_tags: Seleccione las etiquetas de emisión
+    email_signature:
+      info: Información
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Página siguiente
   users:
     new:
       invite_user: Invitar a un usuario
@@ -78,10 +85,12 @@ es:
     index:
       projects: Proyectos
       new: Nueva
-      sync_with_github: sincronización con github
-      sync_with_bitbucket: sincronización con bitbucket
-      stop_sync_with_bitbucket: Detener la sincronización con bitbucket
-      stop_sync_with_github: Detener la sincronización con github
+      sync_with_github: sincronización con Github
+      sync_with_gitlab: sincronización con Gitlab
+      sync_with_bitbucket: sincronización con Bitbucket
+      stop_sync_with_bitbucket: Detener la sincronización con Bitbucket
+      stop_sync_with_github: Detener la sincronización con Github
+      stop_sync_with_gitlab: Detener la sincronización con Gitlab
     form:
       name: Nombre
       enter_project_name: Introduce el nombre del proyecto
@@ -105,7 +114,9 @@ es:
       column_tags: etiquetas de columna
       column_order: Orden
     show:
-      next_page: Página siguiente
+      related_boards: tablas relacionadas
+      project_issues: problemas del proyecto
+      new: Nueva
   issues:
     form:
       title: Título
@@ -149,6 +160,27 @@ es:
       welcome_to_kanban_on_rails: Bienvenido a Kanban On Rails
       welcome_about_text: Aquí puede crear su propio tablero Kanban y sincronizarlo
         con Github o Bitbucket
+  boards:
+    form:
+      name: Nombre
+      enter_board_name: Ingresa una placa
+      add: Agregar
+      sections: Secciones
+      save: Guardar
+      projects: Proyectos
+    section_fields:
+      section_tags: etiquetas de sección
+      section_order: Orden
+      or_include_all: o incluir todos?
+    column_fields:
+      remove_column: Retire la columna
+      max_issues_count: cuestiones Max cuentan en la columna
+      column_tags: etiquetas de columna
+      column_order: Orden
+    show:
+      next_page: Página siguiente
+    index:
+      new: Nueva
   pages:
     faq:
       faq: FAQ
@@ -184,6 +216,44 @@ es:
       partners_and_investors: estamos abiertos a la colaboración y nos gustaría encontrar
         inversores. Si desea colaborar con nosotros, por favor contacte con nosotros
         en partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: ya se confirmó, intenta acceder
+      confirmation_period_expired: deben ser confirmadas dentro de% {} tiempo, solicite
+        uno nuevo
+      expired: ha caducado, por favor solicitar una nueva
+      not_found: no encontrado
+      not_locked: no estaba cerrada
+      not_saved:
+        one: '1 error prohibido este% {} de recursos que se guarden:'
+        other: "{count} errores prohibidos este% {} de recursos que se guarden:"
+    bad_request:
+      request_result: Solicitud
+      bad_request_description: El servidor no pueden o no procesará la solicitud debido
+        a un error aparente en el cliente
+      go_to_root: Ir a la raíz
+    unprocessable_entity:
+      unprocessable_entity: Entidad no procesable
+      request_result: Solicitud
+      unprocessable_entity_description: La solicitud fue bien formadas, pero no pudo
+        ser seguido debido a errores semánticos
+      go_to_root: Ir a la raíz
+    not_found:
+      not_found: no encontrado
+      request_result: Solicitud
+      not_found_description: El recurso solicitado no se puede conocer, pero pueden
+        estar disponibles en un futuro
+      go_to_root: Ir a la raíz
+    forbidden:
+      request_result: Solicitud
+      forbidden_description: La solicitud fue una petición válida, pero el servidor
+        se niega a responder a ella
+      go_to_root: Ir a la raíz
+    internal_server_error:
+      request_result: Solicitud
+      internal_server_error_description: Algo salió mal. Vamos a encontrar una solución
+        lo antes posible.
+      go_to_root: Ir a la raíz
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 ta:
   github: கிட்ஹப்
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: மேம்படுத்தப்பட்டது
   shared:
     navbar:
@@ -10,6 +11,7 @@ ta:
       projects: திட்டங்கள்
       issues: சிக்கல்கள்
       new_issue: புதிய பிரச்சினை
+      boards: வாரியங்கள்
     languages_select_modal:
       available_languages: இன்னும் மொழிகளை
     user_edit_menu:
@@ -30,15 +32,21 @@ ta:
     new_issue_modal:
       new_issue: புதிய பிரச்சினை
     left_sidebar:
-      projects: திட்டங்கள்
+      boards: வாரியங்கள்
     right_sidebar:
       news: செய்திகள்
       all: அனைத்து
       read_more: Read more
-    translations:
+    javascript_global_variables:
       select_column_tags: தேர்வு
       select_section_tags: தேர்வு
       select_issue_tags: தேர்வு பிரச்சினை குறிச்சொற்களை
+    email_signature:
+      info: தகவல்
+      mailer: வரியாகும்
+      technoelegance: Technoelegance லிமிடெட்
+    pagination_link:
+      next_page: அடுத்த பக்கம்
   users:
     new:
       invite_user: அழை
@@ -71,10 +79,14 @@ ta:
     dashboard:
       hello: வணக்கம்
       projects: திட்டங்கள்
+      boards: வாரியங்கள்
   projects:
     index:
       projects: திட்டங்கள்
       new: நியூ
+      sync_with_github: கிட்ஹப் ஒத்திசைவு
+      sync_with_gitlab: Gitlab ஒத்திசைவு
+      sync_with_bitbucket: Bitbucket ஒத்திசைவு
     form:
       name: பெயர்
       enter_project_name: திட்டம் பெயரை உள்ளிடவும்
@@ -109,7 +121,14 @@ ta:
       column_tags: வரிசை குறிச்சொற்களை
       column_order: ஆணை
     show:
-      next_page: அடுத்த பக்கம்
+      project: திட்ட
+      related_boards: சம்பந்தப்பட்ட பலகைகள்
+      project_info: திட்ட தகவல்
+      project_issues: திட்ட பிரச்சினைகள்
+      project_users: திட்ட பயனாளிகள்
+      new: நியூ
+    project_modal:
+      project: திட்ட
   issues:
     form:
       title: தலைப்பு
@@ -122,6 +141,7 @@ ta:
       bitbucket_issue_id: Bitbucket அடையாள
       github_issue_id: கிட்ஹப் அடையாள
       github_issue_number: கிட்ஹப் பிரச்சினை எண்
+      project: திட்ட
     index:
       issues: பிரச்சினைகள்
       new: நியூ
@@ -130,6 +150,8 @@ ta:
       edit: திருத்து
     new:
       new_issue: புதிய பிரச்சினை
+    issue_modal:
+      issue: வெளியீடு
   authentications:
     index:
       enabled_services: இயக்கப்பட்டது சேவைகள்
@@ -149,6 +171,40 @@ ta:
       technoelegance_team: Technoelegance குழு
     index:
       read_more: Read more
+  boards:
+    board_modal:
+      board: வாரியம்
+    form:
+      name: பெயர்
+      enter_board_name: குழு பெயரை உள்ளிடவும்
+      column_width: வரிசை அகலம்
+      column_height: வரிசை உயரம்
+      columns: பத்திகள்
+      add: சேர்
+      sections: பிரிவுகள்
+      save: சேமி
+      projects: திட்டங்கள்
+    section_fields:
+      section_name: பகுதியின் பெயர்
+      remove_section: உள்ள Remove பிரிவில்
+      section_tags: பிரிவு குறிச்சொற்களை
+      section_order: ஆணை
+      or_include_all: அல்லது அடங்கும்?
+    column_fields:
+      column_name: வரிசை பெயர்
+      remove_column: நிரலை நீக்க
+      max_issues_count: மேக்ஸ் பிரச்சினைகள் பத்தியில் எண்ண
+      column_tags: வரிசை குறிச்சொற்களை
+      column_order: ஆணை
+    show:
+      next_page: அடுத்த பக்கம்
+    index:
+      boards: வாரியங்கள்
+      new: நியூ
+    board:
+      board_users: பயனர்கள்
+      edit: திருத்து
+      destroy: அழிக்க
   pages:
     faq:
       faq: கேள்விகள்
@@ -183,6 +239,45 @@ ta:
       partners_and_investors: நாம் கூட்டு திறக்கப்படுவதையும் நாங்கள் முதலீட்டாளர்களை
         கண்டுபிடிக்க விரும்புகிறேன். நீங்கள் எங்களோடு ஒத்துழைக்க வேண்டும் விரும்பினால்
         partnership@technoelegance.com எங்களை தொடர்பு கொள்ளவும்
+  errors:
+    messages:
+      already_confirmed: ஏற்கனவே உறுதி செய்யப்பட்டது, உள்நுழைய முயற்சிக்கவும்
+      confirmation_period_expired: "% {காலம்} உள்ள உறுதி வேண்டும், ஒரு புதிய கோரலாம்"
+      expired: காலாவதியாகிவிட்டது, ஒரு புதிய கோரலாம்
+      not_found: காணவில்லை
+      not_locked: பூட்டி வைக்கப்படவில்லை
+      not_saved:
+        one: '1 பிழையால் இந்த% {வள} தடை:'
+        other: "% சேமிக்கப்பட்ட இருந்து பிழைகள் இந்த% {வள} தடை {எண்ணிக்கை}:"
+    bad_request:
+      bad_request: தவறான கோரிக்கை
+      request_result: வேண்டுகோள் விளைவாக
+      bad_request_description: காரணமாக ஒரு வெளிப்படையான வாடிக்கையாளர் பிழை
+      go_to_root: ரூட் சென்று
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable நிறுவனத்தின்
+      request_result: வேண்டுகோள் விளைவாக
+      unprocessable_entity_description: நன்கு அமைக்கப்பட்ட என்பதே ஆனால் சொற்பொருள்
+        பிழைகள் தொடர்ந்து இருக்க முடியவில்லை
+      go_to_root: ரூட் சென்று
+    not_found:
+      not_found: கிடைக்கவில்லை
+      request_result: வேண்டுகோள் விளைவாக
+      not_found_description: கண்டுபிடிக்க முடியவில்லை ஆனால் எதிர்காலத்தில் கிடைக்க
+        இருக்கலாம்
+      go_to_root: ரூட் சென்று
+    forbidden:
+      forbidden: விலக்கப்பட்டவர்கள்
+      request_result: வேண்டுகோள் விளைவாக
+      forbidden_description: ஒரு சரியான கோரிக்கை இருந்தது, ஆனால் சர்வர் அதை பதிலளிக்க
+        மறுக்கிறது
+      go_to_root: ரூட் சென்று
+    internal_server_error:
+      internal_server_error: உள்ளக சர்வர் பிழை
+      request_result: வேண்டுகோள் விளைவாக
+      internal_server_error_description: ஏதோ தவறு நடந்துவிட்டது. நாம் விரைவில் அதை
+        சரி செய்ய வேண்டும்.
+      go_to_root: ரூட் சென்று
   devise:
     shared:
       links:

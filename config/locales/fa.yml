@@ -2,6 +2,7 @@
 fa:
   github: گیتهاب
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: به روز
   1_we_have_just_launched_our_service_title: ما فقط راه اندازی خدمات ما
   shared:
@@ -11,9 +12,11 @@ fa:
       projects: پروژه
       issues: مسائل
       syncing_with_github: همگام سازی با گیتهاب ...
+      syncing_with_gitlab: همگام سازی با Gitlab ...
       syncing_with_bitbucket: همگام سازی با Bitbucket ...
       new_issue: موضوع جدید
       edit_project: پروژه ویرایش
+      boards: انجمن
     languages_select_modal:
       available_languages: زبان های موجود
     user_edit_menu:
@@ -36,15 +39,21 @@ fa:
     new_issue_modal:
       new_issue: موضوع جدید
     left_sidebar:
-      projects: پروژه
+      boards: انجمن
     right_sidebar:
       news: اخبار
       all: همه
       read_more: ادامه مطلب
-    translations:
+    javascript_global_variables:
       select_column_tags: انتخاب
       select_section_tags: انتخاب
       select_issue_tags: برچسب ها موضوع را انتخاب کنید
+    email_signature:
+      info: اطلاعات
+      mailer: میلر
+      technoelegance: Technoelegance گیم
+    pagination_link:
+      next_page: صفحه بعدی
   users:
     new:
       invite_user: دعوت از کاربر
@@ -76,14 +85,17 @@ fa:
       hello: سلام
       here_some_of_your_statistics: اینجا برخی از آمار خود را
       projects: پروژه
+      boards: انجمن
   projects:
     index:
       projects: پروژه
       new: جدید
-      sync_with_github: همگام سازی با GitHub
-      sync_with_bitbucket: همگام سازی با bitbucket
-      stop_sync_with_bitbucket: توقف همگامسازی با bitbucket
+      sync_with_github: همگام سازی با گیتهاب
+      sync_with_gitlab: همگام سازی با Gitlab
+      sync_with_bitbucket: همگام سازی با Bitbucket
+      stop_sync_with_bitbucket: توقف همگامسازی با Bitbucket
       stop_sync_with_github: توقف همگامسازی با GitHub
+      stop_sync_with_gitlab: توقف همگامسازی با Gitlab
     form:
       name: نام
       enter_project_name: نام پروژه را وارد کنید
@@ -111,7 +123,13 @@ fa:
       column_tags: برچسب ها ستون
       column_order: سفارش
     show:
-      next_page: صفحه بعدی
+      project: پروژه
+      related_boards: تخته های مرتبط
+      project_issues: مسائل پروژه
+      project_users: کاربران پروژه
+      new: جدید
+    project_modal:
+      project: پروژه
   issues:
     form:
       title: عنوان
@@ -124,6 +142,7 @@ fa:
       bitbucket_issue_id: Bitbucket شناسه موضوع
       github_issue_id: گیتهاب شناسه موضوع
       github_issue_number: گیتهاب تعداد موضوع
+      project: پروژه
     index:
       issues: مسائل
       sync_with_github: همگام سازی با GitHub
@@ -134,6 +153,8 @@ fa:
       edit: ویرایش
     new:
       new_issue: موضوع جدید
+    issue_modal:
+      issue: شماره
   authentications:
     index:
       enabled_services: خدمات فعال
@@ -159,6 +180,35 @@ fa:
       welcome_to_kanban_on_rails: به Kanban و در آهن خوش آمدید
       welcome_about_text: اینجا شما می توانید هیئت مدیره Kanban خود و همگام سازی آن
         با گیتهاب یا Bitbucket ایجاد
+  boards:
+    board_modal:
+      board: انجمن
+    form:
+      name: نام
+      enter_board_name: را وارد کنید
+      columns: ستون
+      add: اضافه
+      sections: بخش
+      save: ذخیره
+      projects: پروژه
+    section_fields:
+      section_tags: بخش برچسب ها
+      section_order: سفارش
+      or_include_all: یا شامل همه؟
+    column_fields:
+      remove_column: حذف ستون
+      max_issues_count: مسائل حداکثر در تعداد ستون
+      column_tags: برچسب ها ستون
+      column_order: سفارش
+    show:
+      next_page: صفحه بعدی
+    index:
+      boards: انجمن
+      new: جدید
+    board:
+      board_users: کاربران
+      edit: ویرایش
+      destroy: نابود کردن
   pages:
     faq:
       what_is_kanban_on_rails: KanbanOnRails چیست؟
@@ -191,6 +241,42 @@ fa:
         منبع باز است. ما همیشه سعی کنید تا بهتر و بهبود خدمات ما.
       partners_and_investors: ما برای همکاری باز کرد و ما دوست داریم که به پیدا کردن
         سرمایه گذاران. اگر شما می خواهم به همکاری با ما با ما تماس بگیرید در partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: حال حاضر تایید شد، لطفا سعی کنید وارد
+      confirmation_period_expired: باید در٪ {} دوره تایید شود، لطفا درخواست یک گذرواژه
+        جدید
+      expired: تمام شده است، لطفا درخواست یک گذرواژه جدید
+      not_found: یافت نشد
+      not_locked: قفل نشده بود
+      not_saved:
+        one: '1 خطا این٪ {} منابع از ذخیره شدن ممنوع است:'
+        other: "٪ {COUNT} خطاهای ممنوع این٪ {} منابع از ذخیره شدن:"
+    bad_request:
+      bad_request: درخواست پاسخ به بد
+      bad_request_description: سرور نمی تواند و یا به درخواست را پردازش کند به دلیل
+        خطای کلاینت آشکار
+      go_to_root: برو به ریشه
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable نهاد
+      unprocessable_entity_description: درخواست شد به خوبی شکل گرفته اما با توجه به
+        خطاهای معنایی قادر به دنبال داشته باشد بود
+      go_to_root: برو به ریشه
+    not_found:
+      not_found: یافت نشد
+      not_found_description: منبع درخواست یافت نشد اما ممکن است در آینده در دسترس
+        خواهد بود
+      go_to_root: برو به ریشه
+    forbidden:
+      forbidden: ممنوعه
+      forbidden_description: درخواست یک درخواست معتبر است، اما سرور است امتناع از
+        پاسخ به آن
+      go_to_root: برو به ریشه
+    internal_server_error:
+      internal_server_error: خطای داخلی سرور
+      internal_server_error_description: چیزی را اشتباه رفت. ما در اسرع وقت آن را
+        تعمیر خواهد کرد.
+      go_to_root: برو به ریشه
   devise:
     shared:
       links:

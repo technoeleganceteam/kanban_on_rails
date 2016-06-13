@@ -2,6 +2,7 @@
 ar:
   github: جيثب
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: تحديثها
   1_we_have_just_launched_our_service_title: لقد بدأت للتو خدمتنا
   shared:
@@ -11,8 +12,10 @@ ar:
       projects: مشاريع
       issues: قضايا
       syncing_with_github: تزامن مع جيثب ...
+      syncing_with_gitlab: تزامن مع Gitlab ...
       syncing_with_bitbucket: تزامن مع Bitbucket ...
       new_issue: قضية جديدة
+      boards: المجالس
     languages_select_modal:
       available_languages: اللغات المتاحة
     user_edit_menu:
@@ -33,15 +36,20 @@ ar:
     new_issue_modal:
       new_issue: قضية جديدة
     left_sidebar:
-      projects: مشاريع
+      boards: المجالس
     right_sidebar:
       news: أخبار
       all: جميع
       read_more: إقرأ المزيد
-    translations:
+    javascript_global_variables:
       select_column_tags: حدد علامات العمود
       select_section_tags: اختر العلامات المقطع
       select_issue_tags: اختر قضية علامات
+    email_signature:
+      mailer: ميلر
+      technoelegance: Technoelegance المحدودة
+    pagination_link:
+      next_page: الصفحة التالية
   users:
     new:
       invite_user: دعوة المستخدم
@@ -76,14 +84,17 @@ ar:
       hello: مرحبا
       here_some_of_your_statistics: هنا بعض الإحصاءات الخاصة بك
       projects: مشاريع
+      boards: المجالس
   projects:
     index:
       projects: مشاريع
       new: جديد
       sync_with_github: تزامن مع جيثب
-      sync_with_bitbucket: تزامن مع bitbucket
-      stop_sync_with_bitbucket: تزامن وقف مع bitbucket
-      stop_sync_with_github: تزامن وقف مع جيثب
+      sync_with_gitlab: تزامن مع Gitlab
+      sync_with_bitbucket: تزامن مع Bitbucket
+      stop_sync_with_bitbucket: إيقاف المزامنة مع Bitbucket
+      stop_sync_with_github: إيقاف المزامنة مع جيثب
+      stop_sync_with_gitlab: إيقاف المزامنة مع Gitlab
     form:
       name: اسم
       enter_project_name: أدخل اسم المشروع
@@ -110,7 +121,13 @@ ar:
       column_tags: علامات العمود
       column_order: ترتيب
     show:
-      next_page: الصفحة التالية
+      project: مشروع
+      related_boards: وحات ذات علاقة
+      project_issues: القضايا المشروع
+      project_users: المستخدمين مشروع
+      new: جديد
+    project_modal:
+      project: مشروع
   issues:
     form:
       title: عنوان
@@ -123,6 +140,7 @@ ar:
       bitbucket_issue_id: Bitbucket قضية الهوية
       github_issue_id: جيثب قضية الهوية
       github_issue_number: العدد رقم جيثب
+      project: مشروع
     index:
       issues: القضايا
       sync_with_github: تزامن مع جيثب
@@ -133,6 +151,8 @@ ar:
       edit: تحرير
     new:
       new_issue: قضية جديدة
+    issue_modal:
+      issue: العدد
   authentications:
     index:
       enabled_services: خدمات تمكين
@@ -156,6 +176,32 @@ ar:
       welcome_to_kanban_on_rails: مرحبا بكم في كانبان على القضبان
       welcome_about_text: هنا يمكنك إنشاء الخاصة مجلس كانبان الخاص بك، وتزامن ذلك
         مع جيثب أو Bitbucket
+  boards:
+    form:
+      name: اسم
+      enter_board_name: أدخل اسم مجلس
+      columns: أعمدة
+      add: إضافة
+      sections: الأقسام
+      save: حفظ
+      projects: مشاريع
+    section_fields:
+      section_tags: علامات القسم
+      section_order: ترتيب
+      or_include_all: أم تشمل كل شيء؟
+    column_fields:
+      remove_column: إزالة العمود
+      column_tags: علامات العمود
+      column_order: ترتيب
+    show:
+      next_page: الصفحة التالية
+    index:
+      boards: المجالس
+      new: جديد
+    board:
+      board_users: المستخدمين
+      edit: تحرير
+      destroy: تدمير
   pages:
     faq:
       faq: التعليمات
@@ -188,6 +234,40 @@ ar:
         مفتوحة المصدر. نحن دائما في محاولة للحصول على أفضل وتحسين خدماتنا.
       partners_and_investors: يتم فتحها ونحن للشراكة ونود أن العثور على مستثمرين.
         إذا كنت ترغب في التعاون معنا يرجى الاتصال بنا على partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: وقد أكد بالفعل، من فضلك حاول تسجيل الدخول
+      confirmation_period_expired: يجب أن يكون وأكد في غضون٪ {فترة}، يرجى طلب كلمة
+        مرور جديدة
+      expired: انتهت، يرجى طلب كلمة مرور جديدة
+      not_locked: كان غير مؤمن
+      not_saved:
+        other: "٪ {count} من الأخطاء يحظر على هذه الموارد٪ {} من يخلصون:"
+    bad_request:
+      request_result: طلب نتيجة
+      bad_request_description: الخادم لا يمكن أو لن معالجة الطلب بسبب خطأ العميل واضح
+      go_to_root: الذهاب إلى الجذر
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable الكيان
+      request_result: طلب نتيجة
+      unprocessable_entity_description: الطلب كان منسق بشكل جيد لكنه لم يتمكن الواجب
+        اتباعها بسبب الأخطاء الدلالية
+      go_to_root: الذهاب إلى الجذر
+    not_found:
+      not_found: لم يتم العثور على
+      request_result: طلب نتيجة
+      not_found_description: المورد المطلوب لا يمكن العثور عليها ولكن قد تكون متاحة
+        في المستقبل
+      go_to_root: الذهاب إلى الجذر
+    forbidden:
+      forbidden: المحرمة
+      request_result: طلب نتيجة
+      forbidden_description: الطلب كان طلب صالح، ولكن الخادم هو رفض للرد عليه
+      go_to_root: الذهاب إلى الجذر
+    internal_server_error:
+      internal_server_error: خطأ خادم داخلي
+      request_result: طلب نتيجة
+      go_to_root: الذهاب إلى الجذر
   devise:
     shared:
       links:

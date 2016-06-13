@@ -2,6 +2,7 @@
 af:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: opgedateer
   1_we_have_just_launched_our_service_title: Ons het net begin ons diens
   shared:
@@ -11,8 +12,10 @@ af:
       projects: Projekte
       issues: Kwessies
       syncing_with_github: Sync met GitHub ...
+      syncing_with_gitlab: Sync met Gitlab ...
       syncing_with_bitbucket: Sync met Bitbucket ...
       new_issue: Nuwe uitgawe
+      boards: Boards
     languages_select_modal:
       available_languages: Beskikbare tale
     user_edit_menu:
@@ -34,15 +37,21 @@ af:
     new_issue_modal:
       new_issue: Nuwe uitgawe
     left_sidebar:
-      projects: Projekte
+      boards: Boards
     right_sidebar:
       news: Nuus
       all: Alle
       read_more: Lees meer
-    translations:
+    javascript_global_variables:
       select_column_tags: Kies kolom tags
       select_section_tags: Kies artikel tags
       select_issue_tags: Kies kwessie tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd
+    pagination_link:
+      next_page: Volgende
   users:
     new:
       invite_user: Nooi gebruiker
@@ -76,14 +85,17 @@ af:
       hello: Hallo
       here_some_of_your_statistics: Hier 'n paar van jou statistiek
       projects: Projekte
+      boards: Boards
   projects:
     index:
       projects: Projekte
       new: Nuwe
       sync_with_github: Sync met GitHub
-      sync_with_bitbucket: Sync met bitbucket
-      stop_sync_with_bitbucket: Stop harmonie met bitbucket
+      sync_with_gitlab: Sync met Gitlab
+      sync_with_bitbucket: Sync met Bitbucket
+      stop_sync_with_bitbucket: Stop harmonie met Bitbucket
       stop_sync_with_github: Stop harmonie met GitHub
+      stop_sync_with_gitlab: Stop harmonie met Gitlab
     form:
       name: Naam
       enter_project_name: Gee naam projek
@@ -116,7 +128,14 @@ af:
       column_tags: Kolom tags
       column_order: Bestel
     show:
-      next_page: Volgende
+      project: Projek
+      related_boards: Verwante planke
+      project_info: Projek inligting
+      project_issues: Projek kwessies
+      project_users: Projek gebruikers
+      new: Nuwe
+    project_modal:
+      project: Projek
   issues:
     form:
       title: titel
@@ -129,6 +148,7 @@ af:
       bitbucket_issue_id: Bitbucket kwessie ID
       github_issue_id: GitHub kwessie ID
       github_issue_number: GitHub kwessie aantal
+      project: Projek
     index:
       issues: kwessies
       sync_with_github: Sync met GitHub
@@ -139,6 +159,8 @@ af:
       edit: wysig
     new:
       new_issue: Nuwe uitgawe
+    issue_modal:
+      issue: Uitgawe
   authentications:
     index:
       enabled_services: aangeskakel dienste
@@ -164,6 +186,39 @@ af:
       welcome_to_kanban_on_rails: Welkom by Kanban on Rails
       welcome_about_text: Hier jy jou eie Kanban raad en sync dit kan skep met GitHub
         of Bitbucket
+  boards:
+    board_modal:
+      board: Raad
+    form:
+      name: Naam
+      enter_board_name: Tik naambord
+      column_width: Kolomwydte
+      column_height: Kolom hoogte
+      columns: kolomme
+      add: Voeg
+      sections: Artikels
+      save: Save
+      projects: Projekte
+    section_fields:
+      section_name: Artikel naam
+      section_tags: Artikel tags
+      section_order: Bestel
+      or_include_all: Of sluit al?
+    column_fields:
+      column_name: kolom naam
+      remove_column: Verwyder kolom
+      max_issues_count: Max kwessies tel in kolom
+      column_tags: Kolom tags
+      column_order: Bestel
+    show:
+      next_page: Volgende
+    index:
+      boards: Boards
+      new: Nuwe
+    board:
+      board_users: Gebruikers
+      edit: wysig
+      destroy: vernietig
   pages:
     faq:
       faq: Vrae
@@ -199,6 +254,42 @@ af:
         van ons diens.
       partners_and_investors: Ons is oop vir samewerking en ons wil graag om beleggers
         te vind. As jy wil om saam te werk met ons kontak ons ​​asseblief by partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: is reeds bevestig, probeer aanmeld
+      confirmation_period_expired: moet bevestig binne% {tydperk}, versoek asseblief
+        'n nuwe een
+      expired: verstryk het, vra asseblief 'n nuwe een
+      not_found: nie gevind
+      not_locked: was nie gesluit
+      not_saved:
+        one: '1 fout verbied hierdie% {hulpbron} van gered:'
+        other: "% {count} foute verbied hierdie% {hulpbron} van gered:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: Die bediener kan nie, of weier die versoek verwerk
+        as gevolg van 'n oënskynlike kliënt fout
+      go_to_root: Gaan na wortel
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entiteit
+      unprocessable_entity_description: Die versoek was goed gevorm, maar was nie
+        in staat om wat gevolg moet word as gevolg van semantiese foute
+      go_to_root: Gaan na wortel
+    not_found:
+      not_found: nie gevind
+      not_found_description: Die versoek hulpbron kon nie gevind word, maar kan in
+        die toekoms
+      go_to_root: Gaan na wortel
+    forbidden:
+      forbidden: Verbode
+      forbidden_description: Die versoek was 'n geldige versoek, maar die bediener
+        weier om te reageer op dit
+      go_to_root: Gaan na wortel
+    internal_server_error:
+      internal_server_error: Interne server fout
+      internal_server_error_description: Iets het verkeerd geloop. Ons sal dit so
+        gou as moontlik op te los.
+      go_to_root: Gaan na wortel
   devise:
     shared:
       links:

@@ -2,18 +2,21 @@
 ro:
   github: Github
   bitbucket: BitBucket
+  gitlab: Gitlab
   updated: actualizat
   1_we_have_just_launched_our_service_title: Am lansat serviciul nostru
   shared:
     navbar:
-      sign_in: Conectați-vă
+      sign_in: Autentificare
       sign_up: Inscrie-te
       projects: Proiecte
       issues: Probleme
       syncing_with_github: Sincronizare cu Github ...
+      syncing_with_gitlab: Sincronizare cu Gitlab ...
       syncing_with_bitbucket: Sincronizare cu BitBucket ...
       new_issue: problemă nouă
       edit_project: Editare proiect
+      boards: camerelor
     languages_select_modal:
       available_languages: Limbi disponibile
     user_edit_menu:
@@ -36,15 +39,21 @@ ro:
     new_issue_modal:
       new_issue: problemă nouă
     left_sidebar:
-      projects: Proiecte
+      boards: camerelor
     right_sidebar:
       news: Știri
       all: Toate
       read_more: Citește mai mult
-    translations:
+    javascript_global_variables:
       select_column_tags: Selectați etichetele de coloană
       select_section_tags: Selectați etichetele secțiune
       select_issue_tags: Selectați problema tag-uri
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Pagina următoare
   users:
     new:
       invite_user: Invitați utilizator
@@ -62,7 +71,7 @@ ro:
       new: Nou
     edit:
       name: Nume
-      enter_your_name: Introduceți numele
+      enter_your_name: Introdu numele tău
       save: Salvare
     settings:
       change_password: Schimbare parolă
@@ -76,17 +85,20 @@ ro:
     update:
       your_profile_was_successfully_updated: Profilul tău a fost actualizat cu succes
     dashboard:
-      hello: Bună ziua
+      hello: Hello
       here_some_of_your_statistics: Aici unele dintre statisticile
       projects: Proiecte
+      boards: Boards
   projects:
     index:
       projects: Proiecte
       new: Nou
-      sync_with_github: Sincronizare cu github
+      sync_with_github: Sincronizare cu Github
+      sync_with_gitlab: Sincronizare cu Gitlab
       sync_with_bitbucket: Sincronizare cu BitBucket
       stop_sync_with_bitbucket: Opriți sincronizarea cu BitBucket
-      stop_sync_with_github: Opriți sincronizarea cu github
+      stop_sync_with_github: Opriți sincronizarea cu Github
+      stop_sync_with_gitlab: Opriți sincronizarea cu Gitlab
     form:
       name: Nume
       enter_project_name: Introduceți numele proiectului
@@ -105,16 +117,23 @@ ro:
       project_issues: probleme de proiect
       project_users: utilizatori Project
     section_fields:
+      section_name: numele secțiunii
       section_tags: tag-uri Secțiunea
-      section_order: Ordine
+      section_order: Comandă
       or_include_all: Sau includ toate?
     column_fields:
       remove_column: Eliminați coloana
       max_issues_count: probleme Max conta în coloana
-      column_tags: tag-uri Coloana
-      column_order: Ordine
+      column_tags: etichete de coloană
+      column_order: Comandă
     show:
-      next_page: Pagina următoare
+      project: Project
+      related_boards: placi înrudite
+      project_issues: probleme de proiect
+      project_users: utilizatori Project
+      new: Nou
+    project_modal:
+      project: Project
   issues:
     form:
       title: Titlu
@@ -126,7 +145,8 @@ ro:
       issue_order: Comandă
       bitbucket_issue_id: BitBucket problemă id
       github_issue_id: Github problemă id
-      github_issue_number: număr problemă Github
+      github_issue_number: Numărul problemă Github
+      project: Project
     index:
       issues: probleme
       sync_with_github: Sincronizare cu github
@@ -134,17 +154,19 @@ ro:
       new: Nou
     issue:
       destroy: Ștergeți
-      edit: Editați
+      edit: Edit
     edit:
       edit_issue: Editare
     new:
       new_issue: problemă nouă
+    issue_modal:
+      issue: Problemă
   authentications:
     index:
       enabled_services: servicii activate
     authentication:
       turned_off: Oprit
-      turn_on: Activați
+      turn_on: Porniți
       turn_off: Dezactivați
       turned_on: Pornit
   news:
@@ -153,7 +175,7 @@ ro:
       we_have_just_launched_our_service_text: Astăzi vă vom lansa serviciul nostru,
         astfel încât oricine poate
       sign_up: Înregistrează-te
-      and_use_it: și să o folosească.
+      and_use_it: și să-l utilizați.
       with_love: Cu dragoste,
       technoelegance_team: Technoelegance Echipa
     index:
@@ -164,6 +186,33 @@ ro:
       welcome_to_kanban_on_rails: Bine ati venit la Kanban pe șine
       welcome_about_text: Aici vă puteți crea propriul dvs. bord și de sincronizare
         Kanban cu Github sau BitBucket
+  boards:
+    form:
+      name: Nume
+      enter_board_name: Introduceți numele de bord
+      columns: Coloane
+      add: Adaugă
+      sections: Secțiuni
+      save: Salvare
+      projects: Proiecte
+    section_fields:
+      section_tags: tag-uri Secțiunea
+      section_order: Comandă
+      or_include_all: Sau includ toate?
+    column_fields:
+      remove_column: Eliminați coloana
+      max_issues_count: probleme Max conta în coloana
+      column_tags: etichete de coloană
+      column_order: Comandă
+    show:
+      next_page: Pagina urmatoare
+    index:
+      boards: camerelor
+      new: Noi
+    board:
+      board_users: Utilizatori
+      edit: Editare
+      destroy: distruge
   pages:
     faq:
       faq: Întrebări frecvente
@@ -186,7 +235,7 @@ ro:
       about_kanban_on_rails: Despre KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails este serviciul în cazul în care vă
         puteți crea panouri Kanban și sincronizați-l cu Github sau BitBucket
-      kanban_on_rails_features: Caracteristici KanbanOnRails
+      kanban_on_rails_features: caracteristici KanbanOnRails
       sync_with_github_and_bitbucket: Puteți sincroniza proiectele și problemele cu
         Github și BitBucket
       invite_users: Puteți invita utilizatori (de exemplu manageri) pentru proiectul
@@ -199,6 +248,41 @@ ro:
       partners_and_investors: Suntem deschiși pentru parteneriat și ne-ar dori să
         găsească investitori. Dacă doriți să coopereze cu noi, vă rugăm să ne contactați
         la partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: a fost deja confirmată, vă rugăm să încercați să vă conectați
+      confirmation_period_expired: trebuie să fie confirmată în termen de {%} perioadă,
+        vă rugăm să solicitați unul nou
+      expired: a expirat, vă rugăm să solicitați unul nou
+      not_found: nu a fost găsit
+      not_locked: nu a fost blocat
+      not_saved:
+        one: '1 eroare interzis această% {} resursa de a fi salvată:'
+        other: "% {count} erori interzise această% {} resursa de la salvarea:"
+    bad_request:
+      bad_request_description: Serverul nu poate sau nu va procesa cererea din cauza
+        unei erori de client aparent
+      go_to_root: Du-te la rădăcină
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entitate
+      unprocessable_entity_description: Cererea a fost bine format, dar nu a putut
+        fi urmat din cauza erorilor semantice
+      go_to_root: Du-te la rădăcină
+    not_found:
+      not_found: Nu a fost găsit
+      not_found_description: Resursa solicitată nu a putut fi găsită, dar ar putea
+        fi disponibile în viitor
+      go_to_root: Du-te la rădăcină
+    forbidden:
+      forbidden: Interzis
+      forbidden_description: Cererea a fost o cerere validă, dar serverul refuză să
+        răspundă la aceasta
+      go_to_root: Du-te la rădăcină
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Ceva a mers prost. Noi vom remedia problema
+        cât mai curând posibil.
+      go_to_root: Du-te la rădăcină
   devise:
     shared:
       links:
@@ -222,7 +306,7 @@ ro:
       inactive: Contul dvs. nu este activat încă.
       invalid: e-mail nevalidă sau o parolă.
       locked: Contul dvs. este blocat.
-      last_attempt: Mai aveți o încercare înainte ca contul dvs. va fi blocat.
+      last_attempt: Ai o încercare înainte de contul dvs. va fi blocat.
       not_found_in_database: e-mail nevalidă sau o parolă.
       timeout: Sesiunea a expirat. Vă rugăm să vă conectați din nou pentru a continua.
       unauthenticated: Trebuie să vă conectați sau înregistrați-vă înainte de a continua.
@@ -230,7 +314,7 @@ ro:
     mailer:
       confirmation_instructions:
         subject: Instrucțiuni de confirmare
-        welcome_to_kanban_on_rails: Bine ati venit la KanbanOnRails
+        welcome_to_kanban_on_rails: Bine ați venit la KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Puteți confirma
           un e-mail prin link-ul de mai jos
         confirm_my_account: Confirmați mea de e-mail
@@ -279,19 +363,19 @@ ro:
         să verificăm dacă noua adresă de e-mail. Vă rugăm să verificați e-mail-ul
         și faceți clic pe link-ul de confirmare pentru a finaliza noua confirmare
         a adresei de e-mail.
-      updated: Ați actualizat contul cu succes.
+      updated: Ați actualizat contul dvs. cu succes.
       new:
-        sign_up: Inscrie-te
+        sign_up: Înregistrează-te
         name: Nume
         password: parola
         register: Inscrie-te
     sessions:
       signed_in: Conectat cu succes.
-      signed_out: semnat cu succes.
+      signed_out: Semnat cu succes.
       new:
         sign_in: Conectați-vă
         password: parolă
-        remember_me: Tine-ma minte
+        remember_me: Ține-mă
         forgot_your_password: Ai uitat parola?
     unlocks:
       send_instructions: Vei primi un e-mail cu instrucțiuni despre modul în care

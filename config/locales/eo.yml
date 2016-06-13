@@ -2,6 +2,7 @@
 eo:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ĝisdatigita
   1_we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon
   shared:
@@ -11,9 +12,11 @@ eo:
       projects: Projektoj
       issues: Issues
       syncing_with_github: Sync kun GitHub ...
+      syncing_with_gitlab: Sync kun Gitlab ...
       syncing_with_bitbucket: Sync kun Bitbucket ...
       new_issue: Nova eldono
       edit_project: Redakti projekto
+      boards: Boards
     languages_select_modal:
       available_languages: Disponeblaj lingvoj
     user_edit_menu:
@@ -37,15 +40,21 @@ eo:
     new_issue_modal:
       new_issue: Nova eldono
     left_sidebar:
-      projects: Projektoj
+      boards: Boards
     right_sidebar:
       news: Novaĵoj
       all: Ĉiuj
       read_more: Legu pli
-    translations:
+    javascript_global_variables:
       select_column_tags: Elekti kolumnon etikedoj
       select_section_tags: Elekti sekcion etikedoj
       select_issue_tags: Elektu temon etikedoj
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Sekva paĝo
   users:
     new:
       invite_user: Invitu uzanto
@@ -81,14 +90,17 @@ eo:
       hello: Saluton
       here_some_of_your_statistics: Jen kelkaj el viaj statistikoj
       projects: Projektoj
+      boards: Boards
   projects:
     index:
       projects: Projektoj
       new: Nova
       sync_with_github: Sync kun GitHub
-      sync_with_bitbucket: Sync kun bitbucket
-      stop_sync_with_bitbucket: Stop sincronía kun bitbucket
+      sync_with_gitlab: Sync kun Gitlab
+      sync_with_bitbucket: Sync kun Bitbucket
+      stop_sync_with_bitbucket: Stop sincronía kun Bitbucket
       stop_sync_with_github: Stop sincronía kun GitHub
+      stop_sync_with_gitlab: Stop sincronía kun Gitlab
     form:
       name: Nomo
       enter_project_name: Entajpu projekto nomon
@@ -123,7 +135,14 @@ eo:
       column_tags: Kolumno etikedoj
       column_order: Ordo
     show:
-      next_page: Sekva paĝo
+      project: Projekto
+      related_boards: Rilataj tabuloj
+      project_info: Projekto info
+      project_issues: Projekto temoj
+      project_users: Projekto uzantoj
+      new: Nova
+    project_modal:
+      project: Projekto
   issues:
     form:
       title: Titolo
@@ -136,6 +155,7 @@ eo:
       bitbucket_issue_id: Bitbucket temo identigilo
       github_issue_id: GitHub temo identigilo
       github_issue_number: GitHub temo nombro
+      project: Projekto
     index:
       issues: temoj
       sync_with_github: Sync kun GitHub
@@ -148,6 +168,8 @@ eo:
       edit_issue: Redakti temo
     new:
       new_issue: Nova eldono
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Enabled servoj
@@ -172,6 +194,40 @@ eo:
       welcome_to_kanban_on_rails: Bonvenon Kanban an Reloj
       welcome_about_text: Tie vi povas krei vian propran Kanban estraro kaj sinkronigita
         per GitHub aŭ Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Nomo
+      enter_board_name: Entajpu estraro nomon
+      column_width: Kolumno larĝo
+      column_height: Kolumno alteco
+      columns: Kolumnoj
+      add: aldoni
+      sections: Sekcioj
+      save: Konservi
+      projects: Projektoj
+    section_fields:
+      section_name: Sekcio nomon
+      remove_section: Forigi sekcio
+      section_tags: Sekcio etikedoj
+      section_order: Ordo
+      or_include_all: Aŭ inkluzivi ĉiuj?
+    column_fields:
+      column_name: Kolumno nomo
+      remove_column: Forigi kolumno
+      max_issues_count: Max temoj kalkuli en kolumno
+      column_tags: Kolumno etikedoj
+      column_order: Ordo
+    show:
+      next_page: Sekva paĝo
+    index:
+      boards: Boards
+      new: Nova
+    board:
+      board_users: Uzantoj
+      edit: Redakti
+      destroy: Detruu
   pages:
     faq:
       faq: Demandoj
@@ -205,6 +261,47 @@ eo:
         fonto bibliotekoj. Ni ĉiam provas akiri pli bonan kaj plibonigi nian servon.
       partners_and_investors: Ni estas malfermitaj por partnereco kaj ni ŝatus trovi
         investantojn. Se vi ŝatus kunlabori kun ni bonvolu kontakti nin ĉe partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: jam konfirmita, bonvolu provi subskribi en
+      confirmation_period_expired: bezonoj esti konfirmita ene% {periodo}, bonvolu
+        peti novan
+      expired: eksvalidiĝis, bonvolu peti novan
+      not_found: Ne trovita
+      not_locked: ne ŝlosita
+      not_saved:
+        one: 1 eraro malpermesita tiun% {rimedo} de esti savita;
+        other: "% {count} eraroj malpermesita tiun% {rimedo} de esti savita;"
+    bad_request:
+      bad_request: Malbona Peti
+      request_result: Peto rezulto
+      bad_request_description: La servilo ne povas aŭ ne volas procesi la peton pro
+        ŝajna kliento eraro
+      go_to_root: Iru al radiko
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Peto rezulto
+      unprocessable_entity_description: La peto estis bone formitaj sed ne povis esti
+        sekvitaj pro semantika eraroj
+      go_to_root: Iru al radiko
+    not_found:
+      not_found: Ne Trovita
+      request_result: Peto rezulto
+      not_found_description: La petita rimedo ne estis sed povas esti havebla en la
+        estonteco
+      go_to_root: Iru al radiko
+    forbidden:
+      forbidden: Malpermesita
+      request_result: Peto rezulto
+      forbidden_description: La peto estis validan peton, sed la servilo rifuzas respondi
+        al ĝi
+      go_to_root: Iru al radiko
+    internal_server_error:
+      internal_server_error: Interna Servilo Eraro
+      request_result: Peto rezulto
+      internal_server_error_description: Io misokazis. Ni fiksos ĝin tiel frue kiel
+        eble.
+      go_to_root: Iru al radiko
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 tl:
   github: Github
   bitbucket: Bitbucket
+  gitlab: GitLab
   updated: update
   1_we_have_just_launched_our_service_title: Lang namin ay may inilunsad ang aming
     serbisyo
@@ -12,9 +13,11 @@ tl:
       projects: Projects
       issues: Isyu
       syncing_with_github: I-sync sa Github ...
+      syncing_with_gitlab: I-sync sa GitLab ...
       syncing_with_bitbucket: I-sync sa Bitbucket ...
       new_issue: Bagong isyu
       edit_project: Edit proyekto
+      boards: Boards
     languages_select_modal:
       available_languages: Mga magagamit na wika
     user_edit_menu:
@@ -37,15 +40,21 @@ tl:
     new_issue_modal:
       new_issue: Bagong isyu
     left_sidebar:
-      projects: Projects
+      boards: Boards
     right_sidebar:
       news: News
       all: Lahat
       read_more: Magbasa nang higit pa
-    translations:
+    javascript_global_variables:
       select_column_tags: Pumili column tags
       select_section_tags: Pumili seksyon tags
       select_issue_tags: Pumili isyu tags
+    email_signature:
+      info: Impormasyon
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Susunod na pahina
   users:
     new:
       invite_user: Imbitahan user
@@ -79,14 +88,17 @@ tl:
       hello: Kamusta
       here_some_of_your_statistics: Narito ang ilan sa iyong mga istatistika
       projects: Projects
+      boards: Boards
   projects:
     index:
       projects: Projects
       new: New
-      sync_with_github: I-sync sa github
-      sync_with_bitbucket: I-sync sa bitbucket
-      stop_sync_with_bitbucket: Stop sync kasama bitbucket
-      stop_sync_with_github: Stop sync kasama github
+      sync_with_github: I-sync sa Github
+      sync_with_gitlab: I-sync sa GitLab
+      sync_with_bitbucket: I-sync sa Bitbucket
+      stop_sync_with_bitbucket: Stop sync kasama Bitbucket
+      stop_sync_with_github: Stop sync kasama Github
+      stop_sync_with_gitlab: Stop sync kasama GitLab
     form:
       name: Pangalan
       enter_project_name: Ipasok ang pangalan ng proyekto
@@ -117,7 +129,13 @@ tl:
       column_tags: Column tags
       column_order: Order
     show:
-      next_page: Susunod na pahina
+      project: Project
+      related_boards: Kaugnay boards
+      project_issues: isyu Project
+      project_users: user Project
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -130,6 +148,7 @@ tl:
       bitbucket_issue_id: Bitbucket isyu id
       github_issue_id: Github isyu id
       github_issue_number: Github issue number
+      project: Project
     index:
       issues: isyu
       sync_with_github: I-sync sa github
@@ -142,6 +161,8 @@ tl:
       edit_issue: Edit isyu
     new:
       new_issue: Bagong isyu
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Pinagana serbisyo
@@ -168,6 +189,38 @@ tl:
       welcome_to_kanban_on_rails: Maligayang pagdating sa Kanban Sa daang-bakal
       welcome_about_text: Dito maaari kang lumikha ng iyong sariling Kanban board
         at i-sync ito sa Github o Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Pangalan
+      enter_board_name: Ipasok ang pangalan ng board
+      column_width: Haligi lapad
+      column_height: Column taas
+      columns: Haligi
+      add: Add
+      sections: Seksyon
+      save: Save
+      projects: Projects
+    section_fields:
+      remove_section: Remove seksyon
+      section_tags: Section tags
+      section_order: Order
+      or_include_all: O isama ang lahat?
+    column_fields:
+      remove_column: Tanggalin column
+      max_issues_count: Max isyu bilangin sa hanay
+      column_tags: Column tags
+      column_order: Order
+    show:
+      next_page: Susunod na pahina
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Users
+      edit: Edit
+      destroy: Wasakin
   pages:
     faq:
       faq: FAQ
@@ -206,6 +259,47 @@ tl:
       partners_and_investors: Kami ay binuksan para sa partnership at nais naming
         upang mahanap mamumuhunan. Kung nais mong makipagtulungan sa amin mangyaring
         kontakin kami sa partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: ay na nakumpirma, mangyaring subukang mag-sign in
+      confirmation_period_expired: dapat kumpirmahin loob% {period}, mangyaring humiling
+        ng isang bagong isa
+      expired: ay natapos na, mangyaring humiling ng isang bagong isa
+      not_found: hindi natagpuan
+      not_locked: ay hindi naka-lock
+      not_saved:
+        one: '1 error ipinagbabawal ito% {resource} sa pagse-save:'
+        other: "% {count} mga error ipinagbabawal ito% {resource} sa pagse-save:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Request resulta
+      bad_request_description: Ang server ay maaaring hindi o hindi ay proseso ang
+        kahilingan dahil sa isang maliwanag client error
+      go_to_root: Pumunta sa ugat
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Request resulta
+      unprocessable_entity_description: Ang kahilingan ay nabuo nang maayos ngunit
+        ay hindi na sinundan dahil sa semantiko error
+      go_to_root: Pumunta sa ugat
+    not_found:
+      not_found: Hindi Natagpuan
+      request_result: Request resulta
+      not_found_description: Ang hiniling na resource ay hindi matagpuan ngunit maaaring
+        makuha sa hinaharap
+      go_to_root: Pumunta sa ugat
+    forbidden:
+      forbidden: Forbidden
+      request_result: Request resulta
+      forbidden_description: Ang kahilingan ay isang wastong kahilingan, ngunit ang
+        server ay tinatanggihan upang tumugon sa mga ito
+      go_to_root: Pumunta sa ugat
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Request resulta
+      internal_server_error_description: May nangyaring mali. Aayusin namin ito sa
+        lalong madaling panahon.
+      go_to_root: Pumunta sa ugat
   devise:
     shared:
       links:

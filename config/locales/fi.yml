@@ -2,6 +2,7 @@
 fi:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: päivitetty
   1_we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelumme
   shared:
@@ -11,9 +12,11 @@ fi:
       projects: Projects
       issues: Issues
       syncing_with_github: synkronointi Github ...
+      syncing_with_gitlab: synkronointi Gitlab ...
       syncing_with_bitbucket: synkronointi Bitbucket ...
       new_issue: Uusmerkintä
       edit_project: Edit projekti
+      boards: Boards
     languages_select_modal:
       available_languages: Käytettävissä olevat kielet
     user_edit_menu:
@@ -37,15 +40,21 @@ fi:
     new_issue_modal:
       new_issue: Uusmerkintä
     left_sidebar:
-      projects: Projects
+      boards: Boards
     right_sidebar:
       news: News
       all: Kaikki
       read_more: Lue lisää
-    translations:
+    javascript_global_variables:
       select_column_tags: Valitse sarake tunnisteet
       select_section_tags: Valitse osiotunnisteita
       select_issue_tags: Valitse myöntää leimat
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Seuraava
   users:
     new:
       invite_user: Kutsu käyttäjä
@@ -81,14 +90,17 @@ fi:
       hello: Hei
       here_some_of_your_statistics: Tässä joitakin tilastojen
       projects: Projects
+      boards: Boards
   projects:
     index:
       projects: Projects
       new: Uusi
-      sync_with_github: synkronointi github
-      sync_with_bitbucket: synkronointi bitbucket
-      stop_sync_with_bitbucket: Pysäytä synkronointi bitbucket
-      stop_sync_with_github: Pysäytä synkronointi github
+      sync_with_github: synkronointi Github
+      sync_with_gitlab: synkronointi Gitlab
+      sync_with_bitbucket: synkronointi Bitbucket
+      stop_sync_with_bitbucket: Pysäytä synkronointi Bitbucket
+      stop_sync_with_github: Pysäytä synkronointi Github
+      stop_sync_with_gitlab: Pysäytä synkronointi Gitlab
     form:
       name: Name
       enter_project_name: Anna projektin nimi
@@ -123,7 +135,14 @@ fi:
       column_tags: sarake tunnisteet
       column_order: Tilaa
     show:
-      next_page: Seuraava
+      project: Project
+      related_boards: Related levyt
+      project_info: Project info
+      project_issues: Project kysymyksiä
+      project_users: Project käyttäjää
+      new: Uusi
+    project_modal:
+      project: Project
   issues:
     form:
       title: Otsikko
@@ -136,6 +155,7 @@ fi:
       bitbucket_issue_id: Bitbucket kysymys id
       github_issue_id: Github kysymys id
       github_issue_number: Github kysymys numero
+      project: Project
     index:
       issues: kysymykset
       sync_with_github: synkronointi github
@@ -148,6 +168,8 @@ fi:
       edit_issue: Edit kysymys
     new:
       new_issue: Uusmerkintä
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Käytössä palvelut
@@ -173,6 +195,40 @@ fi:
       welcome_to_kanban_on_rails: Tervetuloa Kanban on Rails
       welcome_about_text: Täällä voit luoda oman Kanban hallituksen ja synkronoimaan
         sen Github tai Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Anna aluksella nimi
+      column_width: Sarakeleveys
+      column_height: sarake korkeus
+      columns: sarakkeet
+      add: Lisää
+      sections: pääluokat
+      save: Tallenna
+      projects: Projects
+    section_fields:
+      section_name: "§ nimi"
+      remove_section: Poista osio
+      section_tags: "§ tunnisteet"
+      section_order: Tilaa
+      or_include_all: Tai sisältävät kaikki?
+    column_fields:
+      column_name: sarake name
+      remove_column: Poista sarake
+      max_issues_count: Max kysymyksiä laskea sarakkeessa
+      column_tags: sarake tunnisteet
+      column_order: Tilaa
+    show:
+      next_page: Seuraava
+    index:
+      boards: Boards
+      new: Uusi
+    board:
+      board_users: Käyttäjät
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -205,6 +261,46 @@ fi:
         lähdekoodin kirjastoja. Olemme aina yrittää saada paremmin ja parantaa palvelua.
       partners_and_investors: Olemme avataan kumppanuutta ja haluaisimme löytää sijoittajia.
         Jos haluat tehdä yhteistyötä kanssamme ota yhteyttä osoitteeseen partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: oli jo vahvistettu, yritä kirjautua sisään
+      confirmation_period_expired: tulee varmistaa kuluessa% {aikana}, pyydä uusi
+      expired: on päättynyt, pyydä uusi
+      not_found: ei löytynyt
+      not_locked: ei ole lukittu
+      not_saved:
+        one: '1 virhe kieltänyt% {resurssi} pelastumasta:'
+        other: "% {count} virheitä kieltänyt% {resurssi} pelastumasta:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Request tuloksen
+      bad_request_description: Palvelin ei voi tai halua käsitellä pyyntöä vuoksi
+        ilmeinen asiakkaalle virhe
+      go_to_root: Mene root
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Request tuloksen
+      unprocessable_entity_description: Pyyntö oli hyvin muotoiltu, mutta ei voinut
+        seurata vuoksi semanttinen virheiden
+      go_to_root: Mene root
+    not_found:
+      not_found: ei löydy
+      request_result: Request tuloksen
+      not_found_description: Pyydettyä resurssia ei löydetty, mutta saattaa olla käytettävissä
+        tulevaisuudessa
+      go_to_root: Mene root
+    forbidden:
+      forbidden: Kielletty
+      request_result: Request tuloksen
+      forbidden_description: Pyyntö oli pätevä pyyntö, mutta palvelin kieltäytyy vastata
+        siihen
+      go_to_root: Mene root
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Request tuloksen
+      internal_server_error_description: Jokin meni vikaan. Me korjaamme sen mahdollisimman
+        pian.
+      go_to_root: Mene root
   devise:
     shared:
       links:

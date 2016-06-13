@@ -2,6 +2,7 @@
 cy:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: diweddaru
   1_we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth
   shared:
@@ -11,8 +12,10 @@ cy:
       projects: Prosiectau
       issues: Materion
       syncing_with_github: Sync gyda Github ...
+      syncing_with_gitlab: Sync gyda Gitlab ...
       syncing_with_bitbucket: Sync gyda Bitbucket ...
       new_issue: rhifyn newydd
+      boards: Byrddau
     languages_select_modal:
       available_languages: o ieithoedd sydd ar gael
     user_edit_menu:
@@ -33,14 +36,21 @@ cy:
     new_issue_modal:
       new_issue: rhifyn newydd
     left_sidebar:
-      projects: Prosiectau
+      boards: Byrddau
     right_sidebar:
       news: Newyddion
       all: Mae pob
       read_more: Darllen mwy
-    translations:
+    javascript_global_variables:
       select_column_tags: Dethol
+      select_section_tags: Dethol
       select_issue_tags: tagiau rhifyn Dewiswch
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Tudalen nesaf
   users:
     new:
       invite_user: Gwahodd defnyddiwr
@@ -72,14 +82,17 @@ cy:
       hello: Helo
       here_some_of_your_statistics: Yma rhai o'ch ystadegau
       projects: Prosiectau
+      boards: Byrddau
   projects:
     index:
       projects: Prosiectau
       new: Newydd
-      sync_with_github: Sync gyda GitHub
-      sync_with_bitbucket: Sync gyda bitbucket
-      stop_sync_with_bitbucket: sync Stop gyda bitbucket
-      stop_sync_with_github: sync Stop gyda GitHub
+      sync_with_github: Sync gyda Github
+      sync_with_gitlab: Sync gyda Gitlab
+      sync_with_bitbucket: Sync gyda Bitbucket
+      stop_sync_with_bitbucket: sync Stop gyda Bitbucket
+      stop_sync_with_github: sync Stop gyda Github
+      stop_sync_with_gitlab: sync Stop gyda Gitlab
     form:
       name: Enw
       enter_project_name: Rhowch enw'r prosiect
@@ -106,7 +119,13 @@ cy:
       column_tags: tagiau Colofn
       column_order: Gorchymyn
     show:
-      next_page: Tudalen nesaf
+      project: Prosiect
+      related_boards: byrddau Perthnasol
+      project_issues: Materion Prosiect
+      project_users: ddefnyddwyr Prosiect
+      new: Newydd
+    project_modal:
+      project: Prosiect
   issues:
     form:
       title: Teitl
@@ -119,6 +138,7 @@ cy:
       bitbucket_issue_id: Bitbucket mater id
       github_issue_id: Github mater id
       github_issue_number: Rhif rhifyn Github
+      project: Prosiect
     index:
       issues: materion
       sync_with_github: Sync gyda GitHub
@@ -131,6 +151,8 @@ cy:
       edit_issue: Golygu rhifyn
     new:
       new_issue: rhifyn newydd
+    issue_modal:
+      issue: Mater
   authentications:
     index:
       enabled_services: gwasanaethau Enabled
@@ -155,6 +177,33 @@ cy:
       welcome_to_kanban_on_rails: Croeso i Kanban Ar Rheiliau
       welcome_about_text: Yma gallwch greu eich bwrdd Kanban eich hun a sync gyda'r
         Github neu Bitbucket
+  boards:
+    form:
+      name: Enw
+      enter_board_name: Rhowch enw bwrdd
+      columns: Colofnau
+      add: Ychwanegu
+      sections: Adrannau
+      save: Achub
+      projects: Prosiectau
+    section_fields:
+      section_tags: tagiau Adran
+      section_order: Gorchymyn
+      or_include_all: Neu cynnwys yr holl?
+    column_fields:
+      remove_column: Tynnu colofn
+      max_issues_count: Materion Max cyfrif yng ngholofn
+      column_tags: tagiau Colofn
+      column_order: Gorchymyn
+    show:
+      next_page: Tudalen nesaf
+    index:
+      boards: Byrddau
+      new: Newydd
+    board:
+      board_users: Defnyddwyr
+      edit: Golygu
+      destroy: Dinistrio
   pages:
     faq:
       faq: Cwestiynau Cyffredin
@@ -190,6 +239,43 @@ cy:
       partners_and_investors: Rydym yn cael eu hagor ar gyfer partneriaeth a byddem
         yn hoffi i ddod o hyd i fuddsoddwyr. Os hoffech i gydweithio gyda ni, cysylltwch
         â ni yn partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: eisoes cadarnhawyd, os gwelwch yn dda ceisiwch arwyddo mewn
+      confirmation_period_expired: angen cadarnhau o fewn% {cyfnod}, gofynnwch am
+        un newydd
+      expired: wedi dod i ben, gofynnwch am un newydd
+      not_found: heb ei ganfod
+      not_saved:
+        one: '1 gwall wahardd% hwn {adnodd} rhag cael eu cadw:'
+        other: "% {cyfrif} wallau gwaharddedig% {adnodd} hwn rhag cael eu cadw:"
+    bad_request:
+      request_result: Cais canlyniad
+      bad_request_description: Mae'r gweinydd na ellir neu ni fydd yn prosesu'r cais
+        oherwydd gwall cleient ymddangosiadol
+      go_to_root: Ewch i gwraidd
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Endid
+      request_result: Cais canlyniad
+      unprocessable_entity_description: Roedd y cais ei ffurfio'n dda ond nid oedd
+        yn gallu eu dilyn oherwydd camgymeriadau semantig
+      go_to_root: Ewch i gwraidd
+    not_found:
+      not_found: Heb Ganfod
+      request_result: Cais canlyniad
+      not_found_description: Mae'r adnodd gofynnwyd Ni ellid dod o hyd, ond gallai
+        fod ar gael yn y dyfodol
+      go_to_root: Ewch i gwraidd
+    forbidden:
+      forbidden: Forbidden
+      request_result: Cais canlyniad
+      forbidden_description: Roedd y cais yn gais dilys, ond y gweinydd yn gwrthod
+        ymateb iddo
+      go_to_root: Ewch i gwraidd
+    internal_server_error:
+      internal_server_error: Gwall Gweinydd Mewnol
+      request_result: Cais canlyniad
+      go_to_root: Ewch i gwraidd
   devise:
     shared:
       links:

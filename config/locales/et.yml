@@ -2,6 +2,7 @@
 et:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: uuendatud
   1_we_have_just_launched_our_service_title: Oleme just käivitanud meie teenus
   shared:
@@ -11,9 +12,11 @@ et:
       projects: projektid
       issues: küsimused
       syncing_with_github: Sync Github ...
+      syncing_with_gitlab: Sync Gitlab ...
       syncing_with_bitbucket: Sync Bitbucket ...
       new_issue: Uus teema
       edit_project: Edit projekti
+      boards: Lauad
     languages_select_modal:
       available_languages: Võimalikud keeled
     user_edit_menu:
@@ -37,15 +40,21 @@ et:
     new_issue_modal:
       new_issue: Uus teema
     left_sidebar:
-      projects: projektid
+      boards: Lauad
     right_sidebar:
       news: Uudised
       all: Kõik
       read_more: Loe edasi
-    translations:
+    javascript_global_variables:
       select_column_tags: Vali veerg sildid
       select_section_tags: Vali paragrahvi sildid
       select_issue_tags: Vali teema sildid
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Järgmine lehekülg
   users:
     new:
       invite_user: Kutsu kasutaja
@@ -81,14 +90,17 @@ et:
       hello: Tere
       here_some_of_your_statistics: Siin mõned statistika
       projects: projektid
+      boards: Lauad
   projects:
     index:
       projects: projektid
       new: Uus
-      sync_with_github: Sync github
-      sync_with_bitbucket: Sync bitbucket
-      stop_sync_with_bitbucket: Stopp sünkroonis bitbucket
-      stop_sync_with_github: Stopp sünkroonis github
+      sync_with_github: Sync Github
+      sync_with_gitlab: Sync Gitlab
+      sync_with_bitbucket: Sync Bitbucket
+      stop_sync_with_bitbucket: Stopp sünkroonis Bitbucket
+      stop_sync_with_github: Stopp sünkroonis Github
+      stop_sync_with_gitlab: Stopp sünkroonis Gitlab
     form:
       name: Nimi
       enter_project_name: Sisesta projekti nimi
@@ -123,7 +135,14 @@ et:
       column_tags: veerg sildid
       column_order: Telli
     show:
-      next_page: Järgmine lehekülg
+      project: Project
+      related_boards: Seotud lauad
+      project_info: Project info
+      project_issues: Project küsimusi
+      project_users: Project kasutajad
+      new: Uus
+    project_modal:
+      project: Project
   issues:
     form:
       title: Pealkiri
@@ -136,6 +155,7 @@ et:
       bitbucket_issue_id: Bitbucket küsimus id
       github_issue_id: Github küsimus id
       github_issue_number: Github küsimus number
+      project: Project
     index:
       issues: küsimusi
       sync_with_github: Sync github
@@ -148,6 +168,8 @@ et:
       edit_issue: Edit küsimus
     new:
       new_issue: Uus teema
+    issue_modal:
+      issue: väljastamine
   authentications:
     index:
       enabled_services: Lubatud teenused
@@ -173,6 +195,40 @@ et:
       welcome_to_kanban_on_rails: Welcome to Kanban Rails
       welcome_about_text: Siin saab luua oma Kanban pardal ja sync seda Github või
         Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Nimi
+      enter_board_name: Sisesta pardal nimi
+      column_width: Veeru laius
+      column_height: posti kõrgus
+      columns: veerud
+      add: Add
+      sections: jaod
+      save: Salvesta
+      projects: projektid
+    section_fields:
+      section_name: jaos nimi
+      remove_section: Eemaldada sektsiooni
+      section_tags: jaos sildid
+      section_order: Telli
+      or_include_all: või kaasata kõik?
+    column_fields:
+      column_name: veerg nimi
+      remove_column: Eemalda veerg
+      max_issues_count: Max küsimusi loota veerus
+      column_tags: veerg sildid
+      column_order: Telli
+    show:
+      next_page: Järgmine lehekülg
+    index:
+      boards: Lauad
+      new: Uus
+    board:
+      board_users: Kasutajad
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: KKK
@@ -206,6 +262,45 @@ et:
         lähtekoodiga raamatukogud. Me püüame alati parem ja parandada meie teenust.
       partners_and_investors: Oleme avatud partnerluse ja tahaksime leida investoreid.
         Kui soovite meiega koostööd võtke meiega partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: oli juba kinnitatud, siis proovige sisselogimisel
+      confirmation_period_expired: tuleb kinnitas jooksul% {periood}, siis uut taotleda
+      expired: on aegunud, siis uut taotleda
+      not_found: ei leitud
+      not_locked: ei ole lukustatud
+      not_saved:
+        one: '1 viga on keelatud selle% {ressurss} salvestamist:'
+        other: "% {count} vigu keelatud selle% {ressurss} salvestamist:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: taotlus tulemus
+      bad_request_description: Server ei saa või ei ole taotlust menetletakse tõttu
+        ilmne kliendi viga
+      go_to_root: Mine juur
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: taotlus tulemus
+      unprocessable_entity_description: taotlus oli hästi arenenud, kuid ei suutnud
+        järgneda tõttu semantiline vigu
+      go_to_root: Mine juur
+    not_found:
+      not_found: ei leitud
+      request_result: taotlus tulemus
+      not_found_description: Otsitud ressurssi ei leitud, kuid võib olla võimalik
+        tulevikus
+      go_to_root: Mine juur
+    forbidden:
+      forbidden: Forbidden
+      request_result: taotlus tulemus
+      forbidden_description: taotlus oli kehtiv taotluse, kuid server keeldub reageerida
+      go_to_root: Mine juur
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: taotlus tulemus
+      internal_server_error_description: Midagi läks valesti. Me seda parandada nii
+        kiiresti kui võimalik.
+      go_to_root: Mine juur
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 is:
   github: github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: uppfært
   1_we_have_just_launched_our_service_title: Við höfum bara sett þjónustu okkar
   shared:
@@ -11,11 +12,13 @@ is:
       projects: Verkefni
       issues: Issues
       syncing_with_github: Sync með github ...
+      syncing_with_gitlab: Sync með Gitlab ...
       syncing_with_bitbucket: Sync með Bitbucket ...
       new_issue: Nýtt tölublað
       edit_project: Breyta verkefni
+      boards: Boards
     languages_select_modal:
-      available_languages: Laus tungumál
+      available_languages: tungumál Laus
     user_edit_menu:
       profile: Profile
       site_settings: Vefsvæðisstillingar
@@ -34,17 +37,23 @@ is:
     edit_project_modal:
       edit_project: Breyta verkefni
     new_issue_modal:
-      new_issue: New mál
+      new_issue: Nýtt tölublað
     left_sidebar:
-      projects: Verkefni
+      boards: Boards
     right_sidebar:
       news: Fréttir
       all: Allt
       read_more: Lesa meira
-    translations:
+    javascript_global_variables:
       select_column_tags: Veldu dálki merki
       select_section_tags: Velja kafla merki
       select_issue_tags: Veldu mál merki
+    email_signature:
+      info: Upplýsingar
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Næsta síða
   users:
     new:
       invite_user: Bjóða notanda
@@ -80,14 +89,17 @@ is:
       hello: Hello
       here_some_of_your_statistics: Hér eru nokkrar af tölfræði þína
       projects: Verkefni
+      boards: Boards
   projects:
     index:
       projects: Verkefni
       new: Nýtt
       sync_with_github: Sync með github
-      sync_with_bitbucket: Sync með bitbucket
-      stop_sync_with_bitbucket: Stop samstilling með bitbucket
+      sync_with_gitlab: Sync með Gitlab
+      sync_with_bitbucket: Sync með Bitbucket
+      stop_sync_with_bitbucket: Stop samstilling með Bitbucket
       stop_sync_with_github: Stop samstilling með github
+      stop_sync_with_gitlab: Stop samstilling með Gitlab
     form:
       name: Name
       enter_project_name: Sláðu inn heiti verkefnisins
@@ -120,7 +132,14 @@ is:
       column_tags: Column merki
       column_order: Order
     show:
-      next_page: Næsta síða
+      project: Project
+      related_boards: tengdra nefndir
+      project_info: Project upplýsingar
+      project_issues: Project málefni
+      project_users: Project notendur
+      new: Nýtt
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -133,6 +152,7 @@ is:
       bitbucket_issue_id: Bitbucket mál id
       github_issue_id: github mál id
       github_issue_number: github mál númer
+      project: Project
     index:
       issues: málefni
       sync_with_github: Sync með github
@@ -145,6 +165,8 @@ is:
       edit_issue: Breyta mál
     new:
       new_issue: Nýtt tölublað
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: virkt þjónusta
@@ -170,6 +192,39 @@ is:
       welcome_to_kanban_on_rails: Velkomin á Kanban á teinar
       welcome_about_text: Hér getur þú búið til þína eigin Kanban borð og samstilla
         það með github eða Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Sláðu borð nafnið
+      column_width: Dálkbreidd
+      column_height: Column hæð
+      columns: Dálkar
+      add: Bæta
+      sections: Deildir
+      save: Vista
+      projects: Verkefni
+    section_fields:
+      remove_section: Fjarlægja kafla
+      section_tags: Kafli merki
+      section_order: Order
+      or_include_all: Eða eru allir?
+    column_fields:
+      column_name: Column nafn
+      remove_column: Fjarlægja dálk
+      max_issues_count: Max mál að telja í dálki
+      column_tags: Column merki
+      column_order: Order
+    show:
+      next_page: Næsta síða
+    index:
+      boards: Boards
+      new: Nýtt
+    board:
+      board_users: notendur
+      edit: Breyta
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -204,6 +259,47 @@ is:
       partners_and_investors: Við erum opnari fyrir samstarfi og viljum við finna
         fjárfesta. Ef þú vilt vinna með okkur vinsamlegast hafðu samband við okkur
         á partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: var þegar staðfest, vinsamlegast reyndu að skrá þig inn
+      confirmation_period_expired: þurfa að vera staðfestar innan% {tímabil}, skaltu
+        biðja um nýjan
+      expired: er liðinn, vinsamlega beðið um nýjan
+      not_found: fannst ekki
+      not_locked: var ekki læst
+      not_saved:
+        one: '1 villa bönnuð þessu% {resource} frá því að vera vistað:'
+        other: "% {count} villur bönnuð þessu% {auðlind} frá því að vera vistuð:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Beiðni niðurstaða
+      bad_request_description: The framreiðslumaður geta ekki eða vilja ekki afgreiða
+        beiðnina vegna augljós biðlaravilla
+      go_to_root: Fara rót
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Beiðni niðurstaða
+      unprocessable_entity_description: The beiðni var vel mynduð, en tókst ekki að
+        fylgja vegna merkingartækni villur
+      go_to_root: Fara rót
+    not_found:
+      not_found: fannst ekki
+      request_result: Beiðni niðurstaða
+      not_found_description: sem umbeðin tilföng fannst ekki, en getur verið í boði
+        í framtíðinni
+      go_to_root: Fara rót
+    forbidden:
+      forbidden: Bannað
+      request_result: Beiðni niðurstaða
+      forbidden_description: The beiðni var gild beiðni, en þjóninn er að neita að
+        svara honum
+      go_to_root: Fara rót
+    internal_server_error:
+      internal_server_error: Innri Framreiðslumaður Villa
+      request_result: Beiðni niðurstaða
+      internal_server_error_description: Eitthvað fór úrskeiðis. Við munum laga það
+        eins fljótt og auðið er.
+      go_to_root: Fara rót
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 de:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: aktualisiert
   1_we_have_just_launched_our_service_title: Wir haben unseren Service ins Leben gerufen
   shared:
@@ -11,9 +12,11 @@ de:
       projects: Projekte
       issues: Probleme
       syncing_with_github: Sync mit Github ...
+      syncing_with_gitlab: Sync mit Gitlab ...
       syncing_with_bitbucket: Sync mit Bitbucket ...
       new_issue: Neue Ausgabe
       edit_project: Projekt bearbeiten
+      boards: Boards
     languages_select_modal:
       available_languages: Verfügbare Sprachen
     user_edit_menu:
@@ -37,15 +40,21 @@ de:
     new_issue_modal:
       new_issue: Neue Ausgabe
     left_sidebar:
-      projects: Projekte
+      boards: Boards
     right_sidebar:
       news: Nachrichten
       all: All
       read_more: Lesen Sie mehr
-    translations:
+    javascript_global_variables:
       select_column_tags: Wählen Sie Spalte Tags
       select_section_tags: Select Abschnitt Tags
       select_issue_tags: Wählen Sie Ausgabe-Tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Nächste Seite
   users:
     new:
       invite_user: Benutzer einladen
@@ -79,14 +88,17 @@ de:
       hello: Hallo
       here_some_of_your_statistics: Hier einige Ihrer Statistiken
       projects: Projekte
+      boards: Boards
   projects:
     index:
       projects: Projekte
       new: New
       sync_with_github: Sync mit Github
-      sync_with_bitbucket: Sync mit bitbucket
-      stop_sync_with_bitbucket: Stop-Synchronisierung mit bitbucket
+      sync_with_gitlab: Sync mit Gitlab
+      sync_with_bitbucket: Sync mit Bitbucket
+      stop_sync_with_bitbucket: Stop-Synchronisierung mit Bitbucket
       stop_sync_with_github: Stop-Synchronisierung mit Github
+      stop_sync_with_gitlab: Stop-Synchronisierung mit Gitlab
     form:
       name: Namen
       enter_project_name: Geben Sie Projektnamen
@@ -109,7 +121,7 @@ de:
       project_issues: Projektfragen
       project_users: Projektnutzer
     section_fields:
-      section_name: Sektionsname
+      section_name: Abschnittsname
       section_tags: Section-Tags
       section_order: bestellen
       or_include_all: Oder sind alle?
@@ -119,7 +131,14 @@ de:
       column_tags: Column-Tags
       column_order: bestellen
     show:
-      next_page: Nächste Seite
+      project: Projekt
+      related_boards: Verwandte Bretter
+      project_info: Projektinfo
+      project_issues: Projektfragen
+      project_users: Projektnutzer
+      new: New
+    project_modal:
+      project: Projekt
   issues:
     form:
       title: Titel
@@ -132,6 +151,7 @@ de:
       bitbucket_issue_id: Bitbucket Ausgabe id
       github_issue_id: Github Ausgabe id
       github_issue_number: Github Ausgabenummer
+      project: Projekt
     index:
       issues: Fragen
       sync_with_github: Sync mit Github
@@ -144,6 +164,8 @@ de:
       edit_issue: bearbeiten Ausgabe
     new:
       new_issue: Neue Ausgabe
+    issue_modal:
+      issue: Ausgabe
   authentications:
     index:
       enabled_services: Aktiviert Dienste
@@ -169,6 +191,38 @@ de:
       welcome_to_kanban_on_rails: Willkommen bei Kanban On Rails
       welcome_about_text: Sie hier Ihre eigenen Kanban Board und synchronisieren Sie
         sie mit Github oder Bitbucket erstellen
+  boards:
+    board_modal:
+      board: Vorstand
+    form:
+      name: Namen
+      enter_board_name: Board Namen eingeben
+      column_width: Spaltenbreite
+      column_height: Säulenhöhe
+      columns: Spalten
+      add: Add
+      sections: Abschnitte
+      save: Speichern
+      projects: Projekte
+    section_fields:
+      section_name: Abschnittsname
+      section_tags: Section-Tags
+      section_order: bestellen
+      or_include_all: Oder sind alle?
+    column_fields:
+      column_name: Spaltenname
+      max_issues_count: Max Ausgaben zählen in Spalte
+      column_tags: Column-Tags
+      column_order: bestellen
+    show:
+      next_page: Nächste Seite
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Benutzer
+      edit: bearbeiten
+      destroy: Zerstören
   pages:
     faq:
       faq: FAQ
@@ -182,8 +236,8 @@ de:
       i_have_some_requests: Ich habe einige Anfragen
       you_can_write_request: Sie Anfrage schreiben
       here: hier
-      i_have_seen_some_typo_or_wrong_translation: Ich habe einige Fehler oder falsche
-        Übersetzungen gesehen
+      i_have_seen_some_typo_or_wrong_translation: Ich habe ein paar Tippfehler oder
+        falsche Übersetzungen gesehen
       you_can_send_pull_request_to_our: Sie Pull-Anfrage schicken an unsere
       github_repository: Github-Repository
       i_have_seen_some_error: Ich habe einige Fehler gesehen
@@ -203,6 +257,47 @@ de:
       partners_and_investors: Wir sind für die Partnerschaft eröffnet, und wir möchten,
         Investoren zu finden. Wenn Sie mit uns zusammenarbeiten möchten, kontaktieren
         Sie uns bitte an partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: bereits bestätigt wurde, versuchen Sie es bei der Unterzeichnung
+      confirmation_period_expired: innerhalb% bestätigt werden {period}, fordern Sie
+        bitte eine neue
+      expired: ist abgelaufen, fordern Sie bitte eine neue
+      not_found: nicht gefunden
+      not_locked: war nicht verschlossen
+      not_saved:
+        one: '1 Fehler verboten dieses% {Ressource} nicht gespeichert werden:'
+        other: "% {count} Fehler dieses% {Ressource} verboten nicht gespeichert werden:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Anfrage Ergebnis
+      bad_request_description: Der Server kann nicht oder nicht die Anforderung aufgrund
+        eines offensichtlichen Client Fehler verarbeiten
+      go_to_root: root gehen
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Anfrage Ergebnis
+      unprocessable_entity_description: Die Anforderung war wohlgeformt, konnte aber
+        aufgrund semantische Fehler zu beachten
+      go_to_root: root gehen
+    not_found:
+      not_found: nicht gefunden
+      request_result: Anfrage Ergebnis
+      not_found_description: Die angeforderte Ressource konnte nicht gefunden werden,
+        sondern kann in Zukunft zur Verfügung stehen
+      go_to_root: root gehen
+    forbidden:
+      forbidden: Verboten
+      request_result: Anfrage Ergebnis
+      forbidden_description: Der Antrag wurde eine gültige Anforderung, aber der Server
+        weigert sich, darauf zu reagieren
+      go_to_root: root gehen
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Anfrage Ergebnis
+      internal_server_error_description: ging etwas schief. Wir werden es beheben,
+        so bald wie möglich.
+      go_to_root: root gehen
   devise:
     shared:
       links:
@@ -278,7 +373,7 @@ de:
         sign_up: Registrieren
         name: Namen
         password: Passwort
-        password_confirmation: Paßwortbestätigung
+        password_confirmation: Passwort Bestätigung
         register: Registrieren
     sessions:
       signed_in: erfolgreich angemeldet.

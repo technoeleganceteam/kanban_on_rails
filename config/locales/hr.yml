@@ -2,6 +2,7 @@
 hr:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ažurirana
   1_we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis
   shared:
@@ -11,9 +12,11 @@ hr:
       projects: projekti
       issues: pitanja
       syncing_with_github: Sinkronizacija s GitHub ...
+      syncing_with_gitlab: Sinkronizacija s Gitlab ...
       syncing_with_bitbucket: Sinkronizacija s Bitbucket ...
       new_issue: Novi broj
       edit_project: Uredi projekt
+      boards: Forumi
     languages_select_modal:
       available_languages: Dostupni jezici
     user_edit_menu:
@@ -36,15 +39,21 @@ hr:
     new_issue_modal:
       new_issue: Novi broj
     left_sidebar:
-      projects: projekti
+      boards: Forumi
     right_sidebar:
       news: Novosti
       all: Sve
       read_more: Opširnije
-    translations:
+    javascript_global_variables:
       select_column_tags: Odaberite oznake stupaca
       select_section_tags: Odaberite odjeljak oznake
       select_issue_tags: Odaberite izdavanje oznake
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance doo
+    pagination_link:
+      next_page: Sljedeća stranica
   users:
     new:
       invite_user: Pozovi korisnika
@@ -80,14 +89,17 @@ hr:
       hello: Pozdrav
       here_some_of_your_statistics: Evo neke svoje statistike
       projects: projekti
+      boards: Forumi
   projects:
     index:
       projects: projekti
       new: Novo
       sync_with_github: Sinkronizacija s GitHub
-      sync_with_bitbucket: Sinkronizacija s bitbucket
-      stop_sync_with_bitbucket: Zaustavi sinkronizaciju s bitbucket
+      sync_with_gitlab: Sinkronizacija s Gitlab
+      sync_with_bitbucket: Sinkronizacija s Bitbucket
+      stop_sync_with_bitbucket: Zaustavi sinkronizaciju s Bitbucket
       stop_sync_with_github: Zaustavi sinkronizaciju s GitHub
+      stop_sync_with_gitlab: Zaustavi sinkronizaciju s Gitlab
     form:
       name: Ime
       enter_project_name: Unesite naziv projekta
@@ -116,7 +128,13 @@ hr:
       column_tags: stupca oznake
       column_order: narudžbe
     show:
-      next_page: Sljedeća stranica
+      project: projekta
+      related_boards: Vezani ploče
+      project_issues: pitanja Projekt
+      project_users: korisnik Projekt
+      new: Novo
+    project_modal:
+      project: projekta
   issues:
     form:
       title: Naslov
@@ -129,6 +147,7 @@ hr:
       bitbucket_issue_id: Bitbucket problem id
       github_issue_id: Github problem id
       github_issue_number: broj Github problem
+      project: projekta
     index:
       issues: pitanja
       sync_with_github: Sinkronizacija s GitHub
@@ -141,6 +160,8 @@ hr:
       edit_issue: Edit pitanje
     new:
       new_issue: Novi broj
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: omogućena usluga
@@ -166,6 +187,36 @@ hr:
       welcome_to_kanban_on_rails: Dobrodošli na Kanban na tračnice
       welcome_about_text: Ovdje možete stvoriti svoj vlastiti Kanban ploče i sinkronizirati
         s GitHub ili Bitbucket
+  boards:
+    board_modal:
+      board: odbor
+    form:
+      name: Ime
+      enter_board_name: Unesite ime za peglanje
+      columns: Kolumne
+      add: Add
+      sections: Sekcije
+      save: Save
+      projects: projekti
+    section_fields:
+      remove_section: Ukloni odjeljak
+      section_tags: Odjeljak oznake
+      section_order: narudžbe
+      or_include_all: Ili su svi?
+    column_fields:
+      remove_column: Ukloni stupac
+      max_issues_count: Maksimalni pitanja računati u stupcu
+      column_tags: stupca oznake
+      column_order: narudžbe
+    show:
+      next_page: Sljedeća stranica
+    index:
+      boards: Forumi
+      new: Novo
+    board:
+      board_users: korisnika
+      edit: Uredi
+      destroy: uništiti
   pages:
     faq:
       faq: FAQ
@@ -199,6 +250,46 @@ hr:
         source biblioteke. Uvijek pokušati dobiti bolje i poboljšati naše usluge.
       partners_and_investors: Otvoreni smo za partnerstvo i želimo pronaći investitora.
         Ako želite surađivati ​​s nama kontaktirajte nas na partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: već potvrđena, molimo pokušajte se prijaviti
+      confirmation_period_expired: mora potvrditi u roku% {razdoblje}, zatražite novu
+      expired: istekla, zatražiti novi
+      not_found: nije pronađen
+      not_locked: nisu bila zaključana
+      not_saved:
+        one: '1 greška zabranjeno ovu% {resource} od toga da bude spašen:'
+        other: "% {count} grešaka zabranjene ovu% {resource} iz se spremaju:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Zahtjev rezultat
+      bad_request_description: The server ne može ili ne želi obraditi zahtjev zbog
+        očite pogreške klijenta
+      go_to_root: Idi na korijenu
+    unprocessable_entity:
+      unprocessable_entity: obrađivati ​​entiteta
+      request_result: Zahtjev rezultat
+      unprocessable_entity_description: Zahtjev je dobro oblikovan, ali se nije mogao
+        slijediti zbog semantičkih pogrešaka
+      go_to_root: Idi na korijenu
+    not_found:
+      not_found: nije pronađen
+      request_result: Zahtjev rezultat
+      not_found_description: Traženi resurs nije mogao biti pronađen, ali možda neće
+        biti dostupne u budućnosti
+      go_to_root: Idi na korijenu
+    forbidden:
+      forbidden: Zabranjeni
+      request_result: Zahtjev rezultat
+      forbidden_description: je zahtjev valjan zahtjev, ali poslužitelj odbija odgovoriti
+        na njega
+      go_to_root: Idi na korijenu
+    internal_server_error:
+      internal_server_error: Interna pogreška poslužitelja
+      request_result: Zahtjev rezultat
+      internal_server_error_description: Nešto je pošlo po krivu. Mi ćemo to popraviti
+        u najkraćem mogućem roku.
+      go_to_root: Idi na korijenu
   devise:
     shared:
       links:

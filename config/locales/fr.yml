@@ -2,6 +2,7 @@
 fr:
   github: Github
   bitbucket: Bitbucket
+  gitlab: gitlab ce
   updated: mis à jour
   1_we_have_just_launched_our_service_title: Nous venons de lancer notre service
   shared:
@@ -11,9 +12,11 @@ fr:
       projects: Projets
       issues: Questions
       syncing_with_github: Sync avec Github ...
+      syncing_with_gitlab: Sync avec gitlab ce ...
       syncing_with_bitbucket: Sync avec Bitbucket ...
       new_issue: Nouveau numéro
       edit_project: Modifier projet
+      boards: Boards
     languages_select_modal:
       available_languages: Langues disponibles
     user_edit_menu:
@@ -22,7 +25,7 @@ fr:
       services: services
     form_errors:
       password: Mot de passe
-      current_password: mot de passe actuel
+      current_password: Mot de passe actuel
       name: Nom
       base: base
       title: Titre
@@ -36,15 +39,21 @@ fr:
     new_issue_modal:
       new_issue: Nouveau numéro
     left_sidebar:
-      projects: Projets
+      boards: Boards
     right_sidebar:
       news: Nouvelles
       all: Tous
       read_more: En savoir plus
-    translations:
+    javascript_global_variables:
       select_column_tags: Sélectionnez les balises de colonnes
       select_section_tags: Sélectionnez balises de section
       select_issue_tags: Sélectionnez émission balises
+    email_signature:
+      info: Infos
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Page suivante
   users:
     new:
       invite_user: Inviter l'utilisateur
@@ -79,14 +88,17 @@ fr:
       hello: Bonjour
       here_some_of_your_statistics: Voici certaines de vos statistiques
       projects: Projets
+      boards: Boards
   projects:
     index:
       projects: Projets
       new: Nouveau
-      sync_with_github: Sync avec github
-      sync_with_bitbucket: Sync avec bitbucket
-      stop_sync_with_bitbucket: Arrêter la synchronisation avec bitbucket
-      stop_sync_with_github: Arrêter la synchronisation avec github
+      sync_with_github: Sync avec Github
+      sync_with_gitlab: Sync avec gitlab ce
+      sync_with_bitbucket: Sync avec Bitbucket
+      stop_sync_with_bitbucket: Arrêter la synchronisation avec Bitbucket
+      stop_sync_with_github: Arrêter la synchronisation avec Github
+      stop_sync_with_gitlab: Arrêter la synchronisation avec gitlab ce
     form:
       name: Nom
       enter_project_name: Entrez le nom du projet
@@ -114,19 +126,26 @@ fr:
       column_tags: étiquettes de colonne
       column_order: Ordre
     show:
-      next_page: Page suivante
+      project: Project
+      related_boards: conseils connexes
+      project_issues: questions de projet
+      project_users: utilisateurs du projet
+      new: Nouveau
+    project_modal:
+      project: Project
   issues:
     form:
       title: Titre
       enter_issue_title: Entrez publication titre
       save: Sauvegarder
       body: Body
-      enter_issue_body: Entrez le corps d'émission
+      enter_issue_body: Entrez corps d'émission
       tags: Balises
       issue_order: Ordre
       bitbucket_issue_id: Bitbucket question id
       github_issue_id: Github question id
       github_issue_number: Github numéro d'émission
+      project: Project
     index:
       issues: questions
       sync_with_github: Sync avec github
@@ -139,6 +158,8 @@ fr:
       edit_issue: Modifier question
     new:
       new_issue: Nouveau numéro
+    issue_modal:
+      issue: Problème
   authentications:
     index:
       enabled_services: services Enabled
@@ -164,13 +185,40 @@ fr:
       welcome_to_kanban_on_rails: Bienvenue sur Kanban On Rails
       welcome_about_text: Ici, vous pouvez créer votre propre tableau Kanban et synchroniser
         avec Github ou Bitbucket
+  boards:
+    form:
+      name: Nom
+      enter_board_name: Entrez le nom du conseil d'administration
+      columns: Colonnes
+      add: Ajouter
+      sections: Sections
+      save: Sauvegarder
+      projects: Projets
+    section_fields:
+      section_tags: balises Section
+      section_order: Ordre
+      or_include_all: Ou comprennent tous?
+    column_fields:
+      remove_column: Supprimer la colonne
+      max_issues_count: questions Max comptent dans la colonne
+      column_tags: étiquettes de colonne
+      column_order: Ordre
+    show:
+      next_page: Page suivante
+    index:
+      boards: Boards
+      new: Nouveau
+    board:
+      board_users: utilisateurs
+      edit: Modifier
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
       what_is_kanban_on_rails: Qu'est-ce KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails est le service où vous pouvez créer des
         conseils Kanban et synchroniser avec Github ou Bitbucket
-      what_features_has_kanban_on_rails: Quelles fonctionnalités a KanbanOnRails?
+      what_features_has_kanban_on_rails: Quelles sont les caractéristiques a KanbanOnRails?
       kanban_on_rails_features: Vous pouvez synchroniser vos projets et des problèmes
         avec Github et Bitbucket, inviter des utilisateurs (pour les gestionnaires
         exemple) pour votre projet, le déployer sur votre propre serveur
@@ -201,6 +249,47 @@ fr:
       partners_and_investors: Nous sommes ouverts pour le partenariat et nous aimerions
         trouver des investisseurs. Si vous souhaitez coopérer avec nous s'il vous
         plaît nous contacter à partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: a déjà été confirmé, s'il vous plaît essayer connectez
+      confirmation_period_expired: doit être confirmée dans% {} période, s'il vous
+        plaît demander un nouveau
+      expired: a expiré, s'il vous plaît demander un nouveau
+      not_found: not found
+      not_locked: n'a pas été verrouillé
+      not_saved:
+        one: '1 erreur interdit ce% {resource} d''être sauvés:'
+        other: "% {count} erreurs interdites ce% {resource} d'être sauvé:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Demande résultat
+      bad_request_description: Le serveur ne peut pas ou ne veut pas traiter la demande
+        en raison d'une erreur de client apparente
+      go_to_root: Aller à la racine
+    unprocessable_entity:
+      unprocessable_entity: inexploitables Entité
+      request_result: Demande résultat
+      unprocessable_entity_description: La demande était bien formé, mais n'a pas
+        pu être suivie en raison d'erreurs sémantiques
+      go_to_root: Aller à la racine
+    not_found:
+      not_found: Non Trouvé
+      request_result: Requête résultat
+      not_found_description: La ressource demandée n'a pu être trouvée, mais peuvent
+        être disponibles à l'avenir
+      go_to_root: Aller à la racine
+    forbidden:
+      forbidden: Forbidden
+      request_result: Demande résultat
+      forbidden_description: La demande était une demande valide, mais le serveur
+        refuse d'y répondre
+      go_to_root: Aller à la racine
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: Demande résultat
+      internal_server_error_description: Quelque chose a mal tourné. Nous allons y
+        remédier dès que possible.
+      go_to_root: Aller à la racine
   devise:
     shared:
       links:
@@ -223,10 +312,10 @@ fr:
     failure:
       already_authenticated: Vous êtes déjà connecté.
       inactive: Votre compte est pas encore activé.
-      invalid: e-mail ou mot de passe invalide.
+      invalid: email ou mot de passe invalide.
       locked: Votre compte est verrouillé.
       last_attempt: Vous avez une tentative plus avant que votre compte sera verrouillé.
-      not_found_in_database: email ou mot de passe invalide.
+      not_found_in_database: e-mail ou mot de passe invalide.
       timeout: Votre session a expiré. S'il vous plaît vous connecter à nouveau pour
         continuer.
       unauthenticated: Vous devez vous connecter ou vous inscrire avant de continuer.
@@ -244,13 +333,13 @@ fr:
         someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Quelqu'un
           a demande un lien pour changer votre mot de passe. Vous pouvez le faire
           via le lien ci-dessous.
-        change_my_password: Changer mon mot de passe
+        change_my_password: Modifier mon mot de passe
         if_you_didnt_request_this_please_ignore_this_email: Si vous n'avez pas demandé
           cette s'il vous plaît ignorer cet e-mail.
       unlock_instructions:
         subject: Instructions Unlock
     omniauth_callbacks:
-      failure: ne pourrais pas vous authentifier de% {type} parce que "% {reason}".
+      failure: Impossible vous authentifier à partir de% {type} parce que "% {reason}".
       success: avec succès authentifié à partir de% {type} compte.
     passwords:
       no_token: Vous ne pouvez pas accéder à cette page sans en provenance d'un e-mail
@@ -267,7 +356,7 @@ fr:
         forgot_your_password: Récupérez votre mot de passe
         reset_password: Envoyer récupérer url
       edit:
-        change_your_password: Modifier votre mot de passe
+        change_your_password: Changez votre mot de passe
         new_password: Nouveau mot de passe
         change_password: Change
     registrations:
@@ -292,7 +381,7 @@ fr:
         password: Mot de passe
         register: Inscrivez-vous
     sessions:
-      signed_in: Signé en succès.
+      signed_in: Signé à succès.
       signed_out: Signé avec succès.
       new:
         sign_in: Connexion

@@ -2,6 +2,7 @@
 cs:
   github: Github
   bitbucket: bitbucket
+  gitlab: Gitlab
   updated: aktualizováno
   1_we_have_just_launched_our_service_title: Právě jsme spustili naše služby
   shared:
@@ -11,9 +12,11 @@ cs:
       projects: Projekty
       issues: Problémy
       syncing_with_github: Synchronizace s GitHub ...
+      syncing_with_gitlab: Synchronizace s Gitlab ...
       syncing_with_bitbucket: Synchronizace s bitbucket ...
       new_issue: Nové vydání
       edit_project: Upravit projekt
+      boards: desky
     languages_select_modal:
       available_languages: Dostupné jazyky
     user_edit_menu:
@@ -36,15 +39,21 @@ cs:
     new_issue_modal:
       new_issue: Nové vydání
     left_sidebar:
-      projects: Projekty
+      boards: desky
     right_sidebar:
       news: News
       all: Vše
       read_more: Čtěte více
-    translations:
+    javascript_global_variables:
       select_column_tags: Vybrat tagy sloupců
       select_section_tags: Vybrat tagy sekce
       select_issue_tags: Vybrat vydávat tagy
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Další strana
   users:
     new:
       invite_user: Pozvat uživatele
@@ -79,14 +88,17 @@ cs:
       hello: Hello
       here_some_of_your_statistics: zde některé ze svých statistik
       projects: Projekty
+      boards: desky
   projects:
     index:
       projects: Projekty
       new: Nové
-      sync_with_github: Synchronizace s github
+      sync_with_github: Synchronizace s GitHub
+      sync_with_gitlab: Synchronizace s Gitlab
       sync_with_bitbucket: Synchronizace s bitbucket
       stop_sync_with_bitbucket: Zastavení synchronizace s bitbucket
-      stop_sync_with_github: Zastavení synchronizace s github
+      stop_sync_with_github: Zastavení synchronizace s GitHub
+      stop_sync_with_gitlab: Zastavení synchronizace s Gitlab
     form:
       name: Name
       enter_project_name: Zadejte název projektu
@@ -114,7 +126,13 @@ cs:
       column_tags: tagy sloupců
       column_order: Objednávka
     show:
-      next_page: Další strana
+      project: Project
+      related_boards: Související desky
+      project_issues: problémy Project
+      project_users: uživatelů projektu
+      new: Nové
+    project_modal:
+      project: Project
   issues:
     form:
       title: Název
@@ -127,6 +145,7 @@ cs:
       bitbucket_issue_id: bitbucket problém id
       github_issue_id: Github problém id
       github_issue_number: Github číslo vydání
+      project: Project
     index:
       issues: problémy
       sync_with_github: Synchronizace s github
@@ -139,6 +158,8 @@ cs:
       edit_issue: Edit problém
     new:
       new_issue: Nové vydání
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Povolené služby
@@ -164,6 +185,35 @@ cs:
       welcome_to_kanban_on_rails: Vítejte na Kanban po kolejích
       welcome_about_text: Zde si můžete vytvořit svůj vlastní Kanban desku a synchronizovat
         jej s GitHub nebo bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Zadejte název desky
+      columns: Sloupce
+      add: Add
+      sections: Oddíly
+      save: Save
+      projects: Projekty
+    section_fields:
+      remove_section: Remove sekce
+      section_tags: "§ tagy"
+      section_order: Objednávka
+      or_include_all: Nebo obsahovat všechny?
+    column_fields:
+      remove_column: Odstranit sloupec
+      column_tags: tagy sloupců
+      column_order: Objednávka
+    show:
+      next_page: Další strana
+    index:
+      boards: desky
+      new: Nové
+    board:
+      board_users: Uživatelé
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -198,6 +248,40 @@ cs:
       partners_and_investors: Jsme jsou otevřeny pro spolupráci a rádi bychom najít
         investory. Pokud byste chtěli s námi spolupracovat, kontaktujte nás na adrese
         partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: již bylo potvrzeno, prosím, zkuste se přihlásit
+      confirmation_period_expired: být potvrzeny v% {období}, prosím, požádat o nové
+      expired: vypršela, prosím, požádat o nové
+      not_found: nebyl nalezen
+      not_locked: nebyly zamčené
+      not_saved:
+        one: '1 chyba zakázáno tento% {} prostředků z ukládání:'
+        other: "% {count} Kvůli chybám nebyl tento% {} zdroj z ukládán:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: server nemůže nebo nechce zpracovat požadavek z důvodu
+        zjevné chyby klienta
+      go_to_root: Přejít na kořeni
+    unprocessable_entity:
+      unprocessable_entity: nezpracovatelné Entity
+      unprocessable_entity_description: žádost byla dobře tvarované, ale nemohl být
+        dodrženy kvůli sémantické chyby
+      go_to_root: Přejít na kořeni
+    not_found:
+      not_found: Not Found
+      not_found_description: Požadovaný zdroj nebyl nalezen, ale může být v budoucnu
+        k dispozici
+      go_to_root: Přejít na kořeni
+    forbidden:
+      forbidden: Forbidden
+      forbidden_description: byl požadavek platný požadavek, ale server odmítá reagovat
+        na to
+      go_to_root: Přejít na kořeni
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Něco se pokazilo. Budeme to opravit co nejdříve.
+      go_to_root: Přejít na kořeni
   devise:
     shared:
       links:

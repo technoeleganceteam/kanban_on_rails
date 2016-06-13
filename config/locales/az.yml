@@ -2,6 +2,7 @@
 az:
   github: Github
   bitbucket: Bitbucket
+  gitlab: GitLab
   updated: yenilənir
   shared:
     navbar:
@@ -11,6 +12,7 @@ az:
       issues: Issues
       new_issue: yeni emissiyası
       edit_project: Edit layihə
+      boards: Boards
     languages_select_modal:
       available_languages: Mövcud diller
     user_edit_menu:
@@ -33,15 +35,21 @@ az:
     new_issue_modal:
       new_issue: yeni emissiyası
     left_sidebar:
-      projects: Layihələr
+      boards: Boards
     right_sidebar:
       news: News
       all: Bütün
       read_more: Daha ətraflı
-    translations:
+    javascript_global_variables:
       select_column_tags: Select sütun tags
       select_section_tags: Select bölmə tags
       select_issue_tags: Select məsələ tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Sonrakı səhifə
   users:
     form:
       name: Adı
@@ -68,6 +76,7 @@ az:
     dashboard:
       hello: Hello
       projects: Layihələr
+      boards: Boards
   projects:
     index:
       projects: Layihələr
@@ -103,7 +112,14 @@ az:
       column_tags: Sütun tags
       column_order: Order
     show:
-      next_page: Sonrakı səhifə
+      project: Project
+      related_boards: Related lövhələr
+      project_info: Project info
+      project_issues: Project məsələlər
+      project_users: Layihə istifadəçilər
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -114,6 +130,7 @@ az:
       bitbucket_issue_id: Bitbucket məsələ id
       github_issue_id: Github məsələ id
       github_issue_number: Github məsələ sayı
+      project: Project
     index:
       issues: məsələlər
       new: New
@@ -124,6 +141,8 @@ az:
       edit_issue: Edit məsələ
     new:
       new_issue: yeni emissiyası
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Enabled xidmətlər
@@ -140,6 +159,38 @@ az:
       technoelegance_team: Technoelegance Team
     index:
       read_more: Daha ətraflı
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Adı
+      column_width: Sütun width
+      column_height: sütun boyu
+      columns: Columns
+      add: Add
+      sections: Bölmələr
+      save: Save
+      projects: Layihələr
+    section_fields:
+      section_name: Bölmə adı
+      remove_section: Sil bölmə
+      section_tags: Bölmə tags
+      section_order: Order
+      or_include_all: ya bütün daxildir?
+    column_fields:
+      column_name: Sütun adı
+      max_issues_count: Max məsələlər sütun saymaq
+      column_tags: Sütun tags
+      column_order: Order
+    show:
+      next_page: Sonrakı səhifə
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: İstifadəçilər
+      edit: Edit
+      destroy: məhv
   pages:
     faq:
       faq: FAQ
@@ -161,6 +212,39 @@ az:
       partners_and_investors: Biz tərəfdaşlıq açılır və biz investorlar tapmaq istəyirəm.
         Siz bizimlə əməkdaşlıq etmək istəyirsinizsə partnership@technoelegance.com
         bizə müraciət edin
+  errors:
+    messages:
+      already_confirmed: artıq təsdiq edilmişdir, giriş cəhd edin
+      confirmation_period_expired: "% {müddəti} ərzində təsdiq etmək lazımdır, yeni
+        bir isteyin"
+      expired: ", yeni bir isteyin"
+      not_found: tapılmadı
+      not_locked: kilidli deyil
+      not_saved:
+        one: '1 səhv xilas olan bu% {resurs} qadağan:'
+        other: "% xilas olan bu% {resurs} qadağan səhvləri {count}:"
+    bad_request:
+      bad_request: Bad Filmlərin
+      request_result: Filmlərin nəticə
+      go_to_root: kök get
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Filmlərin nəticə
+      go_to_root: kök get
+    not_found:
+      not_found: Tapılmadı
+      request_result: Filmlərin nəticə
+      go_to_root: kök get
+    forbidden:
+      forbidden: Forbidden
+      request_result: Filmlərin nəticə
+      go_to_root: kök get
+    internal_server_error:
+      internal_server_error: Daxili Server Error
+      request_result: Filmlərin nəticə
+      internal_server_error_description: Bir şey yanlış getdi. Biz mümkün qədər tez
+        düzeltmek edəcək.
+      go_to_root: kök get
   devise:
     shared:
       links:

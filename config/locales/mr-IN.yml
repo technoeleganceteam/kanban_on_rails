@@ -2,6 +2,7 @@
 mr-IN:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: सुधारित
   shared:
     navbar:
@@ -9,7 +10,9 @@ mr-IN:
       sign_up: साइन अप करा
       projects: प्रकल्प
       issues: मुद्दे
+      syncing_with_gitlab: Gitlab समक्रमित ...
       new_issue: नवीन समस्या
+      boards: बोर्ड
     languages_select_modal:
       available_languages: उपलब्ध भाषा
     user_edit_menu:
@@ -30,15 +33,21 @@ mr-IN:
     new_issue_modal:
       new_issue: नवीन समस्या
     left_sidebar:
-      projects: प्रकल्प
+      boards: बोर्ड
     right_sidebar:
       news: बातम्या
       all: सर्व
       read_more: अधिक वाचा
-    translations:
+    javascript_global_variables:
       select_column_tags: निवडा
       select_section_tags: निवडा
       select_issue_tags: समस्या टॅग निवडा
+    email_signature:
+      info: माहिती
+      mailer: मेलर
+      technoelegance: Technoelegance लि
+    pagination_link:
+      next_page: पुढील पृष्ठ
   users:
     new:
       invite_user: वापरकर्त्याला आमंत्रित करा
@@ -71,12 +80,14 @@ mr-IN:
     dashboard:
       hello: हॅलो
       projects: प्रकल्प
+      boards: बोर्ड
   projects:
     index:
       projects: प्रकल्प
       new: नवी
-      stop_sync_with_bitbucket: bitbucket जुळणारे थांबवा
-      stop_sync_with_github: github जुळणारे थांबवा
+      sync_with_github: Github समक्रमित
+      sync_with_gitlab: Gitlab समक्रमित
+      sync_with_bitbucket: Bitbucket समक्रमित
     form:
       name: नाव
       enter_project_name: प्रकल्प नाव प्रविष्ट करा
@@ -111,7 +122,14 @@ mr-IN:
       column_tags: स्तंभ टॅग
       column_order: ऑर्डर
     show:
-      next_page: पुढील पृष्ठ
+      project: प्रकल्प
+      related_boards: संबंधित बोर्ड
+      project_info: प्रकल्प माहिती
+      project_issues: प्रकल्प समस्या
+      project_users: प्रकल्प वापरकर्ते
+      new: नवी
+    project_modal:
+      project: प्रकल्प
   issues:
     form:
       title: शीर्षक
@@ -124,6 +142,7 @@ mr-IN:
       bitbucket_issue_id: Bitbucket समस्या आयडी
       github_issue_id: Github समस्या आयडी
       github_issue_number: Github समस्या संख्या
+      project: प्रकल्प
     index:
       issues: समस्या
       new: नवी
@@ -132,6 +151,8 @@ mr-IN:
       edit: संपादित करा
     new:
       new_issue: नवीन समस्या
+    issue_modal:
+      issue: अंक
   authentications:
     index:
       enabled_services: सक्षम सेवा
@@ -155,6 +176,40 @@ mr-IN:
   welcome:
     index:
       welcome_to_kanban_on_rails: Kanban रोजी Rails वर आपले स्वागत आहे
+  boards:
+    board_modal:
+      board: मंडळ
+    form:
+      name: नाव
+      enter_board_name: बोर्ड नाव प्रविष्ट करा
+      column_width: स्तंभाची रुंदी
+      column_height: स्तंभ उंची
+      columns: स्तंभ
+      add: जोडा
+      sections: विभाग
+      save: जतन करा
+      projects: प्रकल्प
+    section_fields:
+      section_name: विभाग नाव
+      remove_section: काढा विभाग
+      section_tags: कलम टॅग
+      section_order: ऑर्डर
+      or_include_all: किंवा सर्व समावेश होतो का?
+    column_fields:
+      column_name: स्तंभ नाव
+      remove_column: स्तंभ काढा
+      max_issues_count: मॅक्स समस्या स्तम्भ मध्ये गणना
+      column_tags: स्तंभ टॅग
+      column_order: ऑर्डर
+    show:
+      next_page: पुढील पृष्ठ
+    index:
+      boards: बोर्ड
+      new: नवी
+    board:
+      board_users: वापरकर्ते
+      edit: संपादित करा
+      destroy: नष्ट
   pages:
     faq:
       faq: नेहमी विचारले जाणारे प्रश्न
@@ -189,6 +244,35 @@ mr-IN:
       partners_and_investors: आम्ही भागीदारी उघडले आहेत आणि आम्ही गुंतवणूकदारांना
         शोधण्यासाठी आवडेल. आपण आम्हाला सहकार्य करू इच्छित असल्यास partnership@technoelegance.com
         येथे संपर्क साधा
+  errors:
+    messages:
+      already_confirmed: आधीच पुष्टी होते साइन इन करण्याचा प्रयत्न करा
+      confirmation_period_expired: "% {कालावधीत} आत पुष्टी करणे आवश्यक आहे, एक नवीन
+        एक विनंती करा"
+      expired: कालबाह्य झाला आहे, एक नवीन एक विनंती करा
+      not_found: आढळले नाही
+      not_locked: लॉक झालेला नाही
+      not_saved:
+        one: '1 त्रुटी जतन केले या% {संसाधन} प्रतिबंधित:'
+        other: "% {COUNT} जतन केले या% {संसाधन} प्रतिबंधित त्रुटी:"
+    bad_request:
+      bad_request: खराब विनंती
+      bad_request_description: झाल्याने उघड क्लायंट त्रुटी
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable अस्तित्व
+      unprocessable_entity_description: तसेच स्थापना होते पण त्यानंतर करणे अक्षम योग्य
+        शब्दार्थासंबंधीचा चुका
+    not_found:
+      not_found: आढळले नाही
+      not_found_description: सापडणार नाही पण भविष्यात उपलब्ध होऊ शकते शकते
+    forbidden:
+      forbidden: निषिद्ध
+      forbidden_description: एक वैध विनंती, परंतु सर्व्हरने तो प्रतिसाद दिला नकार
+        आहे
+    internal_server_error:
+      internal_server_error: अंतर्गत सर्व्हर त्रुटी
+      internal_server_error_description: काहीतरी चूक झाली. आम्ही शक्य तितक्या लवकर
+        निराकरण होईल.
   devise:
     shared:
       links:

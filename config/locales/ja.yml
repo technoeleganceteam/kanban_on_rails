@@ -1,6 +1,7 @@
 ---
 ja:
   bitbucket: のBitbucket
+  gitlab: Gitlab
   updated: 更新
   shared:
     navbar:
@@ -10,6 +11,7 @@ ja:
       issues: 問題
       new_issue: 新しい問題
       edit_project: 編集プロジェクト
+      boards: ボード
     languages_select_modal:
       available_languages: 利用可能な言語
     user_edit_menu:
@@ -30,11 +32,15 @@ ja:
     new_issue_modal:
       new_issue: 新しい問題
     left_sidebar:
-      projects: プロジェクト
+      boards: ボード
     right_sidebar:
       news: ニュース
       all: すべて
       read_more: 続きを読みます
+    email_signature:
+      info: 情報
+      mailer: メーラー
+      technoelegance: Technoelegance株式会社
   users:
     form:
       name: 名前
@@ -61,6 +67,7 @@ ja:
       hello: こんにちは
       here_some_of_your_statistics: ここではいくつかの統計情報の
       projects: プロジェクト
+      boards: ボード
   projects:
     index:
       projects: プロジェクト
@@ -96,6 +103,14 @@ ja:
       max_issues_count: 最大の問題は、列にカウント
       column_tags: 列タグ
       column_order: 注文
+    show:
+      project: プロジェクト
+      related_boards: 関連ボード
+      project_issues: プロジェクトの問題
+      project_users: Projectユーザー
+      new: 新
+    project_modal:
+      project: プロジェクト
   issues:
     form:
       title: タイトル
@@ -105,6 +120,7 @@ ja:
       issue_order: 注文
       bitbucket_issue_id: のBitbucket発行ID
       github_issue_number: Githubの発行数
+      project: プロジェクト
     index:
       issues: 問題
       new: 新
@@ -112,9 +128,11 @@ ja:
       destroy: 削除
       edit: 編集
     edit:
-      edit_issue: 編集の問題
+      edit_issue: 編集​​の問題
     new:
       new_issue: 新しい問題
+    issue_modal:
+      issue: 問題
   authentications:
     index:
       enabled_services: 対応サービス
@@ -134,6 +152,36 @@ ja:
   welcome:
     index:
       welcome_about_text: ここでは、あなた自身のかんばんボードとのGithubかのBitbucketと同期それを作成することができます
+  boards:
+    board_modal:
+      board: ボード
+    form:
+      name: 名前
+      column_width: 列幅
+      column_height: 列の高さ
+      columns: 列
+      add: 追加
+      sections: セクション
+      save: 保存
+      projects: プロジェクト
+    section_fields:
+      section_name: セクション名
+      remove_section: 削除セクション
+      section_tags: セクションタグ
+      section_order: 注文
+      or_include_all: またはすべてが含まれていますか？
+    column_fields:
+      column_name: 列名
+      max_issues_count: 最大の問題は、列にカウント
+      column_tags: 列タグ
+      column_order: 注文
+    index:
+      boards: ボード
+      new: 新
+    board:
+      board_users: ユーザー
+      edit: 編集
+      destroy: 破壊
   pages:
     faq:
       faq: よくある質問
@@ -147,6 +195,37 @@ ja:
       kanban_on_rails_features: KanbanOnRails機能
       we_use_open_source_and_high_technology: 私たちは、高い技術とオープンソースのライブラリを使用しています。私たちは常により良い取得し、当社のサービスを改善してみてください。
       partners_and_investors: 私たちは、パートナーシップのために開かれており、我々は投資家を見つけるしたいと思います。あなたは私たちと協力したい場合partnership@technoelegance.comまでご連絡ください。
+  errors:
+    messages:
+      already_confirmed: がすでに確認された、にログインしてみてください
+      confirmation_period_expired: は％{期間}内に確認する必要があり、新しいものをリクエストしてください
+      expired: の有効期限が切れている、新しいものをリクエストしてください
+      not_found: 見つかりません。
+      not_locked: はロックされていませんでした
+      not_saved:
+        one: 1エラーが保存されることから、この％{リソース}を禁止しました：
+        other: "％{数}エラー："
+    bad_request:
+      bad_request: 不正な要求
+      request_result: リクエスト結果
+      go_to_root: ルートに行きます
+    unprocessable_entity:
+      unprocessable_entity: 処理不可能なエンティティ
+      request_result: リクエスト結果
+      go_to_root: ルートに行きます
+    not_found:
+      not_found: 見つかりません
+      request_result: リクエスト結果
+      go_to_root: ルートに行きます
+    forbidden:
+      forbidden: は禁断します
+      request_result: リクエスト結果
+      go_to_root: ルートに行きます
+    internal_server_error:
+      internal_server_error: 内部サーバーエラー
+      request_result: リクエスト結果
+      internal_server_error_description: 何かが間違っていました。私たちはできるだけ早くそれを修正します。
+      go_to_root: ルートに行きます
   devise:
     shared:
       links:

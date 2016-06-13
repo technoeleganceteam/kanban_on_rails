@@ -2,6 +2,7 @@
 hu:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: frissítve
   1_we_have_just_launched_our_service_title: Épp most indult a szolgáltatás
   shared:
@@ -11,9 +12,11 @@ hu:
       projects: projektek
       issues: kérdések
       syncing_with_github: Szinkronizálás a GitHub ...
+      syncing_with_gitlab: Sync with Gitlab ...
       syncing_with_bitbucket: Sync with Bitbucket ...
       new_issue: Új probléma
       edit_project: Projekt szerkesztése
+      boards: alaplapok
     languages_select_modal:
       available_languages: álló nyelvek
     user_edit_menu:
@@ -37,15 +40,21 @@ hu:
     new_issue_modal:
       new_issue: Új probléma
     left_sidebar:
-      projects: projektek
+      boards: alaplapok
     right_sidebar:
       news: News
       all: Minden
       read_more: Bővebben
-    translations:
+    javascript_global_variables:
       select_column_tags: Select oszlopban címkék
       select_section_tags: Select szakaszcímkéket
       select_issue_tags: Select kérdés címkék
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Következő oldal
   users:
     new:
       invite_user: Felhasználó meghívása
@@ -81,14 +90,17 @@ hu:
       hello: szia
       here_some_of_your_statistics: Itt néhány statisztikát
       projects: projektek
+      boards: alaplapok
   projects:
     index:
       projects: projektek
       new: Új
       sync_with_github: Szinkronizálás a GitHub
-      sync_with_bitbucket: Sync with bitbucket
-      stop_sync_with_bitbucket: leállítása szinkronban bitbucket
-      stop_sync_with_github: leállítása szinkronban GitHub
+      sync_with_gitlab: Sync with Gitlab
+      sync_with_bitbucket: Sync with Bitbucket
+      stop_sync_with_bitbucket: leállítása szinkronban Bitbucket
+      stop_sync_with_github: leállítása szinkronban Github
+      stop_sync_with_gitlab: leállítása szinkronban Gitlab
     form:
       name: neve
       enter_project_name: Adja meg a projekt nevét
@@ -123,7 +135,14 @@ hu:
       column_tags: oszlop címkék
       column_order: rendelés
     show:
-      next_page: Következő oldal
+      project: Project
+      related_boards: Kapcsolódó lapok
+      project_info: Projekt info
+      project_issues: Project kérdések
+      project_users: Project felhasználó
+      new: Új
+    project_modal:
+      project: Project
   issues:
     form:
       title: Cím
@@ -136,6 +155,7 @@ hu:
       bitbucket_issue_id: Bitbucket kérdés id
       github_issue_id: Github kérdés id
       github_issue_number: Github kérdés száma
+      project: Project
     index:
       issues: kérdések
       sync_with_github: Szinkronizálás a GitHub
@@ -148,6 +168,8 @@ hu:
       edit_issue: szerkesztése kérdés
     new:
       new_issue: Új probléma
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Engedélyezett szolgáltatások
@@ -172,6 +194,40 @@ hu:
       welcome_to_kanban_on_rails: Üdvözöljük Kanban on Rails
       welcome_about_text: Itt lehet létrehozni saját Kanban fedélzeten, és szinkronizálhatja
         a GitHub vagy Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: neve
+      enter_board_name: Enter tábla neve
+      column_width: oszlop szélessége
+      column_height: oszlop magassága
+      columns: oszlopok
+      add: Add
+      sections: szakaszok
+      save: mentése
+      projects: projektek
+    section_fields:
+      section_name: Szekció neve
+      remove_section: panel eltávolítása
+      section_tags: szakasz címkék
+      section_order: rendelés
+      or_include_all: Vagy az összes?
+    column_fields:
+      column_name: Oszlop neve
+      remove_column: Oszlop eltávolítása
+      max_issues_count: Max kérdések száma oszlopban
+      column_tags: oszlop címkék
+      column_order: rendelés
+    show:
+      next_page: Következő oldal
+    index:
+      boards: alaplapok
+      new: Új
+    board:
+      board_users: Felhasználók
+      edit: szerkesztése
+      destroy: elpusztítani
   pages:
     faq:
       faq: GYIK
@@ -205,6 +261,45 @@ hu:
         és nyílt forráskódú könyvtárakat. Igyekszünk mindig jobb és javítsa a szolgáltatás.
       partners_and_investors: nyitottak vagyunk a partneri és szeretnénk megtalálni
         a befektetők. Ha szeretne együttműködni velünk, kérjük, írjon nekünk partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: már megerősítette, kérjük próbáljon meg bejelentkezni
+      confirmation_period_expired: kell erősítenie belül% {period}, kérjen újat
+      expired: lejárt, kérjen újat
+      not_found: nem talált
+      not_locked: nem volt zárva
+      not_saved:
+        one: '1 hiba tiltja ezt% {forrás} került mentésre:'
+        other: "% {count} hiba tiltja ezt% {forrás} került mentésre:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: kér eredmény
+      bad_request_description: A kiszolgáló nem tudja vagy nem tudja feldolgozni a
+        kérelmet miatt nyilvánvaló klienshiba
+      go_to_root: lépés gyökér
+    unprocessable_entity:
+      unprocessable_entity: Feldolgozhatatlan entitás
+      request_result: kér eredmény
+      unprocessable_entity_description: A kérelmet jól formált, de nem tudta követni
+        miatt szemantikai hiba
+      go_to_root: lépés gyökér
+    not_found:
+      not_found: Nem talált
+      request_result: kér eredmény
+      not_found_description: A kért erőforrás nem található, de elérhető lesz a jövőben
+      go_to_root: lépés gyökér
+    forbidden:
+      forbidden: Tiltott
+      request_result: kér eredmény
+      forbidden_description: A kérelem érvényes kérelmet, de a szerver elutasítja
+        a válaszadásra
+      go_to_root: lépés gyökér
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      request_result: kér eredmény
+      internal_server_error_description: Hiba történt. Mi lesz megjavítani, amilyen
+        hamar csak lehetséges.
+      go_to_root: lépés gyökér
   devise:
     shared:
       links:

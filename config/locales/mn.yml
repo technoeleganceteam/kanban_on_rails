@@ -2,6 +2,7 @@
 mn:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: шинэчлэгдсэн
   shared:
     navbar:
@@ -11,6 +12,7 @@ mn:
       issues: асуудлууд
       new_issue: Нью асуудал
       edit_project: засварлах төсөл
+      boards: зөвлөл
     languages_select_modal:
       available_languages: Боломжит хэл
     user_edit_menu:
@@ -33,15 +35,21 @@ mn:
     new_issue_modal:
       new_issue: Нью асуудал
     left_sidebar:
-      projects: төслүүд
+      boards: зөвлөл
     right_sidebar:
       news: мэдээ
       all: мэдээлэл
       read_more: Дэлгэрэнгүй
-    translations:
+    javascript_global_variables:
       select_column_tags: сонгоно багана хаягууд
       select_section_tags: сонгоно хэсэг хаягууд
       select_issue_tags: сонгох асуудал хаягууд
+    email_signature:
+      info: мэдээлэл
+      mailer: Захидал Түгээгч
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Дараагийн хуудас
   users:
     new:
       invite_user: ав
@@ -74,6 +82,7 @@ mn:
     dashboard:
       hello: Сайн байна уу
       projects: төслүүд
+      boards: зөвлөл
   projects:
     index:
       projects: төслүүд
@@ -110,7 +119,14 @@ mn:
       column_tags: Багана хаягууд
       column_order: захиалах
     show:
-      next_page: Дараагийн хуудас
+      project: төсөл
+      related_boards: Холбоотой самбар
+      project_info: Төслийн мэдээлэл
+      project_issues: Төслийн асуудлууд
+      project_users: Төслийн хэрэглэгчид
+      new: Нью-
+    project_modal:
+      project: төсөл
   issues:
     form:
       title: нэр
@@ -123,6 +139,7 @@ mn:
       bitbucket_issue_id: Bitbucket асуудал дугаар
       github_issue_id: Github асуудал дугаар
       github_issue_number: Github асуудал тоо
+      project: төсөл
     index:
       issues: асуудлууд
       new: Нью-
@@ -133,6 +150,8 @@ mn:
       edit_issue: Засах асуудал
     new:
       new_issue: Нью асуудал
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: идэвхжсэн үйлчилгээ
@@ -153,6 +172,40 @@ mn:
     index:
       all_news: мэдээлэл мэдээ
       read_more: Дэлгэрэнгүй
+  boards:
+    board_modal:
+      board: зөвлөл
+    form:
+      name: нэр
+      enter_board_name: оруулна уу
+      column_width: Багана өргөн
+      column_height: Багана өндөр
+      columns: багана
+      add: нэмэх
+      sections: Бүлэг
+      save: Save
+      projects: төслүүд
+    section_fields:
+      section_name: Хэсэг нэр
+      remove_section: Remove хэсэг
+      section_tags: хэсэг хаягууд
+      section_order: захиалах
+      or_include_all: Эсвэл бүх багтаасан?
+    column_fields:
+      column_name: Багана нэр
+      remove_column: ав
+      max_issues_count: Макс асуудал баганаас тоолох
+      column_tags: Багана хаягууд
+      column_order: захиалах
+    show:
+      next_page: Дараагийн хуудас
+    index:
+      boards: зөвлөл
+      new: Нью-
+    board:
+      board_users: гишүүд
+      edit: Засварлах
+      destroy: устгаад
   pages:
     faq:
       faq: Тусламж
@@ -185,6 +238,45 @@ mn:
       partners_and_investors: Бид хамтран нээсэн, бид хөрөнгө оруулагчдыг олох хүсч
         байна. Та бидэнтэй хамтран ажиллахыг хүсч байгаа бол partnership@technoelegance.com
         хаягаар бидэнтэй холбоо барина уу!
+  errors:
+    messages:
+      already_confirmed: аль хэдийн батлагдсан-д гарын үсэг зурах оролдож үзнэ үү
+      confirmation_period_expired: "% {хугацаа} дотор баталгаажуулсан байх шаардлагатай,
+        шинэ нэгийг авах хүсэлт уу"
+      expired: хугацаа дууссан, шинээр нэг хүсэлт уу
+      not_found: олж чадаагүй
+      not_locked: түгжээтэй байсан юм
+      not_saved:
+        one: '1 алдаа аврагдаж байгаа нь энэ% {нөөцийн} хориглоно:'
+        other: "% {тоо} аврагдаж байгаа нь энэ% {нөөцийг} хориглоно алдаа:"
+    bad_request:
+      bad_request: Муу авагч
+      request_result: авагч үр дүн
+      bad_request_description: улмаас илэрхий үйлчлүүлэгч алдаа
+      go_to_root: үндэс рүү очих
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable аж ахуйн нэгж
+      request_result: авагч үр дүн
+      unprocessable_entity_description: сайн байгуулагдсан байсан боловч утга алдаа
+        дагаж мөрдөх боломжгүй байсан
+      go_to_root: үндэс рүү очих
+    not_found:
+      not_found: Олдсон бус,
+      request_result: авагч үр дүн
+      not_found_description: олж чадахгүй байсан байх харин ирээдүйд байж болох
+      go_to_root: үндэс рүү очих
+    forbidden:
+      forbidden: Хориотой хот
+      request_result: авагч үр дүн
+      forbidden_description: хүчин төгөлдөр хүсэлт байсан ч сервер хариу татгалзаж
+        байна
+      go_to_root: үндэс рүү очих
+    internal_server_error:
+      internal_server_error: Дотоод Server алдаа
+      request_result: авагч үр дүн
+      internal_server_error_description: ямар нэг алдаа гарлаа. Бид аль болох хурдан
+        л засах болно.
+      go_to_root: үндэс рүү очих
   devise:
     shared:
       links:
@@ -272,7 +364,6 @@ mn:
       signed_in: амжилттай онд гарын үсэг зурсан.
       signed_out: амжилттай гарын үсэг зурав.
       new:
-        sign_in: Дансаа ашиглах
         password: Нууц үг
         remember_me: Намайг сана
         forgot_your_password: Нууц үгээ мартсан?

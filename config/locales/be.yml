@@ -2,6 +2,7 @@
 be:
   github: Github
   bitbucket: BitBucket
+  gitlab: Gitlab
   updated: абнаўленне
   1_we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс
   shared:
@@ -11,9 +12,11 @@ be:
       projects: Праекты
       issues: пытанні
       syncing_with_github: Сінхранізацыя з Github ...
+      syncing_with_gitlab: Сінхранізацыя з Gitlab ...
       syncing_with_bitbucket: Сінхранізацыя з Bitbucket ...
       new_issue: Новы выпуск
       edit_project: Змяніць праект
+      boards: Дошкі
     languages_select_modal:
       available_languages: Даступныя мовы
     user_edit_menu:
@@ -24,7 +27,7 @@ be:
       password: Пароль
       current_password: Бягучы пароль
       name: Імя
-      base: Базавы
+      base: Base
       title: Назва
       user_to_project_connection: Карыстальнік праекта падлучэння
       columns:
@@ -36,15 +39,21 @@ be:
     new_issue_modal:
       new_issue: Новы выпуск
     left_sidebar:
-      projects: Праекты
+      boards: платы
     right_sidebar:
       news: Навіны
       all: Усе
       read_more: Больш падрабязна
-    translations:
+    javascript_global_variables:
       select_column_tags: Абярыце пазнакі слупкоў
-      select_section_tags: Абярыце пазнакі раздзела
+      select_section_tags: Абярыце тэгі падзела
       select_issue_tags: Абярыце тэгі выпуск
+    email_signature:
+      info: Інфармацыя
+      mailer: Мэйлер
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Наступная старонка
   users:
     new:
       invite_user: Запрасіць карыстальніка
@@ -52,13 +61,13 @@ be:
       name: Імя
       enter_user_name: Калі ласка, увядзіце імя карыстальніка
       email: E-mail
-      enter_user_email: Калі ласка, увядзіце электронную пошту карыстальніка
+      enter_user_email: Уваход карыстальніка электроннай пошты
       enter_user_password: Калі ласка, увядзіце пароль карыстальніка
       password: Пароль
       save: Захаваць
     index:
       project: праекта
-      users: карыстальнікі
+      users: карыстальнікаў
       new: Новы
     edit:
       name: Імя
@@ -79,14 +88,17 @@ be:
       hello: Прывітанне
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
+      boards: Дошкі
   projects:
     index:
       projects: Праекты
       new: Новы
-      sync_with_github: Сінхранізацыя з GitHub
-      sync_with_bitbucket: Сінхранізацыя з BitBucket
-      stop_sync_with_bitbucket: Прыпынак сінхранізацыі з BitBucket
-      stop_sync_with_github: Прыпынак сінхранізацыі з GitHub
+      sync_with_github: Сінхранізацыя з Github
+      sync_with_gitlab: Сінхранізацыя з Gitlab
+      sync_with_bitbucket: Сінхранізацыя з Bitbucket
+      stop_sync_with_bitbucket: Прыпынак сінхранізацыі з Bitbucket
+      stop_sync_with_github: Прыпынак сінхранізацыі з Github
+      stop_sync_with_gitlab: Прыпынак сінхранізацыі з Gitlab
     form:
       name: Імя
       enter_project_name: Калі ласка, увядзіце імя праекта
@@ -114,7 +126,13 @@ be:
       column_tags: пазнакі слупкоў
       column_order: Замовіць
     show:
-      next_page: Наступная старонка
+      project: праекта
+      related_boards: Падобныя дошкі
+      project_issues: пытанні праекта
+      project_users: карыстальнікаў праекта
+      new: Новы
+    project_modal:
+      project: праекта
   issues:
     form:
       title: Назва
@@ -127,6 +145,7 @@ be:
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
       github_issue_number: Github нумар выпуску
+      project: праекта
     index:
       issues: пытанні
       sync_with_github: Сінхранізацыя з GitHub
@@ -139,6 +158,8 @@ be:
       edit_issue: Змяніць пытанне
     new:
       new_issue: Новы выпуск
+    issue_modal:
+      issue: Выпуск
   authentications:
     index:
       enabled_services: Уключаныя паслугі
@@ -164,9 +185,38 @@ be:
       welcome_to_kanban_on_rails: Сардэчна запрашаем на канбан On Rails
       welcome_about_text: Тут вы можаце стварыць свой уласны савет канбан і сінхранізаваць
         яго з Github або Bitbucket
+  boards:
+    board_modal:
+      board: Савет
+    form:
+      name: Імя
+      enter_board_name: Калі ласка, увядзіце імя дошка
+      columns: Стоўбцы
+      add: Дадаць
+      sections: Раздзелы
+      save: Захаваць
+      projects: Праекты
+    section_fields:
+      remove_section: Выдаліць падзел
+      section_tags: Раздзел тэгі
+      section_order: Замовіць
+      or_include_all: Ці ўключаць у сябе ўсё?
+    column_fields:
+      remove_column: Выдаліць слупок
+      column_tags: тэгі слупкоў
+      column_order: Замовіць
+    show:
+      next_page: Наступная старонка
+    index:
+      boards: Дошкі
+      new: Новы
+    board:
+      board_users: Карыстальнікі
+      edit: Рэдагаваць
+      destroy: Destroy
   pages:
     faq:
-      faq: Часта задаюць пытанні
+      faq: FAQ
       what_is_kanban_on_rails: Што такое KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails гэта сэрвіс, дзе вы можаце ствараць Kanban
         дошкі і сінхранізаваць яго з Github або Bitbucket
@@ -199,6 +249,47 @@ be:
       partners_and_investors: Мы адкрытыя для партнёрства, і мы хацелі б знайсці інвестараў.
         Калі вы жадаеце супрацоўнічаць з намі, калі ласка, звяжыцеся з намі па адрасе
         partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: ўжо было пацверджана, калі ласка, паспрабуйце ўвайсці ў
+      confirmation_period_expired: павінна быць пацверджана на працягу перыяду% {},
+        калі ласка, запытаеце новы
+      expired: скончыўся, калі ласка, запытаеце новы
+      not_found: не знойдзены
+      not_locked: ня быў заблякаваны
+      not_saved:
+        one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
+        other: "% {лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Запыт выніку
+      bad_request_description: Сервер не можа ці не будзе апрацоўваць запыт з-за відавочнай
+        памылкі кліента
+      go_to_root: Перайсці да кораня
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: Запыт выніку
+      unprocessable_entity_description: Гэтая просьба была добра ўтворана, але не
+        змог прытрымлівацца з-за семантычных памылак
+      go_to_root: Перайсці да кораня
+    not_found:
+      not_found: не знойдзены
+      request_result: Запыт выніку
+      not_found_description: запытаны рэсурс не можа быць знойдзены, але могуць быць
+        даступныя ў будучыні
+      go_to_root: Перайсці да кораня
+    forbidden:
+      forbidden: Забаронены
+      request_result: Запыт выніку
+      forbidden_description: Гэтая просьба была сапраўдны запыт, але сэрвэр не адказваць
+        на яго
+      go_to_root: Перайсці да кораня
+    internal_server_error:
+      internal_server_error: Унутраная памылка сервера
+      request_result: Запыт выніку
+      internal_server_error_description: Што-то пайшло не так. Мы будзем гэта выправіць
+        як мага хутчэй.
+      go_to_root: Перайсці да кораня
   devise:
     shared:
       links:
@@ -206,11 +297,11 @@ be:
         sign_up: Зарэгіструйцеся
         didnt_receive_confirmation_instructions: Ня атрымалі пацверджання інструкцыі?
         sign_in_with: Уваход з выкарыстаннем
-        fast_login_almost_one_click: Хуткі Увайсці (амаль адзін клік)
+        fast_login_almost_one_click: Хуткі Лагін (амаль адзін клік)
     confirmations:
       confirmed: ваш рахунак быў паспяхова пацверджаны.
-      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як пацвердзіць свой
-        рахунак на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як пацвердзіць
+        свой рахунак на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, Вы атрымаеце электронны ліст з інструкцыямі аб тым, як пацвердзіць
         свой рахунак на працягу некалькіх хвілін.
@@ -235,7 +326,7 @@ be:
         welcome_to_kanban_on_rails: Сардэчна запрашаем у KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Вы можаце пацвердзіць
           сваю электронную пошту праз спасылку ніжэй
-        confirm_my_account: Пацвердзіце свой e-mail
+        confirm_my_account: Пацвердзіць Email
       reset_password_instructions:
         hello: Прывітанне
         subject: Скід пароля інструкцыі
@@ -246,7 +337,7 @@ be:
         if_you_didnt_request_this_please_ignore_this_email: Калі вы не запытвалі гэта
           не звяртайце ўвагі на гэты ліст.
       unlock_instructions:
-        subject: Разблакіроўка Інструкцыі
+        subject: разблакоўкі Інструкцыі
     omniauth_callbacks:
       failure: Нельга праверыць ідэнтычнасьць вас ад {%} роду, таму што "% {прычына}".
       success: паспяхова прайшоў праверку сапраўднасці ад {%} ветлівую ўвагу.
@@ -254,8 +345,8 @@ be:
       no_token: Вы не можаце атрымаць доступ да гэтай старонцы, не прыходзячы ад электроннай
         пошты скіду пароля. Калі вы прыйшлі з электроннай пошты для скіду пароля,
         калі ласка, пераканайцеся, што вы выкарыстоўвалі поўны URL пры ўмове.
-      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як скінуць пароль
-        на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як скінуць
+        пароль на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, вы атрымаеце спасылку для аднаўлення пароля на ваш адрас электроннай
         пошты на працягу некалькіх хвілін.
@@ -268,7 +359,7 @@ be:
         change_your_password: Змяніць пароль
         new_password: Новы пароль
         confirm_password: Пацвярджэнне пароля
-        change_password: Змена
+        change_password: Змяніць
     registrations:
       destroyed: Bye! Ваш уліковы запіс была паспяхова адменена. Мы спадзяемся ўбачыць
         вас зноў у бліжэйшы час.
@@ -292,14 +383,14 @@ be:
         register: Зарэгіструйцеся
     sessions:
       signed_in: Увайшлі паспяхова.
-      signed_out: Подпіс паспяхова.
+      signed_out: Выхад выкананы паспяхова.
       new:
         sign_in: Уваход
         password: Пароль
         remember_me: Запомніць мяне
         forgot_your_password: Забыліся пароль?
     unlocks:
-      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як разблакаваць
+      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як разблакаваць
         свой рахунак праз некалькі хвілін.
       send_paranoid_instructions: Калі ваш уліковы запіс існуе, то вы атрымаеце ліст
         з інструкцыямі аб тым, як разблакаваць яго на працягу некалькіх хвілін.

@@ -2,6 +2,7 @@
 mk:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ажурираат
   1_we_have_just_launched_our_service_title: Ние имаме само лансиран нашиот сервис
   shared:
@@ -11,9 +12,11 @@ mk:
       projects: Проекти
       issues: прашања
       syncing_with_github: Sync со Github ...
+      syncing_with_gitlab: Sync со Gitlab ...
       syncing_with_bitbucket: Sync со Bitbucket ...
       new_issue: нова емисија
       edit_project: Уреди проектот
+      boards: одбори
     languages_select_modal:
       available_languages: достапни јазици
     user_edit_menu:
@@ -36,15 +39,21 @@ mk:
     new_issue_modal:
       new_issue: нова емисија
     left_sidebar:
-      projects: Проекти
+      boards: одбори
     right_sidebar:
       news: Вести
       all: Сите
       read_more: Прочитај повеќе
-    translations:
+    javascript_global_variables:
       select_column_tags: Изберете колона тагови
       select_section_tags: изберете го делот тагови
       select_issue_tags: Изберете прашање тагови
+    email_signature:
+      info: Инфо
+      mailer: мејлер
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Следна страница
   users:
     new:
       invite_user: Покани корисник
@@ -79,14 +88,17 @@ mk:
       hello: Здраво
       here_some_of_your_statistics: Еве некои од вашите статистики
       projects: Проекти
+      boards: одбори
   projects:
     index:
       projects: Проекти
       new: Нови
-      sync_with_github: Sync со GitHub
-      sync_with_bitbucket: Sync со bitbucket
-      stop_sync_with_bitbucket: Стоп синхронизација со bitbucket
-      stop_sync_with_github: Стоп синхронизација со GitHub
+      sync_with_github: Sync со Github
+      sync_with_gitlab: Sync со Gitlab
+      sync_with_bitbucket: Sync со Bitbucket
+      stop_sync_with_bitbucket: Стоп синхронизација со Bitbucket
+      stop_sync_with_github: Стоп синхронизација со Github
+      stop_sync_with_gitlab: Стоп синхронизација со Gitlab
     form:
       name: Име
       enter_project_name: Внесете име на проектот
@@ -114,7 +126,13 @@ mk:
       column_tags: Колона тагови
       column_order: нарачка
     show:
-      next_page: Следна страница
+      project: проектот
+      related_boards: Поврзани одбори
+      project_issues: прашања проектот
+      project_users: корисници на проектот
+      new: Нови
+    project_modal:
+      project: проектот
   issues:
     form:
       title: Наслов
@@ -127,6 +145,7 @@ mk:
       bitbucket_issue_id: Bitbucket издавање лични
       github_issue_id: Github издавање лични
       github_issue_number: број Github прашање
+      project: проектот
     index:
       issues: прашања
       sync_with_github: Sync со GitHub
@@ -139,6 +158,8 @@ mk:
       edit_issue: Уреди прашање
     new:
       new_issue: нова емисија
+    issue_modal:
+      issue: прашање
   authentications:
     index:
       enabled_services: "-от за услуги"
@@ -164,6 +185,35 @@ mk:
       welcome_to_kanban_on_rails: Добредојдовте на Kanban on Rails
       welcome_about_text: Овде можете да креирате своја сопствена одбор Kanban и синхронизација
         со тоа Github или Bitbucket
+  boards:
+    board_modal:
+      board: одбор
+    form:
+      name: Име
+      enter_board_name: Внесете име одбор
+      columns: Колумни
+      add: Add
+      sections: Секции
+      save: Зачувај
+      projects: Проекти
+    section_fields:
+      section_tags: Дел тагови
+      section_order: нарачка
+      or_include_all: или вклучуваат сите?
+    column_fields:
+      remove_column: Отстрани колона
+      max_issues_count: Макс прашања смета во колона
+      column_tags: Колона тагови
+      column_order: нарачка
+    show:
+      next_page: Следна страница
+    index:
+      boards: одбори
+      new: Нови
+    board:
+      board_users: корисници
+      edit: Уреди
+      destroy: Уништи
   pages:
     faq:
       faq: Најчесто поставувани прашања
@@ -200,6 +250,39 @@ mk:
       partners_and_investors: Ние сме отворени за соработка и ние би сакале да се
         најдат инвеститори. Ако би сакале да соработуваат со нас, ве молиме контактирајте
         не на partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: веќе е потврден, Ве молиме обидете да го потпишете во
+      confirmation_period_expired: треба да биде потврдено во периодот% {}, ве молиме
+        да побара нов
+      expired: е истечен, Ве молиме да побара нов
+      not_found: не е пронајден
+      not_locked: не е наместен
+      not_saved:
+        one: '1 грешка забрането овој ресурс% {} да бидат зачувани:'
+    bad_request:
+      bad_request: лошо барање
+      bad_request_description: Серверот не можат или не ќе процесот на барање поради
+        грешка очигледна клиентот
+      go_to_root: Оди на коренот
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable ентитет
+      unprocessable_entity_description: ", што беше добро формиран, но не можеше да
+        се следи поради семантичките грешки"
+      go_to_root: Оди на коренот
+    not_found:
+      not_found_description: Бараниот податок не може да се најде, но можат да бидат
+        достапни во иднина
+      go_to_root: Оди на коренот
+    forbidden:
+      forbidden: Забранетиот
+      forbidden_description: Барањето валидно барање, но на серверот одбива да одговори
+        на истата
+      go_to_root: Оди на коренот
+    internal_server_error:
+      internal_server_error_description: Нешто не беше во ред. Ние ќе го поправам
+        веднаш штом е можно.
+      go_to_root: Оди на коренот
   devise:
     shared:
       links:

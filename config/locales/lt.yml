@@ -2,6 +2,7 @@
 lt:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: atnaujino
   1_we_have_just_launched_our_service_title: Mes ką tik pradėjo savo paslaugas
   shared:
@@ -11,9 +12,11 @@ lt:
       projects: Projektai
       issues: klausimai
       syncing_with_github: sinchronizuoti su GitHub ...
+      syncing_with_gitlab: sinchronizuoti su Gitlab ...
       syncing_with_bitbucket: sinchronizuoti su Bitbucket ...
       new_issue: Naujas numeris
       edit_project: Redaguoti projektas
+      boards: forumai
     languages_select_modal:
       available_languages: Galimos kalbos
     user_edit_menu:
@@ -37,15 +40,21 @@ lt:
     new_issue_modal:
       new_issue: Naujas numeris
     left_sidebar:
-      projects: Projektai
+      boards: forumai
     right_sidebar:
       news: Naujienos
       all: Visi
       read_more: Skaityti daugiau
-    translations:
+    javascript_global_variables:
       select_column_tags: Pasirinkite stulpelio žymės
       select_section_tags: Pasirinkite skyrių žymės
       select_issue_tags: Pasirinkite numerį žymės
+    email_signature:
+      info: Informacija
+      mailer: mailer
+      technoelegance: Technoelegance Ltd
+    pagination_link:
+      next_page: Kitas puslapis
   users:
     new:
       invite_user: Pakviesti vartotoją
@@ -81,14 +90,17 @@ lt:
       hello: Sveiki
       here_some_of_your_statistics: Čia kai kurie iš jūsų statistiką
       projects: Projektai
+      boards: forumai
   projects:
     index:
       projects: Projektai
       new: Nauja
       sync_with_github: sinchronizuoti su GitHub
-      sync_with_bitbucket: sinchronizuoti su bitbucket
-      stop_sync_with_bitbucket: Sustabdyti sinchronizavimą su bitbucket
+      sync_with_gitlab: sinchronizuoti su Gitlab
+      sync_with_bitbucket: sinchronizuoti su Bitbucket
+      stop_sync_with_bitbucket: Sustabdyti sinchronizavimą su Bitbucket
       stop_sync_with_github: Sustabdyti sinchronizavimą su GitHub
+      stop_sync_with_gitlab: Sustabdyti sinchronizavimą su Gitlab
     form:
       name: Vardas
       enter_project_name: Įveskite projekto pavadinimas
@@ -121,7 +133,14 @@ lt:
       column_tags: žymės skiltis
       column_order: Užsakyti
     show:
-      next_page: Kitas puslapis
+      project: projektas
+      related_boards: Susiję lentos
+      project_info: Projektų informacijos
+      project_issues: Projekto klausimai
+      project_users: Projekto vartotojai
+      new: Nauja
+    project_modal:
+      project: projektas
   issues:
     form:
       title: Pavadinimas
@@ -134,6 +153,7 @@ lt:
       bitbucket_issue_id: Bitbucket klausimas ID
       github_issue_id: Github klausimas ID
       github_issue_number: Github Išdavimo numeris
+      project: projektas
     index:
       issues: klausimai
       sync_with_github: sinchronizuoti su GitHub
@@ -146,6 +166,8 @@ lt:
       edit_issue: Redaguoti klausimas
     new:
       new_issue: Naujas numeris
+    issue_modal:
+      issue: išdavimas
   authentications:
     index:
       enabled_services: Įjungta paslaugos
@@ -171,6 +193,39 @@ lt:
       welcome_to_kanban_on_rails: Sveiki Kanban bėgiais
       welcome_about_text: Čia Jūs galite sukurti savo Kanban lenta ir sinchronizuoti
         jį su GitHub ar Bitbucket
+  boards:
+    board_modal:
+      board: diskusijų
+    form:
+      name: Vardas
+      enter_board_name: Įveskite valdybos vardu
+      column_width: stulpelio plotį
+      column_height: skiltis aukštis
+      columns: stulpeliai
+      add: Pridėti
+      sections: Profiliai
+      save: Išsaugoti
+      projects: Projektai
+    section_fields:
+      remove_section: Pašalinti skyrius
+      section_tags: žymės skyrius
+      section_order: Užsakyti
+      or_include_all: ar įtraukti visi?
+    column_fields:
+      column_name: Stulpelio pavadinimas
+      remove_column: Pašalinti stulpelį
+      max_issues_count: Max klausimai skaičiuoti skiltyje
+      column_tags: žymės skiltis
+      column_order: Užsakyti
+    show:
+      next_page: Kitas puslapis
+    index:
+      boards: forumai
+      new: Nauja
+    board:
+      board_users: Vartotojai
+      edit: Redaguoti
+      destroy: Destroy
   pages:
     faq:
       faq: DUK
@@ -206,6 +261,45 @@ lt:
         paslaugas.
       partners_and_investors: Esame atviri partnerystės ir mes norėtume rasti investuotojų.
         Jei norite su mumis bendradarbiauti, susisiekite su mumis adresu partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: jau buvo patvirtinta, pabandykite prisijungti
+      confirmation_period_expired: turi būti patvirtintas per% {laikotarpis}, paprašykite
+        naują
+      expired: yra pasibaigęs, prašome prašyti naują
+      not_found: nerastas
+      not_locked: buvo neužrakinta
+      not_saved:
+        one: 1 klaida draudžiama šį% {išteklių} gražu išgelbėtas
+        other: "% {count} klaidų draudžiamus šiam% {išteklių} gražu išgelbėtas"
+    bad_request:
+      bad_request: Bloga užklausa
+      request_result: Prašymas rezultatas
+      bad_request_description: serveris negali ar nenori apdoroti prašymą dėl akivaizdaus
+        kliento klaidos
+      go_to_root: Eiti į šaknis
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable subjektas
+      request_result: Prašymas rezultatas
+      unprocessable_entity_description: prašymas buvo gerai suformuotas, bet nesugebėjo
+        turi būti laikomasi dėl semantinių klaidų
+      go_to_root: Eiti į šaknis
+    not_found:
+      not_found: Not Found
+      request_result: Prašymas rezultatas
+      not_found_description: prašoma resursas nerastas, tačiau gali būti, kad ateityje
+      go_to_root: Eiti į šaknis
+    forbidden:
+      forbidden: Forbidden
+      request_result: Prašymas rezultatas
+      forbidden_description: prašymas buvo galioja prašymas, bet serveris atsisako
+        atsakyti į jį
+      go_to_root: Eiti į šaknis
+    internal_server_error:
+      internal_server_error: vidinė serverio klaida
+      request_result: Prašymas rezultatas
+      internal_server_error_description: Kažkas negerai. Mes ją išspręsti kuo greičiau.
+      go_to_root: Eiti į šaknis
   devise:
     shared:
       links:

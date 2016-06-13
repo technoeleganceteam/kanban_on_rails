@@ -2,6 +2,7 @@
 zh-CN:
   github: Github上
   bitbucket: 到位桶
+  gitlab: Gitlab
   updated: 更新
   1_we_have_just_launched_our_service_title: 我们刚刚推出了我们的服务
   shared:
@@ -11,9 +12,11 @@ zh-CN:
       projects: 项目
       issues: 问题
       syncing_with_github: 同步与Github上...
+      syncing_with_gitlab: 同步与Gitlab ...
       syncing_with_bitbucket: 同步与到位桶...
       new_issue: 新问题
       edit_project: 编辑项目
+      boards: 板
     languages_select_modal:
       available_languages: 可用语言
     user_edit_menu:
@@ -35,13 +38,20 @@ zh-CN:
       edit_project: 编辑项目
     new_issue_modal:
       new_issue: 新问题
+    left_sidebar:
+      boards: 板
     right_sidebar:
       news: 新闻
       read_more: 阅读更多
-    translations:
+    javascript_global_variables:
       select_column_tags: 选择列标签
-      select_section_tags: 选​​择部分标签
+      select_section_tags: 选择部分标签
       select_issue_tags: 选择问题标签
+    email_signature:
+      mailer: 梅勒
+      technoelegance: Technoelegance有限公司
+    pagination_link:
+      next_page: 下一页
   users:
     new:
       invite_user: 邀请用户
@@ -67,12 +77,15 @@ zh-CN:
     dashboard:
       hello: 你好
       here_some_of_your_statistics: 在这里，你的一些统计数据
+      boards: 板
   projects:
     index:
-      sync_with_github: 同步与github上
+      sync_with_github: 同步与Github上
+      sync_with_gitlab: 同步与Gitlab
       sync_with_bitbucket: 同步与到位桶
       stop_sync_with_bitbucket: 停止同步的到位桶
-      stop_sync_with_github: 停止同步的github上
+      stop_sync_with_github: 停止同步与Github上
+      stop_sync_with_gitlab: 停止同步的Gitlab
     form:
       enter_project_name: 输入项目名称
       column_name: 列名
@@ -98,7 +111,10 @@ zh-CN:
       column_tags: 列标签
       column_order: 订单
     show:
-      next_page: 下一页
+      related_boards: 相关板
+      project_info: 项目信息
+      project_issues: 项目问题
+      project_users: 项目用户
   issues:
     form:
       title: 标题
@@ -142,6 +158,29 @@ zh-CN:
     index:
       welcome_to_kanban_on_rails: 欢迎看板On Rails的
       welcome_about_text: 在这里，你可以创建自己的看板，并同步其与Github上或到位桶
+  boards:
+    board_modal:
+      board: 板
+    form:
+      enter_board_name: 输入板的名称
+      column_height: 柱高度
+    section_fields:
+      remove_section: 删除部分
+      section_tags: 区段标记
+      section_order: 订单
+      or_include_all: 还是包括所有？
+    column_fields:
+      column_name: 列名
+      remove_column: 删除列
+      max_issues_count: 最大问题列计数
+      column_tags: 列标签
+      column_order: 订单
+    show:
+      next_page: 下一页
+    index:
+      boards: 板
+    board:
+      destroy: 销毁
   pages:
     faq:
       faq: 常见问题解答
@@ -165,6 +204,37 @@ zh-CN:
       open_source_code: 这个项目具有开放的源代码，这样你就可以将其部署到自己的服务器
       we_use_open_source_and_high_technology: 我们用高新技术和开源库。我们总是试图变得更好，改善我们的服务。
       partners_and_investors: 我们打开了合作伙伴关系，我们希望找到投资者。如果您想与我们合作，请partnership@technoelegance.com与我们联系
+  errors:
+    messages:
+      already_confirmed: 已经确认，请尝试在签约
+      confirmation_period_expired: 需要进行内部％{}期间确认，请申请一个新的
+      expired: 已过期，请申请一个新的
+      not_found: 未找到
+      not_locked: 没有锁
+      not_saved:
+        one: 1错误，无法储存禁止此％{}资源：
+    bad_request:
+      bad_request: 错误的请求
+      request_result: 请求结果
+      bad_request_description: 服务器不能或无法处理请求由于一个明显的客户端错误
+      go_to_root: 去根
+    unprocessable_entity:
+      unprocessable_entity: 处理的实体
+      request_result: 请求结果
+      unprocessable_entity_description: 的要求是格式良好的，但由于语义错误无法遵循
+      go_to_root: 去根
+    not_found:
+      request_result: 请求结果
+      not_found_description: 请求的资源无法被找到，但可能会在将来可用的
+      go_to_root: 去根
+    forbidden:
+      request_result: 请求结果
+      forbidden_description: 请求是一个有效的请求，但服务器拒绝对此作出回应
+      go_to_root: 去根
+    internal_server_error:
+      request_result: 请求结果
+      internal_server_error_description: 出了错。我们将尽快修复它。
+      go_to_root: 去根
   devise:
     shared:
       links:

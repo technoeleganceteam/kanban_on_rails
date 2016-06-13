@@ -2,6 +2,7 @@
 eu:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: eguneratua
   1_we_have_just_launched_our_service_title: Oraintxe gure zerbitzua martxan jarri
     dugu
@@ -12,9 +13,11 @@ eu:
       projects: Proiektuak
       issues: Aleak
       syncing_with_github: Github batera Sync ...
+      syncing_with_gitlab: Gitlab batera Sync ...
       syncing_with_bitbucket: Bitbucket batera Sync ...
       new_issue: alea New
       edit_project: Editatu proiektua
+      boards: Juntas
     languages_select_modal:
       available_languages: Hizkuntza
     user_edit_menu:
@@ -32,21 +35,27 @@ eu:
       columns:
         tag: Tag gainjarriz
     new_project_modal:
-      new_project: proiektu berria
+      new_project: New proiektua
     edit_project_modal:
       edit_project: Editatu proiektua
     new_issue_modal:
       new_issue: alea New
     left_sidebar:
-      projects: Proiektuak
+      boards: Juntas
     right_sidebar:
       news: Berriak
       all: guztiak
       read_more: Irakurri gehiago
-    translations:
+    javascript_global_variables:
       select_column_tags: Aukeratu zutabean etiketa
       select_section_tags: Aukeratu atala tags
       select_issue_tags: Aukeratu arazo tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance SL
+    pagination_link:
+      next_page: Hurrengo orria
   users:
     new:
       invite_user: Gonbidatu erabiltzaile
@@ -82,14 +91,17 @@ eu:
       hello: Kaixo
       here_some_of_your_statistics: Hemen zure estatistikak batzuk
       projects: Proiektuak
+      boards: Juntas
   projects:
     index:
       projects: Proiektuak
       new: New
-      sync_with_github: github sinkronizatzea
-      sync_with_bitbucket: bitbucket sinkronizatzea
-      stop_sync_with_bitbucket: Stop bitbucket sinkronizatuta
-      stop_sync_with_github: Stop github sinkronizatuta
+      sync_with_github: Github sinkronizatzea
+      sync_with_gitlab: Gitlab sinkronizatzea
+      sync_with_bitbucket: Bitbucket sinkronizatzea
+      stop_sync_with_bitbucket: Stop Bitbucket sinkronizatuta
+      stop_sync_with_github: Stop Github sinkronizatuta
+      stop_sync_with_gitlab: Stop Gitlab sinkronizatuta
     form:
       name: izena
       enter_project_name: Idatzi proiektuaren izena
@@ -124,7 +136,14 @@ eu:
       column_tags: Zutabe tags
       column_order: Agindua
     show:
-      next_page: Hurrengo orria
+      project: Project
+      related_boards: Related batzordeak
+      project_info: Project info
+      project_issues: Project gaiak
+      project_users: Project erabiltzaile
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Izenburua
@@ -137,6 +156,7 @@ eu:
       bitbucket_issue_id: Bitbucket alea id
       github_issue_id: Github alea id
       github_issue_number: Github zenbakian
+      project: Project
     index:
       issues: gaiak
       sync_with_github: github sinkronizatzea
@@ -149,6 +169,8 @@ eu:
       edit_issue: Edit alea
     new:
       new_issue: alea New
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Gaituta zerbitzuak
@@ -174,6 +196,40 @@ eu:
       welcome_to_kanban_on_rails: Ongi Kanban On Rails den
       welcome_about_text: Hemen zure Kanban taula egin eta sync sor dezakezu Github
         edo Bitbucket batera
+  boards:
+    board_modal:
+      board: Kontseilua
+    form:
+      name: izena
+      enter_board_name: Sartu taula-izen
+      column_width: Zutabe zabalera
+      column_height: Zutabe altuera
+      columns: zutabeak
+      add: Gehitu
+      sections: Sailak
+      save: Save
+      projects: Proiektuak
+    section_fields:
+      section_name: artikulua name
+      remove_section: Kendu atala
+      section_tags: artikulua tags
+      section_order: Agindua
+      or_include_all: Edo guztiak?
+    column_fields:
+      column_name: Column name
+      remove_column: Ezabatu zutabea
+      max_issues_count: Max gai zutabean zenbatu
+      column_tags: Zutabe tags
+      column_order: Agindua
+    show:
+      next_page: Hurrengo orria
+    index:
+      boards: Juntas
+      new: New
+    board:
+      board_users: erabiltzaileak
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -211,6 +267,47 @@ eu:
       partners_and_investors: dugu lankidetza ireki dira eta inbertitzaile aurkitu
         nahi dugu. zuk gurekin elkarlanean nahi baduzu jar zaitez gurekin harremanetan
         partnership@technoelegance.com at
+  errors:
+    messages:
+      already_confirmed: dagoeneko baieztatu zen, Saiatu ere sinatu
+      confirmation_period_expired: den% {} aldian barruan baieztatu behar da, eskatu
+        berri bat
+      expired: iraungi delako Eskatu beste bat
+      not_found: ez da aurkitu
+      not_locked: ez zen blokeatuta
+      not_saved:
+        one: '1 Errore batek% {} baliabide debekatuta gorde izatetik:'
+        other: "% {count} Debekatuta honek% {} baliabide akatsak gorde izatetik:"
+    bad_request:
+      bad_request: Okerreko eskaera
+      request_result: Eskatu emaitza
+      bad_request_description: zerbitzariak ezin edo ez du eskaera prozesatu itxurazko
+        bezero Akats baten ondorioz
+      go_to_root: root Joan
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entitateak
+      request_result: Eskatu emaitza
+      unprocessable_entity_description: emate eskaera ongi osatu zen, baina ezin izan
+        jarraitu beharreko to akatsak semantikoa dela eta
+      go_to_root: root Joan
+    not_found:
+      not_found: Not Found
+      request_result: Eskatu emaitza
+      not_found_description: Eskatutako baliabidea ez izan dira aurkitu, baina etorkizunean
+        egon daiteke eskuragarri
+      go_to_root: root Joan
+    forbidden:
+      forbidden: Debekatuta
+      request_result: Eskatu emaitza
+      forbidden_description: eskaera baliozkoa eskaera bat izan zen, baina zerbitzariak
+        da horri erantzuteko ukatzen
+      go_to_root: root Joan
+    internal_server_error:
+      internal_server_error: Server Error
+      request_result: Eskatu emaitza
+      internal_server_error_description: Zerbait oker joan. hura konpondu egingo dugu,
+        ahalik eta azkarren.
+      go_to_root: root Joan
   devise:
     shared:
       links:

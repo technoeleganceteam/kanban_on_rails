@@ -2,6 +2,7 @@
 zh-TW:
   github: Github上
   bitbucket: 到位桶
+  gitlab: Gitlab
   updated: 更新
   1_we_have_just_launched_our_service_title: 我們剛剛推出了我們的服務
   shared:
@@ -11,9 +12,11 @@ zh-TW:
       projects: 項目
       issues: 問題
       syncing_with_github: 同步與Github上...
+      syncing_with_gitlab: 同步與Gitlab ...
       syncing_with_bitbucket: 同步與到位桶...
       new_issue: 新問題
       edit_project: 編輯項目
+      boards: 板
     languages_select_modal:
       available_languages: 可用語言
     user_edit_menu:
@@ -35,13 +38,20 @@ zh-TW:
       edit_project: 編輯項目
     new_issue_modal:
       new_issue: 新問題
+    left_sidebar:
+      boards: 板
     right_sidebar:
       news: 新聞
       read_more: 閱讀更多
-    translations:
+    javascript_global_variables:
       select_column_tags: 選擇列標籤
       select_section_tags: 選擇部分標籤
       select_issue_tags: 選擇問題標籤
+    email_signature:
+      mailer: 梅勒
+      technoelegance: Technoelegance有限公司
+    pagination_link:
+      next_page: 下一頁
   users:
     new:
       invite_user: 邀請用戶
@@ -67,12 +77,15 @@ zh-TW:
     dashboard:
       hello: 你好
       here_some_of_your_statistics: 在這裡，你的一些統計數據
+      boards: 板
   projects:
     index:
-      sync_with_github: 同步與github上
+      sync_with_github: 同步與Github上
+      sync_with_gitlab: 同步與Gitlab
       sync_with_bitbucket: 同步與到位桶
       stop_sync_with_bitbucket: 停止同步的到位桶
-      stop_sync_with_github: 停止同步的github上
+      stop_sync_with_github: 停止同步與Github上
+      stop_sync_with_gitlab: 停止同步的Gitlab
     form:
       enter_project_name: 輸入項目名稱
       column_name: 列名
@@ -98,7 +111,10 @@ zh-TW:
       column_tags: 列標籤
       column_order: 訂單
     show:
-      next_page: 下一頁
+      related_boards: 相關板
+      project_info: 項目信息
+      project_issues: 項目問題
+      project_users: 項目用戶
   issues:
     form:
       title: 標題
@@ -142,6 +158,29 @@ zh-TW:
     index:
       welcome_to_kanban_on_rails: 歡迎看板On Rails的
       welcome_about_text: 在這裡，你可以創建自己的看板，並同步其與Github上或到位桶
+  boards:
+    board_modal:
+      board: 板
+    form:
+      enter_board_name: 輸入板的名稱
+      column_height: 柱高度
+    section_fields:
+      remove_section: 刪除部分
+      section_tags: 區段標記
+      section_order: 訂單
+      or_include_all: 還是包括所有？
+    column_fields:
+      column_name: 列名
+      remove_column: 刪除列
+      max_issues_count: 最大問題列計數
+      column_tags: 列標籤
+      column_order: 訂單
+    show:
+      next_page: 下一頁
+    index:
+      boards: 板
+    board:
+      destroy: 銷毀
   pages:
     faq:
       faq: 常見問題解答
@@ -165,6 +204,37 @@ zh-TW:
       open_source_code: 這個項目具有開放的源代碼，這樣你就可以將其部署到自己的服務器
       we_use_open_source_and_high_technology: 我們用高新技術和開源庫。我們總是試圖變得更好，改善我們的服務。
       partners_and_investors: 我們打開了合作夥伴關係，我們希望找到投資者。如果您想與我們合作，請partnership@technoelegance.com與我們聯繫
+  errors:
+    messages:
+      already_confirmed: 已經確認，請嘗試在簽約
+      confirmation_period_expired: 需要進行內部％{}期間確認，請申請一個新的
+      expired: 已過期，請申請一個新的
+      not_found: 未找到
+      not_locked: 沒有鎖
+      not_saved:
+        one: 1錯誤，無法儲存禁止此％{}資源：
+    bad_request:
+      bad_request: 錯誤的請求
+      request_result: 請求結果
+      bad_request_description: 服務器不能或無法處理請求由於一個明顯的客戶端錯誤
+      go_to_root: 去根
+    unprocessable_entity:
+      unprocessable_entity: 處理的實體
+      request_result: 請求結果
+      unprocessable_entity_description: 的要求是格式良好的，但由於語義錯誤無法遵循
+      go_to_root: 去根
+    not_found:
+      request_result: 請求結果
+      not_found_description: 請求的資源無法被找到，但可能會在將來可用的
+      go_to_root: 去根
+    forbidden:
+      request_result: 請求結果
+      forbidden_description: 請求是一個有效的請求，但服務器拒絕對此作出回應
+      go_to_root: 去根
+    internal_server_error:
+      request_result: 請求結果
+      internal_server_error_description: 出了錯。我們將盡快修復它。
+      go_to_root: 去根
   devise:
     shared:
       links:

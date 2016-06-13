@@ -1,6 +1,7 @@
 ---
 ml:
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: അപ്ഡേറ്റ്
   1_we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു
   shared:
@@ -10,6 +11,7 @@ ml:
       projects: പ്രോജക്ടുകൾ
       issues: പ്രശ്നങ്ങൾ
       edit_project: എഡിറ്റ്
+      boards: ബോർഡുകൾ
     languages_select_modal:
       available_languages: ലഭ്യമായ ഭാഷകളിൽ
     user_edit_menu:
@@ -26,15 +28,19 @@ ml:
     edit_project_modal:
       edit_project: എഡിറ്റ്
     left_sidebar:
-      projects: പ്രോജക്ടുകൾ
+      boards: ബോർഡുകൾ
     right_sidebar:
       news: വാർത്ത
       all: എല്ലാ
       read_more: കൂടുതൽ വായിക്കൂ
-    translations:
+    javascript_global_variables:
       select_column_tags: തിരഞ്ഞെടുക്കുക കോളം ടാഗുകൾ
       select_section_tags: വിഭാഗം തിരഞ്ഞെടുക്കുക ടാഗുകൾ
       select_issue_tags: തിരഞ്ഞെടുക്കുക പ്രശ്നം ടാഗുകൾ
+    email_signature:
+      info: വിവരങ്ങളും
+      mailer: Mailer
+      technoelegance: Technoelegance ലിമിറ്റഡ്
   users:
     new:
       invite_user: ഉപയോക്താവിനെ ക്ഷണിക്കുക
@@ -67,13 +73,14 @@ ml:
       hello: ഹലോ
       here_some_of_your_statistics: ഇവിടെ ചില നിങ്ങളുടെ സ്ഥിതിവിവരക്കണക്കുകളുടെ
       projects: പ്രോജക്ടുകൾ
+      boards: ബോർഡുകൾ
   projects:
     index:
       projects: പ്രോജക്ടുകൾ
       new: ന്യൂ
-      sync_with_bitbucket: bitbucket സമന്വയിപ്പിക്കുക
-      stop_sync_with_bitbucket: bitbucket കൂടെ നിർത്തുക സമന്വയം
+      stop_sync_with_bitbucket: Bitbucket കൂടെ നിർത്തുക സമന്വയം
       stop_sync_with_github: സാമൂഹികം കൂടെ നിർത്തുക സമന്വയം
+      stop_sync_with_gitlab: Gitlab കൂടെ നിർത്തുക സമന്വയം
     form:
       name: പേര്
       enter_project_name: പ്രോജക്റ്റ് നാമം നൽകുക
@@ -103,6 +110,13 @@ ml:
       remove_column: കോളം നീക്കംചെയ്യുക
       column_tags: നിര ടാഗുകൾ
       column_order: ഓർഡർ
+    show:
+      project: പദ്ധതി
+      project_issues: പദ്ധതി പ്രശ്നങ്ങൾ
+      project_users: പദ്ധതി ഉപയോക്താക്കൾ
+      new: ന്യൂ
+    project_modal:
+      project: പദ്ധതി
   issues:
     form:
       title: തലക്കെട്ട്
@@ -112,6 +126,7 @@ ml:
       enter_issue_body: പ്രശ്നം ശരീരം നൽകുക
       tags: ടാഗുകൾ
       issue_order: ഓർഡർ
+      project: പദ്ധതി
     index:
       issues: പ്രശ്നങ്ങൾ
       sync_with_bitbucket: bitbucket സമന്വയിപ്പിക്കുക
@@ -121,6 +136,8 @@ ml:
       edit: എഡിറ്റ്
     edit:
       edit_issue: എഡിറ്റ്
+    issue_modal:
+      issue: പ്രശ്നം
   authentications:
     index:
       enabled_services: പ്രവർത്തനക്ഷമമാക്കി സേവനങ്ങൾ
@@ -144,6 +161,37 @@ ml:
       welcome_to_kanban_on_rails: Kanban ന് റെയിൽപ്പാതകൾ സ്വാഗതം
       welcome_about_text: ഇവിടെ നിങ്ങളുടെ സ്വന്തം Kanban ബോർഡും സാമൂഹികം അല്ലെങ്കിൽ
         Bitbucket ഉപയോഗിച്ച് സമന്വയം ഇത് സൃഷ്ടിക്കാൻ കഴിയും
+  boards:
+    board_modal:
+      board: ബോർഡ്
+    form:
+      name: പേര്
+      enter_board_name: ബോർഡ് പേര് നൽകുക
+      column_width: നിരയുടെ വീതി
+      column_height: നിര ഉയരം
+      columns: നിരകൾ
+      add: ചേര്ക്കുക
+      sections: വിഭാഗങ്ങൾ
+      save: സംരക്ഷിക്കുക
+      projects: പ്രോജക്ടുകൾ
+    section_fields:
+      section_name: വിഭാഗം പേര്
+      remove_section: നീക്കംചെയ്യുക വിഭാഗം
+      section_tags: വിഭാഗം ടാഗുകൾ
+      section_order: ഓർഡർ
+      or_include_all: അല്ലെങ്കിൽ എല്ലാ ഉൾപ്പെടുന്നു?
+    column_fields:
+      column_name: നിരയുടെ പേര്
+      remove_column: കോളം നീക്കംചെയ്യുക
+      column_tags: നിര ടാഗുകൾ
+      column_order: ഓർഡർ
+    index:
+      boards: ബോർഡുകൾ
+      new: ന്യൂ
+    board:
+      board_users: ഉപയോക്താക്കൾ
+      edit: എഡിറ്റ്
+      destroy: നശിപ്പിക്കുക
   pages:
     faq:
       faq: സ്ഥിരം
@@ -170,6 +218,43 @@ ml:
       partners_and_investors: നാം കൂട്ടുകെട്ട് തുറന്നിരിക്കുന്നു ഞങ്ങൾ നിക്ഷേപകരെ
         കണ്ടെത്താൻ ആഗ്രഹിക്കുന്നു. നീ ഞങ്ങളെ സഹകരിക്കാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ partnership@technoelegance.com
         ഞങ്ങളെ ബന്ധപ്പെടുക
+  errors:
+    messages:
+      already_confirmed: ഇതിനകം സ്ഥിരീകരിച്ചു, ഇൻ ശ്രമിക്കുക
+      confirmation_period_expired: "% {കാലയളവിൽ} ഉള്ളിൽ സ്ഥിരീകരിച്ചു ചെയ്യേണ്ടത്
+        ആവശ്യമാണ്, ഒരു പുതിയ ഒന്ന് അഭ്യർത്ഥിക്കുക"
+      expired: കാലഹരണപ്പെട്ടു, പുതിയതൊന്ന് അഭ്യർത്ഥിക്കുക
+      not_found: കണ്ടെത്തിയില്ല
+      not_locked: ലോക്ക് ചെയ്തില്ല
+      not_saved:
+        one: 1 പിശക് സംരക്ഷിക്കുന്നതിൽ നിന്നും ഈ% {റിസോഴ്സ്} നിഷിദ്ധമാക്കുകയുണ്ടായി
+        other: "% {എണ്ണം} സംരക്ഷിക്കുന്നതിൽ നിന്നും ഈ% {റിസോഴ്സ്} നിരോധിച്ചിരിക്കുന്നു
+          പിശകുകൾ:"
+    bad_request:
+      request_result: അഭ്യർത്ഥന ഫലം
+      go_to_root: റൂട്ട് പോകുക
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable എൻറ്റിറ്റി
+      request_result: അഭ്യർത്ഥന ഫലം
+      unprocessable_entity_description: നന്നായി രൂപീകരിച്ചത് എന്നാൽ വേറൊരു പിശകുകൾ
+        പാലിക്കേണ്ട കഴിയുന്നില്ല
+      go_to_root: റൂട്ട് പോകുക
+    not_found:
+      not_found: കണ്ടെത്തിയില്ല
+      request_result: അഭ്യർത്ഥന ഫലം
+      not_found_description: കണ്ടെത്തിയില്ല കഴിഞ്ഞില്ല പക്ഷെ ഭാവിയിൽ ലഭ്യമാണ് ആയിരിക്കാം
+      go_to_root: റൂട്ട് പോകുക
+    forbidden:
+      forbidden: നിരോധിക്കപ്പെട്ടത്
+      request_result: അഭ്യർത്ഥന ഫലം
+      forbidden_description: സാധുവായ അഭ്യർത്ഥന ആയിരുന്നു, പക്ഷേ സെർവർ പ്രതികരിക്കുന്നതിനും
+        വിസമ്മതിച്ചു ആണ്
+      go_to_root: റൂട്ട് പോകുക
+    internal_server_error:
+      request_result: അഭ്യർത്ഥന ഫലം
+      internal_server_error_description: എന്തോ കുഴപ്പം സംഭവിച്ചു. നാം കഴിയുന്നതും
+        വേഗം അത് പരിഹരിക്കാൻ ചെയ്യും.
+      go_to_root: റൂട്ട് പോകുക
   devise:
     shared:
       links:

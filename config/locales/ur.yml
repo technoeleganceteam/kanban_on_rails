@@ -2,16 +2,18 @@
 ur:
   github: Github کے
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: اپ ڈیٹ
   shared:
     navbar:
-      sign_in: کیجئے
       sign_up: سائن اپ کریں
       projects: پروجیکٹس
       issues: مسائل
       syncing_with_github: Github کے ساتھ مطابقت پذیری ...
+      syncing_with_gitlab: Gitlab ساتھ مطابقت پذیری ...
       syncing_with_bitbucket: Bitbucket ساتھ مطابقت پذیری ...
       new_issue: نیا مسئلہ
+      boards: بورڈز
     languages_select_modal:
       available_languages: دستیاب زبانوں
     user_edit_menu:
@@ -33,15 +35,21 @@ ur:
     new_issue_modal:
       new_issue: نیا مسئلہ
     left_sidebar:
-      projects: پروجیکٹس
+      boards: بورڈز
     right_sidebar:
       news: خبریں
       all: تمام
       read_more: مزید پڑھیں
-    translations:
+    javascript_global_variables:
       select_column_tags: منتخب کالم ٹیگز
       select_section_tags: منتخب سیکشن ٹیگز
       select_issue_tags: منتخب کریں معاملے ٹیگز
+    email_signature:
+      info: معلومات
+      mailer: میلر
+      technoelegance: Technoelegance لمیٹڈ
+    pagination_link:
+      next_page: اگلا صفحہ
   users:
     new:
       invite_user: صارف کو مدعو کریں
@@ -75,14 +83,14 @@ ur:
       hello: ہیلو
       here_some_of_your_statistics: یہاں آپ کے اعداد و شمار میں سے کچھ
       projects: پروجیکٹس
+      boards: بورڈز
   projects:
     index:
       projects: پروجیکٹس
       new: نیا
-      sync_with_github: گاٹہوب ساتھ مطابقت پذیری
-      sync_with_bitbucket: bitbucket ساتھ مطابقت پذیری
-      stop_sync_with_bitbucket: bitbucket ساتھ روکنے کی مطابقت پذیری
-      stop_sync_with_github: گاٹہوب ساتھ روکنے کی مطابقت پذیری
+      sync_with_github: Github کے ساتھ مطابقت پذیری
+      sync_with_gitlab: Gitlab ساتھ مطابقت پذیری
+      sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
     form:
       name: نام
       enter_project_name: پراجیکٹ کا نام درج کریں
@@ -117,7 +125,14 @@ ur:
       column_tags: کالم ٹیگز
       column_order: آرڈر
     show:
-      next_page: اگلا صفحہ
+      project: پروجیکٹ
+      related_boards: متعلقہ بورڈز
+      project_info: پروجیکٹ کی معلومات
+      project_issues: پروجیکٹ مسائل
+      project_users: پروجیکٹ صارفین
+      new: نیا
+    project_modal:
+      project: پروجیکٹ
   issues:
     form:
       title: سرخی
@@ -130,6 +145,7 @@ ur:
       bitbucket_issue_id: Bitbucket ایشو کی شناخت
       github_issue_id: Github کے ایشو کی شناخت
       github_issue_number: Github کے جاری تعداد
+      project: پروجیکٹ
     index:
       issues: مسائل
       sync_with_github: گاٹہوب ساتھ مطابقت پذیری
@@ -140,6 +156,8 @@ ur:
       edit: ترمیم کریں
     new:
       new_issue: نیا مسئلہ
+    issue_modal:
+      issue: مسئلہ
   authentications:
     index:
       enabled_services: سہولت مہیا کی خدمات
@@ -162,6 +180,40 @@ ur:
     index:
       welcome_about_text: آپ Github کے یا Bitbucket ساتھ آپ کے اپنے Kanban بورڈ اور
         مطابقت پذیری تشکیل دے سکتے ہیں
+  boards:
+    board_modal:
+      board: بورڈ
+    form:
+      name: نام
+      enter_board_name: بورڈ کا نام درج کریں
+      column_width: کالم کی چوڑائی
+      column_height: کالم اونچائی
+      columns: کالم
+      add: شامل کریں
+      sections: حصے
+      save: محفوظ کریں
+      projects: پروجیکٹس
+    section_fields:
+      section_name: حصے کا نام
+      remove_section: ہٹائیں سیکشن
+      section_tags: دفعہ ٹیگز
+      section_order: آرڈر
+      or_include_all: یا تمام شامل ہیں؟
+    column_fields:
+      column_name: کالم کا نام
+      remove_column: کالم کو ہٹا دیں
+      max_issues_count: میکس مسائل کالم میں شمار
+      column_tags: کالم ٹیگز
+      column_order: آرڈر
+    show:
+      next_page: اگلا صفحہ
+    index:
+      boards: بورڈز
+      new: نیا
+    board:
+      board_users: صارفین
+      edit: ترمیم کریں
+      destroy: خارج کر
   pages:
     faq:
       faq: عمومی سوالات
@@ -197,6 +249,45 @@ ur:
       partners_and_investors: ہم پارٹنرشپ لئے کھل جاتے ہیں اور ہم سرمایہ کاروں کو
         تلاش کرنے کے لئے چاہوں گا. آپ ہمارے ساتھ تعاون کرنا چاہتے ہیں تو partnership@technoelegance.com
         ہم سے رابطہ کریں
+  errors:
+    messages:
+      already_confirmed: پہلے سے ہی تصدیق کی گئی تھی، میں سائن ان کرنے کی کوشش کریں
+      confirmation_period_expired: "٪ {مدت} کے اندر اندر اس بات کی تصدیق کرنے کی ضرورت
+        ہے ایک نیا درخواست براہ مہربانی"
+      expired: میعاد ختم ہوگئی ہے، ایک نئی ایک کی درخواست کریں
+      not_found: پایا نہیں
+      not_locked: مقفل نہیں کیا گیا تھا
+      not_saved:
+        one: '1 خرابی بچائے جانے سے اس٪ {وسیلہ} ممنوع:'
+        other: "٪ {شمار} غلطیاں اس٪ {وسیلہ} ممنوع بچائے جانے سے:"
+    bad_request:
+      bad_request: برا گذارش
+      request_result: گذارش نتیجہ
+      bad_request_description: کی وجہ بظاہر کلائنٹ کی خرابی کی
+      go_to_root: جڑ پر جائیں
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable ہستی
+      request_result: گذارش نتیجہ
+      unprocessable_entity_description: اچھی طرح سے قائم کیا گیا تھا لیکن اس کی وجہ
+        لسانی غلطیوں کی پیروی کی جائے کرنے سے قاصر تھا
+      go_to_root: جڑ پر جائیں
+    not_found:
+      not_found: نہیں ملا
+      request_result: گذارش نتیجہ
+      not_found_description: نہیں مل سکا لیکن مستقبل میں دستیاب ہو سکتی ہے
+      go_to_root: جڑ پر جائیں
+    forbidden:
+      forbidden: حرام
+      request_result: گذارش نتیجہ
+      forbidden_description: ایک درست درخواست تھی، لیکن سرور اس کا جواب کرنے سے انکار
+        کیا ہے
+      go_to_root: جڑ پر جائیں
+    internal_server_error:
+      internal_server_error: اندرونی سرور کی خرابی
+      request_result: گذارش نتیجہ
+      internal_server_error_description: کچھ غلط ہو گیا. ہم جتنی جلدی ممکن ہو اسے
+        درست کریں گے.
+      go_to_root: جڑ پر جائیں
   devise:
     shared:
       links:

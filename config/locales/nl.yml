@@ -2,6 +2,7 @@
 nl:
   github: Github
   bitbucket: BitBucket
+  gitlab: Gitlab
   updated: bijgewerkt
   1_we_have_just_launched_our_service_title: We hebben zopas onze service
   shared:
@@ -11,8 +12,10 @@ nl:
       projects: Projecten
       issues: Issues
       syncing_with_github: Synchroniseren met Github ...
+      syncing_with_gitlab: Synchroniseren met Gitlab ...
       syncing_with_bitbucket: Synchroniseren met BitBucket ...
       new_issue: Nieuwe editie
+      boards: Boards
     languages_select_modal:
       available_languages: Beschikbare talen
     user_edit_menu:
@@ -34,15 +37,21 @@ nl:
     new_issue_modal:
       new_issue: Nieuwe editie
     left_sidebar:
-      projects: Projecten
+      boards: Boards
     right_sidebar:
       news: Nieuws
       all: Alle
       read_more: Lees verder
-    translations:
+    javascript_global_variables:
       select_column_tags: Select kolom-tags
       select_section_tags: Select sectie-tags
       select_issue_tags: Select kwestie-tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Volgende pagina
   users:
     new:
       invite_user: Nodig gebruiker
@@ -76,14 +85,17 @@ nl:
       hello: Hallo
       here_some_of_your_statistics: Hier een aantal van uw statistieken
       projects: Projecten
+      boards: Boards
   projects:
     index:
       projects: Projecten
       new: Nieuwe
-      sync_with_github: Synchroniseren met github
+      sync_with_github: Synchroniseren met Github
+      sync_with_gitlab: Synchroniseren met Gitlab
       sync_with_bitbucket: Synchroniseren met BitBucket
       stop_sync_with_bitbucket: Stop sync met BitBucket
-      stop_sync_with_github: Stop sync met github
+      stop_sync_with_github: Stop sync met Github
+      stop_sync_with_gitlab: Stop sync met Gitlab
     form:
       name: Naam
       enter_project_name: Voer de naam van het project
@@ -116,7 +128,14 @@ nl:
       column_tags: Column-tags
       column_order: Bestel
     show:
-      next_page: Volgende pagina
+      project: Project
+      related_boards: Related boards
+      project_info: Project info
+      project_issues: Project issues
+      project_users: Project gebruikers
+      new: Nieuwe
+    project_modal:
+      project: Project
   issues:
     form:
       title: Titel
@@ -129,6 +148,7 @@ nl:
       bitbucket_issue_id: BitBucket kwestie id
       github_issue_id: Github kwestie id
       github_issue_number: Github nummer van afgifte
+      project: Project
     index:
       issues: kwesties
       sync_with_github: Synchroniseren met github
@@ -139,6 +159,8 @@ nl:
       edit: Bewerken
     new:
       new_issue: Nieuwe editie
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Enabled diensten
@@ -164,6 +186,39 @@ nl:
       welcome_to_kanban_on_rails: Welcome to Kanban On Rails
       welcome_about_text: Hier kunt u uw eigen Kanban board en synchroniseren kunt
         maken met Github of BitBucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Naam
+      enter_board_name: Voer naambord
+      column_width: Kolombreedte
+      column_height: Zuilhoogte
+      columns: Columns
+      add: Add
+      sections: Secties
+      save: Save
+      projects: Projecten
+    section_fields:
+      section_name: Sectie naam
+      section_tags: Sectie-tags
+      section_order: Bestel
+      or_include_all: Of omvatten alle?
+    column_fields:
+      column_name: Kolomnaam
+      remove_column: Verwijder kolom
+      max_issues_count: Max kwesties tellen in kolom
+      column_tags: Column-tags
+      column_order: Bestel
+    show:
+      next_page: Volgende pagina
+    index:
+      boards: Boards
+      new: Nieuwe
+    board:
+      board_users: Gebruikers
+      edit: Bewerken
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -200,6 +255,42 @@ nl:
       partners_and_investors: Wij zijn geopend voor het partnerschap en we willen
         investeerders te vinden. Als u wilt samenwerken met ons neem contact met ons
         op partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: werd al bevestigd, kun je je aanmelden
+      confirmation_period_expired: dient te worden bevestigd binnen% {} periode, vraag
+        dan een nieuw exemplaar
+      expired: is verstreken, vraag dan een nieuw exemplaar
+      not_found: niet gevonden
+      not_locked: was niet op slot
+      not_saved:
+        one: '1 fout verboden dit% {bron} worden opgeslagen:'
+        other: "% {count} fouten verboden dit% {bron} worden opgeslagen:"
+    bad_request:
+      bad_request: Bad Request
+      bad_request_description: De server niet kan of wil niet de aanvraag te verwerken
+        als gevolg van een schijnbare client fout
+      go_to_root: Ga naar root
+    unprocessable_entity:
+      unprocessable_entity: onverwerkbaar Entity
+      unprocessable_entity_description: Het verzoek was goed gevormd, maar was niet
+        in staat om te worden gevolgd vanwege een semantische fouten
+      go_to_root: Ga naar root
+    not_found:
+      not_found: niet gevonden
+      not_found_description: De opgevraagde bron kan niet worden gevonden, maar kan
+        in de toekomst beschikbaar zijn
+      go_to_root: Ga naar root
+    forbidden:
+      forbidden: Verboden
+      forbidden_description: Het verzoek was van een geldig verzoek, maar de server
+        weigert te reageren
+      go_to_root: Ga naar root
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Er is iets misgegaan. We zullen het zo snel
+        mogelijk op te lossen.
+      go_to_root: Ga naar root
   devise:
     shared:
       links:

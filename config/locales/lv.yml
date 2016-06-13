@@ -2,6 +2,7 @@
 lv:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: atjaunināts
   1_we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu pakalpojumus
   shared:
@@ -11,9 +12,11 @@ lv:
       projects: Projekti
       issues: jautājumi
       syncing_with_github: Sync ar GitHub ...
+      syncing_with_gitlab: Sync ar Gitlab ...
       syncing_with_bitbucket: Sync ar Bitbucket ...
       new_issue: Jauns jautājums
       edit_project: Edit projekts
+      boards: Boards
     languages_select_modal:
       available_languages: Pieejamās valodas
     user_edit_menu:
@@ -37,15 +40,21 @@ lv:
     new_issue_modal:
       new_issue: Jauns jautājums
     left_sidebar:
-      projects: Projekti
+      boards: Boards
     right_sidebar:
       news: News
       all: All
       read_more: Lasīt vairāk
-    translations:
+    javascript_global_variables:
       select_column_tags: Izvēlieties kolonnu tagus
       select_section_tags: Izvēlieties sadaļu tagus
       select_issue_tags: Izvēlieties jautājums tagus
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance SIA
+    pagination_link:
+      next_page: Nākamā lapa
   users:
     new:
       invite_user: Uzaicināt lietotāju
@@ -81,14 +90,17 @@ lv:
       hello: Sveiki
       here_some_of_your_statistics: Lūk daži no jūsu statistika
       projects: Projekti
+      boards: Boards
   projects:
     index:
       projects: Projekti
       new: New
       sync_with_github: Sync ar GitHub
-      sync_with_bitbucket: Sync ar bitbucket
-      stop_sync_with_bitbucket: Stop sinhronizācija ar bitbucket
+      sync_with_gitlab: Sync ar Gitlab
+      sync_with_bitbucket: Sync ar Bitbucket
+      stop_sync_with_bitbucket: Stop sinhronizācija ar Bitbucket
       stop_sync_with_github: Stop sinhronizācija ar GitHub
+      stop_sync_with_gitlab: Stop sinhronizācija ar Gitlab
     form:
       name: Name
       enter_project_name: Ievadiet projekta nosaukumu
@@ -121,7 +133,14 @@ lv:
       column_tags: sleja tagus
       column_order: Order
     show:
-      next_page: Nākamā lapa
+      project: Project
+      related_boards: Saistītās dēļi
+      project_info: Projekta informācijas
+      project_issues: Projekta jautājumi
+      project_users: Projekta lietotājiem
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: sadaļa
@@ -134,6 +153,7 @@ lv:
       bitbucket_issue_id: Bitbucket jautājums id
       github_issue_id: GitHub jautājums id
       github_issue_number: GitHub jautājums numurs
+      project: Project
     index:
       issues: jautājumi
       sync_with_github: Sync ar GitHub
@@ -146,6 +166,8 @@ lv:
       edit_issue: Edit jautājums
     new:
       new_issue: Jauns jautājums
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Enabled pakalpojumi
@@ -171,6 +193,39 @@ lv:
       welcome_to_kanban_on_rails: Aicinām Kanban On Rails
       welcome_about_text: Šeit Jūs varat izveidot savu Kanban kuģa un sinhronizēt
         to ar GitHub vai Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Ievadiet board vārdu
+      column_width: Kolonnas platums
+      column_height: Kolonnas augstums
+      columns: Kolonnas
+      add: Add
+      sections: Sekcijas
+      save: Saglabāt
+      projects: Projekti
+    section_fields:
+      remove_section: Noņemt sadaļa
+      section_tags: sadaļa tagus
+      section_order: Order
+      or_include_all: vai ietver visu?
+    column_fields:
+      column_name: Kolonnas nosaukums
+      remove_column: noņemšana kolonnu
+      max_issues_count: Max jautājumi skaits slejā
+      column_tags: sleja tagus
+      column_order: Order
+    show:
+      next_page: Nākamā lapa
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: lietotāji
+      edit: rediģēšana
+      destroy: Iznīcināt
   pages:
     faq:
       faq: FAQ
@@ -205,6 +260,47 @@ lv:
         mūsu pakalpojumus.
       partners_and_investors: Mēs esam atvērti sadarbībai un mēs vēlētos atrast investorus.
         Ja vēlaties sadarboties ar mums, lūdzu, sazinieties ar mums partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: jau tika apstiprināts, lūdzu, mēģiniet pierakstīties
+      confirmation_period_expired: jāapstiprina robežās% {perioda}, lūdzu, pieprasiet
+        jaunu
+      expired: ir beidzies, lūdzu, pieprasiet jaunu
+      not_found: nav atrasts
+      not_locked: nebija aizslēgtas
+      not_saved:
+        one: '1 kļūda aizliegts šo% {resursu} tiek saglabāti:'
+        other: "% {count} kļūdas aizliegtas šī% {resursa} tiek saglabāti:"
+    bad_request:
+      bad_request: Bad pieprasījums
+      request_result: pieprasījums rezultāts
+      bad_request_description: Serveris nevar vai nevēlas apstrādāt pieprasījumu,
+        jo šķietamu klienta kļūda
+      go_to_root: Doties uz saknes
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: pieprasījums rezultāts
+      unprocessable_entity_description: Pieprasījumu labi veidoti, bet nespēja, kas
+        jāievēro saistībā ar semantikas kļūdas
+      go_to_root: Doties uz saknes
+    not_found:
+      not_found: Not Found
+      request_result: pieprasījums rezultāts
+      not_found_description: Pieprasītais resurss nav atrasts, bet var būt pieejami
+        nākotnē
+      go_to_root: Doties uz saknes
+    forbidden:
+      forbidden: Forbidden
+      request_result: pieprasījums rezultāts
+      forbidden_description: Pieprasījumu derīgs pieprasījums, bet serveris atsakās
+        atbildēt uz to
+      go_to_root: Doties uz saknes
+    internal_server_error:
+      internal_server_error: Iekšējā servera kļūda
+      request_result: pieprasījums rezultāts
+      internal_server_error_description: Kaut kas nogāja greizi. Mēs noteikt to, cik
+        drīz vien iespējams.
+      go_to_root: Doties uz saknes
   devise:
     shared:
       links:

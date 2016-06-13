@@ -2,6 +2,7 @@
 sw:
   github: github
   bitbucket: bitbucket
+  gitlab: Gitlab
   updated: updated
   1_we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu
   shared:
@@ -11,9 +12,11 @@ sw:
       projects: Miradi
       issues: Masuala
       syncing_with_github: Sync na github ...
+      syncing_with_gitlab: Sync na Gitlab ...
       syncing_with_bitbucket: Sync na bitbucket ...
       new_issue: New suala
       edit_project: Hariri mradi
+      boards: Bodi
     languages_select_modal:
       available_languages: Inapatikana lugha
     user_edit_menu:
@@ -35,17 +38,23 @@ sw:
     edit_project_modal:
       edit_project: Hariri mradi
     new_issue_modal:
-      new_issue: suala New
+      new_issue: New suala
     left_sidebar:
-      projects: Miradi
+      boards: Bodi
     right_sidebar:
       news: News
       all: All
       read_more: Soma zaidi
-    translations:
+    javascript_global_variables:
       select_column_tags: Chagua vitambulisho safu
       select_section_tags: Chagua vitambulisho sehemu
       select_issue_tags: Chagua vitambulisho suala
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd
+    pagination_link:
+      next_page: ukurasa Ifwatayo
   users:
     new:
       invite_user: Alika mtumiaji
@@ -80,14 +89,17 @@ sw:
       hello: Habari
       here_some_of_your_statistics: Hapa baadhi ya takwimu yako
       projects: Miradi
+      boards: Bodi
   projects:
     index:
       projects: Miradi
       new: New
       sync_with_github: Sync na github
+      sync_with_gitlab: Sync na Gitlab
       sync_with_bitbucket: Sync na bitbucket
       stop_sync_with_bitbucket: Stop Sync na bitbucket
       stop_sync_with_github: Stop Sync na github
+      stop_sync_with_gitlab: Stop Sync na Gitlab
     form:
       name: Jina
       enter_project_name: Ingiza jina mradi
@@ -118,7 +130,13 @@ sw:
       column_tags: vitambulisho Column
       column_order: Amri
     show:
-      next_page: ukurasa Ifwatayo
+      project: Project
+      related_boards: bodi Kurasa
+      project_issues: masuala Project
+      project_users: watumiaji Project
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -131,6 +149,7 @@ sw:
       bitbucket_issue_id: bitbucket suala id
       github_issue_id: github suala id
       github_issue_number: github suala idadi
+      project: Project
     index:
       issues: masuala
       sync_with_github: Sync na github
@@ -143,6 +162,8 @@ sw:
       edit_issue: Hariri suala
     new:
       new_issue: New suala
+    issue_modal:
+      issue: Suala
   authentications:
     index:
       enabled_services: Kuwezeshwa huduma
@@ -168,6 +189,38 @@ sw:
       welcome_to_kanban_on_rails: Karibu Kanban On Rails
       welcome_about_text: Hapa unaweza kuunda Kanban yako mwenyewe bodi na upatanishi
         kwa github au bitbucket
+  boards:
+    board_modal:
+      board: Bodi
+    form:
+      name: Jina
+      enter_board_name: Weka bodi jina
+      column_width: Column upana
+      column_height: Column urefu
+      columns: nguzo
+      add: Add
+      sections: Sehemu
+      save: Save
+      projects: Miradi
+    section_fields:
+      section_tags: vitambulisho Sehemu ya
+      section_order: Amri
+      or_include_all: Au ni pamoja na wote?
+    column_fields:
+      column_name: Column jina
+      remove_column: Ondoa safu
+      max_issues_count: Max masuala kuhesabu katika safu
+      column_tags: vitambulisho Column
+      column_order: Amri
+    show:
+      next_page: ukurasa Ifwatayo
+    index:
+      boards: Bodi
+      new: New
+    board:
+      board_users: Watumiaji
+      edit: Hariri
+      destroy: Kuharibu
   pages:
     faq:
       faq: FAQ
@@ -204,6 +257,42 @@ sw:
       partners_and_investors: Sisi ni kufunguliwa kwa ushirikiano na tungependa kupata
         wawekezaji. Kama Ningependa kwa kushirikiana na sisi tafadhali wasiliana nasi
         katika partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: alikuwa tayari alithibitisha, tafadhali jaribu kuingia katika
+      confirmation_period_expired: mahitaji ya kuwa alithibitisha ndani ya% {kipindi},
+        tafadhali kuomba mwezi mmoja
+      expired: umekwisha, tafadhali kuomba mwezi mmoja
+      not_found: hakuonekana
+      not_locked: hakuwa imefungwa
+      not_saved:
+        one: '1 makosa marufuku% hii {rasilimali} kutoka kuokolewa:'
+        other: "% {kuhesabu} makosa marufuku hii% {rasilimali} kutoka kuokolewa:"
+    bad_request:
+      bad_request: Bad Ombi
+      bad_request_description: server hawawezi au si mchakato wa maombi kutokana na
+        hitilafu ya dhahiri mteja
+      go_to_root: Nenda mzizi
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      unprocessable_entity_description: ombi ilikuwa vizuri sumu lakini hakuweza kufuatwa
+        kutokana na makosa semantic
+      go_to_root: Nenda mzizi
+    not_found:
+      not_found: Haukupatikana
+      not_found_description: rasilimali aliomba hakuweza kupatikana lakini yanaweza
+        kupatikana katika siku zijazo
+      go_to_root: Nenda mzizi
+    forbidden:
+      forbidden: Haramu
+      forbidden_description: ombi ilikuwa ombi halali, lakini seva ni kukataa kujibu
+        hilo
+      go_to_root: Nenda mzizi
+    internal_server_error:
+      internal_server_error: Ndani Server Error
+      internal_server_error_description: Kuna tatizo ambalo limetokea. Sisi kurekebisha
+        haraka iwezekanavyo.
+      go_to_root: Nenda mzizi
   devise:
     shared:
       links:

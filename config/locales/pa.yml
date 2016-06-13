@@ -2,6 +2,7 @@
 pa:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: ਅੱਪਡੇਟ ਕੀਤਾ
   1_we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ ਹੈ
   shared:
@@ -10,8 +11,10 @@ pa:
       projects: ਪ੍ਰਾਜੈਕਟ
       issues: ਮੁੱਦੇ
       syncing_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ ...
+      syncing_with_gitlab: Gitlab ਨਾਲ ਸਮਕਾਲੀ ...
       syncing_with_bitbucket: Bitbucket ਨਾਲ ਸਮਕਾਲੀ ...
       new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
+      boards: ਬੋਰਡ
     languages_select_modal:
       available_languages: ਉਪਲੱਬਧ ਭਾਸ਼ਾ
     user_edit_menu:
@@ -33,15 +36,21 @@ pa:
     new_issue_modal:
       new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
     left_sidebar:
-      projects: ਪ੍ਰਾਜੈਕਟ
+      boards: ਬੋਰਡ
     right_sidebar:
       news: ਨਿਊਜ਼
       all: ਸਾਰੇ
       read_more: ਹੋਰ ਪੜ੍ਹੋ
-    translations:
+    javascript_global_variables:
       select_column_tags: ਚੁਣੋ
       select_section_tags: ਚੁਣੋ
       select_issue_tags: ਮੁੱਦੇ ਨੂੰ ਟੈਗ ਚੁਣੋ
+    email_signature:
+      info: ਜਾਣਕਾਰੀ
+      mailer: Mailer
+      technoelegance: Technoelegance ਲਿਮਟਿਡ
+    pagination_link:
+      next_page: ਅੱਗੇ ਸਫ਼ਾ
   users:
     new:
       invite_user: ਉਪਭੋਗੀ ਨੂੰ ਸੱਦਾ
@@ -75,12 +84,11 @@ pa:
       hello: ਹੈਲੋ
       here_some_of_your_statistics: ਇੱਥੇ ਆਪਣੇ ਅੰਕੜੇ ਦੇ ਕੁਝ
       projects: ਪ੍ਰਾਜੈਕਟ
+      boards: ਬੋਰਡ
   projects:
     index:
       projects: ਪ੍ਰਾਜੈਕਟ
       new: ਨਿਊ
-      sync_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ
-      sync_with_bitbucket: bitbucket ਨਾਲ ਸਮਕਾਲੀ
     form:
       name: ਦਾ ਨਾਮ
       enter_project_name: ਪ੍ਰਾਜੈਕਟ ਨੂੰ ਨਾਮ ਦਰਜ ਕਰੋ
@@ -115,7 +123,14 @@ pa:
       column_tags: ਕਾਲਮ ਟੈਗ
       column_order: ਆਰਡਰ
     show:
-      next_page: ਅੱਗੇ ਸਫ਼ਾ
+      project: ਪ੍ਰੋਜੈਕਟ
+      related_boards: ਸੰਬੰਧਿਤ ਬੋਰਡ
+      project_info: ਪ੍ਰੋਜੈਕਟ ਜਾਣਕਾਰੀ
+      project_issues: ਪ੍ਰੋਜੈਕਟ ਮੁੱਦੇ
+      project_users: ਪ੍ਰੋਜੈਕਟ ਉਪਭੋਗੀ
+      new: ਨਿਊ
+    project_modal:
+      project: ਪ੍ਰੋਜੈਕਟ
   issues:
     form:
       title: ਟਾਈਟਲ
@@ -128,6 +143,7 @@ pa:
       bitbucket_issue_id: Bitbucket ਮੁੱਦੇ 'ID
       github_issue_id: GitHub ਮੁੱਦੇ 'ID
       github_issue_number: GitHub ਮੁੱਦੇ ਨੂੰ ਨੰਬਰ '
+      project: ਪ੍ਰੋਜੈਕਟ
     index:
       issues: ਮੁੱਦੇ
       sync_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ
@@ -138,6 +154,8 @@ pa:
       edit: ਸੋਧ
     new:
       new_issue: ਨਿਊ ਮੁੱਦੇ ਨੂੰ
+    issue_modal:
+      issue: ਜਾਰੀ
   authentications:
     index:
       enabled_services: ਯੋਗ ਸੇਵਾ
@@ -163,6 +181,40 @@ pa:
       welcome_to_kanban_on_rails: Kanban 'ਤੇ ਰੇਲਜ਼ ਸੁਆਗਤ ਹੈ
       welcome_about_text: ਤੁਹਾਨੂੰ GitHub ਜ Bitbucket ਨਾਲ ਤੁਹਾਡੇ ਆਪਣੇ Kanban ਬੋਰਡ ਅਤੇ
         ਸਿੰਕ ਇਸ ਨੂੰ ਬਣਾ ਸਕਦਾ ਹੈ
+  boards:
+    board_modal:
+      board: ਬੋਰਡ
+    form:
+      name: ਦਾ ਨਾਮ
+      enter_board_name: ਬੋਰਡ ਨਾਮ ਦਰਜ ਕਰੋ
+      column_width: ਕਾਲਮ ਚੌੜਾਈ
+      column_height: ਕਾਲਮ ਉਚਾਈ
+      columns: ਕਾਲਮ
+      add: ਸ਼ਾਮਲ ਕਰੋ
+      sections: ਧਾਰਾ
+      save: ਸੰਭਾਲੋ
+      projects: ਪ੍ਰਾਜੈਕਟ
+    section_fields:
+      section_name: ਹਿੱਸਾ ਨਾਮ
+      remove_section: ਹਟਾਓ ਭਾਗ
+      section_tags: ਹਿੱਸਾ ਟੈਗ
+      section_order: ਆਰਡਰ
+      or_include_all: ਜ ਸਾਰੇ ਸ਼ਾਮਲ ਹਨ?
+    column_fields:
+      column_name: ਕਾਲਮ ਨਾਮ
+      remove_column: ਕਾਲਮ ਹਟਾਓ
+      max_issues_count: ਮੈਕਸ ਮੁੱਦੇ ਕਾਲਮ ਵਿੱਚ ਗਿਣਤੀ
+      column_tags: ਕਾਲਮ ਟੈਗ
+      column_order: ਆਰਡਰ
+    show:
+      next_page: ਅੱਗੇ ਸਫ਼ਾ
+    index:
+      boards: ਬੋਰਡ
+      new: ਨਿਊ
+    board:
+      board_users: ਉਪਭੋਗੀ
+      edit: ਸੋਧ
+      destroy: ਨਸ਼ਟ
   pages:
     faq:
       faq: ਸਵਾਲ
@@ -198,6 +250,45 @@ pa:
       partners_and_investors: ਸਾਨੂੰ ਭਾਈਵਾਲੀ ਲਈ ਖੋਲ੍ਹਿਆ ਰਹੇ ਹਨ ਅਤੇ ਸਾਨੂੰ ਨਿਵੇਸ਼ਕ ਦਾ
         ਪਤਾ ਕਰਨ ਲਈ ਚਾਹੁੰਦੇ ਹੋ. ਤੁਹਾਨੂੰ ਸਾਡੇ ਨਾਲ ਸਹਿਯੋਗ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ partnership@technoelegance.com
         'ਤੇ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ
+  errors:
+    messages:
+      already_confirmed: ਹੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ ਸੀ, ਵਿਚ ਹਸਤਾਖਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ
+      confirmation_period_expired: ਦੀ ਲੋੜ ਹੈ% {ਮਿਆਦ ਦੇ} ਦੇ ਅੰਦਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ,
+        ਇੱਕ ਨਵ ਇੱਕ ਦੀ ਬੇਨਤੀ ਕਿਰਪਾ ਕਰਕੇ
+      expired: ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ, ਇੱਕ ਨਵ ਇੱਕ ਦੀ ਬੇਨਤੀ ਕਿਰਪਾ ਕਰਕੇ
+      not_found: ਨਾ ਲੱਭੀ
+      not_locked: ਨੂੰ ਲਾਕ ਨਾ ਕੀਤਾ ਗਿਆ ਸੀ
+      not_saved:
+        one: '1 ਗਲਤੀ ਨੂੰ ਬਚਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਤੱਕ ਇਸ% {ਸਰੋਤ} ਦੀ ਮਨਾਹੀ:'
+        other: "% {COUNT} ਨੂੰ ਬਚਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਤੱਕ ਇਸ% {ਸਰੋਤ} ਮਨਾਹੀ ਗਲਤੀ:"
+    bad_request:
+      bad_request: ਮੰਦਾ ਬੇਨਤੀ
+      request_result: ਬੇਨਤੀ ਦੇ ਨਤੀਜੇ
+      bad_request_description: ਕਾਰਨ ਇੱਕ ਸਪੱਸ਼ਟ ਕਲਾਇਟ ਗਲਤੀ
+      go_to_root: ਰੂਟ 'ਤੇ ਜਾਓ
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable ਸੰਸਥਾ
+      request_result: ਬੇਨਤੀ ਦੇ ਨਤੀਜੇ
+      unprocessable_entity_description: ਚੰਗੀ-ਗਠਨ ਕੀਤਾ ਗਿਆ ਸੀ, ਪਰ ਅਰਥ ਗਲਤੀ ਕਾਰਨ, ਬਾਅਦ
+        ਵਿੱਚ ਕੀਤਾ ਜਾ ਕਰਨ ਲਈ ਅਸਮਰੱਥ ਸੀ
+      go_to_root: ਰੂਟ 'ਤੇ ਜਾਓ
+    not_found:
+      not_found: ਨਾ ਖੋਜੀ
+      request_result: ਬੇਨਤੀ ਦੇ ਨਤੀਜੇ
+      not_found_description: ਲੱਭਿਆ ਜਾ ਸਕਿਆ ਹੈ, ਪਰ ਭਵਿੱਖ ਵਿਚ ਉਪਲੱਬਧ ਹੋ ਸਕਦਾ ਹੈ
+      go_to_root: ਰੂਟ 'ਤੇ ਜਾਓ
+    forbidden:
+      forbidden: Forbidden
+      request_result: ਬੇਨਤੀ ਦੇ ਨਤੀਜੇ
+      forbidden_description: ਇੱਕ ਠੀਕ ਬੇਨਤੀ ਨੂੰ ਸੀ, ਪਰ ਸਰਵਰ ਇਸ ਨੂੰ ਕਰਨ ਲਈ ਜਵਾਬ ਦੇਣ
+        ਲਈ ਇਨਕਾਰ ਕਰ ਰਿਹਾ ਹੈ
+      go_to_root: ਰੂਟ 'ਤੇ ਜਾਓ
+    internal_server_error:
+      internal_server_error: ਅੰਦਰੂਨੀ ਸਰਵਰ ਗਲਤੀ
+      request_result: ਬੇਨਤੀ ਦੇ ਨਤੀਜੇ
+      internal_server_error_description: ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ. ਸਾਨੂੰ ਇਸ ਨੂੰ ਜਿੰਨੀ ਜਲਦੀ ਹੋ
+        ਸਕੇ ਦਾ ਹੱਲ ਹੋ ਜਾਵੇਗਾ.
+      go_to_root: ਰੂਟ 'ਤੇ ਜਾਓ
   devise:
     shared:
       links:
@@ -288,7 +379,6 @@ pa:
       signed_in: ਸਫਲਤਾਪੂਰਕ ਵਿਚ ਦਸਤਖਤ.
       signed_out: ਸਫਲਤਾਪੂਰਕ ਬਾਹਰ ਦਸਤਖਤ.
       new:
-        sign_in: ਦਾਖ਼ਲਾ
         password: ਪਾਸਵਰਡ
         remember_me: ਮੈਨੂੰ ਯਾਦ
         forgot_your_password: ਆਪਣਾ ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ ਹੋ?

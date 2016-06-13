@@ -2,6 +2,7 @@
 sr:
   github: Гитхуб
   bitbucket: Битбуцкет
+  gitlab: Гитлаб
   updated: ажуриран
   1_we_have_just_launched_our_service_title: Управо смо покренули наш сервис
   shared:
@@ -11,9 +12,11 @@ sr:
       projects: Пројекти
       issues: питања
       syncing_with_github: Синхронизација са гитхуб ...
+      syncing_with_gitlab: Синхронизација са Гитлаб ...
       syncing_with_bitbucket: Синхронизација са Битбуцкет ...
       new_issue: Нови број
       edit_project: измена пројекат
+      boards: форуми
     languages_select_modal:
       available_languages: Доступни језици
     user_edit_menu:
@@ -36,15 +39,21 @@ sr:
     new_issue_modal:
       new_issue: Нови број
     left_sidebar:
-      projects: Пројекти
+      boards: форуми
     right_sidebar:
       news: Новости
       all: Све
       read_more: Опширније
-    translations:
+    javascript_global_variables:
       select_column_tags: Селецт колона ознаке
       select_section_tags: Изаберите одељак ознаке
       select_issue_tags: Селецт издаје ознаке
+    email_signature:
+      info: информације
+      mailer: Маилер
+      technoelegance: Тецхноелеганце доо
+    pagination_link:
+      next_page: Следећа страна
   users:
     new:
       invite_user: Позови корисника
@@ -80,14 +89,17 @@ sr:
       hello: Поздрав
       here_some_of_your_statistics: Ево неких од ваших статистике
       projects: Пројекти
+      boards: форуми
   projects:
     index:
       projects: Пројекти
       new: Нова
-      sync_with_github: Синхронизација са ГитХуб
+      sync_with_github: Синхронизација са гитхуб
+      sync_with_gitlab: Синхронизација са Гитлаб
       sync_with_bitbucket: Синхронизација са Битбуцкет
       stop_sync_with_bitbucket: стоп синхронизација са Битбуцкет
-      stop_sync_with_github: стоп синхронизација са ГитХуб
+      stop_sync_with_github: стоп синхронизација са гитхуб
+      stop_sync_with_gitlab: стоп синхронизација са Гитлаб
     form:
       name: Име
       enter_project_name: Унесите назив пројекта
@@ -122,7 +134,13 @@ sr:
       column_tags: Цолумн ознаке
       column_order: Ордер
     show:
-      next_page: Следећа страна
+      project: Пројекат
+      related_boards: Релатед плоче
+      project_issues: питања Пројецт
+      project_users: Корисници пројекта
+      new: Нова
+    project_modal:
+      project: Пројекат
   issues:
     form:
       title: Наслов
@@ -135,6 +153,7 @@ sr:
       bitbucket_issue_id: Битбуцкет питање? Ид
       github_issue_id: Гитхуб питање? Ид
       github_issue_number: Гитхуб број проблем
+      project: Пројекат
     index:
       issues: питања
       sync_with_github: Синхронизација са ГитХуб
@@ -147,6 +166,8 @@ sr:
       edit_issue: измена питање
     new:
       new_issue: Нови број
+    issue_modal:
+      issue: Издање
   authentications:
     index:
       enabled_services: Омогућено услуге
@@ -172,6 +193,40 @@ sr:
       welcome_to_kanban_on_rails: Добродошли на Канбан на шинама
       welcome_about_text: Овде можете направити свој властити КАНБАН одбор и синхронизацију
         га са гитхуб или Битбуцкет
+  boards:
+    board_modal:
+      board: одбор
+    form:
+      name: Име
+      enter_board_name: Унесите име одбора
+      column_width: Колона ширина
+      column_height: Колона висина
+      columns: Колоне
+      add: Додај
+      sections: Секције
+      save: Сачувај
+      projects: Пројекти
+    section_fields:
+      section_name: Секција име
+      remove_section: Уклонити секција
+      section_tags: Члан ознаке
+      section_order: Ордер
+      or_include_all: Или укључују све?
+    column_fields:
+      column_name: Колона име
+      remove_column: Ремове колону
+      max_issues_count: Максимални број питања рачунати у колони
+      column_tags: Цолумн ознаке
+      column_order: Ордер
+    show:
+      next_page: Следећа страна
+    index:
+      boards: форуми
+      new: Нова
+    board:
+      board_users: корисника
+      edit: Мик
+      destroy: Дестрои
   pages:
     faq:
       faq: Често
@@ -205,6 +260,47 @@ sr:
         соурце библиотеке. Ми увек покушавамо да боље и побољшати наше услуге.
       partners_and_investors: Отворени смо за партнерство и желели бисмо да пронађу
         инвеститоре. Ако желите да сарађујете са нама контактирајте нас на партнерсхип@тецхноелеганце.цом
+  errors:
+    messages:
+      already_confirmed: је већ потврђена, молимо покушајте да се пријавите
+      confirmation_period_expired: треба да буде потврђен у% {периоду}, затражите
+        нови
+      expired: је истекао, затражите нови
+      not_found: нот фоунд
+      not_locked: није закључан
+      not_saved:
+        one: '1 грешка забрањено ово% {ресурса} буде спасен:'
+        other: "% {цоунт} грешке забрањене ово% {ресурс} од спасио:"
+    bad_request:
+      bad_request: Бад Рекуест
+      request_result: Упит резултат
+      bad_request_description: сервер може или неће да обради захтев услед грешке
+        привидне клијента
+      go_to_root: Го то роот
+    unprocessable_entity:
+      unprocessable_entity: Унпроцессабле ентитет
+      request_result: Упит резултат
+      unprocessable_entity_description: захтев је био добро формиран, али није био
+        у стању да прати због семантичких грешака
+      go_to_root: Го то роот
+    not_found:
+      not_found: Нот Фоунд
+      request_result: Упит резултат
+      not_found_description: Тражени ресурс није пронађен, али могу бити доступни
+        у будућности
+      go_to_root: Го то роот
+    forbidden:
+      forbidden: Форбидден
+      request_result: Упит резултат
+      forbidden_description: је захтев био валидан захтев, али сервер је одбио да
+        одговори на њу
+      go_to_root: Го то роот
+    internal_server_error:
+      internal_server_error: Интернал Сервер Еррор
+      request_result: Упит резултат
+      internal_server_error_description: Нешто није у реду. Ми ћемо га у најкраћем
+        могућем року поправити.
+      go_to_root: Го то роот
   devise:
     shared:
       links:

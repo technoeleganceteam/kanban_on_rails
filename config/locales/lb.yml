@@ -2,6 +2,7 @@
 lb:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: aktualiséiert
   1_we_have_just_launched_our_service_title: Mir hu just eise Service lancéiert
   shared:
@@ -11,9 +12,11 @@ lb:
       projects: Projetën
       issues: séng
       syncing_with_github: Synchroniséiert mat Github ...
+      syncing_with_gitlab: Synchroniséiert mat Gitlab ...
       syncing_with_bitbucket: Synchroniséiert mat Bitbucket ...
       new_issue: New Fro
       edit_project: Edit Projet
+      boards: Vizepresident
     languages_select_modal:
       available_languages: Disponibel Sproochen
     user_edit_menu:
@@ -37,15 +40,21 @@ lb:
     new_issue_modal:
       new_issue: New Fro
     left_sidebar:
-      projects: Projetën
+      boards: Vizepresident
     right_sidebar:
       news: Annonce
       all: All
       read_more: Weiderliesen méi
-    translations:
+    javascript_global_variables:
       select_column_tags: En Kolonn Tags
       select_section_tags: En Rubrik Tags
       select_issue_tags: En Thema Tags
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Nächst Säit
   users:
     new:
       invite_user: Benotzer Invitéiert
@@ -79,14 +88,17 @@ lb:
       hello: Moien
       here_some_of_your_statistics: Hei e puer vun Äre Statistiken
       projects: Projetën
+      boards: Vizepresident
   projects:
     index:
       projects: Projetën
       new: New
-      sync_with_github: Synchroniséiert mat github
-      sync_with_bitbucket: Synchroniséiert mat bitbucket
-      stop_sync_with_bitbucket: Stop synchroniséiert mat bitbucket
-      stop_sync_with_github: Stop synchroniséiert mat github
+      sync_with_github: Synchroniséiert mat Github
+      sync_with_gitlab: Synchroniséiert mat Gitlab
+      sync_with_bitbucket: Synchroniséiert mat Bitbucket
+      stop_sync_with_bitbucket: Stop synchroniséiert mat Bitbucket
+      stop_sync_with_github: Stop synchroniséiert mat Github
+      stop_sync_with_gitlab: Stop synchroniséiert mat Gitlab
     form:
       name: Numm
       enter_project_name: Gitt Projet Numm
@@ -119,7 +131,14 @@ lb:
       column_tags: Kolonn Tags
       column_order: Uerdnung
     show:
-      next_page: Nächst Säit
+      project: Project
+      related_boards: Contenu Conseils
+      project_info: Project Infoen
+      project_issues: Project Problemer
+      project_users: Project Benotzer
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -132,6 +151,7 @@ lb:
       bitbucket_issue_id: Bitbucket Fro id
       github_issue_id: Github Fro id
       github_issue_number: Github Thema Nummer
+      project: Project
     index:
       issues: Problemer
       sync_with_github: Synchroniséiert mat github
@@ -144,6 +164,8 @@ lb:
       edit_issue: Edit Fro
     new:
       new_issue: New Fro
+    issue_modal:
+      issue: Installatioun
   authentications:
     index:
       enabled_services: Ugeschalt Servicer
@@ -169,6 +191,38 @@ lb:
       welcome_to_kanban_on_rails: Wëllkomm Kanban op Schinne
       welcome_about_text: Dir hei Är eege Kanban Comité an synchroniséiert et mat
         Github oder Bitbucket schafe kënnen
+  boards:
+    board_modal:
+      board: Verwaltungsrot
+    form:
+      name: Numm
+      enter_board_name: Verwaltungsrot Numm Fëllt
+      column_width: Kolonn Breet
+      column_height: Kolonn Héicht
+      columns: Kolonnen
+      add: Foto
+      sections: Moment
+      save: späicheren
+      projects: Projetën
+    section_fields:
+      section_name: Section Numm
+      section_tags: Section Tags
+      section_order: Uerdnung
+      or_include_all: Oder och all?
+    column_fields:
+      column_name: Kolonn Numm
+      max_issues_count: Max Problemer zielen zu Kolonn
+      column_tags: Kolonn Tags
+      column_order: Uerdnung
+    show:
+      next_page: Nächst Säit
+    index:
+      boards: Vizepresident
+      new: New
+    board:
+      board_users: Benotzer
+      edit: Edit
+      destroy: Zerstéiert
   pages:
     faq:
       faq: FAQ
@@ -204,6 +258,47 @@ lb:
         ze verbesseren.
       partners_and_investors: Mir si fir Partnerschaft opgemaach a mir gären Investisseuren
         ze fannen. Wann Dir mat eis ze kooperéieren wéilt mellt eis um partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: scho bestätegt huet, weg an Ënnerschrëft
+      confirmation_period_expired: bannent% bestätegt gin {Period}, Demande weg eng
+        nei ee
+      expired: huet ofgelaaf, Demande weg eng nei ee
+      not_found: net fonnt
+      not_locked: war net gespaart
+      not_saved:
+        one: '1 Fehler verbueden dës% {Ressource} aus gerett ginn:'
+        other: "% {Grof} Feeler dëser% {Ressource} verbueden aus gerett ginn:"
+    bad_request:
+      bad_request: Bad ufroen
+      request_result: ufroen Resultat
+      bad_request_description: De Server kann net oder net d'Demande duerch eng visuell
+        Client Fehler wäert Prozess
+      go_to_root: zu root Go
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable virhuelen
+      request_result: ufroen Resultat
+      unprocessable_entity_description: D'Demande war gutt-Duch mä ass knapp wéinst
+        Schüler Feeler gefollegt ze ginn
+      go_to_root: zu root Go
+    not_found:
+      not_found: net fonnt
+      request_result: ufroen Resultat
+      not_found_description: D'ugefrote Ressource net fonnt ginn hätt awer vläicht
+        an der Zukunft sinn ginn
+      go_to_root: zu root Go
+    forbidden:
+      forbidden: verbueden
+      request_result: ufroen Resultat
+      forbidden_description: D'Demande war eng valabel Wonsch, mä de Server ass forcéiere
+        fir se ze äntweren
+      go_to_root: zu root Go
+    internal_server_error:
+      internal_server_error: Interne Server SkriptComment
+      request_result: ufroen Resultat
+      internal_server_error_description: eppes falsch. Mir wäerten se flécke sou séier
+        wéi méiglech.
+      go_to_root: zu root Go
   devise:
     shared:
       links:

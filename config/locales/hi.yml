@@ -2,6 +2,7 @@
 hi:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: अद्यतन
   1_we_have_just_launched_our_service_title: हम सिर्फ हमारी सेवा का शुभारंभ किया
   shared:
@@ -10,8 +11,10 @@ hi:
       projects: परियोजनाएं
       issues: मुद्दे
       syncing_with_github: Github के साथ सिंक ...
+      syncing_with_gitlab: Gitlab के साथ सिंक ...
       syncing_with_bitbucket: Bitbucket के साथ सिंक ...
       new_issue: नया मुद्दा
+      boards: बोर्डों
     languages_select_modal:
       available_languages: उपलब्ध भाषाओं
     user_edit_menu:
@@ -33,15 +36,21 @@ hi:
     new_issue_modal:
       new_issue: नया मुद्दा
     left_sidebar:
-      projects: परियोजनाएं
+      boards: बोर्डों
     right_sidebar:
       news: समाचार
       all: सभी
       read_more: और पढ़ें
-    translations:
+    javascript_global_variables:
       select_column_tags: का चयन
       select_section_tags: का चयन
       select_issue_tags: मुद्दा टैग का चयन करें
+    email_signature:
+      info: जानकारी
+      mailer: मेलर
+      technoelegance: Technoelegance लिमिटेड
+    pagination_link:
+      next_page: अगला पृष्ठ
   users:
     new:
       invite_user: उपयोगकर्ता को आमंत्रित करें
@@ -74,12 +83,11 @@ hi:
       hello: हैलो
       here_some_of_your_statistics: यहाँ अपने आँकड़ों के कुछ
       projects: परियोजनाएं
+      boards: बोर्डों
   projects:
     index:
       projects: परियोजनाएं
       new: न्यू
-      sync_with_github: GitHub के साथ सिंक
-      sync_with_bitbucket: bitbucket के साथ सिंक
     form:
       name: नाम
       enter_project_name: परियोजना का नाम दर्ज
@@ -114,7 +122,14 @@ hi:
       column_tags: स्तंभ टैग
       column_order: आदेश
     show:
-      next_page: अगला पृष्ठ
+      project: परियोजना
+      related_boards: संबंधित बोर्डों
+      project_info: परियोजना की जानकारी
+      project_issues: परियोजना मुद्दों
+      project_users: परियोजना उपयोगकर्ताओं
+      new: न्यू
+    project_modal:
+      project: परियोजना
   issues:
     form:
       title: शीर्षक
@@ -127,6 +142,7 @@ hi:
       bitbucket_issue_id: Bitbucket मुद्दा आईडी
       github_issue_id: Github मुद्दा आईडी
       github_issue_number: Github जारी संख्या
+      project: परियोजना
     index:
       issues: मुद्दों
       sync_with_github: GitHub के साथ सिंक
@@ -162,6 +178,40 @@ hi:
       welcome_to_kanban_on_rails: Kanban पर रूबी के लिए आपका स्वागत है
       welcome_about_text: आप Github या Bitbucket के साथ अपने ही Kanban बोर्ड और सिंक
         इसे बना सकते हैं
+  boards:
+    board_modal:
+      board: बोर्ड
+    form:
+      name: नाम
+      enter_board_name: बोर्ड नाम दर्ज करें
+      column_width: स्तंभ चौड़ाई
+      column_height: स्तंभ ऊंचाई
+      columns: कॉलम
+      add: जोड़ें
+      sections: धारा
+      save: सहेजें
+      projects: परियोजनाएं
+    section_fields:
+      section_name: अनुभाग का नाम
+      remove_section: निकालें अनुभाग
+      section_tags: धारा टैग
+      section_order: आदेश
+      or_include_all: या सभी शामिल हैं?
+    column_fields:
+      column_name: स्तंभ का नाम
+      remove_column: स्तंभ निकालें
+      max_issues_count: मैक्स मुद्दों कॉलम में गिनती
+      column_tags: स्तंभ टैग
+      column_order: आदेश
+    show:
+      next_page: अगला पृष्ठ
+    index:
+      boards: बोर्डों
+      new: न्यू
+    board:
+      board_users: उपयोगकर्ता
+      edit: संपादित करें
+      destroy: नष्ट
   pages:
     faq:
       faq: पूछे जाने वाले प्रश्न
@@ -197,6 +247,46 @@ hi:
       partners_and_investors: हम भागीदारी के लिए खोल रहे हैं और हम निवेशकों को खोजने
         के लिए करना चाहते हैं। आप हमारे साथ सहयोग करना चाहते हैं तो partnership@technoelegance.com
         पर संपर्क करें
+  errors:
+    messages:
+      already_confirmed: पहले से ही इस बात की पुष्टि की गई थी, में प्रवेश करने की
+        कोशिश करें
+      confirmation_period_expired: जरूरत% {} अवधि के भीतर इस बात की पुष्टि होने के
+        लिए, एक नया एक अनुरोध करें
+      expired: समाप्त हो गया है, एक नया एक अनुरोध करें
+      not_found: नहीं मिला
+      not_locked: बंद नहीं था
+      not_saved:
+        one: '1 त्रुटि सहेजे जाने से इस% {} संसाधन निषिद्ध:'
+        other: "% {} गिनती सहेजे जाने से इस% {} संसाधन निषिद्ध त्रुटियों:"
+    bad_request:
+      bad_request: गलत अनुरोध
+      request_result: अनुरोध परिणाम
+      bad_request_description: कारण एक स्पष्ट ग्राहक त्रुटि के लिए
+      go_to_root: जड़ तक जाने के
+    unprocessable_entity:
+      unprocessable_entity: संसाधन अयोग्य इकाई
+      request_result: अनुरोध परिणाम
+      unprocessable_entity_description: अच्छी तरह से बनाई थी, लेकिन अर्थ त्रुटियों
+        के कारण पीछा किया जा करने में असमर्थ था
+      go_to_root: जड़ तक जाने के
+    not_found:
+      not_found: नहीं मिला
+      request_result: अनुरोध परिणाम
+      not_found_description: नहीं पाया जा सका, लेकिन भविष्य में उपलब्ध हो सकता है
+      go_to_root: जड़ तक जाने के
+    forbidden:
+      forbidden: निषिद्ध
+      request_result: अनुरोध परिणाम
+      forbidden_description: एक वैध अनुरोध किया गया था, लेकिन सर्वर यह करने के लिए
+        प्रतिक्रिया करने के लिए मना कर रही है
+      go_to_root: जड़ तक जाने के
+    internal_server_error:
+      internal_server_error: आंतरिक सर्वर त्रुटि
+      request_result: अनुरोध परिणाम
+      internal_server_error_description: कुछ गलत हो गया। हम इसे जितनी जल्दी हो सके
+        ठीक कर देंगे।
+      go_to_root: जड़ तक जाने के
   devise:
     shared:
       links:

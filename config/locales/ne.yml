@@ -2,6 +2,7 @@
 ne:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: अद्यावधिक
   1_we_have_just_launched_our_service_title: हामी सिर्फ हाम्रो सेवा शुरू गरेको छ
   shared:
@@ -11,6 +12,7 @@ ne:
       projects: परियोजनाहरु
       issues: मुद्दा
       new_issue: नयाँ मुद्दा
+      boards: बोर्डहरू
     languages_select_modal:
       available_languages: उपलब्ध भाषाहरू
     user_edit_menu:
@@ -31,15 +33,21 @@ ne:
     new_issue_modal:
       new_issue: नयाँ मुद्दा
     left_sidebar:
-      projects: परियोजनाहरु
+      boards: बोर्डहरू
     right_sidebar:
       news: समाचार
       all: सबै
       read_more: पढ्नुहोस् थप
-    translations:
+    javascript_global_variables:
       select_column_tags: चयन
       select_section_tags: चयन
       select_issue_tags: मुद्दा ट्याग चयन गर्नुहोस्
+    email_signature:
+      info: जानकारी
+      mailer: मेलर
+      technoelegance: Technoelegance लिमिटेड
+    pagination_link:
+      next_page: अर्को पृष्ठ
   users:
     new:
       invite_user: प्रयोगकर्ता निमन्त्रणा
@@ -73,6 +81,7 @@ ne:
       hello: नमस्कार
       here_some_of_your_statistics: यहाँ केही आफ्नो तथ्याङ्क को
       projects: परियोजनाहरु
+      boards: बोर्डहरू
   projects:
     index:
       projects: परियोजनाहरु
@@ -111,7 +120,14 @@ ne:
       column_tags: स्तम्भ ट्याग
       column_order: आदेश
     show:
-      next_page: अर्को पृष्ठ
+      project: परियोजना
+      related_boards: सम्बन्धित समितिबाट
+      project_info: परियोजना जानकारी
+      project_issues: परियोजना मुद्दाहरू
+      project_users: परियोजना प्रयोगकर्ता
+      new: नयाँ
+    project_modal:
+      project: परियोजना
   issues:
     form:
       title: शीर्षक
@@ -124,6 +140,7 @@ ne:
       bitbucket_issue_id: Bitbucket मुद्दा आईडी
       github_issue_id: Github मुद्दा आईडी
       github_issue_number: Github मुद्दा नम्बर
+      project: परियोजना
     index:
       issues: मुद्दाहरू
       new: नयाँ
@@ -132,6 +149,8 @@ ne:
       edit: सम्पादन गर्नुहोस्
     new:
       new_issue: नयाँ मुद्दा
+    issue_modal:
+      issue: मुद्दा
   authentications:
     index:
       enabled_services: सक्षम सेवाहरू
@@ -155,6 +174,40 @@ ne:
     index:
       welcome_to_kanban_on_rails: स्वागत Kanban मा पटरियों गर्न
       welcome_about_text: यहाँ
+  boards:
+    board_modal:
+      board: बोर्ड
+    form:
+      name: नाम
+      enter_board_name: बोर्ड नाम प्रविष्ट गर्नुहोस्
+      column_width: स्तम्भ चौडाइ
+      column_height: स्तम्भ उचाइ
+      columns: स्तम्भहरू
+      add: एड
+      sections: खण्डहरू
+      save: बचत
+      projects: परियोजनाहरु
+    section_fields:
+      section_name: खण्ड नाम
+      remove_section: हटान खण्ड
+      section_tags: धारा ट्याग
+      section_order: आदेश
+      or_include_all: अथवा सबै समावेश?
+    column_fields:
+      column_name: स्तम्भ नाम
+      remove_column: स्तम्भ हटाउने
+      max_issues_count: अधिकतम मुद्दाहरू स्तम्भ मा गणना
+      column_tags: स्तम्भ ट्याग
+      column_order: आदेश
+    show:
+      next_page: अर्को पृष्ठ
+    index:
+      boards: बोर्डहरू
+      new: नयाँ
+    board:
+      board_users: प्रयोगकर्ता
+      edit: सम्पादन गर्नुहोस्
+      destroy: नष्ट
   pages:
     faq:
       faq: सोधिने प्रश्न
@@ -190,6 +243,45 @@ ne:
       partners_and_investors: हामी साझेदारीको लागि खोलिएका छन् र हामी लगानीकर्ताले
         पाउन चाहन्छ। तपाईं हाम्रो साथ सहयोग गर्न चाहनुहुन्छ भने partnership@technoelegance.com
         हामीलाई सम्पर्क गर्नुहोस्
+  errors:
+    messages:
+      already_confirmed: पहिले नै पुष्टि भएको थियो, कृपया साइन इन गर्ने प्रयास
+      confirmation_period_expired: "% {अवधि} भित्र पुष्टि गर्न आवश्यक छ, कृपया एउटा
+        नयाँ अनुरोध"
+      expired: समाप्त भएको छ, कृपया एउटा नयाँ अनुरोध
+      not_found: फेला परेन
+      not_locked: बन्द गरिएको थिएन
+      not_saved:
+        one: '1 त्रुटि बचत गरिएको यो% {स्रोत} निषेधित:'
+        other: "% {गणना} सुरक्षित हुनबाट यो% {स्रोत} निषेधित त्रुटिहरू:"
+    bad_request:
+      bad_request: खराब अनुरोध
+      request_result: अनुरोध परिणाम
+      bad_request_description: कारण स्पष्ट ग्राहक त्रुटि
+      go_to_root: मूल जानुहोस्
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable निकाय
+      request_result: अनुरोध परिणाम
+      unprocessable_entity_description: अनुरोध राम्ररी गठन भएको थियो तर कारण जनक त्रुटिहरू
+        गर्न अनुगमन गर्न असमर्थ थियो
+      go_to_root: मूल जानुहोस्
+    not_found:
+      not_found: फेला परेन
+      request_result: अनुरोध परिणाम
+      not_found_description: फेला गर्न सकिएन तर भविष्यमा उपलब्ध हुन सक्छ
+      go_to_root: मूल जानुहोस्
+    forbidden:
+      forbidden: निषेधित
+      request_result: अनुरोध परिणाम
+      forbidden_description: अनुरोध मान्य अनुरोध थियो, तर सर्भरले यो प्रतिक्रिया इन्कार
+        छ
+      go_to_root: मूल जानुहोस्
+    internal_server_error:
+      internal_server_error: आन्तरिक सर्भर त्रुटि
+      request_result: अनुरोध परिणाम
+      internal_server_error_description: केही गल्ती भयो। हामी यसलाई सकेसम्म चाँडो
+        समाधान हुनेछ।
+      go_to_root: मूल जानुहोस्
   devise:
     shared:
       links:

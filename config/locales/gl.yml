@@ -2,6 +2,7 @@
 gl:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: gitlab
   updated: actualizada
   1_we_have_just_launched_our_service_title: Acabamos de publicar o noso servizo
   shared:
@@ -11,9 +12,11 @@ gl:
       projects: Proxectos
       issues: Issues
       syncing_with_github: Sync co GitHub ...
+      syncing_with_gitlab: sincronización con gitlab ...
       syncing_with_bitbucket: sincronización con Bitbucket ...
       new_issue: Nova edición
       edit_project: Editar proxecto
+      boards: Foros
     languages_select_modal:
       available_languages: Linguas dispoñibles
     user_edit_menu:
@@ -36,15 +39,21 @@ gl:
     new_issue_modal:
       new_issue: Nova edición
     left_sidebar:
-      projects: Proxectos
+      boards: Foros
     right_sidebar:
       news: Novas
       all: Todo
       read_more: Ler máis
-    translations:
+    javascript_global_variables:
       select_column_tags: Seleccionar etiquetas columna
       select_section_tags: Seleccione marcas de sección
       select_issue_tags: Seleccionar etiquetas emisión
+    email_signature:
+      info: Información
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd
+    pagination_link:
+      next_page: Páxina seguinte
   users:
     new:
       invite_user: Invitar usuario
@@ -79,14 +88,17 @@ gl:
       hello: Ola
       here_some_of_your_statistics: Aquí algunhas das súas estatísticas
       projects: Proxectos
+      boards: Foros
   projects:
     index:
       projects: Proxectos
       new: Nova
-      sync_with_github: sincronización con GitHub
-      sync_with_bitbucket: sincronización con bitbucket
-      stop_sync_with_bitbucket: Deter a sincronización con bitbucket
-      stop_sync_with_github: Deter a sincronización con GitHub
+      sync_with_github: Sync co GitHub
+      sync_with_gitlab: sincronización con gitlab
+      sync_with_bitbucket: sincronización con Bitbucket
+      stop_sync_with_bitbucket: Deter a sincronización con Bitbucket
+      stop_sync_with_github: Deter a sincronización co GitHub
+      stop_sync_with_gitlab: Deter a sincronización con gitlab
     form:
       name: Nome
       enter_project_name: Introduza o nome do proxecto
@@ -114,7 +126,13 @@ gl:
       column_tags: etiquetas Columna
       column_order: Order
     show:
-      next_page: Páxina seguinte
+      project: Proxecto
+      related_boards: placas Relacionados
+      project_issues: problemas do proxecto
+      project_users: Os usuarios do proxecto
+      new: Nova
+    project_modal:
+      project: Proxecto
   issues:
     form:
       title: Título
@@ -127,6 +145,7 @@ gl:
       bitbucket_issue_id: Bitbucket problema id
       github_issue_id: GitHub problema id
       github_issue_number: número de emisión GitHub
+      project: Proxecto
     index:
       issues: cuestións
       sync_with_github: sincronización con GitHub
@@ -139,6 +158,8 @@ gl:
       edit_issue: Editar asunto
     new:
       new_issue: Nova edición
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: servizos habilitados
@@ -164,6 +185,35 @@ gl:
       welcome_to_kanban_on_rails: Benvido ao Kanban On Rails
       welcome_about_text: Aquí pode crear a súa propia tarxeta Kanban e sincronizalo
         lo co GitHub ou Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Nome
+      enter_board_name: Inserir o nome do bordo
+      columns: Columnas
+      add: Add
+      sections: Seccións
+      save: Gardar
+      projects: Proxectos
+    section_fields:
+      section_tags: marcas de sección
+      section_order: Order
+      or_include_all: ou incluír todos?
+    column_fields:
+      remove_column: Eliminar columna
+      max_issues_count: cuestións Max contar na columna
+      column_tags: etiquetas Columna
+      column_order: Order
+    show:
+      next_page: Páxina seguinte
+    index:
+      boards: Foros
+      new: Nova
+    board:
+      board_users: Usuarios
+      edit: Editar
+      destroy: Destruír
   pages:
     faq:
       faq: FAQ
@@ -197,6 +247,41 @@ gl:
         de código aberto. Sempre tentar obter mellor e mellorar o noso servizo.
       partners_and_investors: Estamos abertos a colaboracións e queremos atopar investimentos.
         Se desexa cooperar coa xente, por favor contacte connosco en partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: xa se confirmou, por favor probe facer login
+      confirmation_period_expired: debe ser confirmado dentro% {período}, por favor,
+        solicitar un novo
+      expired: expirou, por favor solicitar un novo
+      not_found: Non se atopou
+      not_locked: non estaba protexida
+      not_saved:
+        one: '1 erro prohibido este% {recurso} de ser gardado:'
+        other: "% {count} erros prohibidas este% {recurso} de ser gardado:"
+    bad_request:
+      bad_request_description: O servidor non pode ou non pode procesar a petición
+        debido a un erro cliente aparente
+      go_to_root: Ir raíz
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entidade
+      unprocessable_entity_description: A petición foi ben formado, pero non puido
+        ser seguido por erros semánticos
+      go_to_root: Ir raíz
+    not_found:
+      not_found: Non se atopou
+      not_found_description: O recurso solicitado non se atopou, pero poden estar
+        dispoñibles no futuro
+      go_to_root: Ir raíz
+    forbidden:
+      forbidden: Prohibida
+      forbidden_description: A petición foi unha proposta válida, pero o servidor
+        está rexeitando a responder a ela
+      go_to_root: Ir raíz
+    internal_server_error:
+      internal_server_error: Internal Server Error
+      internal_server_error_description: Algo deu mal. Imos resolve-lo o máis axiña
+        posible.
+      go_to_root: Ir raíz
   devise:
     shared:
       links:

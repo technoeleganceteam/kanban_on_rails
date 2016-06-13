@@ -2,6 +2,7 @@
 wo:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: cập nhật
   1_we_have_just_launched_our_service_title: Chúng tôi đã vừa tung ra dịch vụ của
     chúng tôi
@@ -12,9 +13,11 @@ wo:
       projects: dự án
       issues: vấn đề
       syncing_with_github: Sync với Github ...
+      syncing_with_gitlab: Sync với Gitlab ...
       syncing_with_bitbucket: Sync với Bitbucket ...
       new_issue: vấn đề mới
       edit_project: Chỉnh sửa dự án
+      boards: Ban
     languages_select_modal:
       available_languages: Ngôn ngữ có sẵn
     user_edit_menu:
@@ -36,14 +39,22 @@ wo:
       edit_project: Chỉnh sửa dự án
     new_issue_modal:
       new_issue: vấn đề mới
+    left_sidebar:
+      boards: Ban
     right_sidebar:
       news: Tin tức
       all: Tất cả
       read_more: Đọc thêm
-    translations:
+    javascript_global_variables:
       select_column_tags: Chọn thẻ cột
       select_section_tags: Chọn thẻ phần
       select_issue_tags: Chọn thẻ phát hành
+    email_signature:
+      info: Thông tin
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Trang tiếp theo
   users:
     new:
       invite_user: Mời người dùng
@@ -76,13 +87,16 @@ wo:
     dashboard:
       hello: Xin chào
       here_some_of_your_statistics: Dưới đây một số số liệu thống kê của bạn
+      boards: Ban
   projects:
     index:
       new: mới
-      sync_with_github: Sync với github
-      sync_with_bitbucket: Sync với bitbucket
-      stop_sync_with_bitbucket: Dừng đồng bộ hóa với bitbucket
-      stop_sync_with_github: Dừng đồng bộ hóa với github
+      sync_with_github: Sync với Github
+      sync_with_gitlab: Sync với Gitlab
+      sync_with_bitbucket: Sync với Bitbucket
+      stop_sync_with_bitbucket: Dừng đồng bộ hóa với Bitbucket
+      stop_sync_with_github: Dừng đồng bộ hóa với Github
+      stop_sync_with_gitlab: Dừng đồng bộ hóa với Gitlab
     form:
       name: Tên
       enter_project_name: Nhập tên dự án
@@ -110,7 +124,10 @@ wo:
       column_tags: thẻ Cột
       column_order: thứ tự
     show:
-      next_page: Trang tiếp theo
+      related_boards: bảng liên quan
+      project_issues: vấn đề dự án
+      project_users: dự án
+      new: mới
   issues:
     form:
       title: Tiêu đề
@@ -135,6 +152,8 @@ wo:
       edit_issue: Sửa vấn đề
     new:
       new_issue: vấn đề mới
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: dịch vụ Bật
@@ -161,6 +180,34 @@ wo:
       welcome_to_kanban_on_rails: Chào mừng bạn đến Kanban On Rails
       welcome_about_text: Ở đây bạn có thể tạo bảng Kanban riêng của bạn và đồng bộ
         nó với Github hoặc Bitbucket
+  boards:
+    board_modal:
+      board: Ban
+    form:
+      name: Tên
+      enter_board_name: Nhập tên bảng
+      columns: Cột
+      add: Add
+      sections: mục
+      save: Lưu
+    section_fields:
+      section_tags: thẻ mục
+      section_order: thứ tự
+      or_include_all: Hoặc bao gồm tất cả?
+    column_fields:
+      remove_column: Xóa cột
+      max_issues_count: vấn đề Max đếm trong cột
+      column_tags: thẻ Cột
+      column_order: thứ tự
+    show:
+      next_page: Trang tiếp theo
+    index:
+      boards: Ban
+      new: mới
+    board:
+      board_users: Người dùng
+      edit: Sửa
+      destroy: Destroy
   pages:
     faq:
       faq: Hỏi đáp
@@ -197,6 +244,41 @@ wo:
       partners_and_investors: Chúng tôi đang mở ra cho quan hệ đối tác và chúng tôi
         muốn tìm nhà đầu tư. Nếu bạn muốn hợp tác với chúng tôi xin vui lòng liên
         hệ với chúng tôi tại partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: đã được xác nhận, hãy thử đăng nhập
+      confirmation_period_expired: cần được xác nhận trong vòng% {} kỳ, vui lòng yêu
+        cầu một cái mới
+      expired: đã hết hạn, hãy yêu cầu một cái mới
+      not_found: không tìm thấy
+      not_locked: không bị khóa
+      not_saved:
+        one: '1 lỗi bị cấm% này {} nguồn từ việc lưu lại:'
+        other: "% {count} lỗi cấm% {} tài nguyên này được cứu:"
+    bad_request:
+      bad_request: Yêu cầu Xấu
+      bad_request_description: Các máy chủ không thể hoặc sẽ không xử lý các yêu cầu
+        do lỗi của khách hàng rõ ràng
+      go_to_root: Tới gốc
+    unprocessable_entity:
+      unprocessable_entity: Không thể xử Entity
+      unprocessable_entity_description: Yêu cầu đã được hình thành nhưng đã không
+        thể được theo sau do lỗi ngữ nghĩa
+      go_to_root: Tới gốc
+    not_found:
+      not_found: Không tìm thấy
+      not_found_description: Tài nguyên yêu cầu không thể được tìm thấy, nhưng có
+        thể có sẵn trong tương lai
+      go_to_root: Tới gốc
+    forbidden:
+      forbidden_description: Yêu cầu là một yêu cầu hợp lệ, nhưng máy chủ từ chối
+        không đáp ứng với nó
+      go_to_root: Tới gốc
+    internal_server_error:
+      internal_server_error: nội Server Error
+      internal_server_error_description: Một cái gì đó đã đi sai. Chúng tôi sẽ sửa
+        chữa nó càng sớm càng tốt.
+      go_to_root: Tới gốc
   devise:
     shared:
       links:

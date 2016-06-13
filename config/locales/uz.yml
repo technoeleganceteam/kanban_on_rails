@@ -2,6 +2,7 @@
 uz:
   github: Github
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: yangilangan
   shared:
     navbar:
@@ -11,6 +12,7 @@ uz:
       issues: masalalar
       new_issue: Yangi masala
       edit_project: Edit loyiha
+      boards: Boards
     languages_select_modal:
       available_languages: Mavjud tillar
     user_edit_menu:
@@ -33,15 +35,21 @@ uz:
     new_issue_modal:
       new_issue: Yangi masala
     left_sidebar:
-      projects: loyihalari
+      boards: Boards
     right_sidebar:
       news: Yangiliklar
       all: Barcha
       read_more: Davomi
-    translations:
+    javascript_global_variables:
       select_column_tags: tanlang ustun teglar
       select_section_tags: tanlang qism teglar
       select_issue_tags: tanlang masala teglar
+    email_signature:
+      info: ma'lumot
+      mailer: Mailer
+      technoelegance: Technoelegance Ltd.
+    pagination_link:
+      next_page: Keyingi sahifa
   users:
     form:
       name: nomi
@@ -68,6 +76,7 @@ uz:
     dashboard:
       hello: Salom
       projects: loyihalari
+      boards: Boards
   projects:
     index:
       projects: loyihalari
@@ -103,7 +112,14 @@ uz:
       column_tags: Ustun teglar
       column_order: tartibi
     show:
-      next_page: Keyingi sahifa
+      project: loyihasi
+      related_boards: Related platalari
+      project_info: Project info
+      project_issues: Project masalalar
+      project_users: Project foydalanuvchilar
+      new: Yangi
+    project_modal:
+      project: loyihasi
   issues:
     form:
       title: nomi
@@ -114,6 +130,7 @@ uz:
       bitbucket_issue_id: Bitbucket masala id
       github_issue_id: Github masala id
       github_issue_number: Github masala soni
+      project: loyihasi
     index:
       issues: masalalar
       new: Yangi
@@ -124,6 +141,8 @@ uz:
       edit_issue: Edit masala
     new:
       new_issue: Yangi masala
+    issue_modal:
+      issue: son
   authentications:
     index:
       enabled_services: Yoqilgan xizmatlar
@@ -140,6 +159,38 @@ uz:
       technoelegance_team: Technoelegance Team
     index:
       read_more: Davomi
+  boards:
+    board_modal:
+      board: kengashi
+    form:
+      name: nomi
+      column_width: Ustun kengligi
+      column_height: Ustun balandligi
+      columns: ustunlar
+      add: Add
+      sections: Bo'limlar
+      save: saqlash
+      projects: loyihalari
+    section_fields:
+      section_name: Bo'lim nomi
+      remove_section: O'chirish qism
+      section_tags: Bo'lim teglar
+      section_order: tartibi
+      or_include_all: Yoki barcha o'z ichiga oladi?
+    column_fields:
+      column_name: Ustun nomi
+      max_issues_count: Max masalalar ustuniga hisoblash
+      column_tags: Ustun teglar
+      column_order: tartibi
+    show:
+      next_page: Keyingi sahifa
+    index:
+      boards: Boards
+      new: Yangi
+    board:
+      board_users: foydalanuvchilar
+      edit: Edit
+      destroy: yo'q
   pages:
     faq:
       faq: FAQ
@@ -161,6 +212,39 @@ uz:
       partners_and_investors: Biz sheriklik uchun ochilgan va biz sarmoyadorlar topish
         istardim. Biz bilan hamkorlik qilmoqchiman, agar partnership@technoelegance.com
         bizga murojaat qiling
+  errors:
+    messages:
+      already_confirmed: allaqachon tasdiqlangan, urinib ko'ring iltimos
+      confirmation_period_expired: "% {davri} doirasida tasdiqlangan bo'lishi kerak,
+        yangisini talab qiling"
+      expired: ", yangisini talab qiling"
+      not_found: topilmadi
+      not_locked: qulflangan emas edi
+      not_saved:
+        one: '1 xato najot topmagan bu% {resurs} taqiqlanadi:'
+        other: "% saqlanadi bu% {resurs} taqiqlanadi xatolarni {hisoblash}:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: talab natija
+      go_to_root: ildizi o'tish
+    unprocessable_entity:
+      unprocessable_entity: Unprocessable Entity
+      request_result: talab natija
+      go_to_root: ildizi o'tish
+    not_found:
+      not_found: topilmadi
+      request_result: talab natija
+      go_to_root: ildizi o'tish
+    forbidden:
+      forbidden: Man
+      request_result: talab natija
+      go_to_root: ildizi o'tish
+    internal_server_error:
+      internal_server_error: Ichki Server xato
+      request_result: talab natija
+      internal_server_error_description: Nimadir noto'g'ri ketdi. Biz imkon qadar
+        tezroq uni tuzatish.
+      go_to_root: ildizi o'tish
   devise:
     shared:
       links:

@@ -2,6 +2,7 @@
 sl:
   github: GitHub
   bitbucket: Bitbucket
+  gitlab: Gitlab
   updated: posodobljeni
   1_we_have_just_launched_our_service_title: Pravkar smo začeli naše storitve
   shared:
@@ -11,9 +12,11 @@ sl:
       projects: Projekti
       issues: vprašanja
       syncing_with_github: Sync z GitHub ...
+      syncing_with_gitlab: Sync z Gitlab ...
       syncing_with_bitbucket: Sync z Bitbucket ...
       new_issue: Nova številka
       edit_project: Uredi projekt
+      boards: plošče
     languages_select_modal:
       available_languages: Razpoložljivi jeziki
     user_edit_menu:
@@ -36,15 +39,21 @@ sl:
     new_issue_modal:
       new_issue: Nova številka
     left_sidebar:
-      projects: Projekti
+      boards: plošče
     right_sidebar:
       news: novice
       all: Vsi
       read_more: Preberi več
-    translations:
+    javascript_global_variables:
       select_column_tags: Izberite oznake stolpcev
       select_section_tags: Izberite oddelek oznake
       select_issue_tags: Izberite izda oznake
+    email_signature:
+      info: Info
+      mailer: Mailer
+      technoelegance: Technoelegance doo
+    pagination_link:
+      next_page: Naslednja stran
   users:
     new:
       invite_user: Povabi uporabnika
@@ -67,7 +76,7 @@ sl:
       save: Shrani
     settings:
       change_password: Sprememba gesla
-      interface_language: vmesnik jezik
+      interface_language: jezik vmesnika
       submit: Pošlji
     password_form:
       new_password: Novo geslo
@@ -80,14 +89,17 @@ sl:
       hello: Hello
       here_some_of_your_statistics: Tukaj nekaj statističnimi podatki
       projects: Projekti
+      boards: plošče
   projects:
     index:
       projects: Projekti
       new: New
       sync_with_github: Sinhronizacija z GitHub
-      sync_with_bitbucket: Sinhronizacija z bitbucket
-      stop_sync_with_bitbucket: Stop sinhronizacijo z bitbucket
+      sync_with_gitlab: Sinhronizacija z Gitlab
+      sync_with_bitbucket: Sinhronizacija z Bitbucket
+      stop_sync_with_bitbucket: Stop sinhronizacijo z Bitbucket
       stop_sync_with_github: Stop sinhronizacijo z GitHub
+      stop_sync_with_gitlab: Stop sinhronizacijo z Gitlab
     form:
       name: Ime
       enter_project_name: Vnesite ime projekta
@@ -115,7 +127,13 @@ sl:
       column_tags: stolpec oznake
       column_order: red
     show:
-      next_page: Naslednja stran
+      project: Project
+      related_boards: Podobni plošče
+      project_issues: vprašanja projekta
+      project_users: uporabniki projekta
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Naslov
@@ -128,6 +146,7 @@ sl:
       bitbucket_issue_id: Bitbucket vprašanje id
       github_issue_id: GitHub vprašanje id
       github_issue_number: GitHub številka izdaje
+      project: Project
     index:
       issues: vprašanja
       sync_with_github: Sinhronizacija z GitHub
@@ -140,6 +159,8 @@ sl:
       edit_issue: Edit vprašanje
     new:
       new_issue: Nova številka
+    issue_modal:
+      issue: Issue
   authentications:
     index:
       enabled_services: Omogočeni storitve
@@ -165,6 +186,35 @@ sl:
       welcome_to_kanban_on_rails: Dobrodošli Kanban Na tirih
       welcome_about_text: Tukaj lahko ustvarite svojo Kanban desko in sinhronizacijo
         jo s GitHub ali Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Ime
+      enter_board_name: Vnesite ime plošče
+      columns: Stolpci
+      add: Dodaj
+      sections: oddelki
+      save: Shrani
+      projects: Projekti
+    section_fields:
+      section_tags: Oddelek oznake
+      section_order: red
+      or_include_all: Ali vključuje vse?
+    column_fields:
+      remove_column: Odstrani stolpec
+      max_issues_count: Max vprašanja računajo v stolpcu
+      column_tags: stolpec oznake
+      column_order: red
+    show:
+      next_page: Naslednja stran
+    index:
+      boards: plošče
+      new: New
+    board:
+      board_users: Uporabniki
+      edit: Uredi
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ
@@ -198,6 +248,46 @@ sl:
         knjižnice vir. Vedno se trudimo, da bi dobili boljši in izboljšati naše storitve.
       partners_and_investors: Smo odprta za partnerstvo in bi radi, da bi našli investitorje.
         Če želite sodelovati z nami, nam pišite na partnership@technoelegance.com
+  errors:
+    messages:
+      already_confirmed: bil že potrjen, se poskusite prijaviti
+      confirmation_period_expired: mora biti potrjena v% {obdobje}, zahtevajte novo
+      expired: je potekel, zahtevajte novo
+      not_found: ni bilo mogoče najti
+      not_locked: ni zaklenjena
+      not_saved:
+        one: '1 napaka prepovedati ta% {virov} ni bilo mogoče shraniti:'
+        other: "% {count} napak prepovedanih to% {vir} ni bilo mogoče shraniti:"
+    bad_request:
+      bad_request: Bad Request
+      request_result: Zahteva rezultat
+      bad_request_description: Strežnik ne more ali ne bo obravnavala zahtevek zaradi
+        očitne napake strank
+      go_to_root: Pojdi na korenu
+    unprocessable_entity:
+      unprocessable_entity: mogoče obdelati entitet
+      request_result: Zahteva rezultat
+      unprocessable_entity_description: Zahtevek je bil oblikovan, vendar ni mogel,
+        da je treba upoštevati zaradi semantičnih napak
+      go_to_root: Pojdi na korenu
+    not_found:
+      not_found: ni bilo mogoče najti
+      request_result: Zahteva rezultat
+      not_found_description: Zahtevani vir ni bilo mogoče najti, vendar morda na voljo
+        v prihodnosti
+      go_to_root: Pojdi na korenu
+    forbidden:
+      forbidden: Forbidden
+      request_result: Zahteva rezultat
+      forbidden_description: Zahteva je bila veljavna zahteva, vendar pa je strežnik
+        noče odgovoriti nanj
+      go_to_root: Pojdi na korenu
+    internal_server_error:
+      internal_server_error: Notranja napaka strežnika
+      request_result: Zahteva rezultat
+      internal_server_error_description: Nekaj ​​je šlo narobe. Bomo popraviti to
+        v najkrajšem možnem času.
+      go_to_root: Pojdi na korenu
   devise:
     shared:
       links:
