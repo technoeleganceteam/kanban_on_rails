@@ -141,8 +141,6 @@ class Issue < ActiveRecord::Base
     connection.issue_order ||= column.max_order(section) + 1
 
     connection.column_id = column.id
-
-    connection.save
   end
 
   def check_section_connections
