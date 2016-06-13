@@ -56,6 +56,8 @@ window.init_tags = ->
           page: params.page
         }
       processResults: (data, params) ->
+        params.page = params.page || 1
+
         { results: data.results, pagination: { more: (params.page * 25) < data.total_count } }
 
   $('.user_projects').select2
@@ -70,6 +72,8 @@ window.init_tags = ->
           page: params.page
         }
       processResults: (data, params) ->
+        params.page = params.page || 1
+
         { results: data.results, pagination: { more: (params.page * 25) < data.total_count } }
 
 window.init_sortable = ->
