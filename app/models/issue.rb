@@ -138,11 +138,11 @@ class Issue < ActiveRecord::Base
     connection = issue_to_section_connections.where(:board_id => column.board_id, :section_id => section.id).
       first_or_initialize
 
-    connection.issue_order = column.max_order(section) + 1
+    connection.issue_order ||= column.max_order(section) + 1
 
     connection.column_id = column.id
 
-    self.issue_to_section_connections << connection
+    connection.save
   end
 
   def check_section_connections
