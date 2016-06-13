@@ -146,6 +146,6 @@ class Issue < ActiveRecord::Base
   end
 
   def check_section_connections
-    assign_issue_to_section_connections    
+    assign_issue_to_section_connections if tags_changed?   
   end
 end
