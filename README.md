@@ -69,6 +69,8 @@ If you'd like to integrate with your own Gitlab server, first you must deploy th
 After local installation you can run specs with command ```rake spec```
 ### How to contribute
 Fork this repository, create a branch with some feature or bug fix, ensure that all tests are passed by running command ```rake spec``` push your branch and then create Pull Request for this repository.
+### Support the project
+We are looking for investors or partners. If you'd like to cooperate with us or invest to the project, please contact us at partnership@technoelegance.com or kopylov.german@gmail.com
 ### Licence
 MIT License
 
