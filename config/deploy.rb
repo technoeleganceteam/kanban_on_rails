@@ -51,12 +51,4 @@ namespace :deploy do
       end
     end
   end
-
-  after :restart, :upgrade_boards do
-    on roles(:web), :in => :groups, :limit => 3, :wait => 10 do
-      within release_path do
-        execute :rake, 'upgrade_boards'
-      end
-    end
-  end
 end
