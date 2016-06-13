@@ -10,6 +10,7 @@
 - **Integration with Github, Bitbucket and Gitlab.** Your projects and issues can be synced with these services. All changes with issues will be synced via webhooks and api.
 - **Inviting users to your projects** You can invite user that has no Github, Bitbucket or Gitlab account to your project as manager for example, so he will not see your project code but he will see your issues.
 - **Real-time integration** You can see all changes in real time via websockets. We use great rails framework Action Cable for this. 
+- **Multi-project boards** You can create board with multiple projects(even from Gitlab or Github together)
 - **Multi-language** Service is translated  more than 70 languages.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
 
