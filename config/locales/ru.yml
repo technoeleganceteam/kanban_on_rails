@@ -14,6 +14,7 @@ ru:
       syncing_with_bitbucket: Синхронизация с Bitbucket ...
       new_issue: Новая задача
       edit_project: Изменить проект
+      boards: Канбан-доски
     languages_select_modal:
       available_languages: Доступные языки
     user_edit_menu:
@@ -36,12 +37,12 @@ ru:
     new_issue_modal:
       new_issue: Новая задача
     left_sidebar:
-      projects: Проекты
+      boards: Канбан-доски
     right_sidebar:
       news: Новости
       all: Все
       read_more: Подробнее
-    translations:
+    javascript_global_variables:
       select_column_tags: Выберите теги столбцов
       select_section_tags: Выберите теги раздела
       select_issue_tags: Выберите теги задачи
@@ -79,6 +80,7 @@ ru:
       hello: Добро пожаловать
       here_some_of_your_statistics: Вот немного вашей статистики
       projects: Проекты
+      boards: Канбан-доски
   projects:
     index:
       projects: Проекты
@@ -123,7 +125,14 @@ ru:
       column_order: Порядок
       max_issues_count: Максимальное кол-во задач
     show:
-      next_page: Следующая страница
+      project: Проект
+      related_boards: Связанные доски
+      project_info: Информация о проекте
+      project_issues: Задачи проекта
+      project_users: Участники проекта
+      new: Новая
+    project_modal:
+      project: Проект
   issues:
     form:
       title: Название
@@ -136,6 +145,7 @@ ru:
       bitbucket_issue_id: BitBucket Id задачи
       github_issue_id: Github Id задачи
       github_issue_number: Github номер задачи
+      project: Проект
     index:
       issues: Задачи
       sync_with_github: Синхронизация с GitHub
@@ -175,6 +185,40 @@ ru:
       welcome_to_kanban_on_rails: Добро пожаловать на Kanban On Rails
       welcome_about_text: Здесь вы можете создать свою собственную Канбан доску и
         синхронизировать её с Github или Bitbucket
+  boards:
+    board_modal:
+      board: Канбан-доска
+    form:
+      name: Название
+      enter_board_name: Введите название доски
+      column_width: Высота столбца
+      column_width: Ширина столбца
+      columns: Столбцы
+      add: Добавить
+      sections: Секции
+      save: Сохранить
+      projects: Проекты
+    section_fields:
+      section_name: Название секции
+      remove_section: Удалить раздел
+      section_tags: Теги раздела
+      section_order: Порядок
+      or_include_all: Или включать все?
+    column_fields:
+      column_name: Название столбца
+      remove_column: Удалить столбец
+      column_tags: Теги столбца
+      column_order: Порядок
+      max_issues_count: Максимальное кол-во задач
+    show:
+      next_page: Следующая страница
+    index:
+      boards: Канбан-доски
+      new: Новая
+    board:
+      board_users: Участники
+      edit: Редактировать
+      destroy: Удалить
   pages:
     faq:
       faq: Часто задаваемые вопросы

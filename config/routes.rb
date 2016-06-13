@@ -31,18 +31,28 @@ Rails.application.routes.draw do
 
     resources :authentications, :only => [:index, :destroy]
 
-    resources :projects, :only => [:index, :create, :destroy, :update, :edit] do
+    resources :projects, :only => [:new, :index, :create, :destroy, :update, :edit] do
       get :stop_sync_with_github, :stop_sync_with_bitbucket, :stop_sync_with_gitlab,
         :sync_with_github, :sync_with_bitbucket, :sync_with_gitlab, :on => :collection
     end
+
+    resources :boards, :except => [:show]
+
+    resources :issues, :only => [:new, :create, :index, :edit, :update]
   end
 
-  resources :projects, :only => [:show]  do
+  resources :projects, :only => [:show] do
     resources :issues
 
     resources :users, :except => [:edit, :update, :destroy, :show]
 
     post :payload_from_github, :payload_from_bitbucket, :payload_from_gitlab, :on => :member
+  end
+
+  resources :boards, :only => [:show] do
+    resources :issues
+
+    resources :users, :except => [:edit, :update, :destroy, :show]
   end
 
   resources :news, :only => [:index, :show]

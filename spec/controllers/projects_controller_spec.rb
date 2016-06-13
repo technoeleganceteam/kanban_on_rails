@@ -176,6 +176,17 @@ RSpec.describe ProjectsController, :type => :controller do
       it { should render_template :index }
     end
 
+    describe 'GET index JSON' do
+      before do
+        user.user_to_project_connections.create :role => 'owner', :project => (@project = create :project)
+
+        get :index, :user_id => user, :format => :json
+      end
+
+      it { expect(response.body).to eq ({ :results => [{ :id => @project.id, :text => 'Some project' }],
+        :total_count => 1 }.to_json.to_s) }
+    end
+
     describe 'POST create' do
       context 'with valid attributes' do
         before { post :create, :user_id => user, :project => { :name => 'Some name' }, :format => :js }
@@ -211,112 +222,6 @@ RSpec.describe ProjectsController, :type => :controller do
           :project => { :name => '' }, :format => :js }
           
         it { should render_template :edit } 
-      end
-
-      context 'with attributes for columns with overlapping tags' do
-        before do
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :columns_attributes =>
-              { '0' => { :name => 'Some name', :tags => ['bar'] },
-                '1' => { :name => 'Some name', :tags => ['bar'] } } }, :format => :js
-        end
-          
-        it { should render_template :edit }
-      end
-
-      context 'with attributes for issues_to_section_connection and section' do
-        before do
-          section = create :section, :project => project
-
-          issue_connection = create :issue_to_section_connection, :issue => issue, :section => section
-
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :issues_to_section_connections_attributes =>
-              { '0' => { :id => issue_connection.id, :issue_order => 1 } },
-              :sections_attributes => { '0' => { :id => section.id, :name => 'Bar' } } }, :format => :js
-        end
-          
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
-      end
-
-      context 'with attributes for issues' do
-        before do
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
-        end
-          
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
-      end
-
-      context 'with attributes for issues and when issue connected to github' do
-        before do
-          issue.github_issue_id = 123
-          
-          issue.save
-
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
-        end
-          
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
-      end
-
-      context 'with attributes for issues when issue in multiple sections' do
-        before do
-          create :section, :tags => ['foo'], :project => project
-
-          create :section, :tags => ['bar'], :project => project
-
-          create :column, :tags => ['tag'], :project => project
-
-          issue.save
-
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
-        end
-          
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
-      end
-
-      context 'with attributes for issues when issue in include all section' do
-        before do
-          create :section, :include_all => true, :project => project
-
-          create :section, :tags => ['bar'], :project => project
-
-          create :column, :tags => ['tag'], :project => project
-
-          issue.save
-
-          put :update, :user_id => user, :id => connection.project,
-            :project => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
-        end
-          
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
       end
     end
 

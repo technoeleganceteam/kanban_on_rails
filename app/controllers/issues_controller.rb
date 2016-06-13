@@ -1,7 +1,7 @@
 class IssuesController < ApplicationController
   load_and_authorize_resource :project
 
-  load_and_authorize_resource :issue, :through => :project
+  load_and_authorize_resource :issue, :through => :project, :shallow => true
 
   before_filter :assign_user, :only => [:create]
 
@@ -16,8 +16,10 @@ class IssuesController < ApplicationController
       @connections = @connections.page(params[:page])
 
       @issues = @connections.map(&:issue)
-    else
+    elsif params[:project_id].present?
       @issues = @project.issues.includes(:project).page(params[:page])
+    else
+      @issues = current_user.issues.includes(:project).page(params[:page])
     end
   end
 
@@ -32,7 +34,7 @@ class IssuesController < ApplicationController
   end
 
   def update
-    if @issue.update_attributes(issue_params)
+    if @issue.update_attributes(update_params)
       enqueue_issue_sync
 
       redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
@@ -49,7 +51,11 @@ class IssuesController < ApplicationController
 
   private
 
-  def issue_params
+  def create_params
+    params.require(:issue).permit(:title, :body, :project_id, :tags => [])
+  end
+
+  def update_params
     params.require(:issue).permit(:title, :body, :tags => [])
   end
 

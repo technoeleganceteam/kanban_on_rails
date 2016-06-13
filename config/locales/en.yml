@@ -88,6 +88,7 @@ en: &all
       syncing_with_bitbucket: Sync with Bitbucket...
       new_issue: New issue
       edit_project: Edit project
+      boards: Boards
     languages_select_modal:
       available_languages: Available languages
     user_edit_menu:
@@ -111,12 +112,12 @@ en: &all
     new_issue_modal:
       new_issue: New issue
     left_sidebar:
-      projects: Projects
+      boards: Boards
     right_sidebar:
       news: News
       all: All
       read_more: Read more
-    translations:
+    javascript_global_variables:
       select_column_tags: Select column tags
       select_section_tags: Select section tags
       select_issue_tags: Select issue tags
@@ -159,6 +160,7 @@ en: &all
       hello: Hello
       here_some_of_your_statistics: Here some of your statistics
       projects: Projects
+      boards: Boards
   projects:
     index:
       projects: Projects
@@ -203,7 +205,14 @@ en: &all
       column_tags: Column tags
       column_order: Order
     show:
-      next_page: Next page
+      project: Project
+      related_boards: Related boards
+      project_info: Project info
+      project_issues: Project issues
+      project_users: Project users
+      new: New
+    project_modal:
+      project: Project
   issues:
     form:
       title: Title
@@ -216,6 +225,7 @@ en: &all
       bitbucket_issue_id: Bitbucket issue id
       github_issue_id: Github issue id
       github_issue_number: Github issue number
+      project: Project
     index:
       issues: issues
       sync_with_github: Sync with github
@@ -253,6 +263,40 @@ en: &all
     index:
       welcome_to_kanban_on_rails: Welcome to Kanban On Rails
       welcome_about_text: Here you can create your own Kanban board and sync it with Github or Bitbucket
+  boards:
+    board_modal:
+      board: Board
+    form:
+      name: Name
+      enter_board_name: Enter board name
+      column_width: Column width
+      column_height: Column height
+      columns: Columns
+      add: Add
+      sections: Sections
+      save: Save
+      projects: Projects
+    section_fields:
+      section_name: Section name
+      remove_section: Remove section
+      section_tags: Section tags
+      section_order: Order
+      or_include_all: Or include all?
+    column_fields:
+      column_name: Column name
+      remove_column: Remove column
+      max_issues_count: Max issues count in column
+      column_tags: Column tags
+      column_order: Order
+    show:
+      next_page: Next page
+    index:
+      boards: Boards
+      new: New
+    board:
+      board_users: Users
+      edit: Edit
+      destroy: Destroy
   pages:
     faq:
       faq: FAQ

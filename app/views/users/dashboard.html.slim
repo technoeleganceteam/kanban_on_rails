@@ -5,3 +5,5 @@ h3
   | :
 
 p = link_to "#{ t '.projects' }: #{ @user.projects.size }", user_projects_url(@user)
+
+p = link_to "#{ t '.boards' }: #{ @user.boards.size }", user_boards_url(@user)

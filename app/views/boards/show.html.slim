@@ -1,0 +1,30 @@
+- @sections.each do |section|
+  .row
+    .col-md-12
+      h4.text-center
+        b = section.name
+
+  div style=("width: #{ @columns_count * @board.column_width }px;\
+    margin: 0 auto;position:relative;display:table;height:40px")
+    - @columns.each do |column|
+      b.well.well-sm.text-center style=("float: left;display:table-cell;border-radius: 0;\
+        width: #{ @board.column_width }px;margin-bottom:0px;")
+        = column.name
+
+        | &nbsp;
+        span style =("color:#{ color_for_column_badge(column) }") 
+          = column.issue_to_section_connections.where(:section_id => section.id).size 
+  .wrapper style=("width: #{ @columns_count * @board.column_width }px;\
+    margin: 0 auto;") id = "section_#{ section.id }"
+    - @columns.each do |column|
+      .cell [style=("width: #{ @board.column_width }px;background-color: #F5F5F5;\
+        height: #{ @board.column_height }px;overflow-y:scroll;float:left")
+        id = "section_#{ section.id }_column_#{ column.id }"]
+        = render column.column_issues_for_section(section.id).page(params[:page])
+
+        = link_to_next_page column.column_issues_for_section(section.id).page(params[:page]), (t '.next_page'),
+          :class => 'next_page_infinite_scroll hidden', :remote => true,
+          :params => { :section_id => section.id, :column_id => column.id,
+            :controller => :issues, :action => :index, :board_id => @board.id }
+
+= render 'init_dragula'

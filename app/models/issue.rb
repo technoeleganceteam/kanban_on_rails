@@ -11,7 +11,11 @@ class Issue < ActiveRecord::Base
 
   belongs_to :project, :counter_cache => true
 
+  has_many :boards, :through => :issue_to_section_connections
+
   has_many :sections, :through => :issue_to_section_connections
+
+  has_many :columns, :through => :issue_to_section_connections
 
   has_many :issue_to_section_connections, :dependent => :destroy
 
@@ -19,23 +23,27 @@ class Issue < ActiveRecord::Base
 
   validates :body, :length => { :maximum => Settings.max_text_field_size }, :allow_blank => true
 
+  validates :project_id, :presence => true
+
+  validates :state, :presence => true, :inclusion => ['closed', 'open']
+
   before_create :assign_issue_to_section_connections
 
   before_update :check_section_connections
 
   def assign_issue_to_section_connections
-    project.sections.includes(:project).where('ARRAY[?]::varchar[] && tags', tags).each do |section|
+    Section.where(:board_id => project.boards).where('ARRAY[?]::varchar[] && tags', tags).each do |section|
       build_section_connection(section)
     end
 
-    project.sections.where(:include_all => true).each do |section|
+    Section.where(:board_id => project.boards).where(:include_all => true).each do |section|
       build_section_connection(section)
     end
   end
 
   def parse_tags(source_column_id, target_column_id)
-    tags - (project.columns.where(:id => source_column_id.to_i).first.try(:tags).to_a & tags) +
-      project.columns.where(:id => target_column_id.to_i).first.try(:tags).to_a
+    tags - (Column.where(:id => source_column_id.to_i).first.try(:tags).to_a & tags) +
+      Column.where(:id => target_column_id.to_i).first.try(:tags).to_a
   end
 
   def sync_with_github(user_id)
@@ -123,11 +131,11 @@ class Issue < ActiveRecord::Base
   private
 
   def build_section_connection(section)
-    column = project.columns.where('ARRAY[?]::varchar[] && tags', tags).first
+    column = Column.where(:board_id => project.boards).where('ARRAY[?]::varchar[] && tags', tags).first
 
     return unless column.present?
 
-    connection = issue_to_section_connections.where(:project_id => project_id, :section_id => section.id).
+    connection = issue_to_section_connections.where(:board_id => column.board_id, :section_id => section.id).
       first_or_initialize
 
     connection.issue_order = column.max_order(section) + 1
@@ -138,6 +146,6 @@ class Issue < ActiveRecord::Base
   end
 
   def check_section_connections
-    assign_issue_to_section_connections if tags_changed?    
+    assign_issue_to_section_connections    
   end
 end

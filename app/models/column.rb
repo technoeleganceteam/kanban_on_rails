@@ -4,6 +4,8 @@ class Column < ActiveRecord::Base
 
   belongs_to :project
 
+  belongs_to :board
+
   validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true
 
   has_many :issue_to_section_connections, :dependent => :destroy

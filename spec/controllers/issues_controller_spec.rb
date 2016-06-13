@@ -50,6 +50,12 @@ RSpec.describe IssuesController, :type => :controller do
 
         it { should render_template :index }
       end
+
+      context 'without project_id' do
+        before { xhr :get, :index, :user_id => user }
+
+        it { should render_template :index }
+      end
     end
 
     describe 'POST create' do
@@ -68,6 +74,31 @@ RSpec.describe IssuesController, :type => :controller do
         before { post :create, :project_id => connection.project, :issue => { :title => '' }, :format => :js }
           
         it { should render_template :new } 
+      end
+
+      context 'with overlapping tags to some sections' do
+        before do
+          board = create :board
+
+          connection.project.boards << board
+          
+          connection.save
+
+          create :section, :board => board, :include_all => true
+
+          create :section, :board => board, :tags => ['foo']
+
+          create :column, :board => board, :tags => ['foo']
+          
+          post :create, :project_id => connection.project,
+          :issue => { :title => 'Some title', :tags => ['foo'] }, :format => :js
+        end
+
+        it do
+          expect(response.body).to eq(
+            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
+          )
+        end
       end
     end
 

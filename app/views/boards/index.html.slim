@@ -1,0 +1,9 @@
+ul.list-group
+  li.list-group-item.list-group-item-info
+    = t '.boards'
+    .pull-right
+      = link_to new_user_board_url(current_user), :remote => true, :class => 'btn btn-success btn-xs' do
+        = t '.new'
+  = render @boards
+
+= paginate @boards

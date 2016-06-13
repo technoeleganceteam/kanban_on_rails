@@ -23,23 +23,27 @@
         | &nbsp;
         i.fa.fa-refresh.fa-spin.fa-fw
 
-    a.btn.btn-success.navbar-btn href = '#' data-target = '#new_project_modal' data-toggle = 'modal'
+    = link_to new_user_project_url(current_user), :remote => true, :class => 'btn btn-success navbar-btn' do
       i.fa.fa-plus
 
-  - if params[:controller] == 'projects' && params[:action] == 'show' && can?(:create, Issue)
-    | &nbsp;"
-    = link_to new_project_issue_url(@project), :remote => true, :class => 'btn btn-success' do
-      = t '.new_issue'
-      | &nbsp;
+  | &nbsp;
+  .btn-group
+    = link_to (t '.issues'), user_issues_url(current_user), :class => 'btn btn-default navbar-btn'
+
+    = link_to new_user_issue_url(current_user), :remote => true, :class => 'btn btn-success navbar-btn' do
       i.fa.fa-plus
 
-  - if params[:controller] == 'projects' && params[:action] == 'show'
-    | &nbsp;
-    a.btn.btn-default href = '#' data-target = '#edit_project_modal' data-toggle = 'modal'
-      = t '.edit_project'
-      | &nbsp;"
-      = @project.name
-      | "
+  | &nbsp;
+  .btn-group
+    = link_to (t '.boards'), user_boards_url(current_user), :class => 'btn btn-default navbar-btn'
+
+    = link_to new_user_board_url(current_user), :remote => true, :class => 'btn btn-success navbar-btn' do
+      i.fa.fa-plus
+
+    - if params[:controller] == 'boards' && params[:action] == 'show'
+      = link_to edit_user_board_url(current_user, @board), :remote => true,
+        :class => 'btn btn-success navbar-btn' do
+        i.fa.fa-pencil
 
   ul.nav.navbar-nav.navbar-right
     li class = '#{ 'active' if params[:action] == 'dashboard'  }'

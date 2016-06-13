@@ -3,7 +3,7 @@ $(document).on 'click', '.add_fields', (e) ->
 
   init_sortable()
 
-window.init_dragula = (ids, project_id, user_id) ->
+window.init_dragula = (ids, board_id, user_id) ->
   dragula(document.getElementById(id) for id in ids)
     .on 'drop', (el, target, source, sibling) ->
       issue_to_section_connections_attributes = []
@@ -20,31 +20,59 @@ window.init_dragula = (ids, project_id, user_id) ->
         target_column_id: target.id.split('_')[3]
       ]
 
-      update_issue_tags(issues_attributs, issue_to_section_connections_attributes, user_id, project_id)
+      update_issue_tags(issues_attributs, issue_to_section_connections_attributes, user_id, board_id)
 
-update_issue_tags = (issues_attributes, issue_to_section_connections_attributes, user_id, project_id) ->
+update_issue_tags = (issues_attributes, issue_to_section_connections_attributes, user_id, board_id) ->
   $.ajax
-    url: Routes.user_project_path(user_id, project_id)
+    url: Routes.user_board_path(user_id, board_id)
     type: 'PATCH'
     data:
-      project:
+      board:
         issue_to_section_connections_attributes: issue_to_section_connections_attributes
         issues_attributes: issues_attributes
 
 window.init_tags = ->
   $('.column_tags').select2
-    placeholder: $('#i18n_select_column_tags').text().replace /^\s+/g, ''
+    placeholder: window.i18n_column_tags
     tags: true
 
   $('.section_tags').select2
-    placeholder: $('#i18n_select_section_tags').text().replace /^\s+/g, ''
+    placeholder: window.i18n_section_tags
     tags: true
 
   $('.issue_tags').select2
-    placeholder: $('#i18n_select_issue_tags').text().replace /^\s+/g, ''
+    placeholder: window.i18n_issue_tags
     tags: true
 
-init_sortable = ->
+  $('.issue_project').select2
+    tags: true
+    ajax:
+      url: Routes.user_projects_path(window.current_user_id)
+      dataType: 'json'
+      delay: 250
+      data: (params) ->
+        {
+          q: params.term
+          page: params.page
+        }
+      processResults: (data, params) ->
+        { results: data.results, pagination: { more: (params.page * 25) < data.total_count } }
+
+  $('.user_projects').select2
+    tags: true
+    ajax:
+      url: Routes.user_projects_path(window.current_user_id)
+      dataType: 'json'
+      delay: 250
+      data: (params) ->
+        {
+          q: params.term
+          page: params.page
+        }
+      processResults: (data, params) ->
+        { results: data.results, pagination: { more: (params.page * 25) < data.total_count } }
+
+window.init_sortable = ->
   set_sortable_positions()
 
   $('.sortable').sortable()

@@ -64,5 +64,23 @@ FactoryGirl.define do
     column
 
     section
+
+    board
+  end
+
+  factory :board do
+    name 'Some board'   
+  end
+
+  factory :project_to_board_connection do
+    project
+
+    board
+  end
+
+  factory :user_to_board_connection do
+    user
+
+    board
   end
 end

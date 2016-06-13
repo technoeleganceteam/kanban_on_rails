@@ -1,7 +1,5 @@
-$('#new_project').replaceWith('<%= j render 'form', :project => @project %>');
+$('#project_form').replaceWith('<%= j render 'form', :project => @project, :remote => true %>');
 
-if (($('#new_project_modal').data('bs.modal') || { isShown: false }).isShown == false) {
-  $('#new_project_modal').modal('show');
+if (($('#project_modal').data('bs.modal') || { isShown: false }).isShown == false) {
+  $('#project_modal').modal('show');
 }
-
-window.init_tags()

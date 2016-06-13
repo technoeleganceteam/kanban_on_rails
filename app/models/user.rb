@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 
   has_many :user_to_project_connections, :dependent => :destroy
 
+  has_many :boards, :through => :user_to_board_connections
+
+  has_many :user_to_board_connections, :dependent => :destroy
+
   validates :locale, :presence => true, :inclusion => I18n.available_locales.map(&:to_s)
 
   validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true

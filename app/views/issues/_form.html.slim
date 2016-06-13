@@ -1,4 +1,4 @@
-= form_for [project, issue], :remote => remote ||= nil, :html => { :id => 'issue_form' } do |form|
+= form_for [current_user, issue], :remote => remote ||= nil, :html => { :id => 'issue_form' } do |form|
   = render 'shared/form_errors', :item => issue
 
   .form-group
@@ -20,6 +20,16 @@
     = form.select :tags,
       options_for_select(form.object.tags, :selected => form.object.tags), {},
       :multiple => true, :class => 'form-control issue_tags'
+
+  - if !issue.persisted?
+    .form-group
+      label for = 'project' = t '.project'
+
+      br
+
+      = form.select :project_id,
+        options_for_select([], :selected => form.object.project_id), {},
+        :class => 'form-control issue_project'
 
   - if issue.github_issue_id
     h3 = t 'github'

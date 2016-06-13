@@ -11,6 +11,8 @@ html lang = '#{ t "#{ I18n.locale }_iso" }'
 
     = stylesheet_link_tag('application', :media => 'all', 'data-turbolinks-track' => true)
 
+    = render 'shared/javascript_global_variables'
+
     = javascript_include_tag('application', 'data-turbolinks-track' => true)
 
     = csrf_meta_tags
@@ -25,7 +27,7 @@ html lang = '#{ t "#{ I18n.locale }_iso" }'
 
     .container-fluid
       .row
-        - if params[:controller] == 'projects' && params[:action] == 'show'
+        - if params[:controller] == 'boards' && params[:action] == 'show'
           .col-md-12
             = yield
         - else
@@ -42,14 +44,10 @@ html lang = '#{ t "#{ I18n.locale }_iso" }'
 
     = render 'shared/languages_select_modal'
 
-    = render 'shared/translations'
-
     = render 'shared/notification_icon'
 
     = render 'issues/issue_modal'
 
-    - if user_signed_in?
-      = render 'shared/new_project_modal'
+    = render 'boards/board_modal'
 
-      - if @project.present? && @project.persisted?
-        = render 'shared/edit_project_modal', :project => @project
+    = render 'projects/project_modal'

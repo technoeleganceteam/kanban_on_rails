@@ -7,15 +7,25 @@ class ProjectsController < ApplicationController
   authorize_resource :project, :through => :user, :shallow => true,
     :except => [:payload_from_github, :payload_from_bitbucket, :payload_from_gitlab]
 
-  before_filter :handle_issues_attributes, :only => [:update]
-
   before_filter :assign_owner, :only => [:create]
 
   skip_before_filter :verify_authenticity_token, :only => [:payload_from_github,
     :payload_from_bitbucket, :payload_from_gitlab]
 
   def index
-    @projects = @user.projects.order('created_at DESC').page(params[:page])
+    @projects = @user.projects.order('created_at DESC')
+
+    @projects = @projects.where('name ilike ?', "%#{ params[:q] }%") if params[:q].present?
+
+    @projects = @projects.page(params[:page])
+
+    respond_to do |format|
+      format.html
+
+      format.json { render :json => {
+        :results => @projects.map { |p| { :id => p.id, :text => p.name } },
+        :total_count => @projects.total_count } }
+    end
   end
 
   def sync_with_github
@@ -96,16 +106,12 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @sections = @project.sections.order('section_order ASC') 
-
-    @columns = @project.columns.order('column_order ASC')
-
-    @columns_count = @project.columns.size
+    @boards = @project.boards.order('created_at DESC').page(params[:page])
   end
 
   def create
     if @project.save
-      redirect_to project_url(@project), :turbolinks => true
+      redirect_to project_url(@project), :turbolinks => !request.format.html?
     else
       render :new
     end
@@ -113,9 +119,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update_attributes(project_params)
-      enqueue_issue_sync if project_params[:issues_attributes].present?
-
-      redirect_to project_url(@project), :turbolinks => true
+      redirect_to project_url(@project), :turbolinks => !request.format.html?
     else
       render :edit
     end
@@ -129,45 +133,8 @@ class ProjectsController < ApplicationController
 
   private
 
-  def handle_issues_attributes
-    return if !project_params[:issues_attributes].present?
-
-    params[:project][:issues_attributes] = params[:project][:issues_attributes].map do |attributes|
-      issue = Issue.find(attributes.last[:id])
-
-      add_connection_attributes(issue, attributes) if issue.issue_to_section_connections.size > 1
-
-      issue.parse_attributes_for_update(attributes.last)
-    end
-  end
-
   def project_params
-    params.require(:project).permit(:name, :column_width, :column_height,
-      :issue_to_section_connections_attributes => [:id, :issue_order, :column_id],
-      :columns_attributes => [:name, :max_issues_count, :tags, :id, :_destroy, :column_order, :tags => []],
-      :sections_attributes => [:name, :id, :tags, :_destroy, :section_order, :include_all, :tags => []],
-      :issues_attributes => [:id, :tags => []])
-  end
-
-  def enqueue_issue_sync
-    return unless project_params[:issues_attributes].present?
-
-    project_params[:issues_attributes].each { |attr| Issue.user_change_issue(attr[:id], current_user.id) }
-  end
-
-  def add_connection_attributes(issue, attributes)
-    issue.issue_to_section_connections.includes(:column).each do |connection|
-      next if attributes.last[:target_column_id] == connection.column.id
-
-      params[:project][:issue_to_section_connections_attributes] ||= {}
-
-      key = params[:project][:issue_to_section_connections_attributes].keys.last.to_i + 1
-
-      params[:project][:issue_to_section_connections_attributes][key.to_s] = {
-        :id => connection.id, :issue_order => connection.column.max_order(connection.section),
-        :column_id => attributes.last[:target_column_id]
-      }
-    end
+    params.require(:project).permit(:name)
   end
 
   def assign_owner

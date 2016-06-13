@@ -4,6 +4,8 @@ class Section < ActiveRecord::Base
 
   belongs_to :project
 
+  belongs_to :board
+
   has_many :issues, :through => :issue_to_section_connections
 
   has_many :issue_to_section_connections, :dependent => :destroy

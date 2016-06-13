@@ -1,8 +1,8 @@
 - if user_signed_in?
   .list-group.hidden-xs
     .list-group-item.list-group-item-info 
-      = t '.projects'
-    - current_user.projects.order('created_at DESC').limit(5).each do |project|
-      = link_to project_url(project), :class => 'list-group-item truncate' do
-        = project.name 
-        .badge = project.issues.size
+      = t '.boards'
+    - current_user.boards.order('created_at DESC').limit(5).each do |board|
+      = link_to board_url(board), :class => 'list-group-item truncate' do
+        = board.name 
+        .badge = board.issues.size

@@ -1,0 +1,20 @@
+li.list-group-item
+  = link_to board_url(board) do
+    = board.name
+
+    | &nbsp;
+
+    span.badge = board.issues.size
+
+  .pull-right
+    = link_to (t '.board_users'), board_users_url(board), :class => 'btn btn-default btn-xs'
+
+    | &nbsp;
+
+    = link_to (t '.edit'), edit_user_board_url(current_user, board), :class => 'btn btn-default btn-xs'
+
+    | &nbsp;
+
+    = link_to (t '.destroy'), user_board_url(current_user, board),
+      :class => 'btn btn-default btn-xs btn-danger',
+      :method => 'delete', :data => { :confirm => 'Вы уверены?' }

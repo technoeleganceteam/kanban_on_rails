@@ -25,7 +25,13 @@ class Ability
         project.user_ids.include?(user.id)
       end
 
+      can :read, Board do |board|
+        board.user_ids.include?(user.id)
+      end
+
       can :create, Project
+
+      can :create, Board
 
       can :sync_with_github, Project
 
@@ -39,12 +45,18 @@ class Ability
 
       can :stop_sync_with_gitlab, Project
 
+      can :manage, Board do |board|
+        board.user_to_board_connections.where(:user_id => user.id, :role => 'owner').first.present?
+      end
+
       can :manage, Project do |project|
         project.user_to_project_connections.where(:user_id => user.id, :role => 'owner').first.present?
       end
 
+      can :create, Issue
+
       can :manage, Issue do |issue|
-        issue.project.user_ids.include?(user.id)
+        issue.project.user_ids.include?(user.id) if issue.project.present?
       end
     end
   end
