@@ -6,8 +6,10 @@ class IssuesController < ApplicationController
   before_filter :assign_user, :only => [:create]
 
   def index
-    if params[:column_id].present? || params[:section_id].present?
-      @connections = @project.issue_to_section_connections.includes(:issue)
+    if (params[:column_id].present? || params[:section_id].present?) && params[:board_id].present?
+      @board = Board.find(params[:board_id])
+
+      @connections = @board.issue_to_section_connections.includes(:issue => :project)
 
       @connections = @connections.where(:column_id => params[:column_id]) if params[:column_id].present?
 
