@@ -12,7 +12,7 @@
 - **Real-time integration** You can see all changes in real time via websockets. We use great rails framework Action Cable for this. 
 - **Multi-project boards** You can create board with multiple projects(even from Gitlab or Github together)
 - **Multi-section boards** You can divide your board to multiple sections. For example you can create section with all issues(by click to checkbox "Or include all?" while creating the section) and section with only important issues(by creating section with tag "Important" for example, all issues with tag "Important" will display there)
-- **Multi-language** Service is translated  more than 70 languages.
+- **Multi-language** Service is translated in more than 70 languages.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
 
 ### System dependencies
