@@ -37,7 +37,7 @@ ul.list-group
 
           | &nbsp;
 
-      a.btn.btn-success.btn-xs href = '#' data-target = '#new_project_modal' data-toggle = 'modal'
+      = link_to new_user_project_url(current_user), :remote => true, :class => 'btn btn-success btn-xs' do
         = t '.new'
   = render @projects
 
