@@ -45,8 +45,14 @@ RSpec.describe IssuesController, :type => :controller do
       end
 
       context 'without any sections or columns' do
-        before { xhr :get, :index, :project_id => connection.project, :column_id => 1, :section_id => 1,
-          :format => :js }
+        before do
+          connection.project.boards << (create :board)
+          
+          connection.save
+          
+          xhr :get, :index, :project_id => connection.project, :board_id => connection.project.boards.first.id,
+          :column_id => 1, :section_id => 1, :format => :js
+        end
 
         it { should render_template :index }
       end
