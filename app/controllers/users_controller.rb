@@ -10,21 +10,23 @@ class UsersController < ApplicationController
   def dashboard
     @projects_count = @user.projects.size
 
+    @boards_count = @user.boards.size
+
     @issues_count = @user.issues.size
   end
 
   def index
-    @connections = @project.user_to_project_connections.includes(:user).
+    @connections = @board.user_to_board_connections.includes(:user).
       order('created_at DESC').page(params[:page])
   end
 
   def new
-    @user = @project.users.build
+    @user = @board.users.build
   end
 
   def create
     if @user.save
-      redirect_to project_users_url(@project) 
+      redirect_to board_users_url(@board) 
     else
       render :new
     end
@@ -56,15 +58,15 @@ class UsersController < ApplicationController
   end
 
   def find_and_check_manage
-    @project = Project.find(params[:project_id])
+    @board = Board.find(params[:board_id])
 
-    authorize! :manage, @project
+    authorize! :manage, @board
   end
 
   def find_and_check_read
-    @project = Project.find(params[:project_id])
+    @board = Board.find(params[:board_id])
 
-    authorize! :read, @project
+    authorize! :read, @board
   end
 
   def find_existing_user
@@ -75,11 +77,11 @@ class UsersController < ApplicationController
     @user.locale ||= create_params[:locale]
 
     if @user.persisted?
-      connection = UserToProjectConnection.where(:user_id => @user.id, :project_id => @project.id).
+      connection = UserToBoardConnection.where(:user_id => @user.id, :board_id => @board.id).
         first_or_initialize
     else
-      connection = @user.user_to_project_connections.
-        build(:project_id => @project.id)
+      connection = @user.user_to_board_connections.
+        build(:board_id => @board.id)
 
       @user.password = create_params[:password] 
     end

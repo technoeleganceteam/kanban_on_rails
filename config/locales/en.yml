@@ -103,6 +103,7 @@ en: &all
       base: Base
       title: Title
       user_to_project_connection: User to project connection
+      user_to_board_connection: User to board connection
       columns:
         tag: Tag overlapping
     new_project_modal:
@@ -143,6 +144,7 @@ en: &all
       project: Project
       users: users
       new: New
+      board: Board
     edit:
       name: Name
       enter_your_name: Enter your name
@@ -163,6 +165,7 @@ en: &all
       here_some_of_your_statistics: Here some of your statistics
       projects: Projects
       boards: Boards
+      issues: Issues
   projects:
     index:
       projects: Projects

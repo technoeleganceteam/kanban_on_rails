@@ -28,6 +28,7 @@ ru:
       base: Базовые
       title: Название
       user_to_project_connection: Связть пользователя с проектом
+      user_to_board_connection: Связь пользователя с Канбан-доской
       columns:
         tag: Перекрытие тегов
     new_project_modal:
@@ -63,6 +64,7 @@ ru:
       project: Проекты
       users: Пользователи
       new: Новый
+      board: Канбан-доска
     edit:
       name: Имя
       enter_your_name: Введите свое имя
@@ -83,6 +85,7 @@ ru:
       here_some_of_your_statistics: Вот немного вашей статистики
       projects: Проекты
       boards: Канбан-доски
+      issues: Задачи
   projects:
     index:
       projects: Проекты

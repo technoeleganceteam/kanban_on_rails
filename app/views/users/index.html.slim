@@ -1,17 +1,15 @@
 h3
-  = t '.project'
+  = t '.board'
 
   | &nbsp;
 
-  = @project.name
-
-  = t '.users'
+  = @board.name
 
 ul.list-group
   li.list-group-item.list-group-item-info
     = (t '.users').capitalize
     .pull-right
-      = link_to (t '.new'), new_project_user_url(@project), :class => 'btn btn-success btn-xs'
+      = link_to (t '.new'), new_board_user_url(@board), :class => 'btn btn-success btn-xs'
 
   = render @connections
 

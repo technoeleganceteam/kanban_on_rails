@@ -5,7 +5,7 @@ RSpec.describe UsersController, :type => :controller do
 
   let(:another_user) { create :user }
 
-  let(:project) { create :project }
+  let(:board) { create :board }
 
   it { should route(:get, '/projects/1/users').to(:action => :index, :project_id => 1) }
   
@@ -13,9 +13,9 @@ RSpec.describe UsersController, :type => :controller do
 
   it { should route(:get, '/users/1/edit').to(:action => :edit, :id => 1) }
 
-  it { should route(:post, '/projects/1/users').to(:action => :create, :project_id => 1) }
+  it { should route(:post, '/boards/1/users').to(:action => :create, :board_id => 1) }
 
-  it { should route(:get, '/projects/1/users/new').to(:action => :new, :project_id => 1) }
+  it { should route(:get, '/boards/1/users/new').to(:action => :new, :board_id => 1) }
 
   it { should route(:patch, '/users/1').to(:action => :update, :id => 1) }
 
@@ -82,9 +82,9 @@ RSpec.describe UsersController, :type => :controller do
 
     describe 'GET new' do
       before do
-        connection = user.user_to_project_connections.create :project => project, :role => 'owner'
+        connection = user.user_to_board_connections.create :board => board, :role => 'owner'
 
-        get :new, :project_id => connection.project
+        get :new, :board_id => connection.board
       end
 
       it { should render_template :new }
@@ -92,9 +92,9 @@ RSpec.describe UsersController, :type => :controller do
 
     describe 'GET index' do
       before do
-        connection = user.user_to_project_connections.create :project => project, :role => 'owner'
+        connection = user.user_to_board_connections.create :board => board, :role => 'owner'
 
-        get :index, :project_id => connection.project
+        get :index, :board_id => connection.board
       end
 
       it { should render_template :index }
@@ -103,9 +103,9 @@ RSpec.describe UsersController, :type => :controller do
     describe 'POST create' do
       context 'with invalid attributes' do
         before do
-          connection = user.user_to_project_connections.create :project => project, :role => 'owner'
+          connection = user.user_to_board_connections.create :board => board, :role => 'owner'
 
-          post :create, :project_id => connection.project, :user => { :name => '' }
+          post :create, :board_id => connection.board, :user => { :name => '' }
         end
 
         it { should render_template :new }
@@ -113,26 +113,26 @@ RSpec.describe UsersController, :type => :controller do
 
       context 'with valid attributes' do
         before do
-          connection = user.user_to_project_connections.create :project => project, :role => 'owner'
+          connection = user.user_to_board_connections.create :board => board, :role => 'owner'
 
-          post :create, :project_id => connection.project,
+          post :create, :board_id => connection.board,
             :user => { :name => 'Name', :password => '12345678', :email => 'some@mail.com' }, :role => 'owner'
         end
 
-        it { should redirect_to project_users_url(project) }
+        it { should redirect_to board_users_url(board) }
       end
 
       context 'with valid attributes when user with email already exists' do
         before do
-          connection = user.user_to_project_connections.create :project => project, :role => 'owner'
+          connection = user.user_to_board_connections.create :board => board, :role => 'owner'
 
           create :user, :email => 'some@mail.com'
 
-          post :create, :project_id => connection.project,
+          post :create, :board_id => connection.board,
             :user => { :name => 'Name', :password => '12345678', :email => 'some@mail.com' }, :role => 'owner'
         end
 
-        it { should redirect_to project_users_url(project) }
+        it { should redirect_to board_users_url(board) }
       end
     end
 

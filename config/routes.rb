@@ -44,7 +44,7 @@ Rails.application.routes.draw do
   resources :projects, :only => [:show] do
     resources :issues
 
-    resources :users, :except => [:edit, :update, :destroy, :show]
+    resources :users, :only => [:index]
 
     post :payload_from_github, :payload_from_bitbucket, :payload_from_gitlab, :on => :member
   end
