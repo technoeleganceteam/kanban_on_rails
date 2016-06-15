@@ -9,5 +9,7 @@ services:
   - redis-server
 addons:
   postgresql: "9.4"
+  code_climate:
+    repo_token: 628ed76fce2d37694ae0d865ba8423aacb51d5877fe16dca526eee5d21366351
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
