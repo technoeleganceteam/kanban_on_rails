@@ -5,6 +5,7 @@ AllCops:
     - 'bin/rake'
     - 'bin/spring'
     - 'db/migrate/*'
+    - 'vendor/*'
 
 Rails:
   Enabled: true
