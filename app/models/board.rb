@@ -32,6 +32,16 @@ class Board < ActiveRecord::Base
 
   after_save :update_issues
 
+  def issue_to_section_connections_from_params(params = {})
+    connections = issue_to_section_connections.includes(:issue => :project)
+
+    connections = connections.where(:column_id => params[:column_id]) if params[:column_id].present?
+
+    connections = connections.where(:section_id => params[:section_id]) if params[:section_id].present?
+
+    connections
+  end
+
   private
 
   def update_issues
@@ -39,7 +49,9 @@ class Board < ActiveRecord::Base
   end
 
   def column_tags_overlapping
-    if columns.map(&:tags).map{ |t| t.reject(&:empty?) }.combination(2).map{ |t1, t2| t1 & t2 }.flatten.size > 0
+    tags_combinations = columns.map(&:tags).map { |tag| tag.reject(&:empty?) }.combination(2)
+
+    unless tags_combinations.map { |tag1, tag2| tag1 & tag2 }.flatten.empty?
       errors.add(:base, (I18n.t '.shared.form_errors.columns.tag'))
     end
   end

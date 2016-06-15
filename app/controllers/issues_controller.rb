@@ -3,25 +3,15 @@ class IssuesController < ApplicationController
 
   load_and_authorize_resource :issue, :through => :project, :shallow => true
 
-  before_filter :assign_user, :only => [:create]
+  before_action :assign_user, :only => [:create]
+
+  before_action :fetch_board_and_connections, :only => [:index]
 
   def index
-    if (params[:column_id].present? || params[:section_id].present?) && params[:board_id].present?
-      @board = Board.find(params[:board_id])
-
-      @connections = @board.issue_to_section_connections.includes(:issue => :project)
-
-      @connections = @connections.where(:column_id => params[:column_id]) if params[:column_id].present?
-
-      @connections = @connections.where(:section_id => params[:section_id]) if params[:section_id].present?
-
-      @connections = @connections.page(params[:page])
-
-      @issues = @connections.map(&:issue)
-    elsif params[:project_id].present?
-      @issues = @project.issues.includes(:project).page(params[:page])
+    @issues = if @board.present? && @connections.present?
+      @connections.map(&:issue)
     else
-      @issues = current_user.issues.includes(:project).page(params[:page])
+      (@project.present? ? @project : current_user).issues.includes(:project).page(params[:page])
     end
   end
 
@@ -67,5 +57,13 @@ class IssuesController < ApplicationController
 
   def enqueue_issue_sync
     Issue.user_change_issue(@issue.id, current_user.id)
+  end
+
+  def fetch_board_and_connections
+    return unless params[:board_id].present?
+
+    @board = Board.find(params[:board_id])
+
+    @connections = @board.issue_to_section_connections_from_params(params).page(params[:page])
   end
 end

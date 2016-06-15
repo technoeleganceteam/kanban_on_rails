@@ -8,7 +8,7 @@ RSpec.describe UsersController, :type => :controller do
   let(:board) { create :board }
 
   it { should route(:get, '/projects/1/users').to(:action => :index, :project_id => 1) }
-  
+
   it { should route(:get, '/users/1').to(:action => :show, :id => 1) }
 
   it { should route(:get, '/users/1/edit').to(:action => :edit, :id => 1) }

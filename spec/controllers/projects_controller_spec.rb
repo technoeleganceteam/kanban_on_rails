@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe ProjectsController, :type => :controller do
   let(:user) { create :user }
 
-  let(:project) { create :project  }
-  
-  let(:issue) { create :issue, :project => project, :tags => ['foo', 'bar', 'tag'] }
+  let(:project) { create :project }
+
+  let(:issue) { create :issue, :project => project, :tags => %w(foo bar tag) }
 
   let(:connection) do
     create :user_to_project_connection, :user_id => user.id, :project_id => project.id, :role => 'owner'
@@ -17,8 +17,10 @@ RSpec.describe ProjectsController, :type => :controller do
 
   it { should route(:get, '/users/1/projects/sync_with_gitlab').to(:action => :sync_with_gitlab, :user_id => 1) }
 
-  it { should route(:get, '/users/1/projects/sync_with_bitbucket').
-    to(:action => :sync_with_bitbucket, :user_id => 1) }
+  it do
+    should route(:get, '/users/1/projects/sync_with_bitbucket').
+      to(:action => :sync_with_bitbucket, :user_id => 1)
+  end
 
   it { should route(:get, '/users/1/projects').to(:action => :index, :user_id => 1) }
 
@@ -45,19 +47,21 @@ RSpec.describe ProjectsController, :type => :controller do
   it { expect { get :sync_with_bitbucket, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { get :index, :user_id => user }.to raise_error(CanCan::AccessDenied) }
-  
+
   it { expect { get :show, :id => project }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { get :edit, :id => project, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { post :create, :user_id => user }.to raise_error(CanCan::AccessDenied) }
-   
+
   it { expect { put :update, :user_id => user, :id => connection.project }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { patch :update, :user_id => user, :id => connection.project }.to raise_error(CanCan::AccessDenied) }
 
-  it { expect { delete :destroy, :user_id => user, :id => connection.project }.
-    to raise_error(CanCan::AccessDenied) }
+  it do
+    expect { delete :destroy, :user_id => user, :id => connection.project }.
+      to raise_error(CanCan::AccessDenied)
+  end
 
   describe 'POST payload_from_github' do
     context 'when nothing payload' do
@@ -86,8 +90,10 @@ RSpec.describe ProjectsController, :type => :controller do
   end
 
   describe 'POST payload_from_gitlab' do
-    before { post :payload_from_gitlab, :id => connection.project,
-      :object_attributes => { :foo => 'bar' } }
+    before do
+      post :payload_from_gitlab, :id => connection.project,
+      :object_attributes => { :title => 'bar' }
+    end
 
     it { expect(response.body).to be_blank }
   end
@@ -132,8 +138,10 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe 'GET stop_sync_with_github' do
-      before { xhr :get, :stop_sync_with_github,
-        :id => connection.project.id, :user_id => user, :format => :js }
+      before do
+        xhr :get, :stop_sync_with_github,
+          :id => connection.project.id, :user_id => user, :format => :js
+      end
 
       it do
         expect(response.body).to eq(
@@ -143,8 +151,10 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe 'GET stop_sync_with_gitlab' do
-      before { xhr :get, :stop_sync_with_gitlab,
-        :id => connection.project.id, :user_id => user, :format => :js }
+      before do
+        xhr :get, :stop_sync_with_gitlab,
+          :id => connection.project.id, :user_id => user, :format => :js
+      end
 
       it do
         expect(response.body).to eq(
@@ -154,8 +164,10 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe 'GET stop_sync_with_bitbucket' do
-      before { xhr :get, :stop_sync_with_bitbucket,
-        :id => connection.project.id, :user_id => user, :format => :js }
+      before do
+        xhr :get, :stop_sync_with_bitbucket,
+          :id => connection.project.id, :user_id => user, :format => :js
+      end
 
       it do
         expect(response.body).to eq(
@@ -183,8 +195,10 @@ RSpec.describe ProjectsController, :type => :controller do
         get :index, :user_id => user, :format => :json
       end
 
-      it { expect(response.body).to eq ({ :results => [{ :id => @project.id, :text => 'Some project' }],
-        :total_count => 1 }.to_json.to_s) }
+      it do
+        expect(response.body).to eq Hash[:results, [{ :id => @project.id, :text => 'Some project' }],
+          :total_count, 1].to_json.to_s
+      end
     end
 
     describe 'POST create' do
@@ -200,15 +214,17 @@ RSpec.describe ProjectsController, :type => :controller do
 
       context 'with invalid attributes' do
         before { post :create, :user_id => user, :project => { :name => '' }, :format => :js }
-          
-        it { should render_template :new } 
+
+        it { should render_template :new }
       end
     end
 
     describe 'PATCH update as JS' do
       context 'with valid attributes' do
-        before { put :update, :user_id => user, :id => connection.project,
-          :project => { :name => 'Some name2' }, :format => :js }
+        before do
+          put :update, :user_id => user, :id => connection.project,
+          :project => { :name => 'Some name2' }, :format => :js
+        end
 
         it do
           expect(response.body).to eq(
@@ -218,10 +234,12 @@ RSpec.describe ProjectsController, :type => :controller do
       end
 
       context 'with invalid attributes' do
-        before { put :update, :user_id => user, :id => connection.project,
-          :project => { :name => '' }, :format => :js }
-          
-        it { should render_template :edit } 
+        before do
+          put :update, :user_id => user, :id => connection.project,
+          :project => { :name => '' }, :format => :js
+        end
+
+        it { should render_template :edit }
       end
     end
 
@@ -248,34 +266,48 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe 'GET sync_with_github' do
-      it { expect { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'GET sync_with_gitlab' do
-      it { expect { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'GET sync_with_bitbucket' do
-      it { expect { xhr :get, :sync_with_bitbucket, :id => connection.project.id,
-        :user_id => user, :format => :js }.to raise_error(CanCan::AccessDenied) }
+      it do
+        expect do
+          xhr :get, :sync_with_bitbucket, :id => connection.project.id, :user_id => user, :format => :js
+        end.to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'POST create project for first user' do
-      it { expect { post :create, :user_id => user, :project => { :name => 'Some name' }, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { post :create, :user_id => user, :project => { :name => 'Some name' }, :format => :js }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'PUT update project for first user' do
-      it { expect { put :update, :user_id => user, :id => connection.project,
-        :project => { :name => 'Some name2' }, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect do
+          put :update, :user_id => user, :id => connection.project,
+            :project => { :name => 'Some name2' }, :format => :js
+        end.to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'DELETE destroy' do
-      it { expect { delete :destroy, :user_id => user, :id => connection.project }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { delete :destroy, :user_id => user, :id => connection.project }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
   end
 end

@@ -1,7 +1,6 @@
 module ApplicationHelper
   def edit_navbar_active?
-    params[:action].to_s.in?(%(edit settings)) && params[:controller].to_s == 'users' ||
-      (params[:action].to_s == 'index' && params[:controller].to_s == 'authentications')
+    user_managment_actions? || authentications_index?
   end
 
   def language_options_for_settings_select
@@ -17,12 +16,20 @@ module ApplicationHelper
   end
 
   def issue_tag_color(issue, tag)
-    return if !issue.present? || !tag.present?
-
     return unless issue.github_labels.present?
 
     labels = issue.github_labels.select { |label| label[1].last == tag }
 
     "background-color: ##{ labels[0][2].last };color:black;" if labels[0].present?
+  end
+
+  private
+
+  def authentications_index?
+    params[:action].to_s == 'index' && params[:controller].to_s == 'authentications'
+  end
+
+  def user_managment_actions?
+    params[:action].to_s.in?(%(edit settings)) && params[:controller].to_s == 'users'
   end
 end

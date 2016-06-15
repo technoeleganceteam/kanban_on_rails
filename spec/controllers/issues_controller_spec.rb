@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe IssuesController, :type => :controller do
   let(:user) { create :user }
 
-  let(:project) { create :project  }
-  
-  let(:issue) { create :issue, :project => project, :tags => ['foo', 'bar', 'tag'] }
+  let(:project) { create :project }
+
+  let(:issue) { create :issue, :project => project, :tags => %w(foo bar tag) }
 
   let(:connection) do
     create :user_to_project_connection, :user_id => user.id, :project_id => project.id, :role => 'owner'
@@ -24,15 +24,17 @@ RSpec.describe IssuesController, :type => :controller do
   it { should route(:delete, '/projects/1/issues/1').to(:action => :destroy, :id => 1, :project_id => 1) }
 
   it { expect { get :index, :project_id => project }.to raise_error(CanCan::AccessDenied) }
-  
+
   it { expect { post :create, :project_id => project }.to raise_error(CanCan::AccessDenied) }
-   
+
   it { expect { put :update, :project_id => project, :id => issue }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { patch :update, :project_id => project, :id => issue }.to raise_error(CanCan::AccessDenied) }
 
-  it { expect { delete :destroy, :project_id => project, :id => issue }.
-    to raise_error(CanCan::AccessDenied) }
+  it do
+    expect { delete :destroy, :project_id => project, :id => issue }.
+      to raise_error(CanCan::AccessDenied)
+  end
 
   context 'Confirmed user' do
     before { sign_in user; user.confirm }
@@ -47,11 +49,13 @@ RSpec.describe IssuesController, :type => :controller do
       context 'without any sections or columns' do
         before do
           connection.project.boards << (create :board)
-          
+
+          connection.project.boards.first.issue_to_section_connections << (create :issue_to_section_connection)
+
           connection.save
-          
+
           xhr :get, :index, :project_id => connection.project, :board_id => connection.project.boards.first.id,
-          :column_id => 1, :section_id => 1, :format => :js
+            :format => :js
         end
 
         it { should render_template :index }
@@ -66,8 +70,10 @@ RSpec.describe IssuesController, :type => :controller do
 
     describe 'POST create' do
       context 'with valid attributes' do
-        before { post :create, :project_id => connection.project,
-          :issue => { :title => 'Some title' }, :format => :js }
+        before do
+          post :create, :project_id => connection.project,
+          :issue => { :title => 'Some title' }, :format => :js
+        end
 
         it do
           expect(response.body).to eq(
@@ -78,8 +84,8 @@ RSpec.describe IssuesController, :type => :controller do
 
       context 'with invalid attributes' do
         before { post :create, :project_id => connection.project, :issue => { :title => '' }, :format => :js }
-          
-        it { should render_template :new } 
+
+        it { should render_template :new }
       end
 
       context 'with overlapping tags to some sections' do
@@ -87,7 +93,7 @@ RSpec.describe IssuesController, :type => :controller do
           board = create :board
 
           connection.project.boards << board
-          
+
           connection.save
 
           create :section, :board => board, :include_all => true
@@ -95,7 +101,7 @@ RSpec.describe IssuesController, :type => :controller do
           create :section, :board => board, :tags => ['foo']
 
           create :column, :board => board, :tags => ['foo']
-          
+
           post :create, :project_id => connection.project,
           :issue => { :title => 'Some title', :tags => ['foo'] }, :format => :js
         end
@@ -110,8 +116,10 @@ RSpec.describe IssuesController, :type => :controller do
 
     describe 'PATCH update as JS' do
       context 'with valid attributes' do
-        before { put :update, :project_id => connection.project, :id => issue,
-          :issue => { :title => 'Some title2' }, :format => :js }
+        before do
+          put :update, :project_id => connection.project, :id => issue,
+          :issue => { :title => 'Some title2' }, :format => :js
+        end
 
         it do
           expect(response.body).to eq(
@@ -121,10 +129,12 @@ RSpec.describe IssuesController, :type => :controller do
       end
 
       context 'with invalid attributes' do
-        before { put :update, :project_id => connection.project, :id => issue,
-          :issue => { :title => '' }, :format => :js }
-          
-        it { should render_template :edit } 
+        before do
+          put :update, :project_id => connection.project, :id => issue,
+          :issue => { :title => '' }, :format => :js
+        end
+
+        it { should render_template :edit }
       end
     end
 
@@ -143,19 +153,27 @@ RSpec.describe IssuesController, :type => :controller do
     end
 
     describe 'POST create issue for first user project' do
-      it { expect { post :create, :issue => { :title => 'Some title' }, :project_id => project, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { post :create, :issue => { :title => 'Some title' }, :project_id => project, :format => :js }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'PUT update issue for first user project' do
-      it { expect { put :update, :project_id => project, :id => issue,
-        :issue => { :title => 'Some title2' }, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect do
+          put :update, :project_id => project, :id => issue,
+     :issue => { :title => 'Some title2' }, :format => :js
+        end.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'DELETE destroy' do
-      it { expect { delete :destroy, :project_id => project, :id => connection.project }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { delete :destroy, :project_id => project, :id => connection.project }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
   end
 end

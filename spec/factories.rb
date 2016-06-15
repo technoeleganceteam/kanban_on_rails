@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :test_girl do
-    
   end
   factory :user do
     sequence(:email) { |n| "user_numero_#{ n }@mail.com" }
@@ -23,13 +22,13 @@ FactoryGirl.define do
   end
 
   factory :issue do
-    title 'Some title'    
+    title 'Some title'
 
     project
   end
 
   factory :project do
-    name 'Some project'    
+    name 'Some project'
 
     github_full_name 'some/project'
   end
@@ -41,7 +40,7 @@ FactoryGirl.define do
   end
 
   factory :user_to_project_connection do
-    project 
+    project
 
     user
 
@@ -69,7 +68,7 @@ FactoryGirl.define do
   end
 
   factory :board do
-    name 'Some board'   
+    name 'Some board'
   end
 
   factory :project_to_board_connection do

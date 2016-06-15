@@ -1,6 +1,8 @@
 class Ability
   include CanCan::Ability
 
+  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable MethodLength
   def initialize(user)
     user ||= User.new
 
@@ -46,11 +48,11 @@ class Ability
       can :stop_sync_with_gitlab, Project
 
       can :manage, Board do |board|
-        board.user_to_board_connections.where(:user_id => user.id, :role => 'owner').first.present?
+        board.user_to_board_connections.find_by(:user_id => user.id, :role => 'owner').present?
       end
 
       can :manage, Project do |project|
-        project.user_to_project_connections.where(:user_id => user.id, :role => 'owner').first.present?
+        project.user_to_project_connections.find_by(:user_id => user.id, :role => 'owner').present?
       end
 
       can :create, Issue

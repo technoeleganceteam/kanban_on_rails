@@ -7,84 +7,45 @@ class ProjectsController < ApplicationController
   authorize_resource :project, :through => :user, :shallow => true,
     :except => [:payload_from_github, :payload_from_bitbucket, :payload_from_gitlab]
 
-  before_filter :assign_owner, :only => [:create]
+  before_action :assign_owner, :only => [:create]
 
-  skip_before_filter :verify_authenticity_token, :only => [:payload_from_github,
+  skip_before_action :verify_authenticity_token, :only => [:payload_from_github,
     :payload_from_bitbucket, :payload_from_gitlab]
 
   def index
-    @projects = @user.projects.order('created_at DESC')
-
-    @projects = @projects.where('name ilike ?', "%#{ params[:q] }%") if params[:q].present?
-
-    @projects = @projects.page(params[:page])
+    @projects = @user.projects_from_search(params[:q]).page(params[:page])
 
     respond_to do |format|
       format.html
 
-      format.json { render :json => {
-        :results => @projects.map { |p| { :id => p.id, :text => p.name } },
-        :total_count => @projects.total_count } }
+      format.json { render :json => projects_for_json }
     end
   end
 
-  def sync_with_github
-    current_user.update_attribute(:sync_with_github, true)
+  %w(github gitlab bitbucket).each do |provider|
+    define_method "sync_with_#{ provider }" do
+      current_user.update_attribute("sync_with_#{ provider }", true)
 
-    SyncGithubWorker.perform_async(@user.id)
+      "sync_#{ provider }_worker".classify.constantize.perform_async(@user.id)
 
-    redirect_to user_projects_url(@user), :turbolinks => true
-  end
+      redirect_to user_projects_url(@user), :turbolinks => true
+    end
 
-  def sync_with_gitlab
-    current_user.update_attribute(:sync_with_gitlab, true)
+    define_method "stop_sync_with_#{ provider }" do
+      current_user.update_attribute("sync_with_#{ provider }", false)
 
-    SyncGitlabWorker.perform_async(@user.id)
-
-    redirect_to user_projects_url(@user), :turbolinks => true
-  end
-
-  def sync_with_bitbucket
-    current_user.update_attribute(:sync_with_bitbucket, true)
-    
-    SyncBitbucketWorker.perform_async(@user.id)
-
-    redirect_to user_projects_url(@user), :turbolinks => true
-  end
-
-  def stop_sync_with_github
-    current_user.update_attribute(:sync_with_github, false)
-
-    redirect_to user_projects_url(@user), :turbolinks => true
-  end
-
-  def stop_sync_with_gitlab
-    current_user.update_attribute(:sync_with_gitlab, false)
-
-    redirect_to user_projects_url(@user), :turbolinks => true
-  end
-
-  def stop_sync_with_bitbucket
-    current_user.update_attribute(:sync_with_bitbucket, false)
-
-    redirect_to user_projects_url(@user), :turbolinks => true
+      redirect_to user_projects_url(@user), :turbolinks => true
+    end
   end
 
   def payload_from_github
-    request.body.rewind
-
-    payload_body = request.body.read
-
-    signature = 'sha1=' + OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'),
-      @project.github_secret_token_for_hook.to_s, payload_body)
-
-    unless Rack::Utils.secure_compare(signature, request.env['HTTP_X_HUB_SIGNATURE'].to_s)
-      (render :status => 422, :nothing => true) and return
+    unless Rack::Utils.secure_compare(signature_from_payload, request.env['HTTP_X_HUB_SIGNATURE'].to_s)
+      (render :status => 422, :nothing => true) && return
     end
 
     @project.parse_issue_params_from_github_webhook(params[:issue]) if params[:issue].present?
 
-    (render :status => 200, :nothing => true) and return
+    (render :status => 200, :nothing => true) && return
   end
 
   def payload_from_bitbucket
@@ -98,7 +59,7 @@ class ProjectsController < ApplicationController
   def payload_from_gitlab
     if params[:secure_token] == @project.gitlab_secret_token_for_hook
       if params[:object_attributes].present?
-        @project.parse_issue_params_from_gitlab_webhook(params[:object_attributes]) 
+        @project.parse_issue_params_from_gitlab_webhook(params[:object_attributes])
       end
     end
 
@@ -139,5 +100,21 @@ class ProjectsController < ApplicationController
 
   def assign_owner
     @project.user_to_project_connections.build(:user_id => @user.id, :role => 'owner')
+  end
+
+  def signature_from_payload
+    request.body.rewind
+
+    payload_body = request.body.read
+
+    'sha1=' + OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'),
+      @project.github_secret_token_for_hook.to_s, payload_body)
+  end
+
+  def projects_for_json
+    {
+      :results => @projects.map { |p| { :id => p.id, :text => p.name } },
+      :total_count => @projects.total_count
+    }
   end
 end

@@ -1,0 +1,58 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/rails'
+    - 'bin/rake'
+    - 'bin/spring'
+    - 'db/migrate/*'
+
+Rails:
+  Enabled: true
+
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Lint/EndAlignment:
+  AlignWith: variable
+
+Style/AlignArray:
+  Enabled: false
+
+Style/AlignHash:
+  Enabled: false
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/IndentArray:
+  EnforcedStyle: consistent
+
+Style/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+
+Metrics/LineLength:
+  Max: 115
+
+Metrics/ClassLength:
+  Max: 200
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false

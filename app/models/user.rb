@@ -34,6 +34,24 @@ class User < ActiveRecord::Base
     avatar_url.present? ? avatar_url : gravatar_url
   end
 
+  def projects_from_search(query)
+    projects.order('created_at DESC')
+
+    query.present? ? projects.where('name ilike ?', "%#{ query }%") : projects
+  end
+
+  def github_client_repos(client)
+    client.repos
+  end
+
+  def gitlab_client_repos(client)
+    client.projects.auto_paginate
+  end
+
+  def bitbucket_client_repos(client)
+    client.repos.list
+  end
+
   %w(gitlab github bitbucket).each do |provider|
     define_method "sync_#{ provider }" do
       return unless (client = send("#{ provider }_client"))
@@ -44,77 +62,44 @@ class User < ActiveRecord::Base
 
       send("create_#{ provider }_hook", client)
 
-      self.update_attribute("sync_with_#{ provider }", false)
+      update_attribute("sync_with_#{ provider }", false)
 
       broadcast_stop_sync_notification(provider)
     end
-  end
 
-  def sync_gitlab_projects(client)
-    client.projects.auto_paginate.each do |repo|
-      project = Project.where("meta ->> 'gitlab_repository_id' = '?'", repo.id).first
+    define_method "sync_#{ provider }_projects" do |client|
+      send("#{ provider }_client_repos", client).each do |repo|
+        project = Project.send("sync_with_#{ provider }_project", repo)
 
-      project = Project.new.tap { |p| p.gitlab_repository_id = repo.id } unless project.present?
+        project.user_to_project_connections.where(:user_id => id).first_or_initialize.assign_attributes(
+          :role => project.send("check_#{ provider }_owner", repo, client)
+        )
 
-      u_t_p_c = if project.persisted? 
-        project.user_to_project_connections.where(:user_id => id).first_or_initialize
-      else
-        project.user_to_project_connections.build(:user_id => id)
+        project.save!
       end
-
-      u_t_p_c.role = repo.owner.name == client.user.name ? 'owner' : 'member'
-
-      project.assign_attributes(
-        :name => repo.name,
-        :gitlab_name => repo.name,
-        :gitlab_url => repo.web_url,
-        :gitlab_full_name => repo.path_with_namespace,
-        :is_gitlab_repository => true)
-
-      project.save!
     end
   end
 
   def sync_gitlab_issues(client)
-    projects.where("meta -> 'is_gitlab_repository' = 'true'").each do |project|
+    projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
       client.issues(project.gitlab_repository_id).auto_paginate.each do |gitlab_issue|
-        issue = project.issues.where("meta ->> 'gitlab_issue_id' = '?'", gitlab_issue.id).first 
-
-        issue = project.issues.build.tap { |i| i.gitlab_issue_id = gitlab_issue.id } unless issue.present?
-
-        issue.assign_attributes(
-          :title => gitlab_issue.title,
-          :body => gitlab_issue.description,
-          :tags => gitlab_issue.labels)
-
-        issue.save!
+        Issue.sync_with_gitlab_issue(gitlab_issue, project)
       end
     end
   end
 
   def create_gitlab_hook(client)
-    projects.where("meta -> 'is_gitlab_repository' = 'true'").each do |project|
-      begin
-        project.gitlab_secret_token_for_hook ||= SecureRandom.hex(20)
+    projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
+      project.gitlab_secret_token_for_hook ||= SecureRandom.hex(20)
 
-        project.save
+      project.save
 
-        hook = client.project_hooks(project.gitlab_repository_id).select do |hook|
-          hook.url == Rails.application.routes.url_helpers.
-            payload_from_gitlab_project_url(project, :secure_token => project.gitlab_secret_token_for_hook,
-              :host => Settings.webhook_host) 
-        end.first
-
-        client.add_project_hook(project.gitlab_repository_id, Rails.application.routes.url_helpers.
-          payload_from_gitlab_project_url(project, :secure_token => project.gitlab_secret_token_for_hook,
-            :host => Settings.webhook_host), { :issues_events => 1, :push_events => 0 }) unless hook.present? 
-      rescue Octokit::NotFound
-      end
+      project.create_gitlab_hook(client)
     end
   end
 
   def gitlab_client
-    authentication = authentications.where(:provider => 'gitlab').first 
+    authentication = authentications.find_by(:provider => 'gitlab')
 
     return false unless authentication.present?
 
@@ -124,7 +109,7 @@ class User < ActiveRecord::Base
   end
 
   def bitbucket_client
-    authentication = authentications.where(:provider => 'bitbucket').first 
+    authentication = authentications.find_by(:provider => 'bitbucket')
 
     return false unless authentication.present?
 
@@ -132,176 +117,76 @@ class User < ActiveRecord::Base
       :client_secret => Settings.omniauth.bitbucket.secret, :client_id => Settings.omniauth.bitbucket.key
   end
 
-  def sync_bitbucket_projects(client)
-    client.repos.list.each do |repo|
-      project = Project.where("meta ->> 'bitbucket_full_name' = ?",
-        [repo.owner, repo.slug].join('/')).first
-
-      if !project.present?
-        project = Project.new.tap { |p| p.bitbucket_full_name = [repo.owner, repo.slug].join('/') }
-      end
-
-      u_t_p_c = if project.persisted? 
-        project.user_to_project_connections.where(:user_id => id).first_or_initialize
-      else
-        project.user_to_project_connections.build(:user_id => id)
-      end
-
-      u_t_p_c.role = (repo.owner == client.user_api.profile.try(:[], 'user').try(:[], 'username')) ? 'owner' :
-        'member'
-
-      project.assign_attributes(
-        :name => repo.name,
-        :bitbucket_name => repo.name,
-        :bitbucket_slug => repo.slug,
-        :bitbucket_owner => repo.owner,
-        :is_bitbucket_repository => true)
-
-      project.save!
-    end
-  end
-
   def sync_bitbucket_issues(client)
-    projects.where("meta -> 'is_bitbucket_repository' = 'true'").each do |project|
+    projects.where("meta -> 'is_bitbucket_repository' = 'true'").find_each do |project|
       begin
         client.issues.list_repo(project.bitbucket_owner, project.bitbucket_slug).each do |bitbucket_issue|
-          issue = project.issues.
-            where("meta ->> 'bitbucket_issue_id' = '?'", bitbucket_issue.local_id).first 
-
-          if !issue.present?
-            issue = project.issues.build.tap { |i| i.bitbucket_issue_id = bitbucket_issue.local_id } 
-          end
-
-          issue.assign_attributes(
-            :title => bitbucket_issue.title,
-            :body => bitbucket_issue.content,
-            :bitbucket_issue_comment_count => bitbucket_issue.comment_count)
-
-          issue.save!
+          Issue.sync_with_bitbucket_issue(bitbucket_issue, project)
         end
       rescue BitBucket::Error::NotFound
+        Rails.logger.info "BitBucket::Error::NotFound on sync bitbucket issues with project id #{ project.id }"
       end
     end
   end
 
-  def create_bitbucket_hook(client)
-    projects.where("meta -> 'is_bitbucket_repository' = 'true'").each do |project|
-      project.bitbucket_secret_token_for_hook ||= SecureRandom.hex(20)
+  def create_bitbucket_hook(_client)
+    authentication = authentications.find_by(:provider => 'bitbucket')
 
-      project.save
+    return false unless authentication.present?
 
-      authentication = authentications.where(:provider => 'bitbucket').first 
-
-      return false unless authentication.present?
-
+    projects.where("meta -> 'is_bitbucket_repository' = 'true'").find_each do |project|
       begin
-        result = BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
-          :oauth_secret => authentication.secret,
-          :client_secret => Settings.omniauth.bitbucket.secret,
-          :client_id => Settings.omniauth.bitbucket.key).list(project.bitbucket_owner, project.bitbucket_slug)
-
-        if !result[:values].present? || !result[:values].select { |h| h[:description] == 'kanbanonrails' }.present?
-          BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
-            :oauth_secret => authentication.secret).create(project.bitbucket_owner,
-              project.bitbucket_slug, { :description => 'kanbanonrails',
-              :url => Rails.application.routes.url_helpers.
-                payload_from_bitbucket_project_url(project,
-                :secure_token => project.bitbucket_secret_token_for_hook,
-                :host => Settings.webhook_host), :events => ['issue:created', 'issue:updated'],
-                :active => true }) 
-        end
+        project.create_bitbucket_hook(authentication)
       rescue BitBucket::Error::Unauthorized, BitBucket::Error::Forbidden, BitBucket::Error::NotFound
+        Rails.logger.info "Something wrong on creating bitbucket hooks with project id #{ project.id }"
       end
     end
   end
 
   def github_client
-    authentication = authentications.where(:provider => 'github').first 
+    authentication = authentications.find_by(:provider => 'github')
 
     return false unless authentication.present?
 
     Octokit::Client.new(:access_token => authentication.token, :auto_paginate => true)
   end
 
-  def sync_github_projects(client)
-    client.repos.each do |repo|
-      project = Project.where("meta ->> 'github_repository_id' = '?'", repo.id).first
-
-      project = Project.new.tap { |p| p.github_repository_id = repo.id } unless project.present?
-
-      u_t_p_c = if project.persisted? 
-        project.user_to_project_connections.where(:user_id => id).first_or_initialize
-      else
-        project.user_to_project_connections.build(:user_id => id)
-      end
-
-      u_t_p_c.role = repo.permissions[:admin] == true ? 'owner' : 'member'
-
-      project.update_attributes(
-        :name => repo.name,
-        :github_name => repo.name,
-        :github_url => repo.html_url,
-        :github_full_name => repo.full_name,
-        :is_github_repository => true)
-
-      project.save!
-    end
-  end
-
   def sync_github_issues(client)
-    projects.where("meta -> 'is_github_repository' = 'true'").each do |project|
+    projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
       begin
         client.list_issues(project.github_full_name).each do |github_issue|
-          issue = project.issues.where("meta ->> 'github_issue_id' = '?'", github_issue.id).first 
-
-          issue = project.issues.build.tap { |i| i.github_issue_id = github_issue.id } unless issue.present?
-
-          issue.assign_attributes(
-            :title => github_issue.title,
-            :body => github_issue.body,
-            :github_issue_comments_count => github_issue.comments,
-            :github_issue_html_url => github_issue.html_url,
-            :tags => github_issue.labels.map(&:name),
-            :github_labels => github_issue.labels,
-            :github_issue_number => github_issue.number)
-
-          issue.save!
+          Issue.sync_with_github_issue(github_issue, project)
         end
       rescue Octokit::NotFound
+        Rails.logger.info "Octokit::NotFound on syncing issues with project id #{ project.id }"
       end
     end
   end
 
   def create_github_hook(client)
-    projects.where("meta -> 'is_github_repository' = 'true'").each do |project|
+    projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
       begin
         project.github_secret_token_for_hook ||= SecureRandom.hex(20)
 
         project.save
 
-        hook = client.hooks(project.github_full_name).select do |hook|
-          hook.config[:url] == Rails.application.routes.url_helpers.
-            payload_from_github_project_url(project, :host => Settings.webhook_host) 
-        end.first
-
-        client.create_hook(project.github_full_name, 'web',
-          { :url => Rails.application.routes.url_helpers.
-            payload_from_github_project_url(project, :host => Settings.webhook_host),
-            :secret => project.github_secret_token_for_hook, :content_type => 'json' },
-          { :events => ['issues'] }) unless hook.present? 
+        project.create_github_hook(client)
       rescue Octokit::NotFound
+        Rails.logger.info "Octokit::NotFound on creating hook with project id #{ project.id }"
       end
     end
   end
 
   def assign_social_info(params = {})
-    self.name ||= params.try(:info).try(:name) || params.try(:info).try(:nickname)
+    info = params[:info]
 
-    self.name = 'Name' unless self.name.present? 
+    self.name ||= info.try(:name) || info.try(:nickname)
 
-    self.avatar_url ||= params.try(:info).try(:image)
+    self.name = 'Name' unless self.name.present?
 
-    self.confirmed_at ||= DateTime.now if params[:info].try(:[], :email).present?
+    self.avatar_url ||= info.try(:image)
+
+    self.confirmed_at ||= DateTime.now.utc if info.try(:[], :email).present?
   end
 
   private

@@ -10,6 +10,6 @@ RSpec.describe NotificationWorker do
       user.user_to_project_connections.create :project => issue.project, :role => 'owner'
     end
 
-    it { expect(NotificationWorker.new().perform(issue.id, user.id).size).to eq 1 }
+    it { expect(NotificationWorker.new.perform(issue.id, user.id).size).to eq 1 }
   end
 end

@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   load_and_authorize_resource :except => [:index, :new, :create]
 
-  before_filter :find_and_check_manage, :only => [:new, :create]
+  before_action :find_and_check_manage, :only => [:new, :create]
 
-  before_filter :find_and_check_read, :only => [:index]
+  before_action :find_and_check_read, :only => [:index]
 
-  before_filter :find_existing_user, :only => [:create]
+  before_action :build_user, :only => [:create]
 
   def dashboard
     @projects_count = @user.projects.size
@@ -26,12 +26,12 @@ class UsersController < ApplicationController
 
   def create
     if @user.save
-      redirect_to board_users_url(@board) 
+      redirect_to board_users_url(@board)
     else
       render :new
     end
   end
-  
+
   def edit
   end
 
@@ -69,23 +69,25 @@ class UsersController < ApplicationController
     authorize! :read, @board
   end
 
-  def find_existing_user
+  def build_user
     @user = User.where(:email => create_params[:email]).first_or_initialize
 
     @user.name ||= create_params[:name]
 
     @user.locale ||= create_params[:locale]
 
-    if @user.persisted?
-      connection = UserToBoardConnection.where(:user_id => @user.id, :board_id => @board.id).
-        first_or_initialize
-    else
-      connection = @user.user_to_board_connections.
-        build(:board_id => @board.id)
+    @user.password = create_params[:password] unless @user.persisted?
 
-      @user.password = create_params[:password] 
+    build_connection
+  end
+
+  def build_connection
+    connection = if @user.persisted?
+      UserToBoardConnection.where(:user_id => @user.id, :board_id => @board.id).first_or_initialize
+    else
+      @user.user_to_board_connections.build(:board_id => @board.id)
     end
 
-    connection.role = params[:role]
+    connection.role = params[:role] if can? :manage, @board
   end
 end

@@ -22,15 +22,32 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    session[:locale] = I18n.locale = if !user_signed_in? && !params[:locale].present? && !session[:locale].present?
+    I18n.locale = if check_unset_locale
       http_accept_language.compatible_language_from(I18n.available_locales)
     else
-      params[:locale].present? ? params[:locale] : (user_signed_in? && current_user.locale.present? ?
-        current_user.locale : (session[:locale].present? ? session[:locale] : I18n.default_locale))
+      fetch_existing_locale || I18n.default_locale
     end
 
-    return if !(user_signed_in? && I18n.locale.to_s != current_user.locale)
+    manage_user_and_session_locale
+  end
 
-    current_user.update_attributes(:locale => I18n.locale)
+  def manage_user_and_session_locale
+    session[:locale] = I18n.locale
+
+    if user_signed_in? && I18n.locale.to_s != current_user.locale
+      current_user.update_attributes(:locale => I18n.locale)
+    end
+  end
+
+  def fetch_existing_locale
+    return params[:locale] if params[:locale].present?
+
+    return current_user.locale if user_signed_in?
+
+    return session[:locale] if session[:locale].present?
+  end
+
+  def check_unset_locale
+    !user_signed_in? && !params[:locale].present? && !session[:locale].present?
   end
 end

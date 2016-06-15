@@ -16,7 +16,7 @@ RSpec.describe OmniauthCallbacksController, :type => :controller do
         get :github
       end
 
-      it { should redirect_to dashboard_user_url(assigns(:current_user)) }
+      it { should redirect_to dashboard_user_url(assigns(:authentication).user) }
     end
 
     context 'when email not present' do

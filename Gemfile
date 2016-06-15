@@ -73,7 +73,7 @@ group :development do
   gem 'brakeman', :require => false
   gem 'rails_best_practices'
   gem 'reek'
-  gem 'cane' 
+  gem 'cane'
 end
 
 group :development, :test do
@@ -103,4 +103,3 @@ end
 group :production do
   gem 'dalli'
 end
-

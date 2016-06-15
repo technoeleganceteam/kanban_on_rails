@@ -6,7 +6,7 @@ RSpec.describe WelcomeController, :type => :controller do
   describe 'GET index' do
     context 'with locale and signed in user' do
       before do
-        user.update_attributes(:confirmed_at => DateTime.now)
+        user.update_attributes(:confirmed_at => DateTime.now.utc)
 
         sign_in user
 

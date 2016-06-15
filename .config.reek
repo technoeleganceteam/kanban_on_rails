@@ -1,0 +1,19 @@
+---
+TooManyStatements:
+  max_statements: 10
+"app/controllers":
+  IrresponsibleModule:
+    enabled: false
+"app/helpers":
+  IrresponsibleModule:
+    enabled: false
+"app/workers":
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+"app/channels":
+  IrresponsibleModule:
+    enabled: false
+exclude_paths:
+  - db/migrate

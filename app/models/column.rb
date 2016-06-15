@@ -19,4 +19,13 @@ class Column < ActiveRecord::Base
     issue_to_section_connections.where(:section_id => section_id.to_i).
       order('issue_order ASC').includes(:issue => :project)
   end
+
+  def build_issue_to_section_connection(section)
+    connection = issue_to_section_connections.where(:board_id => board_id, :section_id => section.id).
+      first_or_initialize
+
+    connection.issue_order ||= max_order(section) + 1
+
+    connection.column_id = id
+  end
 end

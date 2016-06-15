@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BoardsController, :type => :controller do
   let(:user) { create :user }
 
-  let(:project) { create :project  }
+  let(:project) { create :project }
 
   let(:board) { create :board }
 
@@ -16,7 +16,7 @@ RSpec.describe BoardsController, :type => :controller do
   let(:another_user) { create :user }
 
   it { should route(:get, '/boards/1').to(:action => :show, :id => 1) }
-  
+
   it { should route(:get, '/users/1/boards').to(:action => :index, :user_id => 1) }
 
   it { should route(:get, '/users/1/boards/new').to(:action => :new, :user_id => 1) }
@@ -32,19 +32,21 @@ RSpec.describe BoardsController, :type => :controller do
   it { should route(:delete, '/users/1/boards/1').to(:action => :destroy, :id => 1, :user_id => 1) }
 
   it { expect { get :index, :user_id => user }.to raise_error(CanCan::AccessDenied) }
-  
+
   it { expect { get :show, :id => board }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { get :edit, :id => board, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { post :create, :user_id => user }.to raise_error(CanCan::AccessDenied) }
-   
+
   it { expect { put :update, :user_id => user, :id => connection.board }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { patch :update, :user_id => user, :id => connection.board }.to raise_error(CanCan::AccessDenied) }
 
-  it { expect { delete :destroy, :user_id => user, :id => connection.board }.
-    to raise_error(CanCan::AccessDenied) }
+  it do
+    expect { delete :destroy, :user_id => user, :id => connection.board }.
+      to raise_error(CanCan::AccessDenied)
+  end
 
   context 'Confirmed user' do
     before { sign_in user; user.confirm }
@@ -80,15 +82,17 @@ RSpec.describe BoardsController, :type => :controller do
 
       context 'with invalid attributes' do
         before { post :create, :user_id => user, :board => { :name => '' }, :format => :js }
-          
-        it { should render_template :new } 
+
+        it { should render_template :new }
       end
     end
 
     describe 'PATCH update as JS' do
       context 'with valid attributes' do
-        before { put :update, :user_id => user, :id => user_to_board_connection.board,
-          :board => { :name => 'Some name2' }, :format => :js }
+        before do
+          put :update, :user_id => user, :id => user_to_board_connection.board,
+          :board => { :name => 'Some name2' }, :format => :js
+        end
 
         it do
           expect(response.body).to eq(
@@ -98,10 +102,12 @@ RSpec.describe BoardsController, :type => :controller do
       end
 
       context 'with invalid attributes' do
-        before { put :update, :user_id => user, :id => user_to_board_connection.board,
-          :board => { :name => '' }, :format => :js }
-          
-        it { should render_template :edit } 
+        before do
+          put :update, :user_id => user, :id => user_to_board_connection.board,
+          :board => { :name => '' }, :format => :js
+        end
+
+        it { should render_template :edit }
       end
 
       context 'with attributes for columns with overlapping tags' do
@@ -111,7 +117,7 @@ RSpec.describe BoardsController, :type => :controller do
               { '0' => { :name => 'Some name', :tags => ['bar'] },
                 '1' => { :name => 'Some name', :tags => ['bar'] } } }, :format => :js
         end
-          
+
         it { should render_template :edit }
       end
 
@@ -133,7 +139,7 @@ RSpec.describe BoardsController, :type => :controller do
               { '0' => { :id => issue_connection.id, :issue_order => 1 } },
               :sections_attributes => { '0' => { :id => section.id, :name => 'Bar' } } }, :format => :js
         end
-          
+
         it do
           expect(response.body).to eq(
             "Turbolinks.visit('http://test.host/boards/#{ assigns(:board).id }');"
@@ -147,14 +153,14 @@ RSpec.describe BoardsController, :type => :controller do
 
           issue = create :issue
 
-          issue_connection = create :issue_to_section_connection, :issue => issue, :section => section,
+          create :issue_to_section_connection, :issue => issue, :section => section,
             :board => user_to_board_connection.board
 
           put :update, :user_id => user, :id => user_to_board_connection.board,
             :board => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
+              { '0' => { :id => issue.id, :tags => %w(foo bar) } } }, :format => :js
         end
-          
+
         it do
           expect(response.body).to eq(
             "Turbolinks.visit('http://test.host/boards/#{ assigns(:board).id }');"
@@ -167,19 +173,19 @@ RSpec.describe BoardsController, :type => :controller do
           issue = create :issue
 
           issue.github_issue_id = 123
-          
+
           issue.save
 
           section = create :section, :board => user_to_board_connection.board
 
-          issue_connection = create :issue_to_section_connection, :issue => issue, :section => section,
+          create :issue_to_section_connection, :issue => issue, :section => section,
             :board => user_to_board_connection.board
 
           put :update, :user_id => user, :id => user_to_board_connection.board,
             :board => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
+              { '0' => { :id => issue.id, :tags => %w(foo bar) } } }, :format => :js
         end
-          
+
         it do
           expect(response.body).to eq(
             "Turbolinks.visit('http://test.host/boards/#{ assigns(:board).id }');"
@@ -189,7 +195,7 @@ RSpec.describe BoardsController, :type => :controller do
 
       context 'with attributes for issues when issue in multiple sections' do
         before do
-          issue = create :issue, :tags => ['foo', 'tag']
+          issue = create :issue, :tags => %w(foo tag)
 
           section_first = create :section, :tags => ['foo'], :board => user_to_board_connection.board
 
@@ -197,17 +203,17 @@ RSpec.describe BoardsController, :type => :controller do
 
           create :column, :tags => ['tag'], :board => user_to_board_connection.board
 
-          issue_connection = create :issue_to_section_connection, :issue => issue,
+          create :issue_to_section_connection, :issue => issue,
             :section => section_first, :board => user_to_board_connection.board
 
-          issue_connection = create :issue_to_section_connection, :issue => issue,
+          create :issue_to_section_connection, :issue => issue,
             :section => section_second, :board => user_to_board_connection.board
 
           put :update, :user_id => user, :id => user_to_board_connection.board,
             :board => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
+              { '0' => { :id => issue.id, :tags => %w(foo bar) } } }, :format => :js
         end
-          
+
         it do
           expect(response.body).to eq(
             "Turbolinks.visit('http://test.host/boards/#{ assigns(:board).id }');"
@@ -223,16 +229,16 @@ RSpec.describe BoardsController, :type => :controller do
 
           create :column, :tags => ['tag'], :board => board
 
-          issue = create :issue, :tags => ['foo', 'tag']
+          issue = create :issue, :tags => %w(foo tag)
 
-          issue_connection = create :issue_to_section_connection, :issue => issue,
+          create :issue_to_section_connection, :issue => issue,
             :section => section, :board => user_to_board_connection.board
 
           put :update, :user_id => user, :id => user_to_board_connection.board,
             :board => { :name => 'Some name', :issues_attributes =>
-              { '0' => { :id => issue.id, :tags => ['foo', 'bar'] } } }, :format => :js
+              { '0' => { :id => issue.id, :tags => %w(foo bar) } } }, :format => :js
         end
-          
+
         it do
           expect(response.body).to eq(
             "Turbolinks.visit('http://test.host/boards/#{ assigns(:board).id }');"
@@ -264,19 +270,27 @@ RSpec.describe BoardsController, :type => :controller do
     end
 
     describe 'POST create board for first user' do
-      it { expect { post :create, :user_id => user, :board => { :name => 'Some name' }, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { post :create, :user_id => user, :board => { :name => 'Some name' }, :format => :js }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'PUT update board for first user' do
-      it { expect { put :update, :user_id => user, :id => connection.board,
-        :board => { :name => 'Some name2' }, :format => :js }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect do
+          put :update, :user_id => user, :id => connection.board,
+     :board => { :name => 'Some name2' }, :format => :js
+        end.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
 
     describe 'DELETE destroy' do
-      it { expect { delete :destroy, :user_id => user, :id => connection.board }.
-        to raise_error(CanCan::AccessDenied) }
+      it do
+        expect { delete :destroy, :user_id => user, :id => connection.board }.
+          to raise_error(CanCan::AccessDenied)
+      end
     end
   end
 end

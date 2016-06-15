@@ -23,7 +23,7 @@ describe ApplicationHelper, :type => :helper do
 
   describe '#issue_tag_color' do
     before do
-      @issue = create :issue, :github_labels => [[[], ['name', 'foo'], ['color', 'bar']]], :tags => ['foo']
+      @issue = create :issue, :github_labels => [[[], %w(name foo), %w(color bar)]], :tags => ['foo']
     end
 
     it 'return css rules' do

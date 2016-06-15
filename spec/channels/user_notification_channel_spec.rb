@@ -2,8 +2,10 @@ require 'rails_helper'
 
 describe UserNotificationsChannel do
   describe '#subscribed' do
-    subject { UserNotificationsChannel.new(ApplicationCable::Connection.
-      new(ActionCable::Server::Base.new(), {}), { :foo => 'bar' }) } 
+    subject do
+      UserNotificationsChannel.new(ApplicationCable::Connection.
+      new(ActionCable::Server::Base.new, {}), :foo => 'bar')
+    end
 
     before do
       user = create :user
@@ -13,7 +15,9 @@ describe UserNotificationsChannel do
       allow_any_instance_of(ApplicationCable::Connection).to receive(:current_user).and_return(user)
     end
 
-    it { expect(UserNotificationsChannel.new(ApplicationCable::Connection.
-      new(ActionCable::Server::Base.new(), {}), { :foo => 'bar' }).subscribed).to eq nil }
+    it do
+      expect(UserNotificationsChannel.new(ApplicationCable::Connection.
+      new(ActionCable::Server::Base.new, {}), :foo => 'bar').subscribed).to eq nil
+    end
   end
 end

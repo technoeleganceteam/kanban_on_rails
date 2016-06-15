@@ -5,9 +5,9 @@ class BoardsController < ApplicationController
 
   authorize_resource :board, :through => :user, :shallow => true
 
-  before_filter :assign_owner, :only => [:create]
+  before_action :assign_owner, :only => [:create]
 
-  before_filter :handle_issues_attributes, :only => [:update]
+  before_action :handle_issues_attributes, :only => [:update]
 
   def new
   end
@@ -17,7 +17,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @sections = @board.sections.order('section_order ASC') 
+    @sections = @board.sections.order('section_order ASC')
 
     @columns = @board.columns.order('column_order ASC')
 
@@ -63,12 +63,10 @@ class BoardsController < ApplicationController
   end
 
   def handle_issues_attributes
-    return if !board_params[:issues_attributes].present?
+    return unless board_params[:issues_attributes].present?
 
     params[:board][:issues_attributes] = params[:board][:issues_attributes].map do |attributes|
       issue = Issue.find(attributes.last[:id])
-
-      add_connection_attributes(issue, attributes) if issue.issue_to_section_connections.size > 1
 
       issue.parse_attributes_for_update(attributes.last)
     end
@@ -78,20 +76,5 @@ class BoardsController < ApplicationController
     return unless board_params[:issues_attributes].present?
 
     board_params[:issues_attributes].each { |attr| Issue.user_change_issue(attr[:id], current_user.id) }
-  end
-
-  def add_connection_attributes(issue, attributes)
-    issue.issue_to_section_connections.includes(:column).each do |connection|
-      next if attributes.last[:target_column_id] == connection.column.id
-
-      params[:board][:issue_to_section_connections_attributes] ||= {}
-
-      key = params[:board][:issue_to_section_connections_attributes].keys.last.to_i + 1
-
-      params[:board][:issue_to_section_connections_attributes][key.to_s] = {
-        :id => connection.id, :issue_order => connection.column.max_order(connection.section),
-        :column_id => attributes.last[:target_column_id]
-      }
-    end
   end
 end

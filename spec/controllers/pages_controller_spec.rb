@@ -12,6 +12,6 @@ RSpec.describe PagesController, :type => :controller do
   describe 'GET robots' do
     before { get :robots, :format => :txt }
 
-    it {expect(response.body.size).to eq 26 }
+    it { expect(response.body.size).to eq 26 }
   end
 end

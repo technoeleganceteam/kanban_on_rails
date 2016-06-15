@@ -9,13 +9,15 @@ module IssueToColumnAndSectionConnectionCheckable
 
   def update_issue_to_section_connections
     issue_to_section_connections.includes(:issue => :project).each do |connection|
-      next if self.class.name == 'Section' && include_all?
-
-      next unless connection.issue.present?
-
-      connection.destroy if (connection.issue.tags.to_a & tags.to_a).empty?
+      connection.destroy if need_to_destroy?(connection)
     end
+  end
 
-    project.issues.includes(:project).map(&:assign_issue_to_section_connections) if project.present?
+  def need_to_destroy?(connection)
+    !section_and_include_all? && connection.issue.present? && (connection.issue.tags.to_a & tags.to_a).empty?
+  end
+
+  def section_and_include_all?
+    self.class.name == 'Section' && include_all?
   end
 end

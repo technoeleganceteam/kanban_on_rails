@@ -7,7 +7,7 @@ RSpec.describe ApplicationController, :type => :controller do
     end
   end
 
-  before (:each) do
+  before :each do
     request.env['devise.mapping'] = Devise.mappings[:user]
   end
 
