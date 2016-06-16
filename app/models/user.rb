@@ -42,6 +42,8 @@ class User < ActiveRecord::Base
 
   def github_client_repos(client)
     client.repos
+  rescue Octokit::Unauthorized
+    Rails.logger.info "Octokit::Unauthorized on get repos from user with id #{ id }"
   end
 
   def gitlab_client_repos(client)
