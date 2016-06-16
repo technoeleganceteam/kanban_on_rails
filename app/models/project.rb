@@ -43,12 +43,17 @@ class Project < ActiveRecord::Base
 
       send("create_hook_to_#{ provider }", client) unless hook.present?
     end
+
+    define_method "payload_from_#{ provider }_url" do
+      Rails.application.routes.url_helpers.
+        send("payload_from_#{ provider }_project_url", id, :host => Settings.webhook_host)
+    end
   end
 
   def remove_hook_from_bitbucket(authentication, hook)
     BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
       :oauth_secret => authentication.secret).delete(bitbucket_owner,
-        bitbucket_slug, hook.first.uuid[1...-1])
+        bitbucket_slug, hook.uuid[1...-1])
   end
 
   def remove_hook_from_gitlab(client, hook)
@@ -93,26 +98,27 @@ class Project < ActiveRecord::Base
   end
 
   def fetch_hook_from_github(client)
-    client.hooks(github_full_name).select do |hook|
-      hook.config[:url] == Rails.application.routes.url_helpers.
-        payload_from_github_project_url(id, :host => Settings.webhook_host)
-    end.first
+    client.hooks(github_full_name).find do |hook|
+      hook.config[:url] == payload_from_github_url
+    end
   rescue Octokit::NotFound
     Rails.logger.info "Octokit::NotFound on fetch hooks from project id #{ id }"
+
+    false
   end
 
   def fetch_hook_from_bitbucket(authentication)
     result = list_bitbucket_hooks(authentication)
 
-    result[:values].select { |h| h[:description] == 'kanbanonrails' }
+    result[:values].find { |h| h[:description] == 'kanbanonrails' }
   end
 
   def fetch_hook_from_gitlab(client)
-    client.project_hooks(gitlab_repository_id).select do |hook|
+    client.project_hooks(gitlab_repository_id).find do |hook|
       hook.url == Rails.application.routes.url_helpers.
         payload_from_gitlab_project_url(id, :secure_token => gitlab_secret_token_for_hook,
           :host => Settings.webhook_host)
-    end.first
+    end
   end
 
   def create_hook_to_github(client)
