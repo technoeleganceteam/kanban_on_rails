@@ -158,7 +158,7 @@ class Issue < ActiveRecord::Base
   class << self
     def sync_with_github_issue(github_issue, project)
       project.fetch_issue_from_github_id(github_issue.id).update_attributes!(
-        :title => github_issue.title,
+        :title => github_issue.title[0..(Settings.max_string_field_size - 1)],
         :body => github_issue.body,
         :github_issue_comments_count => github_issue.comments,
         :github_issue_html_url => github_issue.html_url,
