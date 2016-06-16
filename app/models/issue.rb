@@ -114,6 +114,8 @@ class Issue < ActiveRecord::Base
 
   def bitbucket_create_issue(client)
     client.issues.create(project.bitbucket_owner, project.bitbucket_slug, 'title' => title)
+  rescue BitBucket::Error::NotFound
+    Rails.logger.info "BitBucket::Error::NotFound on sync bitbucket issues with project id #{ project.id }"
   end
 
   def bitbucket_update_issue(client)
