@@ -90,10 +90,6 @@ class User < ActiveRecord::Base
 
   def create_gitlab_hook(client)
     projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
-      project.gitlab_secret_token_for_hook ||= SecureRandom.hex(20)
-
-      project.save
-
       project.create_gitlab_hook(client)
     end
   end
@@ -143,6 +139,28 @@ class User < ActiveRecord::Base
     end
   end
 
+  def remove_hooks_from_bitbucket
+    projects.where("meta -> 'is_bitbucket_repository' = 'true'").find_each do |project|
+      authentication = authentications.find_by(:provider => 'bitbucket')
+
+      return false unless authentication.present?
+
+      project.fetch_and_remove_hook_from_bitbucket(authentication)
+    end
+  end
+
+  def remove_hooks_from_gitlab
+    projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
+      project.fetch_and_remove_hook_from_gitlab(gitlab_client)
+    end
+  end
+
+  def remove_hooks_from_github
+    projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
+      project.fetch_and_remove_hook_from_github(github_client)
+    end
+  end
+
   def github_client
     authentication = authentications.find_by(:provider => 'github')
 
@@ -166,10 +184,6 @@ class User < ActiveRecord::Base
   def create_github_hook(client)
     projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
       begin
-        project.github_secret_token_for_hook ||= SecureRandom.hex(20)
-
-        project.save
-
         project.create_github_hook(client)
       rescue Octokit::NotFound
         Rails.logger.info "Octokit::NotFound on creating hook with project id #{ project.id }"

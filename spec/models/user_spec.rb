@@ -204,7 +204,7 @@ describe User, :type => :model do
       stub_request(:get, 'https://api.bitbucket.org/2.0/repositories/username/slug/hooks').
         with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Authorization' => /.*/, 'User-Agent' => 'BitBucket Ruby Gem 0.1.7' }).
-        to_return(:status => 200, :headers => {}, :body => {}.to_json.to_s)
+        to_return(:status => 200, :headers => {}, :body => { :values => {} }.to_json.to_s)
 
       stub_request(:post, 'https://api.bitbucket.org/2.0/repositories/username/slug/hooks').
         with(:body => /.*/, :headers => { 'Accept' => '*/*',
@@ -235,5 +235,72 @@ describe User, :type => :model do
     end
 
     it { expect(user.sync_bitbucket.size).to eq 8 }
+  end
+
+  describe '#remove_hooks_from_bitbucket' do
+    before do
+      project = create :project, :is_bitbucket_repository => true, :name => 'Some name',
+        :bitbucket_owner => 'owner', :bitbucket_slug => 'slug'
+
+      user.authentications.create :provider => 'bitbucket', :token => 'token', :secret => 'secret', :uid => 12
+
+      user.user_to_project_connections.create :project => project, :role => 'owner'
+
+      stub_request(:get, 'https://api.bitbucket.org/2.0/repositories/owner/slug/hooks').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type' => 'application/json',
+          'User-Agent' => 'BitBucket Ruby Gem 0.1.7' }).
+        to_return(:status => 200, :headers => {},
+          :body => { :values => [{ :description => 'kanbanonrails', :uuid => '{12}' }] }.to_json.to_s)
+
+      stub_request(:delete, 'https://api.bitbucket.org/2.0/repositories/owner/slug/hooks/12').
+        with(:headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => /.*/, 'Content-Type' => 'application/json',
+          'User-Agent' => 'BitBucket Ruby Gem 0.1.7' }).
+        to_return(:status => 200, :body => {}.to_json.to_s, :headers => {})
+    end
+
+    it { expect(user.remove_hooks_from_bitbucket).to eq nil }
+  end
+
+  describe '#remove_hooks_from_github' do
+    before do
+      project = create :project, :is_github_repository => true, :name => 'Some name',
+        :github_repository_id => 1
+
+      user.authentications.create :provider => 'github', :token => 'token', :secret => 'secret', :uid => 12
+
+      user.user_to_project_connections.create :project => project, :role => 'owner'
+
+      stub_request(:get, 'https://api.github.com/repos/some/project/hooks?per_page=100').
+        with(:headers => { 'Accept' => 'application/vnd.github.v3+json',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => 'token token', 'Content-Type' => 'application/json',
+          'User-Agent' => 'Octokit Ruby Gem 4.3.0' }).
+        to_return(:status => 200, :headers => {},
+          :body => [Hashie::Mash.new(:config => { :url => Settings.webhook_host })])
+    end
+
+    it { expect(user.remove_hooks_from_github).to eq nil }
+  end
+
+  describe '#remove_hooks_from_gitlab' do
+    before do
+      project = create :project, :is_gitlab_repository => true, :name => 'Some name',
+        :gitlab_repository_id => 1
+
+      user.authentications.create :provider => 'gitlab', :token => 'token', :secret => 'secret', :uid => 12,
+        :gitlab_private_token => 'token'
+
+      user.user_to_project_connections.create :project => project, :role => 'owner'
+
+      stub_request(:get, 'https://gitlab.com/api/v3/projects/1/hooks').
+        with(:headers => { 'Accept' => 'application/json', 'Private-Token' => 'token' }).
+        to_return(:status => 200, :headers => {}, :body => [{
+          :url => Settings.webhook_host
+        }].to_json)
+    end
+
+    it { expect(user.remove_hooks_from_gitlab).to eq nil }
   end
 end

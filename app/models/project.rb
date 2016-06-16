@@ -25,6 +25,40 @@ class Project < ActiveRecord::Base
 
   after_save :update_issues
 
+  %w(gitlab github bitbucket).each do |provider|
+    define_method "fetch_and_remove_hook_from_#{ provider }" do |client|
+      hook = send("fetch_hook_from_#{ provider }", client)
+
+      send("remove_hook_from_#{ provider }", client, hook) if hook.present?
+    end
+
+    define_method "create_#{ provider }_hook" do |client|
+      unless send("#{ provider }_secret_token_for_hook").present?
+        update_attributes("#{ provider }_secret_token_for_hook" => SecureRandom.hex(20))
+      end
+
+      save
+
+      hook = send("fetch_hook_from_#{ provider }", client)
+
+      send("create_hook_to_#{ provider }", client) unless hook.present?
+    end
+  end
+
+  def remove_hook_from_bitbucket(authentication, hook)
+    BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
+      :oauth_secret => authentication.secret).delete(bitbucket_owner,
+        bitbucket_slug, hook.first.uuid[1...-1])
+  end
+
+  def remove_hook_from_gitlab(client, hook)
+    client.delete_project_hook(gitlab_repository_id, hook.id)
+  end
+
+  def remove_hook_from_github(client, hook)
+    client.remove_hook(github_full_name, hook.id)
+  end
+
   def parse_issue_params_from_github_webhook(params)
     issue = issues.find_by("meta ->> 'github_issue_id' = '?'", params[:id].to_i)
 
@@ -58,28 +92,6 @@ class Project < ActiveRecord::Base
     issue.save!
   end
 
-  def create_gitlab_hook(client)
-    hook = fetch_hook_from_gitlab(client)
-
-    create_hook_to_gitlab(client) unless hook.present?
-  end
-
-  def create_github_hook(client)
-    hook = fetch_hook_from_github(client)
-
-    create_hook_to_github(client) unless hook.present?
-  end
-
-  def create_bitbucket_hook(authentication)
-    unless bitbucket_secret_token_for_hook.present?
-      update_attribute(:bitbucket_secret_token_for_hook, SecureRandom.hex(20))
-    end
-
-    result = list_bitbucket_hooks(authentication)
-
-    create_bitbucket_hook_with_authentication(authentication) if create_bitbucket_hook?(result)
-  end
-
   def fetch_hook_from_github(client)
     client.hooks(github_full_name).select do |hook|
       hook.config[:url] == Rails.application.routes.url_helpers.
@@ -87,12 +99,10 @@ class Project < ActiveRecord::Base
     end.first
   end
 
-  def create_hook_to_github(client)
-    client.create_hook(github_full_name, 'web',
-      { :url => Rails.application.routes.url_helpers.
-        payload_from_github_project_url(id, :host => Settings.webhook_host),
-        :secret => github_secret_token_for_hook, :content_type => 'json' },
-      :events => ['issues'])
+  def fetch_hook_from_bitbucket(authentication)
+    result = list_bitbucket_hooks(authentication)
+
+    result[:values].select { |h| h[:description] == 'kanbanonrails' }
   end
 
   def fetch_hook_from_gitlab(client)
@@ -103,10 +113,30 @@ class Project < ActiveRecord::Base
     end.first
   end
 
+  def create_hook_to_github(client)
+    client.create_hook(github_full_name, 'web',
+      { :url => Rails.application.routes.url_helpers.
+        payload_from_github_project_url(id, :host => Settings.webhook_host),
+        :secret => github_secret_token_for_hook, :content_type => 'json' },
+      :events => ['*'])
+  end
+
   def create_hook_to_gitlab(client)
     client.add_project_hook(gitlab_repository_id, Rails.application.routes.url_helpers.
       payload_from_gitlab_project_url(id, :secure_token => gitlab_secret_token_for_hook,
-        :host => Settings.webhook_host), :issues_events => 1, :push_events => 0)
+        :host => Settings.webhook_host), :push_events => 1, :issues_events => 1,
+        :merge_requests_events => 1, :tag_push_events => 1)
+  end
+
+  def create_hook_to_bitbucket(authentication)
+    BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
+      :oauth_secret => authentication.secret).create(bitbucket_owner,
+        bitbucket_slug, :description => 'kanbanonrails',
+        :url => Rails.application.routes.url_helpers.
+          payload_from_bitbucket_project_url(id,
+            :secure_token => bitbucket_secret_token_for_hook,
+            :host => Settings.webhook_host), :events => bitbucket_hook_events,
+          :active => true)
   end
 
   def open_issues
@@ -136,17 +166,6 @@ class Project < ActiveRecord::Base
       :oauth_secret => authentication.secret,
       :client_secret => Settings.omniauth.bitbucket.secret,
       :client_id => Settings.omniauth.bitbucket.key).list(bitbucket_owner, bitbucket_slug)
-  end
-
-  def create_bitbucket_hook_with_authentication(authentication)
-    BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
-      :oauth_secret => authentication.secret).create(bitbucket_owner,
-        bitbucket_slug, :description => 'kanbanonrails',
-        :url => Rails.application.routes.url_helpers.
-          payload_from_bitbucket_project_url(id,
-            :secure_token => bitbucket_secret_token_for_hook,
-            :host => Settings.webhook_host), :events => ['issue:created', 'issue:updated'],
-          :active => true)
   end
 
   class << self
@@ -213,7 +232,13 @@ class Project < ActiveRecord::Base
     issues.map(&:save)
   end
 
-  def create_bitbucket_hook?(result)
-    !result[:values].present? || !result[:values].select { |h| h[:description] == 'kanbanonrails' }.present?
+  def bitbucket_hook_events
+    [
+      'repo:push', 'repo:fork', 'repo:commit_comment_created', 'repo:commit_status_created',
+      'repo:commit_status_updated', 'issue:created', 'issue:updated', 'issue:comment_created',
+      'pullrequest:created', 'pullrequest:updated', 'pullrequest:approved', 'pullrequest:unapproved',
+      'pullrequest:fulfilled', 'pullrequest:rejected', 'pullrequest:comment_created',
+      'pullrequest:comment_updated', 'pullrequest:comment_deleted'
+    ]
   end
 end
