@@ -97,6 +97,8 @@ class Project < ActiveRecord::Base
       hook.config[:url] == Rails.application.routes.url_helpers.
         payload_from_github_project_url(id, :host => Settings.webhook_host)
     end.first
+  rescue Octokit::NotFound
+    Rails.logger.info "Octokit::NotFound on fetch hooks from project id #{ id }"
   end
 
   def fetch_hook_from_bitbucket(authentication)
