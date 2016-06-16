@@ -105,6 +105,10 @@ class Project < ActiveRecord::Base
     Rails.logger.info "Octokit::NotFound on fetch hooks from project id #{ id }"
 
     false
+  rescue Octokit::Unauthorized
+    Rails.logger.info "Octokit::Unauthorized on get hooks from project id #{ id }"
+
+    false
   end
 
   def fetch_hook_from_bitbucket(authentication)
