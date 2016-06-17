@@ -110,31 +110,19 @@ RSpec.describe ProjectsController, :type => :controller do
     describe 'GET sync_with_github' do
       before { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }
 
-      it do
-        expect(response.body).to eq(
-          "Turbolinks.visit('http://test.host/users/#{ user.id }/projects');"
-        )
-      end
+      it { should render_template :start_sync_with_provider }
     end
 
     describe 'GET sync_with_gitlab' do
       before { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }
 
-      it do
-        expect(response.body).to eq(
-          "Turbolinks.visit('http://test.host/users/#{ user.id }/projects');"
-        )
-      end
+      it { should render_template :start_sync_with_provider }
     end
 
     describe 'GET sync_with_bitbucket' do
       before { xhr :get, :sync_with_bitbucket, :id => connection.project.id, :user_id => user, :format => :js }
 
-      it do
-        expect(response.body).to eq(
-          "Turbolinks.visit('http://test.host/users/#{ user.id }/projects');"
-        )
-      end
+      it { should render_template :start_sync_with_provider }
     end
 
     describe 'GET stop_sync_with_github' do
