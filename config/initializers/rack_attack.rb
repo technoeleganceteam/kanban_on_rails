@@ -4,6 +4,10 @@ module Rack
       req.ip if req.path == '/users/sign_in' && req.post? && Rails.env.production?
     end
 
+    throttle('feedbacks/ip', :limit => 5, :period => 300.seconds) do |req|
+      req.ip if req.path == '/feedbacks' && req.post? && Rails.env.production?
+    end
+
     throttle('logins/email', :limit => 10, :period => 300.seconds) do |req|
       req.params['user'].try(:[], 'email') if req.path == '/users/sign_in' && req.post? && Rails.env.production?
     end
