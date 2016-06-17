@@ -115,6 +115,10 @@ class Project < ActiveRecord::Base
     result = list_bitbucket_hooks(authentication)
 
     result[:values].find { |h| h[:description] == 'kanbanonrails' }
+  rescue BitBucket::Error::Forbidden
+    Rails.logger.info "BitBucket::Error::Forbidden on get hooks from project id #{ id }"
+
+    false
   end
 
   def fetch_hook_from_gitlab(client)
