@@ -30,6 +30,7 @@ he:
       base: Base de Datos
       title: Título
       user_to_project_connection: do usuario para proxectar conexión
+      user_to_board_connection: usuario tarxeta de conexión
       columns:
         tag: Tag superposición
     new_project_modal:
@@ -54,6 +55,19 @@ he:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: Páxina seguinte
+    sync_with_provider_button:
+      sync_with_github: Sync co GitHub
+      sync_with_gitlab: sincronización con gitlab
+      sync_with_bitbucket: sincronización con Bitbucket
+      stop_sync_with_bitbucket: Deter a sincronización con Bitbucket
+      stop_sync_with_github: Deter a sincronización co GitHub
+      stop_sync_with_gitlab: Deter a sincronización con gitlab
+    header:
+      requests: Solicitudes
+      feedbacks: Comentarios
+    user_requests_navigation:
+      all: Todo
+      my_requests: meus pedidos
   users:
     new:
       invite_user: Invitar usuario
@@ -69,6 +83,7 @@ he:
       project: Proxecto
       users: usuarios
       new: Nova
+      board: Board
     edit:
       name: Nome
       enter_your_name: Insire o teu nome
@@ -89,6 +104,17 @@ he:
       here_some_of_your_statistics: Aquí algunhas das súas estatísticas
       projects: Proxectos
       boards: Foros
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Pode conectar diferentes servizos e sincronizar
+        os seus proxectos e os problemas
+      turn_on_github: Chama GitHub
+      turn_on_gitlab: Chama gitlab
+      turn_on_bitbucket: Chama Bitbucket
+      sync_with_bitbucket: sincronización con Bitbucket
+      sync_with_github: Sync co GitHub
+      syncing_with_gitlab: sincronización con gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Se
+        xa ten sincronizado seu proxecto, será sincronizado sempre webhooks
   projects:
     index:
       projects: Proxectos
@@ -214,6 +240,26 @@ he:
       board_users: Usuarios
       edit: Editar
       destroy: Destruír
+  user_requests:
+    form:
+      content: contido
+      create: Crear
+      edit: Editar
+  feedbacks:
+    new:
+      feedback_title: comentarios
+    form:
+      feedback_name: O seu nome
+      feedback_email: O seu correo electrónico
+      feedback_content: contido
+      cancel: Desfacer
+      send: Enviar
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: Grazas! Recibimos o producto.
+      close: Pechar
+      cancel: Desfacer
+      more: Enviar máis
   pages:
     faq:
       faq: FAQ

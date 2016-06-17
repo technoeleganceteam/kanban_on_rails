@@ -30,6 +30,7 @@ ro:
       base: Base
       title: Titlu
       user_to_project_connection: utilizator pentru a proiecta conexiunea
+      user_to_board_connection: utilizatorului la bord conexiune
       columns:
         tag: Tag suprapunere
     new_project_modal:
@@ -53,7 +54,20 @@ ro:
       mailer: Mailer
       technoelegance: Technoelegance Ltd.
     pagination_link:
-      next_page: Pagina următoare
+      next_page: Pagina urmatoare
+    sync_with_provider_button:
+      sync_with_github: Sincronizare cu Github
+      sync_with_gitlab: Sincronizare cu Gitlab
+      sync_with_bitbucket: Sincronizare cu BitBucket
+      stop_sync_with_bitbucket: Opriți sincronizarea cu BitBucket
+      stop_sync_with_github: Opriți sincronizarea cu Github
+      stop_sync_with_gitlab: Opriți sincronizarea cu Gitlab
+    header:
+      requests: Cereri
+      feedbacks: feedback-uri
+    user_requests_navigation:
+      all: Toate
+      my_requests: Cererile mele
   users:
     new:
       invite_user: Invitați utilizator
@@ -61,9 +75,9 @@ ro:
       name: Nume
       enter_user_name: Introduceți numele de utilizator
       email: E-mail
-      enter_user_email: Introduceți e-mail utilizator
+      enter_user_email: Introdu utilizator de e-mail
       enter_user_password: Introduceți parola de utilizator
-      password: parolă
+      password: parola
       save: Salvare
     index:
       project: Project
@@ -85,14 +99,25 @@ ro:
     update:
       your_profile_was_successfully_updated: Profilul tău a fost actualizat cu succes
     dashboard:
-      hello: Hello
+      hello: Bună ziua
       here_some_of_your_statistics: Aici unele dintre statisticile
       projects: Proiecte
-      boards: Boards
+      boards: camerelor
+      issues: Probleme
+      you_can_sync_projects_and_issues_from: Puteți activa diferite servicii și sincronizați
+        proiectele și problemele dvs.
+      turn_on_github: Porniți Github
+      turn_on_gitlab: Porniți Gitlab
+      turn_on_bitbucket: Porniți BitBucket
+      sync_with_bitbucket: Sincronizare cu BitBucket
+      sync_with_github: Sincronizare cu Github
+      syncing_with_gitlab: Sincronizare cu Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Dacă
+        ați deja proiectul sincronizat, acesta va fi sincronizat întotdeauna cu webhooks
   projects:
     index:
       projects: Proiecte
-      new: Nou
+      new: noi
       sync_with_github: Sincronizare cu Github
       sync_with_gitlab: Sincronizare cu Gitlab
       sync_with_bitbucket: Sincronizare cu BitBucket
@@ -131,7 +156,7 @@ ro:
       related_boards: placi înrudite
       project_issues: probleme de proiect
       project_users: utilizatori Project
-      new: Nou
+      new: noi
     project_modal:
       project: Project
   issues:
@@ -140,12 +165,12 @@ ro:
       enter_issue_title: Introduceți titlul problemă
       save: Salvare
       body: tot corpul
-      enter_issue_body: Enter organism problemă
+      enter_issue_body: Enter corp problemă
       tags: Tag-uri
       issue_order: Comandă
       bitbucket_issue_id: BitBucket problemă id
       github_issue_id: Github problemă id
-      github_issue_number: Numărul problemă Github
+      github_issue_number: număr problemă Github
       project: Project
     index:
       issues: probleme
@@ -155,8 +180,6 @@ ro:
     issue:
       destroy: Ștergeți
       edit: Edit
-    edit:
-      edit_issue: Editare
     new:
       new_issue: problemă nouă
     issue_modal:
@@ -166,7 +189,7 @@ ro:
       enabled_services: servicii activate
     authentication:
       turned_off: Oprit
-      turn_on: Porniți
+      turn_on: Activați
       turn_off: Dezactivați
       turned_on: Pornit
   news:
@@ -205,14 +228,34 @@ ro:
       column_tags: etichete de coloană
       column_order: Comandă
     show:
-      next_page: Pagina urmatoare
+      next_page: Pagina următoare
     index:
       boards: camerelor
-      new: Noi
+      new: Nou
     board:
       board_users: Utilizatori
-      edit: Editare
+      edit: Editați
       destroy: distruge
+  user_requests:
+    form:
+      content: Conținut
+      create: Creați
+      edit: Editare
+  feedbacks:
+    new:
+      feedback_title: feedback
+    form:
+      feedback_name: Numele tau
+      feedback_email: Adresa ta de email
+      feedback_content: Conținut
+      cancel: Anulare
+      send: Trimite
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Vă mulțumim! Noi am primit feedback-ul dumneavoastră.
+      close: Închide
+      cancel: Anulare
+      more: Trimite mai
   pages:
     faq:
       faq: Întrebări frecvente
@@ -223,7 +266,7 @@ ro:
       kanban_on_rails_features: Puteți sincroniza proiectele și problemele cu Github
         și BitBucket, invitați utilizatori (de exemplu manageri) pentru proiectul
         dumneavoastră, implementați propriul server
-      i_have_some_requests: Am niște solicitări
+      i_have_some_requests: Am unele cereri
       you_can_write_request: Puteți scrie cerere
       here: aici
       i_have_seen_some_typo_or_wrong_translation: Am văzut unele greșeli de tipar
@@ -235,7 +278,7 @@ ro:
       about_kanban_on_rails: Despre KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails este serviciul în cazul în care vă
         puteți crea panouri Kanban și sincronizați-l cu Github sau BitBucket
-      kanban_on_rails_features: caracteristici KanbanOnRails
+      kanban_on_rails_features: Caracteristici KanbanOnRails
       sync_with_github_and_bitbucket: Puteți sincroniza proiectele și problemele cu
         Github și BitBucket
       invite_users: Puteți invita utilizatori (de exemplu manageri) pentru proiectul
@@ -314,7 +357,7 @@ ro:
     mailer:
       confirmation_instructions:
         subject: Instrucțiuni de confirmare
-        welcome_to_kanban_on_rails: Bine ați venit la KanbanOnRails
+        welcome_to_kanban_on_rails: Bine ati venit la KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Puteți confirma
           un e-mail prin link-ul de mai jos
         confirm_my_account: Confirmați mea de e-mail
@@ -330,7 +373,7 @@ ro:
       unlock_instructions:
         subject: Instrucțiuni Deblocare
     omniauth_callbacks:
-      failure: nu a putut autentifica la {% fel} deoarece "% {motiv}".
+      failure: nu te-a putut autentifica la {% fel} deoarece "% {motiv}".
       success: autentificat cu succes la {%} fel de cont.
     passwords:
       no_token: Nu puteți accesa această pagină, fără a veni dintr-un e-mail de resetare
@@ -363,15 +406,15 @@ ro:
         să verificăm dacă noua adresă de e-mail. Vă rugăm să verificați e-mail-ul
         și faceți clic pe link-ul de confirmare pentru a finaliza noua confirmare
         a adresei de e-mail.
-      updated: Ați actualizat contul dvs. cu succes.
+      updated: Ați actualizat contul cu succes.
       new:
-        sign_up: Înregistrează-te
+        sign_up: Inscrie-te
         name: Nume
-        password: parola
-        register: Inscrie-te
+        password: parolă
+        register: Înregistrează-te
     sessions:
       signed_in: Conectat cu succes.
-      signed_out: Semnat cu succes.
+      signed_out: semnat cu succes.
       new:
         sign_in: Conectați-vă
         password: parolă

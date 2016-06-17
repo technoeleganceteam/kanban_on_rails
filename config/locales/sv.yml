@@ -30,6 +30,7 @@ sv:
       base: Base
       title: Titel
       user_to_project_connection: Användar att projicera anslutning
+      user_to_board_connection: Användar gå ombord anslutning
       columns:
         tag: Tag lappande
     new_project_modal:
@@ -54,6 +55,19 @@ sv:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Nästa sida
+    sync_with_provider_button:
+      sync_with_github: Sync med Github
+      sync_with_gitlab: Sync med Gitlab
+      sync_with_bitbucket: Sync med bitbucket
+      stop_sync_with_bitbucket: Stoppa synkronisering med bitbucket
+      stop_sync_with_github: Stoppa synkronisering med Github
+      stop_sync_with_gitlab: Stoppa synkronisering med Gitlab
+    header:
+      requests: Framställningar
+      feedbacks: återkopplingar
+    user_requests_navigation:
+      all: All
+      my_requests: Mina förfrågningar
   users:
     new:
       invite_user: inviterar användaren
@@ -70,6 +84,7 @@ sv:
       project: Project
       users: användare
       new: New
+      board: Board
     edit:
       name: Namn
       enter_your_name: Ange ditt namn
@@ -90,6 +105,18 @@ sv:
       here_some_of_your_statistics: Här några av statistiken
       projects: Projekt
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Du kan aktivera olika tjänster och synkronisera
+        dina projekt och frågor
+      turn_on_github: Slå på Github
+      turn_on_gitlab: Slå på Gitlab
+      turn_on_bitbucket: Slå på bitbucket
+      sync_with_bitbucket: Sync med bitbucket
+      sync_with_github: Sync med Github
+      syncing_with_gitlab: Sync med Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Om
+        du redan har synkroniserat projektet, kommer det att synkroniseras alltid
+        med webhooks
   projects:
     index:
       projects: Projekt
@@ -228,6 +255,26 @@ sv:
       board_users: Användare
       edit: Redigera
       destroy: förstöra
+  user_requests:
+    form:
+      content: Innehåll
+      create: skapar
+      edit: Redigera
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Ditt namn
+      feedback_email: Din e
+      feedback_content: Innehåll
+      cancel: Avbryt
+      send: Sänd
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Tack! Vi har fått feedback.
+      close: Stäng
+      cancel: Avbryt
+      more: Överför mer
   pages:
     faq:
       faq: FAQ

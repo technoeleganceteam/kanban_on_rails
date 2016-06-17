@@ -31,6 +31,7 @@ hu:
       base: Base
       title: Cím
       user_to_project_connection: Felhasználó vetíteni kapcsolat
+      user_to_board_connection: Felhasználó szállni kapcsolat
       columns:
         tag: Tag átfedő
     new_project_modal:
@@ -55,6 +56,19 @@ hu:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Következő oldal
+    sync_with_provider_button:
+      sync_with_github: Szinkronizálás a GitHub
+      sync_with_gitlab: Sync with Gitlab
+      sync_with_bitbucket: Sync with Bitbucket
+      stop_sync_with_bitbucket: leállítása szinkronban Bitbucket
+      stop_sync_with_github: leállítása szinkronban Github
+      stop_sync_with_gitlab: leállítása szinkronban Gitlab
+    header:
+      requests: kérések
+      feedbacks: Visszajelzések
+    user_requests_navigation:
+      all: Minden
+      my_requests: Saját kérések
   users:
     new:
       invite_user: Felhasználó meghívása
@@ -71,6 +85,7 @@ hu:
       project: Project
       users: felhasználó
       new: Új
+      board: Board
     edit:
       name: neve
       enter_your_name: Adja meg a nevét
@@ -91,6 +106,17 @@ hu:
       here_some_of_your_statistics: Itt néhány statisztikát
       projects: projektek
       boards: alaplapok
+      issues: kérdések
+      you_can_sync_projects_and_issues_from: lehet bekapcsolni a különböző szolgáltatások
+        és szinkronizálhatja projektek és problémák
+      turn_on_github: bekapcsolása Github
+      turn_on_gitlab: bekapcsolása Gitlab
+      turn_on_bitbucket: bekapcsolása Bitbucket
+      sync_with_bitbucket: Sync with Bitbucket
+      sync_with_github: Szinkronizálás a GitHub
+      syncing_with_gitlab: Sync with Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ha
+        már szinkronizált a projekt, akkor szinkronizálja mindig webhooks
   projects:
     index:
       projects: projektek
@@ -228,6 +254,26 @@ hu:
       board_users: Felhasználók
       edit: szerkesztése
       destroy: elpusztítani
+  user_requests:
+    form:
+      content: tartalom
+      create: létrehozása
+      edit: szerkesztése
+  feedbacks:
+    new:
+      feedback_title: Visszajelzés
+    form:
+      feedback_name: Az Ön neve
+      feedback_email: Az e-mail
+      feedback_content: tartalom
+      cancel: Mégsem
+      send: küldése
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Köszönöm! Mi már megkaptuk a visszajelzést.
+      close: bezárása
+      cancel: Mégsem
+      more: küldése több
   pages:
     faq:
       faq: GYIK

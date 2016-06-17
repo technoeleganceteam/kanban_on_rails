@@ -30,6 +30,7 @@ is:
       base: Base
       title: Title
       user_to_project_connection: User til verkefnisins tengingu
+      user_to_board_connection: User um borð tengingu
       columns:
         tag: Tag skörun
     new_project_modal:
@@ -54,6 +55,19 @@ is:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Næsta síða
+    sync_with_provider_button:
+      sync_with_github: Sync með github
+      sync_with_gitlab: Sync með Gitlab
+      sync_with_bitbucket: Sync með Bitbucket
+      stop_sync_with_bitbucket: Stop samstilling með Bitbucket
+      stop_sync_with_github: Stop samstilling með github
+      stop_sync_with_gitlab: Stop samstilling með Gitlab
+    header:
+      requests: Beiðnir
+      feedbacks: Afturverkun
+    user_requests_navigation:
+      all: Allt
+      my_requests: beiðnum mínum
   users:
     new:
       invite_user: Bjóða notanda
@@ -70,6 +84,7 @@ is:
       project: Project
       users: notendur
       new: Nýtt
+      board: Board
     edit:
       name: Name
       enter_your_name: Sláðu inn nafnið þitt
@@ -90,6 +105,17 @@ is:
       here_some_of_your_statistics: Hér eru nokkrar af tölfræði þína
       projects: Verkefni
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Þú getur kveikt á mismunandi þjónustu
+        og samræma verkefnum og málefni
+      turn_on_github: Kveiktu á github
+      turn_on_gitlab: Kveiktu á Gitlab
+      turn_on_bitbucket: Kveiktu á Bitbucket
+      sync_with_bitbucket: Sync með Bitbucket
+      sync_with_github: Sync með github
+      syncing_with_gitlab: Sync með Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ef
+        þú hefur nú þegar samstillt verkefni, það verður samstillt alltaf með webhooks
   projects:
     index:
       projects: Verkefni
@@ -225,6 +251,26 @@ is:
       board_users: notendur
       edit: Breyta
       destroy: Destroy
+  user_requests:
+    form:
+      content: Content
+      create: Búa
+      edit: Breyta
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: þínu nafni
+      feedback_email: tölvupóstinn þinn
+      feedback_content: Content
+      cancel: Hætta
+      send: Senda
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: Þakka þér! Við höfum hlaut þitt álit.
+      close: Close
+      cancel: Hætta
+      more: Senda fleira
   pages:
     faq:
       faq: FAQ

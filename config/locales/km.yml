@@ -23,6 +23,7 @@ km:
       base: មូលដ្ឋាន
       title: ចំណងជើង
       user_to_project_connection: គម្រោងការតភ្ជាប់របស់អ្នកប្រើ
+      user_to_board_connection: អ្នកប្រើដើម្បីជិះតភ្ជាប់
       columns:
         tag: ស្លាកត្រួតស៊ីគ្នា
     new_project_modal:
@@ -45,6 +46,15 @@ km:
       technoelegance: Technoelegance ចំកាត់
     pagination_link:
       next_page: ទំព័របន្ទាប់
+    sync_with_provider_button:
+      stop_sync_with_bitbucket: បញ្ឈប់សមកាលកម្មជាមួយ Bitbucket
+      stop_sync_with_github: បញ្ឈប់សមកាលកម្មជាមួយ Github
+      stop_sync_with_gitlab: បញ្ឈប់សមកាលកម្មជាមួយ Gitlab
+    header:
+      requests: សំណើ
+      feedbacks: មតិអ្នកប្រើ
+    user_requests_navigation:
+      all: ទាំងអស់
   users:
     new:
       invite_user: អញ្ជើញអ្នកប្រើ
@@ -76,6 +86,13 @@ km:
       here_some_of_your_statistics: នៅទីនេះមួយចំនួននៃស្ថិតិរបស់អ្នក
       projects: គម្រោង
       boards: Board របស់
+      issues: បញ្ហា
+      you_can_sync_projects_and_issues_from: អ្នកអាចបើកលើសេវាផ្សេងគ្នានិងធ្វើសមកាលកម្មគម្រោងនិងបញ្ហារបស់អ្នក
+      turn_on_github: បើក Github
+      turn_on_gitlab: បើក Gitlab
+      turn_on_bitbucket: បើក Bitbucket
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: ប្រសិនបើអ្នកបានធ្វើសមកាលកម្មគម្រោងរបស់អ្នករួចហើយវានឹងត្រូវបានធ្វើសមកាលកម្មជានិច្ចជាមួយនឹង
+        webhooks
   projects:
     index:
       projects: គម្រោង
@@ -155,7 +172,6 @@ km:
       read_more: អានបន្ថែម
   welcome:
     index:
-      welcome_to_kanban_on_rails: នៅលើផ្លូវរថភ្លើង
       welcome_about_text: ទីនេះអ្នកអាចបង្កើតក្រុមប្រឹក្សាភិបាល Kanban ផ្ទាល់ខ្លួនរបស់អ្នកនិងធ្វើសមកាលកម្មវាជាមួយនឹង
         Github ឬ Bitbucket
   boards:
@@ -184,6 +200,26 @@ km:
       board_users: អ្នកប្រើ
       edit: កែសម្រួល
       destroy: បំផ្លាញ
+  user_requests:
+    form:
+      content: មាតិកា
+      create: បង្កើត
+      edit: កែសម្រួល
+  feedbacks:
+    new:
+      feedback_title: មតិ
+    form:
+      feedback_name: ឈ្មោះរបស់អ្នក
+      feedback_email: អ៊ីមែលរបស់អ្នក
+      feedback_content: មាតិកា
+      cancel: បោះបង់
+      send: ផ្ញើ
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: សូមអរគុណ! យើងបានទទួលការឆ្លើយតបរបស់អ្នក។
+      close: បិទ
+      cancel: បោះបង់
+      more: ផ្ញើកាន់តែច្រើន
   pages:
     faq:
       faq: សំណួរគេសួរញឹកញាប់
@@ -301,7 +337,7 @@ km:
       signed_up_but_locked: អ្នកបានចុះឈ្មោះដោយជោគជ័យ។ ទោះយ៉ាងណាយើងមិនអាចឱ្យអ្នកចូលទេព្រោះគណនីរបស់អ្នកត្រូវបានចាក់សោ។
       signed_up_but_unconfirmed: សារដែលមានតំណបញ្ជាក់មួយត្រូវបានផ្ញើទៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។
         សូមបើកតំណភ្ជាប់ដើម្បីធ្វើឱ្យគណនីរបស់អ្នក។
-      update_needs_confirmation: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
+      update_needs_confirmation: អ្នកធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
         សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកហើយចុចលើតំណ Confirm ដើម្បីបញ្ចប់ការបញ្ជាក់ពីអាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
       updated: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
       new:

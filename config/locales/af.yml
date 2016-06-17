@@ -30,6 +30,7 @@ af:
       base: Base
       title: titel
       user_to_project_connection: gebruiker om konneksie te projekteer
+      user_to_board_connection: gebruiker om verbinding aan boord
       columns:
         tag: Tag oorvleueling
     new_project_modal:
@@ -52,6 +53,19 @@ af:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: Volgende
+    sync_with_provider_button:
+      sync_with_github: Sync met GitHub
+      sync_with_gitlab: Sync met Gitlab
+      sync_with_bitbucket: Sync met Bitbucket
+      stop_sync_with_bitbucket: Stop harmonie met Bitbucket
+      stop_sync_with_github: Stop harmonie met GitHub
+      stop_sync_with_gitlab: Stop harmonie met Gitlab
+    header:
+      requests: Versoeke
+      feedbacks: Vermaak
+    user_requests_navigation:
+      all: Alle
+      my_requests: My versoeke
   users:
     new:
       invite_user: Nooi gebruiker
@@ -68,6 +82,7 @@ af:
       project: Projek
       users: gebruikers
       new: Nuwe
+      board: Raad
     edit:
       name: Naam
       enter_your_name: Tik jou naam
@@ -86,6 +101,18 @@ af:
       here_some_of_your_statistics: Hier 'n paar van jou statistiek
       projects: Projekte
       boards: Boards
+      issues: Kwessies
+      you_can_sync_projects_and_issues_from: Jy kan draai op verskillende dienste
+        en sinchroniseer jou projekte en kwessies
+      turn_on_github: Draai op GitHub
+      turn_on_gitlab: Skakel Gitlab
+      turn_on_bitbucket: Skakel Bitbucket
+      sync_with_bitbucket: Sync met Bitbucket
+      sync_with_github: Sync met GitHub
+      syncing_with_gitlab: Sync met Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: As
+        jy reeds jou projek het gesynchroniseerd, dit sal altyd gesynchroniseerd met
+        webhooks
   projects:
     index:
       projects: Projekte
@@ -219,6 +246,26 @@ af:
       board_users: Gebruikers
       edit: wysig
       destroy: vernietig
+  user_requests:
+    form:
+      content: inhoud
+      create: Skep
+      edit: wysig
+  feedbacks:
+    new:
+      feedback_title: Terugvoer
+    form:
+      feedback_name: Jou naam
+      feedback_email: Jou e-pos
+      feedback_content: inhoud
+      cancel: Kanselleer
+      send: Stuur
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Dankie! Ons het jou terugvoer ontvang.
+      close: Close
+      cancel: Kanselleer
+      more: Stuur meer
   pages:
     faq:
       faq: Vrae

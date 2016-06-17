@@ -31,6 +31,7 @@ lb:
       base: Base
       title: Title
       user_to_project_connection: De Benotzerkont Verbindung zu Projet
+      user_to_board_connection: De Benotzerkont Verbindung ze Verwaltungsrot
       columns:
         tag: Tag phpNuke
     new_project_modal:
@@ -55,6 +56,19 @@ lb:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Nächst Säit
+    sync_with_provider_button:
+      sync_with_github: Synchroniséiert mat Github
+      sync_with_gitlab: Synchroniséiert mat Gitlab
+      sync_with_bitbucket: Synchroniséiert mat Bitbucket
+      stop_sync_with_bitbucket: Stop synchroniséiert mat Bitbucket
+      stop_sync_with_github: Stop synchroniséiert mat Github
+      stop_sync_with_gitlab: Stop synchroniséiert mat Gitlab
+    header:
+      requests: Ufroe
+      feedbacks: Réckkopplunge
+    user_requests_navigation:
+      all: All
+      my_requests: Meng Demanden
   users:
     new:
       invite_user: Benotzer Invitéiert
@@ -71,6 +85,7 @@ lb:
       project: Project
       users: Benotzer
       new: New
+      board: Verwaltungsrot
     edit:
       name: Numm
       save: späicheren
@@ -89,6 +104,18 @@ lb:
       here_some_of_your_statistics: Hei e puer vun Äre Statistiken
       projects: Projetën
       boards: Vizepresident
+      issues: séng
+      you_can_sync_projects_and_issues_from: Dir op verschidden Servicer Tour kann
+        an Äre Projeten an Themen synchroniséiert
+      turn_on_github: Dréint op Github
+      turn_on_gitlab: Dréint op Gitlab
+      turn_on_bitbucket: Dréint op Bitbucket
+      sync_with_bitbucket: Synchroniséiert mat Bitbucket
+      sync_with_github: Synchroniséiert mat Github
+      syncing_with_gitlab: Synchroniséiert mat Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Wann
+        Dir Äre Projet scho synchroniséiert hunn, gëtt et ëmmer mat webhooks synchroniséiert
+        ginn
   projects:
     index:
       projects: Projetën
@@ -223,6 +250,26 @@ lb:
       board_users: Benotzer
       edit: Edit
       destroy: Zerstéiert
+  user_requests:
+    form:
+      content: zefridde
+      create: opmaachen
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Ären Numm
+      feedback_email: Är Email
+      feedback_content: zefridde
+      cancel: Ofbriechen
+      send: Schécken
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Merci! Mir hunn Äre Feedback recieved.
+      close: zoumaachen
+      cancel: Ofbriechen
+      more: Eng méi
   pages:
     faq:
       faq: FAQ

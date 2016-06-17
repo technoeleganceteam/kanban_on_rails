@@ -30,6 +30,7 @@ nl:
       base: Base
       title: Titel
       user_to_project_connection: gebruiker om verbinding te projecteren
+      user_to_board_connection: gebruiker om de verbinding aan boord
       columns:
         tag: Tag overlapping
     new_project_modal:
@@ -52,6 +53,19 @@ nl:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Volgende pagina
+    sync_with_provider_button:
+      sync_with_github: Synchroniseren met Github
+      sync_with_gitlab: Synchroniseren met Gitlab
+      sync_with_bitbucket: Synchroniseren met BitBucket
+      stop_sync_with_bitbucket: Stop sync met BitBucket
+      stop_sync_with_github: Stop sync met Github
+      stop_sync_with_gitlab: Stop sync met Gitlab
+    header:
+      requests: Verzoeken
+      feedbacks: Beoordelingen
+    user_requests_navigation:
+      all: Alle
+      my_requests: Mijn aanvragen
   users:
     new:
       invite_user: Nodig gebruiker
@@ -68,6 +82,7 @@ nl:
       project: Project
       users: gebruikers
       new: Nieuwe
+      board: Board
     edit:
       name: Naam
       enter_your_name: Geef je naam
@@ -86,6 +101,17 @@ nl:
       here_some_of_your_statistics: Hier een aantal van uw statistieken
       projects: Projecten
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: U kunt op verschillende diensten en synchroniseren
+        van uw projecten en vraagstukken
+      turn_on_github: Zet Github
+      turn_on_gitlab: Zet Gitlab
+      turn_on_bitbucket: Zet BitBucket
+      sync_with_bitbucket: Synchroniseren met BitBucket
+      sync_with_github: Synchroniseren met Github
+      syncing_with_gitlab: Synchroniseren met Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Als
+        u uw project hebt gesynchroniseerd, zal het altijd gesynchroniseerd met Webhooks
   projects:
     index:
       projects: Projecten
@@ -219,6 +245,26 @@ nl:
       board_users: Gebruikers
       edit: Bewerken
       destroy: Destroy
+  user_requests:
+    form:
+      content: Content
+      create: Maak
+      edit: Bewerken
+  feedbacks:
+    new:
+      feedback_title: Terugkoppeling
+    form:
+      feedback_name: Uw naam
+      feedback_email: Je e-mail
+      feedback_content: Content
+      cancel: annuleren
+      send: Send
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Dank je wel! We hebben uw feedback ontvangen.
+      close: Sluiten
+      cancel: annuleren
+      more: Stuur meer
   pages:
     faq:
       faq: FAQ

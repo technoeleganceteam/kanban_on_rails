@@ -30,6 +30,7 @@ id:
       base: Basis
       title: Judul
       user_to_project_connection: Pengguna untuk proyek sambungan
+      user_to_board_connection: Pengguna untuk naik koneksi
       columns:
         tag: Tag tumpang tindih
     new_project_modal:
@@ -53,6 +54,19 @@ id:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: Halaman berikutnya
+    sync_with_provider_button:
+      sync_with_github: Sync dengan Github
+      sync_with_gitlab: Sync dengan Gitlab
+      sync_with_bitbucket: Sync dengan Bitbucket
+      stop_sync_with_bitbucket: Hentikan sinkronisasi dengan Bitbucket
+      stop_sync_with_github: Hentikan sinkronisasi dengan Github
+      stop_sync_with_gitlab: Hentikan sinkronisasi dengan Gitlab
+    header:
+      requests: Permintaan
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: Semua
+      my_requests: permintaan saya
   users:
     new:
       invite_user: Undang pengguna
@@ -87,6 +101,17 @@ id:
       here_some_of_your_statistics: Berikut beberapa statistik
       projects: Proyek
       boards: Boards
+      issues: Masalah
+      you_can_sync_projects_and_issues_from: Anda dapat mengaktifkan layanan yang
+        berbeda dan sinkronisasi proyek Anda dan isu-isu
+      turn_on_github: Aktifkan Github
+      turn_on_gitlab: Aktifkan Gitlab
+      turn_on_bitbucket: Aktifkan Bitbucket
+      sync_with_bitbucket: Sync dengan Bitbucket
+      sync_with_github: Sync dengan Github
+      syncing_with_gitlab: Sync dengan Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Jika
+        Anda telah disinkronkan proyek Anda, itu akan disinkronkan selalu dengan webhooks
   projects:
     index:
       projects: Proyek
@@ -209,6 +234,26 @@ id:
       board_users: Pengguna
       edit: Mengedit
       destroy: Hancurkan
+  user_requests:
+    form:
+      content: Konten
+      create: Buat
+      edit: Mengedit
+  feedbacks:
+    new:
+      feedback_title: Masukan
+    form:
+      feedback_name: Nama Anda
+      feedback_email: email Anda
+      feedback_content: Konten
+      cancel: Batal
+      send: Kirim
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Terima kasih! Kami telah menerima umpan balik Anda.
+      close: Tutup
+      cancel: Batal
+      more: Kirim lebih
   pages:
     faq:
       faq: FAQ

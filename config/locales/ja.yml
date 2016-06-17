@@ -28,7 +28,7 @@ ja:
     new_project_modal:
       new_project: 新プロジェクト
     edit_project_modal:
-      edit_project: 編集プロジェクト
+      edit_project: 編集​​プロジェクト
     new_issue_modal:
       new_issue: 新しい問題
     left_sidebar:
@@ -41,6 +41,11 @@ ja:
       info: 情報
       mailer: メーラー
       technoelegance: Technoelegance株式会社
+    header:
+      requests: リクエスト
+      feedbacks: 声
+    user_requests_navigation:
+      all: すべて
   users:
     form:
       name: 名前
@@ -51,6 +56,7 @@ ja:
       project: プロジェクト
       users: ユーザー
       new: 新
+      board: ボード
     edit:
       name: 名前
       enter_your_name: あなたの名前を入力します。
@@ -68,6 +74,10 @@ ja:
       here_some_of_your_statistics: ここではいくつかの統計情報の
       projects: プロジェクト
       boards: ボード
+      issues: 問題
+      turn_on_github: 電源を入れます
+      turn_on_gitlab: 電源を入れます
+      turn_on_bitbucket: 電源を入れます
   projects:
     index:
       projects: プロジェクト
@@ -128,7 +138,7 @@ ja:
       destroy: 削除
       edit: 編集
     edit:
-      edit_issue: 編集​​の問題
+      edit_issue: 編集の問題
     new:
       new_issue: 新しい問題
     issue_modal:
@@ -182,6 +192,23 @@ ja:
       board_users: ユーザー
       edit: 編集
       destroy: 破壊
+  user_requests:
+    form:
+      content: コンテンツ
+      create: 作成
+      edit: 編集
+  feedbacks:
+    new:
+      feedback_title: フィードバック
+    form:
+      feedback_content: コンテンツ
+      cancel: キャンセル
+      send: 送信
+    success:
+      success_feedback: ありがとうございました！私たちはあなたのフィードバックを受け取っています。
+      close: 閉じます
+      cancel: キャンセル
+      more: もっとを送ります
   pages:
     faq:
       faq: よくある質問
@@ -244,7 +271,6 @@ ja:
     mailer:
       confirmation_instructions:
         subject: 確認命令
-        welcome_to_kanban_on_rails: がKanbanOnRailsへようこそ
         confirm_my_account: 私の電子メールを確認してください
       reset_password_instructions:
         hello: こんにちは

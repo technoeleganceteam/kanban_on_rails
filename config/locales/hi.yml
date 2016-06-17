@@ -29,6 +29,7 @@ hi:
       base: बेस
       title: शीर्षक
       user_to_project_connection: कनेक्शन परियोजना के लिए उपयोगकर्ता
+      user_to_board_connection: कनेक्शन बोर्ड के लिए उपयोगकर्ता
       columns:
         tag: टैग ओवरलैपिंग
     new_project_modal:
@@ -51,6 +52,11 @@ hi:
       technoelegance: Technoelegance लिमिटेड
     pagination_link:
       next_page: अगला पृष्ठ
+    header:
+      requests: अनुरोध
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: सभी
   users:
     new:
       invite_user: उपयोगकर्ता को आमंत्रित करें
@@ -66,6 +72,7 @@ hi:
     index:
       project: परियोजना
       new: न्यू
+      board: बोर्ड
     edit:
       name: नाम
       enter_your_name: अपना नाम दर्ज करें
@@ -84,6 +91,12 @@ hi:
       here_some_of_your_statistics: यहाँ अपने आँकड़ों के कुछ
       projects: परियोजनाएं
       boards: बोर्डों
+      issues: मुद्दे
+      you_can_sync_projects_and_issues_from: आप अलग अलग सेवाओं को चालू करने और अपनी
+        परियोजनाओं और मुद्दों को सिंक कर सकते हैं
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: आप
+        पहले से ही अपनी परियोजना समन्वयित किया है, यह webhooks के साथ हमेशा समन्वयित
+        हो जाएगा
   projects:
     index:
       projects: परियोजनाएं
@@ -212,6 +225,24 @@ hi:
       board_users: उपयोगकर्ता
       edit: संपादित करें
       destroy: नष्ट
+  user_requests:
+    form:
+      content: सामग्री
+      create: बनाएं
+      edit: संपादित करें
+  feedbacks:
+    new:
+      feedback_title: प्रतिक्रिया
+    form:
+      feedback_content: सामग्री
+      cancel: रद्द
+      send: संदेश
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: धन्यवाद! हम आपकी राय को मिला है।
+      close: बंद
+      cancel: रद्द
+      more: अधिक भेजें
   pages:
     faq:
       faq: पूछे जाने वाले प्रश्न

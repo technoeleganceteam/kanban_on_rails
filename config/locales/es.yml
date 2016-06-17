@@ -29,6 +29,7 @@ es:
       base: Base
       title: Título
       user_to_project_connection: usuario a la conexión del proyecto
+      user_to_board_connection: usuario a placa
       columns:
         tag: Tag solapamiento
     new_project_modal:
@@ -50,6 +51,19 @@ es:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Página siguiente
+    sync_with_provider_button:
+      sync_with_github: sincronización con Github
+      sync_with_gitlab: sincronización con Gitlab
+      sync_with_bitbucket: sincronización con Bitbucket
+      stop_sync_with_bitbucket: Detener la sincronización con Bitbucket
+      stop_sync_with_github: Detener la sincronización con Github
+      stop_sync_with_gitlab: Detener la sincronización con Gitlab
+    header:
+      requests: Solicitudes
+      feedbacks: Votaciones
+    user_requests_navigation:
+      all: Todo
+      my_requests: Mis solicitudes
   users:
     new:
       invite_user: Invitar a un usuario
@@ -81,6 +95,16 @@ es:
       hello: Hola
       here_some_of_your_statistics: Aquí algunas de sus estadísticas
       projects: Proyectos
+      you_can_sync_projects_and_issues_from: Puede activar diferentes servicios y
+        sincronizar sus proyectos y asuntos
+      turn_on_github: Encienda Github
+      turn_on_gitlab: Encienda Gitlab
+      turn_on_bitbucket: Encienda Bitbucket
+      sync_with_bitbucket: sincronización con Bitbucket
+      sync_with_github: sincronización con Github
+      syncing_with_gitlab: sincronización con Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Si
+        ya ha sincronizado su proyecto, que se sincronizarán siempre con WebHooks
   projects:
     index:
       projects: Proyectos
@@ -181,6 +205,24 @@ es:
       next_page: Página siguiente
     index:
       new: Nueva
+  user_requests:
+    form:
+      content: contenido
+      create: crea
+  feedbacks:
+    new:
+      feedback_title: Comentarios
+    form:
+      feedback_name: Su nombre
+      feedback_email: Su correo electrónico
+      feedback_content: contenido
+      cancel: Cancelar
+      send: Enviar
+    success:
+      success_feedback: Gracias! Hemos recibido sus comentarios.
+      close: Cerrar
+      cancel: Cancelar
+      more: Enviar más
   pages:
     faq:
       faq: FAQ

@@ -30,6 +30,7 @@ th:
       base: ฐาน
       title: ชื่อเรื่อง
       user_to_project_connection: ผู้ใช้เชื่อมต่อกับโครงการ
+      user_to_board_connection: ผู้ใช้ไปยังคณะกรรมการการเชื่อมต่อ
       columns:
         tag: แท็กที่ทับซ้อนกัน
     new_project_modal:
@@ -53,6 +54,19 @@ th:
       technoelegance: Technoelegance จำกัด
     pagination_link:
       next_page: หน้าถัดไป
+    sync_with_provider_button:
+      sync_with_github: Sync กับ Github
+      sync_with_gitlab: Sync กับ Gitlab
+      sync_with_bitbucket: Sync กับ Bitbucket
+      stop_sync_with_bitbucket: ซิงค์หยุดกับ Bitbucket
+      stop_sync_with_github: ซิงค์หยุดกับ Github
+      stop_sync_with_gitlab: ซิงค์หยุดกับ Gitlab
+    header:
+      requests: จอง
+      feedbacks: ตอบกลับ
+    user_requests_navigation:
+      all: ทั้งหมด
+      my_requests: คำขอของฉัน
   users:
     new:
       invite_user: เชิญผู้ใช้
@@ -87,6 +101,16 @@ th:
       here_some_of_your_statistics: นี่คือบางส่วนของสถ​​ิติของคุณ
       projects: โครงการ
       boards: บอร์ด
+      issues: ปัญหา
+      you_can_sync_projects_and_issues_from: คุณสามารถเปิดบริการที่แตกต่างและซิงค์โครงการและปัญหาของคุณ
+      turn_on_github: เปิด Github
+      turn_on_gitlab: เปิด Gitlab
+      turn_on_bitbucket: เปิด Bitbucket
+      sync_with_bitbucket: Sync กับ Bitbucket
+      sync_with_github: Sync กับ Github
+      syncing_with_gitlab: Sync กับ Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: ถ้าคุณได้ซิงค์แล้วโครงการของคุณก็จะได้รับการซิงค์เสมอกับ
+        webhooks
   projects:
     index:
       projects: โครงการ
@@ -209,6 +233,26 @@ th:
       board_users: ผู้ใช้
       edit: แก้ไข
       destroy: ทำลาย
+  user_requests:
+    form:
+      content: เนื้อหา
+      create: สร้าง
+      edit: แก้ไข
+  feedbacks:
+    new:
+      feedback_title: ข้อเสนอแนะ
+    form:
+      feedback_name: ชื่อของคุณ
+      feedback_email: อีเมลของคุณ
+      feedback_content: เนื้อหา
+      cancel: ยกเลิก
+      send: ส่ง
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: ขอบคุณ! เราได้รับความคิดเห็นของคุณ
+      close: ปิด
+      cancel: ยกเลิก
+      more: ส่งเพิ่มเติม
   pages:
     faq:
       faq: คำถามที่พบบ่อย

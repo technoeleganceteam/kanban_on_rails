@@ -29,6 +29,7 @@ ar:
       base: قاعدة
       title: عنوان
       user_to_project_connection: العضو في اتصال المشروع
+      user_to_board_connection: العضو على متن اتصال
       columns:
         tag: بطاقة تداخل
     new_project_modal:
@@ -50,6 +51,19 @@ ar:
       technoelegance: Technoelegance المحدودة
     pagination_link:
       next_page: الصفحة التالية
+    sync_with_provider_button:
+      sync_with_github: تزامن مع جيثب
+      sync_with_gitlab: تزامن مع Gitlab
+      sync_with_bitbucket: تزامن مع Bitbucket
+      stop_sync_with_bitbucket: إيقاف المزامنة مع Bitbucket
+      stop_sync_with_github: إيقاف المزامنة مع جيثب
+      stop_sync_with_gitlab: إيقاف المزامنة مع Gitlab
+    header:
+      requests: الطلبات
+      feedbacks: التقيمات
+    user_requests_navigation:
+      all: جميع
+      my_requests: طلباتي
   users:
     new:
       invite_user: دعوة المستخدم
@@ -85,6 +99,17 @@ ar:
       here_some_of_your_statistics: هنا بعض الإحصاءات الخاصة بك
       projects: مشاريع
       boards: المجالس
+      issues: قضايا
+      you_can_sync_projects_and_issues_from: يمكنك تشغيل الخدمات المختلفة ومزامنة
+        المشاريع والقضايا الخاصة بك
+      turn_on_github: بدوره على جيثب
+      turn_on_gitlab: بدوره على Gitlab
+      turn_on_bitbucket: بدوره على Bitbucket
+      sync_with_bitbucket: تزامن مع Bitbucket
+      sync_with_github: تزامن مع جيثب
+      syncing_with_gitlab: تزامن مع Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: إذا
+        كنت قد مزامن بالفعل مشروع الخاص بك، سيتم مزامن دائما مع webhooks
   projects:
     index:
       projects: مشاريع
@@ -202,6 +227,26 @@ ar:
       board_users: المستخدمين
       edit: تحرير
       destroy: تدمير
+  user_requests:
+    form:
+      content: المحتوى
+      create: خلق
+      edit: تحرير
+  feedbacks:
+    new:
+      feedback_title: تعليقات
+    form:
+      feedback_name: اسمك
+      feedback_email: بريدك الإلكتروني
+      feedback_content: المحتوى
+      cancel: الغاء
+      send: إرسال
+      feedback_recaptcha: اختبار Recaptcha
+    success:
+      success_feedback: شكرا لك! لقد تلقي ملاحظاتك.
+      close: إغلاق
+      cancel: الغاء
+      more: إرسال أكثر
   pages:
     faq:
       faq: التعليمات

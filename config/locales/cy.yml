@@ -29,6 +29,7 @@ cy:
       base: Sylfaen
       title: Teitl
       user_to_project_connection: Defnyddiwr i gysylltiad prosiect
+      user_to_board_connection: Defnyddiwr i fwrdd cysylltiad
       columns:
         tag: Tag gorgyffwrdd
     new_project_modal:
@@ -51,6 +52,19 @@ cy:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Tudalen nesaf
+    sync_with_provider_button:
+      sync_with_github: Sync gyda Github
+      sync_with_gitlab: Sync gyda Gitlab
+      sync_with_bitbucket: Sync gyda Bitbucket
+      stop_sync_with_bitbucket: sync Stop gyda Bitbucket
+      stop_sync_with_github: sync Stop gyda Github
+      stop_sync_with_gitlab: sync Stop gyda Gitlab
+    header:
+      requests: Ceisiadau
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: Mae pob
+      my_requests: Fy ceisiadau
   users:
     new:
       invite_user: Gwahodd defnyddiwr
@@ -83,6 +97,18 @@ cy:
       here_some_of_your_statistics: Yma rhai o'ch ystadegau
       projects: Prosiectau
       boards: Byrddau
+      issues: Materion
+      you_can_sync_projects_and_issues_from: Gallwch droi ar wahanol wasanaethau a
+        sync eich prosiectau a materion
+      turn_on_github: Trowch ar Github
+      turn_on_gitlab: Trowch ar Gitlab
+      turn_on_bitbucket: Trowch ar Bitbucket
+      sync_with_bitbucket: Sync gyda Bitbucket
+      sync_with_github: Sync gyda Github
+      syncing_with_gitlab: Sync gyda Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Os
+        ydych eisoes wedi synced eich prosiect, bydd yn cael ei synced bob amser gyda
+        webhooks
   projects:
     index:
       projects: Prosiectau
@@ -204,6 +230,26 @@ cy:
       board_users: Defnyddwyr
       edit: Golygu
       destroy: Dinistrio
+  user_requests:
+    form:
+      content: Cynnwys
+      create: Creu
+      edit: Golygu
+  feedbacks:
+    new:
+      feedback_title: Adborth
+    form:
+      feedback_name: Eich enw
+      feedback_email: Eich e-bost
+      feedback_content: Cynnwys
+      cancel: Diddymu
+      send: Anfon
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: Diolch yn fawr! Rydym wedi dderbyniwyd eich adborth.
+      close: Close
+      cancel: Diddymu
+      more: Anfon mwy
   pages:
     faq:
       faq: Cwestiynau Cyffredin

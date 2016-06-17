@@ -30,6 +30,7 @@ zh-TW:
       base: 基地
       title: 標題
       user_to_project_connection: 用戶投影連接
+      user_to_board_connection: 用戶到板連接
       columns:
         tag: 標籤重疊
     new_project_modal:
@@ -52,6 +53,17 @@ zh-TW:
       technoelegance: Technoelegance有限公司
     pagination_link:
       next_page: 下一頁
+    sync_with_provider_button:
+      sync_with_github: 同步與Github上
+      sync_with_gitlab: 同步與Gitlab
+      sync_with_bitbucket: 同步與到位桶
+      stop_sync_with_bitbucket: 停止同步的到位桶
+      stop_sync_with_github: 停止同步與Github上
+      stop_sync_with_gitlab: 停止同步的Gitlab
+    header:
+      feedbacks: 反饋
+    user_requests_navigation:
+      my_requests: 我的請求
   users:
     new:
       invite_user: 邀請用戶
@@ -62,6 +74,8 @@ zh-TW:
       enter_user_password: 輸入用戶密碼
       password: 密碼
       role: 用戶角色
+    index:
+      board: 板
     edit:
       enter_your_name: 輸入您的姓名
     settings:
@@ -78,6 +92,14 @@ zh-TW:
       hello: 你好
       here_some_of_your_statistics: 在這裡，你的一些統計數據
       boards: 板
+      you_can_sync_projects_and_issues_from: 您可以打開不同的服務和同步你的項目和問題
+      turn_on_github: 打開Github上
+      turn_on_gitlab: 打開Gitlab
+      turn_on_bitbucket: 開啟到位桶
+      sync_with_bitbucket: 同步與到位桶
+      sync_with_github: 同步與Github上
+      syncing_with_gitlab: 同步與Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: 如果您已經同步你的項目，將始終與網絡掛接同步
   projects:
     index:
       sync_with_github: 同步與Github上
@@ -181,6 +203,23 @@ zh-TW:
       boards: 板
     board:
       destroy: 銷毀
+  user_requests:
+    form:
+      content: 內容
+  feedbacks:
+    new:
+      feedback_title: 反饋
+    form:
+      feedback_name: 你的名字
+      feedback_email: 您的電子郵件
+      feedback_content: 內容
+      cancel: 取消
+      feedback_recaptcha: 的Recaptcha
+    success:
+      success_feedback: 謝謝！我們已經收到您的反饋意見。
+      close: 關閉
+      cancel: 取消
+      more: 多發
   pages:
     faq:
       faq: 常見問題解答
@@ -188,7 +227,7 @@ zh-TW:
       about_kanban_on_rails: KanbanOnRails在這裡你可以與Github上或到位桶創建看板並實現同步服務
       what_features_has_kanban_on_rails: 哪些功能具有KanbanOnRails？
       kanban_on_rails_features: 您可以同步你的項目和問題進行Github上和到位桶，邀請用戶（例如，經理）為您的項目，它部署到自己的服務器
-      i_have_some_requests: 我有一些要求
+      i_have_some_requests: 我有​​一些要求
       you_can_write_request: 你可以寫請求
       i_have_seen_some_typo_or_wrong_translation: 我看到了一些拼寫錯誤或翻譯錯誤
       you_can_send_pull_request_to_our: 您可以發送拉要求我們
@@ -224,6 +263,7 @@ zh-TW:
       unprocessable_entity_description: 的要求是格式良好的，但由於語義錯誤無法遵循
       go_to_root: 去根
     not_found:
+      not_found: 未找到
       request_result: 請求結果
       not_found_description: 請求的資源無法被找到，但可能會在將來可用的
       go_to_root: 去根

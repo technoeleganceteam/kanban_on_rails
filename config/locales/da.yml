@@ -30,6 +30,7 @@ da:
       base: Base
       title: Titel
       user_to_project_connection: Bruger til projekt tilslutning
+      user_to_board_connection: Bruger til bord forbindelse
       columns:
         tag: Tag overlappende
     new_project_modal:
@@ -54,6 +55,19 @@ da:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Næste side
+    sync_with_provider_button:
+      sync_with_github: Synkroniser med Github
+      sync_with_gitlab: Synkroniser med Gitlab
+      sync_with_bitbucket: Synkroniser med Bitbucket
+      stop_sync_with_bitbucket: Stop synkronisering med Bitbucket
+      stop_sync_with_github: Stop synkronisering med Github
+      stop_sync_with_gitlab: Stop synkronisering med Gitlab
+    header:
+      requests: Anmodning
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: Alle
+      my_requests: Mine anmodninger
   users:
     new:
       invite_user: Inviter bruger
@@ -70,6 +84,7 @@ da:
       project: Projekt
       users: brugere
       new: Ny
+      board: Board
     edit:
       name: Navn
       enter_your_name: Indtast dit navn
@@ -90,6 +105,18 @@ da:
       here_some_of_your_statistics: Her nogle af dine statistikker
       projects: Projekter
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Du kan slå forskellige tjenester og synkronisere
+        dine projekter og problemstillinger
+      turn_on_github: Tænd Github
+      turn_on_gitlab: Tænd Gitlab
+      turn_on_bitbucket: Tænd Bitbucket
+      sync_with_bitbucket: Synkroniser med Bitbucket
+      sync_with_github: Synkroniser med Github
+      syncing_with_gitlab: Synkroniser med Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Hvis
+        du allerede har synkroniseret dit projekt, vil det blive synkroniseret altid
+        med webhooks
   projects:
     index:
       projects: Projekter
@@ -228,6 +255,26 @@ da:
       board_users: Brugere
       edit: Rediger
       destroy: Ødelæg
+  user_requests:
+    form:
+      content: indhold
+      create: Opret
+      edit: Rediger
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Dit navn
+      feedback_email: Din e-mail
+      feedback_content: indhold
+      cancel: Annuller
+      send: Send
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Tak! Vi har modtaget din feedback.
+      close: Luk
+      cancel: Annuller
+      more: Send mere
   pages:
     faq:
       faq: FAQ

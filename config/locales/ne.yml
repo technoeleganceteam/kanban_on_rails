@@ -48,6 +48,11 @@ ne:
       technoelegance: Technoelegance लिमिटेड
     pagination_link:
       next_page: अर्को पृष्ठ
+    header:
+      requests: अनुरोधहरू
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: सबै
   users:
     new:
       invite_user: प्रयोगकर्ता निमन्त्रणा
@@ -64,6 +69,7 @@ ne:
       project: परियोजना
       users: प्रयोगकर्ता
       new: नयाँ
+      board: बोर्ड
     edit:
       name: नाम
       enter_your_name: तपाईंको नाम प्रविष्ट गर्नुहोस्
@@ -82,6 +88,11 @@ ne:
       here_some_of_your_statistics: यहाँ केही आफ्नो तथ्याङ्क को
       projects: परियोजनाहरु
       boards: बोर्डहरू
+      issues: मुद्दा
+      you_can_sync_projects_and_issues_from: तपाईं विभिन्न सेवाहरूमा बारी र आफ्नो
+        परियोजनाहरु र मुद्दाहरू समिकरण गर्न सक्छ
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: तपाईंले
+        पहिले नै आफ्नो परियोजना समन्वयन छ भने, यो webhooks सधैं समिकरण गरिनेछ
   projects:
     index:
       projects: परियोजनाहरु
@@ -208,6 +219,24 @@ ne:
       board_users: प्रयोगकर्ता
       edit: सम्पादन गर्नुहोस्
       destroy: नष्ट
+  user_requests:
+    form:
+      content: सामग्री
+      create: सिर्जना
+      edit: सम्पादन गर्नुहोस्
+  feedbacks:
+    new:
+      feedback_title: प्रतिक्रिया
+    form:
+      feedback_content: सामग्री
+      cancel: रद्द
+      send: पठाउन
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: धन्यवाद! हामी तपाईंको प्रतिक्रिया recieved छन्।
+      close: बन्द
+      cancel: रद्द
+      more: थप पठाउनुहोस्
   pages:
     faq:
       faq: सोधिने प्रश्न

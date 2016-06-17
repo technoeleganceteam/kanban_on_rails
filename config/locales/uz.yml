@@ -50,6 +50,11 @@ uz:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Keyingi sahifa
+    header:
+      requests: talablar
+      feedbacks: Orqaga
+    user_requests_navigation:
+      all: Barcha
   users:
     form:
       name: nomi
@@ -61,6 +66,7 @@ uz:
       project: loyihasi
       users: foydalanuvchilar
       new: Yangi
+      board: kengashi
     edit:
       name: nomi
       enter_your_name: Ismingizni kiriting
@@ -77,6 +83,7 @@ uz:
       hello: Salom
       projects: loyihalari
       boards: Boards
+      issues: masalalar
   projects:
     index:
       projects: loyihalari
@@ -191,6 +198,24 @@ uz:
       board_users: foydalanuvchilar
       edit: Edit
       destroy: yo'q
+  user_requests:
+    form:
+      content: tarkib
+      create: yaratish
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: aloqa
+    form:
+      feedback_content: tarkib
+      cancel: Bekor qilish
+      send: Send
+      feedback_recaptcha: Xavfsizlik oladi
+    success:
+      success_feedback: rahmat! Biz fikringizni qabul qilgan.
+      close: Close
+      cancel: Bekor qilish
+      more: ko'proq yuborish
   pages:
     faq:
       faq: FAQ

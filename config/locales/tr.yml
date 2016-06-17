@@ -50,6 +50,11 @@ tr:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Sonraki sayfa
+    header:
+      requests: İstekler
+      feedbacks: geri bildirimler
+    user_requests_navigation:
+      all: Tüm
   users:
     form:
       name: Adı
@@ -61,6 +66,7 @@ tr:
       project: Projesi
       users: kullanıcıları
       new: Yeni
+      board: Kurulu
     edit:
       name: Adı
       enter_your_name: Adınızı girin
@@ -77,6 +83,7 @@ tr:
       hello: Merhaba
       projects: Projeler
       boards: Kurulları
+      issues: Sorunlar
   projects:
     index:
       projects: Projeler
@@ -191,6 +198,24 @@ tr:
       board_users: Kullanıcılar
       edit: Düzenleme
       destroy: yok
+  user_requests:
+    form:
+      content: İçerik
+      create: oluştur
+      edit: Düzenleme
+  feedbacks:
+    new:
+      feedback_title: Görüşleri
+    form:
+      feedback_content: İçerik
+      cancel: İptal
+      send: Gönder
+      feedback_recaptcha: Güvenlik Sorgulama
+    success:
+      success_feedback: teşekkür ederiz! Biz geri alınan var.
+      close: Kapat
+      cancel: İptal
+      more: daha Gönder
   pages:
     faq:
       faq: SSS

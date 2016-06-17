@@ -31,6 +31,7 @@ lv:
       base: Base
       title: sadaļa
       user_to_project_connection: Lietotājs projektu savienojumu
+      user_to_board_connection: Lietotājs iekāpt savienojumu
       columns:
         tag: Tag pārklāšanās
     new_project_modal:
@@ -55,6 +56,19 @@ lv:
       technoelegance: Technoelegance SIA
     pagination_link:
       next_page: Nākamā lapa
+    sync_with_provider_button:
+      sync_with_github: Sync ar GitHub
+      sync_with_gitlab: Sync ar Gitlab
+      sync_with_bitbucket: Sync ar Bitbucket
+      stop_sync_with_bitbucket: Stop sinhronizācija ar Bitbucket
+      stop_sync_with_github: Stop sinhronizācija ar GitHub
+      stop_sync_with_gitlab: Stop sinhronizācija ar Gitlab
+    header:
+      requests: Pieprasījumi
+      feedbacks: Atsauksmes
+    user_requests_navigation:
+      all: All
+      my_requests: Mani pieprasījumiem
   users:
     new:
       invite_user: Uzaicināt lietotāju
@@ -71,6 +85,7 @@ lv:
       project: Project
       users: lietotājiem
       new: New
+      board: Board
     edit:
       name: Name
       enter_your_name: Ievadiet savu vārdu
@@ -91,6 +106,17 @@ lv:
       here_some_of_your_statistics: Lūk daži no jūsu statistika
       projects: Projekti
       boards: Boards
+      issues: jautājumi
+      you_can_sync_projects_and_issues_from: Jūs varat ieslēgt dažādiem pakalpojumiem
+        un sinhronizēt savus projektus un jautājumus
+      turn_on_github: Ieslēdziet GitHub
+      turn_on_gitlab: Ieslēdziet Gitlab
+      turn_on_bitbucket: Ieslēdziet Bitbucket
+      sync_with_bitbucket: Sync ar Bitbucket
+      sync_with_github: Sync ar GitHub
+      syncing_with_gitlab: Sync ar Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ja
+        esat jau sinhronizēti savu projektu, tā tiks sinhronizēts vienmēr ar webhooks
   projects:
     index:
       projects: Projekti
@@ -226,6 +252,26 @@ lv:
       board_users: lietotāji
       edit: rediģēšana
       destroy: Iznīcināt
+  user_requests:
+    form:
+      content: saturs
+      create: izveide
+      edit: rediģēšana
+  feedbacks:
+    new:
+      feedback_title: Atsauksmes
+    form:
+      feedback_name: savu vārdu
+      feedback_email: Jūsu e-pastu
+      feedback_content: saturs
+      cancel: Atcelt
+      send: Sūtīt
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Paldies! Mēs esam saņēmuši jūsu atsauksmes.
+      close: Close
+      cancel: Atcelt
+      more: sūtīt vairāk
   pages:
     faq:
       faq: FAQ

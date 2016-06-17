@@ -30,6 +30,7 @@ hr:
       base: Base
       title: Naslov
       user_to_project_connection: Korisnik projicirati vezu
+      user_to_board_connection: Korisnik ukrcati vezu
       columns:
         tag: Tag preklapanje
     new_project_modal:
@@ -54,6 +55,19 @@ hr:
       technoelegance: Technoelegance doo
     pagination_link:
       next_page: Sljedeća stranica
+    sync_with_provider_button:
+      sync_with_github: Sinkronizacija s GitHub
+      sync_with_gitlab: Sinkronizacija s Gitlab
+      sync_with_bitbucket: Sinkronizacija s Bitbucket
+      stop_sync_with_bitbucket: Zaustavi sinkronizaciju s Bitbucket
+      stop_sync_with_github: Zaustavi sinkronizaciju s GitHub
+      stop_sync_with_gitlab: Zaustavi sinkronizaciju s Gitlab
+    header:
+      requests: Zahtjevi
+      feedbacks: Povratni
+    user_requests_navigation:
+      all: Sve
+      my_requests: moje zahtjeve
   users:
     new:
       invite_user: Pozovi korisnika
@@ -70,6 +84,7 @@ hr:
       project: projekta
       users: korisnici
       new: Novo
+      board: odbor
     edit:
       name: Ime
       enter_your_name: Unesite svoje ime
@@ -90,6 +105,17 @@ hr:
       here_some_of_your_statistics: Evo neke svoje statistike
       projects: projekti
       boards: Forumi
+      issues: pitanja
+      you_can_sync_projects_and_issues_from: možete uključiti različite usluge i sinkronizirati
+        svoje projekte i pitanja
+      turn_on_github: Uključite GitHub
+      turn_on_gitlab: Uključite Gitlab
+      turn_on_bitbucket: Uključite Bitbucket
+      sync_with_bitbucket: Sinkronizacija s Bitbucket
+      sync_with_github: Sinkronizacija s GitHub
+      syncing_with_gitlab: Sinkronizacija s Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ako
+        ste već sinkronizirali svoj projekt, to će biti sinkronizirane uvijek s webhooks
   projects:
     index:
       projects: projekti
@@ -217,6 +243,26 @@ hr:
       board_users: korisnika
       edit: Uredi
       destroy: uništiti
+  user_requests:
+    form:
+      content: sadržaj
+      create: Stvaranje
+      edit: Uredi
+  feedbacks:
+    new:
+      feedback_title: Povratne informacije
+    form:
+      feedback_name: Vaše ime
+      feedback_email: Vaš e-mail
+      feedback_content: sadržaj
+      cancel: Odustani
+      send: Pošalji
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Hvala! Imamo dobio povratnu informaciju.
+      close: Zatvori
+      cancel: Odustani
+      more: Pošalji više
   pages:
     faq:
       faq: FAQ

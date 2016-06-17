@@ -50,6 +50,11 @@ az:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Sonrakı səhifə
+    header:
+      requests: sorğular
+      feedbacks: şərhlər
+    user_requests_navigation:
+      all: Bütün
   users:
     form:
       name: Adı
@@ -61,6 +66,7 @@ az:
       project: Project
       users: users
       new: New
+      board: Board
     edit:
       name: Adı
       enter_your_name: Adınızı daxil edin
@@ -77,6 +83,7 @@ az:
       hello: Hello
       projects: Layihələr
       boards: Boards
+      issues: Issues
   projects:
     index:
       projects: Layihələr
@@ -191,6 +198,24 @@ az:
       board_users: İstifadəçilər
       edit: Edit
       destroy: məhv
+  user_requests:
+    form:
+      content: Content
+      create: yarat
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Əlaqə
+    form:
+      feedback_content: Content
+      cancel: ləğv
+      send: Send
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: təşəkkür edirik! Biz sizin rəy aldim var.
+      close: Close
+      cancel: ləğv
+      more: daha çox göndər
   pages:
     faq:
       faq: FAQ

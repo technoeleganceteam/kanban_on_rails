@@ -31,6 +31,7 @@ de:
       base: Basis
       title: Titel
       user_to_project_connection: Benutzer Verbindung zu projizieren
+      user_to_board_connection: Benutzerverbindung an Bord
       columns:
         tag: Tag überlappende
     new_project_modal:
@@ -43,7 +44,7 @@ de:
       boards: Boards
     right_sidebar:
       news: Nachrichten
-      all: All
+      all: Alle
       read_more: Lesen Sie mehr
     javascript_global_variables:
       select_column_tags: Wählen Sie Spalte Tags
@@ -55,6 +56,19 @@ de:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Nächste Seite
+    sync_with_provider_button:
+      sync_with_github: Sync mit Github
+      sync_with_gitlab: Sync mit Gitlab
+      sync_with_bitbucket: Sync mit Bitbucket
+      stop_sync_with_bitbucket: Stop-Synchronisierung mit Bitbucket
+      stop_sync_with_github: Stop-Synchronisierung mit Github
+      stop_sync_with_gitlab: Stop-Synchronisierung mit Gitlab
+    header:
+      requests: Anfragen
+      feedbacks: Bewertungen
+    user_requests_navigation:
+      all: All
+      my_requests: Meine Wünsche
   users:
     new:
       invite_user: Benutzer einladen
@@ -71,6 +85,7 @@ de:
       project: Projekt
       users: Benutzer
       new: New
+      board: Vorstand
     edit:
       name: Namen
       save: Speichern
@@ -89,6 +104,18 @@ de:
       here_some_of_your_statistics: Hier einige Ihrer Statistiken
       projects: Projekte
       boards: Boards
+      issues: Probleme
+      you_can_sync_projects_and_issues_from: Sie auf verschiedene Dienste wenden können
+        und Ihre Projekte und Probleme synchronisieren
+      turn_on_github: Schalten Sie Github
+      turn_on_gitlab: Schalten Sie Gitlab
+      turn_on_bitbucket: Schalten Sie Bitbucket
+      sync_with_bitbucket: Sync mit Bitbucket
+      sync_with_github: Sync mit Github
+      syncing_with_gitlab: Sync mit Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Wenn
+        Sie Ihr Projekt bereits synchronisiert haben, wird es immer mit webhooks synchronisiert
+        werden
   projects:
     index:
       projects: Projekte
@@ -98,14 +125,14 @@ de:
       sync_with_bitbucket: Sync mit Bitbucket
       stop_sync_with_bitbucket: Stop-Synchronisierung mit Bitbucket
       stop_sync_with_github: Stop-Synchronisierung mit Github
-      stop_sync_with_gitlab: Stop-Synchronisierung mit Gitlab
+      stop_sync_with_gitlab: Stop-Synchronisation mit Gitlab
     form:
       name: Namen
       enter_project_name: Geben Sie Projektnamen
       save: Speichern
       columns: Spalten
       sections: Abschnitte
-      column_name: Row Name
+      column_name: Row Namen
       section_name: Abschnittsname
       add: hinzufügen
       column_width: Spaltenbreite
@@ -200,7 +227,7 @@ de:
       column_width: Spaltenbreite
       column_height: Säulenhöhe
       columns: Spalten
-      add: Add
+      add: hinzufügen
       sections: Abschnitte
       save: Speichern
       projects: Projekte
@@ -223,6 +250,26 @@ de:
       board_users: Benutzer
       edit: bearbeiten
       destroy: Zerstören
+  user_requests:
+    form:
+      content: Inhalt
+      create: stellen
+      edit: bearbeiten
+  feedbacks:
+    new:
+      feedback_title: Bewertung
+    form:
+      feedback_name: Ihr Name
+      feedback_email: Ihre E-Mail
+      feedback_content: Inhalt
+      cancel: Abbrechen
+      send: Senden
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Danke! Wir haben Ihr Feedback erhielt.
+      close: Schließen
+      cancel: Abbrechen
+      more: senden mehr
   pages:
     faq:
       faq: FAQ
@@ -236,8 +283,8 @@ de:
       i_have_some_requests: Ich habe einige Anfragen
       you_can_write_request: Sie Anfrage schreiben
       here: hier
-      i_have_seen_some_typo_or_wrong_translation: Ich habe ein paar Tippfehler oder
-        falsche Übersetzungen gesehen
+      i_have_seen_some_typo_or_wrong_translation: Ich habe einige Fehler oder falsche
+        Übersetzungen gesehen
       you_can_send_pull_request_to_our: Sie Pull-Anfrage schicken an unsere
       github_repository: Github-Repository
       i_have_seen_some_error: Ich habe einige Fehler gesehen
@@ -277,8 +324,8 @@ de:
     unprocessable_entity:
       unprocessable_entity: Unprocessable Entity
       request_result: Anfrage Ergebnis
-      unprocessable_entity_description: Die Anforderung war wohlgeformt, konnte aber
-        aufgrund semantische Fehler zu beachten
+      unprocessable_entity_description: Die Anforderung war gut ausgebildet, konnte
+        aber aufgrund semantische Fehler zu beachten
       go_to_root: root gehen
     not_found:
       not_found: nicht gefunden
@@ -376,7 +423,7 @@ de:
         password_confirmation: Passwort Bestätigung
         register: Registrieren
     sessions:
-      signed_in: erfolgreich angemeldet.
+      signed_in: erfolgreich signiert.
       signed_out: erfolgreich abgemeldet.
       new:
         sign_in: Anmelden

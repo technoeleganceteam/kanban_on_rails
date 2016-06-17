@@ -30,6 +30,7 @@ be:
       base: Base
       title: Назва
       user_to_project_connection: Карыстальнік праекта падлучэння
+      user_to_board_connection: Карыстальнік на борт злучэнне
       columns:
         tag: Tag перакрыццем
     new_project_modal:
@@ -39,14 +40,14 @@ be:
     new_issue_modal:
       new_issue: Новы выпуск
     left_sidebar:
-      boards: платы
+      boards: Дошкі
     right_sidebar:
       news: Навіны
       all: Усе
       read_more: Больш падрабязна
     javascript_global_variables:
-      select_column_tags: Абярыце пазнакі слупкоў
-      select_section_tags: Абярыце тэгі падзела
+      select_column_tags: Абярыце тэгі слупкоў
+      select_section_tags: Выбраць пазнакі раздзела
       select_issue_tags: Абярыце тэгі выпуск
     email_signature:
       info: Інфармацыя
@@ -54,6 +55,19 @@ be:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Наступная старонка
+    sync_with_provider_button:
+      sync_with_github: Сінхранізацыя з Github
+      sync_with_gitlab: Сінхранізацыя з Gitlab
+      sync_with_bitbucket: Сінхранізацыя з Bitbucket
+      stop_sync_with_bitbucket: Прыпынак сінхранізацыі з Bitbucket
+      stop_sync_with_github: Прыпынак сінхранізацыі з Github
+      stop_sync_with_gitlab: Прыпынак сінхранізацыі з Gitlab
+    header:
+      requests: просіць
+      feedbacks: Водгук
+    user_requests_navigation:
+      all: Усе
+      my_requests: Мае просьбы
   users:
     new:
       invite_user: Запрасіць карыстальніка
@@ -61,14 +75,15 @@ be:
       name: Імя
       enter_user_name: Калі ласка, увядзіце імя карыстальніка
       email: E-mail
-      enter_user_email: Уваход карыстальніка электроннай пошты
+      enter_user_email: Калі ласка, увядзіце электронную пошту карыстальніка
       enter_user_password: Калі ласка, увядзіце пароль карыстальніка
       password: Пароль
       save: Захаваць
     index:
-      project: праекта
-      users: карыстальнікаў
+      project: Праект
+      users: карыстальнікі
       new: Новы
+      board: Савет
     edit:
       name: Імя
       enter_your_name: Калі ласка, увядзіце сваё імя
@@ -89,6 +104,17 @@ be:
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
       boards: Дошкі
+      issues: пытанні
+      you_can_sync_projects_and_issues_from: Вы можаце ўключыць розныя паслугі і сінхранізаваць
+        вашы праекты і пытанні
+      turn_on_github: Уключыце Github
+      turn_on_gitlab: Уключыце Gitlab
+      turn_on_bitbucket: Уключыце Bitbucket
+      sync_with_bitbucket: Сінхранізацыя з Bitbucket
+      sync_with_github: Сінхранізацыя з Github
+      syncing_with_gitlab: Сінхранізацыя з Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Калі
+        вы ўжо сінхранізаваны ваш праект, ён будзе сінхранізаваны заўсёды з webhooks
   projects:
     index:
       projects: Праекты
@@ -126,7 +152,7 @@ be:
       column_tags: пазнакі слупкоў
       column_order: Замовіць
     show:
-      project: праекта
+      project: Праект
       related_boards: Падобныя дошкі
       project_issues: пытанні праекта
       project_users: карыстальнікаў праекта
@@ -140,7 +166,7 @@ be:
       save: Захаваць
       body: Body
       enter_issue_body: Калі ласка, увядзіце выпуск цела
-      tags: Тэгі
+      tags: Пазнакі
       issue_order: Замовіць
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
@@ -173,7 +199,7 @@ be:
       we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс!
       we_have_just_launched_our_service_text: Сёння мы запускаем наш сэрвіс так што
         кожны можа
-      sign_up: зарэгістравацца
+      sign_up: падпісацца
       and_use_it: і выкарыстоўваць яго.
       with_love: З любоўю,
       technoelegance_team: Technoelegance Team
@@ -203,7 +229,7 @@ be:
       or_include_all: Ці ўключаць у сябе ўсё?
     column_fields:
       remove_column: Выдаліць слупок
-      column_tags: тэгі слупкоў
+      column_tags: пазнакі слупкоў
       column_order: Замовіць
     show:
       next_page: Наступная старонка
@@ -214,6 +240,26 @@ be:
       board_users: Карыстальнікі
       edit: Рэдагаваць
       destroy: Destroy
+  user_requests:
+    form:
+      content: Змест
+      create: Стварыць
+      edit: Рэдагаваць
+  feedbacks:
+    new:
+      feedback_title: Зваротная сувязь
+    form:
+      feedback_name: Вашае імя
+      feedback_email: Ваш адрас электроннай пошты
+      feedback_content: Змест
+      cancel: Адмяніць
+      send: Адаслаць
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Дзякуй! Мы атрымалі вашу зваротную сувязь.
+      close: Зачыніць
+      cancel: Адмяніць
+      more: Адаслаць яшчэ
   pages:
     faq:
       faq: FAQ
@@ -259,7 +305,7 @@ be:
       not_locked: ня быў заблякаваны
       not_saved:
         one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
-        other: "% {лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
+        other: "{лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
     bad_request:
       bad_request: Bad Request
       request_result: Запыт выніку
@@ -297,11 +343,11 @@ be:
         sign_up: Зарэгіструйцеся
         didnt_receive_confirmation_instructions: Ня атрымалі пацверджання інструкцыі?
         sign_in_with: Уваход з выкарыстаннем
-        fast_login_almost_one_click: Хуткі Лагін (амаль адзін клік)
+        fast_login_almost_one_click: хутка Увайсці (амаль адзін клік)
     confirmations:
       confirmed: ваш рахунак быў паспяхова пацверджаны.
-      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як пацвердзіць
-        свой рахунак на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як пацвердзіць свой
+        рахунак на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, Вы атрымаеце электронны ліст з інструкцыямі аб тым, як пацвердзіць
         свой рахунак на працягу некалькіх хвілін.
@@ -310,14 +356,14 @@ be:
           электроннай
         submit: Адаслаць
     failure:
-      already_authenticated: вы ўжо ўвайшлі ў сістэму.
+      already_authenticated: Вы ўжо ўвайшлі ў сістэму.
       inactive: Ваш рахунак яшчэ не актываваны.
       invalid: Няправільны адрас электроннай пошты ці пароль.
       locked: Ваш рахунак заблякаваны.
       last_attempt: У вас ёсць яшчэ адна спроба, перш чым ваш уліковы запіс будзе
         заблакаваная.
       not_found_in_database: Няправільны адрас электроннай пошты ці пароль.
-      timeout: Вашай сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
+      timeout: Ваш сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
       unauthenticated: Вы павінны ўвайсці або зарэгістравацца, перш чым працягнуць.
       unconfirmed: Вы павінны пацвердзіць свой рахунак, перш чым працягнуць.
     mailer:
@@ -359,7 +405,7 @@ be:
         change_your_password: Змяніць пароль
         new_password: Новы пароль
         confirm_password: Пацвярджэнне пароля
-        change_password: Змяніць
+        change_password: Змена
     registrations:
       destroyed: Bye! Ваш уліковы запіс была паспяхова адменена. Мы спадзяемся ўбачыць
         вас зноў у бліжэйшы час.

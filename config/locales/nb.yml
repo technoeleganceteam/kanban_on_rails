@@ -31,6 +31,7 @@ nb:
       base: Base
       title: Title
       user_to_project_connection: Pengguna untuk projek sambungan
+      user_to_board_connection: pengguna untuk menaiki sambungan
       columns:
         tag: Tag bertindih
     new_project_modal:
@@ -54,6 +55,19 @@ nb:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Laman seterusnya
+    sync_with_provider_button:
+      sync_with_github: Sync dengan Github
+      sync_with_gitlab: Sync dengan Gitlab
+      sync_with_bitbucket: Sync dengan Bitbucket
+      stop_sync_with_bitbucket: Stop selari dengan Bitbucket
+      stop_sync_with_github: Stop selari dengan Github
+      stop_sync_with_gitlab: Stop selari dengan Gitlab
+    header:
+      requests: Permintaan
+      feedbacks: Maklumbalas
+    user_requests_navigation:
+      all: Semua
+      my_requests: permintaan saya
   users:
     new:
       invite_user: Jemput pengguna
@@ -69,6 +83,7 @@ nb:
       project: Projek
       users: pengguna
       new: New
+      board: Lembaga
     edit:
       name: Nama
       enter_your_name: Masukkan nama anda
@@ -89,6 +104,18 @@ nb:
       here_some_of_your_statistics: Di sini beberapa statistik anda
       projects: Projek
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Anda boleh menghidupkan perkhidmatan
+        yang berbeza dan menyegerakkan projek dan isu-isu anda
+      turn_on_github: Hidupkan Github
+      turn_on_gitlab: Hidupkan Gitlab
+      turn_on_bitbucket: Hidupkan Bitbucket
+      sync_with_bitbucket: Sync dengan Bitbucket
+      sync_with_github: Sync dengan Github
+      syncing_with_gitlab: Sync dengan Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Jika
+        anda telah disegerakkan projek anda, ia akan disegerakkan sentiasa dengan
+        webhooks
   projects:
     index:
       projects: Projek
@@ -215,6 +242,26 @@ nb:
       board_users: Pengguna
       edit: Edit
       destroy: menghancurkan
+  user_requests:
+    form:
+      content: kandungan
+      create: Buat
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Maklumbalas
+    form:
+      feedback_name: Nama pengguna
+      feedback_email: e-mel anda
+      feedback_content: kandungan
+      cancel: Batal
+      send: Hantar
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Terima kasih! Kami terima maklum balas anda.
+      close: Tutup
+      cancel: Batal
+      more: Menghantar lebih
   pages:
     faq:
       faq: FAQ

@@ -30,6 +30,7 @@ mk:
       base: база
       title: Наслов
       user_to_project_connection: пристап поврзување со проектот
+      user_to_board_connection: пристап да се качат во врска
       columns:
         tag: Таг преклопување
     new_project_modal:
@@ -54,6 +55,19 @@ mk:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Следна страница
+    sync_with_provider_button:
+      sync_with_github: Sync со Github
+      sync_with_gitlab: Sync со Gitlab
+      sync_with_bitbucket: Sync со Bitbucket
+      stop_sync_with_bitbucket: Стоп синхронизација со Bitbucket
+      stop_sync_with_github: Стоп синхронизација со Github
+      stop_sync_with_gitlab: Стоп синхронизација со Gitlab
+    header:
+      requests: Барања
+      feedbacks: Повратните информации
+    user_requests_navigation:
+      all: Сите
+      my_requests: моите барања
   users:
     new:
       invite_user: Покани корисник
@@ -69,6 +83,7 @@ mk:
       project: проектот
       users: корисници
       new: Нови
+      board: одбор
     edit:
       name: Име
       enter_your_name: Внесете го вашето име
@@ -89,6 +104,18 @@ mk:
       here_some_of_your_statistics: Еве некои од вашите статистики
       projects: Проекти
       boards: одбори
+      issues: прашања
+      you_can_sync_projects_and_issues_from: Можете да го вклучите различни услуги
+        и да ги синхронизирате вашите проекти и прашања
+      turn_on_github: Вклучете Github
+      turn_on_gitlab: Вклучете Gitlab
+      turn_on_bitbucket: Вклучете Bitbucket
+      sync_with_bitbucket: Sync со Bitbucket
+      sync_with_github: Sync со Github
+      syncing_with_gitlab: Sync со Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ако
+        веќе сте се синхронизираат вашиот проект, тоа ќе се синхронизираат секогаш
+        со webhooks
   projects:
     index:
       projects: Проекти
@@ -214,6 +241,26 @@ mk:
       board_users: корисници
       edit: Уреди
       destroy: Уништи
+  user_requests:
+    form:
+      content: содржина
+      create: Креирање
+      edit: Уреди
+  feedbacks:
+    new:
+      feedback_title: Повратна информација
+    form:
+      feedback_name: Вашето име
+      feedback_email: Вашата е-маил
+      feedback_content: содржина
+      cancel: Откажи
+      send: Испрати
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: Ви благодариме! Имаме стекнав вашето мислење.
+      close: Затвори
+      cancel: Откажи
+      more: Испрати повеќе
   pages:
     faq:
       faq: Најчесто поставувани прашања

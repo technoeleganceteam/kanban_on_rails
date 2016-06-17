@@ -31,6 +31,7 @@ vi:
       base: cơ sở
       title: Tiêu đề
       user_to_project_connection: tài để kết nối dự án
+      user_to_board_connection: tài để lên kết nối
       columns:
         tag: Tag chồng chéo
     new_project_modal:
@@ -55,6 +56,19 @@ vi:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Trang tiếp theo
+    sync_with_provider_button:
+      sync_with_github: Sync với Github
+      sync_with_gitlab: Sync với Gitlab
+      sync_with_bitbucket: Sync với Bitbucket
+      stop_sync_with_bitbucket: Dừng đồng bộ hóa với Bitbucket
+      stop_sync_with_github: Dừng đồng bộ hóa với Github
+      stop_sync_with_gitlab: Dừng đồng bộ hóa với Gitlab
+    header:
+      requests: yêu
+      feedbacks: Thông tin phản hồi
+    user_requests_navigation:
+      all: Tất cả
+      my_requests: Yêu cầu của tôi
   users:
     new:
       invite_user: Mời người dùng
@@ -68,6 +82,7 @@ vi:
       save: Lưu
     index:
       new: mới
+      board: Ban
     edit:
       name: Tên
       enter_your_name: Nhập tên của bạn
@@ -88,6 +103,16 @@ vi:
       hello: Xin chào
       here_some_of_your_statistics: Dưới đây một số số liệu thống kê của bạn
       boards: Ban
+      you_can_sync_projects_and_issues_from: Bạn có thể bật các dịch vụ khác nhau
+        và đồng bộ các dự án và các vấn đề của bạn
+      turn_on_github: Bật Github
+      turn_on_gitlab: Bật Gitlab
+      turn_on_bitbucket: Bật Bitbucket
+      sync_with_bitbucket: Sync với Bitbucket
+      sync_with_github: Sync với Github
+      syncing_with_gitlab: Sync với Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Nếu
+        bạn đã đồng bộ hóa dự án của bạn, nó sẽ được đồng bộ hóa luôn luôn với webhooks
   projects:
     index:
       new: mới
@@ -208,6 +233,26 @@ vi:
       board_users: Người dùng
       edit: Sửa
       destroy: Destroy
+  user_requests:
+    form:
+      content: Content
+      create: Tạo
+      edit: Sửa
+  feedbacks:
+    new:
+      feedback_title: Phản hồi
+    form:
+      feedback_name: Tên của bạn
+      feedback_email: email của bạn
+      feedback_content: Content
+      cancel: Hủy
+      send: Gửi
+      feedback_recaptcha: xác thực lại
+    success:
+      success_feedback: Cảm ơn bạn! Chúng tôi đã nhận được phản hồi của bạn.
+      close: Đóng
+      cancel: Hủy
+      more: Gửi thêm
   pages:
     faq:
       faq: Hỏi đáp

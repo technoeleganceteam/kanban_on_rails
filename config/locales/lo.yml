@@ -30,6 +30,7 @@ lo:
       base: ຖານ
       title: Title
       user_to_project_connection: User ກັບໂຄງການເຊື່ອມຕໍ່
+      user_to_board_connection: User ສະພາບໍລິການເຊື່ອມຕໍ່
       columns:
         tag: Tag overlapping
     new_project_modal:
@@ -53,6 +54,19 @@ lo:
       technoelegance: Technoelegance ກັດ
     pagination_link:
       next_page: ຫນ້າຖັດໄປ
+    sync_with_provider_button:
+      sync_with_github: Sync ກັບ GitHub
+      sync_with_gitlab: Sync ກັບ Gitlab
+      sync_with_bitbucket: Sync ກັບ Bitbucket
+      stop_sync_with_bitbucket: sync Stop ກັບ Bitbucket
+      stop_sync_with_github: sync Stop ກັບ GitHub
+      stop_sync_with_gitlab: sync Stop ກັບ Gitlab
+    header:
+      requests: ການຮ້ອງຂໍ
+      feedbacks: ການຕອບ
+    user_requests_navigation:
+      all: ທັງຫມົດ
+      my_requests: ການຮ້ອງຂໍຂອງຂ້າພະເຈົ້າ
   users:
     new:
       invite_user: ເຊີນຜູ້ໃຊ້
@@ -87,6 +101,16 @@ lo:
       here_some_of_your_statistics: ຕໍ່ໄປນີ້ເປັນສະຖິຕິຂອງທ່ານ
       projects: ໂຄງການ
       boards: ບອດ
+      issues: ບັນຫາ
+      you_can_sync_projects_and_issues_from: ທ່ານສາມາດເຮັດໃຫ້ການບໍລິການທີ່ແຕກຕ່າງກັນແລະຊິງໂຄງການແລະບັນຫາຂອງທ່ານ
+      turn_on_github: Turn on GitHub
+      turn_on_gitlab: ເປີດ Gitlab
+      turn_on_bitbucket: ເປີດ Bitbucket
+      sync_with_bitbucket: Sync ກັບ Bitbucket
+      sync_with_github: Sync ກັບ GitHub
+      syncing_with_gitlab: Sync ກັບ Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: ຖ້າຫາກວ່າທ່ານໄດ້ຖືກຊິ້ງຂໍ້ມູນແລ້ວໂຄງການຂອງທ່ານ,
+        ມັນຈະໄດ້ຮັບການຊິ້ງຂໍ້ມູນສະເຫມີກັບ webhooks
   projects:
     index:
       projects: ໂຄງການ
@@ -209,6 +233,26 @@ lo:
       board_users: ຜູ້ໃຊ້
       edit: ແກ້ໄຂ
       destroy: ທໍາລາຍ
+  user_requests:
+    form:
+      content: Content
+      create: ສ້າງ
+      edit: ແກ້ໄຂ
+  feedbacks:
+    new:
+      feedback_title: ຜົນຕອບຮັບ
+    form:
+      feedback_name: ຊື່ຂອງທ່ານ
+      feedback_email: ອີເມວຂອງທ່ານ
+      feedback_content: Content
+      cancel: ຍົກເລີກ
+      send: ແນະນໍາ
+      feedback_recaptcha: reCaptcha
+    success:
+      success_feedback: ຂໍຂອບໃຈທ່ານ! ພວກເຮົາໄດ້ຮັບຄໍາຄຶດຄໍາເຫັນຂອງທ່ານ.
+      close: ປິດ
+      cancel: ຍົກເລີກ
+      more: ສົ່ງຫຼາຍ
   pages:
     faq:
       faq: FAQ

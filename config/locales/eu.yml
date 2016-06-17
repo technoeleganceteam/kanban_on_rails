@@ -32,6 +32,7 @@ eu:
       base: Base
       title: Izenburua
       user_to_project_connection: Erabiltzaileak konexioa proiektatzeko
+      user_to_board_connection: Erabiltzaileak konexioa taula
       columns:
         tag: Tag gainjarriz
     new_project_modal:
@@ -56,6 +57,18 @@ eu:
       technoelegance: Technoelegance SL
     pagination_link:
       next_page: Hurrengo orria
+    sync_with_provider_button:
+      sync_with_github: Github sinkronizatzea
+      sync_with_gitlab: Gitlab sinkronizatzea
+      sync_with_bitbucket: Bitbucket sinkronizatzea
+      stop_sync_with_bitbucket: Stop Bitbucket sinkronizatuta
+      stop_sync_with_github: Stop Github sinkronizatuta
+      stop_sync_with_gitlab: Stop Gitlab sinkronizatuta
+    header:
+      requests: eskaerak
+      feedbacks: Oharrak
+    user_requests_navigation:
+      all: guztiak
   users:
     new:
       invite_user: Gonbidatu erabiltzaile
@@ -72,6 +85,7 @@ eu:
       project: Project
       users: erabiltzaile
       new: New
+      board: Kontseilua
     edit:
       name: izena
       enter_your_name: Sartu zure izena
@@ -92,6 +106,18 @@ eu:
       here_some_of_your_statistics: Hemen zure estatistikak batzuk
       projects: Proiektuak
       boards: Juntas
+      issues: Aleak
+      you_can_sync_projects_and_issues_from: zerbitzu desberdinetan duzu buelta eta
+        zure proiektuak eta gaiak sinkroniza dezakezu
+      turn_on_github: Github aktibatu
+      turn_on_gitlab: Gitlab aktibatu
+      turn_on_bitbucket: Bitbucket aktibatu
+      sync_with_bitbucket: Bitbucket sinkronizatzea
+      sync_with_github: Github sinkronizatzea
+      syncing_with_gitlab: Gitlab sinkronizatzea
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: dagoeneko
+        duzu zure proiektuaren sinkronizatutako bada, sinkronizatuko izango da beti
+        webhooks batera
   projects:
     index:
       projects: Proiektuak
@@ -230,6 +256,25 @@ eu:
       board_users: erabiltzaileak
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: Edukia
+      create: Sortu
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: iradokizunak
+    form:
+      feedback_name: Zure izena
+      feedback_content: Edukia
+      cancel: Utzi
+      send: Bidali
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Eskerrik asko! jaso ditugu zure iritzia.
+      close: Close
+      cancel: Utzi
+      more: bidalitako gehiago
   pages:
     faq:
       faq: FAQ

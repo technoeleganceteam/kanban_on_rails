@@ -29,6 +29,7 @@ kn:
       base: ಬೇಸ್
       title: ಶೀರ್ಷಿಕೆ
       user_to_project_connection: ಬಳಕೆದಾರ ಸಂಪರ್ಕ ಅಭಿವ್ಯಕ್ತಗೊಳಿಸಲು
+      user_to_board_connection: ಬಳಕೆದಾರ ಸಂಪರ್ಕ ಹತ್ತಲು
       columns:
         tag: ಟ್ಯಾಗ್ ಅತಿಕ್ರಮಿಸುವ
     new_project_modal:
@@ -51,6 +52,11 @@ kn:
       technoelegance: Technoelegance ಲಿಮಿಟೆಡ್
     pagination_link:
       next_page: ಮುಂದಿನ ಪುಟ
+    header:
+      requests: ವಿನಂತಿಗಳು
+      feedbacks: ಪ್ರತ್ಯುತ್ತರ
+    user_requests_navigation:
+      all: ಎಲ್ಲಾ
   users:
     new:
       invite_user: ಬಳಕೆದಾರರಿಗೆ ಆಹ್ವಾನ
@@ -67,6 +73,7 @@ kn:
       project: ಪ್ರಾಜೆಕ್ಟ್
       users: ಬಳಕೆದಾರರು
       new: ಹೊಸ
+      board: ಬೋರ್ಡ್
     edit:
       name: ಹೆಸರು
       enter_your_name: ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ
@@ -84,6 +91,14 @@ kn:
       hello: ಹಲೋ
       projects: ಯೋಜನೆಗಳು
       boards: ಮಂಡಳಿಗಳು
+      issues: ತೊಂದರೆಗಳು
+      you_can_sync_projects_and_issues_from: ನೀವು ವಿವಿಧ ಸೇವೆಗಳಲ್ಲಿ ತಿರುಗಿ ನಿಮ್ಮ
+        ಯೋಜನೆಗಳು ಮತ್ತು ಸಮಸ್ಯೆಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಬಹುದು
+      turn_on_github: Github ಮೇಲೆ ಮಾಡಿ
+      turn_on_gitlab: Gitlab ಆನ್ ಮಾಡಿ
+      turn_on_bitbucket: Bitbucket ಆನ್ ಮಾಡಿ
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: ನೀವು
+        ಈಗಾಗಲೇ ನಿಮ್ಮ ಯೋಜನೆಯ ಸಿಂಕ್, ಅದು webhooks ಯಾವಾಗಲೂ ಸಿಂಕ್ ಮಾಡಲಾಗುತ್ತದೆ
   projects:
     index:
       projects: ಯೋಜನೆಗಳು
@@ -212,6 +227,24 @@ kn:
       board_users: ಬಳಕೆದಾರರು
       edit: ಸಂಪಾದಿಸಿ
       destroy: ನಾಶ
+  user_requests:
+    form:
+      content: ವಿಷಯ
+      create: ರಚಿಸಿ
+      edit: ಸಂಪಾದಿಸಿ
+  feedbacks:
+    new:
+      feedback_title: ಪ್ರತಿಕ್ರಿಯೆ
+    form:
+      feedback_content: ವಿಷಯ
+      cancel: ರದ್ದು
+      send: ಕಳುಹಿಸಿ
+      feedback_recaptcha: ReCAPTCHA ಗೆ
+    success:
+      success_feedback: ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ಸ್ವೀಕರಿಸಿಲ್ಲ ಎಂದು.
+      close: ಮುಚ್ಚಿ
+      cancel: ರದ್ದು
+      more: ಹೆಚ್ಚು ಕಳುಹಿಸಿ
   pages:
     faq:
       faq: ಎಫ್ಎಕ್ಯೂ

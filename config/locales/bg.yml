@@ -30,6 +30,7 @@ bg:
       base: Base
       title: Title
       user_to_project_connection: Потребителят връзка с проект
+      user_to_board_connection: Потребителят да се качат връзка
       columns:
         tag: Tag припокриване
     new_project_modal:
@@ -54,6 +55,19 @@ bg:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Следваща страница
+    sync_with_provider_button:
+      sync_with_github: Sync с Github
+      sync_with_gitlab: Sync с Gitlab
+      sync_with_bitbucket: Sync с Bitbucket
+      stop_sync_with_bitbucket: Спиране на синхронизирането с Bitbucket
+      stop_sync_with_github: Спиране на синхронизирането с Github
+      stop_sync_with_gitlab: Спиране на синхронизирането с Gitlab
+    header:
+      requests: Заявки
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: All
+      my_requests: Моите заявки
   users:
     new:
       invite_user: Поканете потребител
@@ -69,6 +83,7 @@ bg:
       project: Project
       users: потребители
       new: New
+      board: Board
     edit:
       name: Име
       enter_your_name: Въведете името си
@@ -89,6 +104,17 @@ bg:
       here_some_of_your_statistics: Ето някои от вашите статистики
       projects: Проекти
       boards: Табла
+      issues: Проблеми
+      you_can_sync_projects_and_issues_from: Можете да включите различни услуги и
+        синхронизиране на вашите проекти и въпроси
+      turn_on_github: Включете Github
+      turn_on_gitlab: Включете Gitlab
+      turn_on_bitbucket: Включете Bitbucket
+      sync_with_bitbucket: Sync с Bitbucket
+      sync_with_github: Sync с Github
+      syncing_with_gitlab: Sync с Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ако
+        вече сте синхронизирали вашия проект, той ще се синхронизират винаги с webhooks
   projects:
     index:
       projects: Проекти
@@ -214,6 +240,26 @@ bg:
       board_users: Потребители
       edit: Edit
       destroy: Унищожи
+  user_requests:
+    form:
+      content: съдържание
+      create: Създаване
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Обратна връзка
+    form:
+      feedback_name: Вашето име
+      feedback_email: Вашият имейл
+      feedback_content: съдържание
+      cancel: Отказ
+      send: Изпрати
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Благодаря ви! Ние сме получили вашето мнение.
+      close: Затвори
+      cancel: Отказ
+      more: Изпрати повече
   pages:
     faq:
       faq: Отговори

@@ -30,6 +30,7 @@ bn:
       base: বেজ
       title: শিরোনাম
       user_to_project_connection: সংযোগ প্রকল্পের নিচে
+      user_to_board_connection: সংযোগ বোর্ড নিচে
       columns:
         tag: ট্যাগ ওভারল্যাপিং
     new_project_modal:
@@ -52,6 +53,11 @@ bn:
       technoelegance: Technoelegance লিমিটেড
     pagination_link:
       next_page: পরবর্তী পাতা
+    header:
+      requests: অনুরোধ
+      feedbacks: feedbacks
+    user_requests_navigation:
+      all: সকল
   users:
     new:
       invite_user: ব্যবহারকারীকে আমন্ত্রণ
@@ -68,6 +74,7 @@ bn:
       project: প্রকল্প
       users: ব্যবহারকারীগণ
       new: নতুন
+      board: বোর্ড
     edit:
       name: নাম
       enter_your_name: আপনার নাম লিখুন
@@ -86,6 +93,12 @@ bn:
       here_some_of_your_statistics: এখানে আপনার পরিসংখ্যান কিছু
       projects: প্রকল্প
       boards: বোর্ড
+      issues: সমস্যা
+      you_can_sync_projects_and_issues_from: আপনি বিভিন্ন সেবা চালু এবং আপনার প্রকল্প
+        এবং বিষয় সিঙ্ক করতে পারেন
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: আপনি
+        ইতিমধ্যে আপনার প্রকল্পের সিঙ্ক করতে পারেন, এটা webhooks সঙ্গে সবসময় সিঙ্ক
+        হবে
   projects:
     index:
       projects: প্রকল্প
@@ -214,6 +227,24 @@ bn:
       board_users: ব্যবহারকারীরা
       edit: সম্পাদনা
       destroy: ধ্বংস করো
+  user_requests:
+    form:
+      content: বিষয়বস্তু
+      create: তৈরি করুন
+      edit: সম্পাদনা
+  feedbacks:
+    new:
+      feedback_title: প্রতিক্রিয়া
+    form:
+      feedback_content: বিষয়বস্তু
+      cancel: বাতিল
+      send: পাঠান
+      feedback_recaptcha: Recaptcha- এর
+    success:
+      success_feedback: আপনাকে ধন্যবাদ! আমরা আপনার প্রতিক্রিয়া পেলাম.
+      close: বন্ধ
+      cancel: বাতিল
+      more: আরো পাঠান
   pages:
     faq:
       faq: অনবরত জিজ্ঞাসিত প্রশ্ন
@@ -291,6 +322,7 @@ bn:
   devise:
     shared:
       links:
+        sign_in: নিদর্শন
         sign_up: সাইন আপ করুন
         didnt_receive_confirmation_instructions: নিশ্চিতকরণ নির্দেশাবলী গ্রহন করেছিলাম
           ঠিক বলেছি না?
@@ -379,6 +411,7 @@ bn:
       signed_in: সফলভাবে সাইন ইন করুন.
       signed_out: সফলভাবে সাইন আউট করা.
       new:
+        sign_in: নিদর্শন
         password: পাসওয়ার্ড
         remember_me: আমাকে মনে রেখো
         forgot_your_password: আপনার পাসওয়ার্ড ভুলে গেছেন?

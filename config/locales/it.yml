@@ -30,6 +30,7 @@ it:
       base: Base
       title: Titolo
       user_to_project_connection: utente di proiettare collegamento
+      user_to_board_connection: utente-scheda
       columns:
         tag: Tag sovrapposizione
     new_project_modal:
@@ -53,6 +54,19 @@ it:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Pagina successiva
+    sync_with_provider_button:
+      sync_with_github: Sincronizzazione con Github
+      sync_with_gitlab: Sincronizzazione con Gitlab
+      sync_with_bitbucket: Sincronizzazione con Bitbucket
+      stop_sync_with_bitbucket: Sync Stop con Bitbucket
+      stop_sync_with_github: Sync Stop con Github
+      stop_sync_with_gitlab: Sync Stop con Gitlab
+    header:
+      requests: Richieste
+      feedbacks: Valutazioni
+    user_requests_navigation:
+      all: Tutto
+      my_requests: mie richieste
   users:
     new:
       invite_user: Invita utente
@@ -68,6 +82,7 @@ it:
       project: Progetto
       users: utenti
       new: Nuovo
+      board: Consiglio
     edit:
       name: Nome
       enter_your_name: Inserisci il tuo nome
@@ -89,6 +104,18 @@ it:
       here_some_of_your_statistics: Ecco alcune delle vostre statistiche
       projects: Progetti
       boards: Boards
+      issues: Problemi
+      you_can_sync_projects_and_issues_from: È possibile attivare diversi servizi
+        e sincronizzare i vostri progetti e problemi
+      turn_on_github: Accendere Github
+      turn_on_gitlab: Accendere Gitlab
+      turn_on_bitbucket: Accendere Bitbucket
+      sync_with_bitbucket: Sincronizzazione con Bitbucket
+      sync_with_github: Sincronizzazione con Github
+      syncing_with_gitlab: Sincronizzazione con Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Se
+        è già stato sincronizzato il vostro progetto, che verrà sincronizzato sempre
+        con webhooks
   projects:
     index:
       projects: Progetti
@@ -210,6 +237,24 @@ it:
       board_users: utenti
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: contenuti
+      create: Crea
+      edit: Edit
+  feedbacks:
+    form:
+      feedback_name: Il tuo nome
+      feedback_email: Il tuo indirizzo email
+      feedback_content: contenuti
+      cancel: Annulla
+      send: Invia
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Grazie! Abbiamo ricevuto il vostro feedback.
+      close: Chiudi
+      cancel: Annulla
+      more: Invia più
   pages:
     faq:
       faq: FAQ

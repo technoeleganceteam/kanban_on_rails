@@ -30,6 +30,7 @@ fa:
       base: پایه
       title: عنوان
       user_to_project_connection: کاربر به پروژه اتصال
+      user_to_board_connection: کاربر به هیئت مدیره اتصال
       columns:
         tag: برچسب با هم تداخل دارند
     new_project_modal:
@@ -54,6 +55,19 @@ fa:
       technoelegance: Technoelegance گیم
     pagination_link:
       next_page: صفحه بعدی
+    sync_with_provider_button:
+      sync_with_github: همگام سازی با گیتهاب
+      sync_with_gitlab: همگام سازی با Gitlab
+      sync_with_bitbucket: همگام سازی با Bitbucket
+      stop_sync_with_bitbucket: توقف همگامسازی با Bitbucket
+      stop_sync_with_github: توقف همگامسازی با GitHub
+      stop_sync_with_gitlab: توقف همگامسازی با Gitlab
+    header:
+      requests: درخواست
+      feedbacks: نظرات و پیشنهادات
+    user_requests_navigation:
+      all: همه
+      my_requests: درخواست من
   users:
     new:
       invite_user: دعوت از کاربر
@@ -67,6 +81,7 @@ fa:
       project: پروژه
       users: کاربران
       new: جدید
+      board: انجمن
     edit:
       name: نام
       enter_your_name: نام خود را وارد کنید
@@ -86,6 +101,18 @@ fa:
       here_some_of_your_statistics: اینجا برخی از آمار خود را
       projects: پروژه
       boards: انجمن
+      issues: مسائل
+      you_can_sync_projects_and_issues_from: شما می توانید در مورد خدمات مختلف تبدیل
+        و همگام پروژه ها و مسائل خود را
+      turn_on_github: روشن در Github
+      turn_on_gitlab: روشن Gitlab
+      turn_on_bitbucket: روشن در BitBucket
+      sync_with_bitbucket: همگام سازی با Bitbucket
+      sync_with_github: همگام سازی با گیتهاب
+      syncing_with_gitlab: همگام سازی با Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: اگر
+        شما در حال حاضر همگام سازی پروژه خود را، از آن خواهد شد همیشه با webhooks
+        همگام سازی
   projects:
     index:
       projects: پروژه
@@ -209,6 +236,26 @@ fa:
       board_users: کاربران
       edit: ویرایش
       destroy: نابود کردن
+  user_requests:
+    form:
+      content: محتوا
+      create: درست
+      edit: ویرایش
+  feedbacks:
+    new:
+      feedback_title: فیدبک
+    form:
+      feedback_name: نام شما
+      feedback_email: ایمیل شما
+      feedback_content: محتوا
+      cancel: لغو
+      send: ارسال
+      feedback_recaptcha: reCAPTCHA را
+    success:
+      success_feedback: با تشکر از شما! ما از نظرات شما دریافت کرده اند.
+      close: نزدیک
+      cancel: لغو
+      more: ارسال بیشتر
   pages:
     faq:
       what_is_kanban_on_rails: KanbanOnRails چیست؟

@@ -29,6 +29,7 @@ pa:
       base: ਬੇਸ
       title: ਟਾਈਟਲ
       user_to_project_connection: ਕੁਨੈਕਸ਼ਨ ਪੇਸ਼ ਕਰਨ ਲਈ ਯੂਜ਼ਰ
+      user_to_board_connection: ਕੁਨੈਕਸ਼ਨ ਸਵਾਰ ਨੂੰ ਯੂਜ਼ਰ
       columns:
         tag: ਟੈਗ ਓਵਰਲੈਪ
     new_project_modal:
@@ -51,6 +52,11 @@ pa:
       technoelegance: Technoelegance ਲਿਮਟਿਡ
     pagination_link:
       next_page: ਅੱਗੇ ਸਫ਼ਾ
+    header:
+      requests: ਮੰਗ
+      feedbacks: ਫੀਡਬੈਕ
+    user_requests_navigation:
+      all: ਸਾਰੇ
   users:
     new:
       invite_user: ਉਪਭੋਗੀ ਨੂੰ ਸੱਦਾ
@@ -67,6 +73,7 @@ pa:
       project: ਪ੍ਰੋਜੈਕਟ
       users: ਉਪਭੋਗੀ
       new: ਨਿਊ
+      board: ਬੋਰਡ
     edit:
       name: ਦਾ ਨਾਮ
       enter_your_name: ਆਪਣੇ ਨਾਮ ਦਰਜ ਕਰੋ
@@ -85,6 +92,12 @@ pa:
       here_some_of_your_statistics: ਇੱਥੇ ਆਪਣੇ ਅੰਕੜੇ ਦੇ ਕੁਝ
       projects: ਪ੍ਰਾਜੈਕਟ
       boards: ਬੋਰਡ
+      issues: ਮੁੱਦੇ
+      you_can_sync_projects_and_issues_from: ਤੁਹਾਨੂੰ ਵੱਖ-ਵੱਖ ਸੇਵਾ 'ਤੇ ਚਾਲੂ ਕਰਨ ਅਤੇ
+        ਆਪਣੇ ਪ੍ਰਾਜੈਕਟ ਅਤੇ ਮੁੱਦੇ ਸਿੰਕ ਕਰ ਸਕਦਾ ਹੈ
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: ਤੁਹਾਨੂੰ
+        ਹੀ ਆਪਣੇ ਪ੍ਰਾਜੈਕਟ ਨੂੰ ਸਿੰਕ ਕੀਤਾ ਹੈ, ਜੇ, ਇਸ ਨੂੰ webhooks ਨਾਲ ਹਮੇਸ਼ਾ ਸਿੰਕ ਕੀਤਾ
+        ਜਾਵੇਗਾ
   projects:
     index:
       projects: ਪ੍ਰਾਜੈਕਟ
@@ -215,6 +228,24 @@ pa:
       board_users: ਉਪਭੋਗੀ
       edit: ਸੋਧ
       destroy: ਨਸ਼ਟ
+  user_requests:
+    form:
+      content: ਸਮੱਗਰੀ
+      create: ਬਣਾਓ
+      edit: ਸੋਧ
+  feedbacks:
+    new:
+      feedback_title: ਸੁਝਾਅ
+    form:
+      feedback_content: ਸਮੱਗਰੀ
+      cancel: ਰੱਦ
+      send: ਭੇਜੋ
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: ਤੁਹਾਡਾ ਧੰਨਵਾਦ! ਸਾਨੂੰ ਆਪਣੇ ਫੀਡਬੈਕ recieved ਹੈ.
+      close: ਬੰਦ
+      cancel: ਰੱਦ
+      more: ਹੋਰ ਭੇਜੋ
   pages:
     faq:
       faq: ਸਵਾਲ

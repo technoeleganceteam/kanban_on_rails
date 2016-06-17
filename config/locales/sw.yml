@@ -31,6 +31,7 @@ sw:
       base: Msingi
       title: Title
       user_to_project_connection: mtumiaji wa mradi uhusiano
+      user_to_board_connection: mtumiaji na bodi uhusiano
       columns:
         tag: Tag ukipishana
     new_project_modal:
@@ -55,6 +56,19 @@ sw:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: ukurasa Ifwatayo
+    sync_with_provider_button:
+      sync_with_github: Sync na github
+      sync_with_gitlab: Sync na Gitlab
+      sync_with_bitbucket: Sync na bitbucket
+      stop_sync_with_bitbucket: Stop Sync na bitbucket
+      stop_sync_with_github: Stop Sync na github
+      stop_sync_with_gitlab: Stop Sync na Gitlab
+    header:
+      requests: Maombi
+      feedbacks: marejesho
+    user_requests_navigation:
+      all: All
+      my_requests: maombi My
   users:
     new:
       invite_user: Alika mtumiaji
@@ -70,6 +84,7 @@ sw:
       project: Project
       users: watumiaji
       new: New
+      board: Bodi
     edit:
       name: Jina
       enter_your_name: Ingiza jina lako
@@ -90,6 +105,17 @@ sw:
       here_some_of_your_statistics: Hapa baadhi ya takwimu yako
       projects: Miradi
       boards: Bodi
+      issues: Masuala
+      you_can_sync_projects_and_issues_from: Unaweza kurejea kwenye huduma mbalimbali
+        na kusawazisha miradi yako na masuala
+      turn_on_github: Kurejea kwenye github
+      turn_on_gitlab: Kurejea kwenye Gitlab
+      turn_on_bitbucket: Kurejea kwenye bitbucket
+      sync_with_bitbucket: Sync na bitbucket
+      sync_with_github: Sync na github
+      syncing_with_gitlab: Sync na Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Kama
+        tayari synced mradi wako, ni vitalandanishwa daima na webhooks
   projects:
     index:
       projects: Miradi
@@ -221,6 +247,26 @@ sw:
       board_users: Watumiaji
       edit: Hariri
       destroy: Kuharibu
+  user_requests:
+    form:
+      content: maudhui
+      create: Kujenga
+      edit: Hariri
+  feedbacks:
+    new:
+      feedback_title: Maoni
+    form:
+      feedback_name: Jina lako
+      feedback_email: barua pepe yako
+      feedback_content: maudhui
+      cancel: kufuta
+      send: Send
+      feedback_recaptcha: ReCAPTCHA
+    success:
+      success_feedback: Asante! Sisi kimepata maoni yako.
+      close: Karibu
+      cancel: kufuta
+      more: Tuma zaidi
   pages:
     faq:
       faq: FAQ
@@ -317,7 +363,7 @@ sw:
       invalid: email batili au password.
       locked: Akaunti yako imefungwa.
       last_attempt: Una jaribio moja zaidi kabla ya akaunti yako itakuwa imefungwa.
-      not_found_in_database: email batili au password.
+      not_found_in_database: barua pepe batili au password.
       timeout: kikao wako muda wake. Tafadhali ingia tena kuendelea.
       unauthenticated: Unahitaji kuingia katika au ishara ya juu kabla ya kuendelea.
       unconfirmed: Una ili kuthibitisha akaunti yako kabla ya kuendelea.

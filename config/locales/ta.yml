@@ -47,6 +47,15 @@ ta:
       technoelegance: Technoelegance லிமிடெட்
     pagination_link:
       next_page: அடுத்த பக்கம்
+    sync_with_provider_button:
+      sync_with_github: கிட்ஹப் ஒத்திசைவு
+      sync_with_gitlab: Gitlab ஒத்திசைவு
+      sync_with_bitbucket: Bitbucket ஒத்திசைவு
+    header:
+      requests: கோரிக்கைகள்
+      feedbacks: பின்னூட்டங்களை
+    user_requests_navigation:
+      all: அனைத்து
   users:
     new:
       invite_user: அழை
@@ -63,6 +72,7 @@ ta:
       project: திட்ட
       users: பயனர்கள்
       new: நியூ
+      board: வாரியம்
     edit:
       name: பெயர்
       enter_your_name: உங்கள் பெயரை உள்ளிடவும்
@@ -80,6 +90,14 @@ ta:
       hello: வணக்கம்
       projects: திட்டங்கள்
       boards: வாரியங்கள்
+      issues: சிக்கல்கள்
+      you_can_sync_projects_and_issues_from: நீங்கள் பல்வேறு சேவைகளை திரும்ப உங்கள்
+        திட்டங்கள் மற்றும் பிரச்சினைகள் ஒத்திசைக்க முடியும்
+      sync_with_bitbucket: Bitbucket ஒத்திசைவு
+      sync_with_github: கிட்ஹப் ஒத்திசைவு
+      syncing_with_gitlab: Gitlab ஒத்திசைவு
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: நீங்கள்
+        ஏற்கனவே உங்கள் திட்டம் ஒத்திசைத்தக் என்றால், அது webhooks எப்போதும் ஒத்திசைக்கப்படும்
   projects:
     index:
       projects: திட்டங்கள்
@@ -205,6 +223,24 @@ ta:
       board_users: பயனர்கள்
       edit: திருத்து
       destroy: அழிக்க
+  user_requests:
+    form:
+      content: உள்ளடக்க
+      create: உருவாக்கு
+      edit: திருத்து
+  feedbacks:
+    new:
+      feedback_title: கருத்து
+    form:
+      feedback_content: உள்ளடக்க
+      cancel: ரத்து
+      send: அனுப்புக
+      feedback_recaptcha: ReCAPTCHA கொண்டு
+    success:
+      success_feedback: நன்றி! நாங்கள் உங்கள் கருத்தை பெறவில்லை.
+      close: மூடு
+      cancel: ரத்து
+      more: மேலும் அனுப்பவும்
   pages:
     faq:
       faq: கேள்விகள்

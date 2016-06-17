@@ -30,6 +30,7 @@ sl:
       base: Osnovna
       title: Naslov
       user_to_project_connection: Uporabnik projekta povezave
+      user_to_board_connection: Uporabnik vkrcati povezave
       columns:
         tag: Tag prekrivanje
     new_project_modal:
@@ -54,6 +55,19 @@ sl:
       technoelegance: Technoelegance doo
     pagination_link:
       next_page: Naslednja stran
+    sync_with_provider_button:
+      sync_with_github: Sinhronizacija z GitHub
+      sync_with_gitlab: Sinhronizacija z Gitlab
+      sync_with_bitbucket: Sinhronizacija z Bitbucket
+      stop_sync_with_bitbucket: Stop sinhronizacijo z Bitbucket
+      stop_sync_with_github: Stop sinhronizacijo z GitHub
+      stop_sync_with_gitlab: Stop sinhronizacijo z Gitlab
+    header:
+      requests: Zahteve
+      feedbacks: Odzivi
+    user_requests_navigation:
+      all: Vsi
+      my_requests: Moje zahteve
   users:
     new:
       invite_user: Povabi uporabnika
@@ -70,13 +84,14 @@ sl:
       project: Project
       users: uporabniki
       new: New
+      board: Board
     edit:
       name: Ime
       enter_your_name: Vpišite svoje ime
       save: Shrani
     settings:
       change_password: Sprememba gesla
-      interface_language: jezik vmesnika
+      interface_language: vmesnik jezik
       submit: Pošlji
     password_form:
       new_password: Novo geslo
@@ -90,6 +105,17 @@ sl:
       here_some_of_your_statistics: Tukaj nekaj statističnimi podatki
       projects: Projekti
       boards: plošče
+      issues: vprašanja
+      you_can_sync_projects_and_issues_from: lahko vklopite različnih storitev in
+        sinhronizacijo projekte in vprašanja
+      turn_on_github: Vklopite GitHub
+      turn_on_gitlab: Vklopite Gitlab
+      turn_on_bitbucket: Vklopite Bitbucket
+      sync_with_bitbucket: Sinhronizacija z Bitbucket
+      sync_with_github: Sinhronizacija z GitHub
+      syncing_with_gitlab: Sinhronizacija z Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Če
+        ste že sinhronizirane svoj projekt, da bo vedno sinhronizirani z webhooks
   projects:
     index:
       projects: Projekti
@@ -215,6 +241,26 @@ sl:
       board_users: Uporabniki
       edit: Uredi
       destroy: Destroy
+  user_requests:
+    form:
+      content: vsebina
+      create: Ustvarjanje
+      edit: Uredi
+  feedbacks:
+    new:
+      feedback_title: Povratne informacije
+    form:
+      feedback_name: Vaše ime
+      feedback_email: vašo e-pošto
+      feedback_content: vsebina
+      cancel: Prekliči
+      send: Pošlji
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Hvala! Smo prejeli povratne informacije.
+      close: Zapri
+      cancel: Prekliči
+      more: Pošlji več
   pages:
     faq:
       faq: FAQ

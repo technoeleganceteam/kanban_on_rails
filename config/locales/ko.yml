@@ -28,18 +28,22 @@ ko:
       title: 제목
       columns:
         tag: 태그 중첩
-    new_project_modal:
-      new_project: 새로운 프로젝트
+    edit_project_modal:
+      edit_project: 프로젝트 편집
+    left_sidebar:
+      boards: 보드
     right_sidebar:
-      news: 뉴스
-      read_more: 는 더 읽기
+      all: 모든
     javascript_global_variables:
       select_column_tags: 선택 항목 태그
-      select_section_tags: 선택 섹션 태그
+      select_issue_tags: 선택의 문제 태그
     email_signature:
+      mailer: 메일러
       technoelegance: Technoelegance (주)
     pagination_link:
       next_page: 다음 페이지
+    header:
+      feedbacks: 되먹임
   users:
     form:
       name: 이름
@@ -51,6 +55,7 @@ ko:
       project: 프로젝트
       users: 사용자
       new: 새로운
+      board: 보드
     edit:
       name: 이름
       enter_your_name: 이름을 입력
@@ -67,6 +72,7 @@ ko:
       hello: 안녕하세요.
       projects: 프로젝트
       boards: 보드
+      issues: 문제
   projects:
     index:
       projects: 프로젝트
@@ -94,6 +100,7 @@ ko:
       section_name: 제 이름
       remove_section: 제거 섹션
       section_tags: 섹션 태그
+      section_order: 주문
       or_include_all: 아니면 모두 포함되어 있습니까?
     column_fields:
       column_name: 열 이름
@@ -102,36 +109,37 @@ ko:
       column_order: 주문
     show:
       project: 프로젝트
-      related_boards: 관련 보드
-      project_info: 프로젝트 정보
       project_issues: 프로젝트 문제
-      project_users: 프로젝트 사용자
-      new: 새로운
-    project_modal:
-      project: 프로젝트
   issues:
     form:
       title: 제목
       save: 저장
-      body: 바디
-      tags: 태그
-      issue_order: 주문
-      bitbucket_issue_id: 의 Bitbucket 문제 아이디
       github_issue_id: Github에서 문제 아이디
       github_issue_number: Github에서 문제 번호
       project: 프로젝트
     index:
       issues: 문제
       new: 새로운
+    issue:
+      destroy: 삭제
+      edit: 편집
     edit:
       edit_issue: 편집 문제
+    new:
+      new_issue: 새로운 문제
+    issue_modal:
+      issue: 문제
   authentications:
+    index:
+      enabled_services: 사용 서비스
     authentication:
       turned_off: 이 꺼져
       turn_off: 해제
+      turned_on: 는 점등
   news:
     1_we_have_just_launched_our_service:
       sign_up: 가입
+      and_use_it: 그것을 사용합니다.
       technoelegance_team: Technoelegance 팀
     index:
       read_more: 는 더 읽기
@@ -148,9 +156,9 @@ ko:
       save: 저장
       projects: 프로젝트
     section_fields:
-      section_name: 제 이름
       remove_section: 제거 섹션
       section_tags: 섹션 태그
+      section_order: 주문
       or_include_all: 아니면 모두 포함되어 있습니까?
     column_fields:
       column_name: 열 이름
@@ -165,12 +173,31 @@ ko:
       board_users: 사용자
       edit: 편집
       destroy: 파괴
+  user_requests:
+    form:
+      content: 콘텐츠
+      create: 만들기
+      edit: 편집
+  feedbacks:
+    new:
+      feedback_title: 피드백
+    form:
+      feedback_content: 콘텐츠
+      cancel: 취소
+      send: 보내기
+      feedback_recaptcha: reCAPTCHA를
+    success:
+      success_feedback: 감사합니다! 우리는 귀하의 의견을 받았다있다.
+      close: 닫기
+      cancel: 취소
+      more: 더 보내기
   pages:
     faq:
       faq: FAQ
       what_is_kanban_on_rails: KanbanOnRails 무엇입니까?
       about_kanban_on_rails: KanbanOnRails는 Github에서 또는의 Bitbucket와 함께 칸반 보드를 생성하고
         동기화 할 수있는 서비스입니다
+      i_have_some_requests: 좀 요청이
       i_have_seen_some_typo_or_wrong_translation: 나는 약간의 오타 나 잘못된 번역을 보았다
       github_repository: GitHub의 저장소
       i_have_seen_some_error: 나는 약간의 오차가 보았다
@@ -178,21 +205,16 @@ ko:
       about_kanban_on_rails_text: KanbanOnRails는 Github에서 또는의 Bitbucket와 함께 칸반 보드를
         생성하고 동기화 할 수있는 서비스입니다
       kanban_on_rails_features: KanbanOnRails 기능
-      we_use_open_source_and_high_technology: 우리는 높은 기술과 오픈 소스 라이브러리를 사용합니다. 우리는 항상
-        더 나은 얻고 우리의 서비스를 개선하려고합니다.
       partners_and_investors: 우리는 협력을 위해 개방하고 우리는 투자자를 찾을 싶습니다. 당신이 우리와 함께 협력하려는 경우
         partnership@technoelegance.com로 문의하시기 바랍니다
   errors:
     messages:
-      already_confirmed: 이미 확인되었다, 로그인 시도하십시오
       confirmation_period_expired: "% {시간}에서 확인 될 필요가 새를 요청하시기 바랍니다"
-      not_found: 찾을 수 없습니다
       not_locked: 잠겨되지 않았습니다
       not_saved:
         one: '1 오류가 저장되지이 % {자원을} 금지 :'
         other: "% 저장되는이 % {자원을} 금지 오류 {계산}"
     bad_request:
-      bad_request: 잘못된 요청
       request_result: 요청 결과
       go_to_root: 루트로 이동
     unprocessable_entity:
@@ -204,7 +226,6 @@ ko:
       request_result: 요청 결과
       go_to_root: 루트로 이동
     forbidden:
-      forbidden: 는 금지
       request_result: 요청 결과
       go_to_root: 루트로 이동
     internal_server_error:
@@ -220,11 +241,15 @@ ko:
         didnt_receive_confirmation_instructions: 는 확인 지시를 받았습니다하지 않았다?
         fast_login_almost_one_click: 빠른 로그인 (거의 한 번의 클릭)
     confirmations:
+      send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 귀하의
+        계정을 확인하는 방법에 대한 지침 이메일을 받게됩니다.
       new:
         send_mail_for_confirm_your_email: 확인 이메일 메일 보내기
+        submit: 제출
     failure:
       invalid: 잘못된 이메일 또는 암호를 입력합니다.
       last_attempt: "."
+      not_found_in_database: 잘못된 이메일 또는 암호를 입력합니다.
     mailer:
       confirmation_instructions:
         subject: 확인 지침
@@ -242,7 +267,6 @@ ko:
       failure: 는 % {종류} "% {} 이유"때문에 당신을 인증 할 수 없습니다.
       success: 성공적 % {종류} 계정에서 인증.
     passwords:
-      send_instructions: "."
       send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 당신의
         이메일 주소로 비밀번호 복구 링크를 받게됩니다.
       new:

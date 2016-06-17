@@ -31,6 +31,7 @@ fi:
       base: Base
       title: Otsikko
       user_to_project_connection: Käyttäjä hankkeen yhteys
+      user_to_board_connection: Käyttäjä nousta yhteys
       columns:
         tag: Tag päällekkäisiä
     new_project_modal:
@@ -55,6 +56,19 @@ fi:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Seuraava
+    sync_with_provider_button:
+      sync_with_github: synkronointi Github
+      sync_with_gitlab: synkronointi Gitlab
+      sync_with_bitbucket: synkronointi Bitbucket
+      stop_sync_with_bitbucket: Pysäytä synkronointi Bitbucket
+      stop_sync_with_github: Pysäytä synkronointi Github
+      stop_sync_with_gitlab: Pysäytä synkronointi Gitlab
+    header:
+      requests: pyynnöt
+      feedbacks: Palautteet
+    user_requests_navigation:
+      all: Kaikki
+      my_requests: My pyyntöjä
   users:
     new:
       invite_user: Kutsu käyttäjä
@@ -71,6 +85,7 @@ fi:
       project: Project
       users: käyttäjät
       new: Uusi
+      board: Board
     edit:
       name: Name
       enter_your_name: Kirjoita nimesi
@@ -91,6 +106,17 @@ fi:
       here_some_of_your_statistics: Tässä joitakin tilastojen
       projects: Projects
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Voit ottaa erilaisia ​​palveluita ja
+        synkronoida projekteja ja asioita
+      turn_on_github: Ota Github
+      turn_on_gitlab: Ota Gitlab
+      turn_on_bitbucket: Ota Bitbucket
+      sync_with_bitbucket: synkronointi Bitbucket
+      sync_with_github: synkronointi Github
+      syncing_with_gitlab: synkronointi Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Jos
+        olet jo synkronoinut projekti, se synkronoidaan aina webhooks
   projects:
     index:
       projects: Projects
@@ -229,6 +255,26 @@ fi:
       board_users: Käyttäjät
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: Sisältö
+      create: Luo
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Palaute
+    form:
+      feedback_name: Nimesi
+      feedback_email: Sähköpostiosoitteesi
+      feedback_content: Sisältö
+      cancel: Peruuta
+      send: Lähetä
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Kiitos! Olemme saapumisjärjestyksessä palautetta.
+      close: Close
+      cancel: Peruuta
+      more: Lähetä lisää
   pages:
     faq:
       faq: FAQ

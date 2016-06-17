@@ -41,6 +41,15 @@ ml:
       info: വിവരങ്ങളും
       mailer: Mailer
       technoelegance: Technoelegance ലിമിറ്റഡ്
+    sync_with_provider_button:
+      stop_sync_with_bitbucket: Bitbucket കൂടെ നിർത്തുക സമന്വയം
+      stop_sync_with_github: സാമൂഹികം കൂടെ നിർത്തുക സമന്വയം
+      stop_sync_with_gitlab: Gitlab കൂടെ നിർത്തുക സമന്വയം
+    header:
+      requests: അഭ്യർത്ഥനകൾ
+      feedbacks: പ്രതികൂലഘടകങ്ങൾ
+    user_requests_navigation:
+      all: എല്ലാ
   users:
     new:
       invite_user: ഉപയോക്താവിനെ ക്ഷണിക്കുക
@@ -57,6 +66,7 @@ ml:
       project: പദ്ധതി
       users: ഉപയോക്താക്കൾ
       new: ന്യൂ
+      board: ബോർഡ്
     edit:
       name: പേര്
       enter_your_name: നിങ്ങളുടെ പേര് നൽകുക
@@ -74,6 +84,14 @@ ml:
       here_some_of_your_statistics: ഇവിടെ ചില നിങ്ങളുടെ സ്ഥിതിവിവരക്കണക്കുകളുടെ
       projects: പ്രോജക്ടുകൾ
       boards: ബോർഡുകൾ
+      issues: പ്രശ്നങ്ങൾ
+      you_can_sync_projects_and_issues_from: വ്യത്യസ്ത സേവനങ്ങൾ ഓണാക്കി നിങ്ങളുടെ
+        പദ്ധതികൾ പ്രശ്നങ്ങളും സമന്വയിപ്പിക്കാൻ കഴിയും
+      turn_on_github: ടേൺ
+      turn_on_gitlab: ടേൺ
+      turn_on_bitbucket: ടേൺ
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: നിങ്ങൾ
+        ഇതിനകം പദ്ധതി സമന്വയിപ്പിച്ച, അത് webhooks എല്ലായ്പോഴും സമന്വയിപ്പിക്കും
   projects:
     index:
       projects: പ്രോജക്ടുകൾ
@@ -192,6 +210,21 @@ ml:
       board_users: ഉപയോക്താക്കൾ
       edit: എഡിറ്റ്
       destroy: നശിപ്പിക്കുക
+  user_requests:
+    form:
+      content: ഉള്ളടക്കം
+      create: സൃഷ്ടിക്കുക
+      edit: എഡിറ്റ്
+  feedbacks:
+    form:
+      feedback_content: ഉള്ളടക്കം
+      cancel: റദ്ദാക്കുക
+      send: അയയ്ക്കുക
+    success:
+      success_feedback: നന്ദി! ഞങ്ങൾ നിങ്ങളുടെ ഫീഡ്ബാക്ക് ഹൈബീ.
+      close: അടയ്ക്കുക
+      cancel: റദ്ദാക്കുക
+      more: കൂടുതൽ അയയ്ക്കുക
   pages:
     faq:
       faq: സ്ഥിരം

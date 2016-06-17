@@ -31,6 +31,7 @@ lt:
       base: bazė
       title: Pavadinimas
       user_to_project_connection: Vartotojas projekto ryšį
+      user_to_board_connection: Vartotojas įlipti į ryšį
       columns:
         tag: Gairė sutapimas
     new_project_modal:
@@ -55,6 +56,19 @@ lt:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: Kitas puslapis
+    sync_with_provider_button:
+      sync_with_github: sinchronizuoti su GitHub
+      sync_with_gitlab: sinchronizuoti su Gitlab
+      sync_with_bitbucket: sinchronizuoti su Bitbucket
+      stop_sync_with_bitbucket: Sustabdyti sinchronizavimą su Bitbucket
+      stop_sync_with_github: Sustabdyti sinchronizavimą su GitHub
+      stop_sync_with_gitlab: Sustabdyti sinchronizavimą su Gitlab
+    header:
+      requests: Prašymai
+      feedbacks: Atsiliepimai
+    user_requests_navigation:
+      all: Visi
+      my_requests: Mano prašymus
   users:
     new:
       invite_user: Pakviesti vartotoją
@@ -71,6 +85,7 @@ lt:
       project: projektas
       users: vartotojai
       new: Nauja
+      board: diskusijų
     edit:
       name: Vardas
       enter_your_name: Įveskite savo vardą
@@ -91,6 +106,17 @@ lt:
       here_some_of_your_statistics: Čia kai kurie iš jūsų statistiką
       projects: Projektai
       boards: forumai
+      issues: klausimai
+      you_can_sync_projects_and_issues_from: Galite įjungti įvairių paslaugų ir sinchronizuoti
+        savo projektus ir problemas
+      turn_on_github: Įjunkite GitHub
+      turn_on_gitlab: Įjunkite Gitlab
+      turn_on_bitbucket: Įjunkite Bitbucket
+      sync_with_bitbucket: sinchronizuoti su Bitbucket
+      sync_with_github: sinchronizuoti su GitHub
+      syncing_with_gitlab: sinchronizuoti su Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Jei
+        jau sinchronizuojami savo projektą, jis bus sinchronizuojami visada su webhooks
   projects:
     index:
       projects: Projektai
@@ -226,6 +252,26 @@ lt:
       board_users: Vartotojai
       edit: Redaguoti
       destroy: Destroy
+  user_requests:
+    form:
+      content: turinys
+      create: Sukurti
+      edit: Redaguoti
+  feedbacks:
+    new:
+      feedback_title: Atsiliepimai
+    form:
+      feedback_name: Jūsų vardas
+      feedback_email: Jūsų elektroninis paštas
+      feedback_content: turinys
+      cancel: Atšaukti
+      send: Siųsti
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Dėkojame! Mes gavau savo atsiliepimą.
+      close: Uždaryti
+      cancel: Atšaukti
+      more: Siųsti daugiau
   pages:
     faq:
       faq: DUK

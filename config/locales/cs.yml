@@ -30,6 +30,7 @@ cs:
       base: Základna
       title: Název
       user_to_project_connection: Uživatel projektovat spojení
+      user_to_board_connection: Uživatel nastoupit připojení
       columns:
         tag: Tag překrývání
     new_project_modal:
@@ -54,6 +55,19 @@ cs:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Další strana
+    sync_with_provider_button:
+      sync_with_github: Synchronizace s GitHub
+      sync_with_gitlab: Synchronizace s Gitlab
+      sync_with_bitbucket: Synchronizace s bitbucket
+      stop_sync_with_bitbucket: Zastavení synchronizace s bitbucket
+      stop_sync_with_github: Zastavení synchronizace s GitHub
+      stop_sync_with_gitlab: Zastavení synchronizace s Gitlab
+    header:
+      requests: Žádosti
+      feedbacks: Ohlasy
+    user_requests_navigation:
+      all: Vše
+      my_requests: mých požadavků
   users:
     new:
       invite_user: Pozvat uživatele
@@ -69,6 +83,7 @@ cs:
       project: Project
       users: uživatelů
       new: Nové
+      board: Board
     edit:
       name: Name
       enter_your_name: Zadejte své jméno
@@ -89,6 +104,17 @@ cs:
       here_some_of_your_statistics: zde některé ze svých statistik
       projects: Projekty
       boards: desky
+      issues: Problémy
+      you_can_sync_projects_and_issues_from: můžete zapnout různými službami a synchronizovat
+        své projekty a zásadní otázky
+      turn_on_github: Zapněte github
+      turn_on_gitlab: Zapněte Gitlab
+      turn_on_bitbucket: Zapněte bitbucket
+      sync_with_bitbucket: Synchronizace s bitbucket
+      sync_with_github: Synchronizace s GitHub
+      syncing_with_gitlab: Synchronizace s Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Pokud
+        jste již synchronizovali váš projekt, bude synchronizována vždy s webhooks
   projects:
     index:
       projects: Projekty
@@ -214,6 +240,26 @@ cs:
       board_users: Uživatelé
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: Content
+      create: Vytvořit
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Vaše jméno
+      feedback_email: Váš e-mail
+      feedback_content: Content
+      cancel: Zrušit
+      send: Send
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Děkuji! Dostali jsme vaše názory.
+      close: Close
+      cancel: Zrušit
+      more: Odeslat více
   pages:
     faq:
       faq: FAQ

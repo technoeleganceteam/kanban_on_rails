@@ -31,6 +31,7 @@ tl:
       base: Base
       title: Title
       user_to_project_connection: User upang i-project connection
+      user_to_board_connection: User sa board koneksyon
       columns:
         tag: Tag overlapping
     new_project_modal:
@@ -55,6 +56,19 @@ tl:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Susunod na pahina
+    sync_with_provider_button:
+      sync_with_github: I-sync sa Github
+      sync_with_gitlab: I-sync sa GitLab
+      sync_with_bitbucket: I-sync sa Bitbucket
+      stop_sync_with_bitbucket: Stop sync kasama Bitbucket
+      stop_sync_with_github: Stop sync kasama Github
+      stop_sync_with_gitlab: Stop sync kasama GitLab
+    header:
+      requests: Requests
+      feedbacks: Feedback
+    user_requests_navigation:
+      all: Lahat
+      my_requests: Aking kahilingan
   users:
     new:
       invite_user: Imbitahan user
@@ -69,6 +83,7 @@ tl:
     index:
       project: Project
       new: New
+      board: Board
     edit:
       name: Pangalan
       enter_your_name: Ipasok ang iyong pangalan
@@ -89,6 +104,17 @@ tl:
       here_some_of_your_statistics: Narito ang ilan sa iyong mga istatistika
       projects: Projects
       boards: Boards
+      issues: Isyu
+      you_can_sync_projects_and_issues_from: Maaari mong i-on ang iba't ibang mga
+        serbisyo at i-sync ang iyong mga proyekto at mga isyu
+      turn_on_github: I-on Github
+      turn_on_gitlab: I-on GitLab
+      turn_on_bitbucket: I-on Bitbucket
+      sync_with_bitbucket: I-sync sa Bitbucket
+      sync_with_github: I-sync sa Github
+      syncing_with_gitlab: I-sync sa GitLab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Kung
+        kayo ay naka-sync ang iyong mga proyekto, ito ay naka-sync palagi sa webhooks
   projects:
     index:
       projects: Projects
@@ -221,6 +247,26 @@ tl:
       board_users: Users
       edit: Edit
       destroy: Wasakin
+  user_requests:
+    form:
+      content: Nilalaman
+      create: Lumikha
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Ang iyong pangalan
+      feedback_email: Ang iyong email
+      feedback_content: Nilalaman
+      cancel: Ikansela
+      send: Send
+      feedback_recaptcha: reCAPTCHA
+    success:
+      success_feedback: Salamat sa iyo! Aming natanggap ang iyong feedback.
+      close: Close
+      cancel: Ikansela
+      more: Magpadala mas
   pages:
     faq:
       faq: FAQ

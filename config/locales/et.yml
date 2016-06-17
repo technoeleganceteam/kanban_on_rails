@@ -31,6 +31,7 @@ et:
       base: Base
       title: Pealkiri
       user_to_project_connection: Kasutaja projekti ühendus
+      user_to_board_connection: Kasutaja pardale ühendus
       columns:
         tag: Tag kattuvad
     new_project_modal:
@@ -55,6 +56,19 @@ et:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Järgmine lehekülg
+    sync_with_provider_button:
+      sync_with_github: Sync Github
+      sync_with_gitlab: Sync Gitlab
+      sync_with_bitbucket: Sync Bitbucket
+      stop_sync_with_bitbucket: Stopp sünkroonis Bitbucket
+      stop_sync_with_github: Stopp sünkroonis Github
+      stop_sync_with_gitlab: Stopp sünkroonis Gitlab
+    header:
+      requests: taotlused
+      feedbacks: tagasiside
+    user_requests_navigation:
+      all: Kõik
+      my_requests: Minu taotlused
   users:
     new:
       invite_user: Kutsu kasutaja
@@ -71,6 +85,7 @@ et:
       project: Project
       users: kasutajad
       new: Uus
+      board: Board
     edit:
       name: Nimi
       enter_your_name: Sisesta oma nimi
@@ -91,6 +106,17 @@ et:
       here_some_of_your_statistics: Siin mõned statistika
       projects: projektid
       boards: Lauad
+      issues: küsimused
+      you_can_sync_projects_and_issues_from: Võite sisse lülitada erinevaid teenuseid
+        ja sünkroniseerida projekte ja küsimusi
+      turn_on_github: Lülita Github
+      turn_on_gitlab: Lülita Gitlab
+      turn_on_bitbucket: Lülita Bitbucket
+      sync_with_bitbucket: Sync Bitbucket
+      sync_with_github: Sync Github
+      syncing_with_gitlab: Sync Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Kui
+        olete juba sünkroniseerida oma projekti, siis sünkroonitakse alati webhooks
   projects:
     index:
       projects: projektid
@@ -229,6 +255,26 @@ et:
       board_users: Kasutajad
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: sisu
+      create: Loo
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: tagasiside
+    form:
+      feedback_name: Teie nimi
+      feedback_email: Teie e-posti
+      feedback_content: sisu
+      cancel: Cancel
+      send: Saada
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Aitäh! Oleme saanud vastava tagasisidet.
+      close: Sulge
+      cancel: Cancel
+      more: Saada rohkem
   pages:
     faq:
       faq: KKK

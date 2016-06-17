@@ -31,6 +31,7 @@ eo:
       base: Bazo
       title: Titolo
       user_to_project_connection: Uzanto projekti ligo
+      user_to_board_connection: Uzanto suriri ligo
       columns:
         tag: Tag imbrikitaj
     new_project_modal:
@@ -55,6 +56,19 @@ eo:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Sekva paĝo
+    sync_with_provider_button:
+      sync_with_github: Sync kun GitHub
+      sync_with_gitlab: Sync kun Gitlab
+      sync_with_bitbucket: Sync kun Bitbucket
+      stop_sync_with_bitbucket: Stop sincronía kun Bitbucket
+      stop_sync_with_github: Stop sincronía kun GitHub
+      stop_sync_with_gitlab: Stop sincronía kun Gitlab
+    header:
+      requests: Petoj
+      feedbacks: reagojn
+    user_requests_navigation:
+      all: Ĉiuj
+      my_requests: Mia petoj
   users:
     new:
       invite_user: Invitu uzanto
@@ -71,6 +85,7 @@ eo:
       project: Projekto
       users: uzantoj
       new: Nova
+      board: Board
     edit:
       name: Nomo
       enter_your_name: Entajpu vian nomon
@@ -91,6 +106,17 @@ eo:
       here_some_of_your_statistics: Jen kelkaj el viaj statistikoj
       projects: Projektoj
       boards: Boards
+      issues: Issues
+      you_can_sync_projects_and_issues_from: Vi povas ŝalti malsamaj servoj kaj sinkronigi
+        viajn projektojn kaj temoj
+      turn_on_github: Turnu sur GitHub
+      turn_on_gitlab: Turnu on Gitlab
+      turn_on_bitbucket: Turnu on Bitbucket
+      sync_with_bitbucket: Sync kun Bitbucket
+      sync_with_github: Sync kun GitHub
+      syncing_with_gitlab: Sync kun Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Se
+        vi jam synced vian projekton, ĝi estos synced ĉiam kun webhooks
   projects:
     index:
       projects: Projektoj
@@ -228,6 +254,26 @@ eo:
       board_users: Uzantoj
       edit: Redakti
       destroy: Detruu
+  user_requests:
+    form:
+      content: Enhavo
+      create: Krei
+      edit: Redakti
+  feedbacks:
+    new:
+      feedback_title: rimarkojn
+    form:
+      feedback_name: Via nomo
+      feedback_email: Via retpoŝta
+      feedback_content: Enhavo
+      cancel: Nuligi
+      send: Sendu
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Dankon! Ni ricevita vian retrosciigon.
+      close: Fermi
+      cancel: Nuligi
+      more: Sendu pli
   pages:
     faq:
       faq: Demandoj

@@ -27,6 +27,7 @@ pl:
       current_password: Aktualne hasło
       name: Nazwa
       user_to_project_connection: użytkownika do projektu połączenia
+      user_to_board_connection: użytkownika wsiąść połączenia
       columns:
         tag: Tag nakładających
     new_project_modal:
@@ -50,6 +51,19 @@ pl:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Następna strona
+    sync_with_provider_button:
+      sync_with_github: Synchronizacja z Github
+      sync_with_gitlab: Synchronizacja z Gitlab
+      sync_with_bitbucket: Synchronizacja z Bitbucket
+      stop_sync_with_bitbucket: Zatrzymaj synchronizacja z Bitbucket
+      stop_sync_with_github: Zatrzymaj synchronizacja z Github
+      stop_sync_with_gitlab: Zatrzymaj synchronizacja z Gitlab
+    header:
+      requests: Wnioski
+      feedbacks: Reakcje
+    user_requests_navigation:
+      all: Wszystko
+      my_requests: moje prośby
   users:
     new:
       invite_user: Zaproś użytkownika
@@ -64,6 +78,7 @@ pl:
     index:
       project: Projekt
       new: Nowa
+      board: Board
     edit:
       name: Nazwa
       enter_your_name: Wprowadź swoją nazwę
@@ -82,6 +97,17 @@ pl:
       here_some_of_your_statistics: Oto niektóre statystyki
       projects: Projekty
       boards: Boards
+      issues: Zagadnienia
+      you_can_sync_projects_and_issues_from: Można włączyć różnych usług i synchronizować
+        swoje projekty i problemy
+      turn_on_github: Włącz Github
+      turn_on_gitlab: Włącz Gitlab
+      turn_on_bitbucket: Włącz Bitbucket
+      sync_with_bitbucket: Synchronizacja z Bitbucket
+      sync_with_github: Synchronizacja z Github
+      syncing_with_gitlab: Synchronizacja z Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Jeśli
+        już synchronizowane swój projekt, to będzie synchronizowane zawsze webhooks
   projects:
     index:
       projects: Projekty
@@ -191,7 +217,6 @@ pl:
     column_fields:
       remove_column: Usuń kolumnę
       max_issues_count: Maks kwestie liczyć w kolumnie
-      column_tags: znaczniki kolumn
       column_order: Zamówienie
     show:
       next_page: Następna strona
@@ -201,6 +226,26 @@ pl:
     board:
       edit: Edycja
       destroy: Destroy
+  user_requests:
+    form:
+      content: treści
+      create: Tworzenie
+      edit: Edycja
+  feedbacks:
+    new:
+      feedback_title: Odpowiedź
+    form:
+      feedback_name: Twoje imię i nazwisko
+      feedback_email: Twój email
+      feedback_content: treści
+      cancel: Anuluj
+      send: Wyślij
+      feedback_recaptcha: Odśwież
+    success:
+      success_feedback: Dziękuję! Mamy otrzymał swoją opinię.
+      close: Close
+      cancel: Anuluj
+      more: wysłać więcej
   pages:
     faq:
       faq: FAQ

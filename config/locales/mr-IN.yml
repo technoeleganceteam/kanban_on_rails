@@ -48,6 +48,15 @@ mr-IN:
       technoelegance: Technoelegance लि
     pagination_link:
       next_page: पुढील पृष्ठ
+    sync_with_provider_button:
+      sync_with_github: Github समक्रमित
+      sync_with_gitlab: Gitlab समक्रमित
+      sync_with_bitbucket: Bitbucket समक्रमित
+    header:
+      requests: विनंत्या
+      feedbacks: अभिप्राय
+    user_requests_navigation:
+      all: सर्व
   users:
     new:
       invite_user: वापरकर्त्याला आमंत्रित करा
@@ -64,6 +73,7 @@ mr-IN:
       project: प्रकल्प
       users: वापरकर्ते
       new: नवी
+      board: मंडळ
     edit:
       name: नाव
       enter_your_name: आपले नाव प्रविष्ट करा
@@ -81,6 +91,16 @@ mr-IN:
       hello: हॅलो
       projects: प्रकल्प
       boards: बोर्ड
+      issues: मुद्दे
+      turn_on_github: Github चालू
+      turn_on_gitlab: Gitlab चालू
+      turn_on_bitbucket: Bitbucket चालू
+      sync_with_bitbucket: Bitbucket समक्रमित
+      sync_with_github: Github समक्रमित
+      syncing_with_gitlab: Gitlab समक्रमित
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: आपण
+        आधीच आपल्या प्रकल्प समक्रमित केले असेल तर, webhooks नेहमी तो समक्रमित केले
+        जाणार नाही
   projects:
     index:
       projects: प्रकल्प
@@ -108,7 +128,6 @@ mr-IN:
       edit: संपादित करा
       destroy: हटवा
       project_issues: प्रकल्प समस्या
-      project_users: प्रकल्प वापरकर्ते
     section_fields:
       section_name: विभाग नाव
       remove_section: काढा विभाग
@@ -210,6 +229,24 @@ mr-IN:
       board_users: वापरकर्ते
       edit: संपादित करा
       destroy: नष्ट
+  user_requests:
+    form:
+      content: सामग्री
+      create: तयार करा
+      edit: संपादित करा
+  feedbacks:
+    new:
+      feedback_title: अभिप्राय
+    form:
+      feedback_content: सामग्री
+      cancel: रद्द करा
+      send: पाठवा
+      feedback_recaptcha: रीकॅप्चाला
+    success:
+      success_feedback: धन्यवाद! आम्ही आपला अभिप्राय प्राप्त आहे.
+      close: बंद करा
+      cancel: रद्द करा
+      more: अधिक पाठवा
   pages:
     faq:
       faq: नेहमी विचारले जाणारे प्रश्न

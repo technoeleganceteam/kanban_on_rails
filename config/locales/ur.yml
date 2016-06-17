@@ -50,6 +50,15 @@ ur:
       technoelegance: Technoelegance لمیٹڈ
     pagination_link:
       next_page: اگلا صفحہ
+    sync_with_provider_button:
+      sync_with_github: Github کے ساتھ مطابقت پذیری
+      sync_with_gitlab: Gitlab ساتھ مطابقت پذیری
+      sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
+    header:
+      requests: درخواستیں
+      feedbacks: Feedbacks سے
+    user_requests_navigation:
+      all: تمام
   users:
     new:
       invite_user: صارف کو مدعو کریں
@@ -66,6 +75,7 @@ ur:
       project: پروجیکٹ
       users: صارفین
       new: نیا
+      board: بورڈ
     edit:
       name: نام
       enter_your_name: اپنا نام درج
@@ -84,6 +94,18 @@ ur:
       here_some_of_your_statistics: یہاں آپ کے اعداد و شمار میں سے کچھ
       projects: پروجیکٹس
       boards: بورڈز
+      issues: مسائل
+      you_can_sync_projects_and_issues_from: آپ مختلف خدمات پر باری ہے اور آپ کے منصوبوں
+        اور مسائل مطابقت پذیر کر سکتے
+      turn_on_github: Github کے پر بند کر دیں
+      turn_on_gitlab: Gitlab پر بند کر دیں
+      turn_on_bitbucket: Bitbucket پر بند کر دیں
+      sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
+      sync_with_github: Github کے ساتھ مطابقت پذیری
+      syncing_with_gitlab: Gitlab ساتھ مطابقت پذیری
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: آپ
+        پہلے سے ہی آپ کے منصوبے موافقت پذیر ہے، تو یہ webhooks ساتھ ہمیشہ موافقت پذیر
+        ہو گا
   projects:
     index:
       projects: پروجیکٹس
@@ -214,6 +236,24 @@ ur:
       board_users: صارفین
       edit: ترمیم کریں
       destroy: خارج کر
+  user_requests:
+    form:
+      content: مواد
+      create: بنائیں
+      edit: ترمیم کریں
+  feedbacks:
+    new:
+      feedback_title: کی رائے
+    form:
+      feedback_content: مواد
+      cancel: منسوخ
+      send: ہے اپنا
+      feedback_recaptcha: ہیتی
+    success:
+      success_feedback: آپ کا شکریہ! ہم آپ کی رائے recieved ہے.
+      close: بند کریں
+      cancel: منسوخ
+      more: زیادہ بھیج
   pages:
     faq:
       faq: عمومی سوالات

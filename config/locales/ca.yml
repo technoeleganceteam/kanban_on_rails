@@ -29,6 +29,7 @@ ca:
       base: Base
       title: Títol
       user_to_project_connection: usuari a la connexió del projecte
+      user_to_board_connection: usuari a placa
       columns:
         tag: Tag solapament
     new_project_modal:
@@ -50,6 +51,19 @@ ca:
       technoelegance: Technoelegance Ltd
     pagination_link:
       next_page: Pàgina següent
+    sync_with_provider_button:
+      sync_with_github: sincronització amb Github
+      sync_with_gitlab: sincronització amb Gitlab
+      sync_with_bitbucket: sincronització amb Bitbucket
+      stop_sync_with_bitbucket: Aturar la sincronització amb Bitbucket
+      stop_sync_with_github: Aturar la sincronització amb Github
+      stop_sync_with_gitlab: Aturar la sincronització amb Gitlab
+    header:
+      requests: Sol·licituds
+      feedbacks: Votacions
+    user_requests_navigation:
+      all: Tot
+      my_requests: Els meus sol·licituds
   users:
     new:
       invite_user: Convidar un usuari
@@ -81,6 +95,16 @@ ca:
       hello: Hola
       here_some_of_your_statistics: Aquí algunes de les seves estadístiques
       projects: Projectes
+      you_can_sync_projects_and_issues_from: També podeu utilitzar diferents serveis
+        i sincronitzar els seus projectes i assumptes
+      turn_on_github: Enceneu Github
+      turn_on_gitlab: Enceneu Gitlab
+      turn_on_bitbucket: Enceneu Bitbucket
+      sync_with_bitbucket: sincronització amb Bitbucket
+      sync_with_github: sincronització amb Github
+      syncing_with_gitlab: sincronització amb Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Si
+        ja ha sincronitzat seu projecte, que es sincronitzaran sempre amb WebHooks
   projects:
     index:
       projects: Projectes
@@ -181,6 +205,24 @@ ca:
       next_page: Pàgina següent
     index:
       new: Nova
+  user_requests:
+    form:
+      content: contingut
+      create: crea
+  feedbacks:
+    new:
+      feedback_title: Comentaris
+    form:
+      feedback_name: El seu nom
+      feedback_email: El seu correu electrònic
+      feedback_content: contingut
+      cancel: Cancel
+      send: Enviar
+    success:
+      success_feedback: Gràcies! Hem rebut el vostre comentari.
+      close: Tancar
+      cancel: Cancel
+      more: Enviar més
   pages:
     faq:
       faq: "| La"

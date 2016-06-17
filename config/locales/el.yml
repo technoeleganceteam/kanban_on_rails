@@ -30,6 +30,7 @@ el:
       base: Βάση
       title: Τίτλος
       user_to_project_connection: χρήστη να προβάλει σύνδεση
+      user_to_board_connection: χρήστη να επιβιβαστεί σύνδεση
       columns:
         tag: Ετικέτα επικαλυπτόμενες
     new_project_modal:
@@ -54,6 +55,19 @@ el:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Επόμενη σελίδα
+    sync_with_provider_button:
+      sync_with_github: Συγχρονισμός με Github
+      sync_with_gitlab: Συγχρονισμός με Gitlab
+      sync_with_bitbucket: Συγχρονισμός με Bitbucket
+      stop_sync_with_bitbucket: Διακοπή συγχρονισμού με Bitbucket
+      stop_sync_with_github: Διακοπή συγχρονισμού με Github
+      stop_sync_with_gitlab: Διακοπή συγχρονισμού με Gitlab
+    header:
+      requests: Αιτήσεις
+      feedbacks: ανατροφοδοτήσεις
+    user_requests_navigation:
+      all: Όλα
+      my_requests: αιτήσεις μου
   users:
     new:
       invite_user: Πρόσκληση χρήστη
@@ -69,6 +83,7 @@ el:
       project: Έργου
       users: χρήστες
       new: Νέα
+      board: Διοικητικό Συμβούλιο
     edit:
       name: Όνομα
       enter_your_name: Πληκτρολογήστε το όνομά σας
@@ -89,6 +104,18 @@ el:
       here_some_of_your_statistics: Εδώ μερικά από τα στατιστικά σας
       projects: Έργα
       boards: Πίνακες
+      issues: Θέματα
+      you_can_sync_projects_and_issues_from: Μπορείτε να ενεργοποιήσετε διαφορετικές
+        υπηρεσίες και να συγχρονίσετε τα σχέδια και τα θέματα σας
+      turn_on_github: Ενεργοποιήστε Github
+      turn_on_gitlab: Ενεργοποιήστε Gitlab
+      turn_on_bitbucket: Ενεργοποιήστε Bitbucket
+      sync_with_bitbucket: Συγχρονισμός με Bitbucket
+      sync_with_github: Συγχρονισμός με Github
+      syncing_with_gitlab: Συγχρονισμός με Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Αν
+        έχετε ήδη συγχρονιστεί το έργο σας, θα πρέπει να συγχρονίζονται πάντοτε με
+        webhooks
   projects:
     index:
       projects: Έργα
@@ -215,6 +242,26 @@ el:
       board_users: Χρήστες
       edit: Επεξεργασία
       destroy: Καταστρέψτε
+  user_requests:
+    form:
+      content: Περιεχόμενο
+      create: Δημιουργία
+      edit: Επεξεργασία
+  feedbacks:
+    new:
+      feedback_title: Σχόλια
+    form:
+      feedback_name: Το όνομά σας
+      feedback_email: email σας
+      feedback_content: Περιεχόμενο
+      cancel: Ακύρωση
+      send: Αποστολή
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Σας ευχαριστούμε! Σας έχουν λάβει τα σχόλιά σας.
+      close: Close
+      cancel: Ακύρωση
+      more: Στείλτε περισσότερα
   pages:
     faq:
       faq: Συχνές Ερωτήσεις

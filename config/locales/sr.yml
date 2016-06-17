@@ -30,6 +30,7 @@ sr:
       base: База
       title: Наслов
       user_to_project_connection: Корисник пројектовати везу
+      user_to_board_connection: Корисник да уђе везу
       columns:
         tag: Ознака преклапање
     new_project_modal:
@@ -54,6 +55,19 @@ sr:
       technoelegance: Тецхноелеганце доо
     pagination_link:
       next_page: Следећа страна
+    sync_with_provider_button:
+      sync_with_github: Синхронизација са гитхуб
+      sync_with_gitlab: Синхронизација са Гитлаб
+      sync_with_bitbucket: Синхронизација са Битбуцкет
+      stop_sync_with_bitbucket: стоп синхронизација са Битбуцкет
+      stop_sync_with_github: стоп синхронизација са гитхуб
+      stop_sync_with_gitlab: стоп синхронизација са Гитлаб
+    header:
+      requests: Захтеви
+      feedbacks: Повратна
+    user_requests_navigation:
+      all: Све
+      my_requests: Ми захтева
   users:
     new:
       invite_user: Позови корисника
@@ -70,6 +84,7 @@ sr:
       project: Пројекат
       users: корисника
       new: Нова
+      board: одбор
     edit:
       name: Име
       enter_your_name: Унесите своје име
@@ -90,6 +105,17 @@ sr:
       here_some_of_your_statistics: Ево неких од ваших статистике
       projects: Пројекти
       boards: форуми
+      issues: питања
+      you_can_sync_projects_and_issues_from: Можете да укључите различитих служби
+        и синхронизују своје пројекте и питања
+      turn_on_github: Укључите гитхуб
+      turn_on_gitlab: Укључите Гитлаб
+      turn_on_bitbucket: Укључите Битбуцкет
+      sync_with_bitbucket: Синхронизација са Битбуцкет
+      sync_with_github: Синхронизација са гитхуб
+      syncing_with_gitlab: Синхронизација са Гитлаб
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Ако
+        сте већ синхронизовали свој пројекат, она ће увек бити синхронизовани са вебхоокс
   projects:
     index:
       projects: Пројекти
@@ -227,6 +253,26 @@ sr:
       board_users: корисника
       edit: Мик
       destroy: Дестрои
+  user_requests:
+    form:
+      content: Садржај
+      create: Направи
+      edit: Мик
+  feedbacks:
+    new:
+      feedback_title: Контакт
+    form:
+      feedback_name: Ваше име
+      feedback_email: Иоур емаил
+      feedback_content: Садржај
+      cancel: Откажи
+      send: Пошаљите
+      feedback_recaptcha: Рецаптцха
+    success:
+      success_feedback: Хвала! Ми смо примили повратне информације.
+      close: Затворити
+      cancel: Откажи
+      more: Пошаљи више
   pages:
     faq:
       faq: Често

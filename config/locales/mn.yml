@@ -50,6 +50,11 @@ mn:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Дараагийн хуудас
+    header:
+      requests: хүсэлт
+      feedbacks: саналыг
+    user_requests_navigation:
+      all: мэдээлэл
   users:
     new:
       invite_user: ав
@@ -66,6 +71,7 @@ mn:
       project: төсөл
       users: хэрэглэгчид
       new: Нью-
+      board: зөвлөл
     edit:
       name: нэр
       enter_your_name: Та нэрээ оруулна уу
@@ -83,6 +89,15 @@ mn:
       hello: Сайн байна уу
       projects: төслүүд
       boards: зөвлөл
+      issues: асуудлууд
+      you_can_sync_projects_and_issues_from: нь өөр өөр үйлчилгээнд асааж таны төсөл,
+        асуудлыг синхрон болно
+      turn_on_github: Github асаана
+      turn_on_gitlab: Gitlab асаана
+      turn_on_bitbucket: Bitbucket асаана
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: та
+        аль хэдийн өөрийн төслөө синхрончлогдсон байгаа бол, энэ нь webhooks үргэлж
+        синхрончилсон болно
   projects:
     index:
       projects: төслүүд
@@ -206,6 +221,24 @@ mn:
       board_users: гишүүд
       edit: Засварлах
       destroy: устгаад
+  user_requests:
+    form:
+      content: Агуулга
+      create: үүсгэх
+      edit: Засварлах
+  feedbacks:
+    new:
+      feedback_title: Санал хүсэлт
+    form:
+      feedback_content: Агуулга
+      cancel: Cancel
+      send: илгээх
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Баярлалаа! Бид таны санал хүсэлтийг -г тээх байна.
+      close: Close
+      cancel: Cancel
+      more: илүү илгээх
   pages:
     faq:
       faq: Тусламж
@@ -280,6 +313,7 @@ mn:
   devise:
     shared:
       links:
+        sign_in: Дансаа ашиглах
         sign_up: бүртгүүлэх
         didnt_receive_confirmation_instructions: баталгаажуулах заавар -г тээх биш
           үү?

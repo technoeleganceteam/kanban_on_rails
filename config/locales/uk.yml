@@ -30,6 +30,7 @@ uk:
       base: Base
       title: Назва
       user_to_project_connection: Користувач проекту підключення
+      user_to_board_connection: Користувач на борт з'єднання
       columns:
         tag: Tag перекриттям
     new_project_modal:
@@ -39,14 +40,14 @@ uk:
     new_issue_modal:
       new_issue: Новий випуск
     left_sidebar:
-      boards: плати
+      boards: Дошки
     right_sidebar:
       news: Новини
       all: Все
       read_more: Детальніше
     javascript_global_variables:
-      select_column_tags: Виберіть мітки стовпців
-      select_section_tags: Виберіть теги розділу
+      select_column_tags: Виберіть теги стовпців
+      select_section_tags: Вибрати мітки розділу
       select_issue_tags: Виберіть теги випуск
     email_signature:
       info: Інформація
@@ -54,6 +55,19 @@ uk:
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Наступна сторінка
+    sync_with_provider_button:
+      sync_with_github: Синхронізація з Github
+      sync_with_gitlab: Синхронізація з Gitlab
+      sync_with_bitbucket: Синхронізація з Bitbucket
+      stop_sync_with_bitbucket: Зупинка синхронізації з Bitbucket
+      stop_sync_with_github: Зупинка синхронізації з Github
+      stop_sync_with_gitlab: Зупинка синхронізації з Gitlab
+    header:
+      requests: просить
+      feedbacks: Відгук
+    user_requests_navigation:
+      all: Все
+      my_requests: Мої прохання
   users:
     new:
       invite_user: Запросити користувача
@@ -61,14 +75,15 @@ uk:
       name: Ім'я
       enter_user_name: Введіть ім'я користувача
       email: E-mail
-      enter_user_email: Вхід користувача електронної пошти
+      enter_user_email: Введіть електронну пошту користувача
       enter_user_password: Введіть пароль користувача
       password: Пароль
       save: Зберегти
     index:
-      project: проекту
-      users: користувачів
+      project: Проект
+      users: користувачі
       new: Новий
+      board: Рада
     edit:
       name: Ім'я
       enter_your_name: Введіть своє ім'я
@@ -89,6 +104,17 @@ uk:
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
       boards: Дошки
+      issues: питання
+      you_can_sync_projects_and_issues_from: Ви можете включити різні послуги і буде
+        підтримувати ваші проекти і питання
+      turn_on_github: Увімкніть Github
+      turn_on_gitlab: Увімкніть Gitlab
+      turn_on_bitbucket: Увімкніть Bitbucket
+      sync_with_bitbucket: Синхронізація з Bitbucket
+      sync_with_github: Синхронізація з Github
+      syncing_with_gitlab: Синхронізація з Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Якщо
+        ви вже синхронізований ваш проект, він буде синхронізований завжди з webhooks
   projects:
     index:
       projects: Проекти
@@ -126,7 +152,7 @@ uk:
       column_tags: мітки стовпців
       column_order: Замовити
     show:
-      project: проекту
+      project: Проект
       related_boards: Схожі дошки
       project_issues: питання проекту
       project_users: користувачів проекту
@@ -140,7 +166,7 @@ uk:
       save: Зберегти
       body: Body
       enter_issue_body: Введіть випуск тіло
-      tags: Теги
+      tags: Мітки
       issue_order: Замовити
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
@@ -173,7 +199,7 @@ uk:
       we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс!
       we_have_just_launched_our_service_text: Сьогодні ми запускаємо наш сервіс так
         що кожен може
-      sign_up: зареєструватися
+      sign_up: підписатися
       and_use_it: і використовувати його.
       with_love: З любов'ю,
       technoelegance_team: Technoelegance Team
@@ -203,7 +229,7 @@ uk:
       or_include_all: Або включати в себе все?
     column_fields:
       remove_column: Видалити стовпець
-      column_tags: теги стовпців
+      column_tags: мітки стовпців
       column_order: Замовити
     show:
       next_page: Наступна сторінка
@@ -214,6 +240,26 @@ uk:
       board_users: Користувачі
       edit: Редагувати
       destroy: Destroy
+  user_requests:
+    form:
+      content: Зміст
+      create: Створити
+      edit: Редагувати
+  feedbacks:
+    new:
+      feedback_title: Зворотній зв'язок
+    form:
+      feedback_name: Ваше ім'я
+      feedback_email: Вашу адресу електронної пошти
+      feedback_content: Зміст
+      cancel: Скасувати
+      send: Відправити
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Спасибі! Ми отримали вашу зворотний зв'язок.
+      close: Закрити
+      cancel: Скасувати
+      more: Відправити ще
   pages:
     faq:
       faq: FAQ
@@ -259,7 +305,7 @@ uk:
       not_locked: ні заблокований
       not_saved:
         one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
-        other: "% {число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
+        other: "{число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
     bad_request:
       bad_request: Bad Request
       request_result: Запит результату
@@ -297,11 +343,11 @@ uk:
         sign_up: Увійдіть
         didnt_receive_confirmation_instructions: Чи не отримали підтвердження інструкції?
         sign_in_with: Вхід з використанням
-        fast_login_almost_one_click: Швидкий Логін (майже один клік)
+        fast_login_almost_one_click: швидко Ввійти (майже один клік)
     confirmations:
       confirmed: ваш аккаунт був успішно підтверджений.
-      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
-        про те, як підтвердити свій рахунок протягом декількох хвилин.
+      send_instructions: Ви отримаєте лист з інструкціями про те, як підтвердити свій
+        рахунок протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, Ви отримаєте повідомлення електронної пошти з інструкціями про
         те, як підтвердити свій рахунок протягом декількох хвилин.
@@ -310,13 +356,13 @@ uk:
           адреси електронної
         submit: Відправити
     failure:
-      already_authenticated: ви вже увійшли в систему.
+      already_authenticated: Ви вже увійшли в систему.
       inactive: Ваш рахунок ще не активовано.
       invalid: Невірний адреса електронної пошти або пароль.
       locked: Ваш рахунок заблокований.
       last_attempt: У вас є ще одна спроба, перш ніж ваш обліковий запис буде заблокована.
       not_found_in_database: Невірний адреса електронної пошти або пароль.
-      timeout: Вашої сесії минув. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
+      timeout: Ваш сесії закінчився. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
       unauthenticated: Ви повинні увійти або зареєструватися, перш ніж продовжити.
       unconfirmed: Ви повинні підтвердити свій аккаунт, перш ніж продовжити.
     mailer:
@@ -357,7 +403,7 @@ uk:
         change_your_password: Змінити пароль
         new_password: Новий пароль
         confirm_password: Підтвердження пароля
-        change_password: Змінити
+        change_password: Зміна
     registrations:
       destroyed: Bye! Ваш обліковий запис була успішно скасовано. Ми сподіваємося
         побачити вас знову найближчим часом.
