@@ -82,4 +82,18 @@ FactoryGirl.define do
 
     board
   end
+
+  factory :user_request do
+    content 'Some content'
+
+    user
+  end
+
+  factory :feedback do
+    name 'Some name'
+
+    content 'Some content'
+
+    email 'some@mail.com'
+  end
 end

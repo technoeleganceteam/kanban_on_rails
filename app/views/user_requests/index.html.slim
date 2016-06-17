@@ -1,0 +1,8 @@
+= render 'shared/user_requests_navigation'
+
+br
+
+ul.list-group
+  = render @user_requests
+
+  = paginate @user_requests

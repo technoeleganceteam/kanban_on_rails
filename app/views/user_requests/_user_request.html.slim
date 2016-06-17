@@ -1,0 +1,20 @@
+li class = "list-group-item list-group-item-info user_request_#{ user_request.id }"
+  = link_to user_path(user_request.user)
+    = image_tag(user_request.user.avatar, :id => 'user_navbar_avatar', :size => '18x18')
+    | &nbsp;
+    = user_request.user.name
+
+  | &nbsp;
+
+  = user_request.created_at.strftime('%Y-%m-%d  %H:%M')
+
+  .pull-right
+    - if can?(:manage, user_request)
+      = link_to edit_user_user_request_path(current_user, user_request) do
+        i.fa.fa-pencil
+      | &nbsp;
+      | &nbsp;
+      = link_to user_user_request_path(current_user, user_request), :method => :delete, :remote => true do
+        i.fa.fa-close
+
+li.list-group-item id = "user_request_content_#{ user_request.id }" = user_request.content

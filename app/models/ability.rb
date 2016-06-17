@@ -12,6 +12,8 @@ class Ability
 
     can :payload_from_bitbucket, Project
 
+    can :read, UserRequest
+
     if user.persisted?
       can :manage, User, :id => user.id
 
@@ -46,6 +48,8 @@ class Ability
       can :stop_sync_with_bitbucket, Project
 
       can :stop_sync_with_gitlab, Project
+
+      can :manage, UserRequest, :user_id => user.id
 
       can :manage, Board do |board|
         board.user_to_board_connections.find_by(:user_id => user.id, :role => 'owner').present?

@@ -23,4 +23,8 @@
             i.fa.fa-language.fa-lg
             | &nbsp;
             = t I18n.locale
+        li class = "#{ 'active' if params[:controller] == 'user_requests' }"
+          = link_to (t '.requests'), user_requests_url
+        li class = "#{ 'active' if params[:controller] == 'feedbacks' }"
+          = link_to (t '.feedbacks'), new_feedback_url
       = render 'shared/navbar'

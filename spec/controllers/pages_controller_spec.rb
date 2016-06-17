@@ -10,8 +10,24 @@ RSpec.describe PagesController, :type => :controller do
   end
 
   describe 'GET robots' do
-    before { get :robots, :format => :txt }
+    context 'without allow robots' do
+      before { get :robots, :format => :txt }
 
-    it { expect(response.body.size).to eq 26 }
+      it { expect(response.body.size).to eq 26 }
+    end
+
+    context 'with allow robots' do
+      before do
+        Settings.webhook_host = 'https://kanbanonrails.com'
+
+        Settings.websockets.domain = 'https://kanbanonrails.com'
+
+        Settings.site_url = 'https://kanbanonrails.com'
+
+        get :robots, :format => :txt
+      end
+
+      it { expect(response.body.size).to eq 24 }
+    end
   end
 end

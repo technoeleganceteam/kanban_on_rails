@@ -1,0 +1,8 @@
+#new_feedback
+  h3 = t '.success_feedback'
+
+  = link_to (t '.cancel'), root_url, :class => 'btn btn-default'
+
+  | &nbsp;
+
+  = link_to (t '.more'), new_feedback_url, :remote => true, :class => 'btn btn-success'

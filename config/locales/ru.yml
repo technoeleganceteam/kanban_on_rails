@@ -50,8 +50,18 @@ ru:
     pagination_link:
       next_page: Следующая страница
     sync_with_provider_button:
-      sync_with_github: Синхронизировать с Github
-      stop_sync_with_bitbucket: 
+      sync_with_gitlab: Синхронизация с Gitlab
+      sync_with_github: Синхронизация с GitHub
+      sync_with_bitbucket: Синхронизация с BitBucket
+      stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
+      stop_sync_with_github: Остановка синхронизации с GitHub
+      stop_sync_with_gitlab: Остановка синхронизации с Gitlab
+    header:
+      requests: Пожелания
+      feedbacks: Обратная связь
+    user_requests_navigation:
+      all: Все
+      my_requests: Мои пожелания
   users:
     new:
       invite_user: Пригласить пользователя
@@ -101,7 +111,7 @@ ru:
     index:
       projects: Проекты
       new: Новый
-      sync_with_gitlub: Синхронизация с Gitlab
+      sync_with_gitlab: Синхронизация с Gitlab
       sync_with_github: Синхронизация с GitHub
       sync_with_bitbucket: Синхронизация с BitBucket
       stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
@@ -164,7 +174,7 @@ ru:
       project: Проект
     index:
       issues: Задачи
-      sync_with_gitlub: Синхронизация с Gitlab
+      sync_with_gitlab: Синхронизация с Gitlab
       sync_with_github: Синхронизация с GitHub
       sync_with_bitbucket: Синхронизация с BitBucket
       stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
@@ -239,6 +249,25 @@ ru:
       board_users: Участники
       edit: Редактировать
       destroy: Удалить
+  user_requests:
+    form:
+      content: Содержимое
+      create: Создать
+      edit: Редактировать
+  feedbacks:
+    new:
+      feedback_title: Заголовок
+    form:
+      feedback_name: Ваше имя
+      feedback_email: Ваш email
+      feedback_content: Содержимое
+      cancel: Отмена
+      send: Отправить
+    success:
+      success_feedback: Спасибо! Мы получили ваш отзыв.
+      close: Закрыть
+      cancel: Отмена
+      more: Отправить ещё
   pages:
     faq:
       faq: Часто задаваемые вопросы

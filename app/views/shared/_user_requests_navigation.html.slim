@@ -1,0 +1,9 @@
+ul.nav.nav-pills.nav-justified
+  li class = '#{ 'active' if params[:action] == 'index' && !params[:user_id].present? }'
+    = link_to (t '.all'), user_requests_url
+  - if user_signed_in?
+    li class = '#{ 'active' if params[:action] == 'index' && params[:user_id].present? }'
+      = link_to (t '.my_requests'), user_user_requests_url(current_user)
+    li class = '#{ 'active' if params[:action] == 'new' }'
+      = link_to new_user_user_request_url(current_user) do
+        i.fa.fa-plus

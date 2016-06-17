@@ -1,0 +1,10 @@
+= form_for [@user, @user_request] do |form|
+  = render 'shared/form_errors', :item => @user_request
+
+  .form-group
+    label.control-label for = 'user_request_content' = t '.content'
+
+    = form.text_area :content, :placeholder => (t '.content'), :class => 'form-control',
+      :required => true
+
+  = form.submit (@user_request.persisted? ? (t '.edit') : (t '.create')), :class => 'btn btn-success'

@@ -1,0 +1,29 @@
+= form_for @feedback, :remote => true, :authenticity_token => true do |form|
+  = render 'shared/form_errors', :item => @feedback
+
+  .form-group
+    label.control-label for = 'feedback_name' = t '.feedback_name'
+    
+    = form.text_field :name, :value => @feedback.name.present? ? @feedback.name : \
+      (user_signed_in? ? current_user.name : @feedback.name),
+      :class => 'form-control', :required => true
+  .form-group
+    label.control-label for = 'feedback_email' = t '.feedback_email'
+    
+    = form.email_field :email, :value => @feedback.email.present? ? @feedback.email : \
+      (user_signed_in? ? current_user.email : @feedback.email),
+      :class => 'form-control', :required => true
+  .form-group
+    label.control-label for = 'feedback_content' = t '.feedback_content'
+
+    = form.text_area :content, :class => 'form-control', :required => true
+  - unless user_signed_in?
+    .form-group
+      label.control-label for = 'feedback_recaptcha' = t '.feedback_recaptcha'
+
+      = recaptcha_tags :ajax => true, :hl => I18n.locale 
+  = link_to (t '.cancel'), root_url, :class => 'btn btn-default'
+
+  | &nbsp;
+
+  = form.submit (t '.send'), :class => 'btn btn-success'

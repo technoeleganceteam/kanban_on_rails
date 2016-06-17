@@ -135,6 +135,12 @@ en: &all
       stop_sync_with_bitbucket: Stop sync with Bitbucket
       stop_sync_with_github: Stop sync with Github
       stop_sync_with_gitlab: Stop sync with Gitlab
+    header:
+      requests: Requests
+      feedbacks: Feedbacks
+    user_requests_navigation:
+      all: All
+      my_requests: My requests
   users:
     new:
       invite_user: Invite user
@@ -317,6 +323,26 @@ en: &all
       board_users: Users
       edit: Edit
       destroy: Destroy
+  user_requests:
+    form:
+      content: Content
+      create: Create
+      edit: Edit
+  feedbacks:
+    new:
+      feedback_title: Feedback
+    form:
+      feedback_name: Your name
+      feedback_email: Your email
+      feedback_content: Content
+      cancel: Cancel
+      send: Send
+      feedback_recaptcha: Recaptcha
+    success:
+      success_feedback: Thank you! We have recieved your feedback.
+      close: Close
+      cancel: Cancel
+      more: Send more
   pages:
     faq:
       faq: FAQ

@@ -36,7 +36,7 @@ Rails.application.routes.draw do
         :sync_with_github, :sync_with_bitbucket, :sync_with_gitlab, :on => :collection
     end
 
-    resources :boards, :except => [:show]
+    resources :boards, :user_requests, :except => [:show]
 
     resources :issues, :only => [:new, :create, :index, :edit, :update]
   end
@@ -58,6 +58,10 @@ Rails.application.routes.draw do
   resources :news, :only => [:index, :show]
 
   resources :pages, :only => [:show]
+
+  resources :user_requests, :only => [:index]
+
+  resources :feedbacks, :only => [:new, :create]
 
   get '/robots.:format' => 'pages#robots'
 end

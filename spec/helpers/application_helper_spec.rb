@@ -30,4 +30,20 @@ describe ApplicationHelper, :type => :helper do
       expect(helper.issue_tag_color(@issue, 'foo')).to eq 'background-color: #bar;color:black;'
     end
   end
+
+  describe '#show_start_sync_button' do
+    before { @user = create :user }
+
+    it 'return nil' do
+      expect(helper.show_start_sync_button(@user, 'github')).to eq nil
+    end
+  end
+
+  describe '#show_stop_sync_button' do
+    before { @user = create :user }
+
+    it 'return nil' do
+      expect(helper.show_stop_sync_button(@user, 'github')).to eq nil
+    end
+  end
 end
