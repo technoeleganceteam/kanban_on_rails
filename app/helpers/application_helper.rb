@@ -23,6 +23,18 @@ module ApplicationHelper
     "background-color: ##{ labels[0][2].last };color:black;" if labels[0].present?
   end
 
+  def show_start_sync_button(user, provider)
+    return false unless provider.in?(%w(gitlab github bitbucket))
+
+    user.send("has_#{ provider }_account") && user.send("sync_with_#{ provider }") != true
+  end
+
+  def show_stop_sync_button(user, provider)
+    return false unless provider.in?(%w(gitlab github bitbucket))
+
+    user.send("has_#{ provider }_account") && user.send("sync_with_#{ provider }") == true
+  end
+
   private
 
   def authentications_index?

@@ -13,6 +13,10 @@ if Cookies.get('signed_in') and Cookies.get('signed_in') == '1'
         when 'stop_sync_notification'
           @_handle_notification(data)
 
+          $("#stop_sync_with_#{ data.provider }").addClass('hidden') if data.provider
+
+          $("#start_sync_with_#{ data.provider }").removeClass('hidden') if data.provider
+
           $("#navbar_#{ data.provider }_sync_info").remove() if data.provider
 
 

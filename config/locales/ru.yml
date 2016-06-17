@@ -49,6 +49,9 @@ ru:
       select_issue_tags: Выберите теги задачи
     pagination_link:
       next_page: Следующая страница
+    sync_with_provider_button:
+      sync_with_github: Синхронизировать с Github
+      stop_sync_with_bitbucket: 
   users:
     new:
       invite_user: Пригласить пользователя
@@ -86,6 +89,14 @@ ru:
       projects: Проекты
       boards: Канбан-доски
       issues: Задачи
+      you_can_sync_projects_and_issues_from: Вы можете подключить разные сервисы и синхронизировать свои проекты и задачи
+      turn_on_github: Подключить Github
+      turn_on_gitlab: Подключить Gitlab
+      turn_on_bitbucket: Подключить Bitbucket
+      sync_with_bitbucket: Синхронизировать через Bitbucket
+      sync_with_github: Синхронизировать через Github
+      sync_with_gitlab: Синхронизировать через Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: Если вы уже однажды синхронизировали ваш проект, то он будет синхронизироваться в дальнейшем через вебхуки
   projects:
     index:
       projects: Проекты
@@ -153,8 +164,12 @@ ru:
       project: Проект
     index:
       issues: Задачи
+      sync_with_gitlub: Синхронизация с Gitlab
       sync_with_github: Синхронизация с GitHub
       sync_with_bitbucket: Синхронизация с BitBucket
+      stop_sync_with_bitbucket: Остановка синхронизации с BitBucket
+      stop_sync_with_github: Остановка синхронизации с GitHub
+      stop_sync_with_gitlab: Остановка синхронизации с Gitlab
       new: Новая
     issue:
       destroy: Удалить

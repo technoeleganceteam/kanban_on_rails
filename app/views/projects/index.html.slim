@@ -2,34 +2,18 @@ ul.list-group
   li.list-group-item.list-group-item-info
     = t '.projects'
     .pull-right
-      - if current_user.sync_with_github.present? && current_user.sync_with_github == true
-        = link_to (t '.stop_sync_with_github'), stop_sync_with_github_user_projects_url(current_user),
-          :class => 'btn btn-success btn-xs', :remote => true
+      - if current_user.has_github_account
+        = render 'shared/sync_with_provider_button', :provider => 'github'
         | &nbsp;
-      - else
-        - if current_user.has_github_account
-          = link_to (t '.sync_with_github'), sync_with_github_user_projects_url(current_user),
-            :class => 'btn btn-success btn-xs', :remote => true
 
-          | &nbsp;
-
-      - if current_user.sync_with_bitbucket.present? && current_user.sync_with_bitbucket == true
-        = link_to (t '.stop_sync_with_bitbucket'), stop_sync_with_bitbucket_user_projects_url(current_user),
-          :class => 'btn btn-success btn-xs', :remote => true
-
+      - if current_user.has_gitlab_account
+        = render 'shared/sync_with_provider_button', :provider => 'gitlab'
         | &nbsp;
-      - else
-        - if current_user.has_bitbucket_account
-          = link_to (t '.sync_with_bitbucket'), sync_with_bitbucket_user_projects_url(current_user),
-            :class => 'btn btn-success btn-xs', :remote => true
 
-          | &nbsp;
-
-      - if current_user.sync_with_gitlab.present? && current_user.sync_with_gitlab == true
-        = link_to (t '.stop_sync_with_gitlab'), stop_sync_with_gitlab_user_projects_url(current_user),
-          :class => 'btn btn-success btn-xs', :remote => true
-
+      - if current_user.has_bitbucket_account
+        = render 'shared/sync_with_provider_button', :provider => 'bitbucket'
         | &nbsp;
+
       - else
         - if current_user.has_gitlab_account
           = link_to (t '.sync_with_gitlab'), sync_with_gitlab_user_projects_url(current_user),

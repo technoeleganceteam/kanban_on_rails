@@ -9,3 +9,39 @@ p = link_to "#{ t '.projects' }: #{ @projects_count }", user_projects_url(@user)
 p = link_to "#{ t '.boards' }: #{ @boards_count }", user_boards_url(@user)
 
 p = link_to "#{ t '.issues' }: #{ @issues_count }", user_issues_url(@user)
+
+h3
+  = t '.you_can_sync_projects_and_issues_from'
+  br
+  small = t '.if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks'
+
+p
+  b = t 'github'
+  | &nbsp;
+  
+  - if current_user.has_github_account
+    = render 'shared/sync_with_provider_button', :provider => 'github'
+  - else
+    = link_to (t '.turn_on_github'), omniauth_authorize_path(User, 'github', :locale => nil),
+      :class => 'btn btn-success btn-xs'
+    
+p
+  b = t 'gitlab'
+  | &nbsp;
+  
+  - if current_user.has_gitlab_account
+    = render 'shared/sync_with_provider_button', :provider => 'gitlab'
+  - else
+    = link_to (t '.turn_on_gitlab'), omniauth_authorize_path(User, 'gitlab', :locale => nil),
+      :class => 'btn btn-success btn-xs'
+    
+p
+  b = t 'bitbucket'
+  | &nbsp;
+  
+  - if current_user.has_bitbucket_account
+    = render 'shared/sync_with_provider_button', :provider => 'bitbucket'
+  - else
+    = link_to (t '.turn_on_bitbucket'), omniauth_authorize_path(User, 'bitbucket', :locale => nil),
+      :class => 'btn btn-success btn-xs'
+    

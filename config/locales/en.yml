@@ -128,6 +128,13 @@ en: &all
       technoelegance: Technoelegance Ltd.
     pagination_link:
       next_page: Next page
+    sync_with_provider_button:
+      sync_with_github: Sync with Github
+      sync_with_gitlab: Sync with Gitlab
+      sync_with_bitbucket: Sync with Bitbucket
+      stop_sync_with_bitbucket: Stop sync with Bitbucket
+      stop_sync_with_github: Stop sync with Github
+      stop_sync_with_gitlab: Stop sync with Gitlab
   users:
     new:
       invite_user: Invite user
@@ -166,6 +173,14 @@ en: &all
       projects: Projects
       boards: Boards
       issues: Issues
+      you_can_sync_projects_and_issues_from: You can turn on different services and sync your projects and issues
+      turn_on_github: Turn on Github
+      turn_on_gitlab: Turn on Gitlab
+      turn_on_bitbucket: Turn on Bitbucket
+      sync_with_bitbucket: Sync with Bitbucket
+      sync_with_github: Sync with Github
+      syncing_with_gitlab: Sync with Gitlab
+      if_you_have_already_synced_your_project_it_will_be_synced_always_with_webhooks: If you have already synced your project, it will be synced always with webhooks
   projects:
     index:
       projects: Projects

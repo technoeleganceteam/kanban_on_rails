@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
 
       "sync_#{ provider }_worker".classify.constantize.perform_async(@user.id)
 
-      redirect_to user_projects_url(@user), :turbolinks => true
+      render :start_sync_with_provider
     end
 
     define_method "stop_sync_with_#{ provider }" do
