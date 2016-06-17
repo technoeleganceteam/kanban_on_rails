@@ -16,7 +16,7 @@ module Rack
       req.ip if Rails.env.production?
     end
 
-    throttle('confirmations/ip', :limit => 5, :period => 300.minutes) do |req|
+    throttle('confirmations/ip', :limit => 5, :period => 300.seconds) do |req|
       req.ip if req.path == '/users/confirmation' && req.post? && Rails.env.production?
     end
 
