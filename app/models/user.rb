@@ -179,8 +179,8 @@ class User < ActiveRecord::Base
         client.list_issues(project.github_full_name).each do |github_issue|
           Issue.sync_with_github_issue(github_issue, project)
         end
-      rescue Octokit::NotFound
-        Rails.logger.info "Octokit::NotFound on syncing issues with project id #{ project.id }"
+      rescue Octokit::NotFound, Octokit::Unauthorized
+        Rails.logger.info "Octokit error while syncing issues from project id #{ project.id }"
       end
     end
   end
