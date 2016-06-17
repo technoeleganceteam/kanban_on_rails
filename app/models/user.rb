@@ -189,8 +189,8 @@ class User < ActiveRecord::Base
     projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
       begin
         project.create_github_hook(client)
-      rescue Octokit::NotFound
-        Rails.logger.info "Octokit::NotFound on creating hook with project id #{ project.id }"
+      rescue Octokit::NotFound, Octokit::Unauthorized
+        Rails.logger.info "Octokit error on creating hook with project id #{ project.id }"
       end
     end
   end
