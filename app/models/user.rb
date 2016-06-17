@@ -54,6 +54,10 @@ class User < ActiveRecord::Base
 
   def bitbucket_client_repos(client)
     client.repos.list
+  rescue BitBucket::Error::Unauthorized
+    Rails.logger.info "BitBucket::Error::Unauthorized on getting bitbucket repos from user id #{ id }"
+
+    []
   end
 
   %w(gitlab github bitbucket).each do |provider|
