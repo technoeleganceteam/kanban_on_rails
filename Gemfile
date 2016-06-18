@@ -60,6 +60,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development do
+  gem 'puma'
   gem 'quiet_assets'
   gem 'capistrano'
   gem 'capistrano-rails'

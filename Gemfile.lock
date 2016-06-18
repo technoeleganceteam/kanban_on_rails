@@ -310,6 +310,7 @@ GEM
     pry-remote (0.1.8)
       pry (~> 0.9)
       slop (~> 3.0)
+    puma (3.4.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -562,6 +563,7 @@ DEPENDENCIES
   postmark-rails
   pry
   pry-remote
+  puma
   quiet_assets
   rack-attack
   rails (= 4.2.6)
