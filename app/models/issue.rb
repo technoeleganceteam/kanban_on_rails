@@ -27,9 +27,7 @@ class Issue < ActiveRecord::Base
 
   validates :state, :presence => true, :inclusion => %w(closed open)
 
-  before_create :assign_issue_to_section_connections
-
-  before_update :check_section_connections
+  after_save :assign_issue_to_section_connections
 
   def assign_issue_to_section_connections
     Section.where(:board_id => project.boards).where('ARRAY[?]::varchar[] && tags', tags).find_each do |section|
@@ -202,14 +200,8 @@ class Issue < ActiveRecord::Base
   private
 
   def build_section_connection(section)
-    column = Column.where('ARRAY[?]::varchar[] && tags', tags).find_by(:board_id => project.boards)
+    column = Column.where('ARRAY[?]::varchar[] && tags', tags).find_by(:board_id => section.board)
 
-    column.build_issue_to_section_connection(section) if column.present?
-  end
-
-  def check_section_connections
-    return unless tags_changed?
-
-    assign_issue_to_section_connections
+    column.build_issue_to_section_connection(section, self) if column.present?
   end
 end

@@ -10,6 +10,8 @@ class Column < ActiveRecord::Base
 
   has_many :issue_to_section_connections, :dependent => :destroy
 
+  after_save :update_issues
+
   def max_order(section)
     section.issue_to_section_connections.where(:column_id => id).order('issue_order DESC').
       first.try(:issue_order).to_i
@@ -20,12 +22,25 @@ class Column < ActiveRecord::Base
       order('issue_order ASC').includes(:issue => :project)
   end
 
-  def build_issue_to_section_connection(section)
-    connection = issue_to_section_connections.where(:board_id => board_id, :section_id => section.id).
-      first_or_initialize
+  def build_issue_to_section_connection(section, issue)
+    connection = IssueToSectionConnection.where(
+      :board_id => board_id, :section_id => section.id, :issue_id => issue.id
+    ).first_or_initialize
 
     connection.issue_order ||= max_order(section) + 1
 
-    connection.column_id = id
+    connection.assign_attributes(:column_id => id)
+
+    connection.save
+  end
+
+  private
+
+  def update_issues
+    if new_record? || tags_changed?
+      issue_to_section_connections.destroy_all
+
+      board.projects.map(&:issues).flatten.map(&:save)
+    end
   end
 end

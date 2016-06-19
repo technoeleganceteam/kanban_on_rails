@@ -49,12 +49,16 @@ FactoryGirl.define do
 
   factory :section do
     name 'Some name'
+
+    board
   end
 
   factory :column do
     name 'Some name'
 
     tags ['tag']
+
+    board
   end
 
   factory :issue_to_section_connection do

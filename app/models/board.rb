@@ -30,7 +30,7 @@ class Board < ActiveRecord::Base
 
   validate :column_tags_overlapping
 
-  after_save :update_issues
+  after_create :update_issues
 
   def issue_to_section_connections_from_params(params = {})
     connections = issue_to_section_connections.includes(:issue => :project)
@@ -45,7 +45,7 @@ class Board < ActiveRecord::Base
   private
 
   def update_issues
-    issues.map(&:save)
+    projects.map(&:issues).flatten.map(&:save)
   end
 
   def column_tags_overlapping

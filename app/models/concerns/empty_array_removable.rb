@@ -2,7 +2,7 @@ module EmptyArrayRemovable
   extend ActiveSupport::Concern
 
   included do
-    after_initialize :remove_empty_arrays
+    before_validation :remove_empty_arrays
   end
 
   private
