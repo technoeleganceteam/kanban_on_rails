@@ -1,4 +1,4 @@
-$('#issue_form').replaceWith('<%= j render 'form', :issue => @issue, :project => @project, :remote => true %>');
+$('#issue_modal #issue_form').replaceWith('<%= j render 'form', :issue => @issue, :project => @project, :remote => true %>');
 
 if (($('#issue_modal').data('bs.modal') || { isShown: false }).isShown == false) {
   $('#issue_modal').modal('show');
