@@ -170,7 +170,11 @@ class Project < ActiveRecord::Base
   end
 
   def check_gitlab_owner(repo, client)
-    repo.owner.name == client.user.name ? 'owner' : 'member'
+    if repo.owner.present?
+      repo.owner.name == client.user.name ? 'owner' : 'member'
+    else
+      'member'
+    end
   end
 
   def check_github_owner(repo, _client)
