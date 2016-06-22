@@ -14,13 +14,6 @@ ul.list-group
         = render 'shared/sync_with_provider_button', :provider => 'bitbucket'
         | &nbsp;
 
-      - else
-        - if current_user.has_gitlab_account
-          = link_to (t '.sync_with_gitlab'), sync_with_gitlab_user_projects_url(current_user),
-            :class => 'btn btn-success btn-xs', :remote => true
-
-          | &nbsp;
-
       = link_to new_user_project_url(current_user), :remote => true, :class => 'btn btn-success btn-xs' do
         = t '.new'
   = render @projects
