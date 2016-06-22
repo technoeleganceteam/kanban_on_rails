@@ -2,12 +2,16 @@
 
 div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
   id = "issue_#{ issue.id }"]
-  h5.word-wrap 
+  h6.word-wrap 
+    - Settings.issues_providers.each do |provider|
+      - if issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }").present?
+        span.blue = issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }")
+        | &nbsp;
+    small = issue.project.name
+    
+  h5.word-wrap
     = issue.title
 
-    - if issue.github_issue_number.present?
-      | &nbsp;
-      small.blue = issue.github_issue_number
     small.pull-right
       = link_to edit_project_issue_url(issue.project, issue), :remote => true do
         i.fa.fa-pencil.fa-lg

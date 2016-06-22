@@ -1,4 +1,4 @@
-- if provider.in?(%w(github gitlab bitbucket))
+- if provider.in?(Settings.issues_providers)
   = link_to (t ".sync_with_#{ provider }"), send("sync_with_#{ provider }_user_projects_url", current_user),
     :remote => true, :id => "start_sync_with_#{ provider }",
     :class => "btn btn-success btn-xs #{ 'hidden' unless show_start_sync_button(current_user, provider) }"

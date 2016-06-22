@@ -3,6 +3,28 @@ li.list-group-item
 
   | &nbsp;
 
+  - if issue.github_issue_html_url.present?
+    = link_to issue.github_issue_html_url do
+      i.fa.fa-github
+      | &nbsp;
+  - if issue.bitbucket_issue_id.present?
+    | &nbsp;
+    = link_to "#{ Settings.bitbucket_base_url }/" +\
+      "#{ issue.project.bitbucket_full_name }/issues/#{ issue.bitbucket_issue_id }" do
+      i.fa.fa-bitbucket
+      | &nbsp;
+  - if issue.gitlab_issue_id.present?
+    | &nbsp;
+    = link_to "#{ Settings.gitlab_base_url }/" +\
+      "#{ issue.project.gitlab_full_name }/issues/#{ issue.gitlab_issue_id }" do
+      i.fa.fa-gitlab
+      | &nbsp;
+  - Settings.issues_providers.each do |provider|
+    - if issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }").present?
+      small.blue = issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }")
+      | &nbsp;
+      small = issue.project.name
+
   .pull-right
     = link_to (t '.edit'), edit_project_issue_url(issue.project, issue),
       :class => 'btn btn-default btn-xs'

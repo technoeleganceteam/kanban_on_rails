@@ -25,7 +25,7 @@ class Project < ActiveRecord::Base
 
   after_save :update_issues
 
-  %w(gitlab github bitbucket).each do |provider|
+  Settings.issues_providers.each do |provider|
     define_method "fetch_and_remove_hook_from_#{ provider }" do |client|
       hook = send("fetch_hook_from_#{ provider }", client)
 

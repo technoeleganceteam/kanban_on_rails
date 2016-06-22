@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  %w(github gitlab bitbucket).each do |provider|
+  Settings.issues_providers.each do |provider|
     define_method "sync_with_#{ provider }" do
       current_user.update_attribute("sync_with_#{ provider }", true)
 

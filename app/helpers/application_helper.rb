@@ -24,13 +24,13 @@ module ApplicationHelper
   end
 
   def show_start_sync_button(user, provider)
-    return false unless provider.in?(%w(gitlab github bitbucket))
+    return false unless provider.in?(Settings.issues_providers)
 
     user.send("has_#{ provider }_account") && user.send("sync_with_#{ provider }") != true
   end
 
   def show_stop_sync_button(user, provider)
-    return false unless provider.in?(%w(gitlab github bitbucket))
+    return false unless provider.in?(Settings.issues_providers)
 
     user.send("has_#{ provider }_account") && user.send("sync_with_#{ provider }") == true
   end

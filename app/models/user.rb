@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
     []
   end
 
-  %w(gitlab github bitbucket).each do |provider|
+  Settings.issues_providers.each do |provider|
     define_method "sync_#{ provider }" do
       return unless (client = send("#{ provider }_client"))
 

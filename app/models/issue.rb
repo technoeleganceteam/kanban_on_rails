@@ -44,7 +44,7 @@ class Issue < ActiveRecord::Base
       Column.find_by(:id => target_column_id.to_i).try(:tags).to_a
   end
 
-  %w(gitlab github bitbucket).each do |provider|
+  Settings.issues_providers.each do |provider|
     define_method "sync_with_#{ provider }" do |user_id|
       user = User.find_by(:id => user_id)
 

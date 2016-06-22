@@ -56,7 +56,7 @@ class Authentication < ActiveRecord::Base
   end
 
   def update_user_meta
-    user.update_attributes(%w(gitlab github bitbucket).map do |provider|
+    user.update_attributes(Settings.issues_providers.map do |provider|
       ["has_#{ provider }_account", !user.authentications.where(:provider => provider).empty?]
     end.to_h)
   end
