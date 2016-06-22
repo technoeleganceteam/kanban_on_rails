@@ -26,7 +26,7 @@
     | :
   .columns
     .form-group.sortable
-      = form.fields_for :columns, board.columns do |column_form|
+      = form.fields_for :columns, board.columns.order('column_order ASC') do |column_form|
         = render 'boards/column_fields', :f => column_form
 
       = link_to_add_association (t '.add'), form, :columns, :partial => 'boards/column_fields',
@@ -38,7 +38,7 @@
     | :
   .sections
     .form-group.sortable
-      = form.fields_for :sections do |section_form|
+      = form.fields_for :sections, board.sections.order('section_order ASC') do |section_form|
         = render 'boards/section_fields', :f => section_form
 
       = link_to_add_association (t '.add'), form, :sections, :partial => 'boards/section_fields',

@@ -87,11 +87,11 @@ window.init_sortable = ->
 set_sortable_positions = ->
   $('.sections').each ->
     $(@).find('.nested-fields').each (i) ->
-      $(@).find('.order').last().find('input').val(i + 1)
+      $(@).find('.order').val(i + 1)
 
   $('.columns').each ->
     $(@).find('.nested-fields').each (i) ->
-      $(@).find('.order').last().find('input').val(i + 1)
+      $(@).find('.order').val(i + 1)
 
 window.init_infinite_scroll = (ids) ->
   window.loading = false
