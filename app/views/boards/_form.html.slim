@@ -26,12 +26,8 @@
     | :
   .columns
     .form-group.sortable
-      - if board.new_record?
-        = form.fields_for :columns, board.columns.build do |column_form|
-          = render 'boards/column_fields', :f => column_form
-      - else
-        = form.fields_for :columns, board.columns do |column_form|
-          = render 'boards/column_fields', :f => column_form
+      = form.fields_for :columns, board.columns do |column_form|
+        = render 'boards/column_fields', :f => column_form
 
       = link_to_add_association (t '.add'), form, :columns, :partial => 'boards/column_fields',
         :class => 'btn btn-success'
@@ -42,12 +38,8 @@
     | :
   .sections
     .form-group.sortable
-      - if board.new_record?
-        = form.fields_for :sections, board.sections.build do |section_form|
-          = render 'boards/section_fields', :f => section_form
-      - else
-        = form.fields_for :sections do |section_form|
-          = render 'boards/section_fields', :f => section_form
+      = form.fields_for :sections do |section_form|
+        = render 'boards/section_fields', :f => section_form
 
       = link_to_add_association (t '.add'), form, :sections, :partial => 'boards/section_fields',
         :class => 'btn btn-success'

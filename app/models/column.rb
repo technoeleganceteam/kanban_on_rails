@@ -8,6 +8,8 @@ class Column < ActiveRecord::Base
 
   validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true
 
+  validate :empty_tags
+
   has_many :issue_to_section_connections, :dependent => :destroy
 
   after_save :update_issues
@@ -37,10 +39,16 @@ class Column < ActiveRecord::Base
   private
 
   def update_issues
-    if new_record? || tags_changed?
+    if new_record? || tags_changed? || backlog?
       issue_to_section_connections.destroy_all
 
       board.projects.map(&:issues).flatten.map(&:save)
     end
+  end
+
+  def empty_tags
+    errors.add(:base, (I18n.t '.shared.form_errors.columns.tag')) if tags.empty? && !backlog?
+
+    errors.add(:base, (I18n.t '.shared.form_errors.columns.tag')) if !tags.empty? && backlog?
   end
 end

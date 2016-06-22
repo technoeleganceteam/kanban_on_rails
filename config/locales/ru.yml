@@ -4,6 +4,8 @@ ru:
   bitbucket: BitBucket
   updated: обновлено
   1_we_have_just_launched_our_service_title: Мы только что запустили наш сервис
+  include_all: Все
+  backlog: Бэклог
   shared:
     navbar:
       sign_in: Вход
@@ -240,6 +242,7 @@ ru:
       column_tags: Теги столбца
       column_order: Порядок
       max_issues_count: Максимальное кол-во задач
+      backlog: Бэклог
     show:
       next_page: Следующая страница
     index:

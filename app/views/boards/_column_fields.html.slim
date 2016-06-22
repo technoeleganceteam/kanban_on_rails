@@ -7,21 +7,27 @@
         = f.text_field :name, :class => 'form-control',
           :placeholder => (t '.column_name'), :required => true
 
-    .col-md-2
+    .col-md-3
       = f.select :tags,
         options_for_select(f.object.tags.tap { |t| t.delete('') },
         :selected => f.object.tags.tap { |t| t.delete('') }), { },
-        :multiple => true, :class => 'form-control column_tags', :required => true
+        :multiple => true, :class => 'form-control column_tags'
 
     .col-md-2
       = f.number_field :max_issues_count, :min => 1, :class => 'form-control',
         :placeholder => (t '.max_issues_count')
 
-    .col-md-2.order
-      = f.number_field :column_order, :min => 1, :class => 'form-control',
+    .col-md-1
+      .checkbox
+        label
+          = f.check_box :backlog
+
+          = t '.backlog'
+
+      = f.number_field :column_order, :min => 1, :class => 'form-control hidden',
         :placeholder => (t '.column_order')
 
-    .col-md-2
+    .col-md-3
       = link_to_remove_association (t '.remove_column'), f, :class => 'btn btn-danger'
 
   br

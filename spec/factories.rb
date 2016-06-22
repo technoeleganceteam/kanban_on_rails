@@ -56,6 +56,8 @@ FactoryGirl.define do
   factory :column do
     name 'Some name'
 
+    backlog false
+
     tags ['tag']
 
     board

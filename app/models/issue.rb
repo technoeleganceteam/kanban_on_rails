@@ -202,6 +202,10 @@ class Issue < ActiveRecord::Base
   private
 
   def build_section_connection(section)
+    section.board.columns.where(:backlog => true).find_each do |backlog_column|
+      backlog_column.build_issue_to_section_connection(section, self)
+    end
+
     column = Column.where('ARRAY[?]::varchar[] && tags', tags).find_by(:board_id => section.board)
 
     column.build_issue_to_section_connection(section, self) if column.present?

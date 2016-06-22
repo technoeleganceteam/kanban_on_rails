@@ -76,6 +76,8 @@ en: &all
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: updated
+  include_all: All
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: We have just launched our service
   shared:
     navbar:
@@ -314,6 +316,7 @@ en: &all
       max_issues_count: Max issues count in column
       column_tags: Column tags
       column_order: Order
+      backlog: Backlog
     show:
       next_page: Next page
     index:

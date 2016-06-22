@@ -128,6 +128,20 @@ RSpec.describe Issue, :type => :model do
   end
 
   describe '#save' do
-    it { expect(issue.tap { |i| i.tags = ['new'] }.save).to eq true }
+    context 'without any backlog columns' do
+      it { expect(issue.tap { |i| i.tags = ['new'] }.save).to eq true }
+    end
+
+    context 'with backlog column' do
+      before do
+        board = create :board, :projects => [issue.project]
+
+        create :section, :include_all => true, :board => board
+
+        create :column, :backlog => true, :board => board, :tags => []
+      end
+
+      it { expect(issue.tap { |i| i.tags = ['new'] }.save).to eq true }
+    end
   end
 end

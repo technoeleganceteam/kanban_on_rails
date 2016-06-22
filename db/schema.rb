@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617162842) do
+ActiveRecord::Schema.define(version: 20160622125505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,13 +44,14 @@ ActiveRecord::Schema.define(version: 20160617162842) do
   create_table "columns", force: :cascade do |t|
     t.integer  "max_issues_count"
     t.integer  "column_order"
-    t.string   "tags",             default: [],              array: true
-    t.string   "name",                          null: false
+    t.string   "tags",             default: [],                 array: true
+    t.string   "name",                             null: false
     t.integer  "project_id"
     t.jsonb    "meta",             default: {}
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "board_id"
+    t.boolean  "backlog",          default: false, null: false
   end
 
   add_index "columns", ["board_id"], name: "index_columns_on_board_id", using: :btree

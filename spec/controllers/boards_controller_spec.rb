@@ -51,6 +51,12 @@ RSpec.describe BoardsController, :type => :controller do
   context 'Confirmed user' do
     before { sign_in user; user.confirm }
 
+    describe 'GET new as JS' do
+      before { xhr :get, :new, :user_id => user, :format => :js }
+
+      it { should render_template :new }
+    end
+
     describe 'GET show' do
       before { get :show, :id => user_to_board_connection.board }
 

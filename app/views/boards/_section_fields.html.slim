@@ -1,13 +1,13 @@
 .nested-fields
   .row
-    .col-md-3
+    .col-md-4
       .input-group
         .input-group-addon
           i.fa.fa-arrows
         = f.text_field :name, :class => 'form-control',
           :placeholder => (t '.section_name'), :required => true
 
-    .col-md-2
+    .col-md-3
       = f.select :tags,
         options_for_select(f.object.tags.tap { |t| t.delete('') },
         :selected => f.object.tags.tap { |t| t.delete('') }), { },
@@ -18,12 +18,10 @@
         label
           = f.check_box :include_all
 
-          | &nbsp;
           = t '.or_include_all'
 
-    .col-md-2.order
-      = f.number_field :section_order, :min => 1, :class => 'form-control',
-        :placeholder => (t '.section_order')
+    = f.number_field :section_order, :min => 1, :class => 'form-control hidden',
+      :placeholder => (t '.section_order')
 
     .col-md-3
       = link_to_remove_association (t '.remove_section'), f, :class => 'btn btn-danger'

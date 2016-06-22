@@ -10,6 +10,11 @@ class BoardsController < ApplicationController
   before_action :handle_issues_attributes, :only => [:update]
 
   def new
+    @board = Board.new
+
+    @board.columns << Column.new(:name => I18n.t('backlog'), :backlog => true, :tags => [])
+
+    @board.sections << Section.new(:name => I18n.t('include_all'), :include_all => true, :tags => [])
   end
 
   def index
@@ -53,7 +58,8 @@ class BoardsController < ApplicationController
   def board_params
     params.require(:board).permit(:name, :column_width, :column_height, :project_ids => [],
       :issue_to_section_connections_attributes => [:id, :issue_order, :column_id],
-      :columns_attributes => [:name, :max_issues_count, :tags, :id, :_destroy, :column_order, :tags => []],
+      :columns_attributes => [:name, :max_issues_count, :tags, :id,
+        :_destroy, :column_order, :backlog, :tags => []],
       :sections_attributes => [:name, :id, :tags, :_destroy, :section_order, :include_all, :tags => []],
       :issues_attributes => [:id, :tags => []])
   end
