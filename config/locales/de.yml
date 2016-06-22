@@ -4,6 +4,8 @@ de:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: aktualisiert
+  include_all: Alle
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Wir haben unseren Service ins Leben gerufen
   shared:
     navbar:
@@ -44,7 +46,7 @@ de:
       boards: Boards
     right_sidebar:
       news: Nachrichten
-      all: Alle
+      all: All
       read_more: Lesen Sie mehr
     javascript_global_variables:
       select_column_tags: Wählen Sie Spalte Tags
@@ -67,7 +69,7 @@ de:
       requests: Anfragen
       feedbacks: Bewertungen
     user_requests_navigation:
-      all: All
+      all: Alle
       my_requests: Meine Wünsche
   users:
     new:
@@ -123,9 +125,9 @@ de:
       sync_with_github: Sync mit Github
       sync_with_gitlab: Sync mit Gitlab
       sync_with_bitbucket: Sync mit Bitbucket
-      stop_sync_with_bitbucket: Stop-Synchronisierung mit Bitbucket
+      stop_sync_with_bitbucket: Stop-Synchronisation mit Bitbucket
       stop_sync_with_github: Stop-Synchronisierung mit Github
-      stop_sync_with_gitlab: Stop-Synchronisation mit Gitlab
+      stop_sync_with_gitlab: Stop-Synchronisierung mit Gitlab
     form:
       name: Namen
       enter_project_name: Geben Sie Projektnamen
@@ -134,7 +136,7 @@ de:
       sections: Abschnitte
       column_name: Row Namen
       section_name: Abschnittsname
-      add: hinzufügen
+      add: Add
       column_width: Spaltenbreite
       column_height: Säulenhöhe
       github_repository_id: Github-Repository-ID
@@ -148,7 +150,7 @@ de:
       project_issues: Projektfragen
       project_users: Projektnutzer
     section_fields:
-      section_name: Abschnittsname
+      section_name: Sektionsname
       section_tags: Section-Tags
       section_order: bestellen
       or_include_all: Oder sind alle?
@@ -204,8 +206,8 @@ de:
   news:
     1_we_have_just_launched_our_service:
       we_have_just_launched_our_service_title: wir unseren Service nur ins Leben gerufen!
-      we_have_just_launched_our_service_text: Heute werden wir unseren Service zu
-        starten, so kann jeder
+      we_have_just_launched_our_service_text: Heute haben wir unseren Service zu starten,
+        so kann jeder
       sign_up: anmelden
       and_use_it: und verwenden.
       with_love: Mit Liebe,
@@ -241,6 +243,7 @@ de:
       max_issues_count: Max Ausgaben zählen in Spalte
       column_tags: Column-Tags
       column_order: bestellen
+      backlog: Backlog
     show:
       next_page: Nächste Seite
     index:
@@ -324,8 +327,8 @@ de:
     unprocessable_entity:
       unprocessable_entity: Unprocessable Entity
       request_result: Anfrage Ergebnis
-      unprocessable_entity_description: Die Anforderung war gut ausgebildet, konnte
-        aber aufgrund semantische Fehler zu beachten
+      unprocessable_entity_description: Die Anforderung war wohlgeformt, konnte aber
+        aufgrund semantische Fehler zu beachten
       go_to_root: root gehen
     not_found:
       not_found: nicht gefunden
@@ -423,7 +426,7 @@ de:
         password_confirmation: Passwort Bestätigung
         register: Registrieren
     sessions:
-      signed_in: erfolgreich signiert.
+      signed_in: erfolgreich angemeldet.
       signed_out: erfolgreich abgemeldet.
       new:
         sign_in: Anmelden

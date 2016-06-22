@@ -4,6 +4,8 @@ da:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: opdateret
+  include_all: Alle
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Vi har netop lanceret vores service
   shared:
     navbar:
@@ -246,6 +248,7 @@ da:
       max_issues_count: Maks spørgsmål tæller i kolonne
       column_tags: Kolonne tags
       column_order: Order
+      backlog: Backlog
     show:
       next_page: Næste side
     index:

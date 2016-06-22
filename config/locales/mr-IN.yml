@@ -4,13 +4,14 @@ mr-IN:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: सुधारित
+  include_all: सर्व
+  backlog: अनुशेष
   shared:
     navbar:
       sign_in: साइन इन करा
       sign_up: साइन अप करा
       projects: प्रकल्प
       issues: मुद्दे
-      syncing_with_gitlab: Gitlab समक्रमित ...
       new_issue: नवीन समस्या
       boards: बोर्ड
     languages_select_modal:
@@ -89,12 +90,12 @@ mr-IN:
       your_profile_was_successfully_updated: यशस्वीरित्या अद्यतनित केली गेली
     dashboard:
       hello: हॅलो
+      here_some_of_your_statistics: येथे आपल्या आकडेवारी काही
       projects: प्रकल्प
       boards: बोर्ड
       issues: मुद्दे
       turn_on_github: Github चालू
       turn_on_gitlab: Gitlab चालू
-      turn_on_bitbucket: Bitbucket चालू
       sync_with_bitbucket: Bitbucket समक्रमित
       sync_with_github: Github समक्रमित
       syncing_with_gitlab: Gitlab समक्रमित
@@ -128,6 +129,7 @@ mr-IN:
       edit: संपादित करा
       destroy: हटवा
       project_issues: प्रकल्प समस्या
+      project_users: प्रकल्प वापरकर्ते
     section_fields:
       section_name: विभाग नाव
       remove_section: काढा विभाग
@@ -220,6 +222,7 @@ mr-IN:
       max_issues_count: मॅक्स समस्या स्तम्भ मध्ये गणना
       column_tags: स्तंभ टॅग
       column_order: ऑर्डर
+      backlog: अनुशेष
     show:
       next_page: पुढील पृष्ठ
     index:

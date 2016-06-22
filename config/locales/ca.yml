@@ -4,6 +4,8 @@ ca:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: s'actualitzen
+  include_all: Tot
+  backlog: Cartera
   1_we_have_just_launched_our_service_title: Acabem de llançar el nostre servei
   shared:
     navbar:

@@ -4,6 +4,8 @@ eu:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: eguneratua
+  include_all: guztiak
+  backlog: atzerapenen
   1_we_have_just_launched_our_service_title: Oraintxe gure zerbitzua martxan jarri
     dugu
   shared:
@@ -247,6 +249,7 @@ eu:
       max_issues_count: Max gai zutabean zenbatu
       column_tags: Zutabe tags
       column_order: Agindua
+      backlog: atzerapenen
     show:
       next_page: Hurrengo orria
     index:

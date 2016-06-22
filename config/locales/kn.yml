@@ -4,6 +4,8 @@ kn:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ
+  include_all: ಎಲ್ಲಾ
+  backlog: ಬಾಕಿ
   shared:
     navbar:
       sign_in: ಸೈನ್ ಇನ್
@@ -28,7 +30,6 @@ kn:
       name: ಹೆಸರು
       base: ಬೇಸ್
       title: ಶೀರ್ಷಿಕೆ
-      user_to_project_connection: ಬಳಕೆದಾರ ಸಂಪರ್ಕ ಅಭಿವ್ಯಕ್ತಗೊಳಿಸಲು
       user_to_board_connection: ಬಳಕೆದಾರ ಸಂಪರ್ಕ ಹತ್ತಲು
       columns:
         tag: ಟ್ಯಾಗ್ ಅತಿಕ್ರಮಿಸುವ
@@ -218,6 +219,7 @@ kn:
       max_issues_count: ಮ್ಯಾಕ್ಸ್ ಸಮಸ್ಯೆಗಳು ಅಂಕಣದಲ್ಲಿ ಎಣಿಕೆ
       column_tags: ಅಂಕಣ ಟ್ಯಾಗ್ಗಳು
       column_order: ಆರ್ಡರ್
+      backlog: ಬಾಕಿ
     show:
       next_page: ಮುಂದಿನ ಪುಟ
     index:

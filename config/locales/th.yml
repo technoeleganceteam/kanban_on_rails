@@ -4,6 +4,8 @@ th:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: การปรับปรุง
+  include_all: ทั้งหมด
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา
   shared:
     navbar:
@@ -224,6 +226,7 @@ th:
       max_issues_count: ปัญหาสูงสุดนับในคอลัมน์
       column_tags: แท็กคอลัมน์
       column_order: สั่งซื้อ
+      backlog: Backlog
     show:
       next_page: หน้าถัดไป
     index:

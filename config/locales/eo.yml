@@ -4,6 +4,8 @@ eo:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ĝisdatigita
+  include_all: Ĉiuj
+  backlog: backlog
   1_we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon
   shared:
     navbar:
@@ -245,6 +247,7 @@ eo:
       max_issues_count: Max temoj kalkuli en kolumno
       column_tags: Kolumno etikedoj
       column_order: Ordo
+      backlog: backlog
     show:
       next_page: Sekva paĝo
     index:

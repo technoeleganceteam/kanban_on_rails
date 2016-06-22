@@ -4,6 +4,8 @@ mk:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ажурираат
+  include_all: Сите
+  backlog: заостанати
   1_we_have_just_launched_our_service_title: Ние имаме само лансиран нашиот сервис
   shared:
     navbar:
@@ -232,6 +234,7 @@ mk:
       max_issues_count: Макс прашања смета во колона
       column_tags: Колона тагови
       column_order: нарачка
+      backlog: заостанати
     show:
       next_page: Следна страница
     index:

@@ -4,6 +4,8 @@ pa:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ਅੱਪਡੇਟ ਕੀਤਾ
+  include_all: ਸਾਰੇ
+  backlog: ਬੈਕਲਾਗ
   1_we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ ਹੈ
   shared:
     navbar:
@@ -219,6 +221,7 @@ pa:
       max_issues_count: ਮੈਕਸ ਮੁੱਦੇ ਕਾਲਮ ਵਿੱਚ ਗਿਣਤੀ
       column_tags: ਕਾਲਮ ਟੈਗ
       column_order: ਆਰਡਰ
+      backlog: ਬੈਕਲਾਗ
     show:
       next_page: ਅੱਗੇ ਸਫ਼ਾ
     index:

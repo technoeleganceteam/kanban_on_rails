@@ -4,6 +4,8 @@ sv:
   bitbucket: bitbucket
   gitlab: Gitlab
   updated: uppdateras
+  include_all: All
+  backlog: Eftersläpning
   1_we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst
   shared:
     navbar:
@@ -246,6 +248,7 @@ sv:
       max_issues_count: Max frågor räknas i kolumn
       column_tags: Kolumn taggar
       column_order: Order
+      backlog: Eftersläpning
     show:
       next_page: Nästa sida
     index:

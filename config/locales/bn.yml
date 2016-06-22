@@ -4,6 +4,8 @@ bn:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: আপডেট
+  include_all: সকল
+  backlog: ব্যাকলগ
   1_we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করেছে
   shared:
     navbar:
@@ -218,6 +220,7 @@ bn:
       max_issues_count: ম্যাক্স বিষয় কলামে গণনা
       column_tags: কলাম ট্যাগ
       column_order: অর্ডার
+      backlog: ব্যাকলগ
     show:
       next_page: পরবর্তী পাতা
     index:

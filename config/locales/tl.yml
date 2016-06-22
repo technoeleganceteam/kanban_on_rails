@@ -4,6 +4,8 @@ tl:
   bitbucket: Bitbucket
   gitlab: GitLab
   updated: update
+  include_all: Lahat
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Lang namin ay may inilunsad ang aming
     serbisyo
   shared:
@@ -238,6 +240,7 @@ tl:
       max_issues_count: Max isyu bilangin sa hanay
       column_tags: Column tags
       column_order: Order
+      backlog: Backlog
     show:
       next_page: Susunod na pahina
     index:

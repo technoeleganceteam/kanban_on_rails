@@ -4,6 +4,8 @@ ar:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: تحديثها
+  include_all: جميع
+  backlog: المتراكمة
   1_we_have_just_launched_our_service_title: لقد بدأت للتو خدمتنا
   shared:
     navbar:
@@ -218,6 +220,7 @@ ar:
       remove_column: إزالة العمود
       column_tags: علامات العمود
       column_order: ترتيب
+      backlog: المتراكمة
     show:
       next_page: الصفحة التالية
     index:

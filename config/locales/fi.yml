@@ -4,6 +4,8 @@ fi:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: päivitetty
+  include_all: Kaikki
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelumme
   shared:
     navbar:
@@ -246,6 +248,7 @@ fi:
       max_issues_count: Max kysymyksiä laskea sarakkeessa
       column_tags: sarake tunnisteet
       column_order: Tilaa
+      backlog: Backlog
     show:
       next_page: Seuraava
     index:

@@ -4,6 +4,8 @@ cy:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: diweddaru
+  include_all: Mae pob
+  backlog: Ôl-groniad
   1_we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth
   shared:
     navbar:
@@ -221,6 +223,7 @@ cy:
       max_issues_count: Materion Max cyfrif yng ngholofn
       column_tags: tagiau Colofn
       column_order: Gorchymyn
+      backlog: Ôl-groniad
     show:
       next_page: Tudalen nesaf
     index:

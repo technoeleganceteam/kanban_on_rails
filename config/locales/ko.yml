@@ -4,6 +4,8 @@ ko:
   bitbucket: 의 Bitbucket
   gitlab: Gitlab
   updated: 업데이트
+  include_all: 모든
+  backlog: 백 로그
   shared:
     navbar:
       sign_in: 로그인
@@ -26,13 +28,12 @@ ko:
       name: 이름
       base: 자료
       title: 제목
-      columns:
-        tag: 태그 중첩
     edit_project_modal:
       edit_project: 프로젝트 편집
     left_sidebar:
       boards: 보드
     right_sidebar:
+      news: 뉴스
       all: 모든
     javascript_global_variables:
       select_column_tags: 선택 항목 태그
@@ -43,7 +44,10 @@ ko:
     pagination_link:
       next_page: 다음 페이지
     header:
+      requests: 요청
       feedbacks: 되먹임
+    user_requests_navigation:
+      all: 모든
   users:
     form:
       name: 이름
@@ -106,14 +110,14 @@ ko:
       column_name: 열 이름
       max_issues_count: 최대 문제는 열에 계산
       column_tags: 열 태그
-      column_order: 주문
     show:
-      project: 프로젝트
       project_issues: 프로젝트 문제
+      new: 새로운
   issues:
     form:
       title: 제목
       save: 저장
+      bitbucket_issue_id: 의 Bitbucket 문제 아이디
       github_issue_id: Github에서 문제 아이디
       github_issue_number: Github에서 문제 번호
       project: 프로젝트
@@ -138,6 +142,7 @@ ko:
       turned_on: 는 점등
   news:
     1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: 오늘 우리는 그래서 모두가 할 수있는 우리의 서비스를 시작
       sign_up: 가입
       and_use_it: 그것을 사용합니다.
       technoelegance_team: Technoelegance 팀
@@ -156,6 +161,7 @@ ko:
       save: 저장
       projects: 프로젝트
     section_fields:
+      section_name: 제 이름
       remove_section: 제거 섹션
       section_tags: 섹션 태그
       section_order: 주문
@@ -164,6 +170,8 @@ ko:
       column_name: 열 이름
       max_issues_count: 최대 문제는 열에 계산
       column_tags: 열 태그
+      column_order: 주문
+      backlog: 백 로그
     show:
       next_page: 다음 페이지
     index:
@@ -210,11 +218,11 @@ ko:
   errors:
     messages:
       confirmation_period_expired: "% {시간}에서 확인 될 필요가 새를 요청하시기 바랍니다"
-      not_locked: 잠겨되지 않았습니다
+      not_found: 찾을 수 없습니다
       not_saved:
         one: '1 오류가 저장되지이 % {자원을} 금지 :'
-        other: "% 저장되는이 % {자원을} 금지 오류 {계산}"
     bad_request:
+      bad_request: 잘못된 요청
       request_result: 요청 결과
       go_to_root: 루트로 이동
     unprocessable_entity:
@@ -226,6 +234,7 @@ ko:
       request_result: 요청 결과
       go_to_root: 루트로 이동
     forbidden:
+      forbidden: 는 금지
       request_result: 요청 결과
       go_to_root: 루트로 이동
     internal_server_error:
@@ -241,6 +250,7 @@ ko:
         didnt_receive_confirmation_instructions: 는 확인 지시를 받았습니다하지 않았다?
         fast_login_almost_one_click: 빠른 로그인 (거의 한 번의 클릭)
     confirmations:
+      send_instructions: "."
       send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 귀하의
         계정을 확인하는 방법에 대한 지침 이메일을 받게됩니다.
       new:
@@ -265,8 +275,8 @@ ko:
         subject: 잠금 해제 지침
     omniauth_callbacks:
       failure: 는 % {종류} "% {} 이유"때문에 당신을 인증 할 수 없습니다.
-      success: 성공적 % {종류} 계정에서 인증.
     passwords:
+      send_instructions: "."
       send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 당신의
         이메일 주소로 비밀번호 복구 링크를 받게됩니다.
       new:

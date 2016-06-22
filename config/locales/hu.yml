@@ -4,6 +4,8 @@ hu:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: frissítve
+  include_all: Minden
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Épp most indult a szolgáltatás
   shared:
     navbar:
@@ -245,6 +247,7 @@ hu:
       max_issues_count: Max kérdések száma oszlopban
       column_tags: oszlop címkék
       column_order: rendelés
+      backlog: Backlog
     show:
       next_page: Következő oldal
     index:

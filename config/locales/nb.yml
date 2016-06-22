@@ -4,6 +4,8 @@ nb:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: dikemaskini
+  include_all: Semua
+  backlog: Tunggakan
   1_we_have_just_launched_our_service_title: Kami baru sahaja melancarkan perkhidmatan
     kami
   shared:
@@ -233,6 +235,7 @@ nb:
       max_issues_count: isu Max mengira dalam ruang
       column_tags: tag Ruangan
       column_order: Order
+      backlog: Tunggakan
     show:
       next_page: Laman seterusnya
     index:

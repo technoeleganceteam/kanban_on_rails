@@ -4,10 +4,12 @@ ro:
   bitbucket: BitBucket
   gitlab: Gitlab
   updated: actualizat
+  include_all: Toate
+  backlog: Restante
   1_we_have_just_launched_our_service_title: Am lansat serviciul nostru
   shared:
     navbar:
-      sign_in: Autentificare
+      sign_in: Conectați-vă
       sign_up: Inscrie-te
       projects: Proiecte
       issues: Probleme
@@ -75,12 +77,12 @@ ro:
       name: Nume
       enter_user_name: Introduceți numele de utilizator
       email: E-mail
-      enter_user_email: Introdu utilizator de e-mail
+      enter_user_email: Introduceți e-mail de utilizator
       enter_user_password: Introduceți parola de utilizator
-      password: parola
+      password: parolă
       save: Salvare
     index:
-      project: Project
+      project: Proiectul
       users: utilizatori
       new: Nou
     edit:
@@ -102,7 +104,7 @@ ro:
       hello: Bună ziua
       here_some_of_your_statistics: Aici unele dintre statisticile
       projects: Proiecte
-      boards: camerelor
+      boards: Boards
       issues: Probleme
       you_can_sync_projects_and_issues_from: Puteți activa diferite servicii și sincronizați
         proiectele și problemele dvs.
@@ -117,7 +119,7 @@ ro:
   projects:
     index:
       projects: Proiecte
-      new: noi
+      new: Noi
       sync_with_github: Sincronizare cu Github
       sync_with_gitlab: Sincronizare cu Gitlab
       sync_with_bitbucket: Sincronizare cu BitBucket
@@ -137,12 +139,11 @@ ro:
       bitbucket_full_name: BitBucket FULLNAME
       bitbucket_secret_token_for_hook: BitBucket semn secret cârlig
     project:
-      edit: Edit
+      edit: Editați
       destroy: Ștergeți
       project_issues: probleme de proiect
       project_users: utilizatori Project
     section_fields:
-      section_name: numele secțiunii
       section_tags: tag-uri Secțiunea
       section_order: Comandă
       or_include_all: Sau includ toate?
@@ -165,12 +166,12 @@ ro:
       enter_issue_title: Introduceți titlul problemă
       save: Salvare
       body: tot corpul
-      enter_issue_body: Enter corp problemă
+      enter_issue_body: Enter organism problemă
       tags: Tag-uri
       issue_order: Comandă
       bitbucket_issue_id: BitBucket problemă id
       github_issue_id: Github problemă id
-      github_issue_number: număr problemă Github
+      github_issue_number: Numărul eliberării Github
       project: Project
     index:
       issues: probleme
@@ -180,16 +181,18 @@ ro:
     issue:
       destroy: Ștergeți
       edit: Edit
+    edit:
+      edit_issue: Editare
     new:
       new_issue: problemă nouă
     issue_modal:
       issue: Problemă
   authentications:
     index:
-      enabled_services: servicii activate
+      enabled_services: Servicii Enabled
     authentication:
       turned_off: Oprit
-      turn_on: Activați
+      turn_on: Porniți
       turn_off: Dezactivați
       turned_on: Pornit
   news:
@@ -198,7 +201,7 @@ ro:
       we_have_just_launched_our_service_text: Astăzi vă vom lansa serviciul nostru,
         astfel încât oricine poate
       sign_up: Înregistrează-te
-      and_use_it: și să-l utilizați.
+      and_use_it: și să o folosească.
       with_love: Cu dragoste,
       technoelegance_team: Technoelegance Echipa
     index:
@@ -226,12 +229,13 @@ ro:
       remove_column: Eliminați coloana
       max_issues_count: probleme Max conta în coloana
       column_tags: etichete de coloană
-      column_order: Comandă
+      column_order: Ordine
+      backlog: Restante
     show:
-      next_page: Pagina următoare
+      next_page: Pagina urmatoare
     index:
       boards: camerelor
-      new: Nou
+      new: Noi
     board:
       board_users: Utilizatori
       edit: Editați
@@ -254,7 +258,7 @@ ro:
     success:
       success_feedback: Vă mulțumim! Noi am primit feedback-ul dumneavoastră.
       close: Închide
-      cancel: Anulare
+      cancel: Anulați
       more: Trimite mai
   pages:
     faq:
@@ -266,7 +270,7 @@ ro:
       kanban_on_rails_features: Puteți sincroniza proiectele și problemele cu Github
         și BitBucket, invitați utilizatori (de exemplu manageri) pentru proiectul
         dumneavoastră, implementați propriul server
-      i_have_some_requests: Am unele cereri
+      i_have_some_requests: Am niște solicitări
       you_can_write_request: Puteți scrie cerere
       here: aici
       i_have_seen_some_typo_or_wrong_translation: Am văzut unele greșeli de tipar
@@ -330,7 +334,7 @@ ro:
     shared:
       links:
         sign_in: Conectați-vă
-        sign_up: Inscrie-te
+        sign_up: Înregistrează-te
         didnt_receive_confirmation_instructions: Nu a primit instrucțiuni de confirmare?
         sign_in_with: Conectați-vă cu
         fast_login_almost_one_click: rapid de conectare (aproape un singur clic)
@@ -392,6 +396,7 @@ ro:
       edit:
         change_your_password: Schimbarea parolei
         new_password: parolă nouă
+        confirm_password: parola Confirmare
         change_password: Schimbare
     registrations:
       destroyed: Pa! Contul dvs. a fost anulat. Sperăm să vă vedem din nou în curând.
@@ -411,7 +416,7 @@ ro:
         sign_up: Inscrie-te
         name: Nume
         password: parolă
-        register: Înregistrează-te
+        register: Inscrie-te
     sessions:
       signed_in: Conectat cu succes.
       signed_out: semnat cu succes.
@@ -423,8 +428,8 @@ ro:
     unlocks:
       send_instructions: Vei primi un e-mail cu instrucțiuni despre modul în care
         pentru a debloca contul în câteva minute.
-      send_paranoid_instructions: Dacă există contul dvs., veți primi un e-mail cu
-        instrucțiuni despre cum să-l debloca în câteva minute.
+      send_paranoid_instructions: În cazul în care există contul dvs., veți primi
+        un e-mail cu instrucțiuni despre cum să-l debloca în câteva minute.
       unlocked: Contul dvs. a fost deblocat cu succes. Vă rugăm sign in pentru a continua.
   ro: ro
   ro_iso: ro

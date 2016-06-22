@@ -4,6 +4,8 @@ id:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: diperbarui
+  include_all: Semua
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan kami
   shared:
     navbar:
@@ -225,6 +227,7 @@ id:
       max_issues_count: masalah Max menghitung dalam kolom
       column_tags: tag Kolom
       column_order: Pesanan
+      backlog: Backlog
     show:
       next_page: Halaman berikutnya
     index:

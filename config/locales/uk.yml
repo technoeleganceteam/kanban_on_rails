@@ -4,6 +4,8 @@ uk:
   bitbucket: BitBucket
   gitlab: Gitlab
   updated: оновлення
+  include_all: Все
+  backlog: Відставання
   1_we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс
   shared:
     navbar:
@@ -20,7 +22,7 @@ uk:
     languages_select_modal:
       available_languages: Доступні мови
     user_edit_menu:
-      profile: Профіль
+      profile: профілю
       site_settings: Налаштування сайту
       services: Послуги
     form_errors:
@@ -46,8 +48,8 @@ uk:
       all: Все
       read_more: Детальніше
     javascript_global_variables:
-      select_column_tags: Виберіть теги стовпців
-      select_section_tags: Вибрати мітки розділу
+      select_column_tags: Виберіть мітки стовпців
+      select_section_tags: Виберіть мітки розділу
       select_issue_tags: Виберіть теги випуск
     email_signature:
       info: Інформація
@@ -67,7 +69,7 @@ uk:
       feedbacks: Відгук
     user_requests_navigation:
       all: Все
-      my_requests: Мої прохання
+      my_requests: Мої запити
   users:
     new:
       invite_user: Запросити користувача
@@ -75,7 +77,7 @@ uk:
       name: Ім'я
       enter_user_name: Введіть ім'я користувача
       email: E-mail
-      enter_user_email: Введіть електронну пошту користувача
+      enter_user_email: Вхід користувача по електронній пошті
       enter_user_password: Введіть пароль користувача
       password: Пароль
       save: Зберегти
@@ -103,7 +105,7 @@ uk:
       hello: Привіт
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
-      boards: Дошки
+      boards: плати
       issues: питання
       you_can_sync_projects_and_issues_from: Ви можете включити різні послуги і буде
         підтримувати ваші проекти і питання
@@ -158,7 +160,7 @@ uk:
       project_users: користувачів проекту
       new: Новий
     project_modal:
-      project: проекту
+      project: Проект
   issues:
     form:
       title: Назва
@@ -171,7 +173,7 @@ uk:
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
       github_issue_number: Github номер випуску
-      project: проекту
+      project: Проект
     index:
       issues: питання
       sync_with_github: Синхронізація з GitHub
@@ -181,7 +183,7 @@ uk:
       destroy: Видалити
       edit: Редагувати
     edit:
-      edit_issue: Змінити питання
+      edit_issue: Редагувати питання
     new:
       new_issue: Новий випуск
     issue_modal:
@@ -199,7 +201,7 @@ uk:
       we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс!
       we_have_just_launched_our_service_text: Сьогодні ми запускаємо наш сервіс так
         що кожен може
-      sign_up: підписатися
+      sign_up: зареєструватися
       and_use_it: і використовувати його.
       with_love: З любов'ю,
       technoelegance_team: Technoelegance Team
@@ -217,7 +219,7 @@ uk:
     form:
       name: Ім'я
       enter_board_name: Введіть ім'я дошка
-      columns: Стовпці
+      columns: Колони
       add: Додати
       sections: Розділи
       save: Зберегти
@@ -231,6 +233,7 @@ uk:
       remove_column: Видалити стовпець
       column_tags: мітки стовпців
       column_order: Замовити
+      backlog: Відставання
     show:
       next_page: Наступна сторінка
     index:
@@ -262,7 +265,7 @@ uk:
       more: Відправити ще
   pages:
     faq:
-      faq: FAQ
+      faq: Часті питання
       what_is_kanban_on_rails: Що таке KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails це сервіс, де ви можете створювати Kanban
         дошки і синхронізувати його з Github або Bitbucket
@@ -282,7 +285,7 @@ uk:
       about_kanban_on_rails: Про KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails це сервіс, де ви можете створювати
         Kanban дошки і синхронізувати його з Github або Bitbucket
-      kanban_on_rails_features: функції KanbanOnRails
+      kanban_on_rails_features: особливості KanbanOnRails
       sync_with_github_and_bitbucket: Ви можете синхронізувати ваші проекти і проблеми
         з Github і Bitbucket
       invite_users: Ви можете запрошувати користувачів (наприклад менеджерів) для
@@ -304,7 +307,7 @@ uk:
       not_found: не знайдені
       not_locked: ні заблокований
       not_saved:
-        one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
+        one: '1 помилка заборонена цей% {ресурс} з тих, що спасалися:'
         other: "{число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
     bad_request:
       bad_request: Bad Request
@@ -343,7 +346,7 @@ uk:
         sign_up: Увійдіть
         didnt_receive_confirmation_instructions: Чи не отримали підтвердження інструкції?
         sign_in_with: Вхід з використанням
-        fast_login_almost_one_click: швидко Ввійти (майже один клік)
+        fast_login_almost_one_click: Швидкий Логін (майже один клік)
     confirmations:
       confirmed: ваш аккаунт був успішно підтверджений.
       send_instructions: Ви отримаєте лист з інструкціями про те, як підтвердити свій
@@ -362,7 +365,7 @@ uk:
       locked: Ваш рахунок заблокований.
       last_attempt: У вас є ще одна спроба, перш ніж ваш обліковий запис буде заблокована.
       not_found_in_database: Невірний адреса електронної пошти або пароль.
-      timeout: Ваш сесії закінчився. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
+      timeout: Вашої сесії минув. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
       unauthenticated: Ви повинні увійти або зареєструватися, перш ніж продовжити.
       unconfirmed: Ви повинні підтвердити свій аккаунт, перш ніж продовжити.
     mailer:
@@ -381,7 +384,7 @@ uk:
         if_you_didnt_request_this_please_ignore_this_email: Якщо ви не замовляли це
           не звертайте уваги на цей лист.
       unlock_instructions:
-        subject: розблокування Інструкції
+        subject: Розблокування Інструкції
     omniauth_callbacks:
       failure: Неможливо перевірити справжність вас від {%} роду, тому що "% {причина}".
       success: успішно пройшов перевірку автентичності від {%} люб'язне увагу.
@@ -434,8 +437,8 @@ uk:
         remember_me: Запам'ятати мене
         forgot_your_password: Забули пароль?
     unlocks:
-      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
-        про те, як розблокувати свій аккаунт через кілька хвилин.
+      send_instructions: Ви отримаєте лист з інструкціями про те, як розблокувати
+        свій аккаунт через кілька хвилин.
       send_paranoid_instructions: Якщо ваш обліковий запис існує, то ви отримаєте
         лист з інструкціями про те, як розблокувати його протягом декількох хвилин.
       unlocked: Ваш аккаунт був успішно розблоковано. Будь ласка, увійдіть в систему,

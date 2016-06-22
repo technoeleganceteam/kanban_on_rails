@@ -4,6 +4,8 @@ sw:
   bitbucket: bitbucket
   gitlab: Gitlab
   updated: updated
+  include_all: All
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu
   shared:
     navbar:
@@ -238,6 +240,7 @@ sw:
       max_issues_count: Max masuala kuhesabu katika safu
       column_tags: vitambulisho Column
       column_order: Amri
+      backlog: Backlog
     show:
       next_page: ukurasa Ifwatayo
     index:
@@ -360,10 +363,10 @@ sw:
     failure:
       already_authenticated: Wewe ni tayari umeingia.
       inactive: Akaunti yako si ulioamilishwa bado.
-      invalid: email batili au password.
+      invalid: barua pepe batili au password.
       locked: Akaunti yako imefungwa.
       last_attempt: Una jaribio moja zaidi kabla ya akaunti yako itakuwa imefungwa.
-      not_found_in_database: barua pepe batili au password.
+      not_found_in_database: email batili au password.
       timeout: kikao wako muda wake. Tafadhali ingia tena kuendelea.
       unauthenticated: Unahitaji kuingia katika au ishara ya juu kabla ya kuendelea.
       unconfirmed: Una ili kuthibitisha akaunti yako kabla ya kuendelea.

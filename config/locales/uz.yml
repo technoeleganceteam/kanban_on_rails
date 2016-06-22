@@ -4,6 +4,8 @@ uz:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: yangilangan
+  include_all: Barcha
+  backlog: Buyurtma
   shared:
     navbar:
       sign_in: Sign in
@@ -189,6 +191,7 @@ uz:
       max_issues_count: Max masalalar ustuniga hisoblash
       column_tags: Ustun teglar
       column_order: tartibi
+      backlog: Buyurtma
     show:
       next_page: Keyingi sahifa
     index:

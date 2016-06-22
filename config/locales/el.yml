@@ -4,6 +4,8 @@ el:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ενημερώθηκε
+  include_all: Όλα
+  backlog: Ανεκτέλεστο
   1_we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία μας
   shared:
     navbar:
@@ -233,6 +235,7 @@ el:
       max_issues_count: Max θέματα μετράνε στη στήλη
       column_tags: ετικέτες Στήλη
       column_order: Παραγγελία
+      backlog: Ανεκτέλεστο
     show:
       next_page: Επόμενη σελίδα
     index:

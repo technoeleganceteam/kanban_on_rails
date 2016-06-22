@@ -4,6 +4,8 @@ it:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: aggiornato
+  include_all: Tutto
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Abbiamo appena lanciato il nostro servizio
   shared:
     navbar:
@@ -228,6 +230,7 @@ it:
       remove_column: Rimuovere colonna
       column_tags: tag Colonna
       column_order: Order
+      backlog: Backlog
     show:
       next_page: Pagina successiva
     index:

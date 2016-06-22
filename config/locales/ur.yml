@@ -4,6 +4,8 @@ ur:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: اپ ڈیٹ
+  include_all: تمام
+  backlog: بقایا جات
   shared:
     navbar:
       sign_up: سائن اپ کریں
@@ -99,7 +101,6 @@ ur:
         اور مسائل مطابقت پذیر کر سکتے
       turn_on_github: Github کے پر بند کر دیں
       turn_on_gitlab: Gitlab پر بند کر دیں
-      turn_on_bitbucket: Bitbucket پر بند کر دیں
       sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
       sync_with_github: Github کے ساتھ مطابقت پذیری
       syncing_with_gitlab: Gitlab ساتھ مطابقت پذیری
@@ -227,6 +228,7 @@ ur:
       max_issues_count: میکس مسائل کالم میں شمار
       column_tags: کالم ٹیگز
       column_order: آرڈر
+      backlog: بقایا جات
     show:
       next_page: اگلا صفحہ
     index:

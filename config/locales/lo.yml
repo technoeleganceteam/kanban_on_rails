@@ -4,6 +4,8 @@ lo:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ປັບປຸງ
+  include_all: ທັງຫມົດ
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ
   shared:
     navbar:
@@ -224,6 +226,7 @@ lo:
       max_issues_count: ບັນຫານ້ໍານັບໃນຖັນ
       column_tags: tags Column
       column_order: Order
+      backlog: Backlog
     show:
       next_page: ຫນ້າຖັດໄປ
     index:

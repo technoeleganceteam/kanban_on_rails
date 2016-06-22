@@ -4,6 +4,8 @@ vi:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: cập nhật
+  include_all: Tất cả
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Chúng tôi đã vừa tung ra dịch vụ của
     chúng tôi
   shared:
@@ -224,6 +226,7 @@ vi:
       max_issues_count: vấn đề Max đếm trong cột
       column_tags: thẻ Cột
       column_order: thứ tự
+      backlog: Backlog
     show:
       next_page: Trang tiếp theo
     index:

@@ -4,6 +4,8 @@ fr:
   bitbucket: Bitbucket
   gitlab: gitlab ce
   updated: mis à jour
+  include_all: Tous
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Nous venons de lancer notre service
   shared:
     navbar:
@@ -44,7 +46,7 @@ fr:
     right_sidebar:
       news: Nouvelles
       all: Tous
-      read_more: En savoir plus
+      read_more: Lire la suite
     javascript_global_variables:
       select_column_tags: Sélectionnez les balises de colonnes
       select_section_tags: Sélectionnez balises de section
@@ -147,9 +149,9 @@ fr:
       section_order: Ordre
       or_include_all: Ou comprennent tous?
     column_fields:
-      remove_column: Retirer la colonne
+      remove_column: Supprimer la colonne
       max_issues_count: questions Max comptent dans la colonne
-      column_tags: balises de colonnes
+      column_tags: étiquettes de colonne
       column_order: Ordre
     show:
       project: Project
@@ -229,13 +231,14 @@ fr:
       max_issues_count: questions Max comptent dans la colonne
       column_tags: étiquettes de colonne
       column_order: Ordre
+      backlog: Carnet de commandes
     show:
       next_page: Page suivante
     index:
       boards: Boards
       new: Nouveau
     board:
-      board_users: Utilisateurs
+      board_users: utilisateurs
       edit: Modifier
       destroy: Destroy
   user_requests:
@@ -307,6 +310,7 @@ fr:
         one: '1 erreur interdit ce% {resource} d''être sauvés:'
         other: "% {count} erreurs interdites ce% {resource} d'être sauvé:"
     bad_request:
+      bad_request: Bad Request
       request_result: Demande résultat
       bad_request_description: Le serveur ne peut pas ou ne veut pas traiter la demande
         en raison d'une erreur de client apparente
@@ -318,7 +322,7 @@ fr:
         pu être suivie en raison d'erreurs sémantiques
       go_to_root: Aller à la racine
     not_found:
-      not_found: Non trouvé
+      not_found: Non Trouvé
       request_result: Demande résultat
       not_found_description: La ressource demandée n'a pu être trouvée, mais peuvent
         être disponibles à l'avenir
@@ -326,8 +330,8 @@ fr:
     forbidden:
       forbidden: Forbidden
       request_result: Demande résultat
-      forbidden_description: La demande était une demande valide, mais le serveur
-        refuse d'y répondre
+      forbidden_description: La demande est une demande valide, mais le serveur refuse
+        d'y répondre
       go_to_root: Aller à la racine
     internal_server_error:
       internal_server_error: Internal Server Error
@@ -353,11 +357,11 @@ fr:
         votre compte en quelques minutes.
       new:
         send_mail_for_confirm_your_email: Envoyez un mail pour confirmer votre e-mail
-        submit: Soumettre
+        submit: Envoyer
     failure:
       already_authenticated: Vous êtes déjà connecté.
       inactive: Votre compte est pas encore activé.
-      invalid: e-mail ou mot de passe invalide.
+      invalid: email ou mot de passe invalide.
       locked: Votre compte est verrouillé.
       last_attempt: Vous avez une tentative plus avant que votre compte sera verrouillé.
       not_found_in_database: email ou mot de passe invalide.
@@ -378,7 +382,7 @@ fr:
         someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Quelqu'un
           a demande un lien pour changer votre mot de passe. Vous pouvez le faire
           via le lien ci-dessous.
-        change_my_password: Modifier mon mot de passe
+        change_my_password: Changer mon mot de passe
         if_you_didnt_request_this_please_ignore_this_email: Si vous n'avez pas demandé
           cette s'il vous plaît ignorer cet e-mail.
       unlock_instructions:
@@ -408,8 +412,8 @@ fr:
       destroyed: Bye! Votre compte a été annulé avec succès. Nous espérons te revoir
         bientôt.
       signed_up: Bienvenue! Vous avez signé avec succès.
-      signed_up_but_inactive: Vous avez signé avec succès. Cependant, nous ne pouvions
-        pas vous connecter parce que votre compte n'a pas encore été activé.
+      signed_up_but_inactive: que vous avez signé avec succès. Cependant, nous ne
+        pouvions pas vous connecter parce que votre compte n'a pas encore été activé.
       signed_up_but_locked: Vous avez signé avec succès. Cependant, nous ne pouvions
         pas vous connecter parce que votre compte est verrouillé.
       signed_up_but_unconfirmed: Un message avec un lien de confirmation a été envoyé

@@ -4,6 +4,7 @@ zh-TW:
   bitbucket: 到位桶
   gitlab: Gitlab
   updated: 更新
+  include_all: 所有
   1_we_have_just_launched_our_service_title: 我們剛剛推出了我們的服務
   shared:
     navbar:
@@ -29,7 +30,7 @@ zh-TW:
       password_confirmation: 密碼確認
       base: 基地
       title: 標題
-      user_to_project_connection: 用戶投影連接
+      user_to_project_connection: 用戶對項目的連接
       user_to_board_connection: 用戶到板連接
       columns:
         tag: 標籤重疊
@@ -214,12 +215,12 @@ zh-TW:
       feedback_email: 您的電子郵件
       feedback_content: 內容
       cancel: 取消
+      send: 發送
       feedback_recaptcha: 的Recaptcha
     success:
       success_feedback: 謝謝！我們已經收到您的反饋意見。
       close: 關閉
       cancel: 取消
-      more: 多發
   pages:
     faq:
       faq: 常見問題解答
@@ -227,7 +228,7 @@ zh-TW:
       about_kanban_on_rails: KanbanOnRails在這裡你可以與Github上或到位桶創建看板並實現同步服務
       what_features_has_kanban_on_rails: 哪些功能具有KanbanOnRails？
       kanban_on_rails_features: 您可以同步你的項目和問題進行Github上和到位桶，邀請用戶（例如，經理）為您的項目，它部署到自己的服務器
-      i_have_some_requests: 我有​​一些要求
+      i_have_some_requests: 我有一些要求
       you_can_write_request: 你可以寫請求
       i_have_seen_some_typo_or_wrong_translation: 我看到了一些拼寫錯誤或翻譯錯誤
       you_can_send_pull_request_to_our: 您可以發送拉要求我們
@@ -252,6 +253,7 @@ zh-TW:
       not_locked: 沒有鎖
       not_saved:
         one: 1錯誤，無法儲存禁止此％{}資源：
+        other: "％{}計數被禁止保存此％{}資源錯誤："
     bad_request:
       bad_request: 錯誤的請求
       request_result: 請求結果

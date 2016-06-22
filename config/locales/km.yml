@@ -4,6 +4,8 @@ km:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ធ្វើឱ្យទាន់សម័យ
+  include_all: ទាំងអស់
+  backlog: backlog
   1_we_have_just_launched_our_service_title: យើងទើបតែបានចាប់ផ្តើមសេវារបស់យើង
   shared:
     navbar:
@@ -115,6 +117,7 @@ km:
       edit: កែសម្រួល
       destroy: លុប
       project_issues: បញ្ហាគម្រោង
+      project_users: អ្នកប្រើប្រាស់គម្រោង
     section_fields:
       section_tags: ស្លាកផ្នែក
       section_order: លំដាប់
@@ -172,6 +175,7 @@ km:
       read_more: អានបន្ថែម
   welcome:
     index:
+      welcome_to_kanban_on_rails: នៅលើផ្លូវរថភ្លើង
       welcome_about_text: ទីនេះអ្នកអាចបង្កើតក្រុមប្រឹក្សាភិបាល Kanban ផ្ទាល់ខ្លួនរបស់អ្នកនិងធ្វើសមកាលកម្មវាជាមួយនឹង
         Github ឬ Bitbucket
   boards:
@@ -191,6 +195,7 @@ km:
       remove_column: យកជួរឈរ
       max_issues_count: បញ្ហាការរាប់នៅក្នុងជួរឈរអតិបរមា
       column_order: លំដាប់
+      backlog: backlog
     show:
       next_page: ទំព័របន្ទាប់
     index:
@@ -222,7 +227,6 @@ km:
       more: ផ្ញើកាន់តែច្រើន
   pages:
     faq:
-      faq: សំណួរគេសួរញឹកញាប់
       what_is_kanban_on_rails: "?"
       about_kanban_on_rails: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
         Kanban វាជាមួយ Github ឬ Bitbucket
@@ -240,7 +244,6 @@ km:
       about_kanban_on_rails: អំពី KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
         Kanban វាជាមួយ Github ឬ Bitbucket
-      kanban_on_rails_features: លក្ខណៈពិសេស KanbanOnRails
       sync_with_github_and_bitbucket: គម្រោងអ្នកអាចធ្វើសមកាលកម្មនិងបញ្ហារបស់អ្នកជាមួយនឹង
         Github និង Bitbucket
       invite_users: អ្នកអាចអញ្ជើញអ្នកប្រើប្រាស់ (ឧទាហរណ៍ចាត់ការទូទៅ) សម្រាប់គម្រោងរបស់អ្នក
@@ -267,7 +270,6 @@ km:
         semantic
       go_to_root: ចូលទៅកាន់ការជា root
     not_found:
-      not_found: រកមិនឃើញ
       not_found_description: ធនធានដែលបានស្នើមិនអាចត្រូវបានរកឃើញប៉ុន្តែអាចនឹងមានក្នុងពេលអនាគត
       go_to_root: ចូលទៅកាន់ការជា root
     forbidden:
@@ -315,6 +317,7 @@ km:
     omniauth_callbacks:
       failure: មិនអាចផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវរបស់អ្នកពី% {ប្រភេទ} ដោយសារតែ "% {មូលហេតុ}"
         ។
+      success: គណនី {ប្រភេទ%} ។
     passwords:
       no_token: អ្នកមិនអាចចូលដំណើរការទំព័រនេះដោយគ្មានមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ។
         ប្រសិនបើអ្នកធ្វើមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ, សូមធ្វើឱ្យប្រាកដថាអ្នកបានប្រើ
@@ -337,13 +340,14 @@ km:
       signed_up_but_locked: អ្នកបានចុះឈ្មោះដោយជោគជ័យ។ ទោះយ៉ាងណាយើងមិនអាចឱ្យអ្នកចូលទេព្រោះគណនីរបស់អ្នកត្រូវបានចាក់សោ។
       signed_up_but_unconfirmed: សារដែលមានតំណបញ្ជាក់មួយត្រូវបានផ្ញើទៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។
         សូមបើកតំណភ្ជាប់ដើម្បីធ្វើឱ្យគណនីរបស់អ្នក។
-      update_needs_confirmation: អ្នកធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
+      update_needs_confirmation: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
         សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកហើយចុចលើតំណ Confirm ដើម្បីបញ្ចប់ការបញ្ជាក់ពីអាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
       updated: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
       new:
         sign_up: ចុះឈ្មោះ
         name: ឈ្មោះ
         password: ពាក្យសម្ងាត់
+        password_confirmation: ពាក្យសម្ងាត់ការបញ្ជាក់
         register: ចុះឈ្មោះ
     sessions:
       signed_in: បានចុះហត្ថលេខាដោយជោគជ័យ។

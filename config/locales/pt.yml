@@ -4,6 +4,8 @@ pt:
   bitbucket: Bitbucket
   gitlab: gitlab
   updated: atualizada
+  include_all: Todos
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço
   shared:
     navbar:
@@ -231,6 +233,7 @@ pt:
       max_issues_count: questões Max contar na coluna
       column_tags: etiquetas Coluna
       column_order: Order
+      backlog: Backlog
     show:
       next_page: Página seguinte
     index:

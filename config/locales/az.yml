@@ -4,6 +4,8 @@ az:
   bitbucket: Bitbucket
   gitlab: GitLab
   updated: yenilənir
+  include_all: Bütün
+  backlog: Portfelinizi
   shared:
     navbar:
       sign_in: Sign in
@@ -189,6 +191,7 @@ az:
       max_issues_count: Max məsələlər sütun saymaq
       column_tags: Sütun tags
       column_order: Order
+      backlog: Portfelinizi
     show:
       next_page: Sonrakı səhifə
     index:

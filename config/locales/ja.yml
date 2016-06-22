@@ -3,6 +3,8 @@ ja:
   bitbucket: のBitbucket
   gitlab: Gitlab
   updated: 更新
+  include_all: すべて
+  backlog: バックログ
   shared:
     navbar:
       sign_in: ログイン
@@ -28,7 +30,7 @@ ja:
     new_project_modal:
       new_project: 新プロジェクト
     edit_project_modal:
-      edit_project: 編集​​プロジェクト
+      edit_project: 編集プロジェクト
     new_issue_modal:
       new_issue: 新しい問題
     left_sidebar:
@@ -39,7 +41,7 @@ ja:
       read_more: 続きを読みます
     email_signature:
       info: 情報
-      mailer: メーラー
+      mailer: メ​​ーラー
       technoelegance: Technoelegance株式会社
     header:
       requests: リクエスト
@@ -185,6 +187,7 @@ ja:
       max_issues_count: 最大の問題は、列にカウント
       column_tags: 列タグ
       column_order: 注文
+      backlog: バックログ
     index:
       boards: ボード
       new: 新
@@ -271,6 +274,7 @@ ja:
     mailer:
       confirmation_instructions:
         subject: 確認命令
+        welcome_to_kanban_on_rails: がKanbanOnRailsへようこそ
         confirm_my_account: 私の電子メールを確認してください
       reset_password_instructions:
         hello: こんにちは

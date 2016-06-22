@@ -4,6 +4,8 @@ es:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: actualizan
+  include_all: Todo
+  backlog: Cartera
   1_we_have_just_launched_our_service_title: Acabamos de lanzar nuestro servicio
   shared:
     navbar:

@@ -4,6 +4,8 @@ tt:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: güncellendi
+  include_all: Tüm
+  backlog: Backlog
   shared:
     navbar:
       sign_in: Oturum açın
@@ -189,6 +191,7 @@ tt:
       max_issues_count: Max sorunları sütununda saymak
       column_tags: Sütun etiketleri
       column_order: Sipariş
+      backlog: Backlog
     show:
       next_page: Sonraki sayfa
     index:

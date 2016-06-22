@@ -4,6 +4,8 @@ ta:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: மேம்படுத்தப்பட்டது
+  include_all: அனைத்து
+  backlog: டர்
   shared:
     navbar:
       sign_in: உள்நுழை
@@ -214,6 +216,7 @@ ta:
       max_issues_count: மேக்ஸ் பிரச்சினைகள் பத்தியில் எண்ண
       column_tags: வரிசை குறிச்சொற்களை
       column_order: ஆணை
+      backlog: டர்
     show:
       next_page: அடுத்த பக்கம்
     index:

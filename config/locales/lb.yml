@@ -4,6 +4,8 @@ lb:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: aktualiséiert
+  include_all: All
+  backlog: Réckstauproblem
   1_we_have_just_launched_our_service_title: Mir hu just eise Service lancéiert
   shared:
     navbar:
@@ -241,6 +243,7 @@ lb:
       max_issues_count: Max Problemer zielen zu Kolonn
       column_tags: Kolonn Tags
       column_order: Uerdnung
+      backlog: Réckstauproblem
     show:
       next_page: Nächst Säit
     index:

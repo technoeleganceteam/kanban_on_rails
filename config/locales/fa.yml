@@ -4,6 +4,8 @@ fa:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: به روز
+  include_all: همه
+  backlog: جمع شدن
   1_we_have_just_launched_our_service_title: ما فقط راه اندازی خدمات ما
   shared:
     navbar:
@@ -227,6 +229,7 @@ fa:
       max_issues_count: مسائل حداکثر در تعداد ستون
       column_tags: برچسب ها ستون
       column_order: سفارش
+      backlog: جمع شدن
     show:
       next_page: صفحه بعدی
     index:

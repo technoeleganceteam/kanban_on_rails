@@ -4,6 +4,8 @@ lv:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: atjaunināts
+  include_all: All
+  backlog: Uzkrājums
   1_we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu pakalpojumus
   shared:
     navbar:
@@ -243,6 +245,7 @@ lv:
       max_issues_count: Max jautājumi skaits slejā
       column_tags: sleja tagus
       column_order: Order
+      backlog: Uzkrājums
     show:
       next_page: Nākamā lapa
     index:

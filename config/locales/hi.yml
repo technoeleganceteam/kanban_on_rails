@@ -4,6 +4,8 @@ hi:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: अद्यतन
+  include_all: सभी
+  backlog: बैकलॉग
   1_we_have_just_launched_our_service_title: हम सिर्फ हमारी सेवा का शुभारंभ किया
   shared:
     navbar:
@@ -216,6 +218,7 @@ hi:
       max_issues_count: मैक्स मुद्दों कॉलम में गिनती
       column_tags: स्तंभ टैग
       column_order: आदेश
+      backlog: बैकलॉग
     show:
       next_page: अगला पृष्ठ
     index:

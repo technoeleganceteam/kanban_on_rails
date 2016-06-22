@@ -3,6 +3,8 @@ ml:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: അപ്ഡേറ്റ്
+  include_all: എല്ലാ
+  backlog: ജെഎംജിഎസ്
   1_we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു
   shared:
     navbar:
@@ -203,6 +205,7 @@ ml:
       remove_column: കോളം നീക്കംചെയ്യുക
       column_tags: നിര ടാഗുകൾ
       column_order: ഓർഡർ
+      backlog: ജെഎംജിഎസ്
     index:
       boards: ബോർഡുകൾ
       new: ന്യൂ

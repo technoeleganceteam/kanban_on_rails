@@ -4,6 +4,8 @@ sr:
   bitbucket: Битбуцкет
   gitlab: Гитлаб
   updated: ажуриран
+  include_all: Све
+  backlog: Бацклог
   1_we_have_just_launched_our_service_title: Управо смо покренули наш сервис
   shared:
     navbar:
@@ -162,6 +164,7 @@ sr:
     show:
       project: Пројекат
       related_boards: Релатед плоче
+      project_info: Пројекат
       project_issues: питања Пројецт
       project_users: Корисници пројекта
       new: Нова
@@ -244,6 +247,7 @@ sr:
       max_issues_count: Максимални број питања рачунати у колони
       column_tags: Цолумн ознаке
       column_order: Ордер
+      backlog: Бацклог
     show:
       next_page: Следећа страна
     index:

@@ -4,6 +4,8 @@ be:
   bitbucket: BitBucket
   gitlab: Gitlab
   updated: абнаўленне
+  include_all: Усе
+  backlog: Адставанне
   1_we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс
   shared:
     navbar:
@@ -20,7 +22,7 @@ be:
     languages_select_modal:
       available_languages: Даступныя мовы
     user_edit_menu:
-      profile: Профіль
+      profile: профілю
       site_settings: Налады сайта
       services: Паслугі
     form_errors:
@@ -46,8 +48,8 @@ be:
       all: Усе
       read_more: Больш падрабязна
     javascript_global_variables:
-      select_column_tags: Абярыце тэгі слупкоў
-      select_section_tags: Выбраць пазнакі раздзела
+      select_column_tags: Абярыце пазнакі слупкоў
+      select_section_tags: Абярыце пазнакі раздзела
       select_issue_tags: Абярыце тэгі выпуск
     email_signature:
       info: Інфармацыя
@@ -67,7 +69,7 @@ be:
       feedbacks: Водгук
     user_requests_navigation:
       all: Усе
-      my_requests: Мае просьбы
+      my_requests: Мае запыты
   users:
     new:
       invite_user: Запрасіць карыстальніка
@@ -75,7 +77,7 @@ be:
       name: Імя
       enter_user_name: Калі ласка, увядзіце імя карыстальніка
       email: E-mail
-      enter_user_email: Калі ласка, увядзіце электронную пошту карыстальніка
+      enter_user_email: Уваход карыстальніка па электроннай пошце
       enter_user_password: Калі ласка, увядзіце пароль карыстальніка
       password: Пароль
       save: Захаваць
@@ -103,7 +105,7 @@ be:
       hello: Прывітанне
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
-      boards: Дошкі
+      boards: платы
       issues: пытанні
       you_can_sync_projects_and_issues_from: Вы можаце ўключыць розныя паслугі і сінхранізаваць
         вашы праекты і пытанні
@@ -158,7 +160,7 @@ be:
       project_users: карыстальнікаў праекта
       new: Новы
     project_modal:
-      project: праекта
+      project: Праект
   issues:
     form:
       title: Назва
@@ -171,7 +173,7 @@ be:
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
       github_issue_number: Github нумар выпуску
-      project: праекта
+      project: Праект
     index:
       issues: пытанні
       sync_with_github: Сінхранізацыя з GitHub
@@ -181,7 +183,7 @@ be:
       destroy: Выдаліць
       edit: Рэдагаваць
     edit:
-      edit_issue: Змяніць пытанне
+      edit_issue: Рэдагаваць пытанне
     new:
       new_issue: Новы выпуск
     issue_modal:
@@ -199,7 +201,7 @@ be:
       we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс!
       we_have_just_launched_our_service_text: Сёння мы запускаем наш сэрвіс так што
         кожны можа
-      sign_up: падпісацца
+      sign_up: зарэгістравацца
       and_use_it: і выкарыстоўваць яго.
       with_love: З любоўю,
       technoelegance_team: Technoelegance Team
@@ -217,7 +219,7 @@ be:
     form:
       name: Імя
       enter_board_name: Калі ласка, увядзіце імя дошка
-      columns: Стоўбцы
+      columns: Калоны
       add: Дадаць
       sections: Раздзелы
       save: Захаваць
@@ -231,6 +233,7 @@ be:
       remove_column: Выдаліць слупок
       column_tags: пазнакі слупкоў
       column_order: Замовіць
+      backlog: Адставанне
     show:
       next_page: Наступная старонка
     index:
@@ -262,7 +265,7 @@ be:
       more: Адаслаць яшчэ
   pages:
     faq:
-      faq: FAQ
+      faq: Часта задаюць пытанні
       what_is_kanban_on_rails: Што такое KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails гэта сэрвіс, дзе вы можаце ствараць Kanban
         дошкі і сінхранізаваць яго з Github або Bitbucket
@@ -282,7 +285,7 @@ be:
       about_kanban_on_rails: Аб KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails гэта сэрвіс, дзе вы можаце ствараць
         Kanban дошкі і сінхранізаваць яго з Github або Bitbucket
-      kanban_on_rails_features: функцыі KanbanOnRails
+      kanban_on_rails_features: асаблівасці KanbanOnRails
       sync_with_github_and_bitbucket: Вы можаце сінхранізаваць вашы праекты і праблемы
         з Github і Bitbucket
       invite_users: Вы можаце запрашаць карыстальнікаў (напрыклад менеджэраў) для
@@ -304,7 +307,7 @@ be:
       not_found: не знойдзены
       not_locked: ня быў заблякаваны
       not_saved:
-        one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
+        one: '1 памылка забароненая гэты% {рэсурс} з тых, што ратуюцца:'
         other: "{лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
     bad_request:
       bad_request: Bad Request
@@ -343,7 +346,7 @@ be:
         sign_up: Зарэгіструйцеся
         didnt_receive_confirmation_instructions: Ня атрымалі пацверджання інструкцыі?
         sign_in_with: Уваход з выкарыстаннем
-        fast_login_almost_one_click: хутка Увайсці (амаль адзін клік)
+        fast_login_almost_one_click: Хуткі Лагін (амаль адзін клік)
     confirmations:
       confirmed: ваш рахунак быў паспяхова пацверджаны.
       send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як пацвердзіць свой
@@ -363,7 +366,7 @@ be:
       last_attempt: У вас ёсць яшчэ адна спроба, перш чым ваш уліковы запіс будзе
         заблакаваная.
       not_found_in_database: Няправільны адрас электроннай пошты ці пароль.
-      timeout: Ваш сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
+      timeout: Вашай сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
       unauthenticated: Вы павінны ўвайсці або зарэгістравацца, перш чым працягнуць.
       unconfirmed: Вы павінны пацвердзіць свой рахунак, перш чым працягнуць.
     mailer:
@@ -383,7 +386,7 @@ be:
         if_you_didnt_request_this_please_ignore_this_email: Калі вы не запытвалі гэта
           не звяртайце ўвагі на гэты ліст.
       unlock_instructions:
-        subject: разблакоўкі Інструкцыі
+        subject: Разблакіроўка Інструкцыі
     omniauth_callbacks:
       failure: Нельга праверыць ідэнтычнасьць вас ад {%} роду, таму што "% {прычына}".
       success: паспяхова прайшоў праверку сапраўднасці ад {%} ветлівую ўвагу.
@@ -436,7 +439,7 @@ be:
         remember_me: Запомніць мяне
         forgot_your_password: Забыліся пароль?
     unlocks:
-      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як разблакаваць
+      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як разблакаваць
         свой рахунак праз некалькі хвілін.
       send_paranoid_instructions: Калі ваш уліковы запіс існуе, то вы атрымаеце ліст
         з інструкцыямі аб тым, як разблакаваць яго на працягу некалькіх хвілін.

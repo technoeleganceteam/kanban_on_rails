@@ -4,6 +4,8 @@ bg:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: актуализиран
+  include_all: All
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Вече стартирахме нашата услуга
   shared:
     navbar:
@@ -231,6 +233,7 @@ bg:
       max_issues_count: Макс въпроси разчитат в колона
       column_tags: Колона тагове
       column_order: Поръчка
+      backlog: Backlog
     show:
       next_page: Следваща страница
     index:

@@ -4,6 +4,8 @@ ne:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: अद्यावधिक
+  include_all: सबै
+  backlog: संचय
   1_we_have_just_launched_our_service_title: हामी सिर्फ हाम्रो सेवा शुरू गरेको छ
   shared:
     navbar:
@@ -210,6 +212,7 @@ ne:
       max_issues_count: अधिकतम मुद्दाहरू स्तम्भ मा गणना
       column_tags: स्तम्भ ट्याग
       column_order: आदेश
+      backlog: संचय
     show:
       next_page: अर्को पृष्ठ
     index:

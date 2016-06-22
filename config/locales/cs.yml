@@ -4,6 +4,8 @@ cs:
   bitbucket: bitbucket
   gitlab: Gitlab
   updated: aktualizováno
+  include_all: Vše
+  backlog: Backlog
   1_we_have_just_launched_our_service_title: Právě jsme spustili naše služby
   shared:
     navbar:
@@ -231,6 +233,7 @@ cs:
       remove_column: Odstranit sloupec
       column_tags: tagy sloupců
       column_order: Objednávka
+      backlog: Backlog
     show:
       next_page: Další strana
     index:

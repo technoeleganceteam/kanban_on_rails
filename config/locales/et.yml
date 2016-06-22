@@ -4,6 +4,8 @@ et:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: uuendatud
+  include_all: Kõik
+  backlog: Mahajäämus
   1_we_have_just_launched_our_service_title: Oleme just käivitanud meie teenus
   shared:
     navbar:
@@ -246,6 +248,7 @@ et:
       max_issues_count: Max küsimusi loota veerus
       column_tags: veerg sildid
       column_order: Telli
+      backlog: Mahajäämus
     show:
       next_page: Järgmine lehekülg
     index:

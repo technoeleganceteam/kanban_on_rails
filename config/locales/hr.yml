@@ -4,6 +4,8 @@ hr:
   bitbucket: Bitbucket
   gitlab: Gitlab
   updated: ažurirana
+  include_all: Sve
+  backlog: zaostataka
   1_we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis
   shared:
     navbar:
@@ -234,6 +236,7 @@ hr:
       max_issues_count: Maksimalni pitanja računati u stupcu
       column_tags: stupca oznake
       column_order: narudžbe
+      backlog: zaostataka
     show:
       next_page: Sljedeća stranica
     index:

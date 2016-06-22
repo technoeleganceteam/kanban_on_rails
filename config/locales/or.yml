@@ -4,6 +4,8 @@ or:
   bitbucket: BitBucket
   gitlab: Gitlab
   updated: bijgewerkt
+  include_all: Alle
+  backlog: Achterstand
   1_we_have_just_launched_our_service_title: We hebben zopas onze service
   shared:
     navbar:
@@ -236,6 +238,7 @@ or:
       max_issues_count: Max kwesties tellen in kolom
       column_tags: Column-tags
       column_order: Bestel
+      backlog: Achterstand
     show:
       next_page: Volgende pagina
     index:
