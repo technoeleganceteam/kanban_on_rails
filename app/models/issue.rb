@@ -88,7 +88,7 @@ class Issue < ActiveRecord::Base
     else
       result = gitlab_create_issue(client)
 
-      update_attributes!(:gitlab_issue_id => result.id)
+      update_attributes!(:gitlab_issue_id => result.id) if result.present? && result.id.present?
     end
   end
 
@@ -114,6 +114,8 @@ class Issue < ActiveRecord::Base
     client.issues.create(project.bitbucket_owner, project.bitbucket_slug, 'title' => title)
   rescue BitBucket::Error::NotFound
     Rails.logger.info "BitBucket::Error::NotFound on sync bitbucket issues with project id #{ project.id }"
+
+    false
   end
 
   def bitbucket_update_issue(client)
