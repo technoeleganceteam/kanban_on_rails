@@ -143,7 +143,7 @@ class Issue < ActiveRecord::Base
       :github_issue_html_url => params[:html_url],
       :tags => params[:labels].to_a.map { |l| l[:name] },
       :github_labels => params[:labels].to_a.map(&:to_a),
-      :state => params[:state].present? ? params[:state] : 'open',
+      :state => github_state_to_hook(params),
       :github_issue_number => params[:number].to_i
     )
   end
@@ -230,15 +230,21 @@ class Issue < ActiveRecord::Base
   end
 
   def assign_attributes_from_github_sync(github_issue)
-    assign_attributes(
-      :title => github_issue.title[0..(Settings.max_string_field_size - 1)],
+    assign_attributes(:title => github_issue.title[0..(Settings.max_string_field_size - 1)],
       :body => github_issue.body,
-      :state => github_issue.state.present? ? github_issue.state : 'open',
+      :state => github_state_to_sync(github_issue),
       :github_issue_comments_count => github_issue.comments,
       :github_issue_html_url => github_issue.html_url,
       :tags => github_issue.labels.map(&:name),
       :github_labels => github_issue.labels,
-      :github_issue_number => github_issue.number
-    )
+      :github_issue_number => github_issue.number)
+  end
+
+  def github_state_to_sync(github_issue)
+    github_issue.state.present? ? github_issue.state : 'open'
+  end
+
+  def github_state_to_hook(params)
+    params[:state].present? ? params[:state] : 'open'
   end
 end
