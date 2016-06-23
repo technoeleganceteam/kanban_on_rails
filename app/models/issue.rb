@@ -78,7 +78,7 @@ class Issue < ActiveRecord::Base
     else
       result = bitbucket_create_issue(client)
 
-      update_attributes!(:bitbucket_issue_id => result.id)
+      update_attributes!(:bitbucket_issue_id => result.id) if result.present? && result.id.present?
     end
   end
 
@@ -88,7 +88,7 @@ class Issue < ActiveRecord::Base
     else
       result = gitlab_create_issue(client)
 
-      update_attributes!(:gitlab_issue_id => result.id) if result.present? && result.id.present?
+      update_attributes!(:gitlab_issue_id => result.id)
     end
   end
 
