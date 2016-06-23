@@ -39,7 +39,7 @@ RSpec.describe Issue, :type => :model do
           to_return(:status => 200, :body => '', :headers => {})
 
         stub_request(:patch, 'https://api.github.com/repos/some/project/issues/1').
-          with(:body => '{"title":"Some title","body":null,"labels":[]}',
+          with(:body => '{"title":"Some title","body":null,"labels":[],"state":"open"}',
             :headers => { 'Accept' => 'application/vnd.github.v3+json',
             'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
             'Authorization' => 'token token', 'Content-Type' => 'application/json',
@@ -103,7 +103,7 @@ RSpec.describe Issue, :type => :model do
           :bitbucket_slug => 'slug')
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id)).to eq true }
+      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id)).to eq nil }
     end
 
     context 'when existing issue' do

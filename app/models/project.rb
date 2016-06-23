@@ -48,6 +48,16 @@ class Project < ActiveRecord::Base
       Rails.application.routes.url_helpers.
         send("payload_from_#{ provider }_project_url", id, :host => Settings.webhook_host)
     end
+
+    define_method "parse_issue_params_from_#{ provider }_webhook" do |params|
+      issue = issues.find_by("meta ->> '#{ provider }_issue_id' = '?'", params[:id].to_i)
+
+      issue = issues.build.tap { |i| i.send("#{ provider }_issue_id=",  params[:id].to_i) } unless issue.present?
+
+      issue.send("assign_attributes_from_#{ provider }_hook", params)
+
+      issue.save!
+    end
   end
 
   def remove_hook_from_bitbucket(authentication, hook)
@@ -62,39 +72,6 @@ class Project < ActiveRecord::Base
 
   def remove_hook_from_github(client, hook)
     client.remove_hook(github_full_name, hook.id)
-  end
-
-  def parse_issue_params_from_github_webhook(params)
-    issue = issues.find_by("meta ->> 'github_issue_id' = '?'", params[:id].to_i)
-
-    issue = issues.build.tap { |i| i.github_issue_id = params[:id].to_i } unless issue.present?
-
-    issue.assign_attributes_from_github_hook(params)
-
-    issue.save!
-  end
-
-  def parse_issue_params_from_bitbucket_webhook(params)
-    issue = issues.find_by("meta ->> 'bitbucket_issue_id' = '?'", params[:id])
-
-    issue = issues.build.tap { |i| i.github_issue_id = params[:id] } unless issue.present?
-
-    issue.assign_attributes(
-      :title => params[:title],
-      :body => params[:content][:raw]
-    )
-
-    issue.save!
-  end
-
-  def parse_issue_params_from_gitlab_webhook(params)
-    issue = issues.find_by("meta ->> 'gitlab_issue_id' = '?'", params[:id].to_i)
-
-    issue = issues.build.tap { |i| i.gitlab_issue_id = params[:id].to_i } unless issue.present?
-
-    issue.assign_attributes(:title => params[:title], :body => params[:description])
-
-    issue.save!
   end
 
   def fetch_hook_from_github(client)
@@ -157,12 +134,6 @@ class Project < ActiveRecord::Base
 
   def open_issues
     issues.where(:state => 'open').size
-  end
-
-  def fetch_issue_from_github_id(github_issue_id)
-    issue = issues.find_by("meta ->> 'github_issue_id' = '?'", github_issue_id)
-
-    issue.present? ? issue : issues.build.tap { |i| i.github_issue_id = github_issue_id }
   end
 
   def check_bitbucket_owner(repo, client)
