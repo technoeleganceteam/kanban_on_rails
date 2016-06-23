@@ -10,8 +10,10 @@ class IssuesController < ApplicationController
   def index
     @issues = if @board.present? && @connections.present?
       @connections.map(&:issue)
+    elsif @project
+      @project.issues.page(params[:page])
     else
-      (@project.present? ? @project : current_user).issues.includes(:project).page(params[:page])
+      current_user.issues.page(params[:page]).includes(:project)
     end
   end
 
