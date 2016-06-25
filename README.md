@@ -9,7 +9,7 @@
 
 ### Features
 - **Two-way integration with Github, Bitbucket and Gitlab.** Your issues will be synced with these services via api. All external changes with issues will be also synced via webhooks.
-- **Inviting users to your boards** You can invite a user that has no Github, Bitbucket or Gitlab accounts to your board as manager for example, so he will not see your project code but he will see your issues.
+- **Inviting users to your boards** You can invite users that have no Github, Bitbucket or Gitlab accounts to your board as managers for example, so they will not see your project code but they could see your board and issues.
 - **Real-time integration** You and your team will see all changes in real time via websockets. We use great rails framework Action Cable for this. 
 - **Multi-project boards** You can create board with multiple projects(even from Gitlab or Github together)
 - **Multi-section boards** You can divide your board to multiple sections. For example you can create section with all issues(by click to checkbox "Or include all?" while creating the section) and section with only important issues(by creating section with tag "Important" for example, all issues with tag "Important" will display there)
