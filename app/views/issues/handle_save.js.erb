@@ -1,5 +1,5 @@
 if ((current_path.split('/').pop() === 'edit') || (current_path.split('/').pop() === 'update')) {
   Turbolinks.visit('<%= project_url(@issue.project) %>');
 } else {
-  Turbolinks.visit(current_path);
+  window.location.reload();
 }

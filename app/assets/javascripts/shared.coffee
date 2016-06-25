@@ -7,7 +7,7 @@ window.init_dragula = (ids, board_id, user_id) ->
   dragula(document.getElementById(id) for id in ids,
     removeOnSpill: true
     moves: (el, container, handle) ->
-      handle.className == 'handle'
+      handle.className.indexOf('handle') > -1
   ).on('drop', (el, target, source, sibling) ->
       issue_to_section_connections_attributes = []
 
@@ -41,7 +41,6 @@ close_issue = (project_id, issue_id) ->
   $.ajax
     url: Routes.project_issue_path(project_id, issue_id, { format: 'js' })
     type: 'PATCH'
-    dataType: 'js'
     data:
       issue:
         state: 'closed'
