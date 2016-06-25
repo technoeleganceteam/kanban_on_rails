@@ -75,11 +75,7 @@ RSpec.describe IssuesController, :type => :controller do
           :issue => { :title => 'Some title' }, :format => :js
         end
 
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
+        it { should render_template :handle_save }
       end
 
       context 'with invalid attributes' do
@@ -106,11 +102,7 @@ RSpec.describe IssuesController, :type => :controller do
           :issue => { :title => 'Some title', :tags => ['foo'] }, :format => :js
         end
 
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
+        it { should render_template :handle_save }
       end
     end
 
@@ -121,11 +113,7 @@ RSpec.describe IssuesController, :type => :controller do
           :issue => { :title => 'Some title2' }, :format => :js
         end
 
-        it do
-          expect(response.body).to eq(
-            "Turbolinks.visit('http://test.host/projects/#{ assigns(:project).id }');"
-          )
-        end
+        it { should render_template :handle_save }
       end
 
       context 'with invalid attributes' do
