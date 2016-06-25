@@ -79,6 +79,8 @@ en: &all
   include_all: All
   backlog: Backlog
   1_we_have_just_launched_our_service_title: We have just launched our service
+  open: Open
+  closed: Closed
   shared:
     navbar:
       sign_in: Sign in
@@ -254,6 +256,7 @@ en: &all
       github_issue_id: Github issue id
       github_issue_number: Github issue number
       project: Project
+      state: State
     index:
       issues: issues
       sync_with_github: Sync with github

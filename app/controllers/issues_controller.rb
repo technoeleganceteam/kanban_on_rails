@@ -21,7 +21,10 @@ class IssuesController < ApplicationController
     if @issue.save
       enqueue_issue_sync
 
-      redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
+      respond_to do |format|
+        format.js { render :handle_save }
+        format.html { redirect_to project_url(@issue.project) }
+      end
     else
       render :new
     end
@@ -31,7 +34,10 @@ class IssuesController < ApplicationController
     if @issue.update_attributes(update_params)
       enqueue_issue_sync
 
-      redirect_to project_url(@issue.project), :turbolinks => !request.format.html?
+      respond_to do |format|
+        format.js { render :handle_save }
+        format.html { redirect_to project_url(@issue.project) }
+      end
     else
       render :edit
     end
@@ -50,7 +56,7 @@ class IssuesController < ApplicationController
   end
 
   def update_params
-    params.require(:issue).permit(:title, :body, :tags => [])
+    params.require(:issue).permit(:title, :body, :state, :tags => [])
   end
 
   def assign_user

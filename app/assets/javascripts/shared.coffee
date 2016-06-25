@@ -4,8 +4,11 @@ $(document).on 'click', '.add_fields', (e) ->
   init_sortable()
 
 window.init_dragula = (ids, board_id, user_id) ->
-  dragula(document.getElementById(id) for id in ids)
-    .on 'drop', (el, target, source, sibling) ->
+  dragula(document.getElementById(id) for id in ids,
+    removeOnSpill: true
+    moves: (el, container, handle) ->
+      handle.className == 'handle'
+  ).on('drop', (el, target, source, sibling) ->
       issue_to_section_connections_attributes = []
 
       for connection in $(target).children()
@@ -21,6 +24,9 @@ window.init_dragula = (ids, board_id, user_id) ->
       ]
 
       update_issue_tags(issues_attributs, issue_to_section_connections_attributes, user_id, board_id)
+  ).on('remove', (el, container, source) ->
+    close_issue($(el).data('project_id'), el.id.split('_')[1])
+  )
 
 update_issue_tags = (issues_attributes, issue_to_section_connections_attributes, user_id, board_id) ->
   $.ajax
@@ -30,6 +36,15 @@ update_issue_tags = (issues_attributes, issue_to_section_connections_attributes,
       board:
         issue_to_section_connections_attributes: issue_to_section_connections_attributes
         issues_attributes: issues_attributes
+
+close_issue = (project_id, issue_id) ->
+  $.ajax
+    url: Routes.project_issue_path(project_id, issue_id, { format: 'js' })
+    type: 'PATCH'
+    dataType: 'js'
+    data:
+      issue:
+        state: 'closed'
 
 window.init_tags = ->
   $('.column_tags').select2

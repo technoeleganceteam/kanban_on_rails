@@ -1,0 +1,11 @@
+<%= javascript_tag do %>
+  window.current_user_id = "<%= current_user.try(:id) %>";
+
+  window.i18n_column_tags = "<%= t '.select_column_tags' %>";
+
+  window.i18n_section_tags = "<%= t '.select_section_tags' %>";
+  
+  window.i18n_issue_tags = "<%= t '.select_issue_tags' %>";
+
+  window.current_path = "<%= request.path %>"
+<% end %>

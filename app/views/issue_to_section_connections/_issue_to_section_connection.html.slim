@@ -1,13 +1,16 @@
 - issue = issue_to_section_connection.issue
 
 div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
-  id = "issue_#{ issue.id }"]
-  h6.word-wrap 
+  data-project_id = "#{ issue.project_id }" id = "issue_#{ issue.id }"]
+  h6.handle.word-wrap 
+    span.handle
+      i.handle.fa.fa-lg.fa-arrows
+    | &nbsp;
     - Settings.issues_providers.each do |provider|
       - if issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }").present?
         span.blue = issue.send("#{ provider }_issue_#{ provider == 'github' ? 'number' : 'id' }")
         | &nbsp;
-    small = issue.project.name
+    small.handle = issue.project.name
     
   h5.word-wrap
     = issue.title

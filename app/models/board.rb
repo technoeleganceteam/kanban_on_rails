@@ -30,6 +30,8 @@ class Board < ActiveRecord::Base
 
   validate :column_tags_overlapping
 
+  after_update :update_issue_to_section_connections
+
   after_create :update_issues
 
   def issue_to_section_connections_from_params(params = {})
@@ -46,6 +48,10 @@ class Board < ActiveRecord::Base
 
   def update_issues
     projects.map(&:issues).flatten.map(&:save)
+  end
+
+  def update_issue_to_section_connections
+    issue_to_section_connections.where.not(:project_id => project_ids).destroy_all
   end
 
   def column_tags_overlapping

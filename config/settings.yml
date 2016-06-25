@@ -14,6 +14,9 @@ github_repository_url: https://github.com/technoeleganceteam/kanban_on_rails
 bitbucket_base_url: https://bitbucket.com
 gitlab_base_url: https://gitlab.com
 gitlab_endpoint: https://gitlab.com/api/v3
+issue_states:
+  - open
+  - closed
 issues_providers:
   - github
   - gitlab

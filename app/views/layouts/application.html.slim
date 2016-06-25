@@ -11,14 +11,14 @@ html lang = '#{ t "#{ I18n.locale }_iso" }'
 
     = stylesheet_link_tag('application', :media => 'all', 'data-turbolinks-track' => true)
 
-    = render 'shared/javascript_global_variables'
-
     = javascript_include_tag('application', 'data-turbolinks-track' => true)
 
     = csrf_meta_tags
 
     = render 'shared/favicons'
   body
+    = render 'shared/javascript_global_variables'
+
     = render 'shared/counters' if Rails.env.production?
 
     = render 'shared/header'

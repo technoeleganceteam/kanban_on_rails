@@ -25,7 +25,7 @@ class Issue < ActiveRecord::Base
 
   validates :project_id, :presence => true
 
-  validates :state, :presence => true, :inclusion => %w(closed open)
+  validates :state, :presence => true, :inclusion => Settings.issue_states
 
   after_save :create_or_destroy_issue_to_section_connections
 
@@ -34,11 +34,12 @@ class Issue < ActiveRecord::Base
   end
 
   def assign_issue_to_section_connections
-    Section.where(:board_id => project.boards).where('ARRAY[?]::varchar[] && tags', tags).find_each do |section|
+    Section.where(:board_id => project.boards).includes(:board).
+      where('ARRAY[?]::varchar[] && tags', tags).find_each do |section|
       build_section_connection(section)
     end
 
-    Section.where(:board_id => project.boards).where(:include_all => true).find_each do |section|
+    Section.where(:board_id => project.boards).includes(:board).where(:include_all => true).find_each do |section|
       build_section_connection(section)
     end
   end

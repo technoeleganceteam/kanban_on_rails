@@ -6,6 +6,8 @@ ru:
   1_we_have_just_launched_our_service_title: Мы только что запустили наш сервис
   include_all: Все
   backlog: Бэклог
+  open: Открыта
+  closed: Закрыта
   shared:
     navbar:
       sign_in: Вход
@@ -174,6 +176,7 @@ ru:
       github_issue_id: Github Id задачи
       github_issue_number: Github номер задачи
       project: Проект
+      state: Состояние
     index:
       issues: Задачи
       sync_with_gitlab: Синхронизация с Gitlab

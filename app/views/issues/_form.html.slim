@@ -12,6 +12,12 @@
 
     = form.text_field :body, :class => 'form-control', :placeholder => (t '.enter_issue_body')
 
+  - if issue.persisted?
+    .form-group
+      label for = 'state' = t '.state'
+
+      = form.select :state, Settings.issue_states.map { |item| [(t item), item] }, {}, :class => 'form-control'
+
   .form-group
     label for = 'tags' = t '.tags'
 

@@ -1,6 +1,5 @@
 class Column < ActiveRecord::Base
   include EmptyArrayRemovable
-  include IssueToColumnAndSectionConnectionCheckable
 
   belongs_to :project
 
@@ -12,7 +11,7 @@ class Column < ActiveRecord::Base
 
   has_many :issue_to_section_connections, :dependent => :destroy
 
-  after_save :update_issues
+  after_update :update_issues
 
   def max_order(section)
     section.issue_to_section_connections.where(:column_id => id).order('issue_order DESC').
@@ -31,7 +30,7 @@ class Column < ActiveRecord::Base
 
     connection.issue_order ||= max_order(section) + 1
 
-    connection.assign_attributes(:column_id => id)
+    connection.assign_attributes(:column_id => id, :project_id => issue.project_id)
 
     connection.save
   end
@@ -39,10 +38,10 @@ class Column < ActiveRecord::Base
   private
 
   def update_issues
-    if new_record? || tags_changed? || backlog?
+    if tags_changed? || backlog_changed?
       issue_to_section_connections.destroy_all
 
-      board.projects.map(&:issues).flatten.map(&:save)
+      board.projects.includes(:issues).map(&:issues).flatten.map(&:save)
     end
   end
 
