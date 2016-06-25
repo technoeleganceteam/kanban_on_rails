@@ -8,11 +8,12 @@
 ![Example Kanban board](https://raw.githubusercontent.com/technoeleganceteam/kanban_on_rails/master/app/assets/images/welcome_image_example.jpg "Example Kanban board")
 
 ### Features
-- **Integration with Github, Bitbucket and Gitlab.** Your projects and issues can be synced with these services. All changes with issues will be synced via webhooks and api.
+- **Two-way integration with Github, Bitbucket and Gitlab.** Your issues will be synced with these services via api. All external changes with issues will be also synced via webhooks.
 - **Inviting users to your boards** You can invite a user that has no Github, Bitbucket or Gitlab accounts to your board as manager for example, so he will not see your project code but he will see your issues.
-- **Real-time integration** You can see all changes in real time via websockets. We use great rails framework Action Cable for this. 
+- **Real-time integration** You and your team will see all changes in real time via websockets. We use great rails framework Action Cable for this. 
 - **Multi-project boards** You can create board with multiple projects(even from Gitlab or Github together)
 - **Multi-section boards** You can divide your board to multiple sections. For example you can create section with all issues(by click to checkbox "Or include all?" while creating the section) and section with only important issues(by creating section with tag "Important" for example, all issues with tag "Important" will display there)
+- **Interactive boards** You can drag and drop issues between columns, so its tags will change accordingly. You can also close issue just drop it out of a board.
 - **Multi-language** Service is translated in more than 70 languages.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
 
