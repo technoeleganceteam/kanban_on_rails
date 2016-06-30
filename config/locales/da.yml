@@ -7,6 +7,8 @@ da:
   include_all: Alle
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Vi har netop lanceret vores service
+  open: Open
+  closed: Lukket
   shared:
     navbar:
       sign_in: Log ind
@@ -184,6 +186,7 @@ da:
       github_issue_id: Github problem id
       github_issue_number: Github udstedelsesnummer
       project: Projekt
+      state: stat
     index:
       issues: spørgsmål
       sync_with_github: Synkroniser med GitHub

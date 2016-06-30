@@ -7,6 +7,8 @@ mk:
   include_all: Сите
   backlog: заостанати
   1_we_have_just_launched_our_service_title: Ние имаме само лансиран нашиот сервис
+  open: отворено
+  closed: Затворено
   shared:
     navbar:
       sign_in: Најави се Регистрирај се
@@ -175,6 +177,7 @@ mk:
       github_issue_id: Github издавање лични
       github_issue_number: број Github прашање
       project: проектот
+      state: држава
     index:
       issues: прашања
       sync_with_github: Sync со GitHub

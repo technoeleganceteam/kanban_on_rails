@@ -7,6 +7,8 @@ pa:
   include_all: ਸਾਰੇ
   backlog: ਬੈਕਲਾਗ
   1_we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ ਹੈ
+  open: ਓਪਨ
+  closed: ਬੰਦ
   shared:
     navbar:
       sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
@@ -159,6 +161,7 @@ pa:
       github_issue_id: GitHub ਮੁੱਦੇ 'ID
       github_issue_number: GitHub ਮੁੱਦੇ ਨੂੰ ਨੰਬਰ '
       project: ਪ੍ਰੋਜੈਕਟ
+      state: ਸਟੇਟ
     index:
       issues: ਮੁੱਦੇ
       sync_with_github: GitHub ਨਾਲ ਸਮਕਾਲੀ

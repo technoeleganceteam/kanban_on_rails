@@ -7,6 +7,8 @@ gl:
   include_all: Todo
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Acabamos de publicar o noso servizo
+  open: Aberto
+  closed: Pechado
   shared:
     navbar:
       sign_in: Entrar
@@ -174,6 +176,7 @@ gl:
       github_issue_id: GitHub problema id
       github_issue_number: número de emisión GitHub
       project: Proxecto
+      state: Estado
     index:
       issues: cuestións
       sync_with_github: sincronización con GitHub

@@ -7,6 +7,8 @@ id:
   include_all: Semua
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan kami
+  open: Terbuka
+  closed: Ditutup
   shared:
     navbar:
       sign_in: Masuk
@@ -170,6 +172,7 @@ id:
       github_issue_id: Github masalah id
       github_issue_number: nomor isu Github
       project: Proyek
+      state: Negara
     index:
       issues: masalah
       sync_with_github: Sync dengan github

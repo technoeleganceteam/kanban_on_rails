@@ -7,6 +7,8 @@ fi:
   include_all: Kaikki
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelumme
+  open: Open
+  closed: Suljettu
   shared:
     navbar:
       sign_in: Kirjaudu sisään
@@ -184,6 +186,7 @@ fi:
       github_issue_id: Github kysymys id
       github_issue_number: Github kysymys numero
       project: Project
+      state: State
     index:
       issues: kysymykset
       sync_with_github: synkronointi github

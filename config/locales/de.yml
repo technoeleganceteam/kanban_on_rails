@@ -7,6 +7,8 @@ de:
   include_all: Alle
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Wir haben unseren Service ins Leben gerufen
+  open: Öffnen
+  closed: Geschlossen
   shared:
     navbar:
       sign_in: Anmelden
@@ -125,7 +127,7 @@ de:
       sync_with_github: Sync mit Github
       sync_with_gitlab: Sync mit Gitlab
       sync_with_bitbucket: Sync mit Bitbucket
-      stop_sync_with_bitbucket: Stop-Synchronisation mit Bitbucket
+      stop_sync_with_bitbucket: Stop-Synchronisierung mit Bitbucket
       stop_sync_with_github: Stop-Synchronisierung mit Github
       stop_sync_with_gitlab: Stop-Synchronisierung mit Gitlab
     form:
@@ -136,7 +138,7 @@ de:
       sections: Abschnitte
       column_name: Row Namen
       section_name: Abschnittsname
-      add: Add
+      add: hinzufügen
       column_width: Spaltenbreite
       column_height: Säulenhöhe
       github_repository_id: Github-Repository-ID
@@ -150,7 +152,7 @@ de:
       project_issues: Projektfragen
       project_users: Projektnutzer
     section_fields:
-      section_name: Sektionsname
+      section_name: Abschnittsname
       section_tags: Section-Tags
       section_order: bestellen
       or_include_all: Oder sind alle?
@@ -181,6 +183,7 @@ de:
       github_issue_id: Github Ausgabe id
       github_issue_number: Github Ausgabenummer
       project: Projekt
+      state: Staat
     index:
       issues: Fragen
       sync_with_github: Sync mit Github
@@ -197,7 +200,7 @@ de:
       issue: Ausgabe
   authentications:
     index:
-      enabled_services: Aktiviert Dienste
+      enabled_services: fähige Dienste
     authentication:
       turned_off: Ausgeschaltet
       turn_on: einschalten
@@ -206,8 +209,8 @@ de:
   news:
     1_we_have_just_launched_our_service:
       we_have_just_launched_our_service_title: wir unseren Service nur ins Leben gerufen!
-      we_have_just_launched_our_service_text: Heute haben wir unseren Service zu starten,
-        so kann jeder
+      we_have_just_launched_our_service_text: Heute werden wir unseren Service zu
+        starten, so kann jeder
       sign_up: anmelden
       and_use_it: und verwenden.
       with_love: Mit Liebe,
@@ -423,7 +426,7 @@ de:
         sign_up: Registrieren
         name: Namen
         password: Passwort
-        password_confirmation: Passwort Bestätigung
+        password_confirmation: Paßwortbestätigung
         register: Registrieren
     sessions:
       signed_in: erfolgreich angemeldet.

@@ -6,6 +6,8 @@ tr:
   updated: güncellendi
   include_all: Tüm
   backlog: Backlog
+  open: Açık
+  closed: Kapalı
   shared:
     navbar:
       sign_in: Oturum açın
@@ -140,6 +142,7 @@ tr:
       github_issue_id: Github sorunu kimliği
       github_issue_number: Github sorunu numarası
       project: Projesi
+      state: Devlet
     index:
       issues: sorunları
       new: Yeni

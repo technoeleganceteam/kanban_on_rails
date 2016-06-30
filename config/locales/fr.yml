@@ -7,6 +7,8 @@ fr:
   include_all: Tous
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Nous venons de lancer notre service
+  open: Ouvrir
+  closed: Fermé
   shared:
     navbar:
       sign_in: Connexion
@@ -149,7 +151,7 @@ fr:
       section_order: Ordre
       or_include_all: Ou comprennent tous?
     column_fields:
-      remove_column: Supprimer la colonne
+      remove_column: Retirer la colonne
       max_issues_count: questions Max comptent dans la colonne
       column_tags: étiquettes de colonne
       column_order: Ordre
@@ -167,13 +169,14 @@ fr:
       enter_issue_title: Entrez publication titre
       save: Sauvegarder
       body: Body
-      enter_issue_body: Entrez le corps d'émission
+      enter_issue_body: Entrez corps d'émission
       tags: Balises
       issue_order: Ordre
       bitbucket_issue_id: Bitbucket question id
       github_issue_id: Github question id
       github_issue_number: Github numéro d'émission
       project: Project
+      state: État
     index:
       issues: questions
       sync_with_github: Sync avec github
@@ -202,12 +205,12 @@ fr:
       we_have_just_launched_our_service_text: Aujourd'hui, nous lancer notre service
         afin que tout le monde peut
       sign_up: vous inscrire
-      and_use_it: et de l'utiliser.
+      and_use_it: et l'utiliser.
       with_love: Avec amour,
       technoelegance_team: Technoelegance équipe
     index:
       all_news: Toutes les nouvelles
-      read_more: En savoir plus
+      read_more: Lire la suite
   welcome:
     index:
       welcome_to_kanban_on_rails: Bienvenue sur Kanban On Rails
@@ -227,18 +230,18 @@ fr:
       section_order: Ordre
       or_include_all: Ou comprennent tous?
     column_fields:
-      remove_column: Supprimer la colonne
+      remove_column: Retirer la colonne
       max_issues_count: questions Max comptent dans la colonne
       column_tags: étiquettes de colonne
       column_order: Ordre
-      backlog: Carnet de commandes
+      backlog: Backlog
     show:
       next_page: Page suivante
     index:
       boards: Boards
       new: Nouveau
     board:
-      board_users: utilisateurs
+      board_users: Utilisateurs
       edit: Modifier
       destroy: Destroy
   user_requests:
@@ -251,7 +254,7 @@ fr:
       feedback_title: Commentaires
     form:
       feedback_name: Votre nom
-      feedback_email: Votre e-mail
+      feedback_email: Votre email
       feedback_content: Contenu
       cancel: Annuler
       send: Envoyer
@@ -267,12 +270,12 @@ fr:
       what_is_kanban_on_rails: Qu'est-ce KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails est le service où vous pouvez créer des
         conseils Kanban et synchroniser avec Github ou Bitbucket
-      what_features_has_kanban_on_rails: Quelles sont les caractéristiques a KanbanOnRails?
+      what_features_has_kanban_on_rails: Quelles fonctionnalités a KanbanOnRails?
       kanban_on_rails_features: Vous pouvez synchroniser vos projets et des problèmes
         avec Github et Bitbucket, inviter des utilisateurs (pour les gestionnaires
         exemple) pour votre projet, le déployer sur votre propre serveur
       i_have_some_requests: J'ai quelques demandes
-      you_can_write_request: Vous pouvez écrire demande
+      you_can_write_request: Vous pouvez écrire la demande
       here: ici
       i_have_seen_some_typo_or_wrong_translation: J'ai vu quelques fautes de frappe
         ou des traductions erronées
@@ -310,7 +313,6 @@ fr:
         one: '1 erreur interdit ce% {resource} d''être sauvés:'
         other: "% {count} erreurs interdites ce% {resource} d'être sauvé:"
     bad_request:
-      bad_request: Bad Request
       request_result: Demande résultat
       bad_request_description: Le serveur ne peut pas ou ne veut pas traiter la demande
         en raison d'une erreur de client apparente
@@ -322,7 +324,7 @@ fr:
         pu être suivie en raison d'erreurs sémantiques
       go_to_root: Aller à la racine
     not_found:
-      not_found: Non Trouvé
+      not_found: Non trouvé
       request_result: Demande résultat
       not_found_description: La ressource demandée n'a pu être trouvée, mais peuvent
         être disponibles à l'avenir
@@ -330,8 +332,8 @@ fr:
     forbidden:
       forbidden: Forbidden
       request_result: Demande résultat
-      forbidden_description: La demande est une demande valide, mais le serveur refuse
-        d'y répondre
+      forbidden_description: La demande était une demande valide, mais le serveur
+        refuse d'y répondre
       go_to_root: Aller à la racine
     internal_server_error:
       internal_server_error: Internal Server Error
@@ -357,14 +359,14 @@ fr:
         votre compte en quelques minutes.
       new:
         send_mail_for_confirm_your_email: Envoyez un mail pour confirmer votre e-mail
-        submit: Envoyer
+        submit: Soumettre
     failure:
       already_authenticated: Vous êtes déjà connecté.
       inactive: Votre compte est pas encore activé.
       invalid: email ou mot de passe invalide.
       locked: Votre compte est verrouillé.
       last_attempt: Vous avez une tentative plus avant que votre compte sera verrouillé.
-      not_found_in_database: email ou mot de passe invalide.
+      not_found_in_database: e-mail ou mot de passe invalide.
       timeout: Votre session a expiré. S'il vous plaît vous connecter à nouveau pour
         continuer.
       unauthenticated: Vous devez vous connecter ou vous inscrire avant de continuer.
@@ -382,7 +384,7 @@ fr:
         someone_has_requests_a_link_to_change_your_password_you_can_do_this_through_the_link_below: Quelqu'un
           a demande un lien pour changer votre mot de passe. Vous pouvez le faire
           via le lien ci-dessous.
-        change_my_password: Changer mon mot de passe
+        change_my_password: Modifier mon mot de passe
         if_you_didnt_request_this_please_ignore_this_email: Si vous n'avez pas demandé
           cette s'il vous plaît ignorer cet e-mail.
       unlock_instructions:
@@ -405,15 +407,15 @@ fr:
         forgot_your_password: Récupérez votre mot de passe
         reset_password: Envoyer récupérer url
       edit:
-        change_your_password: Modifier votre mot de passe
+        change_your_password: Changez votre mot de passe
         new_password: Nouveau mot de passe
         change_password: Change
     registrations:
       destroyed: Bye! Votre compte a été annulé avec succès. Nous espérons te revoir
         bientôt.
       signed_up: Bienvenue! Vous avez signé avec succès.
-      signed_up_but_inactive: que vous avez signé avec succès. Cependant, nous ne
-        pouvions pas vous connecter parce que votre compte n'a pas encore été activé.
+      signed_up_but_inactive: Vous avez signé avec succès. Cependant, nous ne pouvions
+        pas vous connecter parce que votre compte n'a pas encore été activé.
       signed_up_but_locked: Vous avez signé avec succès. Cependant, nous ne pouvions
         pas vous connecter parce que votre compte est verrouillé.
       signed_up_but_unconfirmed: Un message avec un lien de confirmation a été envoyé
@@ -430,13 +432,13 @@ fr:
         password: Mot de passe
         register: Inscrivez-vous
     sessions:
-      signed_in: Signé à succès.
+      signed_in: Signé en succès.
       signed_out: Signé avec succès.
       new:
         sign_in: Connexion
         password: Mot de passe
         remember_me: Se souvenir de moi
-        forgot_your_password: Vous avez oublié votre mot de passe?
+        forgot_your_password: Mot de passe oublié?
     unlocks:
       send_instructions: Vous recevrez un email avec des instructions sur la façon
         de déverrouiller votre compte en quelques minutes.

@@ -7,6 +7,8 @@ lb:
   include_all: All
   backlog: Réckstauproblem
   1_we_have_just_launched_our_service_title: Mir hu just eise Service lancéiert
+  open: Open
+  closed: Zou
   shared:
     navbar:
       sign_in: Umellen
@@ -181,6 +183,7 @@ lb:
       github_issue_id: Github Fro id
       github_issue_number: Github Thema Nummer
       project: Project
+      state: Stat
     index:
       issues: Problemer
       sync_with_github: Synchroniséiert mat github

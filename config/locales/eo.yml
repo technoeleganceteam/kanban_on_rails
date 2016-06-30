@@ -7,6 +7,8 @@ eo:
   include_all: Ĉiuj
   backlog: backlog
   1_we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon
+  open: Malferma
+  closed: Fermita
   shared:
     navbar:
       sign_in: Ensaluti
@@ -184,6 +186,7 @@ eo:
       github_issue_id: GitHub temo identigilo
       github_issue_number: GitHub temo nombro
       project: Projekto
+      state: ŝtato
     index:
       issues: temoj
       sync_with_github: Sync kun GitHub

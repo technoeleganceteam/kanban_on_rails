@@ -8,6 +8,8 @@ tl:
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Lang namin ay may inilunsad ang aming
     serbisyo
+  open: Open
+  closed: Isinara
   shared:
     navbar:
       sign_in: Mag-sign in
@@ -177,6 +179,7 @@ tl:
       github_issue_id: Github isyu id
       github_issue_number: Github issue number
       project: Project
+      state: State
     index:
       issues: isyu
       sync_with_github: I-sync sa github

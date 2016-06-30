@@ -7,6 +7,8 @@ nl:
   include_all: Alle
   backlog: Achterstand
   1_we_have_just_launched_our_service_title: We hebben zopas onze service
+  open: Open
+  closed: Gesloten
   shared:
     navbar:
       sign_in: Inloggen
@@ -177,6 +179,7 @@ nl:
       github_issue_id: Github kwestie id
       github_issue_number: Github nummer van afgifte
       project: Project
+      state: State
     index:
       issues: kwesties
       sync_with_github: Synchroniseren met github

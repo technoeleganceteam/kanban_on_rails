@@ -7,6 +7,8 @@ af:
   include_all: Alle
   backlog: Agterstand
   1_we_have_just_launched_our_service_title: Ons het net begin ons diens
+  open: Oop
+  closed: gesluit
   shared:
     navbar:
       sign_in: Teken in
@@ -178,6 +180,7 @@ af:
       github_issue_id: GitHub kwessie ID
       github_issue_number: GitHub kwessie aantal
       project: Projek
+      state: Staat
     index:
       issues: kwessies
       sync_with_github: Sync met GitHub

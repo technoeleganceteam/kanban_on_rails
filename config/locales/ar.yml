@@ -7,6 +7,8 @@ ar:
   include_all: جميع
   backlog: المتراكمة
   1_we_have_just_launched_our_service_title: لقد بدأت للتو خدمتنا
+  open: المفتوحة
+  closed: مغلق
   shared:
     navbar:
       sign_in: تسجيل الدخول
@@ -168,6 +170,7 @@ ar:
       github_issue_id: جيثب قضية الهوية
       github_issue_number: العدد رقم جيثب
       project: مشروع
+      state: الدولة
     index:
       issues: القضايا
       sync_with_github: تزامن مع جيثب

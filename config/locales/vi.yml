@@ -8,6 +8,8 @@ vi:
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Chúng tôi đã vừa tung ra dịch vụ của
     chúng tôi
+  open: Mở
+  closed: đóng
   shared:
     navbar:
       sign_in: Đăng nhập
@@ -30,7 +32,6 @@ vi:
       password: Mật khẩu
       current_password: mật khẩu hiện tại
       name: Tên
-      base: cơ sở
       title: Tiêu đề
       user_to_project_connection: tài để kết nối dự án
       user_to_board_connection: tài để lên kết nối
@@ -167,6 +168,7 @@ vi:
       bitbucket_issue_id: Bitbucket vấn đề id
       github_issue_id: Github vấn đề id
       github_issue_number: số vấn đề Github
+      state: Nhà nước
     index:
       issues: vấn đề
       sync_with_github: Sync với github

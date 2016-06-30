@@ -7,6 +7,8 @@ uk:
   include_all: Все
   backlog: Відставання
   1_we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс
+  open: Відкрити
+  closed: Закрито
   shared:
     navbar:
       sign_in: Вхід
@@ -69,7 +71,7 @@ uk:
       feedbacks: Відгук
     user_requests_navigation:
       all: Все
-      my_requests: Мої запити
+      my_requests: Мої прохання
   users:
     new:
       invite_user: Запросити користувача
@@ -77,13 +79,13 @@ uk:
       name: Ім'я
       enter_user_name: Введіть ім'я користувача
       email: E-mail
-      enter_user_email: Вхід користувача по електронній пошті
+      enter_user_email: Вхід користувача електронної пошти
       enter_user_password: Введіть пароль користувача
       password: Пароль
       save: Зберегти
     index:
-      project: Проект
-      users: користувачі
+      project: проекту
+      users: користувачів
       new: Новий
       board: Рада
     edit:
@@ -105,7 +107,7 @@ uk:
       hello: Привіт
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
-      boards: плати
+      boards: Дошки
       issues: питання
       you_can_sync_projects_and_issues_from: Ви можете включити різні послуги і буде
         підтримувати ваші проекти і питання
@@ -154,13 +156,13 @@ uk:
       column_tags: мітки стовпців
       column_order: Замовити
     show:
-      project: Проект
-      related_boards: Схожі дошки
+      project: проекту
+      related_boards: пов'язані дошки
       project_issues: питання проекту
       project_users: користувачів проекту
       new: Новий
     project_modal:
-      project: Проект
+      project: проекту
   issues:
     form:
       title: Назва
@@ -168,12 +170,13 @@ uk:
       save: Зберегти
       body: Body
       enter_issue_body: Введіть випуск тіло
-      tags: Мітки
+      tags: Теги
       issue_order: Замовити
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
       github_issue_number: Github номер випуску
-      project: Проект
+      project: Project
+      state: Держава
     index:
       issues: питання
       sync_with_github: Синхронізація з GitHub
@@ -183,7 +186,7 @@ uk:
       destroy: Видалити
       edit: Редагувати
     edit:
-      edit_issue: Редагувати питання
+      edit_issue: Змінити питання
     new:
       new_issue: Новий випуск
     issue_modal:
@@ -201,7 +204,7 @@ uk:
       we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс!
       we_have_just_launched_our_service_text: Сьогодні ми запускаємо наш сервіс так
         що кожен може
-      sign_up: зареєструватися
+      sign_up: підписатися
       and_use_it: і використовувати його.
       with_love: З любов'ю,
       technoelegance_team: Technoelegance Team
@@ -219,7 +222,7 @@ uk:
     form:
       name: Ім'я
       enter_board_name: Введіть ім'я дошка
-      columns: Колони
+      columns: Стовпці
       add: Додати
       sections: Розділи
       save: Зберегти
@@ -231,7 +234,7 @@ uk:
       or_include_all: Або включати в себе все?
     column_fields:
       remove_column: Видалити стовпець
-      column_tags: мітки стовпців
+      column_tags: теги Колонка
       column_order: Замовити
       backlog: Відставання
     show:
@@ -285,7 +288,7 @@ uk:
       about_kanban_on_rails: Про KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails це сервіс, де ви можете створювати
         Kanban дошки і синхронізувати його з Github або Bitbucket
-      kanban_on_rails_features: особливості KanbanOnRails
+      kanban_on_rails_features: функції KanbanOnRails
       sync_with_github_and_bitbucket: Ви можете синхронізувати ваші проекти і проблеми
         з Github і Bitbucket
       invite_users: Ви можете запрошувати користувачів (наприклад менеджерів) для
@@ -305,9 +308,9 @@ uk:
         ласка, запитайте новий
       expired: закінчився, будь ласка, запитайте новий
       not_found: не знайдені
-      not_locked: ні заблокований
+      not_locked: були незамкнені
       not_saved:
-        one: '1 помилка заборонена цей% {ресурс} з тих, що спасалися:'
+        one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
         other: "{число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
     bad_request:
       bad_request: Bad Request
@@ -346,7 +349,7 @@ uk:
         sign_up: Увійдіть
         didnt_receive_confirmation_instructions: Чи не отримали підтвердження інструкції?
         sign_in_with: Вхід з використанням
-        fast_login_almost_one_click: Швидкий Логін (майже один клік)
+        fast_login_almost_one_click: Швидкий Ввійти (майже один клік)
     confirmations:
       confirmed: ваш аккаунт був успішно підтверджений.
       send_instructions: Ви отримаєте лист з інструкціями про те, як підтвердити свій
@@ -365,7 +368,7 @@ uk:
       locked: Ваш рахунок заблокований.
       last_attempt: У вас є ще одна спроба, перш ніж ваш обліковий запис буде заблокована.
       not_found_in_database: Невірний адреса електронної пошти або пароль.
-      timeout: Вашої сесії минув. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
+      timeout: Ваш сеанс закінчився. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
       unauthenticated: Ви повинні увійти або зареєструватися, перш ніж продовжити.
       unconfirmed: Ви повинні підтвердити свій аккаунт, перш ніж продовжити.
     mailer:
@@ -384,16 +387,16 @@ uk:
         if_you_didnt_request_this_please_ignore_this_email: Якщо ви не замовляли це
           не звертайте уваги на цей лист.
       unlock_instructions:
-        subject: Розблокування Інструкції
+        subject: розблокування Інструкції
     omniauth_callbacks:
       failure: Неможливо перевірити справжність вас від {%} роду, тому що "% {причина}".
       success: успішно пройшов перевірку автентичності від {%} люб'язне увагу.
     passwords:
-      no_token: Ви не можете отримати доступ до цієї сторінки, не приходячи від електронної
-        пошти скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
+      no_token: Ви не можете відкрити цю сторінку, не приходячи від електронної пошти
+        скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
         будь ласка, переконайтеся, що ви використовували повний URL за умови.
-      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
-        про те, як скинути пароль протягом декількох хвилин.
+      send_instructions: Ви отримаєте лист з інструкціями про те, як скинути пароль
+        протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, ви отримаєте посилання для відновлення пароля на вашу адресу електронної
         пошти протягом декількох хвилин.
@@ -415,9 +418,9 @@ uk:
         вас в тому, що ваш обліковий запис ще не активовано.
       signed_up_but_locked: Ви підписалися успішно. Проте, ми не могли підписати вас
         в тому, що ваш обліковий запис буде заблокована.
-      signed_up_but_unconfirmed: повідомлення з посиланням для підтвердження відправлено
-        на вашу електронну адресу. Будь ласка, відкрийте посилання, щоб активувати
-        свій обліковий запис.
+      signed_up_but_unconfirmed: по електронній пошті посилання для підтвердження
+        відправлено на вашу електронну адресу. Будь ласка, відкрийте посилання, щоб
+        активувати свій обліковий запис.
       update_needs_confirmation: Ви оновили свій аккаунт успішно, але нам потрібно
         підтвердити свою нову адресу електронної пошти. Будь ласка, перевірте свою
         електронну пошту і натисніть на посилання підтвердження, щоб завершити підтвердивши

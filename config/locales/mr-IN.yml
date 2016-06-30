@@ -6,6 +6,8 @@ mr-IN:
   updated: सुधारित
   include_all: सर्व
   backlog: अनुशेष
+  open: ओपन
+  closed: बंद
   shared:
     navbar:
       sign_in: साइन इन करा
@@ -90,12 +92,11 @@ mr-IN:
       your_profile_was_successfully_updated: यशस्वीरित्या अद्यतनित केली गेली
     dashboard:
       hello: हॅलो
-      here_some_of_your_statistics: येथे आपल्या आकडेवारी काही
       projects: प्रकल्प
       boards: बोर्ड
       issues: मुद्दे
-      turn_on_github: Github चालू
       turn_on_gitlab: Gitlab चालू
+      turn_on_bitbucket: Bitbucket चालू
       sync_with_bitbucket: Bitbucket समक्रमित
       sync_with_github: Github समक्रमित
       syncing_with_gitlab: Gitlab समक्रमित
@@ -164,6 +165,7 @@ mr-IN:
       github_issue_id: Github समस्या आयडी
       github_issue_number: Github समस्या संख्या
       project: प्रकल्प
+      state: राज्य
     index:
       issues: समस्या
       new: नवी

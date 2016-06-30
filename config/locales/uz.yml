@@ -6,6 +6,8 @@ uz:
   updated: yangilangan
   include_all: Barcha
   backlog: Buyurtma
+  open: Open
+  closed: yopilgan
   shared:
     navbar:
       sign_in: Sign in
@@ -140,6 +142,7 @@ uz:
       github_issue_id: Github masala id
       github_issue_number: Github masala soni
       project: loyihasi
+      state: Davlat
     index:
       issues: masalalar
       new: Yangi

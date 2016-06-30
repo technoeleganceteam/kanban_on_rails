@@ -5,6 +5,8 @@ ja:
   updated: 更新
   include_all: すべて
   backlog: バックログ
+  open: オープン
+  closed: は休館します
   shared:
     navbar:
       sign_in: ログイン
@@ -41,7 +43,7 @@ ja:
       read_more: 続きを読みます
     email_signature:
       info: 情報
-      mailer: メ​​ーラー
+      mailer: メーラー
       technoelegance: Technoelegance株式会社
     header:
       requests: リクエスト
@@ -133,6 +135,7 @@ ja:
       bitbucket_issue_id: のBitbucket発行ID
       github_issue_number: Githubの発行数
       project: プロジェクト
+      state: 州
     index:
       issues: 問題
       new: 新

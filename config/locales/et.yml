@@ -7,6 +7,8 @@ et:
   include_all: Kõik
   backlog: Mahajäämus
   1_we_have_just_launched_our_service_title: Oleme just käivitanud meie teenus
+  open: avatud
+  closed: Suletud
   shared:
     navbar:
       sign_in: Logi sisse
@@ -184,6 +186,7 @@ et:
       github_issue_id: Github küsimus id
       github_issue_number: Github küsimus number
       project: Project
+      state: riik
     index:
       issues: küsimusi
       sync_with_github: Sync github

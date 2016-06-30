@@ -8,6 +8,8 @@ nb:
   backlog: Tunggakan
   1_we_have_just_launched_our_service_title: Kami baru sahaja melancarkan perkhidmatan
     kami
+  open: Terbuka
+  closed: Ditutup
   shared:
     navbar:
       sign_in: Log masuk
@@ -175,6 +177,7 @@ nb:
       github_issue_id: Github id isu
       github_issue_number: nombor isu Github
       project: Projek
+      state: Negeri
     index:
       issues: isu-isu
       sync_with_github: Sync dengan github

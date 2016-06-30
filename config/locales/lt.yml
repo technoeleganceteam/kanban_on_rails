@@ -7,6 +7,8 @@ lt:
   include_all: Visi
   backlog: Neatlikti
   1_we_have_just_launched_our_service_title: Mes ką tik pradėjo savo paslaugas
+  open: Atviras
+  closed: Uždarymo
   shared:
     navbar:
       sign_in: Registruotis
@@ -158,7 +160,7 @@ lt:
       column_name: Stulpelio pavadinimas
       remove_column: Pašalinti stulpelį
       max_issues_count: Max klausimai skaičiuoti skiltyje
-      column_tags: skiltis žymės
+      column_tags: žymės skiltis
       column_order: Užsakyti
     show:
       project: projektas
@@ -182,6 +184,7 @@ lt:
       github_issue_id: Github klausimas ID
       github_issue_number: Github Išdavimo numeris
       project: projektas
+      state: valstybė
     index:
       issues: klausimai
       sync_with_github: sinchronizuoti su GitHub

@@ -7,6 +7,8 @@ is:
   include_all: Allt
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Við höfum bara sett þjónustu okkar
+  open: Open
+  closed: Lokað
   shared:
     navbar:
       sign_in: Skrá inn
@@ -181,6 +183,7 @@ is:
       github_issue_id: github mál id
       github_issue_number: github mál númer
       project: Project
+      state: State
     index:
       issues: málefni
       sync_with_github: Sync með github

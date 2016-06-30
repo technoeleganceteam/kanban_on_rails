@@ -7,6 +7,8 @@ lo:
   include_all: ທັງຫມົດ
   backlog: Backlog
   1_we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ
+  open: ເປີດ
+  closed: ປິດ
   shared:
     navbar:
       sign_in: ເຂົ້າສູ່ລະບົບ
@@ -170,6 +172,7 @@ lo:
       github_issue_id: GitHub ບັນຫາ id
       github_issue_number: GitHub ຈໍານວນບັນຫາ
       project: Project
+      state: State
     index:
       issues: ບັນຫາ
       sync_with_github: Sync ກັບ GitHub

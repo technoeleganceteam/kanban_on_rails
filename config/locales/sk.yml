@@ -7,6 +7,8 @@ sk:
   include_all: Všetko
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Práve sme spustili naše služby
+  open: Otvorená
+  closed: Zatvorené
   shared:
     navbar:
       sign_in: Prihlásiť
@@ -29,7 +31,7 @@ sk:
       password: Password
       current_password: Súčasné heslo
       name: Name
-      base: Základňa
+      base: Základné
       title: Názov
       user_to_project_connection: Užívateľ projektovať spojenie
       user_to_board_connection: Užívateľ nastúpiť pripojenie
@@ -174,6 +176,7 @@ sk:
       github_issue_id: Github problém id
       github_issue_number: Github číslo vydania
       project: Project
+      state: stáť
     index:
       issues: problémy
       sync_with_github: Synchronizácia s github

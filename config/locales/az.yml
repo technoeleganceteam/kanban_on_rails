@@ -6,6 +6,8 @@ az:
   updated: yenilənir
   include_all: Bütün
   backlog: Portfelinizi
+  open: Open
+  closed: Bağlanıb
   shared:
     navbar:
       sign_in: Sign in
@@ -140,6 +142,7 @@ az:
       github_issue_id: Github məsələ id
       github_issue_number: Github məsələ sayı
       project: Project
+      state: State
     index:
       issues: məsələlər
       new: New

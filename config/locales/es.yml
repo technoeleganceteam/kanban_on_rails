@@ -7,6 +7,8 @@ es:
   include_all: Todo
   backlog: Cartera
   1_we_have_just_launched_our_service_title: Acabamos de lanzar nuestro servicio
+  open: Abrir
+  closed: Cerradas
   shared:
     navbar:
       sign_in: Entrar
@@ -28,7 +30,6 @@ es:
       password: contraseña
       current_password: contraseña actual
       name: Nombre
-      base: Base
       title: Título
       user_to_project_connection: usuario a la conexión del proyecto
       user_to_board_connection: usuario a placa
@@ -155,6 +156,7 @@ es:
       bitbucket_issue_id: Bitbucket tema Identificación
       github_issue_id: Github tema Identificación
       github_issue_number: número de emisión Github
+      state: Estado
     index:
       issues: cuestiones
       sync_with_github: sincronización con github

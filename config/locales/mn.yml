@@ -6,6 +6,8 @@ mn:
   updated: шинэчлэгдсэн
   include_all: мэдээлэл
   backlog: удаашрал
+  open: Нээлттэй
+  closed: хаалттай
   shared:
     navbar:
       sign_in: Дансаа ашиглах
@@ -157,6 +159,7 @@ mn:
       github_issue_id: Github асуудал дугаар
       github_issue_number: Github асуудал тоо
       project: төсөл
+      state: улс
     index:
       issues: асуудлууд
       new: Нью-

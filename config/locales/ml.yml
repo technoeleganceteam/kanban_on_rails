@@ -6,6 +6,8 @@ ml:
   include_all: എല്ലാ
   backlog: ജെഎംജിഎസ്
   1_we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു
+  open: തുറക്കുക
+  closed: അടച്ചു
   shared:
     navbar:
       sign_in: സൈൻ
@@ -147,6 +149,7 @@ ml:
       tags: ടാഗുകൾ
       issue_order: ഓർഡർ
       project: പദ്ധതി
+      state: സംസ്ഥാന
     index:
       issues: പ്രശ്നങ്ങൾ
       sync_with_bitbucket: bitbucket സമന്വയിപ്പിക്കുക

@@ -7,6 +7,8 @@ el:
   include_all: Όλα
   backlog: Ανεκτέλεστο
   1_we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία μας
+  open: Open
+  closed: Έκλεισε
   shared:
     navbar:
       sign_in: Σύνδεση
@@ -52,7 +54,6 @@ el:
       select_section_tags: Επιλέξτε ετικέτες ενότητα
       select_issue_tags: Επιλέξτε θέμα ετικέτες
     email_signature:
-      info: Πληροφορίες
       mailer: Μέιλερ
       technoelegance: Technoelegance Ltd.
     pagination_link:
@@ -175,6 +176,7 @@ el:
       github_issue_id: Github id θέμα
       github_issue_number: Github αριθμό έκδοσης
       project: Έργου
+      state: μέλος
     index:
       issues: θέματα
       sync_with_github: Συγχρονισμός με το GitHub

@@ -7,6 +7,8 @@ pl:
   include_all: Wszystko
   backlog: Zaległości
   1_we_have_just_launched_our_service_title: Właśnie uruchomiliśmy nasz serwis
+  open: Otwarty
+  closed: Zamknięto
   shared:
     navbar:
       sign_in: Zaloguj się
@@ -28,6 +30,7 @@ pl:
       password: Hasło
       current_password: Aktualne hasło
       name: Nazwa
+      base: bazowa
       user_to_project_connection: użytkownika do projektu połączenia
       user_to_board_connection: użytkownika wsiąść połączenia
       columns:
@@ -143,6 +146,7 @@ pl:
     column_fields:
       remove_column: Usuń kolumnę
       max_issues_count: Maks kwestie liczyć w kolumnie
+      column_tags: znaczniki kolumn
       column_order: Zamówienie
     show:
       project: Projekt
@@ -162,6 +166,7 @@ pl:
       issue_order: Zamówienie
       github_issue_number: numer wydania Github
       project: Projekt
+      state: State
     index:
       issues: kwestie
       sync_with_github: Synchronizacja z github
@@ -271,7 +276,7 @@ pl:
       about_kanban_on_rails: O KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails jest serwis, gdzie można tworzyć tablice
         Kanban i synchronizować je z Github lub Bitbucket
-      kanban_on_rails_features: KanbanOnRails funkcje
+      kanban_on_rails_features: funkcje KanbanOnRails
       sync_with_github_and_bitbucket: Ty mogą synchronizować swoje projekty i problemy
         z Github i Bitbucket
       invite_users: Możesz zaprosić użytkowników (na przykład menedżerów) dla projektu

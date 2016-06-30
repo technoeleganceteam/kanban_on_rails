@@ -7,6 +7,8 @@ hu:
   include_all: Minden
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Épp most indult a szolgáltatás
+  open: megnyitása
+  closed: Zárt
   shared:
     navbar:
       sign_in: Bejelentkezés
@@ -184,6 +186,7 @@ hu:
       github_issue_id: Github kérdés id
       github_issue_number: Github kérdés száma
       project: Project
+      state: állam
     index:
       issues: kérdések
       sync_with_github: Szinkronizálás a GitHub

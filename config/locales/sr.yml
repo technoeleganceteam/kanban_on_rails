@@ -7,6 +7,8 @@ sr:
   include_all: Све
   backlog: Бацклог
   1_we_have_just_launched_our_service_title: Управо смо покренули наш сервис
+  open: Отворено
+  closed: Цлосед
   shared:
     navbar:
       sign_in: Пријавите се
@@ -164,7 +166,6 @@ sr:
     show:
       project: Пројекат
       related_boards: Релатед плоче
-      project_info: Пројекат
       project_issues: питања Пројецт
       project_users: Корисници пројекта
       new: Нова
@@ -183,6 +184,7 @@ sr:
       github_issue_id: Гитхуб питање? Ид
       github_issue_number: Гитхуб број проблем
       project: Пројекат
+      state: државе
     index:
       issues: питања
       sync_with_github: Синхронизација са ГитХуб

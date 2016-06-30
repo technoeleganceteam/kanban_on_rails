@@ -7,6 +7,8 @@ th:
   include_all: ทั้งหมด
   backlog: Backlog
   1_we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา
+  open: เปิด
+  closed: ปิด
   shared:
     navbar:
       sign_in: เข้าสู่ระบบ
@@ -29,7 +31,7 @@ th:
       password: รหัสผ่าน
       current_password: รหัสผ่านปัจจุบัน
       name: ชื่อ
-      base: ฐาน
+      base: ฐา​​น
       title: ชื่อเรื่อง
       user_to_project_connection: ผู้ใช้เชื่อมต่อกับโครงการ
       user_to_board_connection: ผู้ใช้ไปยังคณะกรรมการการเชื่อมต่อ
@@ -170,6 +172,7 @@ th:
       github_issue_id: Github รหัสปัญหา
       github_issue_number: Github จำนวนปัญหา
       project: โครงการ
+      state: รัฐ
     index:
       issues: ปัญหา
       sync_with_github: Sync กับ GitHub

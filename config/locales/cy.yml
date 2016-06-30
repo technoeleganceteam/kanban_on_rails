@@ -7,6 +7,8 @@ cy:
   include_all: Mae pob
   backlog: Ôl-groniad
   1_we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth
+  open: Agored
+  closed: Ar gau
   shared:
     navbar:
       sign_in: Mewngofnodi
@@ -167,6 +169,7 @@ cy:
       github_issue_id: Github mater id
       github_issue_number: Rhif rhifyn Github
       project: Prosiect
+      state: Gwladol
     index:
       issues: materion
       sync_with_github: Sync gyda GitHub

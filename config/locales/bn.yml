@@ -7,6 +7,8 @@ bn:
   include_all: সকল
   backlog: ব্যাকলগ
   1_we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করেছে
+  open: খুলুন
+  closed: বন্ধ
   shared:
     navbar:
       sign_in: নিদর্শন
@@ -160,6 +162,7 @@ bn:
       github_issue_id: গিটহাব ইস্যু আইডি
       github_issue_number: গিটহাব ইস্যু নম্বর
       project: প্রকল্প
+      state: রাজ্য
     index:
       issues: সমস্যা
       sync_with_github: GitHub সঙ্গে সিঙ্ক
@@ -414,7 +417,6 @@ bn:
       signed_in: সফলভাবে সাইন ইন করুন.
       signed_out: সফলভাবে সাইন আউট করা.
       new:
-        sign_in: নিদর্শন
         password: পাসওয়ার্ড
         remember_me: আমাকে মনে রেখো
         forgot_your_password: আপনার পাসওয়ার্ড ভুলে গেছেন?

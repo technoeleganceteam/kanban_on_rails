@@ -6,6 +6,8 @@ zh-TW:
   updated: 更新
   include_all: 所有
   1_we_have_just_launched_our_service_title: 我們剛剛推出了我們的服務
+  open: 開放
+  closed: 關閉
   shared:
     navbar:
       sign_in: 登陸
@@ -215,7 +217,6 @@ zh-TW:
       feedback_email: 您的電子郵件
       feedback_content: 內容
       cancel: 取消
-      send: 發送
       feedback_recaptcha: 的Recaptcha
     success:
       success_feedback: 謝謝！我們已經收到您的反饋意見。
@@ -253,7 +254,6 @@ zh-TW:
       not_locked: 沒有鎖
       not_saved:
         one: 1錯誤，無法儲存禁止此％{}資源：
-        other: "％{}計數被禁止保存此％{}資源錯誤："
     bad_request:
       bad_request: 錯誤的請求
       request_result: 請求結果

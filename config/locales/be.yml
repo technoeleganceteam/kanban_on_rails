@@ -7,6 +7,8 @@ be:
   include_all: Усе
   backlog: Адставанне
   1_we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс
+  open: Адкрыць
+  closed: Закрыта
   shared:
     navbar:
       sign_in: Уваход
@@ -69,7 +71,7 @@ be:
       feedbacks: Водгук
     user_requests_navigation:
       all: Усе
-      my_requests: Мае запыты
+      my_requests: Мае просьбы
   users:
     new:
       invite_user: Запрасіць карыстальніка
@@ -77,13 +79,13 @@ be:
       name: Імя
       enter_user_name: Калі ласка, увядзіце імя карыстальніка
       email: E-mail
-      enter_user_email: Уваход карыстальніка па электроннай пошце
+      enter_user_email: Уваход карыстальніка электроннай пошты
       enter_user_password: Калі ласка, увядзіце пароль карыстальніка
       password: Пароль
       save: Захаваць
     index:
-      project: Праект
-      users: карыстальнікі
+      project: праекта
+      users: карыстальнікаў
       new: Новы
       board: Савет
     edit:
@@ -105,7 +107,7 @@ be:
       hello: Прывітанне
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
-      boards: платы
+      boards: Дошкі
       issues: пытанні
       you_can_sync_projects_and_issues_from: Вы можаце ўключыць розныя паслугі і сінхранізаваць
         вашы праекты і пытанні
@@ -154,13 +156,13 @@ be:
       column_tags: пазнакі слупкоў
       column_order: Замовіць
     show:
-      project: Праект
-      related_boards: Падобныя дошкі
+      project: праекта
+      related_boards: Змяненні дошкі
       project_issues: пытанні праекта
       project_users: карыстальнікаў праекта
       new: Новы
     project_modal:
-      project: Праект
+      project: праекта
   issues:
     form:
       title: Назва
@@ -168,12 +170,13 @@ be:
       save: Захаваць
       body: Body
       enter_issue_body: Калі ласка, увядзіце выпуск цела
-      tags: Пазнакі
+      tags: Тэгі
       issue_order: Замовіць
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
       github_issue_number: Github нумар выпуску
-      project: Праект
+      project: Project
+      state: Дзяржава
     index:
       issues: пытанні
       sync_with_github: Сінхранізацыя з GitHub
@@ -183,7 +186,7 @@ be:
       destroy: Выдаліць
       edit: Рэдагаваць
     edit:
-      edit_issue: Рэдагаваць пытанне
+      edit_issue: Змяніць пытанне
     new:
       new_issue: Новы выпуск
     issue_modal:
@@ -201,7 +204,7 @@ be:
       we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс!
       we_have_just_launched_our_service_text: Сёння мы запускаем наш сэрвіс так што
         кожны можа
-      sign_up: зарэгістравацца
+      sign_up: падпісацца
       and_use_it: і выкарыстоўваць яго.
       with_love: З любоўю,
       technoelegance_team: Technoelegance Team
@@ -219,7 +222,7 @@ be:
     form:
       name: Імя
       enter_board_name: Калі ласка, увядзіце імя дошка
-      columns: Калоны
+      columns: Стоўбцы
       add: Дадаць
       sections: Раздзелы
       save: Захаваць
@@ -231,7 +234,7 @@ be:
       or_include_all: Ці ўключаць у сябе ўсё?
     column_fields:
       remove_column: Выдаліць слупок
-      column_tags: пазнакі слупкоў
+      column_tags: тэгі Калонка
       column_order: Замовіць
       backlog: Адставанне
     show:
@@ -285,7 +288,7 @@ be:
       about_kanban_on_rails: Аб KanbanOnRails
       about_kanban_on_rails_text: KanbanOnRails гэта сэрвіс, дзе вы можаце ствараць
         Kanban дошкі і сінхранізаваць яго з Github або Bitbucket
-      kanban_on_rails_features: асаблівасці KanbanOnRails
+      kanban_on_rails_features: функцыі KanbanOnRails
       sync_with_github_and_bitbucket: Вы можаце сінхранізаваць вашы праекты і праблемы
         з Github і Bitbucket
       invite_users: Вы можаце запрашаць карыстальнікаў (напрыклад менеджэраў) для
@@ -305,9 +308,9 @@ be:
         калі ласка, запытаеце новы
       expired: скончыўся, калі ласка, запытаеце новы
       not_found: не знойдзены
-      not_locked: ня быў заблякаваны
+      not_locked: былі не зачынены
       not_saved:
-        one: '1 памылка забароненая гэты% {рэсурс} з тых, што ратуюцца:'
+        one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
         other: "{лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
     bad_request:
       bad_request: Bad Request
@@ -346,7 +349,7 @@ be:
         sign_up: Зарэгіструйцеся
         didnt_receive_confirmation_instructions: Ня атрымалі пацверджання інструкцыі?
         sign_in_with: Уваход з выкарыстаннем
-        fast_login_almost_one_click: Хуткі Лагін (амаль адзін клік)
+        fast_login_almost_one_click: Хуткі Увайсці (амаль адзін клік)
     confirmations:
       confirmed: ваш рахунак быў паспяхова пацверджаны.
       send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як пацвердзіць свой
@@ -366,7 +369,8 @@ be:
       last_attempt: У вас ёсць яшчэ адна спроба, перш чым ваш уліковы запіс будзе
         заблакаваная.
       not_found_in_database: Няправільны адрас электроннай пошты ці пароль.
-      timeout: Вашай сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
+      timeout: Ваш сеанс скончыўся. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб
+        працягнуць.
       unauthenticated: Вы павінны ўвайсці або зарэгістравацца, перш чым працягнуць.
       unconfirmed: Вы павінны пацвердзіць свой рахунак, перш чым працягнуць.
     mailer:
@@ -386,16 +390,16 @@ be:
         if_you_didnt_request_this_please_ignore_this_email: Калі вы не запытвалі гэта
           не звяртайце ўвагі на гэты ліст.
       unlock_instructions:
-        subject: Разблакіроўка Інструкцыі
+        subject: разблакоўкі Інструкцыі
     omniauth_callbacks:
       failure: Нельга праверыць ідэнтычнасьць вас ад {%} роду, таму што "% {прычына}".
       success: паспяхова прайшоў праверку сапраўднасці ад {%} ветлівую ўвагу.
     passwords:
-      no_token: Вы не можаце атрымаць доступ да гэтай старонцы, не прыходзячы ад электроннай
+      no_token: Вы не можаце адкрыць гэтую старонку, не прыходзячы ад электроннай
         пошты скіду пароля. Калі вы прыйшлі з электроннай пошты для скіду пароля,
         калі ласка, пераканайцеся, што вы выкарыстоўвалі поўны URL пры ўмове.
-      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як скінуць
-        пароль на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як скінуць пароль
+        на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, вы атрымаеце спасылку для аднаўлення пароля на ваш адрас электроннай
         пошты на працягу некалькіх хвілін.
@@ -417,7 +421,7 @@ be:
         вас у таму, што ваш уліковы запіс яшчэ не актываваная.
       signed_up_but_locked: Вы падпісаліся паспяхова. Тым не менш, мы не маглі падпісаць
         вас у таму, што ваш уліковы запіс будзе заблакаваная.
-      signed_up_but_unconfirmed: паведамленне з спасылкай для пацверджання было адпраўлена
+      signed_up_but_unconfirmed: паведамленне са спасылкай для пацверджання было адпраўлена
         на ваш электронны адрас. Калі ласка, адкрыйце спасылку, каб актываваць свой
         уліковы запіс.
       update_needs_confirmation: Вы абнавілі свой рахунак паспяхова, але нам трэба

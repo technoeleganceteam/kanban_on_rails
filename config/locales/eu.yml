@@ -8,6 +8,8 @@ eu:
   backlog: atzerapenen
   1_we_have_just_launched_our_service_title: Oraintxe gure zerbitzua martxan jarri
     dugu
+  open: Open
+  closed: itxita
   shared:
     navbar:
       sign_in: Saioa hasi
@@ -185,6 +187,7 @@ eu:
       github_issue_id: Github alea id
       github_issue_number: Github zenbakian
       project: Project
+      state: Estatuko
     index:
       issues: gaiak
       sync_with_github: github sinkronizatzea

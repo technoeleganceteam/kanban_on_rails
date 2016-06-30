@@ -7,6 +7,8 @@ lv:
   include_all: All
   backlog: Uzkrājums
   1_we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu pakalpojumus
+  open: Atvērt
+  closed: Slēgts
   shared:
     navbar:
       sign_in: Pierakstīties
@@ -182,6 +184,7 @@ lv:
       github_issue_id: GitHub jautājums id
       github_issue_number: GitHub jautājums numurs
       project: Project
+      state: Valsts
     index:
       issues: jautājumi
       sync_with_github: Sync ar GitHub

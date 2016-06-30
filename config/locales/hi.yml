@@ -7,6 +7,8 @@ hi:
   include_all: सभी
   backlog: बैकलॉग
   1_we_have_just_launched_our_service_title: हम सिर्फ हमारी सेवा का शुभारंभ किया
+  open: ओपन
+  closed: बंद किया
   shared:
     navbar:
       sign_up: साइन अप करें
@@ -158,6 +160,7 @@ hi:
       github_issue_id: Github मुद्दा आईडी
       github_issue_number: Github जारी संख्या
       project: परियोजना
+      state: राज्य
     index:
       issues: मुद्दों
       sync_with_github: GitHub के साथ सिंक

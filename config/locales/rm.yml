@@ -7,6 +7,8 @@ rm:
   include_all: Todos
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço
+  open: Aberto
+  closed: Fechado
   shared:
     navbar:
       sign_in: Entrar
@@ -174,6 +176,7 @@ rm:
       github_issue_id: Github problema id
       github_issue_number: número de emissão Github
       project: Projeto
+      state: Estado
     index:
       issues: questões
       sync_with_github: sincronização com github

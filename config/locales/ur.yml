@@ -6,6 +6,8 @@ ur:
   updated: اپ ڈیٹ
   include_all: تمام
   backlog: بقایا جات
+  open: کھولیں
+  closed: بند
   shared:
     navbar:
       sign_up: سائن اپ کریں
@@ -99,8 +101,8 @@ ur:
       issues: مسائل
       you_can_sync_projects_and_issues_from: آپ مختلف خدمات پر باری ہے اور آپ کے منصوبوں
         اور مسائل مطابقت پذیر کر سکتے
-      turn_on_github: Github کے پر بند کر دیں
       turn_on_gitlab: Gitlab پر بند کر دیں
+      turn_on_bitbucket: Bitbucket پر بند کر دیں
       sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
       sync_with_github: Github کے ساتھ مطابقت پذیری
       syncing_with_gitlab: Gitlab ساتھ مطابقت پذیری
@@ -169,6 +171,7 @@ ur:
       github_issue_id: Github کے ایشو کی شناخت
       github_issue_number: Github کے جاری تعداد
       project: پروجیکٹ
+      state: ریاست
     index:
       issues: مسائل
       sync_with_github: گاٹہوب ساتھ مطابقت پذیری

@@ -7,6 +7,8 @@ sw:
   include_all: All
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu
+  open: Open
+  closed: Ilifungwa
   shared:
     navbar:
       sign_in: Ingia katika
@@ -16,7 +18,7 @@ sw:
       syncing_with_github: Sync na github ...
       syncing_with_gitlab: Sync na Gitlab ...
       syncing_with_bitbucket: Sync na bitbucket ...
-      new_issue: New suala
+      new_issue: suala New
       edit_project: Hariri mradi
       boards: Bodi
     languages_select_modal:
@@ -178,6 +180,7 @@ sw:
       github_issue_id: github suala id
       github_issue_number: github suala idadi
       project: Project
+      state: Jimbo
     index:
       issues: masuala
       sync_with_github: Sync na github
@@ -363,7 +366,7 @@ sw:
     failure:
       already_authenticated: Wewe ni tayari umeingia.
       inactive: Akaunti yako si ulioamilishwa bado.
-      invalid: barua pepe batili au password.
+      invalid: email batili au password.
       locked: Akaunti yako imefungwa.
       last_attempt: Una jaribio moja zaidi kabla ya akaunti yako itakuwa imefungwa.
       not_found_in_database: email batili au password.

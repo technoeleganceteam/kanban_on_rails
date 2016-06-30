@@ -7,6 +7,8 @@ bg:
   include_all: All
   backlog: Backlog
   1_we_have_just_launched_our_service_title: Вече стартирахме нашата услуга
+  open: Open
+  closed: Затворен
   shared:
     navbar:
       sign_in: Вход
@@ -174,6 +176,7 @@ bg:
       github_issue_id: Github въпрос ID
       github_issue_number: брой Github въпрос
       project: Project
+      state: членка
     index:
       issues: въпроси
       sync_with_github: Sync с GitHub

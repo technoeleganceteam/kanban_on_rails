@@ -7,6 +7,8 @@ hr:
   include_all: Sve
   backlog: zaostataka
   1_we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis
+  open: Otvori
+  closed: Zatvoreno
   shared:
     navbar:
       sign_in: Prijava
@@ -176,6 +178,7 @@ hr:
       github_issue_id: Github problem id
       github_issue_number: broj Github problem
       project: projekta
+      state: država
     index:
       issues: pitanja
       sync_with_github: Sinkronizacija s GitHub

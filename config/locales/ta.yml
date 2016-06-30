@@ -6,6 +6,8 @@ ta:
   updated: மேம்படுத்தப்பட்டது
   include_all: அனைத்து
   backlog: டர்
+  open: திறந்த
+  closed: மூடப்பட்ட
   shared:
     navbar:
       sign_in: உள்நுழை
@@ -162,6 +164,7 @@ ta:
       github_issue_id: கிட்ஹப் அடையாள
       github_issue_number: கிட்ஹப் பிரச்சினை எண்
       project: திட்ட
+      state: மாநில
     index:
       issues: பிரச்சினைகள்
       new: நியூ

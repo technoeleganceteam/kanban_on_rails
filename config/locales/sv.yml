@@ -7,6 +7,8 @@ sv:
   include_all: All
   backlog: Eftersläpning
   1_we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst
+  open: Öppen
+  closed: Stängd
   shared:
     navbar:
       sign_in: Logga in
@@ -184,6 +186,7 @@ sv:
       github_issue_id: Github fråga id
       github_issue_number: Github löpnummer
       project: Project
+      state: State
     index:
       issues: frågor
       sync_with_github: Sync med github

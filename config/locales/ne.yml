@@ -7,6 +7,8 @@ ne:
   include_all: सबै
   backlog: संचय
   1_we_have_just_launched_our_service_title: हामी सिर्फ हाम्रो सेवा शुरू गरेको छ
+  open: खुला
+  closed: बन्द गरियो
   shared:
     navbar:
       sign_in: साइन
@@ -154,6 +156,7 @@ ne:
       github_issue_id: Github मुद्दा आईडी
       github_issue_number: Github मुद्दा नम्बर
       project: परियोजना
+      state: राज्य
     index:
       issues: मुद्दाहरू
       new: नयाँ
