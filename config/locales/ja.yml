@@ -7,6 +7,10 @@ ja:
   backlog: バックログ
   open: オープン
   closed: は休館します
+  releases: リリース
+  release: リリース
+  changelog_has_been_resent: 変更は再送信されています
+  changelogs_has_been_synced: 変更が同期されています
   shared:
     navbar:
       sign_in: ログイン
@@ -23,7 +27,8 @@ ja:
       site_settings: サイトの設定
       services: サービス
     form_errors:
-      password: パスワード
+      current_password: 現在のパスワード
+      password_confirmation: パスワードの確認
       name: 名前
       base: ベース
       title: タイトル
@@ -101,11 +106,22 @@ ja:
       github_full_name: GitHubのリポジトリのフルネーム
       bitbucket_full_name: のBitbucketフルネーム
       bitbucket_secret_token_for_hook: のBitbucketフックのための秘密のトークン
+      gitlab_full_name: Gitlabフルネーム
+      changelogs: 変更履歴
+      generate_changelogs: は変更ログを生成します
+      include_detailed_changes: は、プル要求に記載され、詳細な変更を含めます
+      include_issues: は、変更履歴で問題を含めます
+      include_pull_requests: は、変更履歴でプル要求を含めます
+      close_issues: 閉じる行っ問題
+      changelog_filename: 変更ファイル名
+      enter_changelog_filename: （デフォルト "CHANGELOGを」）のchangelogファイル名を入力します
     project:
       edit: 編集
       destroy: 削除
-      project_issues: プロジェクトの問題
-      project_users: Projectユーザー
+      issues: 問題
+      users: ユーザー
+      changelogs: 変更履歴
+      are_you_sure: はよろしいですか？
     section_fields:
       section_name: セクション名
       remove_section: 削除セクション
@@ -123,6 +139,21 @@ ja:
       project_issues: プロジェクトの問題
       project_users: Projectユーザー
       new: 新
+      edit: 編集
+      destroy: 削除
+      are_you_sure: はよろしいですか？
+      changelogs: 変更履歴
+      github_repository_id: GitHubのリポジトリID
+      github_full_name: GitHubのリポジトリのフルネーム
+      bitbucket_full_name: のBitbucketフルネーム
+      bitbucket_secret_token_for_hook: のBitbucketフックのための秘密のトークン
+      gitlab_full_name: Gitlabフルネーム
+      generate_changelogs: は変更ログを生成します
+      include_detailed_changes: は、プル要求に記載され、詳細な変更を含めます
+      include_issues: は、変更履歴で問題を含めます
+      include_pull_requests: は、変更履歴でプル要求を含めます
+      close_issues: 閉じる行っ問題
+      changelog_filename: 変更ファイル名
     project_modal:
       project: プロジェクト
   issues:
@@ -215,6 +246,23 @@ ja:
       close: 閉じます
       cancel: キャンセル
       more: もっとを送ります
+  changelogs:
+    changelog_raw_md:
+      changes: 変更
+      detailed_changes: 詳細な変更
+      issues: 問題
+      by: によって
+    changelog:
+      changes: 変更
+      detailed_changes: 詳細な変更
+      issues: 問題
+      by: によって
+    index:
+      project: プロジェクト
+      changelogs: 変更履歴
+      sync: 同期
+    changelog_list_item:
+      resend: 再送信
   pages:
     faq:
       faq: よくある質問

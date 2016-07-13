@@ -9,6 +9,10 @@ nl:
   1_we_have_just_launched_our_service_title: We hebben zopas onze service
   open: Open
   closed: Gesloten
+  releases: releases
+  release: vrijlating
+  changelog_has_been_resent: Changelog is opnieuw verzonden
+  changelogs_has_been_synced: Changelog is gesynchroniseerd
   shared:
     navbar:
       sign_in: Inloggen
@@ -51,6 +55,7 @@ nl:
       select_column_tags: Select kolom-tags
       select_section_tags: Select sectie-tags
       select_issue_tags: Select kwestie-tags
+      emails_for_reports: Type e-mails die changelogs zal ontvangen
     email_signature:
       info: Info
       mailer: Mailer
@@ -138,14 +143,30 @@ nl:
       column_height: Zuilhoogte
       github_repository_id: Github repository id
       github_full_name: Github repository fullname
-      github_secret_token_for_hook: Github geheime token voor de haak
+      github_secret_token_for_hook: Gitlab geheime token voor de haak
       bitbucket_full_name: BitBucket fullname
       bitbucket_secret_token_for_hook: BitBucket geheime token voor de haak
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: als je wilt changelogs houden
+      generate_changelogs: Genereer changelogs
+      include_detailed_changes: bevatten gedetailleerde veranderingen in pull aanvragen
+        beschreven
+      include_issues: Neem kwesties in changelogs
+      include_pull_requests: Neem pull verzoeken changelogs
+      close_issues: Sluiten gedaan kwesties
+      emails_for_reports: e-mails voor het ontvangen van changelogs
+      write_to_changelog_file: Schrijf changelogs naar de repository bestand
+      changelog_filename: Changelog filename
+      enter_changelog_filename: Voer changelog bestandsnaam (default "CHANGELOG")
+      changelog_locale: Kies taal voor changelogs
     project:
       edit: Bewerken
       destroy: verwijderen
-      project_issues: Project issues
-      project_users: Project gebruikers
+      issues: Issues
+      users: Gebruikers
+      changelogs: Changelogs
+      are_you_sure: Weet je het zeker?
     section_fields:
       section_name: Sectie naam
       section_tags: Sectie-tags
@@ -164,6 +185,26 @@ nl:
       project_issues: Project issues
       project_users: Project gebruikers
       new: Nieuwe
+      edit: Bewerken
+      destroy: verwijderen
+      are_you_sure: Weet je het zeker?
+      changelogs: Changelogs
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Gitlab geheime token voor de haak
+      bitbucket_full_name: BitBucket fullname
+      bitbucket_secret_token_for_hook: BitBucket geheime token voor de haak
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Genereer changelogs
+      include_detailed_changes: bevatten gedetailleerde veranderingen in pull aanvragen
+        beschreven
+      include_issues: Neem kwesties in changelogs
+      include_pull_requests: Neem pull verzoeken changelogs
+      close_issues: Sluiten gedaan kwesties
+      emails_for_reports: e-mails voor het ontvangen van changelogs
+      write_to_changelog_file: Schrijf changelogs naar de repository bestand
+      changelog_filename: Changelog filename
+      changelog_locale: taal voor changelog
     project_modal:
       project: Project
   issues:
@@ -271,6 +312,25 @@ nl:
       close: Sluiten
       cancel: annuleren
       more: Stuur meer
+  changelogs:
+    changelog_raw_md:
+      changes: Wijzigingen
+      detailed_changes: Gedetailleerde veranderingen
+      issues: Issues
+      by: door
+    changelog:
+      changes: Wijzigingen
+      detailed_changes: Gedetailleerde veranderingen
+      issues: Issues
+      by: door
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Bekijk als html
+      view_as_raw_md: Bekijk als grondstof md
   pages:
     faq:
       faq: FAQ

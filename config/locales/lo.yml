@@ -9,6 +9,10 @@ lo:
   1_we_have_just_launched_our_service_title: ພວກເຮົາໄດ້ເປີດຕົວພຽງແຕ່ການບໍລິການຂອງພວກເຮົາ
   open: ເປີດ
   closed: ປິດ
+  releases: ປ່ອຍ
+  release: ປ່ອຍ
+  changelog_has_been_resent: ການປ່ຽນແປງໄດ້ Resent
+  changelogs_has_been_synced: ການປ່ຽນແປງໄດ້ຮັບການຊິ້ງຂໍ້ມູນ
   shared:
     navbar:
       sign_in: ເຂົ້າສູ່ລະບົບ
@@ -53,6 +57,7 @@ lo:
       select_column_tags: ເລືອກ tags ຖັນ
       select_section_tags: ເລືອກ tags ພາກ
       select_issue_tags: ເລືອກ tags ບັນຫາ
+      emails_for_reports: ປະເພດອີທີ່ຈະໄດ້ຮັບບົດຄວາມ
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance ກັດ
@@ -134,14 +139,29 @@ lo:
       add: Add
       github_repository_id: GitHub repository id
       github_full_name: GitHub repository ຊື່ເຕັມຂອງ
-      github_secret_token_for_hook: GitHub token ລັບສໍາລັບການສຽງ
+      github_secret_token_for_hook: Gitlab token ລັບສໍາລັບການສຽງ
       bitbucket_full_name: Bitbucket ຊື່ເຕັມຂອງ
       bitbucket_secret_token_for_hook: Bitbucket token ລັບສໍາລັບການສຽງ
+      gitlab_full_name: Gitlab ຊື່ເຕັມຂອງ
+      changelogs: ບົດຄວາມ
+      changelogs_info: ຖ້າຫາກວ່າທ່ານຕ້ອງການທີ່ຈະຮັກສາບົດຄວາມ
+      generate_changelogs: ສ້າງບົດຄວາມ
+      include_detailed_changes: ລວມການປ່ຽນແປງລາຍລະອຽດອະທິບາຍໃນການຮ້ອງຂໍການດຶງ
+      include_issues: ລວມບັນຫາໃນການຂຽນບົດຄວາມ
+      include_pull_requests: ລວມການຮ້ອງຂໍດຶງໃນບົດຄວາມ
+      close_issues: ບັນຫາປິດເຮັດ
+      emails_for_reports: ອີເມວສໍາລັບ recieving ບົດຄວາມ
+      write_to_changelog_file: ຂຽນບົດຄວາມກັບເອກະສານທີ່ເກັບຂໍ້ມູນ
+      changelog_filename: filename ການປ່ຽນແປງ
+      enter_changelog_filename: ກະລຸນາໃສ່ຊື່ໄຟ changelog (ເລິ່ມຕົ້ນ "ການປ່ຽນແປງ")
+      changelog_locale: ເລືອກພາສາສໍາລັບການຂຽນບົດຄວາມ
     project:
       edit: ແກ້ໄຂ
       destroy: ລົບ
-      project_issues: ບັນຫາໂຄງການ
-      project_users: ຜູ້ໃຊ້ໂຄງການ
+      issues: ບັນຫາ
+      users: ຜູ້ໃຊ້
+      changelogs: ບົດຄວາມ
+      are_you_sure: ທ່ານແນ່ໃຈວ່າ?
     section_fields:
       section_tags: tags Section
       section_order: Order
@@ -157,6 +177,25 @@ lo:
       project_issues: ບັນຫາໂຄງການ
       project_users: ຜູ້ໃຊ້ໂຄງການ
       new: ໃຫມ່
+      edit: ແກ້ໄຂ
+      destroy: ລົບ
+      are_you_sure: ທ່ານແນ່ໃຈວ່າ?
+      changelogs: ບົດຄວາມ
+      github_repository_id: GitHub repository id
+      github_full_name: GitHub repository ຊື່ເຕັມຂອງ
+      github_secret_token_for_hook: Gitlab token ລັບສໍາລັບການສຽງ
+      bitbucket_full_name: Bitbucket ຊື່ເຕັມຂອງ
+      bitbucket_secret_token_for_hook: Bitbucket token ລັບສໍາລັບການສຽງ
+      gitlab_full_name: Gitlab ຊື່ເຕັມຂອງ
+      generate_changelogs: ສ້າງບົດຄວາມ
+      include_detailed_changes: ລວມການປ່ຽນແປງລາຍລະອຽດອະທິບາຍໃນການຮ້ອງຂໍການດຶງ
+      include_issues: ລວມບັນຫາໃນການຂຽນບົດຄວາມ
+      include_pull_requests: ລວມການຮ້ອງຂໍດຶງໃນບົດຄວາມ
+      close_issues: ບັນຫາປິດເຮັດ
+      emails_for_reports: ອີເມວສໍາລັບ recieving ບົດຄວາມ
+      write_to_changelog_file: ຂຽນບົດຄວາມກັບເອກະສານທີ່ເກັບຂໍ້ມູນ
+      changelog_filename: filename ການປ່ຽນແປງ
+      changelog_locale: ພາສາສໍາລັບການປ່ຽນແປງ
     project_modal:
       project: Project
   issues:
@@ -259,6 +298,25 @@ lo:
       close: ປິດ
       cancel: ຍົກເລີກ
       more: ສົ່ງຫຼາຍ
+  changelogs:
+    changelog_raw_md:
+      changes: ການປ່ຽນແປງ
+      detailed_changes: ການປ່ຽນແປງລະອຽດ
+      issues: ບັນຫາ
+      by: ໂດຍ
+    changelog:
+      changes: ການປ່ຽນແປງ
+      detailed_changes: ການປ່ຽນແປງລະອຽດ
+      issues: ບັນຫາ
+      by: ໂດຍ
+    index:
+      project: Project
+      changelogs: ບົດຄວາມ
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: ເປັນ html
+      view_as_raw_md: ເປັນ md ວັດຖຸດິບ
   pages:
     faq:
       faq: FAQ

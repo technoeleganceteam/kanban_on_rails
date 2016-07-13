@@ -8,8 +8,13 @@ ur:
   backlog: بقایا جات
   open: کھولیں
   closed: بند
+  releases: ریلیز
+  release: رہائی
+  changelog_has_been_resent: changelog کے غصہ کیا گیا ہے
+  changelogs_has_been_synced: changelog کے موافقت پذیر کیا گیا ہے
   shared:
     navbar:
+      sign_in: کیجئے
       sign_up: سائن اپ کریں
       projects: پروجیکٹس
       issues: مسائل
@@ -48,6 +53,7 @@ ur:
       select_column_tags: منتخب کالم ٹیگز
       select_section_tags: منتخب سیکشن ٹیگز
       select_issue_tags: منتخب کریں معاملے ٹیگز
+      emails_for_reports: قسم کی ای میلز changelogs recieve گا جس
     email_signature:
       info: معلومات
       mailer: میلر
@@ -101,6 +107,7 @@ ur:
       issues: مسائل
       you_can_sync_projects_and_issues_from: آپ مختلف خدمات پر باری ہے اور آپ کے منصوبوں
         اور مسائل مطابقت پذیر کر سکتے
+      turn_on_github: Github کے پر بند کر دیں
       turn_on_gitlab: Gitlab پر بند کر دیں
       turn_on_bitbucket: Bitbucket پر بند کر دیں
       sync_with_bitbucket: Bitbucket ساتھ مطابقت پذیری
@@ -129,14 +136,29 @@ ur:
       column_height: کالم اونچائی
       github_repository_id: Github کے مخزن ID
       github_full_name: Github کے مخزن FULLNAME
-      github_secret_token_for_hook: ہک لئے Github کے سیکرٹ ٹوکن
+      github_secret_token_for_hook: Gitlab سیکرٹ ٹوکن
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: ہک لئے Bitbucket سیکرٹ ٹوکن
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: آپ changelogs رکھنا چاہتے ہیں تو
+      generate_changelogs: changelogs بنائیں
+      include_detailed_changes: پل درخواستوں میں بیان تفصیلی تبدیلیوں میں شامل ہیں
+      include_issues: changelogs میں مسائل میں شامل ہیں
+      include_pull_requests: changelogs میں پل درخواستوں شامل
+      close_issues: بند کیا مسائل
+      write_to_changelog_file: مخزن فائل کو لکھنے changelogs
+      changelog_filename: changelog کے فائل کا نام
+      enter_changelog_filename: changelog کو فائل کا نام (ڈیفالٹ "CHANGELOG") درج
+        کریں
+      changelog_locale: changelogs لئے زبان کا انتخاب کریں
     project:
       edit: ترمیم کریں
       destroy: چھپانا
-      project_issues: پروجیکٹ مسائل
-      project_users: پروجیکٹ صارفین
+      issues: مسائل
+      users: صارفین
+      changelogs: Changelogs
+      are_you_sure: تمہیں یقین ہے؟
     section_fields:
       section_name: حصے کا نام
       remove_section: ہٹائیں سیکشن
@@ -156,6 +178,23 @@ ur:
       project_issues: پروجیکٹ مسائل
       project_users: پروجیکٹ صارفین
       new: نیا
+      edit: ترمیم کریں
+      destroy: چھپانا
+      are_you_sure: تمہیں یقین ہے؟
+      changelogs: Changelogs
+      github_repository_id: Github کے مخزن ID
+      github_full_name: Github کے مخزن FULLNAME
+      github_secret_token_for_hook: Gitlab سیکرٹ ٹوکن
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: ہک لئے Bitbucket سیکرٹ ٹوکن
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: changelogs بنائیں
+      include_detailed_changes: پل درخواستوں میں بیان تفصیلی تبدیلیوں میں شامل ہیں
+      include_issues: changelogs میں مسائل میں شامل ہیں
+      include_pull_requests: changelogs میں پل درخواستوں شامل
+      close_issues: بند کیا مسائل
+      write_to_changelog_file: مخزن فائل کو لکھنے changelogs
+      changelog_filename: changelog کے فائل کا نام
     project_modal:
       project: پروجیکٹ
   issues:
@@ -259,6 +298,23 @@ ur:
       close: بند کریں
       cancel: منسوخ
       more: زیادہ بھیج
+  changelogs:
+    changelog_raw_md:
+      changes: تبدیلیاں
+      detailed_changes: تفصیلی تبدیلیاں
+      issues: مسائل
+      by: کی طرف سے
+    changelog:
+      changes: تبدیلیاں
+      detailed_changes: تفصیلی تبدیلیاں
+      issues: مسائل
+      by: کی طرف سے
+    index:
+      project: پروجیکٹ
+      changelogs: Changelogs
+      sync: مطابقت پذیری
+    changelog_list_item:
+      resend: دوبارہ بھیجیں
   pages:
     faq:
       faq: عمومی سوالات

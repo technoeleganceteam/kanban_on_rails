@@ -9,6 +9,10 @@ cy:
   1_we_have_just_launched_our_service_title: Rydym newydd lansio ein gwasanaeth
   open: Agored
   closed: Ar gau
+  releases: Datganiadau
+  release: rhyddhau
+  changelog_has_been_resent: Changelog wedi bod yn digio
+  changelogs_has_been_synced: Changelog wedi cael ei synced
   shared:
     navbar:
       sign_in: Mewngofnodi
@@ -50,6 +54,7 @@ cy:
       select_column_tags: Dethol
       select_section_tags: Dethol
       select_issue_tags: tagiau rhifyn Dewiswch
+      emails_for_reports: negeseuon e-bost Math fydd yn yn derbyn changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -131,14 +136,30 @@ cy:
       sections: Adrannau
       add: Ychwanegu
       github_full_name: Github fullname ystorfa
-      github_secret_token_for_hook: Github tocyn gyfrinach i bachyn
+      github_secret_token_for_hook: Gitlab tocyn gyfrinach i bachyn
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket tocyn gyfrinach i bachyn
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: os ydych chi am gadw changelogs
+      generate_changelogs: Creu changelogs
+      include_detailed_changes: Dylech gynnwys newidiadau manwl a ddisgrifir yn geisiadau
+        tynnu
+      include_issues: Cynnwys materion mewn changelogs
+      include_pull_requests: Cynnwys ceisiadau dynnu mewn changelogs
+      close_issues: wneud Close materion
+      emails_for_reports: Negeseuon e-bost ar gyfer recieving changelogs
+      write_to_changelog_file: Ysgrifennu changelogs at y ffeil ystorfa
+      changelog_filename: filename Changelog
+      enter_changelog_filename: Rhowch enw ffeil changelog (diofyn "changelog")
+      changelog_locale: Dewis iaith ar gyfer changelogs
     project:
       edit: Golygu
       destroy: Dileu
-      project_issues: Materion Prosiect
-      project_users: ddefnyddwyr Prosiect
+      issues: Materion
+      users: Defnyddwyr
+      changelogs: Changelogs
+      are_you_sure: Ydych chi'n siwr?
     section_fields:
       section_tags: tagiau Adran
       section_order: Gorchymyn
@@ -154,6 +175,25 @@ cy:
       project_issues: Materion Prosiect
       project_users: ddefnyddwyr Prosiect
       new: Newydd
+      edit: Golygu
+      destroy: Dileu
+      are_you_sure: Ydych chi'n siwr?
+      changelogs: Changelogs
+      github_full_name: Github fullname ystorfa
+      github_secret_token_for_hook: Gitlab tocyn gyfrinach i bachyn
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tocyn gyfrinach i bachyn
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Creu changelogs
+      include_detailed_changes: Dylech gynnwys newidiadau manwl a ddisgrifir yn geisiadau
+        tynnu
+      include_issues: Cynnwys materion mewn changelogs
+      include_pull_requests: Cynnwys ceisiadau dynnu mewn changelogs
+      close_issues: wneud Close materion
+      emails_for_reports: Negeseuon e-bost ar gyfer recieving changelogs
+      write_to_changelog_file: Ysgrifennu changelogs at y ffeil ystorfa
+      changelog_filename: filename Changelog
+      changelog_locale: Iaith ar gyfer changelog
     project_modal:
       project: Prosiect
   issues:
@@ -256,6 +296,25 @@ cy:
       close: Close
       cancel: Diddymu
       more: Anfon mwy
+  changelogs:
+    changelog_raw_md:
+      changes: Newidiadau
+      detailed_changes: newidiadau manwl
+      issues: Materion
+      by: gan
+    changelog:
+      changes: Newidiadau
+      detailed_changes: newidiadau manwl
+      issues: Materion
+      by: gan
+    index:
+      project: Prosiect
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Ail-anfon
+      view_as_html: Gweld fel html
+      view_as_raw_md: Gweld fel md amrwd
   pages:
     faq:
       faq: Cwestiynau Cyffredin

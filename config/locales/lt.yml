@@ -9,6 +9,10 @@ lt:
   1_we_have_just_launched_our_service_title: Mes ką tik pradėjo savo paslaugas
   open: Atviras
   closed: Uždarymo
+  releases: spaudai
+  release: spaudai
+  changelog_has_been_resent: Failas buvo piktintis
+  changelogs_has_been_synced: Failas buvo sinchronizuojami
   shared:
     navbar:
       sign_in: Registruotis
@@ -54,6 +58,7 @@ lt:
       select_column_tags: Pasirinkite stulpelio žymės
       select_section_tags: Pasirinkite skyrių žymės
       select_issue_tags: Pasirinkite numerį žymės
+      emails_for_reports: tipas laiškų, kuriuos gaus changelogs
     email_signature:
       info: Informacija
       mailer: mailer
@@ -143,14 +148,29 @@ lt:
       column_height: skiltis aukštis
       github_repository_id: Github saugykla ID
       github_full_name: Github saugykla FULLNAME
-      github_secret_token_for_hook: Github paslaptis žetonas už kabliuko
+      github_secret_token_for_hook: Gitlab paslaptis žetonas už kabliuko
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket paslaptis žetonas už kabliuko
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: jei norite išlaikyti changelogs
+      generate_changelogs: Sukurti changelogs
+      include_detailed_changes: Įtraukti išsamias pokyčių aprašytus traukos prašymus
+      include_issues: Įtraukti problemas changelogs
+      include_pull_requests: Įtraukti pull prašymus changelogs
+      close_issues: Uždaryti padaryta klausimai
+      emails_for_reports: pranešimus apie recieving changelogs
+      write_to_changelog_file: Rašyti changelogs į kapinyną failą
+      changelog_filename: Failas Failo pavadinimas
+      enter_changelog_filename: Įveskite ChangeLog failo (Default "ChangeLog")
+      changelog_locale: Pasirinkite kalbą changelogs
     project:
       edit: Redaguoti
       destroy: Ištrinti
-      project_issues: Projekto klausimai
-      project_users: Projekto vartotojai
+      issues: klausimai
+      users: Vartotojai
+      changelogs: Changelogs
+      are_you_sure: Ar tikrai?
     section_fields:
       remove_section: Pašalinti skyrius
       section_tags: žymės skyrius
@@ -169,6 +189,25 @@ lt:
       project_issues: Projekto klausimai
       project_users: Projekto vartotojai
       new: Nauja
+      edit: Redaguoti
+      destroy: Ištrinti
+      are_you_sure: Ar tikrai?
+      changelogs: Changelogs
+      github_repository_id: Github saugykla ID
+      github_full_name: Github saugykla FULLNAME
+      github_secret_token_for_hook: Gitlab paslaptis žetonas už kabliuko
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket paslaptis žetonas už kabliuko
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: Sukurti changelogs
+      include_detailed_changes: Įtraukti išsamias pokyčių aprašytus traukos prašymus
+      include_issues: Įtraukti problemas changelogs
+      include_pull_requests: Įtraukti pull prašymus changelogs
+      close_issues: Uždaryti padaryta klausimai
+      emails_for_reports: pranešimus apie recieving changelogs
+      write_to_changelog_file: Rašyti changelogs į kapinyną failą
+      changelog_filename: Failas Failo pavadinimas
+      changelog_locale: kalba už CHANGELOG
     project_modal:
       project: projektas
   issues:
@@ -278,6 +317,25 @@ lt:
       close: Uždaryti
       cancel: Atšaukti
       more: Siųsti daugiau
+  changelogs:
+    changelog_raw_md:
+      changes: keitimai
+      detailed_changes: Išsamios pokyčiai
+      issues: klausimai
+      by: iki
+    changelog:
+      changes: keitimai
+      detailed_changes: Išsamios pokyčiai
+      issues: klausimai
+      by: iki
+    index:
+      project: projektas
+      changelogs: Changelogs
+      sync: Sync "
+    changelog_list_item:
+      resend: Persiųsti
+      view_as_html: Žiūrėti kaip HTML
+      view_as_raw_md: Žiūrėti kaip žalio md
   pages:
     faq:
       faq: DUK

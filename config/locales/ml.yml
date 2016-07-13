@@ -8,6 +8,10 @@ ml:
   1_we_have_just_launched_our_service_title: നാം വെറും ഞങ്ങളുടെ സേവനം ആരംഭിച്ചു
   open: തുറക്കുക
   closed: അടച്ചു
+  releases: റിലീസുകൾ
+  release: റിലീസ്
+  changelog_has_been_resent: ചേയ്ഞ്ച്ലോഗ് നീരസപ്പെടത്തുക നടന്നിട്ടില്ല
+  changelogs_has_been_synced: ചേയ്ഞ്ച്ലോഗ് സമന്വയിപ്പിച്ച
   shared:
     navbar:
       sign_in: സൈൻ
@@ -116,11 +120,23 @@ ml:
       column_height: നിര ഉയരം
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket ഹുക്ക് വേണ്ടി രഹസ്യ ടോക്കൺ
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: നിങ്ങൾ changelogs സൂക്ഷിക്കാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ
+      generate_changelogs: changelogs സൃഷ്ടിക്കുക
+      include_detailed_changes: പുൾ അഭ്യർത്ഥനകൾ വിവരിച്ച വിശദമായ മാറ്റങ്ങൾ ഉൾപ്പെടുത്തുക
+      include_issues: changelogs പ്രശ്നങ്ങൾ ഉൾപ്പെടുത്തുക
+      include_pull_requests: changelogs ലെ വലിക്കാവുന്ന അഭ്യർത്ഥനകൾ ഉൾപ്പെടുത്തുക
+      changelog_filename: ചേയ്ഞ്ച്ലോഗ് ഫയൽനാമം
+      enter_changelog_filename: മാറ്റങ്ങള് ഫയൽനാമം (സ്ഥിരമായി "മാറ്റങ്ങള്") നൽകുക
+      changelog_locale: changelogs ഭാഷ തിരഞ്ഞെടുക്കുക
     project:
       edit: എഡിറ്റ്
       destroy: ഇല്ലാതാക്കുക
-      project_issues: പദ്ധതി പ്രശ്നങ്ങൾ
-      project_users: പദ്ധതി ഉപയോക്താക്കൾ
+      issues: പ്രശ്നങ്ങൾ
+      users: ഉപയോക്താക്കൾ
+      changelogs: Changelogs
+      are_you_sure: നിങ്ങൾക്ക് ഉറപ്പാണോ?
     section_fields:
       section_name: വിഭാഗം പേര്
       remove_section: നീക്കംചെയ്യുക വിഭാഗം
@@ -137,6 +153,19 @@ ml:
       project_issues: പദ്ധതി പ്രശ്നങ്ങൾ
       project_users: പദ്ധതി ഉപയോക്താക്കൾ
       new: ന്യൂ
+      edit: എഡിറ്റ്
+      destroy: ഇല്ലാതാക്കുക
+      are_you_sure: നിങ്ങൾക്ക് ഉറപ്പാണോ?
+      changelogs: Changelogs
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket ഹുക്ക് വേണ്ടി രഹസ്യ ടോക്കൺ
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: changelogs സൃഷ്ടിക്കുക
+      include_detailed_changes: പുൾ അഭ്യർത്ഥനകൾ വിവരിച്ച വിശദമായ മാറ്റങ്ങൾ ഉൾപ്പെടുത്തുക
+      include_issues: changelogs പ്രശ്നങ്ങൾ ഉൾപ്പെടുത്തുക
+      include_pull_requests: changelogs ലെ വലിക്കാവുന്ന അഭ്യർത്ഥനകൾ ഉൾപ്പെടുത്തുക
+      changelog_filename: ചേയ്ഞ്ച്ലോഗ് ഫയൽനാമം
+      changelog_locale: ഭാഷ
     project_modal:
       project: പദ്ധതി
   issues:
@@ -231,6 +260,21 @@ ml:
       close: അടയ്ക്കുക
       cancel: റദ്ദാക്കുക
       more: കൂടുതൽ അയയ്ക്കുക
+  changelogs:
+    changelog_raw_md:
+      changes: മാറ്റങ്ങൾ
+      issues: പ്രശ്നങ്ങൾ
+      by: വഴി
+    changelog:
+      changes: മാറ്റങ്ങൾ
+      issues: പ്രശ്നങ്ങൾ
+      by: വഴി
+    index:
+      project: പദ്ധതി
+      changelogs: Changelogs
+      sync: സമന്വയം
+    changelog_list_item:
+      resend: വീണ്ടുംഅയയ്ക്കുക
   pages:
     faq:
       faq: സ്ഥിരം

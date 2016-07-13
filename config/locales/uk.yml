@@ -9,6 +9,10 @@ uk:
   1_we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс
   open: Відкрити
   closed: Закрито
+  releases: релізи
+  release: реліз
+  changelog_has_been_resent: Змін було обурюватися
+  changelogs_has_been_synced: Змін була синхронізована
   shared:
     navbar:
       sign_in: Вхід
@@ -31,7 +35,7 @@ uk:
       password: Пароль
       current_password: Поточний пароль
       name: Ім'я
-      base: Base
+      base: База
       title: Назва
       user_to_project_connection: Користувач проекту підключення
       user_to_board_connection: Користувач на борт з'єднання
@@ -53,6 +57,7 @@ uk:
       select_column_tags: Виберіть мітки стовпців
       select_section_tags: Виберіть мітки розділу
       select_issue_tags: Виберіть теги випуск
+      emails_for_reports: листів типу, які ОТРИМАЙТЕ списків змін
     email_signature:
       info: Інформація
       mailer: Мейлер
@@ -71,7 +76,7 @@ uk:
       feedbacks: Відгук
     user_requests_navigation:
       all: Все
-      my_requests: Мої прохання
+      my_requests: Мої запити
   users:
     new:
       invite_user: Запросити користувача
@@ -79,13 +84,13 @@ uk:
       name: Ім'я
       enter_user_name: Введіть ім'я користувача
       email: E-mail
-      enter_user_email: Вхід користувача електронної пошти
+      enter_user_email: Вхід користувача по електронній пошті
       enter_user_password: Введіть пароль користувача
       password: Пароль
       save: Зберегти
     index:
       project: проекту
-      users: користувачів
+      users: користувачі
       new: Новий
       board: Рада
     edit:
@@ -104,7 +109,7 @@ uk:
     update:
       your_profile_was_successfully_updated: Ваш профіль був успішно оновлений
     dashboard:
-      hello: Привіт
+      hello: Hello
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
       boards: Дошки
@@ -138,14 +143,31 @@ uk:
       add: Додати
       github_repository_id: Github репозиторій ID
       github_full_name: Github репозиторій FullName
-      github_secret_token_for_hook: Github секретний маркер для гака
+      github_secret_token_for_hook: Gitlab секретний маркер для гака
       bitbucket_full_name: BitBucket FullName
       bitbucket_secret_token_for_hook: BitBucket секретний маркер для гака
+      gitlab_full_name: Gitlab FullName
+      changelogs: списком змін
+      changelogs_info: якщо ви хочете зберегти списків змін
+      generate_changelogs: Генерація списків змін
+      include_detailed_changes: включає в себе докладні зміни, описані в висувними
+        запитів
+      include_issues: Включення питань в списком змін
+      include_pull_requests: Включити тягнути запитів в списком змін
+      close_issues: Закрити зроблено питання
+      emails_for_reports: Адреси електронної пошти для ОТРИМУВАТИ списків змін
+      write_to_changelog_file: Запис до списком змін файлу сховища
+      changelog_filename: Змін ім'я файлу
+      enter_changelog_filename: Введіть ім'я файлу журналу змін (за замовчуванням
+        "CHANGELOG")
+      changelog_locale: Виберіть мову списком змін
     project:
       edit: Редагувати
       destroy: Видалити
-      project_issues: питання проекту
-      project_users: користувачів проекту
+      issues: питання
+      users: Користувачі
+      changelogs: списком змін
+      are_you_sure: Ви впевнені?
     section_fields:
       remove_section: Видалити розділ
       section_tags: Розділ теги
@@ -157,12 +179,32 @@ uk:
       column_order: Замовити
     show:
       project: проекту
-      related_boards: пов'язані дошки
+      related_boards: Схожі дошки
       project_issues: питання проекту
       project_users: користувачів проекту
       new: Новий
+      edit: Редагувати
+      destroy: Видалити
+      are_you_sure: Ви впевнені?
+      changelogs: списком змін
+      github_repository_id: Github репозиторій ID
+      github_full_name: Github репозиторій FullName
+      github_secret_token_for_hook: Gitlab секретний маркер для гака
+      bitbucket_full_name: BitBucket FullName
+      bitbucket_secret_token_for_hook: BitBucket секретний маркер для гака
+      gitlab_full_name: Gitlab FullName
+      generate_changelogs: Генерація списків змін
+      include_detailed_changes: включає в себе докладні зміни, описані в висувними
+        запитів
+      include_issues: Включення питань в списком змін
+      include_pull_requests: Включити тягнути запитів в списком змін
+      close_issues: Закрити зроблено питання
+      emails_for_reports: Адреси електронної пошти для ОТРИМУВАТИ списків змін
+      write_to_changelog_file: Запис до списком змін файлу сховища
+      changelog_filename: Змін ім'я файлу
+      changelog_locale: Мова журналу змін
     project_modal:
-      project: проекту
+      project: Проект
   issues:
     form:
       title: Назва
@@ -170,12 +212,12 @@ uk:
       save: Зберегти
       body: Body
       enter_issue_body: Введіть випуск тіло
-      tags: Теги
+      tags: Мітки
       issue_order: Замовити
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
       github_issue_number: Github номер випуску
-      project: Project
+      project: Проект
       state: Держава
     index:
       issues: питання
@@ -204,7 +246,7 @@ uk:
       we_have_just_launched_our_service_title: Ми тільки що запустили наш сервіс!
       we_have_just_launched_our_service_text: Сьогодні ми запускаємо наш сервіс так
         що кожен може
-      sign_up: підписатися
+      sign_up: зареєструватися
       and_use_it: і використовувати його.
       with_love: З любов'ю,
       technoelegance_team: Technoelegance Team
@@ -222,7 +264,7 @@ uk:
     form:
       name: Ім'я
       enter_board_name: Введіть ім'я дошка
-      columns: Стовпці
+      columns: Колони
       add: Додати
       sections: Розділи
       save: Зберегти
@@ -234,7 +276,7 @@ uk:
       or_include_all: Або включати в себе все?
     column_fields:
       remove_column: Видалити стовпець
-      column_tags: теги Колонка
+      column_tags: мітки стовпців
       column_order: Замовити
       backlog: Відставання
     show:
@@ -266,6 +308,25 @@ uk:
       close: Закрити
       cancel: Скасувати
       more: Відправити ще
+  changelogs:
+    changelog_raw_md:
+      changes: Зміни
+      detailed_changes: Детальний опис змін
+      issues: питання
+      by: по
+    changelog:
+      changes: Зміни
+      detailed_changes: Детальний опис змін
+      issues: питання
+      by: по
+    index:
+      project: Проект
+      changelogs: списком змін
+      sync: Синхронізація
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Подивитись як HTML
+      view_as_raw_md: Вид сирої мкр
   pages:
     faq:
       faq: Часті питання
@@ -308,10 +369,10 @@ uk:
         ласка, запитайте новий
       expired: закінчився, будь ласка, запитайте новий
       not_found: не знайдені
-      not_locked: були незамкнені
+      not_locked: ні заблокований
       not_saved:
-        one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
-        other: "{число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
+        one: '1 помилка заборонена цей% {ресурс} з тих, що спасалися:'
+        other: "% {число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
     bad_request:
       bad_request: Bad Request
       request_result: Запит результату
@@ -332,7 +393,7 @@ uk:
       go_to_root: Перейти до кореня
     forbidden:
       forbidden: Заборонене
-      request_result: Запит результату
+      request_result: Запит результат
       forbidden_description: Це прохання було дійсний запит, але сервер відмовляється
         відповідати на нього
       go_to_root: Перейти до кореня
@@ -362,13 +423,13 @@ uk:
           адреси електронної
         submit: Відправити
     failure:
-      already_authenticated: Ви вже увійшли в систему.
+      already_authenticated: ви вже увійшли в систему.
       inactive: Ваш рахунок ще не активовано.
       invalid: Невірний адреса електронної пошти або пароль.
       locked: Ваш рахунок заблокований.
       last_attempt: У вас є ще одна спроба, перш ніж ваш обліковий запис буде заблокована.
       not_found_in_database: Невірний адреса електронної пошти або пароль.
-      timeout: Ваш сеанс закінчився. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
+      timeout: Вашої сесії минув. Будь ласка, увійдіть в систему ще раз, щоб продовжити.
       unauthenticated: Ви повинні увійти або зареєструватися, перш ніж продовжити.
       unconfirmed: Ви повинні підтвердити свій аккаунт, перш ніж продовжити.
     mailer:
@@ -387,16 +448,16 @@ uk:
         if_you_didnt_request_this_please_ignore_this_email: Якщо ви не замовляли це
           не звертайте уваги на цей лист.
       unlock_instructions:
-        subject: розблокування Інструкції
+        subject: Розблокування Інструкції
     omniauth_callbacks:
       failure: Неможливо перевірити справжність вас від {%} роду, тому що "% {причина}".
       success: успішно пройшов перевірку автентичності від {%} люб'язне увагу.
     passwords:
-      no_token: Ви не можете відкрити цю сторінку, не приходячи від електронної пошти
-        скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
+      no_token: Ви не можете отримати доступ до цієї сторінки, не приходячи від електронної
+        пошти скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
         будь ласка, переконайтеся, що ви використовували повний URL за умови.
-      send_instructions: Ви отримаєте лист з інструкціями про те, як скинути пароль
-        протягом декількох хвилин.
+      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
+        про те, як скинути пароль протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, ви отримаєте посилання для відновлення пароля на вашу адресу електронної
         пошти протягом декількох хвилин.
@@ -409,7 +470,7 @@ uk:
         change_your_password: Змінити пароль
         new_password: Новий пароль
         confirm_password: Підтвердження пароля
-        change_password: Зміна
+        change_password: Змінити
     registrations:
       destroyed: Bye! Ваш обліковий запис була успішно скасовано. Ми сподіваємося
         побачити вас знову найближчим часом.

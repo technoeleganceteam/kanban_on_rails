@@ -8,6 +8,10 @@ uz:
   backlog: Buyurtma
   open: Open
   closed: yopilgan
+  releases: relizlar
+  release: relizlar
+  changelog_has_been_resent: Changelog qayta bo'ldi
+  changelogs_has_been_synced: Changelog sinxronlanmoqda qilindi
   shared:
     navbar:
       sign_in: Sign in
@@ -106,11 +110,22 @@ uz:
       github_repository_id: Github jihozi id
       github_full_name: Github jihozi FULLNAME
       bitbucket_full_name: Bitbucket FULLNAME
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: o'zgarish
+      generate_changelogs: o'zgarish yaratish
+      include_detailed_changes: pull so'rovlar tasvirlangan batafsil o'zgarishlar
+      include_issues: o'zgarish masalalarni, jumladan,
+      include_pull_requests: o'zgarish bilan pull istaklari, jumladan,
+      close_issues: Close amalga masalalar
+      changelog_filename: Changelog filename
+      enter_changelog_filename: (default "CHANGELOG") changelog fayl nomini kiriting
     project:
       edit: Edit
       destroy: o'chirish
-      project_issues: Project masalalar
-      project_users: Project foydalanuvchilar
+      issues: masalalar
+      users: foydalanuvchilar
+      changelogs: o'zgarish
+      are_you_sure: Agar ishonchingiz komilmi?
     section_fields:
       section_name: Bo'lim nomi
       remove_section: O'chirish qism
@@ -129,6 +144,20 @@ uz:
       project_issues: Project masalalar
       project_users: Project foydalanuvchilar
       new: Yangi
+      edit: Edit
+      destroy: o'chirish
+      are_you_sure: Agar ishonchingiz komilmi?
+      changelogs: o'zgarish
+      github_repository_id: Github jihozi id
+      github_full_name: Github jihozi FULLNAME
+      bitbucket_full_name: Bitbucket FULLNAME
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: o'zgarish yaratish
+      include_detailed_changes: pull so'rovlar tasvirlangan batafsil o'zgarishlar
+      include_issues: o'zgarish masalalarni, jumladan,
+      include_pull_requests: o'zgarish bilan pull istaklari, jumladan,
+      close_issues: Close amalga masalalar
+      changelog_filename: Changelog filename
     project_modal:
       project: loyihasi
   issues:
@@ -222,6 +251,23 @@ uz:
       close: Close
       cancel: Bekor qilish
       more: ko'proq yuborish
+  changelogs:
+    changelog_raw_md:
+      changes: o'zgarishlar
+      detailed_changes: Mukammal o'zgarishlar
+      issues: masalalar
+      by: tomonidan
+    changelog:
+      changes: o'zgarishlar
+      detailed_changes: Mukammal o'zgarishlar
+      issues: masalalar
+      by: tomonidan
+    index:
+      project: loyihasi
+      changelogs: o'zgarish
+      sync: Sinx
+    changelog_list_item:
+      resend: qayta yuborish
   pages:
     faq:
       faq: FAQ

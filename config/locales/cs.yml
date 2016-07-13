@@ -9,6 +9,10 @@ cs:
   1_we_have_just_launched_our_service_title: Právě jsme spustili naše služby
   open: Otevřená
   closed: Zavřeno
+  releases: zprávy
+  release: vydání
+  changelog_has_been_resent: Changelog byla znovu odeslána
+  changelogs_has_been_synced: Changelog byl synchronizován
   shared:
     navbar:
       sign_in: Přihlásit
@@ -31,7 +35,7 @@ cs:
       password: Password
       current_password: Současné heslo
       name: Name
-      base: Základní
+      base: Základna
       title: Název
       user_to_project_connection: Uživatel projektovat spojení
       user_to_board_connection: Uživatel nastoupit připojení
@@ -53,6 +57,7 @@ cs:
       select_column_tags: Vybrat tagy sloupců
       select_section_tags: Vybrat tagy sekce
       select_issue_tags: Vybrat vydávat tagy
+      emails_for_reports: typu e-maily, které budou zasílat seznamu změn
     email_signature:
       info: Info
       mailer: Mailer
@@ -138,14 +143,29 @@ cs:
       add: Add
       github_repository_id: Github repository id
       github_full_name: Github úložiště fullname
-      github_secret_token_for_hook: Github tajný token háku
+      github_secret_token_for_hook: Gitlab tajný token háku
       bitbucket_full_name: bitbucket fullname
       bitbucket_secret_token_for_hook: bitbucket tajný token háku
+      gitlab_full_name: Gitlab fullname
+      changelogs: Seznamy změn
+      changelogs_info: Chcete-li zachovat zmen
+      generate_changelogs: Generování seznamu změn
+      include_detailed_changes: obsahovat podrobný změny popsané v žádostech pull
+      include_issues: zahrnout problémy v seznamu změn
+      include_pull_requests: zahrnout požadavky vtáhnout changelogs
+      close_issues: Close udělal problémy
+      emails_for_reports: e-maily pro zasílání seznamu změn
+      write_to_changelog_file: Write changelogs do úložiště souboru
+      changelog_filename: Changelog souboru
+      enter_changelog_filename: Enter changelogem souboru (výchozí "changelog")
+      changelog_locale: Volí jazyk pro changelogs
     project:
       edit: Edit
       destroy: Smazat
-      project_issues: problémy Project
-      project_users: uživatelů projektu
+      issues: Problémy
+      users: Uživatelé
+      changelogs: Seznamy změn
+      are_you_sure: Opravdu?
     section_fields:
       remove_section: Remove sekce
       section_tags: "§ tagy"
@@ -161,6 +181,25 @@ cs:
       project_issues: problémy Project
       project_users: uživatelů projektu
       new: Nové
+      edit: Edit
+      destroy: Smazat
+      are_you_sure: Opravdu?
+      changelogs: Seznamy změn
+      github_repository_id: Github repository id
+      github_full_name: Github úložiště fullname
+      github_secret_token_for_hook: Gitlab tajný token háku
+      bitbucket_full_name: bitbucket fullname
+      bitbucket_secret_token_for_hook: bitbucket tajný token háku
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generování seznamu změn
+      include_detailed_changes: obsahovat podrobný změny popsané v žádostech pull
+      include_issues: zahrnout problémy v seznamu změn
+      include_pull_requests: zahrnout požadavky vtáhnout changelogs
+      close_issues: Close udělal problémy
+      emails_for_reports: e-maily pro zasílání seznamu změn
+      write_to_changelog_file: Write changelogs do úložiště souboru
+      changelog_filename: Changelog souboru
+      changelog_locale: jazyk pro changelogu
     project_modal:
       project: Project
   issues:
@@ -266,6 +305,25 @@ cs:
       close: Close
       cancel: Zrušit
       more: Odeslat více
+  changelogs:
+    changelog_raw_md:
+      changes: Změny
+      detailed_changes: Detailní změny
+      issues: Problémy
+      by: tím,
+    changelog:
+      changes: Změny
+      detailed_changes: Detailní změny
+      issues: Problémy
+      by: tím,
+    index:
+      project: Project
+      changelogs: Seznamy změn
+      sync: Sync
+    changelog_list_item:
+      resend: Znovu odeslat
+      view_as_html: Zobrazit jako html
+      view_as_raw_md: Zobrazit jako surový md
   pages:
     faq:
       faq: FAQ

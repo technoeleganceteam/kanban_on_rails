@@ -9,6 +9,10 @@ hu:
   1_we_have_just_launched_our_service_title: Épp most indult a szolgáltatás
   open: megnyitása
   closed: Zárt
+  releases: kibocsátások
+  release: kiadás
+  changelog_has_been_resent: Változások már zokon
+  changelogs_has_been_synced: Változások szinkronizált
   shared:
     navbar:
       sign_in: Bejelentkezés
@@ -54,6 +58,7 @@ hu:
       select_column_tags: Select oszlopban címkék
       select_section_tags: Select szakaszcímkéket
       select_issue_tags: Select kérdés címkék
+      emails_for_reports: Type-maileket, amelyek fog kapni ChangeLog
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,29 @@ hu:
       column_height: oszlop magassága
       github_repository_id: GitHub repository id
       github_full_name: GitHub repository fullname
-      github_secret_token_for_hook: Github titkos tokent horog
+      github_secret_token_for_hook: Gitlab titkos tokent horog
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket titkos tokent horog
+      gitlab_full_name: Gitlab fullname
+      changelogs: ChangeLog
+      changelogs_info: ha meg akarja tartani ChangeLog
+      generate_changelogs: generálása ChangeLog
+      include_detailed_changes: Tartalmazza részletes leírt változások pull kérések
+      include_issues: Tartalmazza kérdések ChangeLog
+      include_pull_requests: tartalmazza húzni kéréseket ChangeLog
+      close_issues: bezárása történik kérdések
+      emails_for_reports: e-mailek számára recieving ChangeLog
+      write_to_changelog_file: írása ChangeLog a repository fájl
+      changelog_filename: Változások fájlnév
+      enter_changelog_filename: Írja changelog nevét (alapértelmezett "CHANGELOG")
+      changelog_locale: kiválasztása nyelvét ChangeLog
     project:
       edit: szerkesztése
       destroy: törlése
-      project_issues: Project kérdések
-      project_users: Project felhasználó
+      issues: kérdések
+      users: Felhasználók
+      changelogs: ChangeLog
+      are_you_sure: Biztos vagy benne?
     section_fields:
       section_name: Szekció neve
       remove_section: panel eltávolítása
@@ -171,6 +191,25 @@ hu:
       project_issues: Project kérdések
       project_users: Project felhasználó
       new: Új
+      edit: szerkesztése
+      destroy: törlése
+      are_you_sure: Biztos vagy benne?
+      changelogs: ChangeLog
+      github_repository_id: GitHub repository id
+      github_full_name: GitHub repository fullname
+      github_secret_token_for_hook: Gitlab titkos tokent horog
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket titkos tokent horog
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: generálása ChangeLog
+      include_detailed_changes: Tartalmazza részletes leírt változások pull kérések
+      include_issues: Tartalmazza kérdések ChangeLog
+      include_pull_requests: tartalmazza húzni kéréseket ChangeLog
+      close_issues: bezárása történik kérdések
+      emails_for_reports: e-mailek számára recieving ChangeLog
+      write_to_changelog_file: írása ChangeLog a repository fájl
+      changelog_filename: Változások fájlnév
+      changelog_locale: nyelve changelog
     project_modal:
       project: Project
   issues:
@@ -280,6 +319,25 @@ hu:
       close: bezárása
       cancel: Mégsem
       more: küldése több
+  changelogs:
+    changelog_raw_md:
+      changes: Változások
+      detailed_changes: változtatások részletesen
+      issues: kérdések
+      by: által
+    changelog:
+      changes: Változások
+      detailed_changes: változtatások részletesen
+      issues: kérdések
+      by: által
+    index:
+      project: Project
+      changelogs: ChangeLog
+      sync: szinkronizálása
+    changelog_list_item:
+      resend: újraküldése
+      view_as_html: Nézet html
+      view_as_raw_md: Nézet nyers md
   pages:
     faq:
       faq: GYIK

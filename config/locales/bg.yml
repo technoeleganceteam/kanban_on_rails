@@ -9,6 +9,10 @@ bg:
   1_we_have_just_launched_our_service_title: Вече стартирахме нашата услуга
   open: Open
   closed: Затворен
+  releases: пресата
+  release: освобождаване
+  changelog_has_been_resent: на промените е бил изпратен отново
+  changelogs_has_been_synced: на промените е синхронизирана
   shared:
     navbar:
       sign_in: Вход
@@ -53,6 +57,7 @@ bg:
       select_column_tags: Изберете колоните тагове
       select_section_tags: Изберете раздел тагове
       select_issue_tags: Изберете проблема тагове
+      emails_for_reports: Тип имейли, които ще получите changelogs
     email_signature:
       info: Info
       mailer: Мейлър
@@ -138,14 +143,30 @@ bg:
       add: Add
       github_repository_id: Github хранилище ID
       github_full_name: Github хранилище FULLNAME
-      github_secret_token_for_hook: Github тайна знак за кука
+      github_secret_token_for_hook: Gitlab тайна знак за кука
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket тайна знак за кука
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: ", ако искате да запазите changelogs"
+      generate_changelogs: Генериране changelogs
+      include_detailed_changes: включва подробни промени, описани в притегателни искания
+      include_issues: включват въпроси в changelogs
+      include_pull_requests: Включи разтегателни искания в changelogs
+      close_issues: Затвори направили въпроси
+      emails_for_reports: имейли за recieving changelogs
+      write_to_changelog_file: Писане changelogs на хранилище файл
+      changelog_filename: промените името на файла
+      enter_changelog_filename: Въвеждане на промените името на файла (по подразбиране
+        "CHANGELOG")
+      changelog_locale: Изберете език за changelogs
     project:
       edit: Edit
       destroy: Изтриване
-      project_issues: въпроси по проекта
-      project_users: участници в проекта
+      issues: Проблеми
+      users: Потребители
+      changelogs: Changelogs
+      are_you_sure: Сигурни ли сте?
     section_fields:
       section_tags: Раздел тагове
       section_order: Поръчка
@@ -161,6 +182,25 @@ bg:
       project_issues: въпроси по проекта
       project_users: участници в проекта
       new: New
+      edit: Edit
+      destroy: Изтриване
+      are_you_sure: Сигурни ли сте?
+      changelogs: Changelogs
+      github_repository_id: Github хранилище ID
+      github_full_name: Github хранилище FULLNAME
+      github_secret_token_for_hook: Gitlab тайна знак за кука
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket тайна знак за кука
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: Генериране changelogs
+      include_detailed_changes: включва подробни промени, описани в притегателни искания
+      include_issues: включват въпроси в changelogs
+      include_pull_requests: Включи разтегателни искания в changelogs
+      close_issues: Затвори направили въпроси
+      emails_for_reports: имейли за recieving changelogs
+      write_to_changelog_file: Писане changelogs на хранилище файл
+      changelog_filename: промените името на файла
+      changelog_locale: Език за промените
     project_modal:
       project: Project
   issues:
@@ -266,6 +306,25 @@ bg:
       close: Затвори
       cancel: Отказ
       more: Изпрати повече
+  changelogs:
+    changelog_raw_md:
+      changes: Промени
+      detailed_changes: Подробни промени
+      issues: Проблеми
+      by: от
+    changelog:
+      changes: Промени
+      detailed_changes: Подробни промени
+      issues: Проблеми
+      by: от
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: ми нов
+      view_as_html: Виж като HTML
+      view_as_raw_md: Виж като сурово MD
   pages:
     faq:
       faq: Отговори

@@ -9,6 +9,10 @@ km:
   1_we_have_just_launched_our_service_title: យើងទើបតែបានចាប់ផ្តើមសេវារបស់យើង
   open: បើកទូលាយ
   closed: បានបិទ
+  releases: ចេញផ្សាយ
+  release: ការចេញផ្សាយ
+  changelog_has_been_resent: ផ្លាស់ប្ដូរត្រូវបានគេអាក់អន់ចិត្ត
+  changelogs_has_been_synced: ផ្លាស់ប្ដូរត្រូវបានធ្វើសមកាលកម្ម
   shared:
     navbar:
       sign_up: ចុះឈ្មោះ
@@ -45,6 +49,7 @@ km:
     javascript_global_variables:
       select_section_tags: ជ្រើសផ្នែកស្លាក
       select_issue_tags: ជ្រើសស្លាកបញ្ហា
+      emails_for_reports: ប្រភេទអ៊ីម៉ែលដែលនឹងទទួលបានផ្លាស់ប្ដូរ
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance ចំកាត់
@@ -112,14 +117,27 @@ km:
       sections: ផ្នែក
       add: បន្ថែម
       github_full_name: ឈ្មោះពេញឃ្លាំង Github
-      github_secret_token_for_hook: សញ្ញាសម្ងាត់សម្ងាត់ Github សម្រាប់ការទំពក់
       bitbucket_full_name: Bitbucket ឈ្មោះពេញ
       bitbucket_secret_token_for_hook: សញ្ញាសម្ងាត់សម្ងាត់ Bitbucket សម្រាប់ការទំពក់
+      changelogs: ផ្លាស់ប្ដូរ
+      changelogs_info: ប្រសិនបើអ្នកចង់រក្សាទុកការផ្លាស់ប្ដូរ
+      generate_changelogs: បង្កើតផ្លាស់ប្ដូរ
+      include_detailed_changes: រួមបញ្ចូលទាំងការផ្លាស់ប្តូរសំណើលម្អិតរៀបរាប់នៅក្នុងទាញ
+      include_issues: រួមបញ្ចូលបញ្ហាក្នុងការផ្លាស់ប្ដូរ
+      include_pull_requests: រួមបញ្ចូលសំណើទាញក្នុងការផ្លាស់ប្ដូរ
+      close_issues: បញ្ហាបិទធ្វើបាន
+      emails_for_reports: អ៊ីមែលសម្រាប់ recieving ផ្លាស់ប្ដូរ
+      write_to_changelog_file: ផ្លាស់ប្ដូរសរសេរទៅកាន់ឯកសារឃ្លាំង
+      changelog_filename: ឈ្មោះឯកសារផ្លាស់ប្ដូរ
+      enter_changelog_filename: (លំនាំដើម "ផ្លាស់ប្ដូរ")
+      changelog_locale: ជ្រើសភាសាសម្រាប់ផ្លាស់ប្ដូរ
     project:
       edit: កែសម្រួល
       destroy: លុប
-      project_issues: បញ្ហាគម្រោង
-      project_users: អ្នកប្រើប្រាស់គម្រោង
+      issues: បញ្ហា
+      users: អ្នកប្រើ
+      changelogs: ផ្លាស់ប្ដូរ
+      are_you_sure: តើអ្នកប្រាកដ?
     section_fields:
       section_tags: ស្លាកផ្នែក
       section_order: លំដាប់
@@ -134,6 +152,22 @@ km:
       project_issues: បញ្ហាគម្រោង
       project_users: អ្នកប្រើប្រាស់គម្រោង
       new: ថ្មី
+      edit: កែសម្រួល
+      destroy: លុប
+      are_you_sure: តើអ្នកប្រាកដ?
+      changelogs: ផ្លាស់ប្ដូរ
+      github_full_name: ឈ្មោះពេញឃ្លាំង Github
+      bitbucket_full_name: Bitbucket ឈ្មោះពេញ
+      bitbucket_secret_token_for_hook: សញ្ញាសម្ងាត់សម្ងាត់ Bitbucket សម្រាប់ការទំពក់
+      generate_changelogs: បង្កើតផ្លាស់ប្ដូរ
+      include_detailed_changes: រួមបញ្ចូលទាំងការផ្លាស់ប្តូរសំណើលម្អិតរៀបរាប់នៅក្នុងទាញ
+      include_issues: រួមបញ្ចូលបញ្ហាក្នុងការផ្លាស់ប្ដូរ
+      include_pull_requests: រួមបញ្ចូលសំណើទាញក្នុងការផ្លាស់ប្ដូរ
+      close_issues: បញ្ហាបិទធ្វើបាន
+      emails_for_reports: អ៊ីមែលសម្រាប់ recieving ផ្លាស់ប្ដូរ
+      write_to_changelog_file: ផ្លាស់ប្ដូរសរសេរទៅកាន់ឯកសារឃ្លាំង
+      changelog_filename: ឈ្មោះឯកសារផ្លាស់ប្ដូរ
+      changelog_locale: ភាសាសម្រាប់ផ្លាស់ប្ដូរ
     project_modal:
       project: គម្រោង
   issues:
@@ -178,7 +212,6 @@ km:
       read_more: អានបន្ថែម
   welcome:
     index:
-      welcome_to_kanban_on_rails: នៅលើផ្លូវរថភ្លើង
       welcome_about_text: ទីនេះអ្នកអាចបង្កើតក្រុមប្រឹក្សាភិបាល Kanban ផ្ទាល់ខ្លួនរបស់អ្នកនិងធ្វើសមកាលកម្មវាជាមួយនឹង
         Github ឬ Bitbucket
   boards:
@@ -191,6 +224,7 @@ km:
       save: រក្សាទុក
       projects: គម្រោង
     section_fields:
+      section_tags: ស្លាកផ្នែក
       section_order: លំដាប់
       or_include_all: ឬរួមបញ្ចូលទាំងអស់?
     column_fields:
@@ -227,8 +261,28 @@ km:
       close: បិទ
       cancel: បោះបង់
       more: ផ្ញើកាន់តែច្រើន
+  changelogs:
+    changelog_raw_md:
+      changes: ការផ្លាស់ប្តូរ
+      detailed_changes: ការផ្លាស់ប្តូរលម្អិត
+      issues: បញ្ហា
+      by: ដោយ
+    changelog:
+      changes: ការផ្លាស់ប្តូរ
+      detailed_changes: ការផ្លាស់ប្តូរលម្អិត
+      issues: បញ្ហា
+      by: ដោយ
+    index:
+      project: គម្រោង
+      changelogs: ផ្លាស់ប្ដូរ
+    changelog_list_item:
+      resend: ផ្ញើម្ដងទៀត
+      view_as_html: មើលជា HTML
+      view_as_raw_md: ទិដ្ឋភាពជាវេជ្ជបណ្ឌិតឆៅ
   pages:
     faq:
+      faq: សំណួរគេសួរញឹកញាប់
+      what_is_kanban_on_rails: "?"
       about_kanban_on_rails: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
         Kanban វាជាមួយ Github ឬ Bitbucket
       kanban_on_rails_features: គម្រោងអ្នកអាចធ្វើសមកាលកម្មនិងបញ្ហារបស់អ្នកជាមួយនឹង
@@ -266,7 +320,7 @@ km:
         other: "% {COUNT} កំហុសបានហាមឃាត់នេះ% {ធនធាន} ពីការរក្សាទុក:"
     bad_request:
       bad_request_description: ម៉ាស៊ីនបម្រើមិនអាចឬនឹងមិនដំណើរការសំណើនេះដោយសារតែមានកំហុសកម្មវិធីជាក់ស្តែង
-      go_to_root: ច​​ូលទៅកាន់ការជា root
+      go_to_root: ចូលទៅកាន់ការជា root
     unprocessable_entity:
       unprocessable_entity_description: សំណើនេះគឺល្អបានបង្កើតឡើងប៉ុន្តែនាងមិនត្រូវបានអនុវត្តតាមជាដោយសារកំហុស
         semantic
@@ -345,7 +399,7 @@ km:
         សូមបើកតំណភ្ជាប់ដើម្បីធ្វើឱ្យគណនីរបស់អ្នក។
       update_needs_confirmation: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ, ប៉ុន្តែយើងត្រូវការដើម្បីផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
         សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកហើយចុចលើតំណ Confirm ដើម្បីបញ្ចប់ការបញ្ជាក់ពីអាសយដ្ឋានអ៊ីម៉ែលថ្មីរបស់អ្នក។
-      updated: អ្នកធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
+      updated: អ្នកបានធ្វើឱ្យទាន់សម័យគណនីរបស់អ្នកដោយជោគជ័យ។
       new:
         sign_up: ចុះឈ្មោះ
         name: ឈ្មោះ

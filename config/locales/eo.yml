@@ -9,6 +9,10 @@ eo:
   1_we_have_just_launched_our_service_title: Ni ĵus lanĉis nian servon
   open: Malferma
   closed: Fermita
+  releases: ĵetoj
+  release: liberigo
+  changelog_has_been_resent: changelog estis resendita
+  changelogs_has_been_synced: changelog estis synced
   shared:
     navbar:
       sign_in: Ensaluti
@@ -54,6 +58,7 @@ eo:
       select_column_tags: Elekti kolumnon etikedoj
       select_section_tags: Elekti sekcion etikedoj
       select_issue_tags: Elektu temon etikedoj
+      emails_for_reports: Tipo retpoŝtojn kiu recieve Ŝanĝoregistroj
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,29 @@ eo:
       column_height: Kolumno alteco
       github_repository_id: GitHub deponejo identigilo
       github_full_name: GitHub deponejo fullname
-      github_secret_token_for_hook: GitHub sekretan signon por hoko
+      github_secret_token_for_hook: Gitlab sekretan signon por hoko
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket sekretan signon por hoko
+      gitlab_full_name: Gitlab fullname
+      changelogs: Ŝanĝoregistroj
+      changelogs_info: Se vi volas konservi Ŝanĝoregistroj
+      generate_changelogs: Generi Ŝanĝoregistroj
+      include_detailed_changes: Inkluzivi detala shanghoj en tiro petoj
+      include_issues: Inkluzivi temoj en Ŝanĝoregistroj
+      include_pull_requests: Inkluzivi tiro petoj en Ŝanĝoregistroj
+      close_issues: Fermi farita temoj
+      emails_for_reports: Retmesaĝoj por recieving Ŝanĝoregistroj
+      write_to_changelog_file: Skribi Ŝanĝoregistroj al la deponejo dosieron
+      changelog_filename: changelog dosiernomo
+      enter_changelog_filename: Entajpu changelog dosiernomo (defaŭlta "Changelog")
+      changelog_locale: Elektu lingvon por Ŝanĝoregistroj
     project:
       edit: Redakti
       destroy: Delete
-      project_issues: Projekto temoj
-      project_users: Projekto uzantoj
+      issues: Issues
+      users: Uzantoj
+      changelogs: Ŝanĝoregistroj
+      are_you_sure: Ĉu vi certas?
     section_fields:
       section_name: Sekcio nomon
       remove_section: Forigi sekcio
@@ -171,6 +191,25 @@ eo:
       project_issues: Projekto temoj
       project_users: Projekto uzantoj
       new: Nova
+      edit: Redakti
+      destroy: Delete
+      are_you_sure: Ĉu vi certas?
+      changelogs: Ŝanĝoregistroj
+      github_repository_id: GitHub deponejo identigilo
+      github_full_name: GitHub deponejo fullname
+      github_secret_token_for_hook: Gitlab sekretan signon por hoko
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket sekretan signon por hoko
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generi Ŝanĝoregistroj
+      include_detailed_changes: Inkluzivi detala shanghoj en tiro petoj
+      include_issues: Inkluzivi temoj en Ŝanĝoregistroj
+      include_pull_requests: Inkluzivi tiro petoj en Ŝanĝoregistroj
+      close_issues: Fermi farita temoj
+      emails_for_reports: Retmesaĝoj por recieving Ŝanĝoregistroj
+      write_to_changelog_file: Skribi Ŝanĝoregistroj al la deponejo dosieron
+      changelog_filename: changelog dosiernomo
+      changelog_locale: Lingvo por changelog
     project_modal:
       project: Projekto
   issues:
@@ -280,6 +319,25 @@ eo:
       close: Fermi
       cancel: Nuligi
       more: Sendu pli
+  changelogs:
+    changelog_raw_md:
+      changes: Ŝanĝoj
+      detailed_changes: Detalaj ŝanĝoj
+      issues: Issues
+      by: per
+    changelog:
+      changes: Ŝanĝoj
+      detailed_changes: Detalaj ŝanĝoj
+      issues: Issues
+      by: per
+    index:
+      project: Projekto
+      changelogs: Ŝanĝoregistroj
+      sync: Sync
+    changelog_list_item:
+      resend: Resendi
+      view_as_html: Vidi kiel html
+      view_as_raw_md: Vidi kiel kruda md
   pages:
     faq:
       faq: Demandoj

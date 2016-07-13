@@ -8,6 +8,10 @@ az:
   backlog: Portfelinizi
   open: Open
   closed: Bağlanıb
+  releases: relizlər
+  release: azad
+  changelog_has_been_resent: Değişiklikler retort olmuşdur
+  changelogs_has_been_synced: Değişiklikler synced edilmişdir
   shared:
     navbar:
       sign_in: Sign in
@@ -106,11 +110,23 @@ az:
       github_repository_id: Github depo id
       github_full_name: Github depo fullname
       bitbucket_full_name: Bitbucket fullname
+      gitlab_full_name: GitLab fullname
+      changelogs: changelogs
+      generate_changelogs: changelogs yaradın
+      include_detailed_changes: pull sorğu təsvir ətraflı dəyişikliklər
+      include_issues: changelogs məsələləri daxil
+      include_pull_requests: changelogs ilə açılan sorğu əlavə
+      close_issues: Close görülən məsələlər
+      changelog_filename: Değişiklikler fayl
+      enter_changelog_filename: (default "Değişiklikler") Değişiklikler fayl daxil
+        edin
     project:
       edit: Edit
       destroy: sil
-      project_issues: Project məsələlər
-      project_users: Layihə istifadəçilər
+      issues: Issues
+      users: İstifadəçilər
+      changelogs: changelogs
+      are_you_sure: siz əminsinizmi?
     section_fields:
       section_name: Bölmə adı
       remove_section: Sil bölmə
@@ -129,6 +145,20 @@ az:
       project_issues: Project məsələlər
       project_users: Layihə istifadəçilər
       new: New
+      edit: Edit
+      destroy: sil
+      are_you_sure: siz əminsinizmi?
+      changelogs: changelogs
+      github_repository_id: Github depo id
+      github_full_name: Github depo fullname
+      bitbucket_full_name: Bitbucket fullname
+      gitlab_full_name: GitLab fullname
+      generate_changelogs: changelogs yaradın
+      include_detailed_changes: pull sorğu təsvir ətraflı dəyişikliklər
+      include_issues: changelogs məsələləri daxil
+      include_pull_requests: changelogs ilə açılan sorğu əlavə
+      close_issues: Close görülən məsələlər
+      changelog_filename: Değişiklikler fayl
     project_modal:
       project: Project
   issues:
@@ -222,6 +252,23 @@ az:
       close: Close
       cancel: ləğv
       more: daha çox göndər
+  changelogs:
+    changelog_raw_md:
+      changes: dəyişikliklər
+      detailed_changes: Ətraflı dəyişikliklər
+      issues: Issues
+      by: ilə
+    changelog:
+      changes: dəyişikliklər
+      detailed_changes: Ətraflı dəyişikliklər
+      issues: Issues
+      by: ilə
+    index:
+      project: Project
+      changelogs: changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Aktivləşmə üçün məktubun təkrar
   pages:
     faq:
       faq: FAQ

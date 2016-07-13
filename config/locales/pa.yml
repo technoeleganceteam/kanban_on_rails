@@ -9,6 +9,10 @@ pa:
   1_we_have_just_launched_our_service_title: ਸਾਨੂੰ ਹੁਣੇ ਹੀ ਸਾਡੀ ਸੇਵਾ ਸ਼ੁਰੂ ਕੀਤੀ ਹੈ
   open: ਓਪਨ
   closed: ਬੰਦ
+  releases: ਰੀਲੀਜ਼
+  release: ਰੀਲਿਜ਼
+  changelog_has_been_resent: Changelog ਵਿਰੋਧ ਕੀਤਾ ਗਿਆ ਹੈ,
+  changelogs_has_been_synced: Changelog ਸਿੰਕ ਕੀਤਾ ਗਿਆ ਹੈ
   shared:
     navbar:
       sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ
@@ -50,6 +54,7 @@ pa:
       select_column_tags: ਚੁਣੋ
       select_section_tags: ਚੁਣੋ
       select_issue_tags: ਮੁੱਦੇ ਨੂੰ ਟੈਗ ਚੁਣੋ
+      emails_for_reports: ਕਿਸਮ ਈ ਹੈ, ਜੋ ਕਿ ਕਮਿਟ ਪ੍ਰਾਪਤ ਕਰੋਗੇ ਜਾਵੇਗਾ
     email_signature:
       info: ਜਾਣਕਾਰੀ
       mailer: Mailer
@@ -119,14 +124,28 @@ pa:
       column_height: ਕਾਲਮ ਉਚਾਈ
       github_repository_id: GitHub ਰਿਪੋਜ਼ਟਰੀ ID
       github_full_name: GitHub ਰਿਪੋਜ਼ਟਰੀ FULLNAME ਨੇ
-      github_secret_token_for_hook: ਹੁੱਕ ਲਈ GitHub ਗੁਪਤ ਟੋਕਨ
+      github_secret_token_for_hook: Gitlab ਗੁਪਤ ਟੋਕਨ
       bitbucket_full_name: Bitbucket FULLNAME ਨੇ
       bitbucket_secret_token_for_hook: ਹੁੱਕ ਲਈ Bitbucket ਗੁਪਤ ਟੋਕਨ
+      gitlab_full_name: Gitlab FULLNAME ਨੇ
+      changelogs: ਕਮਿਟ
+      changelogs_info: ਤੁਹਾਨੂੰ ਕਮਿਟ ਰੱਖਣ ਲਈ ਚਾਹੁੰਦੇ ਹੋ, ਜੇਕਰ
+      generate_changelogs: ਕਮਿਟ ਬਣਾਉਣ
+      include_detailed_changes: ਲਟਕਣ ਬੇਨਤੀ ਵਿੱਚ ਦੱਸਿਆ ਗਿਆ ਹੈ ਵੇਰਵਾ ਤਬਦੀਲੀ ਸ਼ਾਮਲ ਕਰੋ
+      include_issues: ਕਮਿਟ ਵਿਚ ਮੁੱਦੇ ਸ਼ਾਮਲ ਕਰੋ
+      include_pull_requests: ਕਮਿਟ ਵਿਚ ਲਟਕਣ ਦੀ ਮੰਗ ਵਿੱਚ ਸ਼ਾਮਲ
+      close_issues: ਬੰਦ ਵੀ ਕੀਤਾ ਮੁੱਦੇ
+      write_to_changelog_file: ਰਿਪੋਜ਼ਟਰੀ ਨੂੰ ਫਾਇਲ ਕਮਿਟ ਲਿਖੋ
+      changelog_filename: Changelog ਫਾਇਲ
+      enter_changelog_filename: (ਮੂਲ "ChangeLog") changelog ਫਾਇਲ ਦਿਓ
+      changelog_locale: ਕਮਿਟ ਲਈ ਭਾਸ਼ਾ ਚੁਣੋ
     project:
       edit: ਸੋਧ
       destroy: ਹਟਾਓ
-      project_issues: ਪ੍ਰੋਜੈਕਟ ਮੁੱਦੇ
-      project_users: ਪ੍ਰੋਜੈਕਟ ਉਪਭੋਗੀ
+      issues: ਮੁੱਦੇ
+      users: ਉਪਭੋਗੀ
+      changelogs: ਕਮਿਟ
+      are_you_sure: ਤੁਹਾਨੂੰ ਯਕੀਨ ਹੈ?
     section_fields:
       section_name: ਹਿੱਸਾ ਨਾਮ
       remove_section: ਹਟਾਓ ਭਾਗ
@@ -146,6 +165,23 @@ pa:
       project_issues: ਪ੍ਰੋਜੈਕਟ ਮੁੱਦੇ
       project_users: ਪ੍ਰੋਜੈਕਟ ਉਪਭੋਗੀ
       new: ਨਿਊ
+      edit: ਸੋਧ
+      destroy: ਹਟਾਓ
+      are_you_sure: ਤੁਹਾਨੂੰ ਯਕੀਨ ਹੈ?
+      changelogs: ਕਮਿਟ
+      github_repository_id: GitHub ਰਿਪੋਜ਼ਟਰੀ ID
+      github_full_name: GitHub ਰਿਪੋਜ਼ਟਰੀ FULLNAME ਨੇ
+      github_secret_token_for_hook: Gitlab ਗੁਪਤ ਟੋਕਨ
+      bitbucket_full_name: Bitbucket FULLNAME ਨੇ
+      bitbucket_secret_token_for_hook: ਹੁੱਕ ਲਈ Bitbucket ਗੁਪਤ ਟੋਕਨ
+      gitlab_full_name: Gitlab FULLNAME ਨੇ
+      generate_changelogs: ਕਮਿਟ ਬਣਾਉਣ
+      include_detailed_changes: ਲਟਕਣ ਬੇਨਤੀ ਵਿੱਚ ਦੱਸਿਆ ਗਿਆ ਹੈ ਵੇਰਵਾ ਤਬਦੀਲੀ ਸ਼ਾਮਲ ਕਰੋ
+      include_issues: ਕਮਿਟ ਵਿਚ ਮੁੱਦੇ ਸ਼ਾਮਲ ਕਰੋ
+      include_pull_requests: ਕਮਿਟ ਵਿਚ ਲਟਕਣ ਦੀ ਮੰਗ ਵਿੱਚ ਸ਼ਾਮਲ
+      close_issues: ਬੰਦ ਵੀ ਕੀਤਾ ਮੁੱਦੇ
+      write_to_changelog_file: ਰਿਪੋਜ਼ਟਰੀ ਨੂੰ ਫਾਇਲ ਕਮਿਟ ਲਿਖੋ
+      changelog_filename: Changelog ਫਾਇਲ
     project_modal:
       project: ਪ੍ਰੋਜੈਕਟ
   issues:
@@ -252,6 +288,23 @@ pa:
       close: ਬੰਦ
       cancel: ਰੱਦ
       more: ਹੋਰ ਭੇਜੋ
+  changelogs:
+    changelog_raw_md:
+      changes: ਬਦਲਾਅ
+      detailed_changes: ਵੇਰਵਾ ਤਬਦੀਲੀ
+      issues: ਮੁੱਦੇ
+      by: ਦੁਆਰਾ
+    changelog:
+      changes: ਬਦਲਾਅ
+      detailed_changes: ਵੇਰਵਾ ਤਬਦੀਲੀ
+      issues: ਮੁੱਦੇ
+      by: ਦੁਆਰਾ
+    index:
+      project: ਪ੍ਰੋਜੈਕਟ
+      changelogs: ਕਮਿਟ
+      sync: ਸਿੰਕ
+    changelog_list_item:
+      resend: ਭੇਜਣਾ
   pages:
     faq:
       faq: ਸਵਾਲ

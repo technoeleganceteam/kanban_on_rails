@@ -8,6 +8,10 @@ ta:
   backlog: டர்
   open: திறந்த
   closed: மூடப்பட்ட
+  releases: வெளியீடுகள்
+  release: வெளியீடு
+  changelog_has_been_resent: சேஞ்ச் வெறுப்படையாதீர்கள் வருகிறது
+  changelogs_has_been_synced: சேஞ்ச் ஒத்திசைக்கப்பட்டதை வருகிறது
   shared:
     navbar:
       sign_in: உள்நுழை
@@ -122,14 +126,29 @@ ta:
       column_height: வரிசை உயரம்
       github_repository_id: கிட்ஹப் களஞ்சியம் ஐடி
       github_full_name: கிட்ஹப் களஞ்சியம் முழுப்பெயரைக்
-      github_secret_token_for_hook: கிட்ஹப் கொக்கி இரகசிய டோக்கன்
+      github_secret_token_for_hook: Gitlab கொக்கி இரகசிய டோக்கன்
       bitbucket_full_name: Bitbucket முழுப்பெயரைக்
       bitbucket_secret_token_for_hook: Bitbucket கொக்கி இரகசிய டோக்கன்
+      gitlab_full_name: Gitlab முழுப்பெயரைக்
+      changelogs: Changelogs
+      changelogs_info: நீங்கள் Changelogs வைக்க விரும்பினால்
+      generate_changelogs: Changelogs உருவாக்குதல்
+      include_detailed_changes: மிகுதி கோரிக்கைகளை விவரித்தார் விரிவான மாற்றங்கள்
+      include_issues: Changelogs உள்ள பிரச்சினைகள் சேர்க்கவும்
+      include_pull_requests: Changelogs இழுக்க கோரிக்கைகளை சேர்க்கவும்
+      close_issues: மூடு செய்து பிரச்சினைகள்
+      emails_for_reports: Changelogs recieving மின்னஞ்சல்களை
+      changelog_filename: சேஞ்ச் கோப்பு பெயர்
+      enter_changelog_filename: (இயல்புநிலை "சேஞ்ச்") சேஞ்ச் கோப்புப் பெயரை இங்கே
+        உள்ளிடவும்
+      changelog_locale: Changelogs மொழியை தேர்வு
     project:
       edit: திருத்து
       destroy: நீக்கு
-      project_issues: திட்ட பிரச்சினைகள்
-      project_users: திட்ட பயனாளிகள்
+      issues: சிக்கல்கள்
+      users: பயனர்கள்
+      changelogs: Changelogs
+      are_you_sure: நீங்கள் உறுதியாக இருக்கிறீர்களா?
     section_fields:
       section_name: பகுதியின் பெயர்
       remove_section: உள்ள Remove பிரிவில்
@@ -149,6 +168,24 @@ ta:
       project_issues: திட்ட பிரச்சினைகள்
       project_users: திட்ட பயனாளிகள்
       new: நியூ
+      edit: திருத்து
+      destroy: நீக்கு
+      are_you_sure: நீங்கள் உறுதியாக இருக்கிறீர்களா?
+      changelogs: Changelogs
+      github_repository_id: கிட்ஹப் களஞ்சியம் ஐடி
+      github_full_name: கிட்ஹப் களஞ்சியம் முழுப்பெயரைக்
+      github_secret_token_for_hook: Gitlab கொக்கி இரகசிய டோக்கன்
+      bitbucket_full_name: Bitbucket முழுப்பெயரைக்
+      bitbucket_secret_token_for_hook: Bitbucket கொக்கி இரகசிய டோக்கன்
+      gitlab_full_name: Gitlab முழுப்பெயரைக்
+      generate_changelogs: Changelogs உருவாக்குதல்
+      include_detailed_changes: மிகுதி கோரிக்கைகளை விவரித்தார் விரிவான மாற்றங்கள்
+      include_issues: Changelogs உள்ள பிரச்சினைகள் சேர்க்கவும்
+      include_pull_requests: Changelogs இழுக்க கோரிக்கைகளை சேர்க்கவும்
+      close_issues: மூடு செய்து பிரச்சினைகள்
+      emails_for_reports: Changelogs recieving மின்னஞ்சல்களை
+      changelog_filename: சேஞ்ச் கோப்பு பெயர்
+      changelog_locale: சேஞ்ச் மொழி
     project_modal:
       project: திட்ட
   issues:
@@ -247,6 +284,23 @@ ta:
       close: மூடு
       cancel: ரத்து
       more: மேலும் அனுப்பவும்
+  changelogs:
+    changelog_raw_md:
+      changes: மாற்றங்கள்
+      detailed_changes: விரிவான மாற்றங்கள்
+      issues: சிக்கல்கள்
+      by: மூலம்
+    changelog:
+      changes: மாற்றங்கள்
+      detailed_changes: விரிவான மாற்றங்கள்
+      issues: சிக்கல்கள்
+      by: மூலம்
+    index:
+      project: திட்ட
+      changelogs: Changelogs
+      sync: ஒத்திசைவு
+    changelog_list_item:
+      resend: திருச்சி
   pages:
     faq:
       faq: கேள்விகள்

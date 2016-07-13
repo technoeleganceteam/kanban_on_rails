@@ -9,6 +9,10 @@ es:
   1_we_have_just_launched_our_service_title: Acabamos de lanzar nuestro servicio
   open: Abrir
   closed: Cerradas
+  releases: comunicados
+  release: liberación
+  changelog_has_been_resent: de cambios ha sido reenviado
+  changelogs_has_been_synced: de cambios se ha sincronizado
   shared:
     navbar:
       sign_in: Entrar
@@ -48,6 +52,7 @@ es:
       select_column_tags: columna Seleccionar
       select_section_tags: Seleccionar etiquetas de sección
       select_issue_tags: Seleccione las etiquetas de emisión
+      emails_for_reports: tipo que recibirá los registros de cambios
     email_signature:
       info: Información
       mailer: Mailer
@@ -126,11 +131,25 @@ es:
       add: Agregar
       github_repository_id: Github repositorio de Identificación
       github_full_name: Github repositorio nombre_completo
-      github_secret_token_for_hook: Github elemento secreto para el gancho
+      github_secret_token_for_hook: Gitlab elemento secreto para el gancho
       bitbucket_full_name: Bitbucket nombre_completo
       bitbucket_secret_token_for_hook: Bitbucket elemento secreto para el gancho
+      changelogs_info: si desea mantener registros de cambios
+      generate_changelogs: Generar registros de cambios
+      include_detailed_changes: incluyen cambios detallados descritos en las solicitudes
+        de extracción
+      include_issues: incluyendo los puntos en los registros de cambios
+      include_pull_requests: incluir solicitudes de atracción en los registros de
+        cambios
+      close_issues: cuestiones Cerca hecho
+      emails_for_reports: recibiendo registros de cambios
+      write_to_changelog_file: Escribir registros de cambios en el archivo de repositorio
+      changelog_filename: nombre de archivo de cambios
+      enter_changelog_filename: Introduzca el nombre de archivo de cambios ( "CAMBIOS"
+        por defecto)
+      changelog_locale: elegir el idioma de los registros de cambios
     project:
-      project_issues: problemas del proyecto
+      are_you_sure: "¿Estás seguro?"
     section_fields:
       section_tags: etiquetas de sección
       section_order: Orden
@@ -144,6 +163,23 @@ es:
       related_boards: tablas relacionadas
       project_issues: problemas del proyecto
       new: Nueva
+      are_you_sure: "¿Estás seguro?"
+      github_repository_id: Github repositorio de Identificación
+      github_full_name: Github repositorio nombre_completo
+      github_secret_token_for_hook: Gitlab elemento secreto para el gancho
+      bitbucket_full_name: Bitbucket nombre_completo
+      bitbucket_secret_token_for_hook: Bitbucket elemento secreto para el gancho
+      generate_changelogs: Generar registros de cambios
+      include_detailed_changes: incluyen cambios detallados descritos en las solicitudes
+        de extracción
+      include_issues: incluyendo los puntos en los registros de cambios
+      include_pull_requests: incluir solicitudes de atracción en los registros de
+        cambios
+      close_issues: cuestiones Cerca hecho
+      emails_for_reports: recibiendo registros de cambios
+      write_to_changelog_file: Escribir registros de cambios en el archivo de repositorio
+      changelog_filename: nombre de archivo de cambios
+      changelog_locale: Lenguaje de cambios
   issues:
     form:
       title: Título
@@ -227,6 +263,18 @@ es:
       close: Cerrar
       cancel: Cancelar
       more: Enviar más
+  changelogs:
+    changelog_raw_md:
+      detailed_changes: cambios detallados
+      by: por
+    changelog:
+      detailed_changes: cambios detallados
+      by: por
+    index:
+      sync: sincronización
+    changelog_list_item:
+      view_as_html: Ver como HTML
+      view_as_raw_md: Ver como md prima
   pages:
     faq:
       faq: FAQ

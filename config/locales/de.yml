@@ -9,6 +9,10 @@ de:
   1_we_have_just_launched_our_service_title: Wir haben unseren Service ins Leben gerufen
   open: Öffnen
   closed: Geschlossen
+  releases: Mitteilungen
+  release: Release
+  changelog_has_been_resent: Changelog wurde erneut gesendet
+  changelogs_has_been_synced: Changelog wurde synchronisiert
   shared:
     navbar:
       sign_in: Anmelden
@@ -48,12 +52,13 @@ de:
       boards: Boards
     right_sidebar:
       news: Nachrichten
-      all: All
+      all: Alle
       read_more: Lesen Sie mehr
     javascript_global_variables:
       select_column_tags: Wählen Sie Spalte Tags
       select_section_tags: Select Abschnitt Tags
       select_issue_tags: Wählen Sie Ausgabe-Tags
+      emails_for_reports: Typ E-Mails, die Changelogs empfangen wird
     email_signature:
       info: Info
       mailer: Mailer
@@ -71,7 +76,7 @@ de:
       requests: Anfragen
       feedbacks: Bewertungen
     user_requests_navigation:
-      all: Alle
+      all: All
       my_requests: Meine Wünsche
   users:
     new:
@@ -136,21 +141,36 @@ de:
       save: Speichern
       columns: Spalten
       sections: Abschnitte
-      column_name: Row Namen
+      column_name: Row Name
       section_name: Abschnittsname
       add: hinzufügen
       column_width: Spaltenbreite
       column_height: Säulenhöhe
       github_repository_id: Github-Repository-ID
       github_full_name: Github-Repository fullname
-      github_secret_token_for_hook: Github geheime Token für Haken
+      github_secret_token_for_hook: Gitlab geheime Token für Haken
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket geheime Token für Haken
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: wenn Sie Changelogs behalten möchten
+      generate_changelogs: generieren Changelogs
+      include_detailed_changes: Fügen Sie detaillierte Änderungen in Pull-Anforderungen
+        beschrieben
+      include_issues: gehören auch Fragen in Changelogs
+      include_pull_requests: Fügen Sie Pull-Anforderungen in Changelogs
+      close_issues: Schließen getan Fragen
+      emails_for_reports: E-Mails für recieving Changelogs
+      write_to_changelog_file: schreiben Changelogs auf die Repository-Datei
+      changelog_filename: Changelog Dateiname
+      changelog_locale: Sprache wählen für Changelogs
     project:
       edit: bearbeiten
       destroy: Löschen
-      project_issues: Projektfragen
-      project_users: Projektnutzer
+      issues: Probleme
+      users: Benutzer
+      changelogs: Changelogs
+      are_you_sure: Sind Sie sicher?
     section_fields:
       section_name: Abschnittsname
       section_tags: Section-Tags
@@ -168,6 +188,26 @@ de:
       project_issues: Projektfragen
       project_users: Projektnutzer
       new: New
+      edit: bearbeiten
+      destroy: Löschen
+      are_you_sure: Sind Sie sicher?
+      changelogs: Changelogs
+      github_repository_id: Github-Repository-ID
+      github_full_name: Github-Repository fullname
+      github_secret_token_for_hook: Gitlab geheime Token für Haken
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket geheime Token für Haken
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: generieren Changelogs
+      include_detailed_changes: Fügen Sie detaillierte Änderungen in Pull-Anforderungen
+        beschrieben
+      include_issues: gehören auch Fragen in Changelogs
+      include_pull_requests: Fügen Sie Pull-Anforderungen in Changelogs
+      close_issues: Schließen getan Fragen
+      emails_for_reports: E-Mails für recieving Changelogs
+      write_to_changelog_file: schreiben Changelogs auf die Repository-Datei
+      changelog_filename: Changelog Dateiname
+      changelog_locale: Sprache für Changelog
     project_modal:
       project: Projekt
   issues:
@@ -183,14 +223,14 @@ de:
       github_issue_id: Github Ausgabe id
       github_issue_number: Github Ausgabenummer
       project: Projekt
-      state: Staat
+      state: Staats
     index:
       issues: Fragen
       sync_with_github: Sync mit Github
       sync_with_bitbucket: Sync mit bitbucket
       new: New
     issue:
-      destroy: Löschen
+      destroy: löschen
       edit: bearbeiten
     edit:
       edit_issue: bearbeiten Ausgabe
@@ -200,7 +240,7 @@ de:
       issue: Ausgabe
   authentications:
     index:
-      enabled_services: fähige Dienste
+      enabled_services: Aktiviert Dienste
     authentication:
       turned_off: Ausgeschaltet
       turn_on: einschalten
@@ -209,8 +249,8 @@ de:
   news:
     1_we_have_just_launched_our_service:
       we_have_just_launched_our_service_title: wir unseren Service nur ins Leben gerufen!
-      we_have_just_launched_our_service_text: Heute werden wir unseren Service zu
-        starten, so kann jeder
+      we_have_just_launched_our_service_text: Heute haben wir unseren Service zu starten,
+        so kann jeder
       sign_up: anmelden
       and_use_it: und verwenden.
       with_love: Mit Liebe,
@@ -276,6 +316,25 @@ de:
       close: Schließen
       cancel: Abbrechen
       more: senden mehr
+  changelogs:
+    changelog_raw_md:
+      changes: Änderungen
+      detailed_changes: Detailänderungen
+      issues: Probleme
+      by: durch
+    changelog:
+      changes: Änderungen
+      detailed_changes: Detaillierte Änderungen
+      issues: Probleme
+      by: durch
+    index:
+      project: Projekt
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: erneut senden
+      view_as_html: Darstellung als html
+      view_as_raw_md: Darstellung als Roh-md
   pages:
     faq:
       faq: FAQ
@@ -289,8 +348,8 @@ de:
       i_have_some_requests: Ich habe einige Anfragen
       you_can_write_request: Sie Anfrage schreiben
       here: hier
-      i_have_seen_some_typo_or_wrong_translation: Ich habe einige Fehler oder falsche
-        Übersetzungen gesehen
+      i_have_seen_some_typo_or_wrong_translation: Ich habe ein paar Tippfehler oder
+        falsche Übersetzungen gesehen
       you_can_send_pull_request_to_our: Sie Pull-Anfrage schicken an unsere
       github_repository: Github-Repository
       i_have_seen_some_error: Ich habe einige Fehler gesehen
@@ -330,8 +389,8 @@ de:
     unprocessable_entity:
       unprocessable_entity: Unprocessable Entity
       request_result: Anfrage Ergebnis
-      unprocessable_entity_description: Die Anforderung war wohlgeformt, konnte aber
-        aufgrund semantische Fehler zu beachten
+      unprocessable_entity_description: Die Anforderung war gut ausgebildet, konnte
+        aber aufgrund semantische Fehler zu beachten
       go_to_root: root gehen
     not_found:
       not_found: nicht gefunden

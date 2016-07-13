@@ -9,6 +9,10 @@ bs:
   1_we_have_just_launched_our_service_title: Upravo smo pokrenuli naš servis
   open: Open
   closed: Zatvoreno
+  releases: objava
+  release: release
+  changelog_has_been_resent: promjena je ponovo pošalje
+  changelogs_has_been_synced: promjena je sinhronizovane
   shared:
     navbar:
       sign_in: Prijava
@@ -53,6 +57,7 @@ bs:
       select_column_tags: izaberite Oznake koloni
       select_section_tags: Select sekcija tagove
       select_issue_tags: Select pitanje tagove
+      emails_for_reports: Vrsta e-mailova koji će primati Changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -141,14 +146,29 @@ bs:
       column_width: Širina kolone
       github_repository_id: Github spremište id
       github_full_name: Github spremište fullname
-      github_secret_token_for_hook: Github tajni token za hook
+      github_secret_token_for_hook: Gitlab tajni token za hook
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket tajni token za hook
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: ako želite zadržati Changelogs
+      generate_changelogs: Generate Changelogs
+      include_detailed_changes: sadrže detaljne promjene opisane u zahtjevima za povlačenje
+      include_issues: Uključiti pitanja u Changelogs
+      include_pull_requests: Uključiti zahtjeva za povlačenje u Changelogs
+      close_issues: Close učinjeno pitanja
+      emails_for_reports: e-poštu za primanje Changelogs
+      write_to_changelog_file: Napiši Changelogs u spremište datoteku
+      changelog_filename: promjena filename
+      enter_changelog_filename: Enter promjena filename (default "CHANGELOG")
+      changelog_locale: Odaberite jezik za Changelogs
     project:
       edit: Uredi
       destroy: Delete
-      project_issues: pitanja projekta
-      project_users: Korisnici projekta
+      issues: pitanja
+      users: Korisnici
+      changelogs: Changelogs
+      are_you_sure: Jeste li sigurni?
     section_fields:
       remove_section: Ukloni sekcija
       section_tags: Sekcija tagove
@@ -166,6 +186,25 @@ bs:
       project_issues: pitanja projekta
       project_users: Korisnici projekta
       new: New
+      edit: Uredi
+      destroy: Delete
+      are_you_sure: Jeste li sigurni?
+      changelogs: Changelogs
+      github_repository_id: Github spremište id
+      github_full_name: Github spremište fullname
+      github_secret_token_for_hook: Gitlab tajni token za hook
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tajni token za hook
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generate Changelogs
+      include_detailed_changes: sadrže detaljne promjene opisane u zahtjevima za povlačenje
+      include_issues: Uključiti pitanja u Changelogs
+      include_pull_requests: Uključiti zahtjeva za povlačenje u Changelogs
+      close_issues: Close učinjeno pitanja
+      emails_for_reports: e-poštu za primanje Changelogs
+      write_to_changelog_file: Napiši Changelogs u spremište datoteku
+      changelog_filename: promjena filename
+      changelog_locale: jezik za changelog
     project_modal:
       project: projekta
   issues:
@@ -274,6 +313,25 @@ bs:
       close: Close
       cancel: Odustani
       more: Pošalji više
+  changelogs:
+    changelog_raw_md:
+      changes: Promjene
+      detailed_changes: Detaljna promjene
+      issues: pitanja
+      by: by
+    changelog:
+      changes: Promjene
+      detailed_changes: Detaljna promjene
+      issues: pitanja
+      by: by
+    index:
+      project: projekta
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Prikaži kao HTML
+      view_as_raw_md: Pogledaj kao sirovi MD
   pages:
     faq:
       faq: FAQ

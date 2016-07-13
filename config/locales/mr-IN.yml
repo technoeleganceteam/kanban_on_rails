@@ -8,6 +8,10 @@ mr-IN:
   backlog: अनुशेष
   open: ओपन
   closed: बंद
+  releases: प्रकाशन
+  release: प्रकाशन
+  changelog_has_been_resent: Changelog पुन्हा पाठवले आहे
+  changelogs_has_been_synced: Changelog समक्रमित केला
   shared:
     navbar:
       sign_in: साइन इन करा
@@ -45,6 +49,7 @@ mr-IN:
       select_column_tags: निवडा
       select_section_tags: निवडा
       select_issue_tags: समस्या टॅग निवडा
+      emails_for_reports: प्रकार ईमेल changelogs प्राप्त होईल जे
     email_signature:
       info: माहिती
       mailer: मेलर
@@ -95,6 +100,7 @@ mr-IN:
       projects: प्रकल्प
       boards: बोर्ड
       issues: मुद्दे
+      turn_on_github: Github चालू
       turn_on_gitlab: Gitlab चालू
       turn_on_bitbucket: Bitbucket चालू
       sync_with_bitbucket: Bitbucket समक्रमित
@@ -123,14 +129,27 @@ mr-IN:
       column_height: स्तंभ उंची
       github_repository_id: Github भांडार आयडी
       github_full_name: Github भांडार संपूर्णनाव
-      github_secret_token_for_hook: हुक साठी Github गुप्त खूण
+      github_secret_token_for_hook: Gitlab गुप्त खूण
       bitbucket_full_name: Bitbucket संपूर्णनाव
       bitbucket_secret_token_for_hook: हुक साठी Bitbucket गुप्त खूण
+      gitlab_full_name: Gitlab संपूर्णनाव
+      changelogs: Changelogs
+      changelogs_info: आपण changelogs ठेवू इच्छित असल्यास
+      generate_changelogs: changelogs व्युत्पन्न
+      include_detailed_changes: पुल विनंत्या वर्णन तपशीलवार बदल समाविष्ट करा
+      include_issues: समाविष्ट changelogs मुद्दे
+      include_pull_requests: changelogs मध्ये पुल विनंत्या
+      close_issues: केले बंद समस्या
+      changelog_filename: Changelog फाइलनाव
+      enter_changelog_filename: (डीफॉल्ट "बदल") बदल फाइलनाव प्रविष्ट करा
+      changelog_locale: changelogs भाषा निवडा
     project:
       edit: संपादित करा
       destroy: हटवा
-      project_issues: प्रकल्प समस्या
-      project_users: प्रकल्प वापरकर्ते
+      issues: मुद्दे
+      users: वापरकर्ते
+      changelogs: Changelogs
+      are_you_sure: आपली खात्री आहे?
     section_fields:
       section_name: विभाग नाव
       remove_section: काढा विभाग
@@ -150,6 +169,22 @@ mr-IN:
       project_issues: प्रकल्प समस्या
       project_users: प्रकल्प वापरकर्ते
       new: नवी
+      edit: संपादित करा
+      destroy: हटवा
+      are_you_sure: आपली खात्री आहे?
+      changelogs: Changelogs
+      github_repository_id: Github भांडार आयडी
+      github_full_name: Github भांडार संपूर्णनाव
+      github_secret_token_for_hook: Gitlab गुप्त खूण
+      bitbucket_full_name: Bitbucket संपूर्णनाव
+      bitbucket_secret_token_for_hook: हुक साठी Bitbucket गुप्त खूण
+      gitlab_full_name: Gitlab संपूर्णनाव
+      generate_changelogs: changelogs व्युत्पन्न
+      include_detailed_changes: पुल विनंत्या वर्णन तपशीलवार बदल समाविष्ट करा
+      include_issues: समाविष्ट changelogs मुद्दे
+      include_pull_requests: changelogs मध्ये पुल विनंत्या
+      close_issues: केले बंद समस्या
+      changelog_filename: Changelog फाइलनाव
     project_modal:
       project: प्रकल्प
   issues:
@@ -252,6 +287,25 @@ mr-IN:
       close: बंद करा
       cancel: रद्द करा
       more: अधिक पाठवा
+  changelogs:
+    changelog_raw_md:
+      changes: बदल
+      detailed_changes: तपशीलवार बदल
+      issues: मुद्दे
+      by: करून
+    changelog:
+      changes: बदल
+      detailed_changes: तपशीलवार बदल
+      issues: मुद्दे
+      by: करून
+    index:
+      project: प्रकल्प
+      changelogs: Changelogs
+      sync: समक्रमण
+    changelog_list_item:
+      resend: पुन्हा पाठवा
+      view_as_html: HTML म्हणून पहा
+      view_as_raw_md: कच्चा md म्हणून पहा
   pages:
     faq:
       faq: नेहमी विचारले जाणारे प्रश्न

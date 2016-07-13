@@ -9,6 +9,10 @@ lv:
   1_we_have_just_launched_our_service_title: Mēs tikko uzsāka mūsu pakalpojumus
   open: Atvērt
   closed: Slēgts
+  releases: izlaidumi
+  release: release
+  changelog_has_been_resent: Izmaiņu ir nosūtīts atkārtoti
+  changelogs_has_been_synced: Izmaiņu ir sinhronizēta
   shared:
     navbar:
       sign_in: Pierakstīties
@@ -54,6 +58,7 @@ lv:
       select_column_tags: Izvēlieties kolonnu tagus
       select_section_tags: Izvēlieties sadaļu tagus
       select_issue_tags: Izvēlieties jautājums tagus
+      emails_for_reports: Tips e-pasti, kas saņemsiet changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -143,14 +148,30 @@ lv:
       column_height: Kolonnas augstums
       github_repository_id: GitHub krātuve id
       github_full_name: GitHub krātuve FULLNAME
-      github_secret_token_for_hook: GitHub noslēpums biļete par āķa
+      github_secret_token_for_hook: Gitlab noslēpums biļete par āķa
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket noslēpums biļete par āķa
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: ja jūs vēlaties, lai saglabātu changelogs
+      generate_changelogs: Izveidot changelogs
+      include_detailed_changes: Iekļaut detalizētas izmaiņas, kas aprakstītas pull
+        pieprasījumu
+      include_issues: Iekļaut jautājumus changelogs
+      include_pull_requests: Iekļaut pull pieprasījumus changelogs
+      close_issues: Close darīts jautājumi
+      emails_for_reports: e-pastu uz recieving changelogs
+      write_to_changelog_file: Rakstīt changelogs uz glabātuvju failā
+      changelog_filename: Izmaiņu filename
+      enter_changelog_filename: Ievadiet Izmaiņu faila nosaukumu (noklusējuma "Izmaiņu")
+      changelog_locale: Izvēlies valodu changelogs
     project:
       edit: rediģēšana
       destroy: Dzēst
-      project_issues: Projekta jautājumi
-      project_users: Projekta lietotājiem
+      issues: jautājumi
+      users: lietotāji
+      changelogs: Changelogs
+      are_you_sure: Vai esat pārliecināts?
     section_fields:
       remove_section: Noņemt sadaļa
       section_tags: sadaļa tagus
@@ -169,6 +190,26 @@ lv:
       project_issues: Projekta jautājumi
       project_users: Projekta lietotājiem
       new: New
+      edit: rediģēšana
+      destroy: Dzēst
+      are_you_sure: Vai esat pārliecināts?
+      changelogs: Changelogs
+      github_repository_id: GitHub krātuve id
+      github_full_name: GitHub krātuve FULLNAME
+      github_secret_token_for_hook: Gitlab noslēpums biļete par āķa
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket noslēpums biļete par āķa
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: Izveidot changelogs
+      include_detailed_changes: Iekļaut detalizētas izmaiņas, kas aprakstītas pull
+        pieprasījumu
+      include_issues: Iekļaut jautājumus changelogs
+      include_pull_requests: Iekļaut pull pieprasījumus changelogs
+      close_issues: Close darīts jautājumi
+      emails_for_reports: e-pastu uz recieving changelogs
+      write_to_changelog_file: Rakstīt changelogs uz glabātuvju failā
+      changelog_filename: Izmaiņu filename
+      changelog_locale: valoda changelog
     project_modal:
       project: Project
   issues:
@@ -278,6 +319,25 @@ lv:
       close: Close
       cancel: Atcelt
       more: sūtīt vairāk
+  changelogs:
+    changelog_raw_md:
+      changes: Izmaiņas
+      detailed_changes: Sīki izmaiņas
+      issues: jautājumi
+      by: ar
+    changelog:
+      changes: Izmaiņas
+      detailed_changes: Sīki izmaiņas
+      issues: jautājumi
+      by: ar
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Skatīt kā html
+      view_as_raw_md: Skatīt kā izejvielu MD
   pages:
     faq:
       faq: FAQ

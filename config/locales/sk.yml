@@ -9,6 +9,10 @@ sk:
   1_we_have_just_launched_our_service_title: Práve sme spustili naše služby
   open: Otvorená
   closed: Zatvorené
+  releases: správy
+  release: vydanie
+  changelog_has_been_resent: Changelog bola znova odoslaná
+  changelogs_has_been_synced: Changelog bol synchronizovaný
   shared:
     navbar:
       sign_in: Prihlásiť
@@ -31,7 +35,7 @@ sk:
       password: Password
       current_password: Súčasné heslo
       name: Name
-      base: Základné
+      base: Základňa
       title: Názov
       user_to_project_connection: Užívateľ projektovať spojenie
       user_to_board_connection: Užívateľ nastúpiť pripojenie
@@ -53,6 +57,7 @@ sk:
       select_column_tags: Vybrať tagy stĺpcov
       select_section_tags: Vybrať tagy sekcie
       select_issue_tags: Vybrať vydávať tagy
+      emails_for_reports: typu e-maily, ktoré budú zasielať zozname zmien
     email_signature:
       info: Info
       mailer: Mailer
@@ -138,14 +143,29 @@ sk:
       add: Add
       github_repository_id: Github repository id
       github_full_name: Github úložiska fullname
-      github_secret_token_for_hook: Github tajný token háku
+      github_secret_token_for_hook: Gitlab tajný token háku
       bitbucket_full_name: bitbucket fullname
       bitbucket_secret_token_for_hook: bitbucket tajný token háku
+      gitlab_full_name: Gitlab fullname
+      changelogs: Zoznamy zmien
+      changelogs_info: Ak chcete zachovať zmen
+      generate_changelogs: Generovanie zoznamu zmien
+      include_detailed_changes: obsahovať podrobný zmeny opísané v žiadostiach pull
+      include_issues: zahrnúť problémy v zozname zmien
+      include_pull_requests: zahrnúť požiadavky vtiahnuť changelogs
+      close_issues: Close urobil problémy
+      emails_for_reports: e-maily pre zasielanie zoznamu zmien
+      write_to_changelog_file: Write changelogs do úložiska súboru
+      changelog_filename: Changelog súboru
+      enter_changelog_filename: Enter changelog súboru (predvolená "changelog")
+      changelog_locale: Voľba jazyka pre changelogs
     project:
       edit: Edit
       destroy: Zmazať
-      project_issues: problémy Project
-      project_users: užívateľov projektu
+      issues: Problémy
+      users: Užívatelia
+      changelogs: Zoznamy zmien
+      are_you_sure: Naozaj?
     section_fields:
       remove_section: Remove sekcie
       section_tags: "§ tagy"
@@ -161,6 +181,25 @@ sk:
       project_issues: problémy Project
       project_users: užívateľov projektu
       new: Nové
+      edit: Edit
+      destroy: Zmazať
+      are_you_sure: Naozaj?
+      changelogs: Zoznamy zmien
+      github_repository_id: Github repository id
+      github_full_name: Github úložiska fullname
+      github_secret_token_for_hook: Gitlab tajný token háku
+      bitbucket_full_name: bitbucket fullname
+      bitbucket_secret_token_for_hook: bitbucket tajný token háku
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generovanie zoznamu zmien
+      include_detailed_changes: obsahovať podrobný zmeny opísané v žiadostiach pull
+      include_issues: zahrnúť problémy v zozname zmien
+      include_pull_requests: zahrnúť požiadavky vtiahnuť changelogs
+      close_issues: Close urobil problémy
+      emails_for_reports: e-maily pre zasielanie zoznamu zmien
+      write_to_changelog_file: Write changelogs do úložiska súboru
+      changelog_filename: Changelog súboru
+      changelog_locale: jazyk pre changelogu
     project_modal:
       project: Project
   issues:
@@ -266,6 +305,25 @@ sk:
       close: Close
       cancel: Zrušiť
       more: Odoslať viac
+  changelogs:
+    changelog_raw_md:
+      changes: Zmeny
+      detailed_changes: Detailné zmeny
+      issues: Problémy
+      by: tým,
+    changelog:
+      changes: Zmeny
+      detailed_changes: Detailné zmeny
+      issues: Problémy
+      by: tým,
+    index:
+      project: Project
+      changelogs: Zoznamy zmien
+      sync: Sync
+    changelog_list_item:
+      resend: Znovu odoslať
+      view_as_html: Zobraziť ako html
+      view_as_raw_md: Zobraziť ako surový md
   pages:
     faq:
       faq: FAQ

@@ -9,6 +9,10 @@ pt:
   1_we_have_just_launched_our_service_title: Acabamos de lançar o nosso serviço
   open: Aberto
   closed: Fechado
+  releases: lançamentos
+  release: liberação
+  changelog_has_been_resent: Changelog foi reenviado
+  changelogs_has_been_synced: Changelog foi sincronizado
   shared:
     navbar:
       sign_in: Entrar
@@ -29,7 +33,6 @@ pt:
       services: Serviços
     form_errors:
       password: senha
-      current_password: senha atual
       name: Nome
       base: Base de Dados
       title: Título
@@ -53,6 +56,7 @@ pt:
       select_column_tags: Selecionar tags coluna
       select_section_tags: Seleccione marcas de seção
       select_issue_tags: Selecionar tags emissão
+      emails_for_reports: e-mails tipo que receberá changelogs
     email_signature:
       info: Informações
       mailer: Mailer
@@ -138,14 +142,30 @@ pt:
       add: Add
       github_repository_id: Github id repositório
       github_full_name: Github fullname repositório
-      github_secret_token_for_hook: Github símbolo segredo por gancho
+      github_secret_token_for_hook: gitlab símbolo segredo por gancho
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket símbolo segredo por gancho
+      gitlab_full_name: gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: se você quiser manter changelogs
+      generate_changelogs: Gerar changelogs
+      include_detailed_changes: incluem mudanças detalhados descritos nos pedidos
+        de tração
+      include_issues: Incluir questões em changelogs
+      include_pull_requests: incluir solicitações de pull em changelogs
+      close_issues: questões Fechar feito
+      emails_for_reports: e-mails para recebendo changelogs
+      write_to_changelog_file: Escrever changelogs para o arquivo de repositório
+      changelog_filename: filename Changelog
+      enter_changelog_filename: Digite nome de arquivo changelog (default "CHANGELOG")
+      changelog_locale: Escolha idioma para changelogs
     project:
       edit: Editar
       destroy: Excluir
-      project_issues: problemas do projeto
-      project_users: Os usuários do projeto
+      issues: Issues
+      users: Usuários
+      changelogs: Changelogs
+      are_you_sure: Você tem certeza?
     section_fields:
       section_tags: marcas de seção
       section_order: Order
@@ -161,6 +181,26 @@ pt:
       project_issues: problemas do projeto
       project_users: Os usuários do projeto
       new: Nova
+      edit: Editar
+      destroy: Excluir
+      are_you_sure: Você tem certeza?
+      changelogs: Changelogs
+      github_repository_id: Github id repositório
+      github_full_name: Github fullname repositório
+      github_secret_token_for_hook: gitlab símbolo segredo por gancho
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket símbolo segredo por gancho
+      gitlab_full_name: gitlab fullname
+      generate_changelogs: Gerar changelogs
+      include_detailed_changes: incluem mudanças detalhados descritos nos pedidos
+        de tração
+      include_issues: Incluir questões em changelogs
+      include_pull_requests: incluir solicitações de pull em changelogs
+      close_issues: questões Fechar feito
+      emails_for_reports: e-mails para recebendo changelogs
+      write_to_changelog_file: Escrever changelogs para o arquivo de repositório
+      changelog_filename: filename Changelog
+      changelog_locale: Idioma para changelog
     project_modal:
       project: Projeto
   issues:
@@ -266,6 +306,25 @@ pt:
       close: Fechar
       cancel: Anular
       more: Enviar mais
+  changelogs:
+    changelog_raw_md:
+      changes: Alterações
+      detailed_changes: mudanças detalhadas
+      issues: Issues
+      by: por
+    changelog:
+      changes: Alterações
+      detailed_changes: mudanças detalhadas
+      issues: Issues
+      by: por
+    index:
+      project: Projeto
+      changelogs: Changelogs
+      sync: Sincronização
+    changelog_list_item:
+      resend: Reenviar
+      view_as_html: Ver como html
+      view_as_raw_md: Ver como md-primas
   pages:
     faq:
       faq: FAQ

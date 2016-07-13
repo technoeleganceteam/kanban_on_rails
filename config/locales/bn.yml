@@ -9,6 +9,10 @@ bn:
   1_we_have_just_launched_our_service_title: আমরা শুধু আমাদের সেবা চালু করেছে
   open: খুলুন
   closed: বন্ধ
+  releases: রিলিজ
+  release: রিলিজ
+  changelog_has_been_resent: পরিবর্তণের এতে ক্ষুব্ধ হয়েছে
+  changelogs_has_been_synced: পরিবর্তণের সিঙ্ক হয়েছে
   shared:
     navbar:
       sign_in: নিদর্শন
@@ -51,6 +55,7 @@ bn:
       select_column_tags: নির্বাচন
       select_section_tags: নির্বাচন
       select_issue_tags: ইস্যু ট্যাগ নির্বাচন করুন
+      emails_for_reports: প্রকার ইমেল যা changelogs recieve হবে
     email_signature:
       info: তথ্য
       mailer: মেইলার
@@ -120,14 +125,28 @@ bn:
       column_height: কলাম উচ্চতা
       github_repository_id: গিটহাব সংগ্রহস্থলে আইডি
       github_full_name: গিটহাব সংগ্রহস্থলে FULLNAME
-      github_secret_token_for_hook: হুক জন্য গিটহাব গোপন টোকেন
+      github_secret_token_for_hook: Gitlab গোপন টোকেন
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: হুক জন্য Bitbucket গোপন টোকেন
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: আপনি changelogs রাখতে চান
+      generate_changelogs: changelogs জেনারেট
+      include_detailed_changes: খিঁচ অনুরোধ বর্ণিত বিস্তারিত পরিবর্তনের অন্তর্ভুক্ত
+      include_issues: changelogs এ বিষয় অন্তর্ভুক্ত করুন
+      include_pull_requests: changelogs মধ্যে খিঁচ অনুরোধ অন্তর্ভুক্ত
+      close_issues: বন্ধ সম্পন্ন সমস্যা
+      write_to_changelog_file: সংগ্রহস্থলে ফাইলে changelogs লেখা
+      changelog_filename: পরিবর্তণের ফাইলের নাম
+      enter_changelog_filename: (ডিফল্ট "পরিবর্তণের") পরিবর্তণের ফাইলের নাম লিখুন
+      changelog_locale: changelogs জন্য ভাষা নির্বাচন করুন
     project:
       edit: সম্পাদনা
       destroy: মুছুন
-      project_issues: প্রকল্প সমস্যা
-      project_users: প্রকল্প ব্যবহারকারী
+      issues: সমস্যা
+      users: ব্যবহারকারীরা
+      changelogs: Changelogs
+      are_you_sure: আপনি কি নিশ্চিত?
     section_fields:
       section_name: অনুচ্ছেদ নাম
       remove_section: করে Remove অধ্যায়
@@ -147,6 +166,23 @@ bn:
       project_issues: প্রকল্প সমস্যা
       project_users: প্রকল্প ব্যবহারকারী
       new: নতুন
+      edit: সম্পাদনা
+      destroy: মুছুন
+      are_you_sure: আপনি কি নিশ্চিত?
+      changelogs: Changelogs
+      github_repository_id: গিটহাব সংগ্রহস্থলে আইডি
+      github_full_name: গিটহাব সংগ্রহস্থলে FULLNAME
+      github_secret_token_for_hook: Gitlab গোপন টোকেন
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: হুক জন্য Bitbucket গোপন টোকেন
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: changelogs জেনারেট
+      include_detailed_changes: খিঁচ অনুরোধ বর্ণিত বিস্তারিত পরিবর্তনের অন্তর্ভুক্ত
+      include_issues: changelogs এ বিষয় অন্তর্ভুক্ত করুন
+      include_pull_requests: changelogs মধ্যে খিঁচ অনুরোধ অন্তর্ভুক্ত
+      close_issues: বন্ধ সম্পন্ন সমস্যা
+      write_to_changelog_file: সংগ্রহস্থলে ফাইলে changelogs লেখা
+      changelog_filename: পরিবর্তণের ফাইলের নাম
     project_modal:
       project: প্রকল্প
   issues:
@@ -251,6 +287,23 @@ bn:
       close: বন্ধ
       cancel: বাতিল
       more: আরো পাঠান
+  changelogs:
+    changelog_raw_md:
+      changes: পরিবর্তনসমূহ
+      detailed_changes: বিস্তারিত পরিবর্তন
+      issues: সমস্যা
+      by: দ্বারা
+    changelog:
+      changes: পরিবর্তনসমূহ
+      detailed_changes: বিস্তারিত পরিবর্তন
+      issues: সমস্যা
+      by: দ্বারা
+    index:
+      project: প্রকল্প
+      changelogs: Changelogs
+      sync: সিঙ্ক
+    changelog_list_item:
+      resend: পুনরায় পাঠান
   pages:
     faq:
       faq: অনবরত জিজ্ঞাসিত প্রশ্ন

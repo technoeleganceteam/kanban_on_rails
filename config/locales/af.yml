@@ -9,6 +9,10 @@ af:
   1_we_have_just_launched_our_service_title: Ons het net begin ons diens
   open: Oop
   closed: gesluit
+  releases: vrystellings
+  release: vrylating
+  changelog_has_been_resent: Changelog het weer gestuur
+  changelogs_has_been_synced: Changelog is gesynchroniseerd
   shared:
     navbar:
       sign_in: Teken in
@@ -51,6 +55,7 @@ af:
       select_column_tags: Kies kolom tags
       select_section_tags: Kies artikel tags
       select_issue_tags: Kies kwessie tags
+      emails_for_reports: Tipe e-pos wat Change sal ontvang
     email_signature:
       info: Info
       mailer: Mailer
@@ -139,14 +144,30 @@ af:
       column_height: Kolom hoogte
       github_repository_id: GitHub bewaarplek ID
       github_full_name: GitHub bewaarplek FULLNAME
-      github_secret_token_for_hook: GitHub geheime teken vir haak
+      github_secret_token_for_hook: Gitlab geheime teken vir haak
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket geheime teken vir haak
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Change
+      changelogs_info: as jy wil Change hou
+      generate_changelogs: genereer Change
+      include_detailed_changes: Sluit gedetailleerde veranderinge in trek versoeke
+        beskryf
+      include_issues: Sluit kwessies in Change
+      include_pull_requests: Sluit trek versoeke in Change
+      close_issues: Close gedoen kwessies
+      emails_for_reports: e-pos vir ontvangs Change
+      write_to_changelog_file: Skryf Change om die bron lêer
+      changelog_filename: Changelog lêernaam
+      enter_changelog_filename: Tik changelog lêernaam (verstek "ChangeLog")
+      changelog_locale: Kies taal vir Change
     project:
       edit: wysig
       destroy: Verwyder
-      project_issues: Projek kwessies
-      project_users: Projek gebruikers
+      issues: Kwessies
+      users: Gebruikers
+      changelogs: Change
+      are_you_sure: Is jy seker?
     section_fields:
       section_name: Artikel naam
       section_tags: Artikel tags
@@ -165,6 +186,26 @@ af:
       project_issues: Projek kwessies
       project_users: Projek gebruikers
       new: Nuwe
+      edit: wysig
+      destroy: Verwyder
+      are_you_sure: Is jy seker?
+      changelogs: Change
+      github_repository_id: GitHub bewaarplek ID
+      github_full_name: GitHub bewaarplek FULLNAME
+      github_secret_token_for_hook: Gitlab geheime teken vir haak
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket geheime teken vir haak
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: genereer Change
+      include_detailed_changes: Sluit gedetailleerde veranderinge in trek versoeke
+        beskryf
+      include_issues: Sluit kwessies in Change
+      include_pull_requests: Sluit trek versoeke in Change
+      close_issues: Close gedoen kwessies
+      emails_for_reports: e-pos vir ontvangs Change
+      write_to_changelog_file: Skryf Change om die bron lêer
+      changelog_filename: Changelog lêernaam
+      changelog_locale: taal vir Changelog
     project_modal:
       project: Projek
   issues:
@@ -272,6 +313,25 @@ af:
       close: Close
       cancel: Kanselleer
       more: Stuur meer
+  changelogs:
+    changelog_raw_md:
+      changes: Wysigings
+      detailed_changes: Gedetailleerde veranderinge
+      issues: Kwessies
+      by: deur
+    changelog:
+      changes: Wysigings
+      detailed_changes: Gedetailleerde veranderinge
+      issues: Kwessies
+      by: deur
+    index:
+      project: Projek
+      changelogs: Change
+      sync: Sync
+    changelog_list_item:
+      resend: Herstuur
+      view_as_html: View as HTML
+      view_as_raw_md: Kyk as rou MD
   pages:
     faq:
       faq: Vrae

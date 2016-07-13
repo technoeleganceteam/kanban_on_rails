@@ -10,6 +10,10 @@ ms:
     kami
   open: Terbuka
   closed: Ditutup
+  releases: siaran
+  release: pelepasan
+  changelog_has_been_resent: Changelog telah dihantar semula
+  changelogs_has_been_synced: Changelog telah disegerakkan
   shared:
     navbar:
       sign_in: Log masuk
@@ -30,7 +34,6 @@ ms:
       services: Perkhidmatan
     form_errors:
       password: Kata laluan
-      current_password: Kata laluan semasa
       name: Nama
       base: Base
       title: Title
@@ -54,6 +57,7 @@ ms:
       select_column_tags: Pilih tag ruangan
       select_section_tags: Pilih bahagian tag
       select_issue_tags: Pilih isu tag
+      emails_for_reports: emel Jenis yang akan menerima Nota perubahan
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance Ltd.
@@ -139,14 +143,30 @@ ms:
       add: Add
       github_repository_id: Github id repositori
       github_full_name: Github repositori nama penuh
-      github_secret_token_for_hook: Github tanda rahsia untuk cangkuk
+      github_secret_token_for_hook: Gitlab tanda rahsia untuk cangkuk
       bitbucket_full_name: Bitbucket nama penuh
       bitbucket_secret_token_for_hook: Bitbucket tanda rahsia untuk cangkuk
+      gitlab_full_name: Gitlab nama penuh
+      changelogs: Nota perubahan
+      changelogs_info: jika anda mahu menyimpan Nota perubahan
+      generate_changelogs: Menjana Nota perubahan
+      include_detailed_changes: Termasuk perubahan terperinci yang dinyatakan dalam
+        permintaan tarik
+      include_issues: Termasuk terbitan dalam Nota perubahan
+      include_pull_requests: Termasuk permintaan tarik dalam Nota perubahan
+      close_issues: isu Tutup dilakukan
+      emails_for_reports: E-mel untuk recieving Nota perubahan
+      write_to_changelog_file: Tulis Nota perubahan kepada fail repository
+      changelog_filename: nama fail Changelog
+      enter_changelog_filename: Masukkan nama fail Changelog (default "Changelog")
+      changelog_locale: Pilih bahasa bagi Nota perubahan
     project:
       edit: Edit
       destroy: Padam
-      project_issues: isu Projek
-      project_users: pengguna Projek
+      issues: Issues
+      users: Pengguna
+      changelogs: Nota perubahan
+      are_you_sure: Adakah anda pasti?
     section_fields:
       section_tags: Seksyen tag
       section_order: Order
@@ -162,6 +182,26 @@ ms:
       project_issues: isu Projek
       project_users: pengguna Projek
       new: New
+      edit: Edit
+      destroy: Padam
+      are_you_sure: Adakah anda pasti?
+      changelogs: Nota perubahan
+      github_repository_id: Github id repositori
+      github_full_name: Github repositori nama penuh
+      github_secret_token_for_hook: Gitlab tanda rahsia untuk cangkuk
+      bitbucket_full_name: Bitbucket nama penuh
+      bitbucket_secret_token_for_hook: Bitbucket tanda rahsia untuk cangkuk
+      gitlab_full_name: Gitlab nama penuh
+      generate_changelogs: Menjana Nota perubahan
+      include_detailed_changes: Termasuk perubahan terperinci yang dinyatakan dalam
+        permintaan tarik
+      include_issues: Termasuk terbitan dalam Nota perubahan
+      include_pull_requests: Termasuk permintaan tarik dalam Nota perubahan
+      close_issues: isu Tutup dilakukan
+      emails_for_reports: E-mel untuk recieving Nota perubahan
+      write_to_changelog_file: Tulis Nota perubahan kepada fail repository
+      changelog_filename: nama fail Changelog
+      changelog_locale: Bahasa untuk Changelog
     project_modal:
       project: Projek
   issues:
@@ -268,6 +308,25 @@ ms:
       close: Tutup
       cancel: Batal
       more: Menghantar lebih
+  changelogs:
+    changelog_raw_md:
+      changes: Perubahan
+      detailed_changes: perubahan terperinci
+      issues: Issues
+      by: oleh
+    changelog:
+      changes: Perubahan
+      detailed_changes: perubahan terperinci
+      issues: Issues
+      by: oleh
+    index:
+      project: Projek
+      changelogs: Nota perubahan
+      sync: Sync
+    changelog_list_item:
+      resend: Hantar semula
+      view_as_html: View as html
+      view_as_raw_md: Lihat sebagai md mentah
   pages:
     faq:
       faq: FAQ

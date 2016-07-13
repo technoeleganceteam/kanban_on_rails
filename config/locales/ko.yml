@@ -8,6 +8,10 @@ ko:
   backlog: 백 로그
   open: 열기
   closed: 은 휴무
+  releases: 출시
+  release: 출시
+  changelog_has_been_resent: 변경 내역 재전송있다
+  changelogs_has_been_synced: 변경 내역은 동기화 된
   shared:
     navbar:
       sign_in: 로그인
@@ -24,24 +28,22 @@ ko:
       site_settings: 사이트 설정
       services: 서비스
     form_errors:
-      password: 비밀
-      current_password: 현재 암호
       password_confirmation: 비밀번호 확인
-      name: 이름
+      base: 자료
       columns:
         tag: 태그 중첩
     edit_project_modal:
       edit_project: 프로젝트 편집
-    new_issue_modal:
-      new_issue: 새로운 문제
     left_sidebar:
       boards: 보드
+    right_sidebar:
+      all: 모든
+      read_more: 는 더 읽기
     javascript_global_variables:
       select_column_tags: 선택 항목 태그
       select_section_tags: 선택 섹션 태그
       select_issue_tags: 선택의 문제 태그
     email_signature:
-      mailer: 메일러
       technoelegance: Technoelegance (주)
     pagination_link:
       next_page: 다음 페이지
@@ -97,31 +99,57 @@ ko:
       github_repository_id: Github에서 저장소 아이디
       github_full_name: Github에서 저장소의 전체 이름
       bitbucket_full_name: 의 Bitbucket 전체 이름
+      gitlab_full_name: Gitlab의 전체 이름
+      changelogs: 변경 로그
+      generate_changelogs: 는 변경 로그를 생성
+      include_detailed_changes: 는 풀 요청에 설명 자세한 변경 사항을 포함
+      include_issues: 는 변경 로그에서 문제를 포함
     project:
-      edit: 편집
       destroy: 삭제
-      project_issues: 프로젝트 문제
-      project_users: 프로젝트 사용자
+      users: 사용자
+      are_you_sure: 당신은 확실 해요?
     section_fields:
-      section_name: 제 이름
       remove_section: 제거 섹션
-      section_tags: 섹션 태그
-      section_order: 주문
       or_include_all: 아니면 모두 포함되어 있습니까?
     column_fields:
       column_name: 열 이름
+      max_issues_count: 최대 문제는 열에 계산
+      column_tags: 열 태그
     show:
+      project: 프로젝트
+      related_boards: 관련 보드
+      project_info: 프로젝트 정보
       project_issues: 프로젝트 문제
+      project_users: 프로젝트 사용자
       new: 새로운
+      edit: 편집
+      destroy: 삭제
+      are_you_sure: 당신은 확실 해요?
+      changelogs: 변경 로그
+      github_repository_id: Github에서 저장소 아이디
+      github_full_name: Github에서 저장소의 전체 이름
+      bitbucket_full_name: 의 Bitbucket 전체 이름
+      gitlab_full_name: Gitlab의 전체 이름
+      generate_changelogs: 는 변경 로그를 생성
+      include_detailed_changes: 는 풀 요청에 설명 자세한 변경 사항을 포함
+      include_issues: 는 변경 로그에서 문제를 포함
+      include_pull_requests: 는 변경 로그에 풀 요청을 포함
+      close_issues: 닫기 할 문제
+      changelog_filename: 변경 로그 파일 이름
+    project_modal:
+      project: 프로젝트
   issues:
     form:
       title: 제목
       save: 저장
+      body: 바디
       tags: 태그
+      issue_order: 주문
       bitbucket_issue_id: 의 Bitbucket 문제 아이디
       github_issue_id: Github에서 문제 아이디
       github_issue_number: Github에서 문제 번호
       project: 프로젝트
+      state: 주
     index:
       issues: 문제
       new: 새로운
@@ -143,6 +171,7 @@ ko:
       turned_on: 는 점등
   news:
     1_we_have_just_launched_our_service:
+      we_have_just_launched_our_service_text: 오늘 우리는 그래서 모두가 할 수있는 우리의 서비스를 시작
       sign_up: 가입
       and_use_it: 그것을 사용합니다.
       technoelegance_team: Technoelegance 팀
@@ -164,21 +193,17 @@ ko:
       section_name: 제 이름
       remove_section: 제거 섹션
       section_tags: 섹션 태그
+      section_order: 주문
       or_include_all: 아니면 모두 포함되어 있습니까?
     column_fields:
       column_name: 열 이름
       max_issues_count: 최대 문제는 열에 계산
-      column_tags: 열 태그
-      backlog: 백 로그
     show:
       next_page: 다음 페이지
     index:
-      boards: 보드
       new: 새로운
     board:
-      board_users: 사용자
       edit: 편집
-      destroy: 파괴
   user_requests:
     form:
       content: 콘텐츠
@@ -191,12 +216,27 @@ ko:
       feedback_content: 콘텐츠
       cancel: 취소
       send: 보내기
-      feedback_recaptcha: reCAPTCHA를
     success:
       success_feedback: 감사합니다! 우리는 귀하의 의견을 받았다있다.
       close: 닫기
       cancel: 취소
       more: 더 보내기
+  changelogs:
+    changelog_raw_md:
+      changes: 변경
+      detailed_changes: 자세한 변경
+      issues: 문제
+    changelog:
+      changes: 변경
+      detailed_changes: 자세한 변경
+      issues: 문제
+      by: 로
+    index:
+      project: 프로젝트
+      changelogs: 변경 로그
+      sync: 동기화
+    changelog_list_item:
+      resend: 다시 보내기
   pages:
     faq:
       faq: FAQ
@@ -208,6 +248,8 @@ ko:
       github_repository: GitHub의 저장소
       i_have_seen_some_error: 나는 약간의 오차가 보았다
     about:
+      about_kanban_on_rails_text: KanbanOnRails는 Github에서 또는의 Bitbucket와 함께 칸반 보드를
+        생성하고 동기화 할 수있는 서비스입니다
       kanban_on_rails_features: KanbanOnRails 기능
       we_use_open_source_and_high_technology: 우리는 높은 기술과 오픈 소스 라이브러리를 사용합니다. 우리는 항상
         더 나은 얻고 우리의 서비스를 개선하려고합니다.
@@ -216,6 +258,7 @@ ko:
   errors:
     messages:
       confirmation_period_expired: "% {시간}에서 확인 될 필요가 새를 요청하시기 바랍니다"
+      not_found: 찾을 수 없습니다
       not_locked: 잠겨되지 않았습니다
       not_saved:
         one: '1 오류가 저장되지이 % {자원을} 금지 :'
@@ -249,6 +292,7 @@ ko:
         didnt_receive_confirmation_instructions: 는 확인 지시를 받았습니다하지 않았다?
         fast_login_almost_one_click: 빠른 로그인 (거의 한 번의 클릭)
     confirmations:
+      send_instructions: "."
       send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 귀하의
         계정을 확인하는 방법에 대한 지침 이메일을 받게됩니다.
       new:
@@ -275,7 +319,6 @@ ko:
       failure: 는 % {종류} "% {} 이유"때문에 당신을 인증 할 수 없습니다.
       success: 성공적 % {종류} 계정에서 인증.
     passwords:
-      send_instructions: "."
       send_paranoid_instructions: 귀하의 이메일 주소는 우리의 데이터베이스에 존재하는 경우, 당신은 몇 분 안에 당신의
         이메일 주소로 비밀번호 복구 링크를 받게됩니다.
       new:
@@ -287,7 +330,6 @@ ko:
         confirm_password: 암호 확인
         change_password: 변경
     registrations:
-      signed_up: 에 오신 것을 환영합니다! 당신은 성공적으로 서명 하였다.
       new:
         sign_up: 가입
         name: 이름

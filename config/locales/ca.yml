@@ -9,6 +9,10 @@ ca:
   1_we_have_just_launched_our_service_title: Acabem de llançar el nostre servei
   open: Obrir
   closed: Tancades
+  releases: comunicats
+  release: alliberament
+  changelog_has_been_resent: de canvis ha estat reenviat
+  changelogs_has_been_synced: de canvis s'ha sincronitzat
   shared:
     navbar:
       sign_in: Entrada
@@ -48,6 +52,7 @@ ca:
       select_column_tags: columna Seleccionar
       select_section_tags: Seleccionar etiquetes de secció
       select_issue_tags: Seleccioneu les etiquetes d'emissió
+      emails_for_reports: tipus que rebrà els registres de canvis
     email_signature:
       info: Informació
       mailer: Mailer
@@ -126,11 +131,25 @@ ca:
       add: Afegir
       github_repository_id: Github repositori d'Identificació
       github_full_name: Github repositori nom_complet
-      github_secret_token_for_hook: Github element secret per al ganxo
+      github_secret_token_for_hook: Gitlab element secret per al ganxo
       bitbucket_full_name: Bitbucket nom_complet
       bitbucket_secret_token_for_hook: Bitbucket element secret per al ganxo
+      changelogs_info: si desitja mantenir registres de canvis
+      generate_changelogs: Generar registres de canvis
+      include_detailed_changes: inclouen canvis produïts descrits en les sol·licituds
+        d'extracció
+      include_issues: incloent-hi els punts en els registres de canvis
+      include_pull_requests: incloure sol·licituds d'atracció en els registres de
+        canvis
+      close_issues: qüestions prop fet
+      emails_for_reports: rebent registres de canvis
+      write_to_changelog_file: Escriure registres de canvis en el fitxer de repositori
+      changelog_filename: nom de fitxer de canvis
+      enter_changelog_filename: Introduïu el nom de fitxer de canvis ( "CANVIS" per
+        defecte)
+      changelog_locale: triar l'idioma dels registres de canvis
     project:
-      project_issues: problemes del projecte
+      are_you_sure: Estàs segur?
     section_fields:
       section_tags: etiquetes de secció
       section_order: Ordre
@@ -144,6 +163,23 @@ ca:
       related_boards: taules relacionades
       project_issues: problemes del projecte
       new: Nova
+      are_you_sure: Estàs segur?
+      github_repository_id: Github repositori d'Identificació
+      github_full_name: Github repositori nom_complet
+      github_secret_token_for_hook: Gitlab element secret per al ganxo
+      bitbucket_full_name: Bitbucket nom_complet
+      bitbucket_secret_token_for_hook: Bitbucket element secret per al ganxo
+      generate_changelogs: Generar registres de canvis
+      include_detailed_changes: inclouen canvis produïts descrits en les sol·licituds
+        d'extracció
+      include_issues: incloent-hi els punts en els registres de canvis
+      include_pull_requests: incloure sol·licituds d'atracció en els registres de
+        canvis
+      close_issues: qüestions prop fet
+      emails_for_reports: rebent registres de canvis
+      write_to_changelog_file: Escriure registres de canvis en el fitxer de repositori
+      changelog_filename: nom de fitxer de canvis
+      changelog_locale: Llenguatge de canvis
   issues:
     form:
       title: Títol
@@ -227,6 +263,18 @@ ca:
       close: Tancar
       cancel: Cancel
       more: Enviar més
+  changelogs:
+    changelog_raw_md:
+      detailed_changes: canvis produïts
+      by: per
+    changelog:
+      detailed_changes: canvis produïts
+      by: per
+    index:
+      sync: sincronització
+    changelog_list_item:
+      view_as_html: Veure com HTML
+      view_as_raw_md: Veure com md prima
   pages:
     faq:
       faq: "| La"

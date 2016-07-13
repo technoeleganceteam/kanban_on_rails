@@ -9,6 +9,10 @@ is:
   1_we_have_just_launched_our_service_title: Við höfum bara sett þjónustu okkar
   open: Open
   closed: Lokað
+  releases: útgáfur
+  release: út
+  changelog_has_been_resent: Breytingasaga hefur verið endursent
+  changelogs_has_been_synced: Breytingasaga hefur verið samstilltar
   shared:
     navbar:
       sign_in: Skrá inn
@@ -53,6 +57,7 @@ is:
       select_column_tags: Veldu dálki merki
       select_section_tags: Velja kafla merki
       select_issue_tags: Veldu mál merki
+      emails_for_reports: Type tölvupóst sem recieve changelogs
     email_signature:
       info: Upplýsingar
       mailer: Mailer
@@ -142,14 +147,29 @@ is:
       column_height: Column hæð
       github_repository_id: github geymsla id
       github_full_name: github geymsla FULLNAME
-      github_secret_token_for_hook: github leyndarmál tákn fyrir krók
+      github_secret_token_for_hook: Gitlab leyndarmál tákn fyrir krók
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket leyndarmál tákn fyrir krók
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: ef þú vilt halda changelogs
+      generate_changelogs: Búa changelogs
+      include_detailed_changes: Hafa nákvæmar breytingar sem lýst er í draga beiðnir
+      include_issues: Hafa málefni í changelogs
+      include_pull_requests: Hafa rífa beiðnir í changelogs
+      close_issues: Close gert mál
+      emails_for_reports: póst fyrir recieving changelogs
+      write_to_changelog_file: Skrifa changelogs við geymsla skrá
+      changelog_filename: Breytingasaga skráarheiti
+      enter_changelog_filename: Sláðu changelog skráarnafn (sjálfgefið "changelog")
+      changelog_locale: Veldu tungumál til changelogs
     project:
       edit: Breyta
       destroy: Eyða
-      project_issues: Project málefni
-      project_users: Project notendur
+      issues: Issues
+      users: notendur
+      changelogs: Changelogs
+      are_you_sure: Ertu viss?
     section_fields:
       remove_section: Fjarlægja kafla
       section_tags: Kafli merki
@@ -168,6 +188,25 @@ is:
       project_issues: Project málefni
       project_users: Project notendur
       new: Nýtt
+      edit: Breyta
+      destroy: Eyða
+      are_you_sure: Ertu viss?
+      changelogs: Changelogs
+      github_repository_id: github geymsla id
+      github_full_name: github geymsla FULLNAME
+      github_secret_token_for_hook: Gitlab leyndarmál tákn fyrir krók
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket leyndarmál tákn fyrir krók
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: Búa changelogs
+      include_detailed_changes: Hafa nákvæmar breytingar sem lýst er í draga beiðnir
+      include_issues: Hafa málefni í changelogs
+      include_pull_requests: Hafa rífa beiðnir í changelogs
+      close_issues: Close gert mál
+      emails_for_reports: póst fyrir recieving changelogs
+      write_to_changelog_file: Skrifa changelogs við geymsla skrá
+      changelog_filename: Breytingasaga skráarheiti
+      changelog_locale: Tungumál fyrir breytingarannálinn
     project_modal:
       project: Project
   issues:
@@ -277,6 +316,25 @@ is:
       close: Close
       cancel: Hætta
       more: Senda fleira
+  changelogs:
+    changelog_raw_md:
+      changes: Breytingar
+      detailed_changes: Ítarlegar breytingar
+      issues: Issues
+      by: eftir
+    changelog:
+      changes: Breytingar
+      detailed_changes: Ítarlegar breytingar
+      issues: Issues
+      by: eftir
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Endursenda
+      view_as_html: Skoða sem HTML
+      view_as_raw_md: Skoða sem hráefni MD
   pages:
     faq:
       faq: FAQ

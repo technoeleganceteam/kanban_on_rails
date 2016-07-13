@@ -9,6 +9,10 @@ ne:
   1_we_have_just_launched_our_service_title: हामी सिर्फ हाम्रो सेवा शुरू गरेको छ
   open: खुला
   closed: बन्द गरियो
+  releases: विज्ञप्ति
+  release: जारी
+  changelog_has_been_resent: Changelog रिसाए भएको छ
+  changelogs_has_been_synced: Changelog समन्वयन गरिएको छ
   shared:
     navbar:
       sign_in: साइन
@@ -46,6 +50,7 @@ ne:
       select_column_tags: चयन
       select_section_tags: चयन
       select_issue_tags: मुद्दा ट्याग चयन गर्नुहोस्
+      emails_for_reports: प्रकार इमेल changelogs recieve हुनेछ जो
     email_signature:
       info: जानकारी
       mailer: मेलर
@@ -114,14 +119,28 @@ ne:
       column_height: स्तम्भ उचाइ
       github_repository_id: Github भण्डार आईडी
       github_full_name: Github भण्डार पूरा नाम फेला
-      github_secret_token_for_hook: हुक लागि Github गोप्य टोकन
+      github_secret_token_for_hook: Gitlab गोप्य टोकन
       bitbucket_full_name: Bitbucket पूरा नाम फेला
       bitbucket_secret_token_for_hook: हुक लागि Bitbucket गोप्य टोकन
+      gitlab_full_name: Gitlab पूरा नाम फेला
+      changelogs: Changelogs
+      changelogs_info: तपाईं changelogs राख्न चाहनुहुन्छ भने
+      generate_changelogs: changelogs उत्पन्न
+      include_detailed_changes: खींच अनुरोध मा वर्णन गरिएको विस्तृत परिवर्तनहरू समावेश
+      include_issues: changelogs मा मुद्दाहरू समावेश
+      include_pull_requests: changelogs मा खींच अनुरोध समावेश
+      close_issues: गरेको बन्द मुद्दाहरू
+      changelog_filename: Changelog फाइलनाम
+      enter_changelog_filename: ChangeLog फाइलनाम (पूर्वनिर्धारित "Changelog") प्रविष्ट
+        गर्नुहोस्
+      changelog_locale: changelogs लागि भाषा चुन्नुहोस
     project:
       edit: सम्पादन गर्नुहोस्
       destroy: मेटाउने
-      project_issues: परियोजना मुद्दाहरू
-      project_users: परियोजना प्रयोगकर्ता
+      issues: मुद्दा
+      users: प्रयोगकर्ता
+      changelogs: Changelogs
+      are_you_sure: तपाईँ निश्चित हुनुहुन्छ?
     section_fields:
       section_name: खण्ड नाम
       remove_section: हटान खण्ड
@@ -141,6 +160,22 @@ ne:
       project_issues: परियोजना मुद्दाहरू
       project_users: परियोजना प्रयोगकर्ता
       new: नयाँ
+      edit: सम्पादन गर्नुहोस्
+      destroy: मेटाउने
+      are_you_sure: तपाईँ निश्चित हुनुहुन्छ?
+      changelogs: Changelogs
+      github_repository_id: Github भण्डार आईडी
+      github_full_name: Github भण्डार पूरा नाम फेला
+      github_secret_token_for_hook: Gitlab गोप्य टोकन
+      bitbucket_full_name: Bitbucket पूरा नाम फेला
+      bitbucket_secret_token_for_hook: हुक लागि Bitbucket गोप्य टोकन
+      gitlab_full_name: Gitlab पूरा नाम फेला
+      generate_changelogs: changelogs उत्पन्न
+      include_detailed_changes: खींच अनुरोध मा वर्णन गरिएको विस्तृत परिवर्तनहरू समावेश
+      include_issues: changelogs मा मुद्दाहरू समावेश
+      include_pull_requests: changelogs मा खींच अनुरोध समावेश
+      close_issues: गरेको बन्द मुद्दाहरू
+      changelog_filename: Changelog फाइलनाम
     project_modal:
       project: परियोजना
   issues:
@@ -243,6 +278,23 @@ ne:
       close: बन्द
       cancel: रद्द
       more: थप पठाउनुहोस्
+  changelogs:
+    changelog_raw_md:
+      changes: परिवर्तनहरू
+      detailed_changes: विस्तृत परिवर्तनहरू
+      issues: मुद्दा
+      by: द्वारा
+    changelog:
+      changes: परिवर्तनहरू
+      detailed_changes: विस्तृत परिवर्तनहरू
+      issues: मुद्दा
+      by: द्वारा
+    index:
+      project: परियोजना
+      changelogs: Changelogs
+      sync: समन्वयन
+    changelog_list_item:
+      resend: 'पुन: पठाउनुहोस्'
   pages:
     faq:
       faq: सोधिने प्रश्न
