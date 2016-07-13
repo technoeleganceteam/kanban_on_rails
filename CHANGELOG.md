@@ -1,3 +1,15 @@
+## v1.1.1 (13.07.2016 17:11) 
+
+### Changes 
+* Add more translations ([#20](https://github.com/technoeleganceteam/kanban_on_rails/pull/20) by [@gkopylov](https://github.com/gkopylov)) 
+* Fix to run changelog worker in the changelogs controller ([#19](https://github.com/technoeleganceteam/kanban_on_rails/pull/19) by [@gkopylov](https://github.com/gkopylov)) 
+
+### Detailed changes 
+0. [new][S] Add more translations to different languages 
+1. [bug][S] It would better to use id instead of object when running a worker 
+
+### Issues 
+
 ## v1.1.0 (13.07.2016 16:18) 
 
 ### Changes 
