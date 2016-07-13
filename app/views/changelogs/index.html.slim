@@ -1,0 +1,16 @@
+h3
+  = t '.project'
+
+  | &nbsp;
+
+  = @project.name
+
+ul.list-group
+  li.list-group-item.list-group-item-info
+    = (t '.changelogs').capitalize
+    .pull-right
+      = link_to (t '.sync'), sync_project_changelogs_url(@project), :class => 'btn btn-success btn-xs'
+
+  = render :partial => 'changelogs/changelog_list_item', :collection => @changelogs, :as => :changelog
+
+= paginate @changelogs

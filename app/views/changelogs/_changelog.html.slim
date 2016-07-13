@@ -1,0 +1,38 @@
+h2 = "#{ changelog.tag_name } (#{ changelog.last_commit_date.strftime('%d.%m.%Y %H:%M') })"
+
+- if changelog.project.include_pull_requests?
+  h3 = t '.changes'
+
+  ul
+    - changelog.pull_requests.order('merged_at DESC').each do |pull_request|
+      li
+        = pull_request.title
+        | &nbsp;(
+        = link_to "##{ pull_request.number_from_provider }", pull_request.url_from_provider
+        | &nbsp;
+        = t '.by'
+        | &nbsp;
+        = link_to "@#{ pull_request.created_by }", pull_request.author_url
+        | )
+
+- if changelog.project.include_detailed_changes?
+  h3 = t '.detailed_changes'
+
+  ol
+    - changelog.pull_request_subtasks.sort_by { |item| Settings.story_point_values.index(item) }.\
+      each_with_index do |subtask, index|
+      
+      li = "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" +\
+        "#{ "[#{ subtask.story_points }]" if subtask.story_points.present? }" +\
+        " #{ subtask.description } \n"
+
+- if changelog.project.include_issues?
+  h3 = t '.issues'
+
+  ul
+    - changelog.pull_requests.map(&:issues).flatten.each do |issue|
+      li
+        = issue.title
+        | &nbsp;(
+        = link_to "##{ issue.send("#{ issue.provider }_issue_number") }", issue.url_from_provider
+        | )

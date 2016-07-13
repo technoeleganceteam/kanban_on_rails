@@ -55,7 +55,7 @@ RSpec.describe Issue, :type => :model do
     end
   end
 
-  describe '#sync_with_github' do
+  describe '#sync_with_gitlab' do
     context 'when new issue' do
       before do
         stub_request(:post, 'https://gitlab.com/api/v3/projects//issues').

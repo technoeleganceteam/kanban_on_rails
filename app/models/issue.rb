@@ -3,7 +3,7 @@ class Issue < ActiveRecord::Base
 
   store_accessor :meta, :github_issue_id, :github_issue_number, :bitbucket_issue_id,
     :github_issue_comments_count, :github_issue_html_url, :github_labels, :bitbucket_issue_comment_count,
-    :gitlab_issue_id, :bitbucket_status
+    :gitlab_issue_id, :bitbucket_status, :gitlab_issue_number, :bitbucket_issue_number
 
   has_many :users, :through => :user_to_issue_connections
 
@@ -60,6 +60,29 @@ class Issue < ActiveRecord::Base
       return unless client.present?
 
       send("create_or_update_issue_to_#{ provider }", client)
+    end
+  end
+
+  def provider_id?
+    Settings.issues_providers.map { |provider| send("#{ provider }_issue_id") }.any?
+  end
+
+  def provider
+    Settings.issues_providers.map do |provider|
+      provider if send("#{ provider }_issue_id").present?
+    end.compact.first
+  end
+
+  def url_from_provider
+    case provider
+    when 'github'
+      github_issue_html_url
+    when 'gitlab'
+      "#{ Settings.gitlab_base_url }/" \
+        "#{ project.gitlab_full_name }/issues/#{ gitlab_issue_number }"
+    when 'bitbucket'
+      "#{ Settings.bitbucket_base_url }/" \
+        "#{ project.bitbucket_full_name }/issues/#{ bitbucket_issue_id }"
     end
   end
 
@@ -153,6 +176,7 @@ class Issue < ActiveRecord::Base
     assign_attributes(
       :title => params[:title],
       :body => params[:description],
+      :gitlab_issue_number => params[:iid],
       :state => params[:state] == 'closed' ? 'closed' : 'open'
     )
   end
@@ -161,6 +185,7 @@ class Issue < ActiveRecord::Base
     assign_attributes(
       :title => params[:title],
       :body => params[:content][:raw],
+      :bitbucket_issue_number => params[:id],
       :state => params[:state] == 'resolved' ? 'closed' : 'open'
     )
   end
@@ -184,7 +209,8 @@ class Issue < ActiveRecord::Base
       define_method "sync_with_#{ provider }_issue" do |provider_issue, project|
         id_param = provider == 'bitbucket' ? 'local_id' : 'id'
 
-        issue = project.issues.find_by("meta ->> '#{ provider }_issue_id' = '?'", provider_issue.send(id_param))
+        issue = project.issues.find_by("meta ->> '#{ provider }_issue_id' = '?'",
+          provider_issue.send(id_param).to_i)
 
         unless issue.present?
           issue = project.issues.build.tap { |i| i.send("#{ provider }_issue_id=", provider_issue.send(id_param)) }
@@ -216,6 +242,7 @@ class Issue < ActiveRecord::Base
       :title => bitbucket_issue.title,
       :body => bitbucket_issue.content,
       :state => bitbucket_issue[:status] == 'resolved' ? 'closed' : 'open',
+      :bitbucket_issue_number => bitbucket_issue.local_id,
       :bitbucket_status => bitbucket_issue[:status],
       :bitbucket_issue_comment_count => bitbucket_issue.comment_count
     )
@@ -225,6 +252,7 @@ class Issue < ActiveRecord::Base
     assign_attributes(
       :title => gitlab_issue.title,
       :body => gitlab_issue.description,
+      :gitlab_issue_number => gitlab_issue.id,
       :state => gitlab_issue.state == 'closed' ? 'closed' : 'open',
       :tags => gitlab_issue.labels
     )

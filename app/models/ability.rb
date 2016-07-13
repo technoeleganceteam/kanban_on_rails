@@ -59,6 +59,10 @@ class Ability
         project.user_to_project_connections.find_by(:user_id => user.id, :role => 'owner').present?
       end
 
+      can :manage, Changelog do |changelog|
+        changelog.project.user_ids.include?(user.id)
+      end
+
       can :create, Issue
 
       can :manage, Issue do |issue|

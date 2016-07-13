@@ -43,14 +43,14 @@ class ProjectsController < ApplicationController
       (render :status => 422, :nothing => true) && return
     end
 
-    @project.parse_issue_params_from_github_webhook(params[:issue]) if params[:issue].present?
+    @project.parse_params_from_github_webhook(params)
 
     (render :status => 200, :nothing => true) && return
   end
 
   def payload_from_bitbucket
     if params[:secure_token] == @project.bitbucket_secret_token_for_hook
-      @project.parse_issue_params_from_bitbucket_webhook(params[:issue]) if params[:issue].present?
+      @project.parse_params_from_bitbucket_webhook(params)
     end
 
     render :status => 200, :nothing => true
@@ -58,9 +58,7 @@ class ProjectsController < ApplicationController
 
   def payload_from_gitlab
     if params[:secure_token] == @project.gitlab_secret_token_for_hook
-      if params[:object_attributes].present?
-        @project.parse_issue_params_from_gitlab_webhook(params[:object_attributes])
-      end
+      @project.parse_params_from_gitlab_webhook(params)
     end
 
     render :status => 200, :nothing => true
@@ -95,7 +93,9 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name)
+    params.require(:project).permit(:name, :include_issues, :include_pull_requests, :changelog_locale,
+      :generate_changelogs, :close_issues, :write_changelog_to_repository, :changelog_filename,
+      :include_detailed_changes, :emails_for_reports => [])
   end
 
   def assign_owner

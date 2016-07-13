@@ -50,7 +50,7 @@ Metrics/LineLength:
   Max: 115
 
 Metrics/ClassLength:
-  Max: 200
+  Max: 250
 
 Style/Documentation:
   Enabled: false

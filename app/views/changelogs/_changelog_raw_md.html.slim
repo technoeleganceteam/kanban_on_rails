@@ -1,0 +1,26 @@
+= "## #{ changelog.tag_name } (#{ changelog.last_commit_date.strftime('%d.%m.%Y %H:%M') }) \n"
+
+- if changelog.project.include_pull_requests?
+  = "\n### #{ t '.changes' } \n"
+
+  - changelog.pull_requests.order('merged_at DESC').each do |pull_request|
+    = "* #{ pull_request.title } " +\
+      "([##{ pull_request.number_from_provider }](#{ pull_request.url_from_provider }) " +\
+      "#{ t '.by' } [@#{ pull_request.created_by }](#{ pull_request.author_url })) \n"
+
+- if changelog.project.include_detailed_changes?
+  = "\n### #{ t '.detailed_changes' } \n"
+
+  - changelog.pull_request_subtasks.sort_by { |item| Settings.story_point_values.index(item) }.\
+    each_with_index do |subtask, index|
+    = "#{ index }. " + "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" +\
+      "#{ "[#{ subtask.story_points }]" if subtask.story_points.present? }" +\
+      " #{ subtask.description } \n"
+
+- if changelog.project.include_issues?
+  = "\n### #{ t '.issues' } \n"
+
+  - changelog.pull_requests.map(&:issues).flatten.each do |issue|
+    = "* #{ issue.title } ([##{ issue.send("#{ issue.provider }_issue_number") }]" +\
+      "(#{ issue.url_from_provider }))\n"
+= "\n"

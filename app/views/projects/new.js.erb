@@ -3,3 +3,5 @@ $('#project_modal #project_form').replaceWith('<%= j render 'form', :project => 
 if (($('#project_modal').data('bs.modal') || { isShown: false }).isShown == false) {
   $('#project_modal').modal('show');
 }
+
+window.init_tags();

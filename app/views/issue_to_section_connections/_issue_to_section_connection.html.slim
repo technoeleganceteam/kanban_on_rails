@@ -20,7 +20,7 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
         i.fa.fa-pencil.fa-lg
   p
     - if issue.github_issue_html_url.present?
-      = link_to issue.github_issue_html_url do
+      = link_to issue.url_from_provider do
         i.fa.fa-github
     - if issue.github_issue_comments_count.present?
       | &nbsp;
@@ -30,8 +30,7 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
 
     - if issue.bitbucket_issue_id.present?
       | &nbsp;
-      = link_to "#{ Settings.bitbucket_base_url }/" +\
-        "#{ issue.project.bitbucket_full_name }/issues/#{ issue.bitbucket_issue_id }" do
+      = link_to issue.url_from_provider do
         i.fa.fa-bitbucket
 
     - if issue.bitbucket_issue_comment_count.present?
@@ -42,8 +41,7 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
 
     - if issue.gitlab_issue_id.present?
       | &nbsp;
-      = link_to "#{ Settings.gitlab_base_url }/" +\
-        "#{ issue.project.gitlab_full_name }/issues/#{ issue.gitlab_issue_id }" do
+      = link_to issue.url_from_provider do
         i.fa.fa-gitlab
 
   - if issue.tags.present?

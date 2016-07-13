@@ -28,6 +28,9 @@ class Board < ActiveRecord::Base
   validates :column_width, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0,
     :less_than_or_equal_to => Settings.max_column_width }
 
+  validates :column_height, :numericality => { :only_integer => true, :greater_than_or_equal_to => 0,
+    :less_than_or_equal_to => Settings.max_column_height }
+
   validate :column_tags_overlapping
 
   after_update :update_issue_to_section_connections

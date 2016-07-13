@@ -3,11 +3,124 @@ h1
   | &nbsp;
   = @project.name
 
-h3 = t '.project_info'
-
 p = link_to "#{ t '.project_issues' } (#{ @project.open_issues })", project_issues_url(@project)
 
 p = link_to "#{ t '.project_users' } (#{ @project.users.size })", project_users_url(@project)
+
+hr
+
+h4 = t '.changelogs'
+p
+  b
+    = t '.generate_changelogs'
+    | :&nbsp;
+  = @project.generate_changelogs
+p
+  b
+    = t '.include_issues'
+    | :&nbsp;
+  = @project.include_issues
+
+p
+  b
+    = t '.include_detailed_changes'
+    | :&nbsp;
+  = @project.include_detailed_changes
+
+p
+  b
+    = t '.include_pull_requests'
+    | :&nbsp;
+  = @project.include_pull_requests
+
+p
+  b
+    = t '.close_issues'
+    | :&nbsp;
+  = @project.close_issues
+
+p
+  b
+    = t '.write_to_changelog_file'
+    | :&nbsp;
+  = @project.write_changelog_to_repository
+
+p
+  b
+    = t '.changelog_filename'
+    | :&nbsp;
+  = @project.changelog_filename
+
+p
+  b
+    = t '.changelog_locale'
+    | :&nbsp;
+  = @project.changelog_locale
+
+p
+  b
+    = t '.emails_for_reports'
+    | :&nbsp;
+  = @project.emails_for_reports.join(',')
+hr
+
+- if @project.is_github_repository
+  h4 = t 'github'
+  
+  p
+    b
+      = t '.github_repository_id'
+      | :&nbsp;
+    = @project.github_repository_id
+
+  p
+    b
+      = t '.github_full_name'
+      | :&nbsp;
+
+    = @project.github_full_name
+
+  p
+    b = t '.github_secret_token_for_hook'
+    | :&nbsp;
+
+    = @project.github_secret_token_for_hook
+  
+- if @project.is_bitbucket_repository
+  h4 = t 'bitbucket'
+  
+  p
+    b
+      = t '.bitbucket_full_name'
+      | :&nbsp;
+
+    = @project.bitbucket_full_name
+
+  p
+    b
+      = t '.bitbucket_secret_token_for_hook'
+      | :&nbsp;
+
+    = @project.bitbucket_secret_token_for_hook
+
+- if @project.is_gitlab_repository
+  h4 = t 'gitlab'
+  
+  p
+    b
+      = t '.gitlab_full_name'
+      | :&nbsp;
+
+    = @project.gitlab_full_name
+
+  p
+    b
+      = t '.bitbucket_secret_token_for_hook'
+      | :&nbsp
+
+    = @project.gitlab_secret_token_for_hook
+
+hr
 
 ul.list-group
   li.list-group-item.list-group-item-info
@@ -20,3 +133,10 @@ ul.list-group
   = render @boards
 
 = paginate @boards
+
+= link_to (t '.edit'), edit_user_project_url(current_user, @project), :class => 'btn btn-default'
+
+| &nbsp;
+
+= link_to (t '.destroy'), user_project_url(current_user, @project), :class => 'btn btn-default btn-danger',
+  :method => 'delete', :data => { :confirm => (t '.are_you_sure') }

@@ -8,7 +8,7 @@
         = (t '.syncing_with_github')
         | &nbsp;
         i.fa.fa-refresh.fa-spin.fa-fw
-    
+
     - if current_user.has_bitbucket_account && current_user.sync_with_bitbucket
       = link_to user_projects_url(current_user),
         :class => 'btn btn-default navbar-btn', :id => 'navbar_bitbucket_sync_info' do
@@ -25,6 +25,11 @@
 
     = link_to new_user_project_url(current_user), :remote => true, :class => 'btn btn-success navbar-btn' do
       i.fa.fa-plus
+
+    - if params[:controller] == 'projects' && params[:action] == 'show'
+      = link_to edit_user_project_url(current_user, @project), :remote => true,
+        :class => 'btn btn-success navbar-btn' do
+        i.fa.fa-pencil
 
   | &nbsp;
   .btn-group

@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: https://github.com/technoeleganceteam/bitbucket.git
-  revision: 503ae118bb06bd5f7f07dd19385f93bbfab689d5
+  revision: 6b907341d927f3d0019d012968bd63e943c6bcca
   specs:
     bitbucket_rest_api (0.1.7)
       faraday (~> 0.9.0)

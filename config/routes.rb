@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    post 'omniauth_finish' => 'omniauth_callbacks#omniauth_finish'
-
     resource :registration,
       :only => [:new, :create],
       :path => 'users',
@@ -45,6 +43,12 @@ Rails.application.routes.draw do
     resources :issues
 
     resources :users, :only => [:index]
+
+    resources :changelogs, :only => [:index, :show] do
+      get :resend, :on => :member
+
+      get :sync, :on => :collection
+    end
 
     post :payload_from_github, :payload_from_bitbucket, :payload_from_gitlab, :on => :member
   end
