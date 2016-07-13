@@ -25,7 +25,7 @@ class ChangelogsController < ApplicationController
   end
 
   def sync
-    GenerateChangelogWorker.perform_async(@project)
+    GenerateChangelogWorker.perform_async(@project.id)
 
     redirect_to project_changelogs_url, :flash => { :notice => I18n.t('changelogs_has_been_synced') }
   end
