@@ -22,7 +22,11 @@ li.list-group-item
       i.fa.fa-gitlab
 
   .pull-right
-    = link_to (t '.project_issues'), project_issues_url(project), :class => 'btn btn-default btn-xs'
+    = link_to (t '.changelogs'), project_changelogs_url(project), :class => 'btn btn-default btn-xs'
+
+    | &nbsp;
+    
+    = link_to (t '.issues'), project_issues_url(project), :class => 'btn btn-default btn-xs'
     
     | &nbsp;
 
@@ -32,4 +36,4 @@ li.list-group-item
 
     = link_to (t '.destroy'), user_project_url(current_user, project),
       :class => 'btn btn-default btn-xs btn-danger',
-      :method => 'delete', :data => { :confirm => 'Вы уверены?' }
+      :method => 'delete', :data => { :confirm => (t '.are_you_sure') }

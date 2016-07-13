@@ -83,7 +83,10 @@ RSpec.describe ProjectsController, :type => :controller do
 
   describe 'POST payload_from_bitbucket' do
     context 'when nothing payload' do
-      before { post :payload_from_bitbucket, :id => connection.project }
+      before do
+        post :payload_from_bitbucket, :id => connection.project,
+          :issue => { :title => 'bar', :content => { :raw => 'foo' } }
+      end
 
       it { expect(response.body).to be_blank }
     end

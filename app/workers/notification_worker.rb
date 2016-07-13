@@ -1,5 +1,6 @@
 class NotificationWorker
   include Sidekiq::Worker
+  include Viewable
 
   def perform(issue_id, user_id)
     @user = User.find(user_id)
@@ -13,17 +14,6 @@ class NotificationWorker
   end
 
   private
-
-  def view
-    ActionView::Base.new(Rails.configuration.paths['app/views']).tap do |av|
-      av.class_eval do
-        include Rails.application.routes.url_helpers
-        include ApplicationHelper
-        include Devise::Controllers::Helpers
-        include CanCan::ControllerAdditions
-      end
-    end
-  end
 
   %w(body title title_with_body_html).each do |part|
     define_method "render_#{ part }" do

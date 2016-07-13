@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622125505) do
+ActiveRecord::Schema.define(version: 20160704204218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(version: 20160622125505) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
+
+  create_table "changelogs", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "tag_name",                         null: false
+    t.string   "last_commit_sha",                  null: false
+    t.datetime "last_commit_date",                 null: false
+    t.boolean  "handled",          default: false, null: false
+    t.jsonb    "meta",             default: {}
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  add_index "changelogs", ["project_id"], name: "index_changelogs_on_project_id", using: :btree
 
   create_table "columns", force: :cascade do |t|
     t.integer  "max_issues_count"
@@ -108,14 +121,63 @@ ActiveRecord::Schema.define(version: 20160622125505) do
   add_index "project_to_board_connections", ["project_id"], name: "index_project_to_board_connections_on_project_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name",                        null: false
-    t.integer  "issues_count",  default: 0,   null: false
-    t.integer  "column_width",  default: 200, null: false
-    t.integer  "column_height", default: 600, null: false
-    t.jsonb    "meta",          default: {}
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "name",                                                null: false
+    t.integer  "issues_count",                  default: 0,           null: false
+    t.integer  "column_width",                  default: 200,         null: false
+    t.integer  "column_height",                 default: 600,         null: false
+    t.jsonb    "meta",                          default: {}
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.boolean  "include_issues",                default: true,        null: false
+    t.boolean  "include_pull_requests",         default: true,        null: false
+    t.boolean  "include_detailed_changes",      default: true,        null: false
+    t.boolean  "close_issues",                  default: false,       null: false
+    t.boolean  "generate_changelogs",           default: false,       null: false
+    t.text     "emails_for_reports",            default: [],                       array: true
+    t.boolean  "write_changelog_to_repository", default: false,       null: false
+    t.string   "changelog_locale",              default: "en",        null: false
+    t.string   "changelog_filename",            default: "CHANGELOG", null: false
   end
+
+  create_table "pull_request_subtasks", force: :cascade do |t|
+    t.integer  "pull_request_id"
+    t.integer  "changelog_id"
+    t.string   "story_points"
+    t.text     "description",                  null: false
+    t.string   "task_type"
+    t.jsonb    "meta",            default: {}
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "pull_request_subtasks", ["changelog_id"], name: "index_pull_request_subtasks_on_changelog_id", using: :btree
+  add_index "pull_request_subtasks", ["pull_request_id"], name: "index_pull_request_subtasks_on_pull_request_id", using: :btree
+
+  create_table "pull_request_to_issue_connections", force: :cascade do |t|
+    t.integer  "pull_request_id"
+    t.integer  "issue_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "pull_request_to_issue_connections", ["issue_id"], name: "index_pull_request_to_issue_connections_on_issue_id", using: :btree
+  add_index "pull_request_to_issue_connections", ["pull_request_id"], name: "index_pull_request_to_issue_connections_on_pull_request_id", using: :btree
+
+  create_table "pull_requests", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "changelog_id"
+    t.string   "title",                         null: false
+    t.datetime "merged_at",                     null: false
+    t.text     "body"
+    t.string   "id_from_provider",              null: false
+    t.string   "created_by"
+    t.jsonb    "meta",             default: {}
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "pull_requests", ["changelog_id"], name: "index_pull_requests_on_changelog_id", using: :btree
+  add_index "pull_requests", ["project_id"], name: "index_pull_requests_on_project_id", using: :btree
 
   create_table "sections", force: :cascade do |t|
     t.string   "name",                          null: false

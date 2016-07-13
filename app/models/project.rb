@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  include Viewable
+
   store_accessor :meta, :github_repository_id, :github_name, :github_full_name,
     :is_github_repository, :is_bitbucket_repository, :bitbucket_name, :bitbucket_owner,
     :bitbucket_slug, :bitbucket_full_name, :github_secret_token_for_hook, :bitbucket_secret_token_for_hook,
@@ -21,7 +23,13 @@ class Project < ActiveRecord::Base
 
   has_many :project_to_board_connections, :dependent => :destroy
 
+  has_many :pull_requests, :dependent => :destroy
+
+  has_many :changelogs, :dependent => :destroy
+
   validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true
+
+  validates :changelog_locale, :presence => true, :inclusion => I18n.available_locales.map(&:to_s)
 
   after_save :update_issues
 
@@ -58,6 +66,94 @@ class Project < ActiveRecord::Base
 
       issue.save!
     end
+
+    define_method "#{ provider }_client_for_changelogs" do
+      owners = user_to_project_connections.includes(:user).where(:role => 'owner').order('created_at ASC')
+
+      authentication = owners.each do |owner|
+        result = Authentication.find_by(:user_id => owner.user, :provider => provider)
+
+        break result if result.present?
+      end
+
+      authentication.user.send("#{ provider }_client") if authentication.present?
+    end
+  end
+
+  def write_changelog
+    file_content = view.render(:partial => 'changelogs/changelog_raw_md',
+      :collection => changelogs.order('last_commit_date DESC'), :as => :changelog)
+
+    send("write_changelog_to_#{ provider }_repository", file_content)
+  end
+
+  def write_changelog_to_github_repository(file_data)
+    content = github_client_for_changelogs.contents(github_repository_id, :path => "#{ changelog_filename }.md")
+
+    github_client_for_changelogs.update_contents(github_repository_id, "#{ changelog_filename }.md",
+      'Update changelog', content.sha, file_data)
+  rescue Octokit::NotFound
+    github_client_for_changelogs.create_contents(github_repository_id, "#{ changelog_filename }.md",
+      'Update changelog', file_data)
+  end
+
+  def write_changelog_to_gitlab_repository(file_data)
+    gitlab_client_for_changelogs.get_file(gitlab_repository_id, "#{ changelog_filename }.md", 'master')
+
+    gitlab_client_for_changelogs.edit_file(gitlab_repository_id, "#{ changelog_filename }.md",
+      'master', file_data, 'Update changelog')
+  rescue Gitlab::Error::NotFound
+    gitlab_client_for_changelogs.create_file(gitlab_repository_id, "#{ changelog_filename }.md",
+      'master', file_data, 'Update changelog')
+  end
+
+  def write_changelog_to_bitbucket_repository(file_date)
+    # This feature is not available in the gem for bitbucket api https://github.com/bitbucket-rest-api/bitbucket
+    # You can send PR to this gem or propose better gem for bitbucket api
+  end
+
+  def parse_params_from_github_webhook(params)
+    parse_issue_params_from_github_webhook(params[:issue]) if params[:issue].present?
+
+    GenerateChangelogWorker.perform_async(id) if params[:ref_type] == 'tag' && generate_changelogs?
+  end
+
+  def parse_params_from_gitlab_webhook(params)
+    parse_issue_params_from_gitlab_webhook(params[:object_attributes]) if params[:object_kind] == 'issue'
+
+    GenerateChangelogWorker.perform_async(id) if params[:object_kind] == 'tag_push' && generate_changelogs?
+  end
+
+  def parse_params_from_bitbucket_webhook(params)
+    parse_issue_params_from_bitbucket_webhook(params[:issue]) if params[:issue].present?
+
+    if params.dig(:push, :changes).present? && params[:push][:changes].first.dig(:new, :type) == 'tag'
+      GenerateChangelogWorker.perform_async(id) if generate_changelogs?
+    end
+  end
+
+  def provider
+    Settings.issues_providers.map do |provider|
+      provider if send("is_#{ provider }_repository")
+    end.compact.first
+  end
+
+  def fetch_and_create_github_issue(github_issue_number)
+    info = github_client_for_changelogs.issue(github_repository_id, github_issue_number)
+
+    Issue.sync_with_github_issue(info, self)
+  end
+
+  def fetch_and_create_gitlab_issue(gitlab_issue_id)
+    info = gitlab_client_for_changelogs.issue(gitlab_repository_id, gitlab_issue_id)
+
+    Issue.sync_with_gitlab_issue(info, self)
+  end
+
+  def fetch_and_create_bitbucket_issue(bitbucket_issue_id)
+    info = bitbucket_client_for_changelogs.issues.get(bitbucket_owner, bitbucket_slug, bitbucket_issue_id)
+
+    Issue.sync_with_bitbucket_issue(info, self)
   end
 
   def remove_hook_from_bitbucket(authentication, hook)

@@ -35,5 +35,7 @@ module KanbanOnRails
     config.middleware.delete 'Rack::Lock'
 
     config.active_job.queue_adapter = :sidekiq
+
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

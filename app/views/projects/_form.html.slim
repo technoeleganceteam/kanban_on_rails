@@ -11,6 +11,70 @@
 
   hr
 
+  h3
+    = t '.changelogs'
+    br
+    small = t '.changelogs_info'
+  
+
+  .checkbox
+    label
+      = form.check_box :generate_changelogs
+
+      = t '.generate_changelogs'
+
+  .checkbox
+    label
+      = form.check_box :include_issues
+      
+      = t '.include_issues'
+
+  .checkbox
+    label
+      = form.check_box :include_detailed_changes
+      
+      = t '.include_detailed_changes'
+
+  .checkbox
+    label
+      = form.check_box :include_pull_requests
+      
+      = t '.include_pull_requests'
+
+  .checkbox
+    label
+      = form.check_box :close_issues
+      
+      = t '.close_issues'
+
+  .checkbox
+    label
+      = form.check_box :write_changelog_to_repository
+      
+      = t '.write_to_changelog_file'
+
+  .form-group
+    label for = 'changelog_filename' = t '.changelog_filename'
+
+    = form.text_field :changelog_filename, :class => 'form-control',
+      :placeholder => (t '.enter_changelog_filename')
+
+  .form-group
+    label for = 'changelog_locale' = t '.changelog_locale'
+
+    = form.select :changelog_locale, language_options_for_settings_select, {},
+      { :class => 'form-control', :id => 'locale' }
+
+  .form-group
+    label for = 'emails_for_reports' = t '.emails_for_reports'
+
+    = form.select :emails_for_reports,
+      options_for_select(form.object.emails_for_reports.tap { |t| t.delete('') },
+      :selected => form.object.emails_for_reports.tap { |t| t.delete('') }), { },
+      :multiple => true, :class => 'form-control emails_for_reports'
+
+  hr
+
   - if project.is_github_repository
     h3 = t 'github'
     
@@ -48,7 +112,7 @@
 
     input.form-control disabled = '' placeholder=("#{ project.gitlab_full_name }") type = 'text'
 
-    label = t '.bitbucket_secret_token_for_hook'
+    label = t '.gitlab_secret_token_for_hook'
 
     input.form-control disabled = '' placeholder=("#{ project.gitlab_secret_token_for_hook }") type = 'text'
 

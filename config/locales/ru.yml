@@ -8,6 +8,10 @@ ru:
   backlog: Бэклог
   open: Открыта
   closed: Закрыта
+  releases: релизы
+  release: релиз
+  changelog_has_been_resent: Изменения(changelog) были переотправлены
+  changelogs_has_been_synced: Изменения(changelog) были синхронизированы
   shared:
     navbar:
       sign_in: Вход
@@ -51,6 +55,7 @@ ru:
       select_column_tags: Выберите теги столбцов
       select_section_tags: Выберите теги раздела
       select_issue_tags: Выберите теги задачи
+      emails_for_reports: Введите емейлы, на которые будут приходить отчёты
     pagination_link:
       next_page: Следующая страница
     sync_with_provider_button:
@@ -134,14 +139,30 @@ ru:
       column_height: Высота столбца
       github_repository_id: Github Id репозитория
       github_full_name: Полное название репозитория на Github
-      github_secret_token_for_hook: Github секретный token для создания хука
+      github_secret_token_for_hook: Github секретный токен для создания хука
       bitbucket_full_name: BitBucket полное название
-      bitbucket_secret_token_for_hook: BitBucket секретный token для хука
+      bitbucket_secret_token_for_hook: BitBucket секретный токен для хука
+      gitlab_full_name: Название проекта в Gitlab
+      gitlab_secret_token_for_hook: Gitlab секретный токен для хука
+      changelogs: Журнал изменений проекта(Changelogs)
+      changelogs_info: Заполните, если хотите вести журнал изменений
+      generate_changelogs: Генерировать отчёты(changelogs)
+      include_detailed_changes: Включить в отчёты детальные изменения описанные в Pull Requests
+      include_issues: Включать в отчёты сделанные задачи(issues)
+      include_pull_requests: Включить в отчёты Pull Request'ы
+      close_issues: Закрывать тикеты при деплое и генерации отчёта
+      emails_for_reports: Емейлы, на которые будут отправляться отчёты
+      write_to_changelog_file: Записывать изменения в файл репозитории проекта
+      changelog_filename: Название файла в репозитории, куда будут записываться изменения
+      enter_changelog_filename: Введите название файла для изменений(по-умолчанию CHANGELOG)
+      changelog_locale: Выберите язык, на котором будут писаться отчёты(Changelog'и)
     project:
       edit: Редактировать
       destroy: Удалить
-      project_issues: Задачи проекта
-      project_users: Пользователи проекта
+      issues: Задачи
+      changelogs: Изменения(changelog'и)
+      users: Пользователи
+      are_you_sure: Вы уверены?
     section_fields:
       section_name: Название секции
       remove_section: Удалить раздел
@@ -161,6 +182,25 @@ ru:
       project_issues: Задачи проекта
       project_users: Участники проекта
       new: Новая
+      edit: Редактировать
+      destroy: Удалить
+      are_you_sure: Вы уверены?
+      github_repository_id: Github Id репозитория
+      github_full_name: Полное название репозитория на Github
+      github_secret_token_for_hook: Github секретный токен для создания хука
+      bitbucket_full_name: BitBucket полное название
+      bitbucket_secret_token_for_hook: BitBucket секретный токен для хука
+      gitlab_full_name: Gitlab полное название проекта
+      github_secret_token_for_hook: Gitlab секретный токен для хука
+      generate_changelogs: Генерировать отчёты(changelogs)
+      include_detailed_changes: Включить в отчёты детальные изменения описанные в Pull Requests
+      include_issues: Включать в отчёты сделанные задачи(issues)
+      include_pull_requests: Включить в отчёты Pull Request'ы
+      close_issues: Закрывать тикеты при деплое и генерации отчёта
+      emails_for_reports: Емейлы, на которые будут отправляться отчёты
+      write_to_changelog_file: Записывать изменения в файл репозитории проекта
+      changelog_filename: Название файла в репозитории, куда будут записываться изменения
+      changelog_locale: Язык, который используется для генерации отчётов
     project_modal:
       project: Проект
   issues:
@@ -274,6 +314,25 @@ ru:
       close: Закрыть
       cancel: Отмена
       more: Отправить ещё
+  changelogs:
+    changelog_raw_md:
+      changes: Изменения
+      detailed_changes: Подробные изменения
+      issues: Задачи
+      by: сделан пользователем
+    changelog:
+      changes: Изменения
+      detailed_changes: Подробные изменения
+      issues: Задачи
+      by: сделан пользователем
+    index:
+      project: Проект
+      changelogs: Изменения(changelog'и)
+      sync: Синхронизировать
+    changelog_list_item:
+      resend: Переотправить
+      view_as_html: Посмотреть html
+      view_as_raw_md: Посмотреть md
   pages:
     faq:
       faq: Часто задаваемые вопросы

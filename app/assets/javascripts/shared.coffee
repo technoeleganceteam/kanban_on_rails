@@ -47,18 +47,27 @@ close_issue = (project_id, issue_id) ->
 
 window.init_tags = ->
   $('.column_tags').select2
+    width: '100%'
     placeholder: window.i18n_column_tags
     tags: true
 
   $('.section_tags').select2
+    width: '100%'
     placeholder: window.i18n_section_tags
     tags: true
 
   $('.issue_tags').select2
+    width: '100%'
     placeholder: window.i18n_issue_tags
     tags: true
 
+  $('.emails_for_reports').select2
+    width: '100%'
+    placeholder: window.i18n_emails_for_reports
+    tags: true
+
   $('.issue_project').select2
+    width: '100%'
     tags: true
     ajax:
       url: Routes.user_projects_path(window.current_user_id)
@@ -76,6 +85,7 @@ window.init_tags = ->
 
   $('.user_projects').select2
     tags: true
+    width: '100%'
     ajax:
       url: Routes.user_projects_path(window.current_user_id)
       dataType: 'json'
