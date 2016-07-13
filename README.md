@@ -9,6 +9,7 @@
 
 ### Features
 - **Two-way integration with Github, Bitbucket and Gitlab.** Your issues will be synced with these services via api. All external changes with issues will be also synced via webhooks.
+- **Automatically build changelog** Your pull requests and related issues will be parsed, sent to specified emails and wrote to repository file automatically after receiving webhooks from Github, Bitbucket or Gitlab. Our [CHANGELOG.md](https://github.com/technoeleganceteam/kanban_on_rails/blob/master/CHANGELOG.md) is built by this way, check it out! 
 - **Inviting users to your boards** You can invite users that have no Github, Bitbucket or Gitlab accounts to your board as managers for example, so they will not see your project code but they could see your board and issues.
 - **Real-time integration** You and your team will see all changes in real time via websockets. We use great rails framework Action Cable for this. 
 - **Multi-project boards** You can create board with multiple projects(even from Gitlab or Github together)
