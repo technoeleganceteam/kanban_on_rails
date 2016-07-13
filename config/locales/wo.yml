@@ -10,6 +10,10 @@ wo:
     chúng tôi
   open: Mở
   closed: đóng
+  releases: phát hành
+  release: phát hành
+  changelog_has_been_resent: Changelog đã được gửi lại
+  changelogs_has_been_synced: Changelog đã được đồng bộ hóa
   shared:
     navbar:
       sign_in: Đăng nhập
@@ -53,6 +57,7 @@ wo:
       select_column_tags: Chọn thẻ cột
       select_section_tags: Chọn thẻ phần
       select_issue_tags: Chọn thẻ phát hành
+      emails_for_reports: Loại email đó sẽ nhận được ghi thay đổi
     email_signature:
       info: Thông tin
       mailer: Mailer
@@ -134,14 +139,29 @@ wo:
       add: Add
       github_repository_id: Github kho id
       github_full_name: Github kho fullname
-      github_secret_token_for_hook: Github mã bí mật cho móc
+      github_secret_token_for_hook: Gitlab mã bí mật cho móc
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket mã bí mật cho móc
+      gitlab_full_name: Gitlab fullname
+      changelogs: changelogs
+      changelogs_info: nếu bạn muốn giữ changelogs
+      generate_changelogs: Tạo changelogs
+      include_detailed_changes: Bao gồm những thay đổi chi tiết mô tả trong yêu cầu
+        kéo
+      include_issues: Bao gồm các vấn đề trong changelogs
+      include_pull_requests: Bao gồm yêu cầu kéo trong changelogs
+      close_issues: vấn đề Đóng làm
+      emails_for_reports: email cho recieving changelogs
+      write_to_changelog_file: Viết ghi thay đổi vào tập tin lưu trữ
+      changelog_filename: filename Changelog
+      enter_changelog_filename: Nhập tên tập tin changelog (mặc định "CHANGELOG")
+      changelog_locale: Chọn ngôn ngữ cho changelogs
     project:
       edit: Sửa
       destroy: Xóa
-      project_issues: vấn đề dự án
-      project_users: dự án
+      users: Người dùng
+      changelogs: changelogs
+      are_you_sure: Bạn có chắc chắn?
     section_fields:
       section_tags: thẻ mục
       section_order: thứ tự
@@ -156,6 +176,26 @@ wo:
       project_issues: vấn đề dự án
       project_users: dự án
       new: mới
+      edit: Sửa
+      destroy: Xóa
+      are_you_sure: Bạn có chắc chắn?
+      changelogs: changelogs
+      github_repository_id: Github kho id
+      github_full_name: Github kho fullname
+      github_secret_token_for_hook: Gitlab mã bí mật cho móc
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket mã bí mật cho móc
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Tạo changelogs
+      include_detailed_changes: Bao gồm những thay đổi chi tiết mô tả trong yêu cầu
+        kéo
+      include_issues: Bao gồm các vấn đề trong changelogs
+      include_pull_requests: Bao gồm yêu cầu kéo trong changelogs
+      close_issues: vấn đề Đóng làm
+      emails_for_reports: email cho recieving changelogs
+      write_to_changelog_file: Viết ghi thay đổi vào tập tin lưu trữ
+      changelog_filename: filename Changelog
+      changelog_locale: Ngôn ngữ cho changelog
   issues:
     form:
       title: Tiêu đề
@@ -258,6 +298,22 @@ wo:
       close: Đóng
       cancel: Hủy
       more: Gửi thêm
+  changelogs:
+    changelog_raw_md:
+      changes: thay đổi
+      detailed_changes: thay đổi chi tiết
+      by: bởi
+    changelog:
+      changes: thay đổi
+      detailed_changes: thay đổi chi tiết
+      by: bởi
+    index:
+      changelogs: changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Xem như html
+      view_as_raw_md: Xem như md liệu
   pages:
     faq:
       faq: Hỏi đáp

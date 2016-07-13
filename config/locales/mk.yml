@@ -9,6 +9,10 @@ mk:
   1_we_have_just_launched_our_service_title: Ние имаме само лансиран нашиот сервис
   open: отворено
   closed: Затворено
+  releases: соопштенија
+  release: порака
+  changelog_has_been_resent: на промени е препратена
+  changelogs_has_been_synced: на промени се синхронизираат
   shared:
     navbar:
       sign_in: Најави се Регистрирај се
@@ -29,7 +33,6 @@ mk:
       services: услуги
     form_errors:
       password: Лозинка
-      current_password: Моментална лозинка
       name: Име
       base: база
       title: Наслов
@@ -53,6 +56,7 @@ mk:
       select_column_tags: Изберете колона тагови
       select_section_tags: изберете го делот тагови
       select_issue_tags: Изберете прашање тагови
+      emails_for_reports: Тип на пораки кои ќе добиете changelogs
     email_signature:
       info: Инфо
       mailer: мејлер
@@ -139,14 +143,29 @@ mk:
       add: Add
       github_repository_id: Github складиштето проект
       github_full_name: Github складиштето цело име
-      github_secret_token_for_hook: Github тајна знак за кука
+      github_secret_token_for_hook: Gitlab тајна знак за кука
       bitbucket_full_name: Bitbucket цело име
       bitbucket_secret_token_for_hook: Bitbucket тајна знак за кука
+      gitlab_full_name: Gitlab цело име
+      changelogs: Changelogs
+      changelogs_info: ако сакате да се задржи changelogs
+      generate_changelogs: Генерирање changelogs
+      include_detailed_changes: вклучува детални промени опишани во фотелја барања
+      include_issues: Вклучи прашања во changelogs
+      include_pull_requests: Вклучи се повлече барања во changelogs
+      close_issues: Затвори направено прашања
+      emails_for_reports: пораки за примање changelogs
+      write_to_changelog_file: Напиши changelogs во складиштето датотека
+      changelog_filename: на промени името на датотеката
+      enter_changelog_filename: на промени Внесете име на датотека (стандардно "промени")
+      changelog_locale: Избери го јазикот за changelogs
     project:
       edit: Уреди
       destroy: Избриши
-      project_issues: прашања проектот
-      project_users: корисници на проектот
+      issues: прашања
+      users: корисници
+      changelogs: Changelogs
+      are_you_sure: Дали сте сигурни?
     section_fields:
       section_tags: Дел тагови
       section_order: нарачка
@@ -162,6 +181,25 @@ mk:
       project_issues: прашања проектот
       project_users: корисници на проектот
       new: Нови
+      edit: Уреди
+      destroy: Избриши
+      are_you_sure: Дали сте сигурни?
+      changelogs: Changelogs
+      github_repository_id: Github складиштето проект
+      github_full_name: Github складиштето цело име
+      github_secret_token_for_hook: Gitlab тајна знак за кука
+      bitbucket_full_name: Bitbucket цело име
+      bitbucket_secret_token_for_hook: Bitbucket тајна знак за кука
+      gitlab_full_name: Gitlab цело име
+      generate_changelogs: Генерирање changelogs
+      include_detailed_changes: вклучува детални промени опишани во фотелја барања
+      include_issues: Вклучи прашања во changelogs
+      include_pull_requests: Вклучи се повлече барања во changelogs
+      close_issues: Затвори направено прашања
+      emails_for_reports: пораки за примање changelogs
+      write_to_changelog_file: Напиши changelogs во складиштето датотека
+      changelog_filename: на промени името на датотеката
+      changelog_locale: јазик за на промени
     project_modal:
       project: проектот
   issues:
@@ -267,6 +305,25 @@ mk:
       close: Затвори
       cancel: Откажи
       more: Испрати повеќе
+  changelogs:
+    changelog_raw_md:
+      changes: Промените
+      detailed_changes: детални промени
+      issues: прашања
+      by: од
+    changelog:
+      changes: Промените
+      detailed_changes: детални промени
+      issues: прашања
+      by: од
+    index:
+      project: проектот
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Препраќање
+      view_as_html: Види како HTML
+      view_as_raw_md: Види како суровини MD
   pages:
     faq:
       faq: Најчесто поставувани прашања

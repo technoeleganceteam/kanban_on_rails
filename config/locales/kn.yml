@@ -8,6 +8,10 @@ kn:
   backlog: ಬಾಕಿ
   open: ಓಪನ್
   closed: ಮುಚ್ಚಲಾಗಿದೆ
+  releases: ಬಿಡುಗಡೆ
+  release: ಬಿಡುಗಡೆ
+  changelog_has_been_resent: ಚೇಂಜ್ಲಾಗ್ ಅಸಮಾಧಾನಗೊಂಡ ಬಂದಿದೆ
+  changelogs_has_been_synced: ಚೇಂಜ್ಲಾಗ್ ಸಿಂಕ್ ಮಾಡಲಾಗಿದೆ
   shared:
     navbar:
       sign_in: ಸೈನ್ ಇನ್
@@ -121,11 +125,25 @@ kn:
       github_repository_id: GitHub ಭಂಡಾರ ಐಡಿ
       github_full_name: GitHub ಭಂಡಾರ ಪೂರ್ಣಹೆಸರು
       bitbucket_full_name: Bitbucket ಪೂರ್ಣಹೆಸರು
+      gitlab_full_name: Gitlab ಪೂರ್ಣಹೆಸರು
+      changelogs: Changelogs
+      changelogs_info: ನೀವು Changelogs ಇರಿಸಿಕೊಳ್ಳಲು ಬಯಸಿದಲ್ಲಿ
+      generate_changelogs: Changelogs ರಚಿಸಿ
+      include_detailed_changes: ಪುಲ್ ವಿನಂತಿಗಳನ್ನು ವಿವರಿಸಲಾಗಿದೆ ವಿವರವಾದ ಬದಲಾವಣೆ
+      include_issues: Changelogs ಸಮಸ್ಯೆಗಳು ಸೇರಿಸಿ
+      include_pull_requests: Changelogs ಎಳೆಯಲು ವಿನಂತಿಗಳನ್ನು ಸೇರಿಸಿ
+      close_issues: ಮುಚ್ಚಿ ಮಾಡಲಾಗುತ್ತದೆ ಸಮಸ್ಯೆಗಳು
+      changelog_filename: ಚೇಂಜ್ಲಾಗ್ ಕಡತದ
+      enter_changelog_filename: (ಡೀಫಾಲ್ಟ್ "ಚೇಂಜ್ಲಾಗ್ಗಳನ್ನು") ಚೇಂಜ್ಲಾಗ್ಗಳನ್ನು ಕಡತದ
+        ನಮೂದಿಸಿ
+      changelog_locale: Changelogs ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ
     project:
       edit: ಸಂಪಾದಿಸಿ
       destroy: ಅಳಿಸಿ
-      project_issues: ಪ್ರಾಜೆಕ್ಟ್ ಸಮಸ್ಯೆಗಳು
-      project_users: ಪ್ರಾಜೆಕ್ಟ್ ಬಳಕೆದಾರರು
+      issues: ತೊಂದರೆಗಳು
+      users: ಬಳಕೆದಾರರು
+      changelogs: Changelogs
+      are_you_sure: ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?
     section_fields:
       section_name: ವಿಭಾಗ ಹೆಸರು
       remove_section: ತೆಗೆದುಹಾಕಿ ವಿಭಾಗ
@@ -145,6 +163,20 @@ kn:
       project_issues: ಪ್ರಾಜೆಕ್ಟ್ ಸಮಸ್ಯೆಗಳು
       project_users: ಪ್ರಾಜೆಕ್ಟ್ ಬಳಕೆದಾರರು
       new: ಹೊಸ
+      edit: ಸಂಪಾದಿಸಿ
+      destroy: ಅಳಿಸಿ
+      are_you_sure: ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?
+      changelogs: Changelogs
+      github_repository_id: GitHub ಭಂಡಾರ ಐಡಿ
+      github_full_name: GitHub ಭಂಡಾರ ಪೂರ್ಣಹೆಸರು
+      bitbucket_full_name: Bitbucket ಪೂರ್ಣಹೆಸರು
+      gitlab_full_name: Gitlab ಪೂರ್ಣಹೆಸರು
+      generate_changelogs: Changelogs ರಚಿಸಿ
+      include_detailed_changes: ಪುಲ್ ವಿನಂತಿಗಳನ್ನು ವಿವರಿಸಲಾಗಿದೆ ವಿವರವಾದ ಬದಲಾವಣೆ
+      include_issues: Changelogs ಸಮಸ್ಯೆಗಳು ಸೇರಿಸಿ
+      include_pull_requests: Changelogs ಎಳೆಯಲು ವಿನಂತಿಗಳನ್ನು ಸೇರಿಸಿ
+      close_issues: ಮುಚ್ಚಿ ಮಾಡಲಾಗುತ್ತದೆ ಸಮಸ್ಯೆಗಳು
+      changelog_filename: ಚೇಂಜ್ಲಾಗ್ ಕಡತದ
     project_modal:
       project: ಪ್ರಾಜೆಕ್ಟ್
   issues:
@@ -251,6 +283,23 @@ kn:
       close: ಮುಚ್ಚಿ
       cancel: ರದ್ದು
       more: ಹೆಚ್ಚು ಕಳುಹಿಸಿ
+  changelogs:
+    changelog_raw_md:
+      changes: ಬದಲಾವಣೆಗಳು
+      detailed_changes: ವಿವರವಾದ ಬದಲಾವಣೆಗಳನ್ನು
+      issues: ತೊಂದರೆಗಳು
+      by: ಮೂಲಕ
+    changelog:
+      changes: ಬದಲಾವಣೆಗಳು
+      detailed_changes: ವಿವರವಾದ ಬದಲಾವಣೆಗಳನ್ನು
+      issues: ತೊಂದರೆಗಳು
+      by: ಮೂಲಕ
+    index:
+      project: ಪ್ರಾಜೆಕ್ಟ್
+      changelogs: Changelogs
+      sync: ಸಿಂಕ್
+    changelog_list_item:
+      resend: ಮತ್ತೆ ಕಳುಹಿಸಿ
   pages:
     faq:
       faq: ಎಫ್ಎಕ್ಯೂ

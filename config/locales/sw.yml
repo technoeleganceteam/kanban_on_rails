@@ -9,6 +9,10 @@ sw:
   1_we_have_just_launched_our_service_title: Sisi tu alizindua huduma zetu
   open: Open
   closed: Ilifungwa
+  releases: releases
+  release: kutolewa
+  changelog_has_been_resent: Changelog imekuwa atapewa
+  changelogs_has_been_synced: Changelog imekuwa synced
   shared:
     navbar:
       sign_in: Ingia katika
@@ -18,7 +22,7 @@ sw:
       syncing_with_github: Sync na github ...
       syncing_with_gitlab: Sync na Gitlab ...
       syncing_with_bitbucket: Sync na bitbucket ...
-      new_issue: suala New
+      new_issue: New suala
       edit_project: Hariri mradi
       boards: Bodi
     languages_select_modal:
@@ -54,6 +58,7 @@ sw:
       select_column_tags: Chagua vitambulisho safu
       select_section_tags: Chagua vitambulisho sehemu
       select_issue_tags: Chagua vitambulisho suala
+      emails_for_reports: Aina barua pepe ambayo itakuwa kupokea changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -141,14 +146,30 @@ sw:
       column_height: Column urefu
       github_repository_id: github there id
       github_full_name: github there majina kamili
-      github_secret_token_for_hook: github siri ishara kwa ndoano
+      github_secret_token_for_hook: Gitlab siri ishara kwa ndoano
       bitbucket_full_name: bitbucket majina kamili
       bitbucket_secret_token_for_hook: bitbucket siri ishara kwa ndoano
+      gitlab_full_name: Gitlab majina kamili
+      changelogs: Changelogs
+      changelogs_info: ikiwa unataka kuweka changelogs
+      generate_changelogs: Kutoa changelogs
+      include_detailed_changes: Ni pamoja na mabadiliko ya kina ilivyoelezwa katika
+        maombi ya kuvuta
+      include_issues: Ni pamoja na masuala katika changelogs
+      include_pull_requests: Ni pamoja na maombi ya kuvuta katika changelogs
+      close_issues: masuala Close kufanyika
+      emails_for_reports: Emails kwa kupokea changelogs
+      write_to_changelog_file: Write changelogs na faili there
+      changelog_filename: Changelog filename
+      enter_changelog_filename: Weka changelog filename (default "Changelog")
+      changelog_locale: lugha ya changelogs Chagua
     project:
       edit: Hariri
       destroy: Futa
-      project_issues: masuala Project
-      project_users: watumiaji Project
+      issues: Masuala
+      users: Watumiaji
+      changelogs: Changelogs
+      are_you_sure: Je, una uhakika?
     section_fields:
       section_tags: vitambulisho Sehemu ya
       section_order: Amri
@@ -165,6 +186,26 @@ sw:
       project_issues: masuala Project
       project_users: watumiaji Project
       new: New
+      edit: Hariri
+      destroy: Futa
+      are_you_sure: Je, una uhakika?
+      changelogs: Changelogs
+      github_repository_id: github there id
+      github_full_name: github there majina kamili
+      github_secret_token_for_hook: Gitlab siri ishara kwa ndoano
+      bitbucket_full_name: bitbucket majina kamili
+      bitbucket_secret_token_for_hook: bitbucket siri ishara kwa ndoano
+      gitlab_full_name: Gitlab majina kamili
+      generate_changelogs: Kutoa changelogs
+      include_detailed_changes: Ni pamoja na mabadiliko ya kina ilivyoelezwa katika
+        maombi ya kuvuta
+      include_issues: Ni pamoja na masuala katika changelogs
+      include_pull_requests: Ni pamoja na maombi ya kuvuta katika changelogs
+      close_issues: masuala Close kufanyika
+      emails_for_reports: Emails kwa kupokea changelogs
+      write_to_changelog_file: Write changelogs na faili there
+      changelog_filename: Changelog filename
+      changelog_locale: lugha kwa changelog
     project_modal:
       project: Project
   issues:
@@ -273,6 +314,25 @@ sw:
       close: Karibu
       cancel: kufuta
       more: Tuma zaidi
+  changelogs:
+    changelog_raw_md:
+      changes: Mabadiliko
+      detailed_changes: mabadiliko Kina
+      issues: Masuala
+      by: na
+    changelog:
+      changes: Mabadiliko
+      detailed_changes: mabadiliko Kina
+      issues: Masuala
+      by: na
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: View kama html
+      view_as_raw_md: View kama md mbichi
   pages:
     faq:
       faq: FAQ

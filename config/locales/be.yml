@@ -9,6 +9,10 @@ be:
   1_we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс
   open: Адкрыць
   closed: Закрыта
+  releases: рэлізы
+  release: рэліз
+  changelog_has_been_resent: Змяненняў было абурацца
+  changelogs_has_been_synced: Змяненняў была сінхранізавана
   shared:
     navbar:
       sign_in: Уваход
@@ -31,7 +35,7 @@ be:
       password: Пароль
       current_password: Бягучы пароль
       name: Імя
-      base: Base
+      base: База
       title: Назва
       user_to_project_connection: Карыстальнік праекта падлучэння
       user_to_board_connection: Карыстальнік на борт злучэнне
@@ -53,6 +57,7 @@ be:
       select_column_tags: Абярыце пазнакі слупкоў
       select_section_tags: Абярыце пазнакі раздзела
       select_issue_tags: Абярыце тэгі выпуск
+      emails_for_reports: лістоў тыпу, якія атрымае спісаў змяненняў
     email_signature:
       info: Інфармацыя
       mailer: Мэйлер
@@ -71,7 +76,7 @@ be:
       feedbacks: Водгук
     user_requests_navigation:
       all: Усе
-      my_requests: Мае просьбы
+      my_requests: Мае запыты
   users:
     new:
       invite_user: Запрасіць карыстальніка
@@ -79,13 +84,13 @@ be:
       name: Імя
       enter_user_name: Калі ласка, увядзіце імя карыстальніка
       email: E-mail
-      enter_user_email: Уваход карыстальніка электроннай пошты
+      enter_user_email: Уваход карыстальніка па электроннай пошце
       enter_user_password: Калі ласка, увядзіце пароль карыстальніка
       password: Пароль
       save: Захаваць
     index:
       project: праекта
-      users: карыстальнікаў
+      users: карыстальнікі
       new: Новы
       board: Савет
     edit:
@@ -104,7 +109,7 @@ be:
     update:
       your_profile_was_successfully_updated: Ваш профіль быў паспяхова абноўлены
     dashboard:
-      hello: Прывітанне
+      hello: Hello
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
       boards: Дошкі
@@ -138,14 +143,31 @@ be:
       add: Дадаць
       github_repository_id: Github рэпазітар ID
       github_full_name: Github рэпазітар FullName
-      github_secret_token_for_hook: Github сакрэтны маркер для крука
+      github_secret_token_for_hook: Gitlab сакрэтны маркер для крука
       bitbucket_full_name: BitBucket FullName
       bitbucket_secret_token_for_hook: BitBucket сакрэтны маркер для крука
+      gitlab_full_name: Gitlab FullName
+      changelogs: спісам змен
+      changelogs_info: калі вы хочаце захаваць спісаў змяненняў
+      generate_changelogs: Генерацыя спісаў змяненняў
+      include_detailed_changes: ўключае ў сябе падрабязныя змены, апісаныя ў высоўнымі
+        запытаў
+      include_issues: Уключэнне пытанняў у спісам змен
+      include_pull_requests: Уключыць цягнуць запытаў у спісам змен
+      close_issues: Зачыніць зроблена пытанні
+      emails_for_reports: Адрасы электроннай пошты для атрымліваю спісаў змяненняў
+      write_to_changelog_file: Запіс да спісам змен файла сховішчы
+      changelog_filename: Змяненняў імя файла
+      enter_changelog_filename: Калі ласка, увядзіце імя файла часопіса змен (па змаўчанні
+        "CHANGELOG")
+      changelog_locale: Абярыце мову спісам змен
     project:
       edit: Рэдагаваць
       destroy: Выдаліць
-      project_issues: пытанні праекта
-      project_users: карыстальнікаў праекта
+      issues: пытанні
+      users: Карыстальнікі
+      changelogs: спісам змен
+      are_you_sure: Вы ўпэўненыя?
     section_fields:
       remove_section: Выдаліць падзел
       section_tags: Раздзел тэгі
@@ -157,12 +179,32 @@ be:
       column_order: Замовіць
     show:
       project: праекта
-      related_boards: Змяненні дошкі
+      related_boards: Падобныя дошкі
       project_issues: пытанні праекта
       project_users: карыстальнікаў праекта
       new: Новы
+      edit: Рэдагаваць
+      destroy: Выдаліць
+      are_you_sure: Вы ўпэўненыя?
+      changelogs: спісам змен
+      github_repository_id: Github рэпазітар ID
+      github_full_name: Github рэпазітар FullName
+      github_secret_token_for_hook: Gitlab сакрэтны маркер для крука
+      bitbucket_full_name: BitBucket FullName
+      bitbucket_secret_token_for_hook: BitBucket сакрэтны маркер для крука
+      gitlab_full_name: Gitlab FullName
+      generate_changelogs: Генерацыя спісаў змяненняў
+      include_detailed_changes: ўключае ў сябе падрабязныя змены, апісаныя ў высоўнымі
+        запытаў
+      include_issues: Уключэнне пытанняў у спісам змен
+      include_pull_requests: Уключыць цягнуць запытаў у спісам змен
+      close_issues: Зачыніць зроблена пытанні
+      emails_for_reports: Адрасы электроннай пошты для атрымліваю спісаў змяненняў
+      write_to_changelog_file: Запіс да спісам змен файла сховішчы
+      changelog_filename: Змяненняў імя файла
+      changelog_locale: Мова часопіса змяненняў
     project_modal:
-      project: праекта
+      project: Праект
   issues:
     form:
       title: Назва
@@ -170,12 +212,12 @@ be:
       save: Захаваць
       body: Body
       enter_issue_body: Калі ласка, увядзіце выпуск цела
-      tags: Тэгі
+      tags: Пазнакі
       issue_order: Замовіць
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
       github_issue_number: Github нумар выпуску
-      project: Project
+      project: Праект
       state: Дзяржава
     index:
       issues: пытанні
@@ -204,7 +246,7 @@ be:
       we_have_just_launched_our_service_title: Мы толькі што запусцілі наш сэрвіс!
       we_have_just_launched_our_service_text: Сёння мы запускаем наш сэрвіс так што
         кожны можа
-      sign_up: падпісацца
+      sign_up: зарэгістравацца
       and_use_it: і выкарыстоўваць яго.
       with_love: З любоўю,
       technoelegance_team: Technoelegance Team
@@ -222,7 +264,7 @@ be:
     form:
       name: Імя
       enter_board_name: Калі ласка, увядзіце імя дошка
-      columns: Стоўбцы
+      columns: Калоны
       add: Дадаць
       sections: Раздзелы
       save: Захаваць
@@ -234,7 +276,7 @@ be:
       or_include_all: Ці ўключаць у сябе ўсё?
     column_fields:
       remove_column: Выдаліць слупок
-      column_tags: тэгі Калонка
+      column_tags: пазнакі слупкоў
       column_order: Замовіць
       backlog: Адставанне
     show:
@@ -266,6 +308,25 @@ be:
       close: Зачыніць
       cancel: Адмяніць
       more: Адаслаць яшчэ
+  changelogs:
+    changelog_raw_md:
+      changes: Змены
+      detailed_changes: Падрабязнае апісанне змяненняў
+      issues: пытанні
+      by: па
+    changelog:
+      changes: Змены
+      detailed_changes: Падрабязнае апісанне змяненняў
+      issues: пытанні
+      by: па
+    index:
+      project: Праект
+      changelogs: спісам змен
+      sync: Сінхранізацыя
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Паглядзець як HTML
+      view_as_raw_md: Від сырой мкр
   pages:
     faq:
       faq: Часта задаюць пытанні
@@ -308,10 +369,10 @@ be:
         калі ласка, запытаеце новы
       expired: скончыўся, калі ласка, запытаеце новы
       not_found: не знойдзены
-      not_locked: былі не зачынены
+      not_locked: ня быў заблякаваны
       not_saved:
-        one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
-        other: "{лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
+        one: '1 памылка забароненая гэты% {рэсурс} з тых, што ратуюцца:'
+        other: "% {лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
     bad_request:
       bad_request: Bad Request
       request_result: Запыт выніку
@@ -332,7 +393,7 @@ be:
       go_to_root: Перайсці да кораня
     forbidden:
       forbidden: Забаронены
-      request_result: Запыт выніку
+      request_result: Запыт вынік
       forbidden_description: Гэтая просьба была сапраўдны запыт, але сэрвэр не адказваць
         на яго
       go_to_root: Перайсці да кораня
@@ -362,15 +423,14 @@ be:
           электроннай
         submit: Адаслаць
     failure:
-      already_authenticated: Вы ўжо ўвайшлі ў сістэму.
+      already_authenticated: вы ўжо ўвайшлі ў сістэму.
       inactive: Ваш рахунак яшчэ не актываваны.
       invalid: Няправільны адрас электроннай пошты ці пароль.
       locked: Ваш рахунак заблякаваны.
       last_attempt: У вас ёсць яшчэ адна спроба, перш чым ваш уліковы запіс будзе
         заблакаваная.
       not_found_in_database: Няправільны адрас электроннай пошты ці пароль.
-      timeout: Ваш сеанс скончыўся. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб
-        працягнуць.
+      timeout: Вашай сесіі мінуў. Калі ласка, ўвайдзіце ў сістэму яшчэ раз, каб працягнуць.
       unauthenticated: Вы павінны ўвайсці або зарэгістравацца, перш чым працягнуць.
       unconfirmed: Вы павінны пацвердзіць свой рахунак, перш чым працягнуць.
     mailer:
@@ -390,16 +450,16 @@ be:
         if_you_didnt_request_this_please_ignore_this_email: Калі вы не запытвалі гэта
           не звяртайце ўвагі на гэты ліст.
       unlock_instructions:
-        subject: разблакоўкі Інструкцыі
+        subject: Разблакіроўка Інструкцыі
     omniauth_callbacks:
       failure: Нельга праверыць ідэнтычнасьць вас ад {%} роду, таму што "% {прычына}".
       success: паспяхова прайшоў праверку сапраўднасці ад {%} ветлівую ўвагу.
     passwords:
-      no_token: Вы не можаце адкрыць гэтую старонку, не прыходзячы ад электроннай
+      no_token: Вы не можаце атрымаць доступ да гэтай старонцы, не прыходзячы ад электроннай
         пошты скіду пароля. Калі вы прыйшлі з электроннай пошты для скіду пароля,
         калі ласка, пераканайцеся, што вы выкарыстоўвалі поўны URL пры ўмове.
-      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як скінуць пароль
-        на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як скінуць
+        пароль на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, вы атрымаеце спасылку для аднаўлення пароля на ваш адрас электроннай
         пошты на працягу некалькіх хвілін.
@@ -412,7 +472,7 @@ be:
         change_your_password: Змяніць пароль
         new_password: Новы пароль
         confirm_password: Пацвярджэнне пароля
-        change_password: Змена
+        change_password: Змяніць
     registrations:
       destroyed: Bye! Ваш уліковы запіс была паспяхова адменена. Мы спадзяемся ўбачыць
         вас зноў у бліжэйшы час.

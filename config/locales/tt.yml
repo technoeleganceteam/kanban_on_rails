@@ -8,6 +8,10 @@ tt:
   backlog: Backlog
   open: Açık
   closed: Kapalı
+  releases: bültenleri
+  release: sürümü
+  changelog_has_been_resent: Değişiklik yeniden gönderildi
+  changelogs_has_been_synced: Değişiklik senkronize edilmiş
   shared:
     navbar:
       sign_in: Oturum açın
@@ -25,7 +29,7 @@ tt:
       services: Hizmetler
     form_errors:
       password: Şifre
-      current_password: Mevcut parola
+      current_password: Mevcut şifre
       password_confirmation: Şifre onayı
       name: Adı
       base: Taban
@@ -106,11 +110,23 @@ tt:
       github_repository_id: Github depo kimliği
       github_full_name: Github depo tamadı
       bitbucket_full_name: Bitbucket tamadı
+      gitlab_full_name: Gitlab tamadı
+      changelogs: Changelogs
+      generate_changelogs: Değişiklikleri gösteren oluşturun
+      include_detailed_changes: çekme istekleri açıklanan ayrıntılı değişiklikler
+        dahil
+      include_issues: ChangeLog'ların sorunları dahil
+      include_pull_requests: ChangeLog'ların içinde çekme isteklerini dahil
+      close_issues: Kapat yapılan konular
+      changelog_filename: Değişiklik dosya
+      enter_changelog_filename: (varsayılan "CHANGELOG") changelog dosya adı girin
     project:
       edit: Düzenleme
       destroy: Sil
-      project_issues: Proje sorunları
-      project_users: Proje kullanıcıları
+      issues: Sorunlar
+      users: Kullanıcılar
+      changelogs: Changelogs
+      are_you_sure: Emin misiniz?
     section_fields:
       section_name: Bölüm adı
       remove_section: Kaldır bölümünde
@@ -129,6 +145,21 @@ tt:
       project_issues: Proje sorunları
       project_users: Proje kullanıcıları
       new: Yeni
+      edit: Düzenleme
+      destroy: Sil
+      are_you_sure: Emin misiniz?
+      changelogs: Changelogs
+      github_repository_id: Github depo kimliği
+      github_full_name: Github depo tamadı
+      bitbucket_full_name: Bitbucket tamadı
+      gitlab_full_name: Gitlab tamadı
+      generate_changelogs: Değişiklikleri gösteren oluşturun
+      include_detailed_changes: çekme istekleri açıklanan ayrıntılı değişiklikler
+        dahil
+      include_issues: ChangeLog'ların sorunları dahil
+      include_pull_requests: ChangeLog'ların içinde çekme isteklerini dahil
+      close_issues: Kapat yapılan konular
+      changelog_filename: Değişiklik dosya
     project_modal:
       project: Projesi
   issues:
@@ -222,6 +253,23 @@ tt:
       close: Kapat
       cancel: İptal
       more: daha Gönder
+  changelogs:
+    changelog_raw_md:
+      changes: Değişiklikler
+      detailed_changes: Detaylı değişiklikler
+      issues: Sorunlar
+      by: tarafından
+    changelog:
+      changes: Değişiklikler
+      detailed_changes: Detaylı değişiklikler
+      issues: Sorunlar
+      by: tarafından
+    index:
+      project: Projesi
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Yeniden Gönder
   pages:
     faq:
       faq: SSS

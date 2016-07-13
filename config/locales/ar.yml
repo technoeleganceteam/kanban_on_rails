@@ -9,6 +9,8 @@ ar:
   1_we_have_just_launched_our_service_title: لقد بدأت للتو خدمتنا
   open: المفتوحة
   closed: مغلق
+  releases: الإصدارات
+  release: الإفراج
   shared:
     navbar:
       sign_in: تسجيل الدخول
@@ -50,6 +52,7 @@ ar:
       select_column_tags: حدد علامات العمود
       select_section_tags: اختر العلامات المقطع
       select_issue_tags: اختر قضية علامات
+      emails_for_reports: نوع رسائل البريد الإلكتروني التي ستستلم سجل التغييرات
     email_signature:
       mailer: ميلر
       technoelegance: Technoelegance المحدودة
@@ -133,14 +136,29 @@ ar:
       add: إضافة
       github_repository_id: جيثب مستودع معرف
       github_full_name: جيثب مستودع FULLNAME
-      github_secret_token_for_hook: جيثب رمز سري لهوك
+      github_secret_token_for_hook: Gitlab رمز سري لهوك
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: Bitbucket رمز سري لهوك
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: سجل التغييرات
+      changelogs_info: إذا كنت تريد أن تبقي سجل التغييرات
+      generate_changelogs: توليد سجل التغييرات
+      include_detailed_changes: تشمل التغييرات مفصلة وصف في طلبات سحب
+      include_issues: تشمل القضايا في سجل التغييرات
+      include_pull_requests: تشمل طلبات سحب في سجل التغييرات
+      close_issues: القضايا إغلاق عمله
+      emails_for_reports: رسائل البريد الإلكتروني ليستلم سجل التغييرات
+      write_to_changelog_file: كتابة سجل التغييرات إلى ملف مستودع
+      changelog_filename: اسم التغيير
+      enter_changelog_filename: أدخل اسم التغيير (الافتراضي "التغيير")
+      changelog_locale: اختيار لغة سجل التغييرات
     project:
       edit: تحرير
       destroy: حذف
-      project_issues: القضايا المشروع
-      project_users: المستخدمين مشروع
+      issues: قضايا
+      users: المستخدمين
+      changelogs: سجل التغييرات
+      are_you_sure: هل أنت متأكد؟
     section_fields:
       section_tags: علامات القسم
       section_order: ترتيب
@@ -155,6 +173,25 @@ ar:
       project_issues: القضايا المشروع
       project_users: المستخدمين مشروع
       new: جديد
+      edit: تحرير
+      destroy: حذف
+      are_you_sure: هل أنت متأكد؟
+      changelogs: سجل التغييرات
+      github_repository_id: جيثب مستودع معرف
+      github_full_name: جيثب مستودع FULLNAME
+      github_secret_token_for_hook: Gitlab رمز سري لهوك
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: Bitbucket رمز سري لهوك
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: توليد سجل التغييرات
+      include_detailed_changes: تشمل التغييرات مفصلة وصف في طلبات سحب
+      include_issues: تشمل القضايا في سجل التغييرات
+      include_pull_requests: تشمل طلبات سحب في سجل التغييرات
+      close_issues: القضايا إغلاق عمله
+      emails_for_reports: رسائل البريد الإلكتروني ليستلم سجل التغييرات
+      write_to_changelog_file: كتابة سجل التغييرات إلى ملف مستودع
+      changelog_filename: اسم التغيير
+      changelog_locale: اللغة للالتغيير
     project_modal:
       project: مشروع
   issues:
@@ -253,6 +290,25 @@ ar:
       close: إغلاق
       cancel: الغاء
       more: إرسال أكثر
+  changelogs:
+    changelog_raw_md:
+      changes: التغييرات
+      detailed_changes: تغييرات تفصيلية
+      issues: قضايا
+      by: من قبل
+    changelog:
+      changes: التغييرات
+      detailed_changes: تغييرات تفصيلية
+      issues: قضايا
+      by: من قبل
+    index:
+      project: مشروع
+      changelogs: سجل التغييرات
+      sync: مزامنة
+    changelog_list_item:
+      resend: إعادة إرسال
+      view_as_html: عرض بتنسيق HTML
+      view_as_raw_md: عرض بشكل MD الخام
   pages:
     faq:
       faq: التعليمات

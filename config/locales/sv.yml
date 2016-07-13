@@ -9,6 +9,10 @@ sv:
   1_we_have_just_launched_our_service_title: Vi har just lanserat vår tjänst
   open: Öppen
   closed: Stängd
+  releases: utgåvor
+  release: frisättning
+  changelog_has_been_resent: Ändringslogg har skickats om
+  changelogs_has_been_synced: Ändringslogg har synkroniserats
   shared:
     navbar:
       sign_in: Logga in
@@ -53,6 +57,7 @@ sv:
       select_column_tags: Välj kolumn taggar
       select_section_tags: Välj avsnitt taggar
       select_issue_tags: Välj utfärdar märkning
+      emails_for_reports: typ e-post som kommer att få ändringsloggar
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,30 @@ sv:
       column_height: Pelarhöjd
       github_repository_id: Github förvaret id
       github_full_name: Github förvaret fullname
-      github_secret_token_for_hook: Github hemliga tecken för krok
+      github_secret_token_for_hook: Gitlab hemliga tecken för krok
       bitbucket_full_name: bitbucket fullname
       bitbucket_secret_token_for_hook: bitbucket hemliga tecken för krok
+      gitlab_full_name: Gitlab fullname
+      changelogs: ändringsloggar
+      changelogs_info: om du vill behålla ändringsloggar
+      generate_changelogs: Generera ändringsloggar
+      include_detailed_changes: innehåller detaljerade förändringar som beskrivs i
+        drag förfrågningar
+      include_issues: Inkludera frågor i ändringsloggar
+      include_pull_requests: Inkludera pull begäran i ändringsloggar
+      close_issues: Stäng gjort frågor
+      emails_for_reports: e-post för mottar ändringsloggar
+      write_to_changelog_file: Skriv ändringsloggar till förvaret filen
+      changelog_filename: Ändringslogg filnamn
+      enter_changelog_filename: Ange ändrings filnamn (default "CHANGELOG")
+      changelog_locale: Välj språk för ändringsloggar
     project:
       edit: Redigera
       destroy: Radera
-      project_issues: Projekt frågor
-      project_users: Projekt användare
+      issues: Issues
+      users: Användare
+      changelogs: ändringsloggar
+      are_you_sure: Är du säker?
     section_fields:
       section_name: Avsnitt namn
       remove_section: Ta bort avsnitt
@@ -171,6 +192,26 @@ sv:
       project_issues: Projekt frågor
       project_users: Projekt användare
       new: New
+      edit: Redigera
+      destroy: Radera
+      are_you_sure: Är du säker?
+      changelogs: ändringsloggar
+      github_repository_id: Github förvaret id
+      github_full_name: Github förvaret fullname
+      github_secret_token_for_hook: Gitlab hemliga tecken för krok
+      bitbucket_full_name: bitbucket fullname
+      bitbucket_secret_token_for_hook: bitbucket hemliga tecken för krok
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generera ändringsloggar
+      include_detailed_changes: innehåller detaljerade förändringar som beskrivs i
+        drag förfrågningar
+      include_issues: Inkludera frågor i ändringsloggar
+      include_pull_requests: Inkludera pull begäran i ändringsloggar
+      close_issues: Stäng gjort frågor
+      emails_for_reports: e-post för mottar ändringsloggar
+      write_to_changelog_file: Skriv ändringsloggar till förvaret filen
+      changelog_filename: Ändringslogg filnamn
+      changelog_locale: språk för changelog
     project_modal:
       project: Project
   issues:
@@ -281,6 +322,25 @@ sv:
       close: Stäng
       cancel: Avbryt
       more: Överför mer
+  changelogs:
+    changelog_raw_md:
+      changes: Förändringar
+      detailed_changes: Detaljerade förändringar
+      issues: Issues
+      by: genom
+    changelog:
+      changes: Förändringar
+      detailed_changes: Detaljerade förändringar
+      issues: Issues
+      by: genom
+    index:
+      project: Project
+      changelogs: ändringsloggar
+      sync: Sync
+    changelog_list_item:
+      resend: uppkopplings
+      view_as_html: Visa som html
+      view_as_raw_md: Visa som rå md
   pages:
     faq:
       faq: FAQ

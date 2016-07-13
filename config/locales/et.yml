@@ -9,6 +9,10 @@ et:
   1_we_have_just_launched_our_service_title: Oleme just käivitanud meie teenus
   open: avatud
   closed: Suletud
+  releases: releases
+  release: vabastamist
+  changelog_has_been_resent: muudatuste olnud pahaks
+  changelogs_has_been_synced: muudatuste sünkroonitud
   shared:
     navbar:
       sign_in: Logi sisse
@@ -54,6 +58,7 @@ et:
       select_column_tags: Vali veerg sildid
       select_section_tags: Vali paragrahvi sildid
       select_issue_tags: Vali teema sildid
+      emails_for_reports: tüüp kirju, mis passida changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,29 @@ et:
       column_height: posti kõrgus
       github_repository_id: Github hoidla id
       github_full_name: Github hoidla fullname
-      github_secret_token_for_hook: Github saladus sümboolne jaoks konks
+      github_secret_token_for_hook: Gitlab saladus sümboolne jaoks konks
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket saladus sümboolne jaoks konks
+      gitlab_full_name: Gitlab fullname
+      changelogs: changelogs
+      changelogs_info: kui soovite, et hoida changelogs
+      generate_changelogs: Loo changelogs
+      include_detailed_changes: üksikasjalikke kirjeldatud muudatustest pull taotlusi
+      include_issues: Kaasa küsimusi changelogs
+      include_pull_requests: Kaasa pull taotluste changelogs
+      close_issues: Sule teinud küsimused
+      emails_for_reports: kirjad jaoks recieving changelogs
+      write_to_changelog_file: Write changelogs hoidlasse faili
+      changelog_filename: muudatuste failinimi
+      enter_changelog_filename: Sisesta muudatuste failinimi (default "CHANGELOG")
+      changelog_locale: Vali keel changelogs
     project:
       edit: Edit
       destroy: Kustuta
-      project_issues: Project küsimusi
-      project_users: Project kasutajad
+      issues: küsimused
+      users: Kasutajad
+      changelogs: changelogs
+      are_you_sure: Oled sa kindel?
     section_fields:
       section_name: jaos nimi
       remove_section: Eemaldada sektsiooni
@@ -171,6 +191,25 @@ et:
       project_issues: Project küsimusi
       project_users: Project kasutajad
       new: Uus
+      edit: Edit
+      destroy: Kustuta
+      are_you_sure: Oled sa kindel?
+      changelogs: changelogs
+      github_repository_id: Github hoidla id
+      github_full_name: Github hoidla fullname
+      github_secret_token_for_hook: Gitlab saladus sümboolne jaoks konks
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket saladus sümboolne jaoks konks
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Loo changelogs
+      include_detailed_changes: üksikasjalikke kirjeldatud muudatustest pull taotlusi
+      include_issues: Kaasa küsimusi changelogs
+      include_pull_requests: Kaasa pull taotluste changelogs
+      close_issues: Sule teinud küsimused
+      emails_for_reports: kirjad jaoks recieving changelogs
+      write_to_changelog_file: Write changelogs hoidlasse faili
+      changelog_filename: muudatuste failinimi
+      changelog_locale: Keel muudatuste
     project_modal:
       project: Project
   issues:
@@ -281,6 +320,25 @@ et:
       close: Sulge
       cancel: Cancel
       more: Saada rohkem
+  changelogs:
+    changelog_raw_md:
+      changes: muutused
+      detailed_changes: Täpne muutusi
+      issues: küsimused
+      by: poolt
+    changelog:
+      changes: muutused
+      detailed_changes: Täpne muutusi
+      issues: küsimused
+      by: poolt
+    index:
+      project: Project
+      changelogs: changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Uuesti
+      view_as_html: Kuva html
+      view_as_raw_md: Vaata näiteks toores md
   pages:
     faq:
       faq: KKK

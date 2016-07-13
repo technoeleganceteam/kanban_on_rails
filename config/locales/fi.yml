@@ -9,6 +9,10 @@ fi:
   1_we_have_just_launched_our_service_title: Olemme juuri käynnistäneet palvelumme
   open: Open
   closed: Suljettu
+  releases: tiedotteet
+  release: release
+  changelog_has_been_resent: Changelog on lähetetty uudelleen
+  changelogs_has_been_synced: Changelog on synkronoitu
   shared:
     navbar:
       sign_in: Kirjaudu sisään
@@ -54,6 +58,7 @@ fi:
       select_column_tags: Valitse sarake tunnisteet
       select_section_tags: Valitse osiotunnisteita
       select_issue_tags: Valitse myöntää leimat
+      emails_for_reports: tyyppi sähköpostit joka vastaanottaa muutoslokien
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,30 @@ fi:
       column_height: sarake korkeus
       github_repository_id: Github arkistoon id
       github_full_name: Github arkistoon fullname
-      github_secret_token_for_hook: Github salaustunnus koukku
+      github_secret_token_for_hook: Gitlab salaustunnus koukku
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket salaustunnus koukku
+      gitlab_full_name: Gitlab fullname
+      changelogs: muutoslokien
+      changelogs_info: jos haluat säilyttää muutoslokien
+      generate_changelogs: Luo muutoslokien
+      include_detailed_changes: Sisällytä yksityiskohtaisesti kuvatut muutokset pull
+        pyyntöjä
+      include_issues: Sisällytä kysymyksiä muutoslokien
+      include_pull_requests: Sisällytä vetää pyynnöistä muutoslokien
+      close_issues: Close tehnyt kysymyksiä
+      emails_for_reports: Sähköpostit varten saavaa muutoslokien
+      write_to_changelog_file: Kirjoita muutoslokien arkistoon tiedostoon
+      changelog_filename: Changelog tiedostonimi
+      enter_changelog_filename: Anna changelog tiedostonimi (oletus "changelog")
+      changelog_locale: Valitse kieli muutoslokien
     project:
       edit: Edit
       destroy: Poista
-      project_issues: Project kysymyksiä
-      project_users: Project käyttäjää
+      issues: Issues
+      users: Käyttäjät
+      changelogs: muutoslokien
+      are_you_sure: Oletko varma?
     section_fields:
       section_name: "§ nimi"
       remove_section: Poista osio
@@ -171,6 +192,26 @@ fi:
       project_issues: Project kysymyksiä
       project_users: Project käyttäjää
       new: Uusi
+      edit: Edit
+      destroy: Poista
+      are_you_sure: Oletko varma?
+      changelogs: muutoslokien
+      github_repository_id: Github arkistoon id
+      github_full_name: Github arkistoon fullname
+      github_secret_token_for_hook: Gitlab salaustunnus koukku
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket salaustunnus koukku
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Luo muutoslokien
+      include_detailed_changes: Sisällytä yksityiskohtaisesti kuvatut muutokset pull
+        pyyntöjä
+      include_issues: Sisällytä kysymyksiä muutoslokien
+      include_pull_requests: Sisällytä vetää pyynnöistä muutoslokien
+      close_issues: Close tehnyt kysymyksiä
+      emails_for_reports: Sähköpostit varten saavaa muutoslokien
+      write_to_changelog_file: Kirjoita muutoslokien arkistoon tiedostoon
+      changelog_filename: Changelog tiedostonimi
+      changelog_locale: kieli muutosloki
     project_modal:
       project: Project
   issues:
@@ -281,6 +322,25 @@ fi:
       close: Close
       cancel: Peruuta
       more: Lähetä lisää
+  changelogs:
+    changelog_raw_md:
+      changes: Muutokset
+      detailed_changes: Yksityiskohtaiset muutokset
+      issues: Issues
+      by: by
+    changelog:
+      changes: Muutokset
+      detailed_changes: Yksityiskohtaiset muutokset
+      issues: Issues
+      by: by
+    index:
+      project: Project
+      changelogs: muutoslokien
+      sync: Sync
+    changelog_list_item:
+      resend: Resend
+      view_as_html: Tarkastele html
+      view_as_raw_md: Tarkastele raaka md
   pages:
     faq:
       faq: FAQ

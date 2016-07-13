@@ -10,6 +10,10 @@ eu:
     dugu
   open: Open
   closed: itxita
+  releases: oharrak
+  release: oharra
+  changelog_has_been_resent: Aldaketen izan berbiltzea
+  changelogs_has_been_synced: Aldaketen ditu sinkronizatu
   shared:
     navbar:
       sign_in: Saioa hasi
@@ -55,6 +59,7 @@ eu:
       select_column_tags: Aukeratu zutabean etiketa
       select_section_tags: Aukeratu atala tags
       select_issue_tags: Aukeratu arazo tags
+      emails_for_reports: Mota emailak zein aldaketa jaso beharko
     email_signature:
       info: Info
       mailer: Mailer
@@ -145,14 +150,29 @@ eu:
       column_height: Zutabe altuera
       github_repository_id: Github repository id
       github_full_name: Github repository izen osoa
-      github_secret_token_for_hook: Github kako token sekretua
+      github_secret_token_for_hook: Gitlab kako token sekretua
       bitbucket_full_name: Bitbucket izen osoa
       bitbucket_secret_token_for_hook: Bitbucket kako token sekretua
+      gitlab_full_name: Gitlab izen osoa
+      changelogs: aldaketen
+      changelogs_info: aldaketen mantendu nahi badituzu
+      generate_changelogs: Sortu aldaketa
+      include_detailed_changes: Besteak beste tira eskaerak azaldutako aldaketa zehatza
+      include_issues: Besteak beste, aldaketen in gaiak
+      include_pull_requests: Besteak beste tira aldaketen eskaerak
+      close_issues: Itxi egin gaiak
+      emails_for_reports: postak aldaketen recieving for
+      write_to_changelog_file: biltegira koadernoan aldaketen idaztea
+      changelog_filename: Aldaketen filename
+      enter_changelog_filename: Sartu changelog filename (lehenetsia "aldaketak")
+      changelog_locale: aldaketen for Hizkuntza aukeratu
     project:
       edit: Edit
       destroy: ezabatu
-      project_issues: Project gaiak
-      project_users: Project erabiltzaile
+      issues: Aleak
+      users: erabiltzaileak
+      changelogs: aldaketen
+      are_you_sure: Ziur zaude?
     section_fields:
       section_name: artikulua name
       remove_section: Kendu atala
@@ -172,6 +192,25 @@ eu:
       project_issues: Project gaiak
       project_users: Project erabiltzaile
       new: New
+      edit: Edit
+      destroy: ezabatu
+      are_you_sure: Ziur zaude?
+      changelogs: aldaketen
+      github_repository_id: Github repository id
+      github_full_name: Github repository izen osoa
+      github_secret_token_for_hook: Gitlab kako token sekretua
+      bitbucket_full_name: Bitbucket izen osoa
+      bitbucket_secret_token_for_hook: Bitbucket kako token sekretua
+      gitlab_full_name: Gitlab izen osoa
+      generate_changelogs: Sortu aldaketa
+      include_detailed_changes: Besteak beste tira eskaerak azaldutako aldaketa zehatza
+      include_issues: Besteak beste, aldaketen in gaiak
+      include_pull_requests: Besteak beste tira aldaketen eskaerak
+      close_issues: Itxi egin gaiak
+      emails_for_reports: postak aldaketen recieving for
+      write_to_changelog_file: biltegira koadernoan aldaketen idaztea
+      changelog_filename: Aldaketen filename
+      changelog_locale: Hizkuntza changelog da
     project_modal:
       project: Project
   issues:
@@ -281,6 +320,25 @@ eu:
       close: Close
       cancel: Utzi
       more: bidalitako gehiago
+  changelogs:
+    changelog_raw_md:
+      changes: aldaketak
+      detailed_changes: aldaketak xehea
+      issues: Aleak
+      by: arabera
+    changelog:
+      changes: aldaketak
+      detailed_changes: aldaketak xehea
+      issues: Aleak
+      by: arabera
+    index:
+      project: Project
+      changelogs: aldaketen
+      sync: Sync
+    changelog_list_item:
+      resend: birbidali
+      view_as_html: html gisa View
+      view_as_raw_md: md lehengai gisa View
   pages:
     faq:
       faq: FAQ

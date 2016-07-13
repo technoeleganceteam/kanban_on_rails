@@ -9,6 +9,10 @@ fa:
   1_we_have_just_launched_our_service_title: ما فقط راه اندازی خدمات ما
   open: گسترش
   closed: بسته
+  releases: نسخه
+  release: انتشار
+  changelog_has_been_resent: تغییرات دوباره ارسال شد
+  changelogs_has_been_synced: تغییرات تا همگام سازی شده است
   shared:
     navbar:
       sign_in: ورود
@@ -53,6 +57,7 @@ fa:
       select_column_tags: انتخاب
       select_section_tags: انتخاب
       select_issue_tags: برچسب ها موضوع را انتخاب کنید
+      emails_for_reports: ایمیل نوع که تغییرات دریافت خواهد شد
     email_signature:
       info: اطلاعات
       mailer: میلر
@@ -136,14 +141,28 @@ fa:
       add: اضافه
       github_repository_id: گیتهاب شناسه مخزن
       github_full_name: گیتهاب نام کامل مخزن
-      github_secret_token_for_hook: گیتهاب رمز مخفی برای قلاب
+      github_secret_token_for_hook: Gitlab رمز مخفی برای قلاب
       bitbucket_full_name: Bitbucket نام کامل
       bitbucket_secret_token_for_hook: Bitbucket رمز مخفی برای قلاب
+      changelogs: تغییرات
+      changelogs_info: اگر شما می خواهید برای حفظ تغییرات
+      generate_changelogs: تولید تغییرات
+      include_detailed_changes: شامل تغییرات دقیق شرح داده شده در درخواست کشش
+      include_issues: شامل مسائل در تغییرات
+      include_pull_requests: شامل درخواست کشش در تغییرات
+      close_issues: مسائل نزدیک انجام
+      emails_for_reports: ایمیل برای دریافت کنندة تغییرات
+      write_to_changelog_file: نوشتن تغییرات به فایل مخزن
+      changelog_filename: نام فایل تغییرات
+      enter_changelog_filename: (به طور پیش فرض "تغییرات") وارد کنید نام فایل تغییرات
+      changelog_locale: انتخاب زبان برای تغییرات
     project:
       edit: ویرایش
       destroy: حذف
-      project_issues: مسائل پروژه
-      project_users: کاربران پروژه
+      issues: مسائل
+      users: کاربران
+      changelogs: تغییرات
+      are_you_sure: مطمئنید؟
     section_fields:
       section_tags: بخش برچسب ها
       section_order: سفارش
@@ -159,6 +178,24 @@ fa:
       project_issues: مسائل پروژه
       project_users: کاربران پروژه
       new: جدید
+      edit: ویرایش
+      destroy: حذف
+      are_you_sure: مطمئنید؟
+      changelogs: تغییرات
+      github_repository_id: گیتهاب شناسه مخزن
+      github_full_name: گیتهاب نام کامل مخزن
+      github_secret_token_for_hook: Gitlab رمز مخفی برای قلاب
+      bitbucket_full_name: Bitbucket نام کامل
+      bitbucket_secret_token_for_hook: Bitbucket رمز مخفی برای قلاب
+      generate_changelogs: تولید تغییرات
+      include_detailed_changes: شامل تغییرات دقیق شرح داده شده در درخواست کشش
+      include_issues: شامل مسائل در تغییرات
+      include_pull_requests: شامل درخواست کشش در تغییرات
+      close_issues: مسائل نزدیک انجام
+      emails_for_reports: ایمیل برای دریافت کنندة تغییرات
+      write_to_changelog_file: نوشتن تغییرات به فایل مخزن
+      changelog_filename: نام فایل تغییرات
+      changelog_locale: زبان برای تغییرات
     project_modal:
       project: پروژه
   issues:
@@ -262,6 +299,25 @@ fa:
       close: نزدیک
       cancel: لغو
       more: ارسال بیشتر
+  changelogs:
+    changelog_raw_md:
+      changes: تغییرات
+      detailed_changes: تغییرات مفصل
+      issues: مسائل
+      by: توسط
+    changelog:
+      changes: تغییرات
+      detailed_changes: تغییرات مفصل
+      issues: مسائل
+      by: توسط
+    index:
+      project: پروژه
+      changelogs: تغییرات
+      sync: همگام سازی
+    changelog_list_item:
+      resend: ارسال مجدد
+      view_as_html: نمایش بصورت HTML
+      view_as_raw_md: مشاهده به عنوان MD خام
   pages:
     faq:
       what_is_kanban_on_rails: KanbanOnRails چیست؟
@@ -398,8 +454,7 @@ fa:
         new_password: رمز عبور جدید
         change_password: تغییر
     registrations:
-      destroyed: خداحافظ! حساب شما با موفقیت لغو شد. ما امیدواریم که به شما دوباره
-        به زودی ببینید.
+      destroyed: خداحافظ! حساب شما با موفقیت لغو شد. امیدواریم به زودی ببینیمت.
       signed_up: خوش آمدید! شما موفقیت را امضا کرده اند.
       signed_up_but_inactive: شما با موفقیت امضا کرده اند. با این حال، ما می تواند
         شما را امضا نکند در به دلیل اینکه حساب خود را هنوز فعال نشده است.

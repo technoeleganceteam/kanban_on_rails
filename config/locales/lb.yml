@@ -9,6 +9,10 @@ lb:
   1_we_have_just_launched_our_service_title: Mir hu just eise Service lancéiert
   open: Open
   closed: Zou
+  releases: Communiquéen
+  release: Fräiloossung
+  changelog_has_been_resent: ChangelogLanguage ass fir jiddfereen
+  changelogs_has_been_synced: ChangelogLanguage gouf synchroniséiert
   shared:
     navbar:
       sign_in: Umellen
@@ -54,6 +58,7 @@ lb:
       select_column_tags: En Kolonn Tags
       select_section_tags: En Rubrik Tags
       select_issue_tags: En Thema Tags
+      emails_for_reports: Type Mailen déi changelogs Taass wäert
     email_signature:
       info: Info
       mailer: Mailer
@@ -143,14 +148,28 @@ lb:
       column_height: Kolonn Héicht
       github_repository_id: Github Commons id
       github_full_name: Github Commons fullname
-      github_secret_token_for_hook: Github geheime symbolesch fir Héil
+      github_secret_token_for_hook: Gitlab geheime symbolesch fir Héil
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket geheime symbolesch fir Héil
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: wann Dir changelogs ze hale wëllen
+      generate_changelogs: Generate changelogs
+      include_detailed_changes: wéi detailléiert Ännerungen an zitt Demanden beschriwwen
+      include_issues: wéi Froen zu changelogs
+      include_pull_requests: wéi banal Demanden vun changelogs
+      close_issues: zoumaachen gemaach Problemer
+      emails_for_reports: Schreiwe fir recieving changelogs
+      write_to_changelog_file: Write changelogs fir de Commons Fichier
+      changelog_filename: ChangelogLanguage Fichier
+      changelog_locale: Wielt Sprooch fir changelogs
     project:
       edit: Edit
       destroy: läschen
-      project_issues: Project Problemer
-      project_users: Project Benotzer
+      issues: séng
+      users: Benotzer
+      changelogs: Changelogs
+      are_you_sure: Sidd Dir sécher?
     section_fields:
       section_name: Section Numm
       section_tags: Section Tags
@@ -168,6 +187,25 @@ lb:
       project_issues: Project Problemer
       project_users: Project Benotzer
       new: New
+      edit: Edit
+      destroy: läschen
+      are_you_sure: Sidd Dir sécher?
+      changelogs: Changelogs
+      github_repository_id: Github Commons id
+      github_full_name: Github Commons fullname
+      github_secret_token_for_hook: Gitlab geheime symbolesch fir Héil
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket geheime symbolesch fir Héil
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generate changelogs
+      include_detailed_changes: wéi detailléiert Ännerungen an zitt Demanden beschriwwen
+      include_issues: wéi Froen zu changelogs
+      include_pull_requests: wéi banal Demanden vun changelogs
+      close_issues: zoumaachen gemaach Problemer
+      emails_for_reports: Schreiwe fir recieving changelogs
+      write_to_changelog_file: Write changelogs fir de Commons Fichier
+      changelog_filename: ChangelogLanguage Fichier
+      changelog_locale: Language fir ChangelogLanguage
     project_modal:
       project: Project
   issues:
@@ -276,6 +314,25 @@ lb:
       close: zoumaachen
       cancel: Ofbriechen
       more: Eng méi
+  changelogs:
+    changelog_raw_md:
+      changes: Neierung
+      detailed_changes: Detailéiert Ännerungen
+      issues: séng
+      by: vun
+    changelog:
+      changes: Neierung
+      detailed_changes: Detailéiert Ännerungen
+      issues: séng
+      by: vun
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Synchroniséiert
+    changelog_list_item:
+      resend: Resend
+      view_as_html: View wéi HTML
+      view_as_raw_md: View als Matière MD
   pages:
     faq:
       faq: FAQ

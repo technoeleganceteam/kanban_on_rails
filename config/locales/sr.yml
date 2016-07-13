@@ -9,6 +9,10 @@ sr:
   1_we_have_just_launched_our_service_title: Управо смо покренули наш сервис
   open: Отворено
   closed: Цлосед
+  releases: јавност
+  release: издање
+  changelog_has_been_resent: изменениј је поново пошаље
+  changelogs_has_been_synced: изменениј је синхронизован
   shared:
     navbar:
       sign_in: Пријавите се
@@ -53,6 +57,7 @@ sr:
       select_column_tags: Селецт колона ознаке
       select_section_tags: Изаберите одељак ознаке
       select_issue_tags: Селецт издаје ознаке
+      emails_for_reports: Тип поруке е-поште које ће добити Цхангелогс
     email_signature:
       info: информације
       mailer: Маилер
@@ -143,14 +148,29 @@ sr:
       column_height: Колона висина
       github_repository_id: Гитхуб складиште ИД
       github_full_name: Гитхуб складиште ФУЛЛНАМЕ
-      github_secret_token_for_hook: Гитхуб тајни токен за куку
+      github_secret_token_for_hook: Гитлаб тајни токен за куку
       bitbucket_full_name: Битбуцкет ФУЛЛНАМЕ
       bitbucket_secret_token_for_hook: Битбуцкет тајни токен за куку
+      gitlab_full_name: Гитлаб ФУЛЛНАМЕ
+      changelogs: Цхангелогс
+      changelogs_info: ако желите да задржите Цхангелогс
+      generate_changelogs: Направи Цхангелогс
+      include_detailed_changes: Укључите детаљне промене описане у пулл захтева
+      include_issues: Укључивање питања у Цхангелогс
+      include_pull_requests: Укључи захтеве повући у Цхангелогс
+      close_issues: Затвори уради питања
+      emails_for_reports: е-поруке за примање Цхангелогс
+      write_to_changelog_file: Напишите Цхангелогс у спремиште фајл
+      changelog_filename: Дневник измена датотеке
+      enter_changelog_filename: Ентер Цхангелог датотеке (подразумевано "ЦХАНГЕЛОГ")
+      changelog_locale: Одаберите језик за Цхангелогс
     project:
       edit: Мик
       destroy: Делете
-      project_issues: питања Пројецт
-      project_users: Корисници пројекта
+      issues: питања
+      users: корисника
+      changelogs: Цхангелогс
+      are_you_sure: Јесте ли сигурни?
     section_fields:
       section_name: Секција име
       remove_section: Уклонити секција
@@ -169,6 +189,25 @@ sr:
       project_issues: питања Пројецт
       project_users: Корисници пројекта
       new: Нова
+      edit: Мик
+      destroy: Делете
+      are_you_sure: Јесте ли сигурни?
+      changelogs: Цхангелогс
+      github_repository_id: Гитхуб складиште ИД
+      github_full_name: Гитхуб складиште ФУЛЛНАМЕ
+      github_secret_token_for_hook: Гитлаб тајни токен за куку
+      bitbucket_full_name: Битбуцкет ФУЛЛНАМЕ
+      bitbucket_secret_token_for_hook: Битбуцкет тајни токен за куку
+      gitlab_full_name: Гитлаб ФУЛЛНАМЕ
+      generate_changelogs: Направи Цхангелогс
+      include_detailed_changes: Укључите детаљне промене описане у пулл захтева
+      include_issues: Укључивање питања у Цхангелогс
+      include_pull_requests: Укључи захтеве повући у Цхангелогс
+      close_issues: Затвори уради питања
+      emails_for_reports: е-поруке за примање Цхангелогс
+      write_to_changelog_file: Напишите Цхангелогс у спремиште фајл
+      changelog_filename: Дневник измена датотеке
+      changelog_locale: Језик за цхангелог
     project_modal:
       project: Пројекат
   issues:
@@ -279,6 +318,25 @@ sr:
       close: Затворити
       cancel: Откажи
       more: Пошаљи више
+  changelogs:
+    changelog_raw_md:
+      changes: Промене
+      detailed_changes: Детаљне промене
+      issues: питања
+      by: од
+    changelog:
+      changes: Промене
+      detailed_changes: Детаљне промене
+      issues: питања
+      by: од
+    index:
+      project: Пројекат
+      changelogs: Цхангелогс
+      sync: Синхронизација
+    changelog_list_item:
+      resend: Посаљи поново
+      view_as_html: Виев ас ХТМЛ
+      view_as_raw_md: Погледај као сировина мд
   pages:
     faq:
       faq: Често

@@ -9,6 +9,10 @@ id:
   1_we_have_just_launched_our_service_title: Kami baru saja meluncurkan layanan kami
   open: Terbuka
   closed: Ditutup
+  releases: rilis
+  release: rilis
+  changelog_has_been_resent: Changelog telah dikirim ulang
+  changelogs_has_been_synced: Changelog telah disinkronkan
   shared:
     navbar:
       sign_in: Masuk
@@ -53,6 +57,7 @@ id:
       select_column_tags: Pilih tag kolom
       select_section_tags: Pilih bagian tag
       select_issue_tags: Pilih masalah tag
+      emails_for_reports: Jenis email yang akan menerima changelogs
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance Ltd
@@ -134,14 +139,30 @@ id:
       sections: Bagian
       add: Tambah
       github_full_name: fullname repositori Github
-      github_secret_token_for_hook: Github tanda rahasia untuk kait
+      github_secret_token_for_hook: Gitlab tanda rahasia untuk kait
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket tanda rahasia untuk kait
+      gitlab_full_name: Gitlab fullname
+      changelogs: changelogs
+      changelogs_info: jika Anda ingin menyimpan changelogs
+      generate_changelogs: Menghasilkan changelogs
+      include_detailed_changes: Sertakan perubahan rinci dijelaskan dalam permintaan
+        tarik
+      include_issues: Sertakan masalah di changelogs
+      include_pull_requests: Sertakan permintaan tarik di changelogs
+      close_issues: masalah Tutup dilakukan
+      emails_for_reports: Email untuk recieving changelogs
+      write_to_changelog_file: Menulis changelogs ke file repositori
+      changelog_filename: nama file Changelog
+      enter_changelog_filename: Masukkan nama file changelog (default "CHANGELOG")
+      changelog_locale: Pilih bahasa untuk changelogs
     project:
       edit: Mengedit
       destroy: Hapus
-      project_issues: masalah Project
-      project_users: pengguna Project
+      issues: Masalah
+      users: Pengguna
+      changelogs: changelogs
+      are_you_sure: Apakah Anda yakin?
     section_fields:
       section_tags: tag Bagian
       section_order: Pesanan
@@ -157,6 +178,25 @@ id:
       project_issues: masalah Project
       project_users: pengguna Project
       new: New
+      edit: Mengedit
+      destroy: Hapus
+      are_you_sure: Apakah Anda yakin?
+      changelogs: changelogs
+      github_full_name: fullname repositori Github
+      github_secret_token_for_hook: Gitlab tanda rahasia untuk kait
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tanda rahasia untuk kait
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Menghasilkan changelogs
+      include_detailed_changes: Sertakan perubahan rinci dijelaskan dalam permintaan
+        tarik
+      include_issues: Sertakan masalah di changelogs
+      include_pull_requests: Sertakan permintaan tarik di changelogs
+      close_issues: masalah Tutup dilakukan
+      emails_for_reports: Email untuk recieving changelogs
+      write_to_changelog_file: Menulis changelogs ke file repositori
+      changelog_filename: nama file Changelog
+      changelog_locale: Bahasa untuk changelog
     project_modal:
       project: Proyek
   issues:
@@ -260,6 +300,25 @@ id:
       close: Tutup
       cancel: Batal
       more: Kirim lebih
+  changelogs:
+    changelog_raw_md:
+      changes: Perubahan
+      detailed_changes: perubahan lengkap
+      issues: Masalah
+      by: oleh
+    changelog:
+      changes: Perubahan
+      detailed_changes: perubahan lengkap
+      issues: Masalah
+      by: oleh
+    index:
+      project: Proyek
+      changelogs: changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Kirim Ulang
+      view_as_html: Lihat sebagai html
+      view_as_raw_md: Lihat sebagai md baku
   pages:
     faq:
       faq: FAQ

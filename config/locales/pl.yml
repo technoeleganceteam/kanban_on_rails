@@ -9,6 +9,10 @@ pl:
   1_we_have_just_launched_our_service_title: Właśnie uruchomiliśmy nasz serwis
   open: Otwarty
   closed: Zamknięto
+  releases: komunikaty
+  release: uwalnianiu
+  changelog_has_been_resent: zmian zostało wysłane jeszcze raz
+  changelogs_has_been_synced: zmian została zsynchronizowana
   shared:
     navbar:
       sign_in: Zaloguj się
@@ -51,6 +55,7 @@ pl:
       select_column_tags: Wybierz znaczniki kolumn
       select_section_tags: Wybierz tagi sekcji
       select_issue_tags: Wybierz wydaje etykiety
+      emails_for_reports: typu e-maile, które będą odbierać changelog
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance Ltd.
@@ -131,14 +136,29 @@ pl:
       add: dodawania
       github_repository_id: Github repozytorium id
       github_full_name: Github repozytorium fullname
-      github_secret_token_for_hook: Github tajny token hakiem
+      github_secret_token_for_hook: Gitlab tajny token hakiem
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket tajny token hakiem
+      gitlab_full_name: Gitlab fullname
+      changelogs: Dzienniki zmian
+      changelogs_info: jeśli chcesz zachować changelog
+      generate_changelogs: Generowanie changelog
+      include_detailed_changes: zawierać szczegółowych zmian opisanych we wnioskach
+        pociągowych
+      include_issues: Dołącz problemy w Changelog
+      include_pull_requests: Dołącz żądań ciągnąć w Changelog
+      close_issues: Close uczyniły kwestie
+      emails_for_reports: Emaile dla odbiorczej changelog
+      write_to_changelog_file: Zapis logi zmian w pliku repozytorium
+      changelog_filename: zmian nazwy pliku
+      enter_changelog_filename: Wprowadź nazwę pliku changelog (domyślnie "changelog")
+      changelog_locale: Wybierz język Changelog
     project:
       edit: Edycja
       destroy: Usuń
-      project_issues: kwestie projektowe
-      project_users: użytkownicy projektu
+      issues: Zagadnienia
+      changelogs: Dzienniki zmian
+      are_you_sure: Czy jesteś pewien?
     section_fields:
       section_tags: tagi Sekcja
       section_order: Zamówienie
@@ -154,6 +174,26 @@ pl:
       project_issues: kwestie projektowe
       project_users: użytkownicy projektu
       new: Nowa
+      edit: Edycja
+      destroy: Usuń
+      are_you_sure: Czy jesteś pewien?
+      changelogs: Dzienniki zmian
+      github_repository_id: Github repozytorium id
+      github_full_name: Github repozytorium fullname
+      github_secret_token_for_hook: Gitlab tajny token hakiem
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket tajny token hakiem
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generowanie changelog
+      include_detailed_changes: zawierać szczegółowych zmian opisanych we wnioskach
+        pociągowych
+      include_issues: Dołącz problemy w Changelog
+      include_pull_requests: Dołącz żądań ciągnąć w Changelog
+      close_issues: Close uczyniły kwestie
+      emails_for_reports: Emaile dla odbiorczej changelog
+      write_to_changelog_file: Zapis logi zmian w pliku repozytorium
+      changelog_filename: zmian nazwy pliku
+      changelog_locale: Język changelogu
     project_modal:
       project: Projekt
   issues:
@@ -254,6 +294,23 @@ pl:
       close: Close
       cancel: Anuluj
       more: wysłać więcej
+  changelogs:
+    changelog_raw_md:
+      detailed_changes: Szczegółowe zmiany
+      issues: Zagadnienia
+      by: przez
+    changelog:
+      detailed_changes: Szczegółowe zmiany
+      issues: Zagadnienia
+      by: przez
+    index:
+      project: Projekt
+      changelogs: Dzienniki zmian
+      sync: Sync
+    changelog_list_item:
+      resend: Wyślij ponownie
+      view_as_html: Zobacz jako html
+      view_as_raw_md: Zobacz jako surowca md
   pages:
     faq:
       faq: FAQ

@@ -9,6 +9,10 @@ el:
   1_we_have_just_launched_our_service_title: Έχουμε μόλις ξεκινήσει την υπηρεσία μας
   open: Open
   closed: Έκλεισε
+  releases: κυκλοφορίες
+  release: απελευθέρωση
+  changelog_has_been_resent: Αλλαγών έχει δυσανασχετούν
+  changelogs_has_been_synced: Αλλαγών έχει συγχρονιστεί
   shared:
     navbar:
       sign_in: Σύνδεση
@@ -53,7 +57,9 @@ el:
       select_column_tags: Επιλέξτε ετικέτες στήλης
       select_section_tags: Επιλέξτε ετικέτες ενότητα
       select_issue_tags: Επιλέξτε θέμα ετικέτες
+      emails_for_reports: Τύπος μηνύματα ηλεκτρονικού ταχυδρομείου που θα λάβετε changelogs
     email_signature:
+      info: Πληροφορίες
       mailer: Μέιλερ
       technoelegance: Technoelegance Ltd.
     pagination_link:
@@ -138,14 +144,30 @@ el:
       add: Add
       github_repository_id: Github id αποθετήριο
       github_full_name: Github Ονοματεπώνυμο αποθετήριο
-      github_secret_token_for_hook: Github μυστικό σύμβολο για γάντζο
+      github_secret_token_for_hook: Gitlab μυστικό σύμβολο για γάντζο
       bitbucket_full_name: Bitbucket Ονοματεπώνυμο
       bitbucket_secret_token_for_hook: Bitbucket μυστικό σύμβολο για γάντζο
+      gitlab_full_name: Gitlab Ονοματεπώνυμο
+      changelogs: changelogs
+      changelogs_info: αν θέλετε να κρατήσετε changelogs
+      generate_changelogs: Δημιουργία changelogs
+      include_detailed_changes: περιλαμβάνουν λεπτομερείς αλλαγές που περιγράφονται
+        στα αιτήματα έλξη
+      include_issues: Συμπεριλάβετε θέματα changelogs
+      include_pull_requests: περιλαμβάνουν αιτήματα έλξη σε changelogs
+      close_issues: Κλείστε γίνει θέματα
+      emails_for_reports: emails για recieving changelogs
+      write_to_changelog_file: Γράψτε changelogs στο αρχείο αποθετήριο
+      changelog_filename: Αλλαγών όνομα αρχείου
+      enter_changelog_filename: Εισάγετε changelog όνομα αρχείου (προεπιλογή "CHANGELOG")
+      changelog_locale: Επιλέξτε γλώσσα για changelogs
     project:
       edit: Επεξεργασία
       destroy: Διαγραφή
-      project_issues: θέματα Έργου
-      project_users: χρήστες Έργου
+      issues: Θέματα
+      users: Χρήστες
+      changelogs: changelogs
+      are_you_sure: Είσαι σίγουρος;
     section_fields:
       section_tags: Ενότητα ετικέτες
       section_order: Παραγγελία
@@ -161,6 +183,26 @@ el:
       project_issues: θέματα Έργου
       project_users: χρήστες Έργου
       new: Νέα
+      edit: Επεξεργασία
+      destroy: Διαγραφή
+      are_you_sure: Είσαι σίγουρος;
+      changelogs: changelogs
+      github_repository_id: Github id αποθετήριο
+      github_full_name: Github Ονοματεπώνυμο αποθετήριο
+      github_secret_token_for_hook: Gitlab μυστικό σύμβολο για γάντζο
+      bitbucket_full_name: Bitbucket Ονοματεπώνυμο
+      bitbucket_secret_token_for_hook: Bitbucket μυστικό σύμβολο για γάντζο
+      gitlab_full_name: Gitlab Ονοματεπώνυμο
+      generate_changelogs: Δημιουργία changelogs
+      include_detailed_changes: περιλαμβάνουν λεπτομερείς αλλαγές που περιγράφονται
+        στα αιτήματα έλξη
+      include_issues: Συμπεριλάβετε θέματα changelogs
+      include_pull_requests: περιλαμβάνουν αιτήματα έλξη σε changelogs
+      close_issues: Κλείστε γίνει θέματα
+      emails_for_reports: emails για recieving changelogs
+      write_to_changelog_file: Γράψτε changelogs στο αρχείο αποθετήριο
+      changelog_filename: Αλλαγών όνομα αρχείου
+      changelog_locale: γλώσσας για changelog
     project_modal:
       project: Έργου
   issues:
@@ -267,6 +309,25 @@ el:
       close: Close
       cancel: Ακύρωση
       more: Στείλτε περισσότερα
+  changelogs:
+    changelog_raw_md:
+      changes: Αλλαγές
+      detailed_changes: Λεπτομερείς αλλαγές
+      issues: Θέματα
+      by: από
+    changelog:
+      changes: Αλλαγές
+      detailed_changes: Λεπτομερείς αλλαγές
+      issues: Θέματα
+      by: από
+    index:
+      project: Έργου
+      changelogs: changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Επανάληψη αποστολής
+      view_as_html: Προβολή ως HTML
+      view_as_raw_md: Προβολή ως πρώτες MD
   pages:
     faq:
       faq: Συχνές Ερωτήσεις

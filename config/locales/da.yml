@@ -9,6 +9,10 @@ da:
   1_we_have_just_launched_our_service_title: Vi har netop lanceret vores service
   open: Open
   closed: Lukket
+  releases: udgivelser
+  release: release
+  changelog_has_been_resent: Changelog har været sendt igen
+  changelogs_has_been_synced: Changelog er blevet synkroniseret
   shared:
     navbar:
       sign_in: Log ind
@@ -53,6 +57,7 @@ da:
       select_column_tags: Vælg kolonne tags
       select_section_tags: Vælg sektion tags
       select_issue_tags: Vælg udstede tags
+      emails_for_reports: Type emails som vil modtage changelogs
     email_signature:
       info: Info
       mailer: Mailer
@@ -144,14 +149,30 @@ da:
       column_height: Spaltehøjde
       github_repository_id: Github repository id
       github_full_name: Github repository fullname
-      github_secret_token_for_hook: Github hemmelige token for krog
+      github_secret_token_for_hook: Gitlab hemmelige token for krog
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket hemmelige token for krog
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: hvis du vil beholde changelogs
+      generate_changelogs: Generer changelogs
+      include_detailed_changes: Medtag detaljerede ændringer, der er beskrevet i pull
+        anmodninger
+      include_issues: Medtag emner i changelogs
+      include_pull_requests: Medtag pull anmodninger i changelogs
+      close_issues: Luk gjort spørgsmål
+      emails_for_reports: E-mails til recieving changelogs
+      write_to_changelog_file: Skriv changelogs til lageret fil
+      changelog_filename: Changelog filnavn
+      enter_changelog_filename: Indtast changelog filnavn (default "CHANGELOG")
+      changelog_locale: Vælg sprog for changelogs
     project:
       edit: Rediger
       destroy: Slet
-      project_issues: Projekt spørgsmål
-      project_users: Project brugere
+      issues: Issues
+      users: Brugere
+      changelogs: Changelogs
+      are_you_sure: Er du sikker?
     section_fields:
       section_name: Afsnit navn
       remove_section: Fjern sektion
@@ -171,6 +192,26 @@ da:
       project_issues: Projekt spørgsmål
       project_users: Project brugere
       new: Ny
+      edit: Rediger
+      destroy: Slet
+      are_you_sure: Er du sikker?
+      changelogs: Changelogs
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: Gitlab hemmelige token for krog
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket hemmelige token for krog
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Generer changelogs
+      include_detailed_changes: Medtag detaljerede ændringer, der er beskrevet i pull
+        anmodninger
+      include_issues: Medtag emner i changelogs
+      include_pull_requests: Medtag pull anmodninger i changelogs
+      close_issues: Luk gjort spørgsmål
+      emails_for_reports: E-mails til recieving changelogs
+      write_to_changelog_file: Skriv changelogs til lageret fil
+      changelog_filename: Changelog filnavn
+      changelog_locale: Sprog for changelog
     project_modal:
       project: Projekt
   issues:
@@ -281,6 +322,25 @@ da:
       close: Luk
       cancel: Annuller
       more: Send mere
+  changelogs:
+    changelog_raw_md:
+      changes: Ændringer
+      detailed_changes: Detaljerede ændringer
+      issues: Issues
+      by: af
+    changelog:
+      changes: Ændringer
+      detailed_changes: Detaljerede ændringer
+      issues: Issues
+      by: af
+    index:
+      project: Projekt
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Send igen
+      view_as_html: Vis som html
+      view_as_raw_md: Vis som rå md
   pages:
     faq:
       faq: FAQ

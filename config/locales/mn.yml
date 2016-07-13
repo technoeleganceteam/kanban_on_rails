@@ -8,6 +8,10 @@ mn:
   backlog: удаашрал
   open: Нээлттэй
   closed: хаалттай
+  releases: хувилбарууд
+  release: хувилбар
+  changelog_has_been_resent: CHANGELOG сүүлчийн байна
+  changelogs_has_been_synced: CHANGELOG синхрончлогдсон байна
   shared:
     navbar:
       sign_in: Дансаа ашиглах
@@ -48,6 +52,7 @@ mn:
       select_column_tags: сонгоно багана хаягууд
       select_section_tags: сонгоно хэсэг хаягууд
       select_issue_tags: сонгох асуудал хаягууд
+      emails_for_reports: Санал и-мэйл changelogs recieve болно
     email_signature:
       info: мэдээлэл
       mailer: Захидал Түгээгч
@@ -120,11 +125,25 @@ mn:
       github_repository_id: Github архивын дугаар
       github_full_name: Github архивын fullname
       bitbucket_full_name: Bitbucket fullname
+      gitlab_full_name: Gitlab fullname
+      changelogs: Changelogs
+      changelogs_info: та changelogs хадгалахыг хүсвэл
+      generate_changelogs: changelogs үүсгээрэй
+      include_detailed_changes: татах хүсэлт тайлбарласан дэлгэрэнгүй өөрчлөлт оруулах
+      include_issues: changelogs асуудлыг оруулах
+      include_pull_requests: changelogs нь татах хүсэлт оруулах
+      close_issues: Close хийж асуудлууд
+      changelog_filename: CHANGELOG файлын нэр
+      enter_changelog_filename: CHANGELOG файлын нэрийг (анхдагч "CHANGELOG") оруулна
+        уу
+      changelog_locale: changelogs хэлийг сонгоно уу
     project:
       edit: Засварлах
       destroy: устгах
-      project_issues: Төслийн асуудлууд
-      project_users: Төслийн хэрэглэгчид
+      issues: асуудлууд
+      users: гишүүд
+      changelogs: Changelogs
+      are_you_sure: Та итгэлтэй байна уу?
     section_fields:
       section_name: Хэсэг нэр
       remove_section: Remove хэсэг
@@ -144,6 +163,20 @@ mn:
       project_issues: Төслийн асуудлууд
       project_users: Төслийн хэрэглэгчид
       new: Нью-
+      edit: Засварлах
+      destroy: устгах
+      are_you_sure: Та итгэлтэй байна уу?
+      changelogs: Changelogs
+      github_repository_id: Github архивын дугаар
+      github_full_name: Github архивын fullname
+      bitbucket_full_name: Bitbucket fullname
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: changelogs үүсгээрэй
+      include_detailed_changes: татах хүсэлт тайлбарласан дэлгэрэнгүй өөрчлөлт оруулах
+      include_issues: changelogs асуудлыг оруулах
+      include_pull_requests: changelogs нь татах хүсэлт оруулах
+      close_issues: Close хийж асуудлууд
+      changelog_filename: CHANGELOG файлын нэр
     project_modal:
       project: төсөл
   issues:
@@ -245,6 +278,23 @@ mn:
       close: Close
       cancel: Cancel
       more: илүү илгээх
+  changelogs:
+    changelog_raw_md:
+      changes: өөрчлөлт
+      detailed_changes: дэлгэрүүлэн өөрчлөлт
+      issues: асуудлууд
+      by: хамт
+    changelog:
+      changes: өөрчлөлт
+      detailed_changes: дэлгэрүүлэн өөрчлөлт
+      issues: асуудлууд
+      by: хамт
+    index:
+      project: төсөл
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Нууц үг дахин илгээх
   pages:
     faq:
       faq: Тусламж

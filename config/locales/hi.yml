@@ -9,6 +9,10 @@ hi:
   1_we_have_just_launched_our_service_title: हम सिर्फ हमारी सेवा का शुभारंभ किया
   open: ओपन
   closed: बंद किया
+  releases: विज्ञप्ति
+  release: रिलीज
+  changelog_has_been_resent: चैंज क्रोध किया गया है
+  changelogs_has_been_synced: चैंज सिंक किया गया है
   shared:
     navbar:
       sign_up: साइन अप करें
@@ -50,6 +54,7 @@ hi:
       select_column_tags: का चयन
       select_section_tags: का चयन
       select_issue_tags: मुद्दा टैग का चयन करें
+      emails_for_reports: प्रकार ईमेल जो बदलाव प्राप्त होगा
     email_signature:
       info: जानकारी
       mailer: मेलर
@@ -118,14 +123,28 @@ hi:
       column_height: स्तंभ ऊंचाई
       github_repository_id: Github रिपॉजिटरी आईडी
       github_full_name: Github रिपॉजिटरी FULLNAME
-      github_secret_token_for_hook: हुक के लिए Github गुप्त टोकन
+      github_secret_token_for_hook: Gitlab गुप्त टोकन
       bitbucket_full_name: Bitbucket FULLNAME
       bitbucket_secret_token_for_hook: हुक के लिए Bitbucket गुप्त टोकन
+      gitlab_full_name: Gitlab FULLNAME
+      changelogs: Changelogs
+      changelogs_info: आप बदलाव रखना चाहते हैं
+      generate_changelogs: बदलाव उत्पन्न
+      include_detailed_changes: पुल अनुरोधों में वर्णित विस्तृत परिवर्तन शामिल
+      include_issues: बदलाव में मुद्दों में शामिल
+      include_pull_requests: बदलाव में पुल अनुरोध शामिल
+      close_issues: बंद किया मुद्दों
+      write_to_changelog_file: रिपोजिटरी फाइल करने के लिए बदलाव लिखें
+      changelog_filename: चैंज फ़ाइल नाम
+      enter_changelog_filename: (डिफ़ॉल्ट "चैंज") चैंज फ़ाइल नाम दर्ज करें
+      changelog_locale: बदलाव के लिए भाषा चुनें
     project:
       edit: संपादित करें
       destroy: चिह्नित
-      project_issues: परियोजना मुद्दों
-      project_users: परियोजना उपयोगकर्ताओं
+      issues: मुद्दे
+      users: उपयोगकर्ता
+      changelogs: Changelogs
+      are_you_sure: आप सुनिश्चित हैं?
     section_fields:
       section_name: अनुभाग का नाम
       remove_section: निकालें अनुभाग
@@ -145,6 +164,23 @@ hi:
       project_issues: परियोजना मुद्दों
       project_users: परियोजना उपयोगकर्ताओं
       new: न्यू
+      edit: संपादित करें
+      destroy: चिह्नित
+      are_you_sure: आप सुनिश्चित हैं?
+      changelogs: Changelogs
+      github_repository_id: Github रिपॉजिटरी आईडी
+      github_full_name: Github रिपॉजिटरी FULLNAME
+      github_secret_token_for_hook: Gitlab गुप्त टोकन
+      bitbucket_full_name: Bitbucket FULLNAME
+      bitbucket_secret_token_for_hook: हुक के लिए Bitbucket गुप्त टोकन
+      gitlab_full_name: Gitlab FULLNAME
+      generate_changelogs: बदलाव उत्पन्न
+      include_detailed_changes: पुल अनुरोधों में वर्णित विस्तृत परिवर्तन शामिल
+      include_issues: बदलाव में मुद्दों में शामिल
+      include_pull_requests: बदलाव में पुल अनुरोध शामिल
+      close_issues: बंद किया मुद्दों
+      write_to_changelog_file: रिपोजिटरी फाइल करने के लिए बदलाव लिखें
+      changelog_filename: चैंज फ़ाइल नाम
     project_modal:
       project: परियोजना
   issues:
@@ -249,6 +285,23 @@ hi:
       close: बंद
       cancel: रद्द
       more: अधिक भेजें
+  changelogs:
+    changelog_raw_md:
+      changes: परिवर्तन
+      detailed_changes: विस्तृत परिवर्तन
+      issues: मुद्दे
+      by: द्वारा
+    changelog:
+      changes: परिवर्तन
+      detailed_changes: विस्तृत परिवर्तन
+      issues: मुद्दे
+      by: द्वारा
+    index:
+      project: परियोजना
+      changelogs: Changelogs
+      sync: सिंक
+    changelog_list_item:
+      resend: 'पुन: भेजें'
   pages:
     faq:
       faq: पूछे जाने वाले प्रश्न

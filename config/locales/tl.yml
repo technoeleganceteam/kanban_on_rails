@@ -10,6 +10,10 @@ tl:
     serbisyo
   open: Open
   closed: Isinara
+  releases: release
+  release: release
+  changelog_has_been_resent: Changelog ay magalit
+  changelogs_has_been_synced: Changelog na-sync
   shared:
     navbar:
       sign_in: Mag-sign in
@@ -54,6 +58,7 @@ tl:
       select_column_tags: Pumili column tags
       select_section_tags: Pumili seksyon tags
       select_issue_tags: Pumili isyu tags
+      emails_for_reports: Type email na kung saan ay makakatanggap ng changelogs
     email_signature:
       info: Impormasyon
       mailer: Mailer
@@ -140,14 +145,30 @@ tl:
       column_height: Column taas
       github_repository_id: Github repository id
       github_full_name: Github repository fullname
-      github_secret_token_for_hook: Github lihim token para hook
+      github_secret_token_for_hook: GitLab lihim token para hook
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket lihim token para hook
+      gitlab_full_name: GitLab fullname
+      changelogs: Changelogs
+      changelogs_info: kung nais mong panatilihin ang changelogs
+      generate_changelogs: Bumuo changelogs
+      include_detailed_changes: Isama detalyadong mga pagbabago na inilarawan sa mga
+        kahilingan hilahin
+      include_issues: Isama isyu sa changelogs
+      include_pull_requests: Isama kahilingan pull sa changelogs
+      close_issues: Isara tapos isyu
+      emails_for_reports: Emails para recieving changelogs
+      write_to_changelog_file: Sumulat changelogs sa lalagyan file
+      changelog_filename: Changelog filename
+      enter_changelog_filename: Ipasok changelog filename (default "CHANGELOG")
+      changelog_locale: Pumili ng wika para sa changelogs
     project:
       edit: Edit
       destroy: Burahin
-      project_issues: isyu Project
-      project_users: user Project
+      issues: Isyu
+      users: Users
+      changelogs: Changelogs
+      are_you_sure: Sigurado ka ba?
     section_fields:
       remove_section: Remove seksyon
       section_tags: Section tags
@@ -164,6 +185,26 @@ tl:
       project_issues: isyu Project
       project_users: user Project
       new: New
+      edit: Edit
+      destroy: Burahin
+      are_you_sure: Sigurado ka ba?
+      changelogs: Changelogs
+      github_repository_id: Github repository id
+      github_full_name: Github repository fullname
+      github_secret_token_for_hook: GitLab lihim token para hook
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket lihim token para hook
+      gitlab_full_name: GitLab fullname
+      generate_changelogs: Bumuo changelogs
+      include_detailed_changes: Isama detalyadong mga pagbabago na inilarawan sa mga
+        kahilingan hilahin
+      include_issues: Isama isyu sa changelogs
+      include_pull_requests: Isama kahilingan pull sa changelogs
+      close_issues: Isara tapos isyu
+      emails_for_reports: Emails para recieving changelogs
+      write_to_changelog_file: Sumulat changelogs sa lalagyan file
+      changelog_filename: Changelog filename
+      changelog_locale: Wika para changelog
     project_modal:
       project: Project
   issues:
@@ -273,6 +314,25 @@ tl:
       close: Close
       cancel: Ikansela
       more: Magpadala mas
+  changelogs:
+    changelog_raw_md:
+      changes: Pagbabago
+      detailed_changes: detalyadong mga pagbabago
+      issues: Isyu
+      by: pamamagitan
+    changelog:
+      changes: Pagbabago
+      detailed_changes: detalyadong mga pagbabago
+      issues: Isyu
+      by: pamamagitan
+    index:
+      project: Project
+      changelogs: Changelogs
+      sync: Sync
+    changelog_list_item:
+      resend: Muling ipadala
+      view_as_html: Tingnan bilang html
+      view_as_raw_md: Tingnan bilang raw md
   pages:
     faq:
       faq: FAQ

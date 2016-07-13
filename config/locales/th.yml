@@ -9,6 +9,10 @@ th:
   1_we_have_just_launched_our_service_title: เราได้เปิดตัวเพียงบริการของเรา
   open: เปิด
   closed: ปิด
+  releases: เผยแพร่
+  release: ปล่อย
+  changelog_has_been_resent: เปลี่ยนแปลงได้อีกครั้ง
+  changelogs_has_been_synced: เปลี่ยนแปลงได้รับการซิงค์
   shared:
     navbar:
       sign_in: เข้าสู่ระบบ
@@ -31,7 +35,7 @@ th:
       password: รหัสผ่าน
       current_password: รหัสผ่านปัจจุบัน
       name: ชื่อ
-      base: ฐา​​น
+      base: ฐาน
       title: ชื่อเรื่อง
       user_to_project_connection: ผู้ใช้เชื่อมต่อกับโครงการ
       user_to_board_connection: ผู้ใช้ไปยังคณะกรรมการการเชื่อมต่อ
@@ -53,6 +57,7 @@ th:
       select_column_tags: เลือกแท็กคอลัมน์
       select_section_tags: เลือกแท็กส่วน
       select_issue_tags: เลือกแท็กปัญหา
+      emails_for_reports: ประเภทอีเมลซึ่งจะได้รับ changelogs
     email_signature:
       mailer: Mailer
       technoelegance: Technoelegance จำกัด
@@ -134,14 +139,29 @@ th:
       add: เพิ่ม
       github_repository_id: Github พื้นที่เก็บข้อมูล ID
       github_full_name: Github พื้นที่เก็บข้อมูลชื่อเต็ม
-      github_secret_token_for_hook: Github โทเค็นความลับเบ็ด
+      github_secret_token_for_hook: Gitlab โทเค็นความลับเบ็ด
       bitbucket_full_name: Bitbucket ชื่อเต็ม
       bitbucket_secret_token_for_hook: Bitbucket โทเค็นความลับเบ็ด
+      gitlab_full_name: Gitlab ชื่อเต็ม
+      changelogs: changelogs
+      changelogs_info: ถ้าคุณต้องการที่จะเก็บประวัติการเปลี่ยนแปลง
+      generate_changelogs: สร้าง changelogs
+      include_detailed_changes: รวมถึงการเปลี่ยนแปลงรายละเอียดที่ระบุไว้ในคำขอดึง
+      include_issues: รวมถึงประเด็นใน changelogs
+      include_pull_requests: รวมร้องขอดึงใน changelogs
+      close_issues: ปัญหาปิดทำ
+      emails_for_reports: อีเมลสำหรับ recieving changelogs
+      write_to_changelog_file: เขียนประวัติการเปลี่ยนแปลงไปยังไฟล์ที่เก็บ
+      changelog_filename: ชื่อไฟล์การเปลี่ยนแปลง
+      enter_changelog_filename: ใส่ชื่อไฟล์การเปลี่ยนแปลง (เริ่มต้น "การเปลี่ยนแปลง")
+      changelog_locale: เลือกภาษาสำหรับ changelogs
     project:
       edit: แก้ไข
       destroy: ลบ
-      project_issues: ปัญหาโครงการ
-      project_users: ผู้ใช้โครงการ
+      issues: ปัญหา
+      users: ผู้ใช้
+      changelogs: changelogs
+      are_you_sure: คุณแน่ใจหรือไม่
     section_fields:
       section_tags: แท็กมาตรา
       section_order: สั่งซื้อ
@@ -157,6 +177,25 @@ th:
       project_issues: ปัญหาโครงการ
       project_users: ผู้ใช้โครงการ
       new: ใหม่
+      edit: แก้ไข
+      destroy: ลบ
+      are_you_sure: คุณแน่ใจหรือไม่
+      changelogs: changelogs
+      github_repository_id: Github พื้นที่เก็บข้อมูล ID
+      github_full_name: Github พื้นที่เก็บข้อมูลชื่อเต็ม
+      github_secret_token_for_hook: Gitlab โทเค็นความลับเบ็ด
+      bitbucket_full_name: Bitbucket ชื่อเต็ม
+      bitbucket_secret_token_for_hook: Bitbucket โทเค็นความลับเบ็ด
+      gitlab_full_name: Gitlab ชื่อเต็ม
+      generate_changelogs: สร้าง changelogs
+      include_detailed_changes: รวมถึงการเปลี่ยนแปลงรายละเอียดที่ระบุไว้ในคำขอดึง
+      include_issues: รวมถึงประเด็นใน changelogs
+      include_pull_requests: รวมร้องขอดึงใน changelogs
+      close_issues: ปัญหาปิดทำ
+      emails_for_reports: อีเมลสำหรับ recieving changelogs
+      write_to_changelog_file: เขียนประวัติการเปลี่ยนแปลงไปยังไฟล์ที่เก็บ
+      changelog_filename: ชื่อไฟล์การเปลี่ยนแปลง
+      changelog_locale: ภาษาสำหรับการเปลี่ยนแปลง
     project_modal:
       project: โครงการ
   issues:
@@ -259,6 +298,25 @@ th:
       close: ปิด
       cancel: ยกเลิก
       more: ส่งเพิ่มเติม
+  changelogs:
+    changelog_raw_md:
+      changes: เปลี่ยนแปลง
+      detailed_changes: การเปลี่ยนแปลงรายละเอียด
+      issues: ปัญหา
+      by: โดย
+    changelog:
+      changes: เปลี่ยนแปลง
+      detailed_changes: การเปลี่ยนแปลงรายละเอียด
+      issues: ปัญหา
+      by: โดย
+    index:
+      project: โครงการ
+      changelogs: changelogs
+      sync: ซิงค์
+    changelog_list_item:
+      resend: ส่งซ้ำ
+      view_as_html: ดูเป็น HTML
+      view_as_raw_md: ดู MD ดิบ
   pages:
     faq:
       faq: คำถามที่พบบ่อย
@@ -283,7 +341,7 @@ th:
       sync_with_github_and_bitbucket: คุณสามารถซิงค์โครงการและปัญหาของคุณกับ Github
         และ Bitbucket
       invite_users: คุณสามารถเชิญผู้ใช้ (สำหรับผู้บริหารเป็นต้น) สำหรับโครงการของคุณ
-      open_source_code: โครงการนี​​้มีรหัสที่มาเปิดเพื่อให้คุณสามารถปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
+      open_source_code: โ​​ครงการนี​​้มีรหัสที่มาเปิดเพื่อให้คุณสามารถปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
       we_use_open_source_and_high_technology: เราใช้เทคโนโลยีชั้นสูงและห้องสมุดมาเปิด
         เราพยายามที่จะได้รับที่ดีขึ้นและปรับปรุงบริการของเรา
       partners_and_investors: เราจะเปิดสำหรับการเป็นหุ้นส่วนและเราต้องการที่จะหานักลงทุน

@@ -9,6 +9,10 @@ sl:
   1_we_have_just_launched_our_service_title: Pravkar smo začeli naše storitve
   open: Odpri
   closed: Zaprto
+  releases: javnost
+  release: javnost
+  changelog_has_been_resent: Changelog je zamerijo
+  changelogs_has_been_synced: Changelog sinhronizirani
   shared:
     navbar:
       sign_in: Prijava
@@ -53,6 +57,7 @@ sl:
       select_column_tags: Izberite oznake stolpcev
       select_section_tags: Izberite oddelek oznake
       select_issue_tags: Izberite izda oznake
+      emails_for_reports: Vrsta e-poštna sporočila, ki bodo prejeli Dnevniki sprememb
     email_signature:
       info: Info
       mailer: Mailer
@@ -139,14 +144,31 @@ sl:
       add: Dodaj
       github_repository_id: GitHub id odlagališče
       github_full_name: GitHub skladišče fullname
-      github_secret_token_for_hook: GitHub skrivnost žeton za kljuko
+      github_secret_token_for_hook: Gitlab skrivnost žeton za kljuko
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket skrivnost žeton za kljuko
+      gitlab_full_name: Gitlab fullname
+      changelogs: Dnevniki sprememb
+      changelogs_info: če želite ohraniti Dnevniki sprememb
+      generate_changelogs: Ustvari Dnevniki sprememb
+      include_detailed_changes: Vključi podrobne spremembe, opisane v zahtevah za
+        vlečenje
+      include_issues: Vključi vprašanj v Dnevniki sprememb
+      include_pull_requests: Vključi zahteve potegnila Dnevniki sprememb
+      close_issues: Zapri storiti vprašanja
+      emails_for_reports: E-pošta za prejemanje Dnevniki sprememb
+      write_to_changelog_file: Pisanje Dnevniki sprememb v datoteki skladišču
+      changelog_filename: Changelog naziv
+      enter_changelog_filename: Vnesite seznam sprememb ime datoteke (default "seznam
+        sprememb")
+      changelog_locale: Izberite jezik Dnevniki sprememb
     project:
       edit: Uredi
       destroy: Izbriši
-      project_issues: vprašanja projekta
-      project_users: uporabniki projekta
+      issues: vprašanja
+      users: Uporabniki
+      changelogs: Dnevniki sprememb
+      are_you_sure: Ste prepričani?
     section_fields:
       section_tags: Oddelek oznake
       section_order: red
@@ -162,6 +184,26 @@ sl:
       project_issues: vprašanja projekta
       project_users: uporabniki projekta
       new: New
+      edit: Uredi
+      destroy: Izbriši
+      are_you_sure: Ste prepričani?
+      changelogs: Dnevniki sprememb
+      github_repository_id: GitHub id odlagališče
+      github_full_name: GitHub skladišče fullname
+      github_secret_token_for_hook: Gitlab skrivnost žeton za kljuko
+      bitbucket_full_name: Bitbucket fullname
+      bitbucket_secret_token_for_hook: Bitbucket skrivnost žeton za kljuko
+      gitlab_full_name: Gitlab fullname
+      generate_changelogs: Ustvari Dnevniki sprememb
+      include_detailed_changes: Vključi podrobne spremembe, opisane v zahtevah za
+        vlečenje
+      include_issues: Vključi vprašanj v Dnevniki sprememb
+      include_pull_requests: Vključi zahteve potegnila Dnevniki sprememb
+      close_issues: Zapri storiti vprašanja
+      emails_for_reports: E-pošta za prejemanje Dnevniki sprememb
+      write_to_changelog_file: Pisanje Dnevniki sprememb v datoteki skladišču
+      changelog_filename: Changelog naziv
+      changelog_locale: jezik za changelog
     project_modal:
       project: Project
   issues:
@@ -267,6 +309,25 @@ sl:
       close: Zapri
       cancel: Prekliči
       more: Pošlji več
+  changelogs:
+    changelog_raw_md:
+      changes: spremembe
+      detailed_changes: Podrobne spremembe
+      issues: vprašanja
+      by: ga
+    changelog:
+      changes: spremembe
+      detailed_changes: Podrobne spremembe
+      issues: vprašanja
+      by: ga
+    index:
+      project: Project
+      changelogs: Dnevniki sprememb
+      sync: Sync
+    changelog_list_item:
+      resend: Ponovno pošlji
+      view_as_html: Pogled html
+      view_as_raw_md: Prikaži kot surovi md
   pages:
     faq:
       faq: FAQ
