@@ -9,21 +9,21 @@ window.init_dragula = (ids, board_id, user_id) ->
     moves: (el, container, handle) ->
       handle.className.indexOf('handle') > -1
   ).on('drop', (el, target, source, sibling) ->
-      issue_to_section_connections_attributes = []
+    issue_to_section_connections_attributes = []
 
-      for connection in $(target).children()
-        issue_to_section_connections_attributes.push
-          id: $(connection).data('issue_to_section_connection-id')
-          issue_order: $(connection).index()
-          column_id: target.id.split('_')[3]
+    for connection in $(target).children()
+      issue_to_section_connections_attributes.push
+        id: $(connection).data('issue_to_section_connection-id')
+        issue_order: $(connection).index()
+        column_id: target.id.split('_')[3]
 
-      issues_attributs = [
-        id: el.id.split('_')[1]
-        source_column_id: source.id.split('_')[3]
-        target_column_id: target.id.split('_')[3]
-      ]
+    issues_attributs = [
+      id: el.id.split('_')[1]
+      source_column_id: source.id.split('_')[3]
+      target_column_id: target.id.split('_')[3]
+    ]
 
-      update_issue_tags(issues_attributs, issue_to_section_connections_attributes, user_id, board_id)
+    update_issue_tags(issues_attributs, issue_to_section_connections_attributes, user_id, board_id)
   ).on('remove', (el, container, source) ->
     close_issue($(el).data('project_id'), el.id.split('_')[1])
   )
