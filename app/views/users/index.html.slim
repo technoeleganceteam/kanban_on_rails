@@ -11,6 +11,6 @@ ul.list-group
     .pull-right
       = link_to (t '.new'), new_board_user_url(@board), :class => 'btn btn-success btn-xs'
 
-  = render @connections
+  = render :partial => 'user_to_board_connections/user_to_board_connection', :collection => @connections
 
 = paginate @connections

@@ -20,7 +20,8 @@
       .cell [style=("width: #{ @board.column_width }px;background-color: #F5F5F5;\
         height: #{ @board.column_height }px;overflow-y:scroll;float:left")
         id = "section_#{ section.id }_column_#{ column.id }"]
-        = render column.column_issues_for_section(section.id).page(params[:page])
+        = render :partial => 'issue_to_section_connections/issue_to_section_connection',
+          :collection => column.column_issues_for_section(section.id).page(params[:page])
 
         = render 'shared/pagination_link',
           :items => column.column_issues_for_section(section.id).page(params[:page]),

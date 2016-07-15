@@ -4,6 +4,6 @@ ul.list-group
     .pull-right
       = link_to new_user_board_url(current_user), :remote => true, :class => 'btn btn-success btn-xs' do
         = t '.new'
-  = render @boards
+  = render :partial => 'boards/board', :collection => @boards
 
 = paginate @boards
