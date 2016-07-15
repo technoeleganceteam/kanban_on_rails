@@ -15,15 +15,15 @@ html lang = '#{ t "#{ I18n.locale }_iso" }'
 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true,
       :defer => 'defer', :async => true, :debug => false
-    
+
     = render 'shared/favicons'
   body
     .container
       .row.text-center
         h3 = t '.request_result'
-      
+
         h1 403
-      
+
         p = t '.authorization_denied_description'
 
         = link_to (t '.go_to_root'), root_url

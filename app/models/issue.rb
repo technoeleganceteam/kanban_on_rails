@@ -29,6 +29,8 @@ class Issue < ActiveRecord::Base
 
   after_save :create_or_destroy_issue_to_section_connections
 
+  delegate :name, :to => :project, :prefix => true
+
   def create_or_destroy_issue_to_section_connections
     state == 'closed' ? issue_to_section_connections.destroy_all : assign_issue_to_section_connections
   end

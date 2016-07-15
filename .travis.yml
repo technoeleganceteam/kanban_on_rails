@@ -4,6 +4,7 @@ rvm:
 script:
   - bundle exec rake spec
   - bundle exec rubocop -c .rubocop.yml
+  - bundle exec rails_best_practices
 services:
   - postgresql
   - redis-server

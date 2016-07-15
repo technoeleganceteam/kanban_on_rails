@@ -66,7 +66,7 @@ hr
 
 - if @project.is_github_repository
   h4 = t 'github'
-  
+
   p
     b
       = t '.github_repository_id'
@@ -85,10 +85,10 @@ hr
     | :&nbsp;
 
     = @project.github_secret_token_for_hook
-  
+
 - if @project.is_bitbucket_repository
   h4 = t 'bitbucket'
-  
+
   p
     b
       = t '.bitbucket_full_name'
@@ -105,7 +105,7 @@ hr
 
 - if @project.is_gitlab_repository
   h4 = t 'gitlab'
-  
+
   p
     b
       = t '.gitlab_full_name'

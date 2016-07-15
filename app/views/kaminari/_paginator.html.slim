@@ -4,7 +4,8 @@
     == prev_page_tag unless current_page.first?
 
     - each_page do |page|
-      - if page.left_outer? || page.right_outer? || page.inside_window?
+      - # Refactor after this https://github.com/amatsuda/kaminari/pull/808
+      - if %w(left_outer? right_outer? inside_window?).any? { |item| page.send(item) }
         == page_tag page
       - elsif !page.was_truncated?
         == gap_tag

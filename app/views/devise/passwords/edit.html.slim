@@ -8,7 +8,7 @@
       = render 'shared/form_errors', :item => resource
 
       = f.hidden_field :reset_password_token
- 
+
       = f.password_field :password, autofocus: true, :autocomplete => 'off', :class => 'form-control',
         :placeholder => (t '.new_password'), :required => true
 

@@ -15,7 +15,7 @@
     = t '.changelogs'
     br
     small = t '.changelogs_info'
-  
+
 
   .checkbox
     label
@@ -26,31 +26,31 @@
   .checkbox
     label
       = form.check_box :include_issues
-      
+
       = t '.include_issues'
 
   .checkbox
     label
       = form.check_box :include_detailed_changes
-      
+
       = t '.include_detailed_changes'
 
   .checkbox
     label
       = form.check_box :include_pull_requests
-      
+
       = t '.include_pull_requests'
 
   .checkbox
     label
       = form.check_box :close_issues
-      
+
       = t '.close_issues'
 
   .checkbox
     label
       = form.check_box :write_changelog_to_repository
-      
+
       = t '.write_to_changelog_file'
 
   .form-group
@@ -77,7 +77,7 @@
 
   - if project.is_github_repository
     h3 = t 'github'
-    
+
     label = t '.github_repository_id'
 
     input.form-control disabled = '' placeholder=("#{ project.github_repository_id }") type = 'text'
@@ -89,12 +89,12 @@
     label = t '.github_secret_token_for_hook'
 
     input.form-control disabled = '' placeholder=("#{ project.github_secret_token_for_hook }") type = 'text'
-    
+
     br
 
   - if project.is_bitbucket_repository
     h3 = t 'bitbucket'
-    
+
     label = t '.bitbucket_full_name'
 
     input.form-control disabled = '' placeholder=("#{ project.bitbucket_full_name }") type = 'text'
@@ -107,7 +107,7 @@
 
   - if project.is_gitlab_repository
     h3 = t 'gitlab'
-    
+
     label = t '.gitlab_full_name'
 
     input.form-control disabled = '' placeholder=("#{ project.gitlab_full_name }") type = 'text'
