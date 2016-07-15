@@ -130,7 +130,7 @@ ul.list-group
       = link_to (t '.new'), new_user_board_url(current_user), :class => 'btn btn-success btn-xs',
         :remote => true
 
-  = render @boards
+  = render :partial => 'boards/board', :collection => @boards
 
 = paginate @boards
 

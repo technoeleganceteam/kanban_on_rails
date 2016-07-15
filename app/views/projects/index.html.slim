@@ -16,6 +16,6 @@ ul.list-group
 
       = link_to new_user_project_url(current_user), :remote => true, :class => 'btn btn-success btn-xs' do
         = t '.new'
-  = render @projects
+  = render :partial => 'projects/project', :collection => @projects
 
 = paginate @projects
