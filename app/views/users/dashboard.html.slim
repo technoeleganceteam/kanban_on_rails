@@ -18,30 +18,30 @@ h3
 p
   b = t 'github'
   | &nbsp;
-  
+
   - if current_user.has_github_account
     = render 'shared/sync_with_provider_button', :provider => 'github'
   - else
     = link_to (t '.turn_on_github'), omniauth_authorize_path(User, 'github', :locale => nil),
       :class => 'btn btn-success btn-xs'
-    
+
 p
   b = t 'gitlab'
   | &nbsp;
-  
+
   - if current_user.has_gitlab_account
     = render 'shared/sync_with_provider_button', :provider => 'gitlab'
   - else
     = link_to (t '.turn_on_gitlab'), omniauth_authorize_path(User, 'gitlab', :locale => nil),
       :class => 'btn btn-success btn-xs'
-    
+
 p
   b = t 'bitbucket'
   | &nbsp;
-  
+
   - if current_user.has_bitbucket_account
     = render 'shared/sync_with_provider_button', :provider => 'bitbucket'
   - else
     = link_to (t '.turn_on_bitbucket'), omniauth_authorize_path(User, 'bitbucket', :locale => nil),
       :class => 'btn btn-success btn-xs'
-    
+

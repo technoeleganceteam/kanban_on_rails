@@ -2,7 +2,7 @@ li class = "list-group-item list-group-item-info user_request_#{ user_request.id
   = link_to user_path(user_request.user)
     = image_tag(user_request.user.avatar, :id => 'user_navbar_avatar', :size => '18x18')
     | &nbsp;
-    = user_request.user.name
+    = user_request.user_name
 
   | &nbsp;
 

@@ -6,7 +6,7 @@ class ProjectMailer < ApplicationMailer
 
     generate_subject
 
-    @changelogs.first.project.emails_for_reports.each do |email|
+    @changelogs.first.project_emails_for_reports.each do |email|
       mail(:to => email, :subject => @subject)
     end
   end

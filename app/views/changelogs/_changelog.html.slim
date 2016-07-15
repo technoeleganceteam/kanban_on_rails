@@ -21,7 +21,7 @@ h2 = "#{ changelog.tag_name } (#{ changelog.last_commit_date.strftime('%d.%m.%Y 
   ol
     - changelog.pull_request_subtasks.sort_by { |item| Settings.story_point_values.index(item) }.\
       each_with_index do |subtask, index|
-      
+
       li = "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" +\
         "#{ "[#{ subtask.story_points }]" if subtask.story_points.present? }" +\
         " #{ subtask.description } \n"

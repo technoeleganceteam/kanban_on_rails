@@ -1,10 +1,7 @@
 <% wrapper = 'infinite_scroll_wrapper' unless defined? wrapper %>
 
-<% if defined? partial %>
-  $('#<%= wrapper %>').append('<%= j render :partial => partial, :collection => items %>');
-<% else %>
-  $('#<%= wrapper %>').append('<%= j render items %>');
-<% end %>
+$('#<%= wrapper %>').append('<%=
+  j render (defined? partial) ? ({ :partial => partial, :collection => items }) : items %>');
 
 <% if params[:section_id].present? && params[:column_id].present? %>
   $("#section_<%= params[:section_id] %>_column_<%= params[:column_id] %>").find('.next_page_infinite_scroll').remove();
@@ -12,14 +9,10 @@
   $('.next_page_infinite_scroll').remove();
 <% end %>
 
-<% if defined? paginate_items %>
-  <% if !paginate_items.last_page? %>
-    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => paginate_items, :section_id => section_id, :board_id => board_id, :column_id => column_id %>');
-  <% end %>
-<% else %>
-  <% if !items.last_page? %>
-    $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => items, :section_id => section_id, :board_id => board_id, :column_id => column_id %>');
-  <% end %>
+<% items = paginate_items if (defined? paginate_items && !paginate_items.last_page?) %>
+
+<% if (defined? paginate_items && !paginate_items.last_page?) || !items.last_page? %>
+  $('#<%= wrapper %>').append('<%= j render 'shared/pagination_link', :items => items, :section_id => section_id, :board_id => board_id, :column_id => column_id %>');
 <% end %>
 
 window.loading = false;

@@ -12,8 +12,8 @@
         = column.name
 
         | &nbsp;
-        span style =("color:#{ color_for_column_badge(column) }") 
-          = column.issue_to_section_connections.where(:section_id => section.id).size 
+        span style =("color:#{ color_for_column_badge(column) }")
+          = column.issue_to_section_connections.where(:section_id => section.id).size
   .wrapper style=("width: #{ @columns_count * @board.column_width }px;\
     margin: 0 auto;") id = "section_#{ section.id }"
     - @columns.each do |column|

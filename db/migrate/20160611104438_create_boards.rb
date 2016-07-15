@@ -4,7 +4,7 @@ class CreateBoards < ActiveRecord::Migration
       t.boolean :public, :default => false, :null => false
 
       t.string :tags, :array => true, :default => []
-      
+
       t.string :name, :null => false
 
       t.integer :column_width, :null => false, :default => 200

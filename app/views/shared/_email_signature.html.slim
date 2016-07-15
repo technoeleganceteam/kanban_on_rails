@@ -1,7 +1,7 @@
-#sig-container style=('margin-top: 15px;padding-top: 6px; border-top: 1px dashed #ddd;') 
-  #photoWrapper style=('float:left; margin: 2px 5px 5px 0; padding-right: 5px;') 
+#sig-container style=('margin-top: 15px;padding-top: 6px; border-top: 1px dashed #ddd;')
+  #photoWrapper style=('float:left; margin: 2px 5px 5px 0; padding-right: 5px;')
     img#sigPhoto height='65px' src="#{ Settings.site_url }/mailicons/kanban_on_railsicon.png" width='65px'
-  #sigDetailsWrapper style=('margin-top:0px; margin-left: 74px;') 
+  #sigDetailsWrapper style=('margin-top:0px; margin-left: 74px;')
     p style=('font-family: Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #333; margin-top:0; margin-left:0; padding-left:0;')
       strong
         span#sigName = t '.info'
@@ -11,7 +11,7 @@
       br
       span
         a#sigEmail href="mailto:#{ Settings.mailer.from }" style='color:#428BCA;' = Settings.mailer.from
-    p#sigCompanyWrapper style=('font-family: Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #333;') 
+    p#sigCompanyWrapper style=('font-family: Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #333;')
       strong
         span#sigCompany = t '.technoelegance'
       br
@@ -20,8 +20,8 @@
       br
     p style=('font-family: Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #333;')
       span#kanban_on_railsIcon
-        a href="#{ Settings.site_url }" 
+        a href="#{ Settings.site_url }"
           img height='20px' src="#{ Settings.site_url }/mailicons/kanban_on_railsicon.png" width='20px'
       span#githubIcon
-        a href="#{ Settings.github_repository_url }" 
+        a href="#{ Settings.github_repository_url }"
           img height='20px' src="#{ Settings.site_url }/mailicons/github_circle_black-20.png" width='20px'

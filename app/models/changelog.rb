@@ -12,6 +12,8 @@ class Changelog < ActiveRecord::Base
 
   validates :last_commit_date, :presence => true
 
+  delegate :emails_for_reports, :to => :project, :prefix => true
+
   def close_issues
     pull_requests.map(&:issues).flatten.uniq.each do |issue|
       next unless issue.provider_id?
