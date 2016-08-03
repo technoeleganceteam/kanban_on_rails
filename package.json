@@ -1,0 +1,32 @@
+{
+  "name": "kanban_on_rails",
+  "version": "1.0.0",
+  "description": "Open source service for Kanban boards with Github, Bitbucket and Gitlab integrations https://kanbanonrails.com/",
+  "scripts": {
+    "coffeelint": "$(npm bin)/coffeelint .",
+    "sass-lint": "$(npm bin)/sass-lint app/assets/stylesheets/**/**.sass -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technoeleganceteam/kanban_on_rails.git"
+  },
+  "keywords": [
+    "Kanban",
+    "RoR",
+    "Project",
+    "management"
+  ],
+  "author": "German Kopylov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technoeleganceteam/kanban_on_rails/issues"
+  },
+  "homepage": "https://github.com/technoeleganceteam/kanban_on_rails#readme",
+  "devDependencies": {
+    "coffeelint": "^1.15.7",
+    "sass-lint": "^1.8.2",
+    "stylelint": "^7.1.0",
+    "stylelint-config-standard": "^12.0.0",
+    "stylelint-scss": "^1.3.4"
+  }
+}

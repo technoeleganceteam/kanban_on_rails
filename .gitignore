@@ -2,6 +2,7 @@
 /log/*.log
 /tmp
 /coverage
+/node_modules
 
 config/settings.local.yml
 config/settings/*.local.yml

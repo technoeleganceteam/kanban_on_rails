@@ -1,11 +1,10 @@
-language: ruby
-rvm:
-  - 2.3.1
 script:
   - bundle exec rake spec
   - bundle exec rubocop -c .rubocop.yml
   - bundle exec rails_best_practices
   - bundle exec brakeman
+  - npm run sass-lint
+  - npm run coffeelint
 services:
   - postgresql
   - redis-server
