@@ -69,8 +69,8 @@ After installation packages listed above you should clone this github repository
 Easiest way is to clone this repository to your computer, check that your server meets dependencies listed above and run ```cap deploy production``` from your computer. You can also create Github, Bitbucket or Gitlab Oauth app and specify it credentials in omniauth section in ```config/settings.local.yml``` on your server.
 ### How to integrate with your own Gitlab server
 If you'd like to integrate with your own Gitlab server, first you must deploy this service to your server too and then you must specify Settings.omniauth.gitlab.client_options of gitlab service. It contains 3 keys: ```site```(url of your gitlab service), ```authorize_url```(usually '/oauth/authorize') and ```token_url```(usually '/oauth/token'). After this you could sign in with your Gitlab service and use your own Gitlab service api to sync your projects. Your should alse set your Gitlab api endpoint url in ```Settings.gitlab_endpoint```. 
-### How to run test suite
-After local installation you can run specs with command ```rake spec```
+### How to run test suite and lints
+After local installation you can run specs with command ```rake spec```. You can run all specs and lints with command ```rake kanban_on_rails:run_all_specs_and_lints```.
 ### How to contribute
 Fork this repository, create a branch with some feature or bug fix, ensure that all tests are passed by running command ```rake spec``` push your branch and then create Pull Request for this repository.
 ### Support the project
