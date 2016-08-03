@@ -27,9 +27,8 @@ set :deploy_to, '/home/deployer/kanbanonrails'
 set :linked_files, fetch(:linked_files, []).push('config/settings.local.yml')
 
 # Default value for linked_dirs is []
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
 set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids',
-  'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+  'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/assets')
 
 set :bundle_binstubs, -> { shared_path.join('bin') }
 
