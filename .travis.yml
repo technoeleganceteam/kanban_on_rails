@@ -1,3 +1,5 @@
+before_script:
+  - npm install
 script:
   - bundle exec rake spec
   - bundle exec rubocop -c .rubocop.yml
