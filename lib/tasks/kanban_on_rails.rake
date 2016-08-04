@@ -9,6 +9,8 @@ namespace :kanban_on_rails do
 
     sh('bundle exec brakeman')
 
-    sh('coffeelint .')
+    sh('npm run coffeelint')
+
+    sh('npm run sass-lint')
   end
 end

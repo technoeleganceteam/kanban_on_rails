@@ -1,9 +1,12 @@
+$blue: #00f
+
+$grey: rgba(0, 0, 0, .2)
+
 .width-100-percent
   width: 100%
 
 body
   overflow-y: scroll
-  overflow: -moz-scrollbars-vertical
 
 .select2-search--inline
   width: 100% !important
@@ -12,24 +15,22 @@ body
   width: 100% !important
 
 .blue
-  color: blue
+  color: $blue
 
-.cell div
-  margin: 5px
-  padding: 10px
-  background-color: rgba(0, 0, 0, 0.2)
-  -webkit-transition: opacity 0.4s ease-in-out
-  transition: opacity 0.4s ease-in-out
+.cell
+  div
+    background-color: $grey
+    margin: 5px
+    padding: 10px
+    transition: opacity .4s ease-in-out
 
 .handle
   cursor: move
-  cursor: grab
-  cursor: -webkit-grab
 
 .truncate
-  white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
+  white-space: nowrap
 
 .word-wrap
   word-wrap: break-word
