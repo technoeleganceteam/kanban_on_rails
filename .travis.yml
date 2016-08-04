@@ -1,5 +1,3 @@
-env:
-  - NODE_JS_VERSION=4.4.7
 before_script:
   - npm install -g sass-lint
   - npm install -g coffeelint

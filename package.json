@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Open source service for Kanban boards with Github, Bitbucket and Gitlab integrations https://kanbanonrails.com/",
   "scripts": {
-    "coffeelint": "$(npm bin)/coffeelint app/assets/javascripts/**/**.coffee",
+    "coffeelint": "$(npm bin)/coffeelint -r app/assets/javascripts",
     "sass-lint": "$(npm bin)/sass-lint app/assets/stylesheets/**/**.sass -v"
   },
   "repository": {
