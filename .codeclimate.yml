@@ -10,3 +10,8 @@ engines:
 ratings:
   paths:
     - "**.rb"
+    - "**.coffee"
+
+exclude_paths:
+  - node_modules/**/*
+  - spec/**/*
