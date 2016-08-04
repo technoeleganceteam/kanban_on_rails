@@ -1,8 +1,11 @@
+env:
+  - NODE_JS_VERSION=4.4.7
 before_script:
   - npm install -g sass-lint
   - npm install -g coffeelint
 install:
   - npm install
+  - bundle install
 script:
   - bundle exec rake spec
   - bundle exec rubocop -c .rubocop.yml
