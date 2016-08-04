@@ -1,4 +1,7 @@
 before_script:
+  - npm install -g sass-lint
+  - npm install -g coffeelint
+install:
   - npm install
 script:
   - bundle exec rake spec
