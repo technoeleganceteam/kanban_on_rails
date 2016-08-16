@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/pascalw/rack-offline.git
+  revision: c4ce1666ac35adb9b17dbd5bf585e55d36e24c5a
+  branch: rails4-support
+  specs:
+    rack-offline (0.6.4)
+
+GIT
   remote: https://github.com/rails/actioncable.git
   revision: 265535ce93402d81cf621ef6c794cd9d25bc279e
   ref: 265535
@@ -566,6 +573,7 @@ DEPENDENCIES
   puma
   quiet_assets
   rack-attack
+  rack-offline!
   rails (= 4.2.7.1)
   rails-assets-dragula!
   rails-assets-js-cookie!
