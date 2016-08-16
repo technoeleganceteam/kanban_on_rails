@@ -1,5 +1,5 @@
 doctype html
-html lang = '#{ t "#{ I18n.locale }_iso" }'
+html lang = '#{ t "#{ I18n.locale }_iso" }' manifest = ('/application.manifest' if Rails.env.production?)
   head
     meta charset='utf-8'
 
