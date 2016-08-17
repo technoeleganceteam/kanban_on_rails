@@ -3,18 +3,6 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
-  if Rails.env.production?
-    offline = Rack::Offline.configure do
-      cache ActionController::Base.helpers.asset_path('application.css')
-
-      cache ActionController::Base.helpers.asset_path('application.js')
-
-      network '*'
-    end
-
-    get '/application.manifest' => offline
-  end
-
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/admin/sidekiq'
   end

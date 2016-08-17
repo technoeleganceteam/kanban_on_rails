@@ -37,7 +37,6 @@ gem 'bitbucket_rest_api', :git => 'https://github.com/technoeleganceteam/bitbuck
 gem 'postmark-rails'
 gem 'omniauth-gitlab'
 gem 'gitlab'
-gem 'rack-offline', :github => 'pascalw/rack-offline', :branch => 'rails4-support'
 
 gem 'sass-rails'
 gem 'uglifier'
