@@ -8,7 +8,7 @@ module EmptyArrayRemovable
   private
 
   def remove_empty_arrays
-    attributes.keys.each do |attribute|
+    attributes.each_key do |attribute|
       if self[attribute].is_a?(Array) && self[attribute].present?
         self[attribute] = self[attribute].reject(&:blank?)
       end
