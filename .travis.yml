@@ -5,12 +5,7 @@ install:
   - npm install
   - bundle install
 script:
-  - bundle exec rake spec
-  - bundle exec rubocop -c .rubocop.yml
-  - bundle exec rails_best_practices
-  - bundle exec brakeman
-  - npm run sass-lint
-  - npm run coffeelint
+  - bundle exec rake kanban_on_rails:run_all_specs_and_lints
 services:
   - postgresql
   - redis-server
