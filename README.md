@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/technoeleganceteam/kanban_on_rails/badge.svg?branch=master)](https://coveralls.io/github/technoeleganceteam/kanban_on_rails?branch=master)
 [![Code Climate](https://codeclimate.com/github/technoeleganceteam/kanban_on_rails/badges/gpa.svg)](https://codeclimate.com/github/technoeleganceteam/kanban_on_rails)
 [![security](https://hakiri.io/github/technoeleganceteam/kanban_on_rails/master.svg)](https://hakiri.io/github/technoeleganceteam/kanban_on_rails/master)
-[![Website](https://img.shields.io/website/https/kanbanonrails.com.svg?maxAge=2592000)](https://img.shields.io/website/https/kanbanonrails.com.svg?maxAge=2592000)
+[![Website](https://img.shields.io/website/https/kanbanonrails.com.svg?maxAge=2592000)](https://kanbanonrails.com)
 
 **KanbanOnRails** is a complete open source solution for creating Kanban boards and project management.
 
