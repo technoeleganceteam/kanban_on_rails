@@ -62,13 +62,13 @@ module ApplicationHelper
   def subtask_info_for_report(subtask)
     "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" \
       "#{ "[#{ subtask.story_points }] " if subtask.story_points.present? }" \
-      "#{ subtask.description } \n"
+      "#{ subtask.description }\n"
   end
 
   def pull_request_info_for_report(pull_request)
     "#{ pull_request.title } " \
       "([##{ pull_request.number_from_provider }](#{ pull_request.url_from_provider }) " \
-      "#{ t 'changelogs.changelog.by' } [@#{ pull_request.created_by }](#{ pull_request.author_url })) \n"
+      "#{ t 'changelogs.changelog.by' } [@#{ pull_request.created_by }](#{ pull_request.author_url }))\n"
   end
 
   def issue_info_for_report(issue)

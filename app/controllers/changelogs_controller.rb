@@ -9,10 +9,7 @@ class ChangelogsController < ApplicationController
 
   def show
     respond_to do |format|
-      format.text do
-        render :partial => 'changelogs/changelog_raw_md', :collection => [@changelog], :layout => false,
-          :formats => [:html], :as => :changelog
-      end
+      format.text { render :layout => false, :formats => [:html] }
 
       format.html { render }
     end

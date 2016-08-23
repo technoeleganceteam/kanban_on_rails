@@ -75,6 +75,7 @@ group :development do
   gem 'rails_best_practices'
   gem 'reek'
   gem 'slim_lint'
+  gem 'mdl'
 end
 
 group :development, :test do

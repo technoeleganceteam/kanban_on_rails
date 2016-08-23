@@ -14,6 +14,8 @@ class Changelog < ActiveRecord::Base
 
   delegate :emails_for_reports, :to => :project, :prefix => true
 
+  delegate :changelog_filename, :to => :project, :prefix => true
+
   def close_issues
     pull_requests.map(&:issues).flatten.uniq.each do |issue|
       next unless issue.provider_id?
