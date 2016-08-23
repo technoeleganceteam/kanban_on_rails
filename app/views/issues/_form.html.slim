@@ -1,4 +1,6 @@
-= form_for [current_user, issue], :remote => remote ||= nil, :html => { :id => 'issue_form' } do |form|
+= form_for [current_user, issue], :remote => (defined?(remote) ? remote : nil),
+  :html => { :id => 'issue_form' } do |form|
+
   = render 'shared/form_errors', :item => issue
 
   .form-group
@@ -27,7 +29,7 @@
       options_for_select(form.object.tags, :selected => form.object.tags), {},
       :multiple => true, :class => 'form-control issue_tags'
 
-  - if !issue.persisted?
+  - unless issue.persisted?
     .form-group
       label for = 'project' = t '.project'
 

@@ -23,4 +23,8 @@ class Changelog < ActiveRecord::Base
       issue.send("#{ issue.provider }_update_issue", project.send("#{ project.provider }_client_for_changelogs"))
     end
   end
+
+  def sorted_pull_request_subtasks
+    pull_request_subtasks.sort_by { |item| Settings.story_point_values.index(item) }
+  end
 end

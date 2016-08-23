@@ -142,6 +142,8 @@ FactoryGirl.define do
 
     title 'Some title'
 
+    id_from_provider '1'
+
     changelog
 
     project
@@ -154,6 +156,8 @@ FactoryGirl.define do
   end
 
   factory :pull_request_subtask do
+    description 'Subtask description'
+
     pull_request
   end
 end

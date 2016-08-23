@@ -35,6 +35,47 @@ module ApplicationHelper
     user.send("has_#{ provider }_account") && user.send("sync_with_#{ provider }") == true
   end
 
+  def gitlab_issue_link(gitlab_full_name, gitlab_issue_id)
+    "#{ Settings.gitlab_base_url }/#{ gitlab_full_name }/issues/#{ gitlab_issue_id }"
+  end
+
+  def bitbucket_issue_link(bitbucket_full_name, bitbucket_issue_id)
+    "#{ Settings.bitbucket_base_url }/#{ bitbucket_full_name }/issues/#{ bitbucket_issue_id }"
+  end
+
+  def feedback_form_name(feedback)
+    if feedback.name?
+      feedback.name
+    else
+      user_signed_in? ? current_user.name : feedback.name
+    end
+  end
+
+  def feedback_form_email(feedback)
+    if feedback.email?
+      feedback.email
+    else
+      user_signed_in? ? current_user.email : feedback.email
+    end
+  end
+
+  def subtask_info_for_report(subtask)
+    "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" \
+      "#{ "[#{ subtask.story_points }] " if subtask.story_points.present? }" \
+      "#{ subtask.description } \n"
+  end
+
+  def pull_request_info_for_report(pull_request)
+    "#{ pull_request.title } " \
+      "([##{ pull_request.number_from_provider }](#{ pull_request.url_from_provider }) " \
+      "#{ t 'changelogs.changelog.by' } [@#{ pull_request.created_by }](#{ pull_request.author_url })) \n"
+  end
+
+  def issue_info_for_report(issue)
+    "#{ issue.title } ([##{ issue.send("#{ issue.provider }_issue_number") }]" \
+      "(#{ issue.url_from_provider }))\n"
+  end
+
   private
 
   def authentications_index?

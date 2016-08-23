@@ -96,8 +96,6 @@ GEM
       uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
     cancancan (1.15.0)
-    cane (3.0.0)
-      parallel
     capistrano (3.5.0)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -288,7 +286,6 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
-    parallel (1.9.0)
     parser (2.3.1.2)
       ast (~> 2.2)
     passenger (5.0.28)
@@ -454,6 +451,11 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (~> 3.0)
+    slim_lint (0.8.2)
+      rake (>= 10, < 12)
+      rubocop (>= 0.36.0)
+      slim (~> 3.0)
+      sysexits (~> 1.1)
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.7.0)
@@ -466,6 +468,7 @@ GEM
     sshkit (1.11.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    sysexits (1.2.0)
     temple (0.7.7)
     term-ansicolor (1.3.2)
       tins (~> 1.0)
@@ -521,7 +524,6 @@ DEPENDENCIES
   bullet
   byebug
   cancancan
-  cane
   capistrano
   capistrano-passenger
   capistrano-rails
@@ -590,6 +592,7 @@ DEPENDENCIES
   simplecov
   sinatra
   slim-rails
+  slim_lint
   spring
   sprockets
   therubyracer

@@ -2,24 +2,22 @@
   = render 'shared/form_errors', :item => @feedback
 
   .form-group
-    label.control-label for = 'feedback_name' = t '.feedback_name'
+    label.control-label for = 'feedback_name' = t('.feedback_name')
 
-    = form.text_field :name, :value => @feedback.name? ? @feedback.name : \
-      (user_signed_in? ? current_user.name : @feedback.name),
+    = form.text_field :name, :value => feedback_form_name(@feedback),
       :class => 'form-control', :required => true
   .form-group
-    label.control-label for = 'feedback_email' = t '.feedback_email'
+    label.control-label for = 'feedback_email' = t('.feedback_email')
 
-    = form.email_field :email, :value => @feedback.email? ? @feedback.email : \
-      (user_signed_in? ? current_user.email : @feedback.email),
+    = form.email_field :email, :value => feedback_form_email(@feedback),
       :class => 'form-control', :required => true
   .form-group
-    label.control-label for = 'feedback_content' = t '.feedback_content'
+    label.control-label for = 'feedback_content' = t('.feedback_content')
 
     = form.text_area :content, :class => 'form-control', :required => true
   - unless user_signed_in?
     .form-group
-      label.control-label for = 'feedback_recaptcha' = t '.feedback_recaptcha'
+      label.control-label for = 'feedback_recaptcha' = t('.feedback_recaptcha')
 
       = recaptcha_tags :ajax => true, :hl => I18n.locale
   = link_to (t '.cancel'), root_url, :class => 'btn btn-default'

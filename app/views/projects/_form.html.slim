@@ -1,4 +1,4 @@
-= form_for [current_user, project ||= Project.new], :remote => remote ||= nil,
+= form_for [current_user, project ||= Project.new], :remote => (defined?(remote) ? remote : nil),
   :html => { :id => 'project_form' } do |form|
 
   = render 'shared/form_errors', :item => project
@@ -63,14 +63,14 @@
     label for = 'changelog_locale' = t '.changelog_locale'
 
     = form.select :changelog_locale, language_options_for_settings_select, {},
-      { :class => 'form-control', :id => 'locale' }
+      :class => 'form-control', :id => 'locale'
 
   .form-group
     label for = 'emails_for_reports' = t '.emails_for_reports'
 
     = form.select :emails_for_reports,
       options_for_select(form.object.emails_for_reports.tap { |t| t.delete('') },
-      :selected => form.object.emails_for_reports.tap { |t| t.delete('') }), { },
+      :selected => form.object.emails_for_reports.tap { |t| t.delete('') }), {},
       :multiple => true, :class => 'form-control emails_for_reports'
 
   hr

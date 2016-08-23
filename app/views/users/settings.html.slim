@@ -16,6 +16,6 @@
 
       .form-group
         = form.select :locale, language_options_for_settings_select, {},
-          { :class => 'form-control', :id => 'locale' }
+          :class => 'form-control', :id => 'locale'
 
       = form.submit (t '.submit'), :class => 'btn btn-success'

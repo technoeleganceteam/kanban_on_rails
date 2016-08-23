@@ -1,4 +1,4 @@
-= form_for [current_user, board ||= Board.new], :remote => remote ||= nil,
+= form_for [current_user, board ||= Board.new], :remote => (defined?(remote) ? remote : nil),
   :html => { :id => 'board_form' } do |form|
 
   = render 'shared/form_errors', :item => board

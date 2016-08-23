@@ -60,7 +60,7 @@
     li
       = link_to destroy_user_session_url, :method => :delete do
         i.fa.fa-sign-out
-    li class = '#{ 'active' if params[:action] == 'show' && params[:controller] == 'users' &&
+    li class = '#{ 'active' if params[:action] == 'show' && params[:controller] == 'users' &&\
       params[:id].to_i == current_user.id }'
 
       = link_to user_url(current_user)

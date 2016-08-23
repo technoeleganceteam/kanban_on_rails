@@ -19,12 +19,8 @@ h2 = "#{ changelog.tag_name } (#{ changelog.last_commit_date.strftime('%d.%m.%Y 
   h3 = t '.detailed_changes'
 
   ol
-    - changelog.pull_request_subtasks.sort_by { |item| Settings.story_point_values.index(item) }.\
-      each_with_index do |subtask, index|
-
-      li = "#{ "[#{ subtask.task_type }]" if subtask.task_type.present? }" +\
-        "#{ "[#{ subtask.story_points }]" if subtask.story_points.present? }" +\
-        " #{ subtask.description } \n"
+    - changelog.sorted_pull_request_subtasks.each do |subtask|
+      li = subtask_info_for_report(subtask)
 
 - if changelog.project.include_issues?
   h3 = t '.issues'
