@@ -27,7 +27,8 @@ class Project < ActiveRecord::Base
 
   has_many :changelogs, :dependent => :destroy
 
-  validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true
+  validates :name, :changelog_filename,
+    :length => { :maximum => Settings.max_string_field_size }, :presence => true
 
   validates :changelog_locale, :presence => true, :inclusion => I18n.available_locales.map(&:to_s)
 

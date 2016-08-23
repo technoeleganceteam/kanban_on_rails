@@ -42,7 +42,7 @@ RSpec.describe ChangelogsController, :type => :controller do
     describe 'GET show as TEXT' do
       before { get :show, :project_id => project, :id => changelog, :format => :text }
 
-      it { should render_template 'changelogs/_changelog_raw_md' }
+      it { should render_template :show }
     end
 
     describe 'GET sync' do

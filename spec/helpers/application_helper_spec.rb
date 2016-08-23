@@ -86,7 +86,7 @@ describe ApplicationHelper, :type => :helper do
   describe '#subtask_info_for_report' do
     before { @subtask = create :pull_request_subtask }
 
-    it { expect(helper.subtask_info_for_report(@subtask)).to eq "Subtask description \n" }
+    it { expect(helper.subtask_info_for_report(@subtask)).to eq "Subtask description\n" }
   end
 
   describe '#pull_request_info_for_report' do
@@ -94,7 +94,7 @@ describe ApplicationHelper, :type => :helper do
 
     it do
       expect(helper.pull_request_info_for_report(@pull_request)).
-        to eq "Some title ([#](https://gitlab.com/test) by [@]()) \n"
+        to eq "Some title ([#](https://gitlab.com/test) by [@]())\n"
     end
   end
 
