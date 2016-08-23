@@ -5,5 +5,5 @@
 
   = link_to (t ".stop_sync_with_#{ provider }"),
     send("stop_sync_with_#{ provider }_user_projects_url", current_user),
-    :class => "btn btn-success btn-xs #{ 'hidden' unless show_stop_sync_button(current_user, provider)}",
+    :class => "btn btn-success btn-xs #{ 'hidden' unless show_stop_sync_button(current_user, provider) }",
     :remote => true, :id => "stop_sync_with_#{ provider }"

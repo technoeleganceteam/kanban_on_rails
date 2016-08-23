@@ -32,14 +32,14 @@ class PullRequest < ActiveRecord::Base
 
   def bind_to_issues
     Settings.issue_binding_words.each do |binding_word|
-      body.scan(Regexp.new("#{ binding_word }\\s+\\w*#+\\d+")) do |connection|
+      body.to_s.scan(Regexp.new("#{ binding_word }\\s+\\w*#+\\d+")) do |connection|
         bind_to_issue(connection.split('#').last)
       end
     end
   end
 
   def fetch_or_create_subtasks
-    fetched_subtask_ids = body.scan(/^[0-9]*\.*\s*\[\w*\]+.*/).map do |subtask_content|
+    fetched_subtask_ids = body.to_s.scan(/^[0-9]*\.*\s*\[\w*\]+.*/).map do |subtask_content|
       pull_request_subtasks.where(parse_subtask_content(subtask_content)).first_or_create
     end.compact.map(&:id)
 

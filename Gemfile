@@ -74,7 +74,7 @@ group :development do
   gem 'brakeman', :require => false
   gem 'rails_best_practices'
   gem 'reek'
-  gem 'cane'
+  gem 'slim_lint'
 end
 
 group :development, :test do

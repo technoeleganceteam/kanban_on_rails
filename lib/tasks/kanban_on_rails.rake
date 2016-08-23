@@ -11,6 +11,8 @@ namespace :kanban_on_rails do
 
     sh('bundle exec fasterer')
 
+    sh('bundle exec slim-lint app/views')
+
     sh('npm run coffeelint')
 
     sh('npm run sass-lint')

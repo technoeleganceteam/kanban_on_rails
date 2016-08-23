@@ -10,7 +10,7 @@
     .col-md-3
       = f.select :tags,
         options_for_select(f.object.tags.tap { |t| t.delete('') },
-        :selected => f.object.tags.tap { |t| t.delete('') }), { },
+        :selected => f.object.tags.tap { |t| t.delete('') }), {},
         :multiple => true, :class => 'form-control section_tags', :style => 'width: 100%'
 
     .col-md-2
