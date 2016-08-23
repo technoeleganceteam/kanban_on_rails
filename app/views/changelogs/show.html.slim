@@ -1,1 +1,5 @@
-= render @changelog
+- if request.format == :text
+  = "# #{ @changelog.project.changelog_filename }\n"
+  = render :partial => 'changelogs/changelog_raw_md', :collection => [@changelog], :as => :changelog
+- else
+  = render @changelog

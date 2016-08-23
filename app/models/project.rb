@@ -84,6 +84,8 @@ class Project < ActiveRecord::Base
     file_content = view.render(:partial => 'changelogs/changelog_raw_md',
       :collection => changelogs.order('last_commit_date DESC'), :as => :changelog)
 
+    file_content.prepend("# #{ changelog_filename }\n")
+
     send("write_changelog_to_#{ provider }_repository", file_content)
   end
 

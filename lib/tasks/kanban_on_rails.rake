@@ -13,6 +13,8 @@ namespace :kanban_on_rails do
 
     sh('bundle exec slim-lint app/views')
 
+    sh('bundle exec mdl -s config/markdown_ruleset.rb *.md')
+
     sh('npm run coffeelint')
 
     sh('npm run sass-lint')
