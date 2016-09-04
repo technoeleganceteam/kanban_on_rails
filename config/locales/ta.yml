@@ -12,6 +12,7 @@ ta:
   release: வெளியீடு
   changelog_has_been_resent: சேஞ்ச் வெறுப்படையாதீர்கள் வருகிறது
   changelogs_has_been_synced: சேஞ்ச் ஒத்திசைக்கப்பட்டதை வருகிறது
+  update_changelog_up_to: புதுப்பிக்கப்பட்டது வரை சேஞ்ச்
   shared:
     navbar:
       sign_in: உள்நுழை

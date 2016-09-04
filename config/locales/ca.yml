@@ -13,6 +13,7 @@ ca:
   release: alliberament
   changelog_has_been_resent: de canvis ha estat reenviat
   changelogs_has_been_synced: de canvis s'ha sincronitzat
+  update_changelog_up_to: actualització changelog fins
   shared:
     navbar:
       sign_in: Entrada
@@ -28,7 +29,6 @@ ca:
       available_languages: Idiomes disponibles
     user_edit_menu:
       profile: Perfil
-      site_settings: configuració del lloc
       services: Serveis
     form_errors:
       password: contrasenya

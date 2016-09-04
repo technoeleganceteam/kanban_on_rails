@@ -13,6 +13,7 @@ es:
   release: liberación
   changelog_has_been_resent: de cambios ha sido reenviado
   changelogs_has_been_synced: de cambios se ha sincronizado
+  update_changelog_up_to: actualización changelog hasta
   shared:
     navbar:
       sign_in: Entrar
@@ -28,7 +29,6 @@ es:
       available_languages: Idiomas disponibles
     user_edit_menu:
       profile: Perfil
-      site_settings: configuración del sitio
       services: Servicios
     form_errors:
       password: contraseña

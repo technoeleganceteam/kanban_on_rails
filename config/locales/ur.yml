@@ -12,9 +12,10 @@ ur:
   release: رہائی
   changelog_has_been_resent: changelog کے غصہ کیا گیا ہے
   changelogs_has_been_synced: changelog کے موافقت پذیر کیا گیا ہے
+  update_changelog_up_to: اپ ڈیٹ کرنے کے لئے اپ CHANGELOG
   shared:
     navbar:
-      sign_in: کیجئے
+      sign_in: سائن ان کریں
       sign_up: سائن اپ کریں
       projects: پروجیکٹس
       issues: مسائل

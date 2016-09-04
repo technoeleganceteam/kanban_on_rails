@@ -13,6 +13,7 @@ fa:
   release: انتشار
   changelog_has_been_resent: تغییرات دوباره ارسال شد
   changelogs_has_been_synced: تغییرات تا همگام سازی شده است
+  update_changelog_up_to: به روز رسانی تغییرات تا
   shared:
     navbar:
       sign_in: ورود

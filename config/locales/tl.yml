@@ -14,6 +14,7 @@ tl:
   release: release
   changelog_has_been_resent: Changelog ay magalit
   changelogs_has_been_synced: Changelog na-sync
+  update_changelog_up_to: Update changelog hanggang sa
   shared:
     navbar:
       sign_in: Mag-sign in

@@ -13,6 +13,7 @@ bn:
   release: রিলিজ
   changelog_has_been_resent: পরিবর্তণের এতে ক্ষুব্ধ হয়েছে
   changelogs_has_been_synced: পরিবর্তণের সিঙ্ক হয়েছে
+  update_changelog_up_to: আপডেট পর্যন্ত পরিবর্তণের
   shared:
     navbar:
       sign_in: নিদর্শন

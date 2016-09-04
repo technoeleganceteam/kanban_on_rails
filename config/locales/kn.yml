@@ -12,6 +12,7 @@ kn:
   release: ಬಿಡುಗಡೆ
   changelog_has_been_resent: ಚೇಂಜ್ಲಾಗ್ ಅಸಮಾಧಾನಗೊಂಡ ಬಂದಿದೆ
   changelogs_has_been_synced: ಚೇಂಜ್ಲಾಗ್ ಸಿಂಕ್ ಮಾಡಲಾಗಿದೆ
+  update_changelog_up_to: ಅಪ್ಡೇಟ್ ವರೆಗೆ ಚೇಂಜ್ಲಾಗ್ಗಳನ್ನು
   shared:
     navbar:
       sign_in: ಸೈನ್ ಇನ್

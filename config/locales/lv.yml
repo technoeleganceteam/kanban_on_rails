@@ -13,6 +13,7 @@ lv:
   release: release
   changelog_has_been_resent: Izmaiņu ir nosūtīts atkārtoti
   changelogs_has_been_synced: Izmaiņu ir sinhronizēta
+  update_changelog_up_to: Update Izmaiņu līdz
   shared:
     navbar:
       sign_in: Pierakstīties

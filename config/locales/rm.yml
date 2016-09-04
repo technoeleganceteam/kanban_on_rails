@@ -13,6 +13,7 @@ rm:
   release: liberação
   changelog_has_been_resent: Changelog foi reenviado
   changelogs_has_been_synced: Changelog foi sincronizado
+  update_changelog_up_to: Atualização changelog até
   shared:
     navbar:
       sign_in: Entrar
@@ -56,7 +57,7 @@ rm:
       select_column_tags: Selecionar tags coluna
       select_section_tags: Seleccione marcas de seção
       select_issue_tags: Selecionar tags emissão
-      emails_for_reports: e-mails tipo que receberá changelogs
+      emails_for_reports: Tipo e-mails que receberá changelogs
     email_signature:
       info: Informações
       mailer: Mailer
@@ -171,6 +172,7 @@ rm:
       section_order: Order
       or_include_all: ou incluir todos?
     column_fields:
+      column_name: Coluna
       remove_column: Remover coluna
       max_issues_count: questões Max contar na coluna
       column_tags: etiquetas Coluna

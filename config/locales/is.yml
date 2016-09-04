@@ -13,6 +13,7 @@ is:
   release: út
   changelog_has_been_resent: Breytingasaga hefur verið endursent
   changelogs_has_been_synced: Breytingasaga hefur verið samstilltar
+  update_changelog_up_to: Update changelog að
   shared:
     navbar:
       sign_in: Skrá inn

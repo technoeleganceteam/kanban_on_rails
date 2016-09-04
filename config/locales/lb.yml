@@ -13,6 +13,7 @@ lb:
   release: Fräiloossung
   changelog_has_been_resent: ChangelogLanguage ass fir jiddfereen
   changelogs_has_been_synced: ChangelogLanguage gouf synchroniséiert
+  update_changelog_up_to: Update ChangelogLanguage bis
   shared:
     navbar:
       sign_in: Umellen

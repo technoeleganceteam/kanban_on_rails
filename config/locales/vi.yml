@@ -14,6 +14,7 @@ vi:
   release: phát hành
   changelog_has_been_resent: Changelog đã được gửi lại
   changelogs_has_been_synced: Changelog đã được đồng bộ hóa
+  update_changelog_up_to: Cập nhật changelog lên đến
   shared:
     navbar:
       sign_in: Đăng nhập

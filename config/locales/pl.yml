@@ -13,6 +13,7 @@ pl:
   release: uwalnianiu
   changelog_has_been_resent: zmian zostało wysłane jeszcze raz
   changelogs_has_been_synced: zmian została zsynchronizowana
+  update_changelog_up_to: Aktualizacja changelog do
   shared:
     navbar:
       sign_in: Zaloguj się
@@ -263,7 +264,6 @@ pl:
     column_fields:
       remove_column: Usuń kolumnę
       max_issues_count: Maks kwestie liczyć w kolumnie
-      column_tags: znaczniki kolumn
       column_order: Zamówienie
       backlog: Zaległości
     show:

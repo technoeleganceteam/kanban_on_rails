@@ -13,6 +13,7 @@ hr:
   release: izdanje
   changelog_has_been_resent: podmetnuto je poslana
   changelogs_has_been_synced: podmetnuto su sinkronizirani
+  update_changelog_up_to: Update podmetnuto do
   shared:
     navbar:
       sign_in: Prijava

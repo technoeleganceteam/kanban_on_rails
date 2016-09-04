@@ -12,6 +12,7 @@ uz:
   release: relizlar
   changelog_has_been_resent: Changelog qayta bo'ldi
   changelogs_has_been_synced: Changelog sinxronlanmoqda qilindi
+  update_changelog_up_to: yangilash qadar changelog
   shared:
     navbar:
       sign_in: Sign in

@@ -12,6 +12,7 @@ zh-CN:
   release: 发布
   changelog_has_been_resent: 更新日志已经重新发送
   changelogs_has_been_synced: 更新日志已同步
+  update_changelog_up_to: 更新的changelog达
   shared:
     navbar:
       sign_in: 登陆

@@ -13,6 +13,7 @@ cy:
   release: rhyddhau
   changelog_has_been_resent: Changelog wedi bod yn digio
   changelogs_has_been_synced: Changelog wedi cael ei synced
+  update_changelog_up_to: Diweddariad Changelog hyd at
   shared:
     navbar:
       sign_in: Mewngofnodi

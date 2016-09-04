@@ -13,6 +13,7 @@ uk:
   release: реліз
   changelog_has_been_resent: Змін було обурюватися
   changelogs_has_been_synced: Змін була синхронізована
+  update_changelog_up_to: Оновлення журналу змін до
   shared:
     navbar:
       sign_in: Вхід
@@ -28,14 +29,14 @@ uk:
     languages_select_modal:
       available_languages: Доступні мови
     user_edit_menu:
-      profile: профілю
+      profile: Профіль
       site_settings: Налаштування сайту
       services: Послуги
     form_errors:
       password: Пароль
       current_password: Поточний пароль
       name: Ім'я
-      base: База
+      base: Базовий
       title: Назва
       user_to_project_connection: Користувач проекту підключення
       user_to_board_connection: Користувач на борт з'єднання
@@ -55,9 +56,10 @@ uk:
       read_more: Детальніше
     javascript_global_variables:
       select_column_tags: Виберіть мітки стовпців
-      select_section_tags: Виберіть мітки розділу
+      select_section_tags: Виберіть теги розділу
       select_issue_tags: Виберіть теги випуск
-      emails_for_reports: листів типу, які ОТРИМАЙТЕ списків змін
+      emails_for_reports: Тип повідомлення електронної пошти, які ОТРИМАЙТЕ списків
+        змін
     email_signature:
       info: Інформація
       mailer: Мейлер
@@ -89,8 +91,8 @@ uk:
       password: Пароль
       save: Зберегти
     index:
-      project: проекту
-      users: користувачі
+      project: Проект
+      users: користувачів
       new: Новий
       board: Рада
     edit:
@@ -109,7 +111,7 @@ uk:
     update:
       your_profile_was_successfully_updated: Ваш профіль був успішно оновлений
     dashboard:
-      hello: Hello
+      hello: Привіт
       here_some_of_your_statistics: Ось деякі з вашої статистики
       projects: Проекти
       boards: Дошки
@@ -152,7 +154,7 @@ uk:
       generate_changelogs: Генерація списків змін
       include_detailed_changes: включає в себе докладні зміни, описані в висувними
         запитів
-      include_issues: Включення питань в списком змін
+      include_issues: Включити питання в списком змін
       include_pull_requests: Включити тягнути запитів в списком змін
       close_issues: Закрити зроблено питання
       emails_for_reports: Адреси електронної пошти для ОТРИМУВАТИ списків змін
@@ -179,7 +181,7 @@ uk:
       column_order: Замовити
     show:
       project: проекту
-      related_boards: Схожі дошки
+      related_boards: пов'язані дошки
       project_issues: питання проекту
       project_users: користувачів проекту
       new: Новий
@@ -212,12 +214,12 @@ uk:
       save: Зберегти
       body: Body
       enter_issue_body: Введіть випуск тіло
-      tags: Мітки
+      tags: Теги
       issue_order: Замовити
       bitbucket_issue_id: BitBucket Ідентифікатор проблеми
       github_issue_id: Github Ідентифікатор проблеми
       github_issue_number: Github номер випуску
-      project: Проект
+      project: проекту
       state: Держава
     index:
       issues: питання
@@ -232,7 +234,7 @@ uk:
     new:
       new_issue: Новий випуск
     issue_modal:
-      issue: Випуск
+      issue: випуск
   authentications:
     index:
       enabled_services: Включені послуги
@@ -249,7 +251,7 @@ uk:
       sign_up: зареєструватися
       and_use_it: і використовувати його.
       with_love: З любов'ю,
-      technoelegance_team: Technoelegance Team
+      technoelegance_team: Technoelegance команди
     index:
       all_news: Всі новини
       read_more: Детальніше
@@ -264,7 +266,7 @@ uk:
     form:
       name: Ім'я
       enter_board_name: Введіть ім'я дошка
-      columns: Колони
+      columns: Стовпці
       add: Додати
       sections: Розділи
       save: Зберегти
@@ -369,10 +371,10 @@ uk:
         ласка, запитайте новий
       expired: закінчився, будь ласка, запитайте новий
       not_found: не знайдені
-      not_locked: ні заблокований
+      not_locked: були незамкнені
       not_saved:
-        one: '1 помилка заборонена цей% {ресурс} з тих, що спасалися:'
-        other: "% {число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
+        one: '1 помилка заборонений цей% {ресурс} з тих, що спасалися:'
+        other: "{число} помилки заборонену цей% {ресурс} з тих, що спасалися:"
     bad_request:
       bad_request: Bad Request
       request_result: Запит результату
@@ -386,14 +388,14 @@ uk:
         слідувати через семантичних помилок
       go_to_root: Перейти до кореня
     not_found:
-      not_found: не найден
+      not_found: не знайдено
       request_result: Запит результату
       not_found_description: запитаний ресурс не може бути знайдений, але можуть бути
         доступні в майбутньому
       go_to_root: Перейти до кореня
     forbidden:
       forbidden: Заборонене
-      request_result: Запит результат
+      request_result: Запит результату
       forbidden_description: Це прохання було дійсний запит, але сервер відмовляється
         відповідати на нього
       go_to_root: Перейти до кореня
@@ -438,7 +440,7 @@ uk:
         welcome_to_kanban_on_rails: Ласкаво просимо в KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Ви можете підтвердити
           свою електронну пошту через посилання нижче
-        confirm_my_account: Підтвердити Email
+        confirm_my_account: Підтвердіть мій e-mail
       reset_password_instructions:
         hello: Привіт
         subject: Скидання пароля інструкції
@@ -448,7 +450,7 @@ uk:
         if_you_didnt_request_this_please_ignore_this_email: Якщо ви не замовляли це
           не звертайте уваги на цей лист.
       unlock_instructions:
-        subject: Розблокування Інструкції
+        subject: розблокування Інструкції
     omniauth_callbacks:
       failure: Неможливо перевірити справжність вас від {%} роду, тому що "% {причина}".
       success: успішно пройшов перевірку автентичності від {%} люб'язне увагу.
@@ -456,8 +458,8 @@ uk:
       no_token: Ви не можете отримати доступ до цієї сторінки, не приходячи від електронної
         пошти скидання пароля. Якщо ви прийшли з електронної пошти для скидання пароля,
         будь ласка, переконайтеся, що ви використовували повний URL за умови.
-      send_instructions: Ви отримаєте повідомлення електронної пошти з інструкціями
-        про те, як скинути пароль протягом декількох хвилин.
+      send_instructions: Ви отримаєте лист з інструкціями про те, як скинути пароль
+        протягом декількох хвилин.
       send_paranoid_instructions: Якщо вашу адресу електронної пошти існує в нашій
         базі даних, ви отримаєте посилання для відновлення пароля на вашу адресу електронної
         пошти протягом декількох хвилин.
@@ -470,7 +472,7 @@ uk:
         change_your_password: Змінити пароль
         new_password: Новий пароль
         confirm_password: Підтвердження пароля
-        change_password: Змінити
+        change_password: Зміна
     registrations:
       destroyed: Bye! Ваш обліковий запис була успішно скасовано. Ми сподіваємося
         побачити вас знову найближчим часом.
@@ -479,9 +481,9 @@ uk:
         вас в тому, що ваш обліковий запис ще не активовано.
       signed_up_but_locked: Ви підписалися успішно. Проте, ми не могли підписати вас
         в тому, що ваш обліковий запис буде заблокована.
-      signed_up_but_unconfirmed: по електронній пошті посилання для підтвердження
-        відправлено на вашу електронну адресу. Будь ласка, відкрийте посилання, щоб
-        активувати свій обліковий запис.
+      signed_up_but_unconfirmed: повідомлення з посиланням для підтвердження відправлено
+        на вашу електронну адресу. Будь ласка, відкрийте посилання, щоб активувати
+        свій обліковий запис.
       update_needs_confirmation: Ви оновили свій аккаунт успішно, але нам потрібно
         підтвердити свою нову адресу електронної пошти. Будь ласка, перевірте свою
         електронну пошту і натисніть на посилання підтвердження, щоб завершити підтвердивши

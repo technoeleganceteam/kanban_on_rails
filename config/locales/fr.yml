@@ -13,6 +13,7 @@ fr:
   release: libération
   changelog_has_been_resent: Changelog a été renvoyé
   changelogs_has_been_synced: Changelog a été synchronisé
+  update_changelog_up_to: changelog jusqu'à
   shared:
     navbar:
       sign_in: Connexion
@@ -52,7 +53,7 @@ fr:
     right_sidebar:
       news: Nouvelles
       all: Tous
-      read_more: Lire la suite
+      read_more: En savoir plus
     javascript_global_variables:
       select_column_tags: Sélectionnez les balises de colonnes
       select_section_tags: Sélectionnez balises de section
@@ -172,7 +173,7 @@ fr:
       section_order: Ordre
       or_include_all: Ou comprennent tous?
     column_fields:
-      remove_column: Retirer la colonne
+      remove_column: Supprimer la colonne
       max_issues_count: questions Max comptent dans la colonne
       column_tags: étiquettes de colonne
       column_order: Ordre
@@ -207,9 +208,9 @@ fr:
   issues:
     form:
       title: Titre
-      enter_issue_title: Entrez question titre
+      enter_issue_title: Entrez publication titre
       save: Sauvegarder
-      body: Body
+      body: corps
       enter_issue_body: Entrez corps d'émission
       tags: Balises
       issue_order: Ordre
@@ -239,7 +240,7 @@ fr:
       turned_off: désactivé
       turn_on: Allumez
       turn_off: Eteignez
-      turned_on: sous tension
+      turned_on: allumé
   news:
     1_we_have_just_launched_our_service:
       we_have_just_launched_our_service_title: Nous venons de lancer notre service!
@@ -295,7 +296,7 @@ fr:
       feedback_title: Commentaires
     form:
       feedback_name: Votre nom
-      feedback_email: Votre e-mail
+      feedback_email: Votre email
       feedback_content: Contenu
       cancel: Annuler
       send: Envoyer
@@ -330,7 +331,7 @@ fr:
       what_is_kanban_on_rails: Qu'est-ce KanbanOnRails?
       about_kanban_on_rails: KanbanOnRails est le service où vous pouvez créer des
         conseils Kanban et synchroniser avec Github ou Bitbucket
-      what_features_has_kanban_on_rails: Quelles fonctionnalités a KanbanOnRails?
+      what_features_has_kanban_on_rails: Quelles sont les caractéristiques a KanbanOnRails?
       kanban_on_rails_features: Vous pouvez synchroniser vos projets et des problèmes
         avec Github et Bitbucket, inviter des utilisateurs (pour les gestionnaires
         exemple) pour votre projet, le déployer sur votre propre serveur
@@ -438,7 +439,7 @@ fr:
         welcome_to_kanban_on_rails: Bienvenue à KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Vous pouvez confirmer
           votre e-mail via le lien ci-dessous
-        confirm_my_account: Confirmer mon Email
+        confirm_my_account: Valider ma Email
       reset_password_instructions:
         hello: Bonjour
         subject: instructions de réinitialisation de mot
@@ -468,7 +469,7 @@ fr:
         forgot_your_password: Récupérez votre mot de passe
         reset_password: Envoyer récupérer url
       edit:
-        change_your_password: Modifier votre mot de passe
+        change_your_password: Changez votre mot de passe
         new_password: Nouveau mot de passe
         change_password: Change
     registrations:
@@ -493,7 +494,7 @@ fr:
         password: Mot de passe
         register: Inscrivez-vous
     sessions:
-      signed_in: Signé en succès.
+      signed_in: Signé à succès.
       signed_out: Signé avec succès.
       new:
         sign_in: Connexion

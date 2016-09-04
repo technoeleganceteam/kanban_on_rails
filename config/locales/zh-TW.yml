@@ -12,6 +12,7 @@ zh-TW:
   release: 發布
   changelog_has_been_resent: 更新日誌已經重新發送
   changelogs_has_been_synced: 更新日誌已同步
+  update_changelog_up_to: 更新的changelog達
   shared:
     navbar:
       sign_in: 登陸

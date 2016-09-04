@@ -13,6 +13,7 @@ de:
   release: Release
   changelog_has_been_resent: Changelog wurde erneut gesendet
   changelogs_has_been_synced: Changelog wurde synchronisiert
+  update_changelog_up_to: "-Update Changelog bis"
   shared:
     navbar:
       sign_in: Anmelden
@@ -76,7 +77,7 @@ de:
       requests: Anfragen
       feedbacks: Bewertungen
     user_requests_navigation:
-      all: All
+      all: Alle
       my_requests: Meine Wünsche
   users:
     new:
@@ -147,7 +148,7 @@ de:
       column_width: Spaltenbreite
       column_height: Säulenhöhe
       github_repository_id: Github-Repository-ID
-      github_full_name: Github-Repository fullname
+      github_full_name: Github-Repository Vollername
       github_secret_token_for_hook: Gitlab geheime Token für Haken
       bitbucket_full_name: Bitbucket fullname
       bitbucket_secret_token_for_hook: Bitbucket geheime Token für Haken
@@ -155,9 +156,9 @@ de:
       changelogs: Changelogs
       changelogs_info: wenn Sie Changelogs behalten möchten
       generate_changelogs: generieren Changelogs
-      include_detailed_changes: Fügen Sie detaillierte Änderungen in Pull-Anforderungen
+      include_detailed_changes: enthalten detaillierte Änderungen in Pull-Anforderungen
         beschrieben
-      include_issues: gehören auch Fragen in Changelogs
+      include_issues: Fügen Sie Probleme in Changelogs
       include_pull_requests: Fügen Sie Pull-Anforderungen in Changelogs
       close_issues: Schließen getan Fragen
       emails_for_reports: E-Mails für recieving Changelogs
@@ -199,7 +200,7 @@ de:
       bitbucket_secret_token_for_hook: Bitbucket geheime Token für Haken
       gitlab_full_name: Gitlab fullname
       generate_changelogs: generieren Changelogs
-      include_detailed_changes: Fügen Sie detaillierte Änderungen in Pull-Anforderungen
+      include_detailed_changes: enthalten detaillierte Änderungen in Pull-Anforderungen
         beschrieben
       include_issues: gehören auch Fragen in Changelogs
       include_pull_requests: Fügen Sie Pull-Anforderungen in Changelogs
@@ -230,7 +231,7 @@ de:
       sync_with_bitbucket: Sync mit bitbucket
       new: New
     issue:
-      destroy: löschen
+      destroy: Löschen
       edit: bearbeiten
     edit:
       edit_issue: bearbeiten Ausgabe
@@ -249,8 +250,8 @@ de:
   news:
     1_we_have_just_launched_our_service:
       we_have_just_launched_our_service_title: wir unseren Service nur ins Leben gerufen!
-      we_have_just_launched_our_service_text: Heute haben wir unseren Service zu starten,
-        so kann jeder
+      we_have_just_launched_our_service_text: Heute werden wir unseren Service zu
+        starten, so kann jeder
       sign_up: anmelden
       and_use_it: und verwenden.
       with_love: Mit Liebe,
@@ -277,7 +278,7 @@ de:
       save: Speichern
       projects: Projekte
     section_fields:
-      section_name: Abschnittsname
+      section_name: Section name
       section_tags: Section-Tags
       section_order: bestellen
       or_include_all: Oder sind alle?
@@ -319,7 +320,7 @@ de:
   changelogs:
     changelog_raw_md:
       changes: Änderungen
-      detailed_changes: Detailänderungen
+      detailed_changes: Detaillierte Änderungen
       issues: Probleme
       by: durch
     changelog:
@@ -488,7 +489,7 @@ de:
         password_confirmation: Paßwortbestätigung
         register: Registrieren
     sessions:
-      signed_in: erfolgreich angemeldet.
+      signed_in: erfolgreich signiert.
       signed_out: erfolgreich abgemeldet.
       new:
         sign_in: Anmelden

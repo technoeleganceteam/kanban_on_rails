@@ -13,6 +13,7 @@ sl:
   release: javnost
   changelog_has_been_resent: Changelog je zamerijo
   changelogs_has_been_synced: Changelog sinhronizirani
+  update_changelog_up_to: Update seznam sprememb do
   shared:
     navbar:
       sign_in: Prijava

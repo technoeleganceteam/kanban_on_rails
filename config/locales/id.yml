@@ -13,6 +13,7 @@ id:
   release: rilis
   changelog_has_been_resent: Changelog telah dikirim ulang
   changelogs_has_been_synced: Changelog telah disinkronkan
+  update_changelog_up_to: Perbarui changelog hingga
   shared:
     navbar:
       sign_in: Masuk

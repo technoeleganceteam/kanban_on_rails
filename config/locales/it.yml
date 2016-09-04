@@ -13,6 +13,7 @@ it:
   release: rilascio
   changelog_has_been_resent: Changelog è stato reinviato
   changelogs_has_been_synced: Changelog è stato sincronizzato
+  update_changelog_up_to: aggiornamento changelog fino a
   shared:
     navbar:
       sign_in: Login

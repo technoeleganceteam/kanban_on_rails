@@ -13,6 +13,7 @@ sw:
   release: kutolewa
   changelog_has_been_resent: Changelog imekuwa atapewa
   changelogs_has_been_synced: Changelog imekuwa synced
+  update_changelog_up_to: Mwisho changelog hadi
   shared:
     navbar:
       sign_in: Ingia katika

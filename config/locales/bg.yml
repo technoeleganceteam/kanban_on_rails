@@ -13,6 +13,7 @@ bg:
   release: освобождаване
   changelog_has_been_resent: на промените е бил изпратен отново
   changelogs_has_been_synced: на промените е синхронизирана
+  update_changelog_up_to: Актуализация на промените до
   shared:
     navbar:
       sign_in: Вход

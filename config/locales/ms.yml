@@ -14,6 +14,7 @@ ms:
   release: pelepasan
   changelog_has_been_resent: Changelog telah dihantar semula
   changelogs_has_been_synced: Changelog telah disegerakkan
+  update_changelog_up_to: Update Changelog sehingga
   shared:
     navbar:
       sign_in: Log masuk

@@ -13,6 +13,7 @@ bs:
   release: release
   changelog_has_been_resent: promjena je ponovo pošalje
   changelogs_has_been_synced: promjena je sinhronizovane
+  update_changelog_up_to: Update promjena do
   shared:
     navbar:
       sign_in: Prijava

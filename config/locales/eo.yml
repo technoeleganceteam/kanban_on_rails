@@ -13,6 +13,7 @@ eo:
   release: liberigo
   changelog_has_been_resent: changelog estis resendita
   changelogs_has_been_synced: changelog estis synced
+  update_changelog_up_to: Ĝisdatigu changelog ĝis
   shared:
     navbar:
       sign_in: Ensaluti

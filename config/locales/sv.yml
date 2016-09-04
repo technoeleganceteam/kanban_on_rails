@@ -13,6 +13,7 @@ sv:
   release: frisättning
   changelog_has_been_resent: Ändringslogg har skickats om
   changelogs_has_been_synced: Ändringslogg har synkroniserats
+  update_changelog_up_to: Update ChangeLog upp till
   shared:
     navbar:
       sign_in: Logga in

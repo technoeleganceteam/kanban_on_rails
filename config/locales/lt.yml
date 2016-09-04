@@ -13,6 +13,7 @@ lt:
   release: spaudai
   changelog_has_been_resent: Failas buvo piktintis
   changelogs_has_been_synced: Failas buvo sinchronizuojami
+  update_changelog_up_to: Atnaujinti ChangeLog iki
   shared:
     navbar:
       sign_in: Registruotis

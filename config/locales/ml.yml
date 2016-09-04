@@ -12,6 +12,7 @@ ml:
   release: റിലീസ്
   changelog_has_been_resent: ചേയ്ഞ്ച്ലോഗ് നീരസപ്പെടത്തുക നടന്നിട്ടില്ല
   changelogs_has_been_synced: ചേയ്ഞ്ച്ലോഗ് സമന്വയിപ്പിച്ച
+  update_changelog_up_to: മാറ്റങ്ങള് വരെ കയറി അപ്ഡേറ്റ്
   shared:
     navbar:
       sign_in: സൈൻ

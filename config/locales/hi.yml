@@ -13,6 +13,7 @@ hi:
   release: रिलीज
   changelog_has_been_resent: चैंज क्रोध किया गया है
   changelogs_has_been_synced: चैंज सिंक किया गया है
+  update_changelog_up_to: अद्यतन करने के लिए चैंज
   shared:
     navbar:
       sign_up: साइन अप करें

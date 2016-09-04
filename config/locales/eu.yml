@@ -14,6 +14,7 @@ eu:
   release: oharra
   changelog_has_been_resent: Aldaketen izan berbiltzea
   changelogs_has_been_synced: Aldaketen ditu sinkronizatu
+  update_changelog_up_to: Update changelog arte
   shared:
     navbar:
       sign_in: Saioa hasi

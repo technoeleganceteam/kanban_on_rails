@@ -13,6 +13,7 @@ nl:
   release: vrijlating
   changelog_has_been_resent: Changelog is opnieuw verzonden
   changelogs_has_been_synced: Changelog is gesynchroniseerd
+  update_changelog_up_to: update changelog tot
   shared:
     navbar:
       sign_in: Inloggen

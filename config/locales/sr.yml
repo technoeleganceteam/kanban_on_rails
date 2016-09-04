@@ -13,6 +13,7 @@ sr:
   release: издање
   changelog_has_been_resent: изменениј је поново пошаље
   changelogs_has_been_synced: изменениј је синхронизован
+  update_changelog_up_to: ажурирање ЦхангеЛог до
   shared:
     navbar:
       sign_in: Пријавите се
@@ -29,7 +30,7 @@ sr:
       available_languages: Доступни језици
     user_edit_menu:
       profile: Профил
-      site_settings: сајта подешавања
+      site_settings: Подешавања сајта
       services: услуги
     form_errors:
       password: Лозинка

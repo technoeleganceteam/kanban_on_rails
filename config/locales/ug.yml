@@ -12,6 +12,7 @@ ug:
   release: sürümü
   changelog_has_been_resent: Değişiklik yeniden gönderildi
   changelogs_has_been_synced: Değişiklik senkronize edilmiş
+  update_changelog_up_to: Güncelleme kadar changelog
   shared:
     navbar:
       sign_in: Oturum açın
