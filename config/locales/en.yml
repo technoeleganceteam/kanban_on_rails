@@ -85,6 +85,7 @@ en: &all
   release: release
   changelog_has_been_resent: Changelog has been resent
   changelogs_has_been_synced: Changelog has been synced
+  update_changelog_up_to: Update changelog up to
   shared:
     navbar:
       sign_in: Sign in

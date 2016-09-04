@@ -87,30 +87,32 @@ class Project < ActiveRecord::Base
 
     file_content.prepend("# #{ changelog_filename }\n")
 
-    send("write_changelog_to_#{ provider }_repository", file_content)
+    commit_message = "#{ I18n.t 'update_changelog_up_to' } #{ changelogs.first.tag_name }"
+
+    send("write_changelog_to_#{ provider }_repository", file_content, commit_message)
   end
 
-  def write_changelog_to_github_repository(file_data)
+  def write_changelog_to_github_repository(file_data, commit_message)
     content = github_client_for_changelogs.contents(github_repository_id, :path => "#{ changelog_filename }.md")
 
     github_client_for_changelogs.update_contents(github_repository_id, "#{ changelog_filename }.md",
-      'Update changelog', content.sha, file_data)
+      commit_message, content.sha, file_data)
   rescue Octokit::NotFound
     github_client_for_changelogs.create_contents(github_repository_id, "#{ changelog_filename }.md",
-      'Update changelog', file_data)
+      commit_message, file_data)
   end
 
-  def write_changelog_to_gitlab_repository(file_data)
+  def write_changelog_to_gitlab_repository(file_data, commit_message)
     gitlab_client_for_changelogs.get_file(gitlab_repository_id, "#{ changelog_filename }.md", 'master')
 
     gitlab_client_for_changelogs.edit_file(gitlab_repository_id, "#{ changelog_filename }.md",
-      'master', file_data, 'Update changelog')
+      'master', file_data, commit_message)
   rescue Gitlab::Error::NotFound
     gitlab_client_for_changelogs.create_file(gitlab_repository_id, "#{ changelog_filename }.md",
-      'master', file_data, 'Update changelog')
+      'master', file_data, commit_message)
   end
 
-  def write_changelog_to_bitbucket_repository(file_date)
+  def write_changelog_to_bitbucket_repository(file_date, commit_message)
     # This feature is not available in the gem for bitbucket api https://github.com/bitbucket-rest-api/bitbucket
     # You can send PR to this gem or propose better gem for bitbucket api
   end
