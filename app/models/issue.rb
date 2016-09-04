@@ -19,6 +19,10 @@ class Issue < ActiveRecord::Base
 
   has_many :issue_to_section_connections, :dependent => :destroy
 
+  has_many :pull_request_to_issue_connections, :dependent => :destroy
+
+  has_many :pull_requests, :through => :pull_request_to_issue_connections
+
   validates :title, :length => { :maximum => Settings.max_string_field_size }, :presence => true
 
   validates :body, :length => { :maximum => Settings.max_text_field_size }, :allow_blank => true

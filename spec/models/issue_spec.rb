@@ -125,6 +125,26 @@ RSpec.describe Issue, :type => :model do
 
       it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id).size).to eq 0 }
     end
+
+    context 'when BitBucket::Error::NotFound' do
+      before do
+        stub_request(:post, 'https://api.bitbucket.org/2.0/repositories/username/slug/issues/').
+          with(:body => '{"title":"Some title"}',
+            :headers => { 'Accept' => '*/*', 'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+            'Authorization' => /.*/, 'Content-Type' => 'application/json',
+            'User-Agent' => 'BitBucket Ruby Gem 0.1.7' }).
+          to_return(:status => 200, :body => {}.to_json.to_s, :headers => {})
+
+        user.authentications.create! :uid => 123, :provider => 'bitbucket', :token => 'token'
+
+        user_to_issue_connection.issue.project.update_attributes(:bitbucket_owner => 'username',
+          :bitbucket_slug => 'slug')
+
+        allow_any_instance_of(BitBucket::Issues).to receive(:create).and_raise(BitBucket::Error::NotFound.new({}))
+      end
+
+      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id)).to eq nil }
+    end
   end
 
   describe '#save' do
@@ -142,6 +162,31 @@ RSpec.describe Issue, :type => :model do
       end
 
       it { expect(issue.tap { |i| i.tags = ['new'] }.save).to eq true }
+    end
+  end
+
+  describe '#url_from_provider' do
+    context 'when issue from github' do
+      before do
+        issue.update_attributes(:github_issue_id => 1,
+          :github_issue_html_url => 'https://github.com/foo/issues/1')
+      end
+
+      it { expect(issue.url_from_provider).to eq 'https://github.com/foo/issues/1' }
+    end
+
+    context 'when issue from gitlab' do
+      before { issue.update_attributes(:gitlab_issue_id => 1, :gitlab_issue_number => 1) }
+
+      it { expect(issue.url_from_provider).to eq 'https://gitlab.com//issues/1' }
+    end
+
+    context 'when issue from github' do
+      before do
+        issue.update_attributes(:bitbucket_issue_id => 1)
+      end
+
+      it { expect(issue.url_from_provider).to eq 'https://bitbucket.com//issues/1' }
     end
   end
 end

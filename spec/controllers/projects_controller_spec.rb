@@ -90,6 +90,15 @@ RSpec.describe ProjectsController, :type => :controller do
 
       it { expect(response.body).to be_blank }
     end
+
+    context 'when push tag' do
+      before do
+        post :payload_from_bitbucket, :id => connection.project,
+          :push => { :changes => [:new => { :type => 'tag' }] }
+      end
+
+      it { expect(response.body).to be_blank }
+    end
   end
 
   describe 'POST payload_from_gitlab' do

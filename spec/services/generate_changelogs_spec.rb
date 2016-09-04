@@ -9,7 +9,7 @@ RSpec.describe GenerateChangelogs do
         project = create :project, :is_github_repository => true, :github_repository_id => 1,
           :close_issues => true
 
-        create :issue, :github_issue_number => 1, :project => project
+        create :issue, :github_issue_number => 1, :github_issue_id => 1, :project => project
 
         create :user_to_project_connection, :user => @user, :project => project, :role => 'owner'
 
@@ -79,7 +79,7 @@ RSpec.describe GenerateChangelogs do
         project = create :project, :is_gitlab_repository => true, :gitlab_repository_id => 1,
           :close_issues => true
 
-        create :issue, :gitlab_issue_number => 1, :project => project
+        create :issue, :gitlab_issue_number => 1, :gitlab_issue_id => 1, :project => project
 
         create :user_to_project_connection, :user => @user, :project => project, :role => 'owner'
 
@@ -100,6 +100,11 @@ RSpec.describe GenerateChangelogs do
             :description => "1. [new][S] Some feature\nconnects to #1",
             :author => { :username => 'username', :weburl => 'https://some.url' }
           }].to_json)
+
+        stub_request(:put, 'https://gitlab.com/api/v3/projects/1/issues/1').
+          with(:body => 'title=Some%20title&description=&labels=&state_event=close',
+            :headers => { 'Accept' => 'application/json', 'Private-Token' => 'token' }).
+          to_return(:status => 200, :body => {}.to_json, :headers => {})
       end
 
       it { expect(GenerateChangelogs.new(:project => @user.projects.first).handle_changelogs).to eq 1 }

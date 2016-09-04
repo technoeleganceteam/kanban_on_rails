@@ -4,6 +4,8 @@ require 'coveralls'
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.
   new([SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter])
 
+SimpleCov.minimum_coverage 100
+
 SimpleCov.start :rails
 
 require 'codeclimate-test-reporter'
@@ -80,6 +82,8 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
 
   config.include Devise::TestHelpers, :type => :helper
+
+  config.include GitlabResponseHelpers, :type => :model
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
