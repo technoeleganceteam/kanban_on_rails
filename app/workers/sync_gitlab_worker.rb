@@ -6,6 +6,6 @@ class SyncGitlabWorker
 
     return unless user.present?
 
-    user.sync_gitlab
+    user.send(self.class.name.underscore.sub('_worker', ''))
   end
 end

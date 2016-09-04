@@ -77,7 +77,7 @@ class Project < ActiveRecord::Base
         break result if result.present?
       end
 
-      authentication.user.send("#{ provider }_client") if authentication.present?
+      authentication.user.send("#{ provider }_client") if authentication.present? && authentication.class != Array
     end
   end
 
