@@ -13,6 +13,7 @@ af:
   release: vrylating
   changelog_has_been_resent: Changelog het weer gestuur
   changelogs_has_been_synced: Changelog is gesynchroniseerd
+  update_changelog_up_to: Werk Changelog tot
   shared:
     navbar:
       sign_in: Teken in

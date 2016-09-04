@@ -13,6 +13,7 @@ be:
   release: рэліз
   changelog_has_been_resent: Змяненняў было абурацца
   changelogs_has_been_synced: Змяненняў была сінхранізавана
+  update_changelog_up_to: Абнаўленне часопіса змен да
   shared:
     navbar:
       sign_in: Уваход
@@ -28,14 +29,14 @@ be:
     languages_select_modal:
       available_languages: Даступныя мовы
     user_edit_menu:
-      profile: профілю
+      profile: Профіль
       site_settings: Налады сайта
       services: Паслугі
     form_errors:
       password: Пароль
       current_password: Бягучы пароль
       name: Імя
-      base: База
+      base: Базавы
       title: Назва
       user_to_project_connection: Карыстальнік праекта падлучэння
       user_to_board_connection: Карыстальнік на борт злучэнне
@@ -55,9 +56,10 @@ be:
       read_more: Больш падрабязна
     javascript_global_variables:
       select_column_tags: Абярыце пазнакі слупкоў
-      select_section_tags: Абярыце пазнакі раздзела
+      select_section_tags: Абярыце тэгі падзела
       select_issue_tags: Абярыце тэгі выпуск
-      emails_for_reports: лістоў тыпу, якія атрымае спісаў змяненняў
+      emails_for_reports: Тып паведамленні электроннай пошты, якія атрымае спісаў
+        змяненняў
     email_signature:
       info: Інфармацыя
       mailer: Мэйлер
@@ -89,8 +91,8 @@ be:
       password: Пароль
       save: Захаваць
     index:
-      project: праекта
-      users: карыстальнікі
+      project: Праект
+      users: карыстальнікаў
       new: Новы
       board: Савет
     edit:
@@ -109,7 +111,7 @@ be:
     update:
       your_profile_was_successfully_updated: Ваш профіль быў паспяхова абноўлены
     dashboard:
-      hello: Hello
+      hello: Прывітанне
       here_some_of_your_statistics: Вось некаторыя з вашай статыстыкі
       projects: Праекты
       boards: Дошкі
@@ -152,7 +154,7 @@ be:
       generate_changelogs: Генерацыя спісаў змяненняў
       include_detailed_changes: ўключае ў сябе падрабязныя змены, апісаныя ў высоўнымі
         запытаў
-      include_issues: Уключэнне пытанняў у спісам змен
+      include_issues: Уключыць пытанні ў спісам змен
       include_pull_requests: Уключыць цягнуць запытаў у спісам змен
       close_issues: Зачыніць зроблена пытанні
       emails_for_reports: Адрасы электроннай пошты для атрымліваю спісаў змяненняў
@@ -179,7 +181,7 @@ be:
       column_order: Замовіць
     show:
       project: праекта
-      related_boards: Падобныя дошкі
+      related_boards: Змяненні дошкі
       project_issues: пытанні праекта
       project_users: карыстальнікаў праекта
       new: Новы
@@ -212,12 +214,12 @@ be:
       save: Захаваць
       body: Body
       enter_issue_body: Калі ласка, увядзіце выпуск цела
-      tags: Пазнакі
+      tags: Тэгі
       issue_order: Замовіць
       bitbucket_issue_id: BitBucket Ідэнтыфікатар праблемы
       github_issue_id: Github Ідэнтыфікатар праблемы
       github_issue_number: Github нумар выпуску
-      project: Праект
+      project: праекта
       state: Дзяржава
     index:
       issues: пытанні
@@ -232,7 +234,7 @@ be:
     new:
       new_issue: Новы выпуск
     issue_modal:
-      issue: Выпуск
+      issue: выпуск
   authentications:
     index:
       enabled_services: Уключаныя паслугі
@@ -249,7 +251,7 @@ be:
       sign_up: зарэгістравацца
       and_use_it: і выкарыстоўваць яго.
       with_love: З любоўю,
-      technoelegance_team: Technoelegance Team
+      technoelegance_team: Technoelegance каманды
     index:
       all_news: Усе навіны
       read_more: Больш падрабязна
@@ -264,7 +266,7 @@ be:
     form:
       name: Імя
       enter_board_name: Калі ласка, увядзіце імя дошка
-      columns: Калоны
+      columns: Стоўбцы
       add: Дадаць
       sections: Раздзелы
       save: Захаваць
@@ -369,10 +371,10 @@ be:
         калі ласка, запытаеце новы
       expired: скончыўся, калі ласка, запытаеце новы
       not_found: не знойдзены
-      not_locked: ня быў заблякаваны
+      not_locked: былі не зачынены
       not_saved:
-        one: '1 памылка забароненая гэты% {рэсурс} з тых, што ратуюцца:'
-        other: "% {лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
+        one: '1 памылка забаронены гэты% {рэсурс} з тых, што ратуюцца:'
+        other: "{лік} памылкі забароненую гэты% {рэсурс} з тых, што ратуюцца:"
     bad_request:
       bad_request: Bad Request
       request_result: Запыт выніку
@@ -386,14 +388,14 @@ be:
         змог прытрымлівацца з-за семантычных памылак
       go_to_root: Перайсці да кораня
     not_found:
-      not_found: не знойдзены
+      not_found: Не знойдзена
       request_result: Запыт выніку
       not_found_description: запытаны рэсурс не можа быць знойдзены, але могуць быць
         даступныя ў будучыні
       go_to_root: Перайсці да кораня
     forbidden:
       forbidden: Забаронены
-      request_result: Запыт вынік
+      request_result: Запыт выніку
       forbidden_description: Гэтая просьба была сапраўдны запыт, але сэрвэр не адказваць
         на яго
       go_to_root: Перайсці да кораня
@@ -439,7 +441,7 @@ be:
         welcome_to_kanban_on_rails: Сардэчна запрашаем у KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Вы можаце пацвердзіць
           сваю электронную пошту праз спасылку ніжэй
-        confirm_my_account: Пацвердзіць Email
+        confirm_my_account: Пацвердзіце мой e-mail
       reset_password_instructions:
         hello: Прывітанне
         subject: Скід пароля інструкцыі
@@ -450,7 +452,7 @@ be:
         if_you_didnt_request_this_please_ignore_this_email: Калі вы не запытвалі гэта
           не звяртайце ўвагі на гэты ліст.
       unlock_instructions:
-        subject: Разблакіроўка Інструкцыі
+        subject: разблакоўкі Інструкцыі
     omniauth_callbacks:
       failure: Нельга праверыць ідэнтычнасьць вас ад {%} роду, таму што "% {прычына}".
       success: паспяхова прайшоў праверку сапраўднасці ад {%} ветлівую ўвагу.
@@ -458,8 +460,8 @@ be:
       no_token: Вы не можаце атрымаць доступ да гэтай старонцы, не прыходзячы ад электроннай
         пошты скіду пароля. Калі вы прыйшлі з электроннай пошты для скіду пароля,
         калі ласка, пераканайцеся, што вы выкарыстоўвалі поўны URL пры ўмове.
-      send_instructions: Вы атрымаеце электронны ліст з інструкцыямі аб тым, як скінуць
-        пароль на працягу некалькіх хвілін.
+      send_instructions: Вы атрымаеце ліст з інструкцыямі аб тым, як скінуць пароль
+        на працягу некалькіх хвілін.
       send_paranoid_instructions: Калі ваш адрас электроннай пошты існуе ў нашай базе
         дадзеных, вы атрымаеце спасылку для аднаўлення пароля на ваш адрас электроннай
         пошты на працягу некалькіх хвілін.
@@ -472,7 +474,7 @@ be:
         change_your_password: Змяніць пароль
         new_password: Новы пароль
         confirm_password: Пацвярджэнне пароля
-        change_password: Змяніць
+        change_password: Змена
     registrations:
       destroyed: Bye! Ваш уліковы запіс была паспяхова адменена. Мы спадзяемся ўбачыць
         вас зноў у бліжэйшы час.
@@ -481,7 +483,7 @@ be:
         вас у таму, што ваш уліковы запіс яшчэ не актываваная.
       signed_up_but_locked: Вы падпісаліся паспяхова. Тым не менш, мы не маглі падпісаць
         вас у таму, што ваш уліковы запіс будзе заблакаваная.
-      signed_up_but_unconfirmed: паведамленне са спасылкай для пацверджання было адпраўлена
+      signed_up_but_unconfirmed: паведамленне з спасылкай для пацверджання было адпраўлена
         на ваш электронны адрас. Калі ласка, адкрыйце спасылку, каб актываваць свой
         уліковы запіс.
       update_needs_confirmation: Вы абнавілі свой рахунак паспяхова, але нам трэба

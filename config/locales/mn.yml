@@ -12,6 +12,7 @@ mn:
   release: хувилбар
   changelog_has_been_resent: CHANGELOG сүүлчийн байна
   changelogs_has_been_synced: CHANGELOG синхрончлогдсон байна
+  update_changelog_up_to: шинэчлэх хүртэл CHANGELOG
   shared:
     navbar:
       sign_in: Дансаа ашиглах

@@ -13,6 +13,7 @@ lo:
   release: ປ່ອຍ
   changelog_has_been_resent: ການປ່ຽນແປງໄດ້ Resent
   changelogs_has_been_synced: ການປ່ຽນແປງໄດ້ຮັບການຊິ້ງຂໍ້ມູນ
+  update_changelog_up_to: ປັບປຸງການປ່ຽນແປງເຖິງ
   shared:
     navbar:
       sign_in: ເຂົ້າສູ່ລະບົບ

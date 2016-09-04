@@ -12,6 +12,7 @@ mr-IN:
   release: प्रकाशन
   changelog_has_been_resent: Changelog पुन्हा पाठवले आहे
   changelogs_has_been_synced: Changelog समक्रमित केला
+  update_changelog_up_to: अद्ययावत बदल
   shared:
     navbar:
       sign_in: साइन इन करा

@@ -13,6 +13,7 @@ th:
   release: ปล่อย
   changelog_has_been_resent: เปลี่ยนแปลงได้อีกครั้ง
   changelogs_has_been_synced: เปลี่ยนแปลงได้รับการซิงค์
+  update_changelog_up_to: ปรับปรุงการเปลี่ยนแปลงขึ้นอยู่กับ
   shared:
     navbar:
       sign_in: เข้าสู่ระบบ
@@ -104,7 +105,7 @@ th:
       confirm_new_password: ยืนยันรหัสผ่านใหม่
       change_password: เปลี่ยนรหัสผ่าน
     update:
-      your_profile_was_successfully_updated: โปรไฟล์ของคุณถูกปรับปรุงเรียบร้อยแล้ว
+      your_profile_was_successfully_updated: โ​​ปรไฟล์ของคุณถูกปรับปรุงเรียบร้อยแล้ว
     dashboard:
       hello: สวัสดี
       here_some_of_your_statistics: นี่คือบางส่วนของสถ​​ิติของคุณ
@@ -341,7 +342,7 @@ th:
       sync_with_github_and_bitbucket: คุณสามารถซิงค์โครงการและปัญหาของคุณกับ Github
         และ Bitbucket
       invite_users: คุณสามารถเชิญผู้ใช้ (สำหรับผู้บริหารเป็นต้น) สำหรับโครงการของคุณ
-      open_source_code: โ​​ครงการนี​​้มีรหัสที่มาเปิดเพื่อให้คุณสามารถปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
+      open_source_code: โครงการนี​​้มีรหัสที่มาเปิดเพื่อให้คุณสามารถปรับใช้ไปยังเซิร์ฟเวอร์ของคุณเอง
       we_use_open_source_and_high_technology: เราใช้เทคโนโลยีชั้นสูงและห้องสมุดมาเปิด
         เราพยายามที่จะได้รับที่ดีขึ้นและปรับปรุงบริการของเรา
       partners_and_investors: เราจะเปิดสำหรับการเป็นหุ้นส่วนและเราต้องการที่จะหานักลงทุน

@@ -13,6 +13,7 @@ sk:
   release: vydanie
   changelog_has_been_resent: Changelog bola znova odoslaná
   changelogs_has_been_synced: Changelog bol synchronizovaný
+  update_changelog_up_to: Aktualizácia poslednej zmeny až do
   shared:
     navbar:
       sign_in: Prihlásiť

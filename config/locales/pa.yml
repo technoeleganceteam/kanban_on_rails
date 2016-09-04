@@ -13,6 +13,7 @@ pa:
   release: ਰੀਲਿਜ਼
   changelog_has_been_resent: Changelog ਵਿਰੋਧ ਕੀਤਾ ਗਿਆ ਹੈ,
   changelogs_has_been_synced: Changelog ਸਿੰਕ ਕੀਤਾ ਗਿਆ ਹੈ
+  update_changelog_up_to: ਨੂੰ ਅਪਡੇਟ ਕਰਨ ਲਈ ਸਥਾਪਤ ChangeLog
   shared:
     navbar:
       sign_up: ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ

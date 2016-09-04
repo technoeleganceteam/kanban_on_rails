@@ -13,6 +13,7 @@ et:
   release: vabastamist
   changelog_has_been_resent: muudatuste olnud pahaks
   changelogs_has_been_synced: muudatuste sünkroonitud
+  update_changelog_up_to: värskendus ChangeLogi kuni
   shared:
     navbar:
       sign_in: Logi sisse

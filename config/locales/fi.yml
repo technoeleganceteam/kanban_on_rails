@@ -13,6 +13,7 @@ fi:
   release: release
   changelog_has_been_resent: Changelog on lähetetty uudelleen
   changelogs_has_been_synced: Changelog on synkronoitu
+  update_changelog_up_to: Update Vaihdokas asti
   shared:
     navbar:
       sign_in: Kirjaudu sisään

@@ -12,6 +12,7 @@ ru:
   release: релиз
   changelog_has_been_resent: Изменения(changelog) были переотправлены
   changelogs_has_been_synced: Изменения(changelog) были синхронизированы
+  update_changelog_up_to: Обновлена история изменений до версии
   shared:
     navbar:
       sign_in: Вход

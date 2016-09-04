@@ -13,6 +13,7 @@ da:
   release: release
   changelog_has_been_resent: Changelog har været sendt igen
   changelogs_has_been_synced: Changelog er blevet synkroniseret
+  update_changelog_up_to: Opdater Changelog op til
   shared:
     navbar:
       sign_in: Log ind

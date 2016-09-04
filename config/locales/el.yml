@@ -13,6 +13,7 @@ el:
   release: απελευθέρωση
   changelog_has_been_resent: Αλλαγών έχει δυσανασχετούν
   changelogs_has_been_synced: Αλλαγών έχει συγχρονιστεί
+  update_changelog_up_to: Ενημέρωση changelog έως
   shared:
     navbar:
       sign_in: Σύνδεση

@@ -13,6 +13,7 @@ ro:
   release: de presă
   changelog_has_been_resent: Changelog a retransmiterii
   changelogs_has_been_synced: Changelog sincronizări a
+  update_changelog_up_to: Actualizare ChangeLog până la
   shared:
     navbar:
       sign_in: Conectați-vă
@@ -57,7 +58,7 @@ ro:
       select_column_tags: Selectați etichetele de coloană
       select_section_tags: Selectați etichetele secțiune
       select_issue_tags: Selectați problema tag-uri
-      emails_for_reports: tip email-uri, care va primi registrele de schimbări
+      emails_for_reports: email-uri de tip, care va primi registrele de schimbări
     email_signature:
       info: Info
       mailer: Mailer
@@ -94,7 +95,7 @@ ro:
       new: Nou
     edit:
       name: Nume
-      enter_your_name: Introduceți numele
+      enter_your_name: Introdu numele tău
       save: Salvare
     settings:
       change_password: Schimbare parolă
@@ -126,7 +127,7 @@ ro:
   projects:
     index:
       projects: Proiecte
-      new: noi
+      new: Nou
       sync_with_github: Sincronizare cu Github
       sync_with_gitlab: Sincronizare cu Gitlab
       sync_with_bitbucket: Sincronizare cu BitBucket
@@ -146,9 +147,9 @@ ro:
       bitbucket_full_name: BitBucket FULLNAME
       bitbucket_secret_token_for_hook: BitBucket jeton secret cârlig
       gitlab_full_name: Gitlab FULLNAME
-      changelogs: registrele de schimbări
+      changelogs: ale schimbărilor
       changelogs_info: dacă doriți să păstrați registrele de schimbări
-      generate_changelogs: Genera ale schimbărilor
+      generate_changelogs: Generare ale schimbărilor
       include_detailed_changes: Includeți modificările detaliate descrise în cererile
         de tragere
       include_issues: Includeți probleme în registrele de schimbări
@@ -166,15 +167,16 @@ ro:
       issues: Probleme
       users: Utilizatori
       changelogs: ale schimbărilor
-      are_you_sure: Sunteți sigur?
+      are_you_sure: Ești sigur?
     section_fields:
+      section_name: numele secțiunii
       section_tags: tag-uri Secțiunea
       section_order: Comandă
       or_include_all: Sau includ toate?
     column_fields:
       remove_column: Eliminați coloana
       max_issues_count: probleme Max conta în coloana
-      column_tags: etichete de coloană
+      column_tags: tag-uri Coloana
       column_order: Comandă
     show:
       project: Project
@@ -185,12 +187,12 @@ ro:
       edit: Editați
       destroy: Ștergeți
       are_you_sure: Sunteți sigur?
-      changelogs: ale schimbărilor
+      changelogs: registrele de schimbări
       github_repository_id: Github depozit id
       github_full_name: Github depozit FULLNAME
-      github_secret_token_for_hook: Gitlab semn secret cârlig
+      github_secret_token_for_hook: Gitlab jeton secret cârlig
       bitbucket_full_name: BitBucket FULLNAME
-      bitbucket_secret_token_for_hook: BitBucket jeton secret cârlig
+      bitbucket_secret_token_for_hook: BitBucket semn secret cârlig
       gitlab_full_name: Gitlab FULLNAME
       generate_changelogs: Generare ale schimbărilor
       include_detailed_changes: Includeți modificările detaliate descrise în cererile
@@ -198,12 +200,12 @@ ro:
       include_issues: Includeți probleme în registrele de schimbări
       include_pull_requests: Includeți cereri de tragere în registrele de schimbări
       close_issues: probleme Închide făcut
-      emails_for_reports: email-uri pentru recieving ale schimbărilor
-      write_to_changelog_file: Scrieți la fișierul registrele de schimbări depozit
+      emails_for_reports: emailuri pentru recieving ale schimbărilor
+      write_to_changelog_file: Scrieți fișierul la registrele de schimbări depozit
       changelog_filename: numele fișierului Changelog
       changelog_locale: Limbă pentru changelog
     project_modal:
-      project: Project
+      project: Proiect
   issues:
     form:
       title: Titlu
@@ -216,23 +218,23 @@ ro:
       bitbucket_issue_id: BitBucket problemă id
       github_issue_id: Github problemă id
       github_issue_number: număr problemă Github
-      project: Project
-      state: stat
+      project: Proiect
+      state: Stat
     index:
       issues: probleme
       sync_with_github: Sincronizare cu github
       sync_with_bitbucket: Sincronizare cu BitBucket
-      new: noi
+      new: Nou
     issue:
       destroy: Ștergeți
-      edit: Editare
+      edit: Editați
     new:
       new_issue: problemă nouă
     issue_modal:
       issue: Problemă
   authentications:
     index:
-      enabled_services: servicii activate
+      enabled_services: Servicii Enabled
     authentication:
       turned_off: Oprit
       turn_on: Activați
@@ -244,7 +246,7 @@ ro:
       we_have_just_launched_our_service_text: Astăzi vă vom lansa serviciul nostru,
         astfel încât oricine poate
       sign_up: Înregistrează-te
-      and_use_it: și să o folosească.
+      and_use_it: și să-l utilizați.
       with_love: Cu dragoste,
       technoelegance_team: Technoelegance Echipa
     index:
@@ -258,7 +260,7 @@ ro:
   boards:
     form:
       name: Nume
-      enter_board_name: Introdu numele de bord
+      enter_board_name: Introduceți numele de bord
       columns: Coloane
       add: Adaugă
       sections: Secțiuni
@@ -271,14 +273,14 @@ ro:
     column_fields:
       remove_column: Eliminați coloana
       max_issues_count: probleme Max conta în coloana
-      column_tags: etichete de coloană
+      column_tags: tag-uri Coloana
       column_order: Comandă
       backlog: Restante
     show:
       next_page: Pagina urmatoare
     index:
-      boards: camerelor
-      new: nou
+      boards: Plăci
+      new: Nou
     board:
       board_users: Utilizatori
       edit: Editare
@@ -295,7 +297,7 @@ ro:
       feedback_name: Numele tau
       feedback_email: Adresa ta de email
       feedback_content: Conținut
-      cancel: Anulare
+      cancel: Anulați
       send: Trimite
       feedback_recaptcha: Recaptcha
     success:
@@ -305,19 +307,19 @@ ro:
       more: Trimite mai
   changelogs:
     changelog_raw_md:
-      changes: Modificări
-      detailed_changes: modificări detaliate
-      issues: Probleme
-      by: de
-    changelog:
       changes: Schimbări
       detailed_changes: modificări detaliate
       issues: Probleme
       by: de
+    changelog:
+      changes: Modificări
+      detailed_changes: modificări detaliate
+      issues: Probleme
+      by: de
     index:
-      project: Proiect
-      changelogs: ale schimbărilor
-      sync: Sync
+      project: Project
+      changelogs: registrele de schimbări
+      sync: sincronizare
     changelog_list_item:
       resend: Retrimitere
       view_as_html: Vezi ca html
@@ -332,7 +334,7 @@ ro:
       kanban_on_rails_features: Puteți sincroniza proiectele și problemele cu Github
         și BitBucket, invitați utilizatori (de exemplu manageri) pentru proiectul
         dumneavoastră, implementați propriul server
-      i_have_some_requests: Am unele cereri
+      i_have_some_requests: Am niște solicitări
       you_can_write_request: Puteți scrie cerere
       here: aici
       i_have_seen_some_typo_or_wrong_translation: Am văzut unele greșeli de tipar
@@ -388,7 +390,7 @@ ro:
         răspundă la aceasta
       go_to_root: Du-te la rădăcină
     internal_server_error:
-      internal_server_error: Eroare internă de server
+      internal_server_error: Internal Server Error
       internal_server_error_description: Ceva a mers prost. Noi vom remedia problema
         cât mai curând posibil.
       go_to_root: Du-te la rădăcină
@@ -396,7 +398,7 @@ ro:
     shared:
       links:
         sign_in: Conectați-vă
-        sign_up: Inscrie-te
+        sign_up: Înregistrează-te
         didnt_receive_confirmation_instructions: Nu a primit instrucțiuni de confirmare?
         sign_in_with: Conectați-vă cu
         fast_login_almost_one_click: rapid de conectare (aproape un singur clic)
@@ -423,7 +425,7 @@ ro:
     mailer:
       confirmation_instructions:
         subject: Instrucțiuni de confirmare
-        welcome_to_kanban_on_rails: Bine ați venit la KanbanOnRails
+        welcome_to_kanban_on_rails: Bine ati venit la KanbanOnRails
         you_can_confirm_your_account_email_through_the_link_below: Puteți confirma
           un e-mail prin link-ul de mai jos
         confirm_my_account: Confirmați mea de e-mail
@@ -439,10 +441,10 @@ ro:
       unlock_instructions:
         subject: Instrucțiuni Deblocare
     omniauth_callbacks:
-      failure: nu te-a putut autentifica la {% fel} deoarece "% {motiv}".
+      failure: nu a putut autentifica la {% fel} deoarece "% {motiv}".
       success: autentificat cu succes la {%} fel de cont.
     passwords:
-      no_token: Nu puteți accesa această pagină, fără a veni dintr-un e-mail de resetare
+      no_token: Nu pot accesa această pagină, fără a veni dintr-un e-mail de resetare
         a parolei. Dacă nu provin dintr-un e-mail de resetare a parolei, vă rugăm
         să asigurați-vă că ați folosit URL-ul complet furnizat.
       send_instructions: Vei primi un e-mail cu instrucțiuni privind modul de resetare
@@ -472,11 +474,11 @@ ro:
         să verificăm dacă noua adresă de e-mail. Vă rugăm să verificați e-mail-ul
         și faceți clic pe link-ul de confirmare pentru a finaliza noua confirmare
         a adresei de e-mail.
-      updated: Ați actualizat contul cu succes.
+      updated: Ați actualizat contul dvs. cu succes.
       new:
-        sign_up: Înregistrează-te
+        sign_up: Inscrie-te
         name: Nume
-        password: parolă
+        password: parola
         register: Înregistrează-te
     sessions:
       signed_in: Conectat cu succes.
@@ -484,13 +486,13 @@ ro:
       new:
         sign_in: Conectați-vă
         password: parolă
-        remember_me: Tine-ma minte
-        forgot_your_password: Ai uitat parola?
+        remember_me: Ține-mă
+        forgot_your_password: Ați uitat parola?
     unlocks:
       send_instructions: Vei primi un e-mail cu instrucțiuni despre modul în care
         pentru a debloca contul în câteva minute.
       send_paranoid_instructions: În cazul în care există contul dvs., veți primi
         un e-mail cu instrucțiuni despre cum să-l debloca în câteva minute.
-      unlocked: Contul tău a fost deblocat cu succes. Vă rugăm sign in pentru a continua.
+      unlocked: Contul dvs. a fost deblocat cu succes. Vă rugăm sign in pentru a continua.
   ro: ro
   ro_iso: ro

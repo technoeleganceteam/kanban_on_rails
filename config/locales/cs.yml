@@ -13,6 +13,7 @@ cs:
   release: vydání
   changelog_has_been_resent: Changelog byla znovu odeslána
   changelogs_has_been_synced: Changelog byl synchronizován
+  update_changelog_up_to: Aktualizace poslední změny až do
   shared:
     navbar:
       sign_in: Přihlásit

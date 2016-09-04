@@ -13,6 +13,7 @@ gl:
   release: liberación
   changelog_has_been_resent: changelog foi reenviado
   changelogs_has_been_synced: changelog foi sincronizado
+  update_changelog_up_to: Actualización changelog ata
   shared:
     navbar:
       sign_in: Entrar
@@ -56,7 +57,7 @@ gl:
       select_column_tags: Seleccionar etiquetas columna
       select_section_tags: Seleccione marcas de sección
       select_issue_tags: Seleccionar etiquetas emisión
-      emails_for_reports: correos electrónicos tipo que recibirá changelogs
+      emails_for_reports: Tipo correos electrónicos que recibe changelogs
     email_signature:
       info: Información
       mailer: Mailer
@@ -171,6 +172,7 @@ gl:
       section_order: Order
       or_include_all: ou incluír todos?
     column_fields:
+      column_name: Columna
       remove_column: Eliminar columna
       max_issues_count: cuestións Max contar na columna
       column_tags: etiquetas Columna

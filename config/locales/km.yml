@@ -13,6 +13,7 @@ km:
   release: ការចេញផ្សាយ
   changelog_has_been_resent: ផ្លាស់ប្ដូរត្រូវបានគេអាក់អន់ចិត្ត
   changelogs_has_been_synced: ផ្លាស់ប្ដូរត្រូវបានធ្វើសមកាលកម្ម
+  update_changelog_up_to: ធ្វើឱ្យទាន់សម័យការផ្លាស់ប្ដូរឡើងទៅ
   shared:
     navbar:
       sign_up: ចុះឈ្មោះ
@@ -115,6 +116,7 @@ km:
       save: រក្សាទុក
       columns: ជួរឈរ
       sections: ផ្នែក
+      column_name: ជួរដេកឈ្មោះ
       add: បន្ថែម
       github_full_name: ឈ្មោះពេញឃ្លាំង Github
       bitbucket_full_name: Bitbucket ឈ្មោះពេញ
@@ -150,7 +152,6 @@ km:
       project: គម្រោង
       related_boards: ក្រុមប្រឹក្សាដែលទាក់ទង
       project_issues: បញ្ហាគម្រោង
-      project_users: អ្នកប្រើប្រាស់គម្រោង
       new: ថ្មី
       edit: កែសម្រួល
       destroy: លុប
@@ -263,7 +264,6 @@ km:
       more: ផ្ញើកាន់តែច្រើន
   changelogs:
     changelog_raw_md:
-      changes: ការផ្លាស់ប្តូរ
       detailed_changes: ការផ្លាស់ប្តូរលម្អិត
       issues: បញ្ហា
       by: ដោយ
@@ -281,7 +281,6 @@ km:
       view_as_raw_md: ទិដ្ឋភាពជាវេជ្ជបណ្ឌិតឆៅ
   pages:
     faq:
-      faq: សំណួរគេសួរញឹកញាប់
       what_is_kanban_on_rails: "?"
       about_kanban_on_rails: KanbanOnRails គឺជាសេវាកម្មមួយដែលជាកន្លែងដែលអ្នកអាចបង្កើតនិងធ្វើសមកាលកម្មក្រុមប្រឹក្សា
         Kanban វាជាមួយ Github ឬ Bitbucket
@@ -374,7 +373,6 @@ km:
     omniauth_callbacks:
       failure: មិនអាចផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវរបស់អ្នកពី% {ប្រភេទ} ដោយសារតែ "% {មូលហេតុ}"
         ។
-      success: គណនី {ប្រភេទ%} ។
     passwords:
       no_token: អ្នកមិនអាចចូលដំណើរការទំព័រនេះដោយគ្មានមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ។
         ប្រសិនបើអ្នកធ្វើមកពីអ៊ីម៉ែលកំណត់ពាក្យសម្ងាត់ឡើងវិញ, សូមធ្វើឱ្យប្រាកដថាអ្នកបានប្រើ

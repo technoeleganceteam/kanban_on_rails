@@ -12,6 +12,7 @@ az:
   release: azad
   changelog_has_been_resent: Değişiklikler retort olmuşdur
   changelogs_has_been_synced: Değişiklikler synced edilmişdir
+  update_changelog_up_to: Update qədər Değişiklikler
   shared:
     navbar:
       sign_in: Sign in

@@ -13,6 +13,7 @@ ne:
   release: जारी
   changelog_has_been_resent: Changelog रिसाए भएको छ
   changelogs_has_been_synced: Changelog समन्वयन गरिएको छ
+  update_changelog_up_to: अपडेट अप Changelog
   shared:
     navbar:
       sign_in: साइन

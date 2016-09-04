@@ -325,7 +325,6 @@ ja:
     mailer:
       confirmation_instructions:
         subject: 確認命令
-        welcome_to_kanban_on_rails: がKanbanOnRailsへようこそ
         confirm_my_account: 私の電子メールを確認してください
       reset_password_instructions:
         hello: こんにちは

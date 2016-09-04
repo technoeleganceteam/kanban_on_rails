@@ -13,6 +13,7 @@ hu:
   release: kiadás
   changelog_has_been_resent: Változások már zokon
   changelogs_has_been_synced: Változások szinkronizált
+  update_changelog_up_to: frissítése changelog-ig
   shared:
     navbar:
       sign_in: Bejelentkezés

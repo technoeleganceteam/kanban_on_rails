@@ -13,6 +13,7 @@ mk:
   release: порака
   changelog_has_been_resent: на промени е препратена
   changelogs_has_been_synced: на промени се синхронизираат
+  update_changelog_up_to: Ажурирање на промени до
   shared:
     navbar:
       sign_in: Најави се Регистрирај се
