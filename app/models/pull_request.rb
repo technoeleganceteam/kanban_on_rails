@@ -1,4 +1,7 @@
+# Class for pull requests business logic.
 class PullRequest < ActiveRecord::Base
+  include Providerable
+
   store_accessor :meta, :github_url, :bitbucket_url, :gitlab_url, :author_url, :number_from_provider
 
   belongs_to :project
@@ -20,22 +23,37 @@ class PullRequest < ActiveRecord::Base
 
   validates :merged_at, :presence => true
 
-  def provider
-    Settings.issues_providers.map { |provider| provider if send("#{ provider }_url").present? }.compact.first
-  end
-
   def url_from_provider
     send("#{ provider }_url")
   end
 
+  def handle_for_changelog(changelog, pull_request_info, project)
+    assign_attributes({ :changelog => changelog, :project => project }.merge(pull_request_info))
+
+    save!
+  end
+
+  # There are some problems to define merged at date for gitlab pull request.
+  # We define it as updated at field from api for gitlab, so we suppose it won't change in the future.
+  def not_handle_for_changelog?
+    persisted? && provider == 'gitlab' && changelog_id.present?
+  end
+
+  def pull_request_info_for_report
+    "#{ title } ([##{ number_from_provider }](#{ url_from_provider }) " \
+      "#{ I18n.t 'changelogs.changelog.by' } [@#{ created_by }](#{ author_url }))\n"
+  end
+
   private
 
-  def bind_to_issues
-    Settings.issue_binding_words.each do |binding_word|
-      body.to_s.scan(Regexp.new("#{ binding_word }\\s+\\w*#+\\d+")) do |connection|
-        bind_to_issue(connection.split('#').last)
-      end
+  def scan_body_and_bind_to_issue(binding_word)
+    body.to_s.scan(Regexp.new("#{ binding_word }\\s+\\w*#+\\d+")) do |connection|
+      bind_to_issue(connection.split('#').last)
     end
+  end
+
+  def bind_to_issues
+    Settings.issue_binding_words.each { |binding_word| scan_body_and_bind_to_issue(binding_word) }
   end
 
   def fetch_or_create_subtasks
@@ -48,25 +66,11 @@ class PullRequest < ActiveRecord::Base
 
   def parse_subtask_content(subtask_content)
     {
-      :description => description_from_fetched_data(subtask_content),
-      :story_points => story_points_from_fetched_data(subtask_content),
-      :task_type => task_type_from_fetched_data(subtask_content),
+      :description => PullRequestUtilities.description_from_fetched_data(subtask_content),
+      :story_points => PullRequestUtilities.story_points_from_fetched_data(subtask_content),
+      :task_type => PullRequestUtilities.task_type_from_fetched_data(subtask_content),
       :changelog_id => changelog.try(&:id)
     }
-  end
-
-  def description_from_fetched_data(subtask_content)
-    /[0-9]*\.*\s*(\[\w*\])*(.*)/m.match(subtask_content).try(:[], -1).try(:strip).to_s
-  end
-
-  def story_points_from_fetched_data(subtask_content)
-    subtask_content.scan(/^[0-9]*\.*\s*\[.*\]/m).first.to_s.
-      scan(/\[\w*?\]/).try(:[], 1).to_s.sub(']', '').sub('[', '')
-  end
-
-  def task_type_from_fetched_data(subtask_content)
-    subtask_content.scan(/^[0-9]*\.*\s*\[.*\]/m).first.to_s.
-      scan(/\[\w*?\]/).first.to_s.sub(']', '').sub('[', '')
   end
 
   def bind_to_issue(number_from_provider)
@@ -76,6 +80,8 @@ class PullRequest < ActiveRecord::Base
   end
 
   def number_field
-    project.provider.in?(%w(github gitlab)) ? "#{ project.provider }_issue_number" : 'bitbucket_issue_id'
+    project_provider = project.provider
+
+    project_provider.in?(%w(github gitlab)) ? "#{ project_provider }_issue_number" : 'bitbucket_issue_id'
   end
 end

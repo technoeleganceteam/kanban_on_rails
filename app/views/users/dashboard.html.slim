@@ -4,11 +4,11 @@ h3
   = t '.here_some_of_your_statistics'
   | :
 
-p = link_to "#{ t '.projects' }: #{ @projects_count }", user_projects_url(@user)
+p = link_to "#{ t '.projects' }: #{ @user.projects.size }", user_projects_url(@user)
 
-p = link_to "#{ t '.boards' }: #{ @boards_count }", user_boards_url(@user)
+p = link_to "#{ t '.boards' }: #{ @user.boards.size }", user_boards_url(@user)
 
-p = link_to "#{ t '.issues' }: #{ @issues_count }", user_issues_url(@user)
+p = link_to "#{ t '.issues' }: #{ @user.issues.size }", user_issues_url(@user)
 
 h3
   = t '.you_can_sync_projects_and_issues_from'

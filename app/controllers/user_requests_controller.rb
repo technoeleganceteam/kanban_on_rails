@@ -1,3 +1,4 @@
+# Controller for manage user requests
 class UserRequestsController < ApplicationController
   load_and_authorize_resource :user, :except => [:index]
 
@@ -6,11 +7,9 @@ class UserRequestsController < ApplicationController
   before_action :find_user, :only => [:index]
 
   def index
-    @user_requests = if @user.present?
-      @user.user_requests.page(params[:page])
-    else
-      UserRequest.order('created_at DESC').includes(:user).page(params[:page])
-    end
+    @user_requests = @user.present? ? @user.user_requests : UserRequest.order('created_at DESC').includes(:user)
+
+    @user_requests = @user_requests.page(params[:page])
   end
 
   def create
@@ -42,6 +41,8 @@ class UserRequestsController < ApplicationController
   end
 
   def find_user
-    @user = User.find(params[:user_id]) if params[:user_id].present?
+    user_id = params[:user_id]
+
+    @user = User.find(user_id) if user_id.present?
   end
 end

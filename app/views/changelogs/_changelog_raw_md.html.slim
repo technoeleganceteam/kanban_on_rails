@@ -2,12 +2,12 @@
 - if changelog.project.include_pull_requests?
   = "\n### #{ t '.changes' }\n"
   - changelog.pull_requests.order('merged_at DESC').each_with_index do |pull_request, index|
-    = "#{ "\n" if index == 0 }* #{ pull_request_info_for_report(pull_request) }"
+    = "#{ "\n" if index == 0 }* #{ pull_request.pull_request_info_for_report }"
 - if changelog.project.include_detailed_changes?
   = "\n### #{ t '.detailed_changes' }\n"
   - changelog.sorted_pull_request_subtasks.each_with_index do |subtask, index|
-    = "#{ "\n" if index == 0 }#{ index + 1 }. #{ subtask_info_for_report(subtask) }"
+    = "#{ "\n" if index == 0 }#{ index + 1 }. #{ subtask.info_for_report }"
 - if changelog.project.include_issues?
   = "\n### #{ t '.issues' }\n"
   - changelog.pull_requests.map(&:issues).flatten.each_with_index do |issue, index|
-    = "#{ "\n" if index == 0 }* #{ issue_info_for_report(issue) }"
+    = "#{ "\n" if index == 0 }* #{ issue.info_for_report }"

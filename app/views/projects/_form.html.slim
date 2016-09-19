@@ -62,7 +62,7 @@
   .form-group
     label for = 'changelog_locale' = t '.changelog_locale'
 
-    = form.select :changelog_locale, language_options_for_settings_select, {},
+    = form.select :changelog_locale, ApplicationUtilities.language_options_for_settings_select, {},
       :class => 'form-control', :id => 'locale'
 
   .form-group

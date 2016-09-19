@@ -1,4 +1,7 @@
+# Controller for manage projects
 class ProjectsController < ApplicationController
+  include Creatable
+
   load_and_authorize_resource :user, :except => [:payload_from_bitbucket,
     :payload_from_github, :payload_from_gitlab]
 
@@ -23,10 +26,10 @@ class ProjectsController < ApplicationController
   end
 
   Settings.issues_providers.each do |provider|
-    define_method "sync_with_#{ provider }" do
+    define_method "sync_from_#{ provider }" do
       current_user.update_attribute("sync_with_#{ provider }", true)
 
-      "sync_#{ provider }_worker".classify.constantize.perform_async(@user.id)
+      SyncFromWorker.perform_async(@user.id, provider)
 
       render :start_sync_with_provider
     end
@@ -48,32 +51,18 @@ class ProjectsController < ApplicationController
     (render :status => 200, :nothing => true) && return
   end
 
-  def payload_from_bitbucket
-    if params[:secure_token] == @project.bitbucket_secret_token_for_hook
-      @project.parse_params_from_bitbucket_webhook(params)
+  %w(bitbucket gitlab).each do |provider|
+    define_method "payload_from_#{ provider }" do
+      if params[:secure_token] == @project.send("#{ provider }_secret_token_for_hook")
+        @project.send("parse_params_from_#{ provider }_webhook", params)
+      end
+
+      render :status => 200, :nothing => true
     end
-
-    render :status => 200, :nothing => true
-  end
-
-  def payload_from_gitlab
-    if params[:secure_token] == @project.gitlab_secret_token_for_hook
-      @project.parse_params_from_gitlab_webhook(params)
-    end
-
-    render :status => 200, :nothing => true
   end
 
   def show
     @boards = @project.boards.order('created_at DESC').page(params[:page])
-  end
-
-  def create
-    if @project.save
-      redirect_to project_url(@project), :turbolinks => !request.format.html?
-    else
-      render :new
-    end
   end
 
   def update
@@ -103,9 +92,11 @@ class ProjectsController < ApplicationController
   end
 
   def signature_from_payload
-    request.body.rewind
+    request_body = request.body
 
-    payload_body = request.body.read
+    request_body.rewind
+
+    payload_body = request_body.read
 
     'sha1=' + OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'),
       @project.github_secret_token_for_hook.to_s, payload_body)
@@ -113,7 +104,7 @@ class ProjectsController < ApplicationController
 
   def projects_for_json
     {
-      :results => @projects.map { |p| { :id => p.id, :text => p.name } },
+      :results => @projects.map { |item| { :id => item.id, :text => item.name } },
       :total_count => @projects.total_count
     }
   end

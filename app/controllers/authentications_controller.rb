@@ -1,3 +1,4 @@
+# Controller for manage user authentications
 class AuthenticationsController < ApplicationController
   load_and_authorize_resource :user
 

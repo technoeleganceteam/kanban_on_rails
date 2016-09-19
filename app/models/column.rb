@@ -1,3 +1,4 @@
+# Class for column business logic. Column belongs to a board and contains issues.
 class Column < ActiveRecord::Base
   include EmptyArrayRemovable
 
@@ -16,6 +17,12 @@ class Column < ActiveRecord::Base
   def max_order(section)
     section.issue_to_section_connections.where(:column_id => id).order('issue_order DESC').
       first.try(:issue_order).to_i
+  end
+
+  def color_for_column_badge
+    return 'blue' unless max_issues_count.present?
+
+    max_issues_count > issue_to_section_connections.size ? 'blue' : 'red'
   end
 
   def column_issues_for_section(section_id)
@@ -46,8 +53,10 @@ class Column < ActiveRecord::Base
   end
 
   def empty_tags
-    errors.add(:base, (I18n.t '.shared.form_errors.columns.tag')) if tags.empty? && !backlog?
+    error_message = I18n.t('shared.form_errors.columns.tag')
 
-    errors.add(:base, (I18n.t '.shared.form_errors.columns.tag')) if !tags.empty? && backlog?
+    tags_empty = tags.empty?
+
+    errors.add(:base, error_message) if (tags_empty && !backlog?) || (!tags_empty && backlog?)
   end
 end

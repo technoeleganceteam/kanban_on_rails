@@ -9,12 +9,12 @@ li.list-group-item
       | &nbsp;
   - if issue.bitbucket_issue_id.present?
     | &nbsp;
-    = link_to bitbucket_issue_link(issue.project.bitbucket_full_name, issue.bitbucket_issue_id) do
+    = link_to BitbucketUtilities.issue_link(issue.project.bitbucket_full_name, issue.bitbucket_issue_id) do
       i.fa.fa-bitbucket
       | &nbsp;
   - if issue.gitlab_issue_id.present?
     | &nbsp;
-    = link_to gitlab_issue_link(issue.project.gitlab_full_name, issue.gitlab_issue_id) do
+    = link_to GitlabUtilities.issue_link(issue.project.gitlab_full_name, issue.gitlab_issue_id) do
       i.fa.fa-gitlab
       | &nbsp;
   - Settings.issues_providers.each do |provider|

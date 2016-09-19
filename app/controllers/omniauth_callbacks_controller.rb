@@ -1,3 +1,4 @@
+# Class for omniauth callbacks business logic
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   User.omniauth_providers.each do |provider|
     define_method provider do

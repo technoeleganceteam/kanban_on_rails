@@ -1,4 +1,5 @@
 module Rack
+  # Class for defining throttles for application
   class Attack
     throttle('logins/ip', :limit => 10, :period => 300.seconds) do |req|
       req.ip if req.path == '/users/sign_in' && req.post? && Rails.env.production?

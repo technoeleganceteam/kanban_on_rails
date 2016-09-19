@@ -1,3 +1,4 @@
+# Controller for manage changelogs
 class ChangelogsController < ApplicationController
   load_and_authorize_resource :project
 
@@ -22,7 +23,7 @@ class ChangelogsController < ApplicationController
   end
 
   def sync
-    GenerateChangelogWorker.perform_async(@project.id)
+    GenerateChangelogsWorker.perform_async(@project.id)
 
     redirect_to project_changelogs_url, :flash => { :notice => I18n.t('changelogs_has_been_synced') }
   end

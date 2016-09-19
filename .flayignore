@@ -1,0 +1,4 @@
+./db/migrate/*.rb
+./db/schema.rb
+./spec/**/*.rb
+./config/initializers/rack_attack.rb

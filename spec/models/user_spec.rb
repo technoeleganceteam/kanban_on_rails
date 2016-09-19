@@ -17,7 +17,7 @@ describe User, :type => :model do
     it { is_expected.to eq 'https://secure.gravatar.com/avatar/97dfebf4098c0f5c16bca61e2b76c373' }
   end
 
-  describe '#sync_github' do
+  describe '#sync_from_github' do
     context 'when user has github repository' do
       before do
         project = create :project, :github_repository_id => 123, :name => 'Some name'
@@ -71,7 +71,7 @@ describe User, :type => :model do
         user.authentications.create! :uid => 123, :provider => 'github', :token => 'token'
       end
 
-      it { expect(user.sync_github.size).to eq 8 }
+      it { expect(user.sync_from_github.size).to eq 8 }
     end
 
     context 'when user has github repository Octokit::Unauthorized' do
@@ -85,7 +85,7 @@ describe User, :type => :model do
         allow_any_instance_of(Octokit::Client).to receive(:repos).and_raise(Octokit::Unauthorized.new({}))
       end
 
-      it { expect(user.sync_github).to eq 0 }
+      it { expect(user.sync_from_github).to eq 0 }
     end
 
     context 'when user has github issues Octokit::NotFound' do
@@ -126,7 +126,7 @@ describe User, :type => :model do
         allow_any_instance_of(Octokit::Client).to receive(:list_issues).and_raise(Octokit::NotFound.new({}))
       end
 
-      it { expect(user.sync_github).to eq 0 }
+      it { expect(user.sync_from_github).to eq 0 }
     end
 
     context 'when user has github issues Octokit::NotFound' do
@@ -172,7 +172,7 @@ describe User, :type => :model do
         allow_any_instance_of(Octokit::Client).to receive(:create_hook).and_raise(Octokit::NotFound.new({}))
       end
 
-      it { expect(user.sync_github).to eq 0 }
+      it { expect(user.sync_from_github).to eq 0 }
     end
 
     context 'when user has github hook Octokit::NotFound' do
@@ -224,7 +224,7 @@ describe User, :type => :model do
         allow_any_instance_of(Octokit::Client).to receive(:hooks).and_raise(Octokit::NotFound.new({}))
       end
 
-      it { expect(user.sync_github).to eq 0 }
+      it { expect(user.sync_from_github).to eq 0 }
     end
 
     context 'when user has github hook Octokit::Unauthorized' do
@@ -276,11 +276,11 @@ describe User, :type => :model do
         allow_any_instance_of(Octokit::Client).to receive(:hooks).and_raise(Octokit::Unauthorized.new({}))
       end
 
-      it { expect(user.sync_github).to eq 0 }
+      it { expect(user.sync_from_github).to eq 0 }
     end
   end
 
-  describe '#sync_gitlab' do
+  describe '#sync_from_gitlab' do
     before do
       project = create :project, :gitlab_repository_id => 1, :name => 'Some name'
 
@@ -346,10 +346,10 @@ describe User, :type => :model do
         :gitlab_private_token => 'token'
     end
 
-    it { expect(user.sync_gitlab.size).to eq 8 }
+    it { expect(user.sync_from_gitlab.size).to eq 8 }
   end
 
-  describe '#sync_bitbucket' do
+  describe '#sync_from_bitbucket' do
     context 'when user has some bitbucket repository' do
       before do
         project = create :project, :bitbucket_full_name => 'username/slug', :name => 'Some name'
@@ -442,7 +442,7 @@ describe User, :type => :model do
         user.authentications.create! :uid => 123, :provider => 'bitbucket', :token => 'token', :secret => 'secret'
       end
 
-      it { expect(user.sync_bitbucket.size).to eq 8 }
+      it { expect(user.sync_from_bitbucket.size).to eq 8 }
     end
 
     context 'when bitbucket client raise BitBucket::Error::Unauthorized' do
@@ -456,7 +456,7 @@ describe User, :type => :model do
         allow_any_instance_of(BitBucket::Repos).to receive(:list).and_raise(BitBucket::Error::Unauthorized.new({}))
       end
 
-      it { expect(user.sync_bitbucket).to eq 0 }
+      it { expect(user.sync_from_bitbucket).to eq 0 }
     end
 
     context 'when bitbucket client raise BitBucket::Error::NotFound' do
@@ -514,7 +514,7 @@ describe User, :type => :model do
           and_raise(BitBucket::Error::NotFound.new({}))
       end
 
-      it { expect(user.sync_bitbucket).to eq 0 }
+      it { expect(user.sync_from_bitbucket).to eq 0 }
     end
 
     context 'when bitbucket client raise BitBucket::Error::Forbidden' do
@@ -579,7 +579,7 @@ describe User, :type => :model do
           and_raise(BitBucket::Error::Forbidden.new({}))
       end
 
-      it { expect(user.sync_bitbucket).to eq 0 }
+      it { expect(user.sync_from_bitbucket).to eq 0 }
     end
 
     context 'when bitbucket client for create hook raise BitBucket::Error::Forbidden' do
@@ -635,7 +635,7 @@ describe User, :type => :model do
           and_raise(BitBucket::Error::Forbidden.new({}))
       end
 
-      it { expect(user.sync_bitbucket).to eq 0 }
+      it { expect(user.sync_from_bitbucket).to eq 0 }
     end
   end
 

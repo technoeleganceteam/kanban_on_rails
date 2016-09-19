@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module KanbanOnRails
+  # Application class witing config
   class Application < Rails::Application
     config.middleware.use Rack::Attack
 

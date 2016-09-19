@@ -47,5 +47,5 @@ div [data-issue_to_section_connection-id = "#{ issue_to_section_connection.id }"
   - if issue.tags?
     p
       - issue.tags.each do |tag|
-        span.label.label-default style = "#{ issue_tag_color(issue, tag) }" = tag
+        span.label.label-default style = "#{ issue.tag_color(tag) }" = tag
         br

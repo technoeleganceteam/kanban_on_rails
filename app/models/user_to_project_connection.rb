@@ -1,3 +1,4 @@
+# Class provide user to project connections business logic
 class UserToProjectConnection < ActiveRecord::Base
   belongs_to :project
 

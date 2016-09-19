@@ -6,9 +6,17 @@ engines:
   coffeelint:
     enabled: true
     config: coffeelint.json
+  bundler-audit:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
 
 ratings:
   paths:
+    - Gemfile.lock
     - "**.rb"
     - "**.coffee"
 

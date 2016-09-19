@@ -1,3 +1,4 @@
+# Class for feedbacks business logic
 class Feedback < ActiveRecord::Base
   validates :name, :length => { :maximum => Settings.max_string_field_size }, :presence => true
 

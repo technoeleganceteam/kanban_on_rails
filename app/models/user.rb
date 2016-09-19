@@ -1,3 +1,4 @@
+# Class for users business logic
 class User < ActiveRecord::Base
   store_accessor :meta, :sync_with_github, :sync_with_bitbucket, :has_github_account, :has_bitbucket_account,
     :sync_with_gitlab, :has_gitlab_account
@@ -42,20 +43,20 @@ class User < ActiveRecord::Base
     query.present? ? projects.where('name ilike ?', "%#{ query }%") : projects
   end
 
-  def github_client_repos(client)
-    client.repos
+  def github_client_repos
+    github_client.repos
   rescue Octokit::Unauthorized
     Rails.logger.info "Octokit::Unauthorized on get repos from user with id #{ id }"
 
     []
   end
 
-  def gitlab_client_repos(client)
-    client.projects.auto_paginate
+  def gitlab_client_repos
+    gitlab_client.projects.auto_paginate
   end
 
-  def bitbucket_client_repos(client)
-    client.repos.list
+  def bitbucket_client_repos
+    bitbucket_client.repos.list
   rescue BitBucket::Error::Unauthorized
     Rails.logger.info "BitBucket::Error::Unauthorized on getting bitbucket repos from user id #{ id }"
 
@@ -63,79 +64,50 @@ class User < ActiveRecord::Base
   end
 
   Settings.issues_providers.each do |provider|
-    define_method "sync_#{ provider }" do
-      return unless (client = send("#{ provider }_client"))
+    define_method "sync_from_#{ provider }" do
+      return unless send("#{ provider }_client")
 
-      send("sync_#{ provider }_projects", client)
+      send("sync_#{ provider }_projects")
 
-      send("sync_#{ provider }_issues", client)
+      send("sync_issues_from_#{ provider }")
 
-      send("create_#{ provider }_hook", client)
+      send("create_#{ provider }_hook")
 
       update_attribute("sync_with_#{ provider }", false)
 
       broadcast_stop_sync_notification(provider)
     end
 
-    define_method "sync_#{ provider }_projects" do |client|
-      send("#{ provider }_client_repos", client).each do |repo|
+    define_method "sync_#{ provider }_projects" do
+      send("#{ provider }_client_repos").each do |repo|
         project = Project.send("sync_with_#{ provider }_project", repo)
 
         project.user_to_project_connections.where(:user_id => id).first_or_initialize.assign_attributes(
-          :role => project.send("check_#{ provider }_owner", repo, client)
+          :role => ProjectUtilities.send("check_#{ provider }_owner", repo, send("#{ provider }_client"))
         )
 
         project.save!
       end
     end
-  end
 
-  def sync_gitlab_issues(client)
-    projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
-      client.issues(project.gitlab_repository_id).auto_paginate.each do |gitlab_issue|
-        Issue.sync_with_gitlab_issue(gitlab_issue, project)
+    define_method "#{ provider }_client" do
+      authentications.find_by(:provider => provider).try(&:"#{ provider }_client")
+    end
+
+    define_method "sync_issues_from_#{ provider }" do
+      projects.where("meta -> 'is_#{ provider }_repository' = 'true'").find_each do |project|
+        project.send("sync_issues_from_#{ provider }", send("#{ provider }_client"))
       end
     end
   end
 
-  def create_gitlab_hook(client)
+  def create_gitlab_hook
     projects.where("meta -> 'is_gitlab_repository' = 'true'").find_each do |project|
-      project.create_gitlab_hook(client)
+      project.create_gitlab_hook(gitlab_client)
     end
   end
 
-  def gitlab_client
-    authentication = authentications.find_by(:provider => 'gitlab')
-
-    return false unless authentication.present?
-
-    Gitlab.endpoint = Settings.gitlab_endpoint
-
-    Gitlab.tap { |client| client.private_token = authentication.gitlab_private_token }
-  end
-
-  def bitbucket_client
-    authentication = authentications.find_by(:provider => 'bitbucket')
-
-    return false unless authentication.present?
-
-    BitBucket.new :oauth_token => authentication.token, :oauth_secret => authentication.secret,
-      :client_secret => Settings.omniauth.bitbucket.secret, :client_id => Settings.omniauth.bitbucket.key
-  end
-
-  def sync_bitbucket_issues(client)
-    projects.where("meta -> 'is_bitbucket_repository' = 'true'").find_each do |project|
-      begin
-        client.issues.list_repo(project.bitbucket_owner, project.bitbucket_slug).each do |bitbucket_issue|
-          Issue.sync_with_bitbucket_issue(bitbucket_issue, project)
-        end
-      rescue BitBucket::Error::NotFound
-        Rails.logger.info "BitBucket::Error::NotFound on sync bitbucket issues with project id #{ project.id }"
-      end
-    end
-  end
-
-  def create_bitbucket_hook(_client)
+  def create_bitbucket_hook
     authentication = authentications.find_by(:provider => 'bitbucket')
 
     return false unless authentication.present?
@@ -171,46 +143,30 @@ class User < ActiveRecord::Base
     end
   end
 
-  def github_client
-    authentication = authentications.find_by(:provider => 'github')
-
-    return false unless authentication.present?
-
-    Octokit::Client.new(:access_token => authentication.token, :auto_paginate => true)
-  end
-
-  def sync_github_issues(client)
+  def create_github_hook
     projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
-      begin
-        client.list_issues(project.github_full_name).each do |github_issue|
-          Issue.sync_with_github_issue(github_issue, project)
-        end
-      rescue Octokit::NotFound, Octokit::Unauthorized
-        Rails.logger.info "Octokit error while syncing issues from project id #{ project.id }"
-      end
-    end
-  end
-
-  def create_github_hook(client)
-    projects.where("meta -> 'is_github_repository' = 'true'").find_each do |project|
-      begin
-        project.create_github_hook(client)
-      rescue Octokit::NotFound, Octokit::Unauthorized
-        Rails.logger.info "Octokit error on creating hook with project id #{ project.id }"
-      end
+      project.create_github_hook(github_client)
     end
   end
 
   def assign_social_info(params = {})
     info = params[:info]
 
-    self.name ||= info.try(:name) || info.try(:nickname)
-
-    self.name = 'Name' unless self.name.present?
+    self.name ||= info.try(:name) || info.try(:nickname) || 'Name'
 
     self.avatar_url ||= info.try(:image)
 
     self.confirmed_at ||= DateTime.now.utc if info.try(:[], :email).present?
+  end
+
+  class << self
+    def build_user(params)
+      User.where(:email => params[:email]).first_or_initialize.tap do |user|
+        user.name ||= params[:name]
+
+        user.locale ||= params[:locale]
+      end
+    end
   end
 
   private

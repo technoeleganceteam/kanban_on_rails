@@ -1,8 +1,9 @@
 <script>
-  <% @board.sections.each do |s| %>
-    init_dragula(<%= @columns.map{ |c| "section_#{ s.id }_column_#{ c.id }" }.to_json.html_safe %>,
-      <%= @board.id %>, <%= current_user.id %>);
+  <% @board.ordered_sections.each do |s| %>
+    <% columns = @board.ordered_columns.map{ |c| "section_#{ s.id }_column_#{ c.id }" }.to_json.html_safe %>
 
-    init_infinite_scroll(<%= @columns.map { |c| "section_#{ s.id }_column_#{ c.id }" }.to_json.html_safe %>)
+    init_dragula(<%= columns %>, <%= @board.id %>, <%= current_user.id %>);
+
+    init_infinite_scroll(<%= columns %>)
   <% end %>
 </script>

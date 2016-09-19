@@ -37,6 +37,7 @@ gem 'bitbucket_rest_api', :git => 'https://github.com/technoeleganceteam/bitbuck
 gem 'postmark-rails'
 gem 'omniauth-gitlab'
 gem 'gitlab'
+gem 'draper'
 
 gem 'sass-rails'
 gem 'uglifier'
@@ -76,6 +77,8 @@ group :development do
   gem 'reek'
   gem 'slim_lint'
   gem 'mdl'
+  gem 'bundler-audit'
+  gem 'flay'
 end
 
 group :development, :test do

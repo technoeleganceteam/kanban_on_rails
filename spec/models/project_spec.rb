@@ -269,8 +269,4 @@ RSpec.describe Project, :type => :model do
         to eq false
     end
   end
-
-  describe '#check_gitlab_owner' do
-    it { expect(project.check_gitlab_owner(Hashie::Mash.new(:owner => nil), nil)).to eq 'member' }
-  end
 end

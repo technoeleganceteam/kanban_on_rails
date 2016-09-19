@@ -20,7 +20,7 @@ h2 = "#{ changelog.tag_name } (#{ changelog.last_commit_date.strftime('%d.%m.%Y 
 
   ol
     - changelog.sorted_pull_request_subtasks.each do |subtask|
-      li = subtask_info_for_report(subtask)
+      li = subtask.info_for_report
 
 - if changelog.project.include_issues?
   h3 = t '.issues'
