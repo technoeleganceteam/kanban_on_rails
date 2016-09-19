@@ -7,7 +7,7 @@ RSpec.describe Issue, :type => :model do
 
   let(:user_to_issue_connection) { create :user_to_issue_connection, :user => user, :issue => issue }
 
-  describe '#sync_with_github' do
+  describe '#sync_to_github' do
     context 'when new issue' do
       before do
         stub_request(:patch, 'https://api.github.com/repos/some/project/issues/').
@@ -27,7 +27,7 @@ RSpec.describe Issue, :type => :model do
         user.authentications.create! :uid => 123, :provider => 'github', :token => 'token'
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_github(user.id)).to eq true }
+      it { expect(user_to_issue_connection.issue.sync_to_github(user.id)).to eq true }
     end
 
     context 'when existing issue' do
@@ -51,11 +51,11 @@ RSpec.describe Issue, :type => :model do
         user_to_issue_connection.issue.update_attributes(:github_issue_number => 1)
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_github(user.id)).to eq '' }
+      it { expect(user_to_issue_connection.issue.sync_to_github(user.id)).to eq '' }
     end
   end
 
-  describe '#sync_with_gitlab' do
+  describe '#sync_to_gitlab' do
     context 'when new issue' do
       before do
         stub_request(:post, 'https://gitlab.com/api/v3/projects//issues').
@@ -67,7 +67,7 @@ RSpec.describe Issue, :type => :model do
           :gitlab_private_token => 'token'
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_gitlab(user.id)).to eq true }
+      it { expect(user_to_issue_connection.issue.sync_to_gitlab(user.id)).to eq true }
     end
 
     context 'when existing issue' do
@@ -83,11 +83,11 @@ RSpec.describe Issue, :type => :model do
         user_to_issue_connection.issue.update_attributes(:gitlab_issue_id => 1)
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_gitlab(user.id)).to eq false }
+      it { expect(user_to_issue_connection.issue.sync_to_gitlab(user.id)).to eq false }
     end
   end
 
-  describe '#sync_with_bitbucket' do
+  describe '#sync_to_bitbucket' do
     context 'when new issue' do
       before do
         stub_request(:post, 'https://api.bitbucket.org/2.0/repositories/username/slug/issues/').
@@ -103,7 +103,7 @@ RSpec.describe Issue, :type => :model do
           :bitbucket_slug => 'slug')
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id)).to eq nil }
+      it { expect(user_to_issue_connection.issue.sync_to_bitbucket(user.id)).to eq nil }
     end
 
     context 'when existing issue' do
@@ -123,7 +123,7 @@ RSpec.describe Issue, :type => :model do
         user_to_issue_connection.issue.update_attributes(:bitbucket_issue_id => 1)
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id).size).to eq 0 }
+      it { expect(user_to_issue_connection.issue.sync_to_bitbucket(user.id).size).to eq 0 }
     end
 
     context 'when BitBucket::Error::NotFound' do
@@ -143,7 +143,7 @@ RSpec.describe Issue, :type => :model do
         allow_any_instance_of(BitBucket::Issues).to receive(:create).and_raise(BitBucket::Error::NotFound.new({}))
       end
 
-      it { expect(user_to_issue_connection.issue.sync_with_bitbucket(user.id)).to eq nil }
+      it { expect(user_to_issue_connection.issue.sync_to_bitbucket(user.id)).to eq nil }
     end
   end
 
@@ -187,6 +187,22 @@ RSpec.describe Issue, :type => :model do
       end
 
       it { expect(issue.url_from_provider).to eq 'https://bitbucket.com//issues/1' }
+    end
+  end
+
+  describe '#issue_info_for_report' do
+    before { @issue = create :issue, :gitlab_issue_id => '1' }
+
+    it { expect(@issue.info_for_report).to eq "Some title ([#](https://gitlab.com//issues/))\n" }
+  end
+
+  describe '#tag_color' do
+    before do
+      @issue = create :issue, :github_labels => [[[], %w(name foo), %w(color bar)]], :tags => ['foo']
+    end
+
+    it 'return css rules' do
+      expect(@issue.tag_color('foo')).to eq 'background-color: #bar;color:black;'
     end
   end
 end

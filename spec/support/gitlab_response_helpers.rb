@@ -1,3 +1,4 @@
+# Module which provide response helpers for testing gitlab integration
 module GitlabResponseHelpers
   def self.parsed_response
     Hashie::Mash.new(:message => 'test')

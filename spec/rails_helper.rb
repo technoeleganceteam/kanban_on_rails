@@ -22,6 +22,7 @@ require 'rspec/rails'
 require 'cancan/matchers'
 require 'webmock/rspec'
 require 'database_cleaner'
+require 'draper/test/rspec_integration'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

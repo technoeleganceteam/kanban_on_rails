@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe GenerateChangelogs do
-  describe '#handle_changelogs' do
+  describe '#generate' do
     context 'when project is the github repository' do
       before do
         @user = create :user_with_github_profile
@@ -69,7 +69,7 @@ RSpec.describe GenerateChangelogs do
           )
       end
 
-      it { expect(GenerateChangelogs.new(:project => @user.projects.first).handle_changelogs).to eq 1 }
+      it { expect(GenerateChangelogs.new(:project => @user.projects.first).generate).to eq 1 }
     end
 
     context 'when project is the gitlab repository' do
@@ -107,7 +107,7 @@ RSpec.describe GenerateChangelogs do
           to_return(:status => 200, :body => {}.to_json, :headers => {})
       end
 
-      it { expect(GenerateChangelogs.new(:project => @user.projects.first).handle_changelogs).to eq 1 }
+      it { expect(GenerateChangelogs.new(:project => @user.projects.first).generate).to eq 1 }
     end
 
     context 'when project is the bitbucket repository' do
@@ -152,7 +152,7 @@ RSpec.describe GenerateChangelogs do
           to_return(:status => 200, :body => { :date => DateTime.now.utc }.to_json, :headers => {})
       end
 
-      it { expect(GenerateChangelogs.new(:project => @user.projects.first).handle_changelogs).to eq 1 }
+      it { expect(GenerateChangelogs.new(:project => @user.projects.first).generate).to eq 1 }
     end
   end
 end

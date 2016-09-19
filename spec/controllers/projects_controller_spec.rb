@@ -13,13 +13,16 @@ RSpec.describe ProjectsController, :type => :controller do
 
   let(:another_user) { create :user }
 
-  it { should route(:get, '/users/1/projects/sync_with_github').to(:action => :sync_with_github, :user_id => 1) }
-
-  it { should route(:get, '/users/1/projects/sync_with_gitlab').to(:action => :sync_with_gitlab, :user_id => 1) }
+  it do
+    should route(:get, '/users/1/projects/sync_from_github').to(:action => :sync_from_github, :user_id => 1)
+  end
 
   it do
-    should route(:get, '/users/1/projects/sync_with_bitbucket').
-      to(:action => :sync_with_bitbucket, :user_id => 1)
+    should route(:get, '/users/1/projects/sync_from_gitlab').to(:action => :sync_from_gitlab, :user_id => 1)
+  end
+
+  it do
+    should route(:get, '/users/1/projects/sync_from_bitbucket').to(:action => :sync_from_bitbucket, :user_id => 1)
   end
 
   it { should route(:get, '/users/1/projects').to(:action => :index, :user_id => 1) }
@@ -42,9 +45,11 @@ RSpec.describe ProjectsController, :type => :controller do
 
   it { should route(:delete, '/users/1/projects/1').to(:action => :destroy, :id => 1, :user_id => 1) }
 
-  it { expect { get :sync_with_github, :user_id => user }.to raise_error(CanCan::AccessDenied) }
+  it { expect { get :sync_from_github, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
-  it { expect { get :sync_with_bitbucket, :user_id => user }.to raise_error(CanCan::AccessDenied) }
+  it { expect { get :sync_from_gitlab, :user_id => user }.to raise_error(CanCan::AccessDenied) }
+
+  it { expect { get :sync_from_bitbucket, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
   it { expect { get :index, :user_id => user }.to raise_error(CanCan::AccessDenied) }
 
@@ -119,20 +124,20 @@ RSpec.describe ProjectsController, :type => :controller do
       it { should render_template :show }
     end
 
-    describe 'GET sync_with_github' do
-      before { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }
+    describe 'GET sync_from_github' do
+      before { xhr :get, :sync_from_github, :id => connection.project.id, :user_id => user, :format => :js }
 
       it { should render_template :start_sync_with_provider }
     end
 
-    describe 'GET sync_with_gitlab' do
-      before { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }
+    describe 'GET sync_from_gitlab' do
+      before { xhr :get, :sync_from_gitlab, :id => connection.project.id, :user_id => user, :format => :js }
 
       it { should render_template :start_sync_with_provider }
     end
 
-    describe 'GET sync_with_bitbucket' do
-      before { xhr :get, :sync_with_bitbucket, :id => connection.project.id, :user_id => user, :format => :js }
+    describe 'GET sync_from_bitbucket' do
+      before { xhr :get, :sync_from_bitbucket, :id => connection.project.id, :user_id => user, :format => :js }
 
       it { should render_template :start_sync_with_provider }
     end
@@ -265,24 +270,24 @@ RSpec.describe ProjectsController, :type => :controller do
       it { expect { get :index, :user_id => user }.to raise_error(CanCan::AccessDenied) }
     end
 
-    describe 'GET sync_with_github' do
+    describe 'GET sync_from_github' do
       it do
-        expect { xhr :get, :sync_with_github, :id => connection.project.id, :user_id => user, :format => :js }.
+        expect { xhr :get, :sync_from_github, :id => connection.project.id, :user_id => user, :format => :js }.
           to raise_error(CanCan::AccessDenied)
       end
     end
 
-    describe 'GET sync_with_gitlab' do
+    describe 'GET sync_from_gitlab' do
       it do
-        expect { xhr :get, :sync_with_gitlab, :id => connection.project.id, :user_id => user, :format => :js }.
+        expect { xhr :get, :sync_from_gitlab, :id => connection.project.id, :user_id => user, :format => :js }.
           to raise_error(CanCan::AccessDenied)
       end
     end
 
-    describe 'GET sync_with_bitbucket' do
+    describe 'GET sync_from_bitbucket' do
       it do
         expect do
-          xhr :get, :sync_with_bitbucket, :id => connection.project.id, :user_id => user, :format => :js
+          xhr :get, :sync_from_bitbucket, :id => connection.project.id, :user_id => user, :format => :js
         end.to raise_error(CanCan::AccessDenied)
       end
     end

@@ -1,9 +1,11 @@
+# Class for issues business logic
 class Issue < ActiveRecord::Base
   include EmptyArrayRemovable
+  include Providerable
 
   store_accessor :meta, :github_issue_id, :github_issue_number, :bitbucket_issue_id,
     :github_issue_comments_count, :github_issue_html_url, :github_labels, :bitbucket_issue_comment_count,
-    :gitlab_issue_id, :bitbucket_status, :gitlab_issue_number, :bitbucket_issue_number
+    :gitlab_issue_id, :gitlab_issue_number, :bitbucket_issue_number
 
   has_many :users, :through => :user_to_issue_connections
 
@@ -35,19 +37,30 @@ class Issue < ActiveRecord::Base
 
   delegate :name, :to => :project, :prefix => true
 
+  def closed?
+    state == 'closed'
+  end
+
+  def info_for_report
+    "#{ title } ([##{ send("#{ provider }_issue_number") }](#{ url_from_provider }))\n"
+  end
+
+  def tag_color(tag)
+    return unless github_labels.present?
+
+    result = github_labels.select { |label| label[1].last == tag }[0]
+
+    "background-color: ##{ result[2].last };color:black;" if result.present?
+  end
+
   def create_or_destroy_issue_to_section_connections
-    state == 'closed' ? issue_to_section_connections.destroy_all : assign_issue_to_section_connections
+    closed? ? issue_to_section_connections.destroy_all : assign_issue_to_section_connections
   end
 
   def assign_issue_to_section_connections
-    Section.where(:board_id => project.boards).includes(:board).
-      where('ARRAY[?]::varchar[] && tags', tags).find_each do |section|
-      build_section_connection(section)
-    end
+    build_connections_with_tags
 
-    Section.where(:board_id => project.boards).includes(:board).where(:include_all => true).find_each do |section|
-      build_section_connection(section)
-    end
+    build_connections_with_include_all
   end
 
   def parse_tags(source_column_id, target_column_id)
@@ -56,7 +69,7 @@ class Issue < ActiveRecord::Base
   end
 
   Settings.issues_providers.each do |provider|
-    define_method "sync_with_#{ provider }" do |user_id|
+    define_method "sync_to_#{ provider }" do |user_id|
       user = User.find_by(:id => user_id)
 
       return unless user.present?
@@ -67,16 +80,26 @@ class Issue < ActiveRecord::Base
 
       send("create_or_update_issue_to_#{ provider }", client)
     end
+
+    define_method "assign_attributes_from_#{ provider }_hook" do |params|
+      assign_attributes(IssueUtilities.send("params_from_#{ provider }_hook", params))
+    end
+
+    define_method "assign_attributes_from_#{ provider }_api" do |params|
+      assign_attributes(IssueUtilities.send("params_from_#{ provider }_api", params))
+    end
   end
 
   def provider_id?
     Settings.issues_providers.map { |provider| send("#{ provider }_issue_id") }.any?
   end
 
-  def provider
-    Settings.issues_providers.map do |provider|
-      provider if send("#{ provider }_issue_id").present?
-    end.compact.first
+  def close_and_update_to_provider
+    return unless provider_id?
+
+    update_attributes(:state => 'closed')
+
+    send("#{ provider }_update_issue", project.send("#{ project.provider }_client_for_changelogs"))
   end
 
   def url_from_provider
@@ -96,13 +119,7 @@ class Issue < ActiveRecord::Base
     if github_issue_number.present?
       github_update_issue(client)
     else
-      result = github_create_issue(client)
-
-      update_attributes!(:github_issue_id => result.try(:id),
-        :github_issue_number => result.try(:number),
-        :github_issue_comments_count => result.try(:comments),
-        :github_issue_html_url => result.try(:html_url),
-        :github_labels => result.try(:labels))
+      update_attributes!(GithubUtilities.parse_params_from_update_issue(github_create_issue(client)))
     end
   end
 
@@ -112,7 +129,9 @@ class Issue < ActiveRecord::Base
     else
       result = bitbucket_create_issue(client)
 
-      update_attributes!(:bitbucket_issue_id => result.id) if result.present? && result.id.present?
+      result_id = result.present? ? result.try(&:id) : nil
+
+      update_attributes!(:bitbucket_issue_id => result_id) if result_id.present?
     end
   end
 
@@ -127,7 +146,7 @@ class Issue < ActiveRecord::Base
   end
 
   def gitlab_update_issue(client)
-    status = (state == 'closed' ? { :state_event => 'close' } : {})
+    status = GitlabUtilities.issue_status_to_sync(self)
 
     client.edit_issue(project.gitlab_repository_id, gitlab_issue_id, { :title => title,
       :description => body, :labels => tags.join(',') }.merge(status))
@@ -155,45 +174,18 @@ class Issue < ActiveRecord::Base
   end
 
   def bitbucket_update_issue(client)
-    status = (state == 'closed' ? { :status => 'resolved' } : {})
+    status = BitbucketUtilities.issue_status_to_sync(self)
 
     client.issues.edit(project.bitbucket_owner, project.bitbucket_slug, bitbucket_issue_id,
       { 'title' => title, 'content' => body }.merge(status))
   end
 
-  def parse_attributes_for_update(attributes)
-    { :id => attributes[:id], :tags => parse_tags(attributes[:source_column_id], attributes[:target_column_id]) }
-  end
+  def run_sync_to_workers(user_id)
+    Settings.issues_providers.each do |provider|
+      SyncToWorker.perform_async(id, user_id, provider) if project.send("is_#{ provider }_repository")
+    end
 
-  def assign_attributes_from_github_hook(params)
-    assign_attributes(
-      :title => params[:title],
-      :body => params[:body],
-      :github_issue_comments_count => params[:comments],
-      :github_issue_html_url => params[:html_url],
-      :tags => params[:labels].to_a.map { |l| l[:name] },
-      :github_labels => params[:labels].to_a.map(&:to_a),
-      :state => github_state_to_hook(params),
-      :github_issue_number => params[:number].to_i
-    )
-  end
-
-  def assign_attributes_from_gitlab_hook(params)
-    assign_attributes(
-      :title => params[:title],
-      :body => params[:description],
-      :gitlab_issue_number => params[:iid],
-      :state => params[:state] == 'closed' ? 'closed' : 'open'
-    )
-  end
-
-  def assign_attributes_from_bitbucket_hook(params)
-    assign_attributes(
-      :title => params[:title],
-      :body => params[:content][:raw],
-      :bitbucket_issue_number => params[:id],
-      :state => params[:state] == 'resolved' ? 'closed' : 'open'
-    )
+    NotificationWorker.perform_async(id, user_id)
   end
 
   class << self
@@ -202,84 +194,37 @@ class Issue < ActiveRecord::Base
 
       return unless issue.present?
 
-      SyncGithubIssueWorker.perform_async(issue_id, user_id) if issue.project.is_github_repository
-
-      SyncBitbucketIssueWorker.perform_async(issue_id, user_id) if issue.project.is_bitbucket_repository
-
-      SyncGitlabIssueWorker.perform_async(issue_id, user_id) if issue.project.is_gitlab_repository
-
-      NotificationWorker.perform_async(issue_id, user_id)
-    end
-
-    Settings.issues_providers.each do |provider|
-      define_method "sync_with_#{ provider }_issue" do |provider_issue, project|
-        id_param = provider == 'bitbucket' ? 'local_id' : 'id'
-
-        issue = project.issues.find_by("meta ->> '#{ provider }_issue_id' = '?'",
-          provider_issue.send(id_param).to_i)
-
-        unless issue.present?
-          issue = project.issues.build.tap { |i| i.send("#{ provider }_issue_id=", provider_issue.send(id_param)) }
-        end
-
-        issue.send("assign_attributes_from_#{ provider }_sync", provider_issue)
-
-        issue.save!
-      end
+      issue.run_sync_to_workers(user_id)
     end
   end
 
   private
 
   def build_section_connection(section)
-    column = Column.where('ARRAY[?]::varchar[] && tags', tags).find_by(:board_id => section.board)
+    section_board = section.board
+
+    column = Column.where('ARRAY[?]::varchar[] && tags', tags).find_by(:board_id => section_board)
 
     if column.present?
       column.build_issue_to_section_connection(section, self)
     else
-      section.board.columns.where(:backlog => true).find_each do |backlog_column|
+      section_board.columns.where(:backlog => true).find_each do |backlog_column|
         backlog_column.build_issue_to_section_connection(section, self)
       end
     end
   end
 
-  def assign_attributes_from_bitbucket_sync(bitbucket_issue)
-    assign_attributes(
-      :title => bitbucket_issue.title,
-      :body => bitbucket_issue.content,
-      :state => bitbucket_issue[:status] == 'resolved' ? 'closed' : 'open',
-      :bitbucket_issue_number => bitbucket_issue.local_id,
-      :bitbucket_status => bitbucket_issue[:status],
-      :bitbucket_issue_comment_count => bitbucket_issue.comment_count
-    )
+  def build_connections_with_tags
+    Section.where(:board_id => project.boards).includes(:board).
+      where('ARRAY[?]::varchar[] && tags', tags).find_each do |section|
+      build_section_connection(section)
+    end
   end
 
-  def assign_attributes_from_gitlab_sync(gitlab_issue)
-    assign_attributes(
-      :title => gitlab_issue.title,
-      :body => gitlab_issue.description,
-      :gitlab_issue_number => gitlab_issue.id,
-      :state => gitlab_issue.state == 'closed' ? 'closed' : 'open',
-      :tags => gitlab_issue.labels
-    )
-  end
-
-  def assign_attributes_from_github_sync(github_issue)
-    assign_attributes(:title => github_issue.title[0..(Settings.max_string_field_size - 1)],
-      :body => github_issue.body,
-      :state => github_state_to_sync(github_issue),
-      :github_issue_comments_count => github_issue.comments,
-      :github_issue_html_url => github_issue.html_url,
-      :tags => github_issue.labels.map(&:name),
-      :github_labels => github_issue.labels,
-      :github_issue_number => github_issue.number)
-  end
-
-  def github_state_to_sync(github_issue)
-    github_issue.state.present? ? github_issue.state : 'open'
-  end
-
-  def github_state_to_hook(params)
-    params[:state].present? ? params[:state] : 'open'
+  def build_connections_with_include_all
+    Section.where(:board_id => project.boards).includes(:board).
+      where(:include_all => true).find_each do |section|
+      build_section_connection(section)
+    end
   end
 end

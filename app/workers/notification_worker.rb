@@ -1,3 +1,4 @@
+# Worker for showing notifications for user via ActionCable
 class NotificationWorker
   include Sidekiq::Worker
   include Viewable

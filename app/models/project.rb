@@ -1,3 +1,4 @@
+# Class for project business logic
 class Project < ActiveRecord::Base
   include Viewable
 
@@ -61,7 +62,9 @@ class Project < ActiveRecord::Base
     define_method "parse_issue_params_from_#{ provider }_webhook" do |params|
       issue = issues.find_by("meta ->> '#{ provider }_issue_id' = '?'", params[:id].to_i)
 
-      issue = issues.build.tap { |i| i.send("#{ provider }_issue_id=",  params[:id].to_i) } unless issue.present?
+      unless issue.present?
+        issue = issues.build.tap { |item| item.send("#{ provider }_issue_id=", params[:id].to_i) }
+      end
 
       issue.send("assign_attributes_from_#{ provider }_hook", params)
 
@@ -79,6 +82,31 @@ class Project < ActiveRecord::Base
 
       authentication.user.send("#{ provider }_client") if authentication.present? && authentication.class != Array
     end
+
+    define_method "assign_attributes_from_#{ provider }" do |repo|
+      assign_attributes({
+        :name => repo.name,
+        "#{ provider }_name" => repo.name,
+        "is_#{ provider }_repository" => true
+      }.merge(ProjectUtilities.send("#{ provider }_special_attributes", repo)))
+    end
+
+    define_method "sync_from_#{ provider }_issue" do |provider_issue|
+      id_param = provider == 'bitbucket' ? 'local_id' : 'id'
+
+      issue = issues.find_by("meta ->> '#{ provider }_issue_id' = '?'",
+        provider_issue.send(id_param).to_i)
+
+      unless issue.present?
+        issue = issues.build.tap do |item|
+          item.send("#{ provider }_issue_id=", provider_issue.send(id_param))
+        end
+      end
+
+      issue.send("assign_attributes_from_#{ provider }_api", provider_issue)
+
+      issue.save!
+    end
   end
 
   def write_changelog
@@ -90,6 +118,28 @@ class Project < ActiveRecord::Base
     commit_message = "#{ I18n.t 'update_changelog_up_to' } #{ changelogs.first.tag_name }"
 
     send("write_changelog_to_#{ provider }_repository", file_content, commit_message)
+  end
+
+  def sync_issues_from_github(client)
+    client.list_issues(github_full_name).each do |github_issue|
+      sync_from_github_issue(github_issue)
+    end
+  rescue Octokit::NotFound, Octokit::Unauthorized
+    Rails.logger.info "Octokit error while syncing issues from project id #{ id }"
+  end
+
+  def sync_issues_from_gitlab(client)
+    client.issues(gitlab_repository_id).auto_paginate.each do |gitlab_issue|
+      sync_from_gitlab_issue(gitlab_issue)
+    end
+  end
+
+  def sync_issues_from_bitbucket(client)
+    client.issues.list_repo(bitbucket_owner, bitbucket_slug).each do |bitbucket_issue|
+      sync_from_bitbucket_issue(bitbucket_issue)
+    end
+  rescue BitBucket::Error::NotFound
+    Rails.logger.info "BitBucket::Error::NotFound on sync bitbucket issues with project id #{ id }"
   end
 
   def write_changelog_to_github_repository(file_data, commit_message)
@@ -112,28 +162,34 @@ class Project < ActiveRecord::Base
       'master', file_data, commit_message)
   end
 
-  def write_changelog_to_bitbucket_repository(file_date, commit_message)
+  def write_changelog_to_bitbucket_repository(_file_date, _commit_message)
     # This feature is not available in the gem for bitbucket api https://github.com/bitbucket-rest-api/bitbucket
     # You can send PR to this gem or propose better gem for bitbucket api
   end
 
   def parse_params_from_github_webhook(params)
-    parse_issue_params_from_github_webhook(params[:issue]) if params[:issue].present?
+    issue_params = params[:issue]
 
-    GenerateChangelogWorker.perform_async(id) if params[:ref_type] == 'tag' && generate_changelogs?
+    parse_issue_params_from_github_webhook(issue_params) if issue_params.present?
+
+    GenerateChangelogsWorker.perform_async(id) if params[:ref_type] == 'tag' && generate_changelogs?
   end
 
   def parse_params_from_gitlab_webhook(params)
-    parse_issue_params_from_gitlab_webhook(params[:object_attributes]) if params[:object_kind] == 'issue'
+    object_kind = params[:object_kind]
 
-    GenerateChangelogWorker.perform_async(id) if params[:object_kind] == 'tag_push' && generate_changelogs?
+    parse_issue_params_from_gitlab_webhook(params[:object_attributes]) if object_kind == 'issue'
+
+    GenerateChangelogsWorker.perform_async(id) if object_kind == 'tag_push' && generate_changelogs?
   end
 
   def parse_params_from_bitbucket_webhook(params)
-    parse_issue_params_from_bitbucket_webhook(params[:issue]) if params[:issue].present?
+    issue_params = params[:issue]
+
+    parse_issue_params_from_bitbucket_webhook(issue_params) if issue_params.present?
 
     if params.dig(:push, :changes).present? && params[:push][:changes].first.dig(:new, :type) == 'tag'
-      GenerateChangelogWorker.perform_async(id) if generate_changelogs?
+      GenerateChangelogsWorker.perform_async(id) if generate_changelogs?
     end
   end
 
@@ -146,19 +202,19 @@ class Project < ActiveRecord::Base
   def fetch_and_create_github_issue(github_issue_number)
     info = github_client_for_changelogs.issue(github_repository_id, github_issue_number)
 
-    Issue.sync_with_github_issue(info, self)
+    sync_from_github_issue(info)
   end
 
   def fetch_and_create_gitlab_issue(gitlab_issue_id)
     info = gitlab_client_for_changelogs.issue(gitlab_repository_id, gitlab_issue_id)
 
-    Issue.sync_with_gitlab_issue(info, self)
+    sync_from_gitlab_issue(info)
   end
 
   def fetch_and_create_bitbucket_issue(bitbucket_issue_id)
     info = bitbucket_client_for_changelogs.issues.get(bitbucket_owner, bitbucket_slug, bitbucket_issue_id)
 
-    Issue.sync_with_bitbucket_issue(info, self)
+    sync_from_bitbucket_issue(info)
   end
 
   def remove_hook_from_bitbucket(authentication, hook)
@@ -179,12 +235,8 @@ class Project < ActiveRecord::Base
     client.hooks(github_full_name).find do |hook|
       hook.config[:url] == payload_from_github_url
     end
-  rescue Octokit::NotFound
-    Rails.logger.info "Octokit::NotFound on fetch hooks from project id #{ id }"
-
-    false
-  rescue Octokit::Unauthorized
-    Rails.logger.info "Octokit::Unauthorized on get hooks from project id #{ id }"
+  rescue Octokit::NotFound, Octokit::Unauthorized
+    Rails.logger.info "Octokit error on fetch hooks from project id #{ id }"
 
     false
   end
@@ -192,7 +244,7 @@ class Project < ActiveRecord::Base
   def fetch_hook_from_bitbucket(authentication)
     result = list_bitbucket_hooks(authentication)
 
-    result[:values].find { |h| h[:description] == 'kanbanonrails' }
+    result[:values].find { |hash| hash[:description] == 'kanbanonrails' }
   rescue BitBucket::Error::Forbidden, BitBucket::Error::NotFound
     Rails.logger.info "BitBucket error on get hooks from project id #{ id }"
 
@@ -213,6 +265,8 @@ class Project < ActiveRecord::Base
         payload_from_github_project_url(id, :host => Settings.webhook_host),
         :secret => github_secret_token_for_hook, :content_type => 'json' },
       :events => ['*'])
+  rescue Octokit::NotFound, Octokit::Unauthorized
+    Rails.logger.info "Octokit error on creating hook with project id #{ id }"
   end
 
   def create_hook_to_gitlab(client)
@@ -237,85 +291,36 @@ class Project < ActiveRecord::Base
     issues.where(:state => 'open').size
   end
 
-  def check_bitbucket_owner(repo, client)
-    repo.owner == client.user_api.profile.dig(:user, :username) ? 'owner' : 'member'
-  end
-
-  def check_gitlab_owner(repo, client)
-    if repo.owner.present?
-      repo.owner.name == client.user.name ? 'owner' : 'member'
-    else
-      'member'
-    end
-  end
-
-  def check_github_owner(repo, _client)
-    repo.permissions[:admin] == true ? 'owner' : 'member'
-  end
-
   def list_bitbucket_hooks(authentication)
-    BitBucket::Repos::Webhooks.new(:oauth_token => authentication.token,
-      :oauth_secret => authentication.secret,
-      :client_secret => Settings.omniauth.bitbucket.secret,
-      :client_id => Settings.omniauth.bitbucket.key).list(bitbucket_owner, bitbucket_slug)
+    webhooks_client = authentication.bitbucket_webhooks_client
+
+    return unless webhooks_client.present?
+
+    webhooks_client.list(bitbucket_owner, bitbucket_slug)
   end
 
   class << self
-    def sync_with_github_project(repo)
-      project = Project.find_by("meta ->> 'github_repository_id' = '?'", repo.id)
+    %w(github gitlab).each do |provider|
+      define_method "sync_with_#{ provider }_project" do |repo|
+        project = Project.find_by("meta ->> '#{ provider }_repository_id' = '?'", repo.id)
 
-      project = Project.new.tap { |p| p.github_repository_id = repo.id } unless project.present?
+        unless project.present?
+          project = Project.new.tap { |item| item.send("#{ provider }_repository_id=", repo.id) }
+        end
 
-      project.tap { |item| item.assign_attributes_from_github(repo) }
-    end
-
-    def sync_with_gitlab_project(repo)
-      project = Project.find_by("meta ->> 'gitlab_repository_id' = '?'", repo.id)
-
-      project = Project.new.tap { |p| p.gitlab_repository_id = repo.id } unless project.present?
-
-      project.tap { |item| item.assign_attributes_from_gitlab(repo) }
+        project.tap { |item| item.send("assign_attributes_from_#{ provider }", repo) }
+      end
     end
 
     def sync_with_bitbucket_project(repo)
-      project = Project.find_by("meta ->> 'bitbucket_full_name' = ?", [repo.owner, repo.slug].join('/'))
+      full_name = [repo.owner, repo.slug].join('/')
 
-      unless project.present?
-        project = Project.new.tap { |p| p.bitbucket_full_name = [repo.owner, repo.slug].join('/') }
-      end
+      project = Project.find_by("meta ->> 'bitbucket_full_name' = ?", full_name)
+
+      project = Project.new(:bitbucket_full_name => full_name) unless project.present?
 
       project.tap { |item| item.assign_attributes_from_bitbucket(repo) }
     end
-  end
-
-  def assign_attributes_from_bitbucket(repo)
-    assign_attributes(
-      :name => repo.name,
-      :bitbucket_name => repo.name,
-      :bitbucket_slug => repo.slug,
-      :bitbucket_owner => repo.owner,
-      :is_bitbucket_repository => true
-    )
-  end
-
-  def assign_attributes_from_gitlab(repo)
-    assign_attributes(
-      :name => repo.name,
-      :gitlab_name => repo.name,
-      :gitlab_url => repo.web_url,
-      :gitlab_full_name => repo.path_with_namespace,
-      :is_gitlab_repository => true
-    )
-  end
-
-  def assign_attributes_from_github(repo)
-    update_attributes(
-      :name => repo.name,
-      :github_name => repo.name,
-      :github_url => repo.html_url,
-      :github_full_name => repo.full_name,
-      :is_github_repository => true
-    )
   end
 
   private

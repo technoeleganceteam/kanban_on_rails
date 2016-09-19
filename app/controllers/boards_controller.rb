@@ -1,4 +1,7 @@
+# Controller for handle boards
 class BoardsController < ApplicationController
+  include Creatable
+
   load_and_authorize_resource :user
 
   load_resource :board, :through => :user, :shallow => true
@@ -22,19 +25,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @sections = @board.sections.order('section_order ASC')
-
-    @columns = @board.columns.order('column_order ASC')
-
-    @columns_count = @board.columns.size
-  end
-
-  def create
-    if @board.save
-      redirect_to board_url(@board), :turbolinks => !request.format.html?
-    else
-      render :new
-    end
+    @board = @board.decorate
   end
 
   def update
@@ -69,18 +60,26 @@ class BoardsController < ApplicationController
   end
 
   def handle_issues_attributes
-    return unless board_params[:issues_attributes].present?
+    return unless (issues_attributes = params[:board][:issues_attributes]).present?
 
-    params[:board][:issues_attributes] = params[:board][:issues_attributes].map do |attributes|
-      issue = Issue.find(attributes.last[:id])
+    add_issue_attributes(issues_attributes)
+  end
 
-      issue.parse_attributes_for_update(attributes.last)
+  def add_issue_attributes(issues_attributes)
+    params[:board][:issues_attributes] = issues_attributes.map do |attributes|
+      last_attribute = attributes.last
+
+      issue = Issue.find(last_attribute[:id])
+
+      IssueUtilities.parse_attributes_for_update(last_attribute, issue)
     end
   end
 
   def enqueue_issue_sync
-    return unless board_params[:issues_attributes].present?
+    issues_attributes = board_params[:issues_attributes]
 
-    board_params[:issues_attributes].each { |attr| Issue.user_change_issue(attr[:id], current_user.id) }
+    return unless issues_attributes.present?
+
+    issues_attributes.each { |attr| Issue.user_change_issue(attr[:id], current_user.id) }
   end
 end

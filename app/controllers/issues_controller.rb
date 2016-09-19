@@ -1,3 +1,4 @@
+# Controller for manage issues
 class IssuesController < ApplicationController
   load_and_authorize_resource :project
 
@@ -10,21 +11,14 @@ class IssuesController < ApplicationController
   def index
     @issues = if @board.present? && @connections.present?
       @connections.map(&:issue)
-    elsif @project
-      @project.issues.page(params[:page])
     else
-      current_user.issues.page(params[:page]).includes(:project)
+      (@project.present? ? @project.issues : current_user.issues.includes(:project)).page(params[:page])
     end
   end
 
   def create
     if @issue.save
-      enqueue_issue_sync
-
-      respond_to do |format|
-        format.js { render :handle_save }
-        format.html { redirect_to project_url(@issue.project) }
-      end
+      after_create_or_update
     else
       render :new
     end
@@ -32,12 +26,7 @@ class IssuesController < ApplicationController
 
   def update
     if @issue.update_attributes(update_params)
-      enqueue_issue_sync
-
-      respond_to do |format|
-        format.js { render :handle_save }
-        format.html { redirect_to project_url(@issue.project) }
-      end
+      after_create_or_update
     else
       render :edit
     end
@@ -68,10 +57,26 @@ class IssuesController < ApplicationController
   end
 
   def fetch_board_and_connections
-    return unless params[:board_id].present?
+    board_id = params[:board_id]
 
-    @board = Board.find(params[:board_id])
+    return unless board_id.present?
+
+    @board = Board.find(board_id)
 
     @connections = @board.issue_to_section_connections_from_params(params).page(params[:page])
+  end
+
+  def after_create_or_update
+    enqueue_issue_sync
+
+    respond_after_create_or_update
+  end
+
+  def respond_after_create_or_update
+    respond_to do |format|
+      format.js { render :handle_save }
+
+      format.html { redirect_to project_url(@issue.project) }
+    end
   end
 end

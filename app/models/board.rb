@@ -1,3 +1,4 @@
+# Class for boards business logic
 class Board < ActiveRecord::Base
   has_many :users, :through => :user_to_board_connections
 
@@ -40,9 +41,11 @@ class Board < ActiveRecord::Base
   def issue_to_section_connections_from_params(params = {})
     connections = issue_to_section_connections.includes(:issue => :project)
 
-    connections = connections.where(:column_id => params[:column_id]) if params[:column_id].present?
+    [:column_id, :section_id].each do |field|
+      value = params[field]
 
-    connections = connections.where(:section_id => params[:section_id]) if params[:section_id].present?
+      connections = connections.where(field => value) if value.present?
+    end
 
     connections
   end
@@ -60,7 +63,7 @@ class Board < ActiveRecord::Base
   def column_tags_overlapping
     tags_combinations = columns.map(&:tags).map { |tag| tag.reject(&:empty?) }.combination(2)
 
-    unless tags_combinations.map { |tag1, tag2| tag1 & tag2 }.flatten.empty?
+    unless tags_combinations.map { |first_tag, second_tag| first_tag & second_tag }.flatten.empty?
       errors.add(:base, (I18n.t '.shared.form_errors.columns.tag'))
     end
   end

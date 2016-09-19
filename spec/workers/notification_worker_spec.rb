@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NotificationWorker do
+describe NotificationWorker do
   let(:user) { create :user }
 
   let(:issue) { create :issue }

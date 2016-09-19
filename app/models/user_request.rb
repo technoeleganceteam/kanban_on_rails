@@ -1,3 +1,4 @@
+# Class for user requests business logic
 class UserRequest < ActiveRecord::Base
   belongs_to :user
 

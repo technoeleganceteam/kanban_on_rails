@@ -1,3 +1,4 @@
+# Class for connecting boards and projects. Need for many to many association.
 class ProjectToBoardConnection < ActiveRecord::Base
   belongs_to :project
 

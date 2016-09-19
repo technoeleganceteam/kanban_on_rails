@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
     resources :projects, :only => [:new, :index, :create, :destroy, :update, :edit] do
       get :stop_sync_with_github, :stop_sync_with_bitbucket, :stop_sync_with_gitlab,
-        :sync_with_github, :sync_with_bitbucket, :sync_with_gitlab, :on => :collection
+        :sync_from_github, :sync_from_bitbucket, :sync_from_gitlab, :on => :collection
     end
 
     resources :boards, :user_requests, :except => [:show]

@@ -1,3 +1,4 @@
+# Main controller which define ApplicationController
 class ApplicationController < ActionController::Base
   protect_from_forgery :with => :exception
 
@@ -32,19 +33,25 @@ class ApplicationController < ActionController::Base
   end
 
   def manage_user_and_session_locale
-    session[:locale] = I18n.locale
+    i18n_locale = I18n.locale
 
-    if user_signed_in? && I18n.locale.to_s != current_user.locale
-      current_user.update_attributes(:locale => I18n.locale)
+    session[:locale] = i18n_locale
+
+    if user_signed_in? && i18n_locale.to_s != current_user.locale
+      current_user.update_attributes(:locale => i18n_locale)
     end
   end
 
   def fetch_existing_locale
-    return params[:locale] if params[:locale].present?
+    params_locale = params[:locale]
+
+    return params_locale if params_locale.present?
 
     return current_user.locale if user_signed_in?
 
-    return session[:locale] if session[:locale].present?
+    session_locale = session[:locale]
+
+    return session_locale if session_locale.present?
   end
 
   def check_unset_locale

@@ -1,3 +1,4 @@
+# Define abilities for user
 class Ability
   include CanCan::Ability
 
@@ -5,6 +6,8 @@ class Ability
   # rubocop:disable MethodLength
   def initialize(user)
     user ||= User.new
+
+    user_id = user.id
 
     cannot :read, :all
 
@@ -15,22 +18,22 @@ class Ability
     can :read, UserRequest
 
     if user.persisted?
-      can :manage, User, :id => user.id
+      can :manage, User, :id => user_id
 
-      can :settings, User, :id => user.id
+      can :settings, User, :id => user_id
 
-      can :dashboard, User, :id => user.id
+      can :dashboard, User, :id => user_id
 
-      can :read, User, :id => user.id
+      can :read, User, :id => user_id
 
-      can :manage, Authentication, :user_id => user.id
+      can :manage, Authentication, :user_id => user_id
 
       can :read, Project do |project|
-        project.user_ids.include?(user.id)
+        project.user_ids.include?(user_id)
       end
 
       can :read, Board do |board|
-        board.user_ids.include?(user.id)
+        board.user_ids.include?(user_id)
       end
 
       can :create, Project
@@ -49,24 +52,26 @@ class Ability
 
       can :stop_sync_with_gitlab, Project
 
-      can :manage, UserRequest, :user_id => user.id
+      can :manage, UserRequest, :user_id => user_id
 
       can :manage, Board do |board|
-        board.user_to_board_connections.find_by(:user_id => user.id, :role => 'owner').present?
+        board.user_to_board_connections.find_by(:user_id => user_id, :role => 'owner').present?
       end
 
       can :manage, Project do |project|
-        project.user_to_project_connections.find_by(:user_id => user.id, :role => 'owner').present?
+        project.user_to_project_connections.find_by(:user_id => user_id, :role => 'owner').present?
       end
 
       can :manage, Changelog do |changelog|
-        changelog.project.user_ids.include?(user.id)
+        changelog.project.user_ids.include?(user_id)
       end
 
       can :create, Issue
 
       can :manage, Issue do |issue|
-        issue.project.user_ids.include?(user.id) if issue.project.present?
+        issue_project = issue.project
+
+        issue_project.user_ids.include?(user_id) if issue_project.present?
       end
     end
   end

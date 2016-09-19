@@ -1,3 +1,5 @@
+# Class for sections business logic.
+# Sections allow user to divide a board on multiple parts. For example a part for clients/important/etc.
 class Section < ActiveRecord::Base
   include EmptyArrayRemovable
 

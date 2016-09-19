@@ -1,4 +1,5 @@
 module ApplicationCable
+  # The Connection for ActionCable
   class Connection < ActionCable::Connection::Base
     identified_by :current_user
 

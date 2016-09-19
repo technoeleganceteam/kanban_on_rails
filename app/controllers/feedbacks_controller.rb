@@ -1,3 +1,4 @@
+# Controller for manage feedbacks
 class FeedbacksController < ApplicationController
   load_resource
 

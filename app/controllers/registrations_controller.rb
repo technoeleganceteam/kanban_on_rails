@@ -1,3 +1,4 @@
+# Controller for override create action(because of recaptcha) of Devise::RegistrationsController
 class RegistrationsController < Devise::RegistrationsController
   def create
     if verify_recaptcha

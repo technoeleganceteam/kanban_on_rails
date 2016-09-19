@@ -15,6 +15,12 @@ namespace :kanban_on_rails do
 
     sh('bundle exec mdl -s config/markdown_ruleset.rb *.md')
 
+    sh('bundle exec bundle-audit check --update')
+
+    sh('bundle exec flay .')
+
+    sh('bundle exec reek')
+
     sh('npm run coffeelint')
 
     sh('npm run sass-lint')

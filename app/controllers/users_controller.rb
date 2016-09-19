@@ -1,3 +1,4 @@
+# Controller for manage users
 class UsersController < ApplicationController
   load_and_authorize_resource :except => [:index, :new, :create]
 
@@ -5,14 +6,9 @@ class UsersController < ApplicationController
 
   before_action :find_and_check_read, :only => [:index]
 
-  before_action :build_user, :only => [:create]
+  before_action :build_user_and_connection, :only => [:create]
 
   def dashboard
-    @projects_count = @user.projects.size
-
-    @boards_count = @user.boards.size
-
-    @issues_count = @user.issues.size
   end
 
   def index
@@ -69,12 +65,8 @@ class UsersController < ApplicationController
     authorize! :read, @board
   end
 
-  def build_user
-    @user = User.where(:email => create_params[:email]).first_or_initialize
-
-    @user.name ||= create_params[:name]
-
-    @user.locale ||= create_params[:locale]
+  def build_user_and_connection
+    @user = User.build_user(create_params)
 
     @user.password = create_params[:password] unless @user.persisted?
 
@@ -82,10 +74,12 @@ class UsersController < ApplicationController
   end
 
   def build_connection
+    board_id = @board.id
+
     connection = if @user.persisted?
-      UserToBoardConnection.where(:user_id => @user.id, :board_id => @board.id).first_or_initialize
+      UserToBoardConnection.where(:user_id => @user.id, :board_id => board_id).first_or_initialize
     else
-      @user.user_to_board_connections.build(:board_id => @board.id)
+      @user.user_to_board_connections.build(:board_id => board_id)
     end
 
     connection.role = params[:role] if can? :manage, @board

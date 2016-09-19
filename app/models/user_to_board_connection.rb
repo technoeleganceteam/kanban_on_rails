@@ -1,3 +1,4 @@
+# Class for user to board connections business logic
 class UserToBoardConnection < ActiveRecord::Base
   belongs_to :user
 

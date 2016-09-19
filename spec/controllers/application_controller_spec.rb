@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ApplicationController, :type => :controller do
+describe ApplicationController, :type => :controller do
   controller(DeviseController) do
     def configure_permitted_parameters
       super
