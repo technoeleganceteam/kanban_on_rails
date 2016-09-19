@@ -302,7 +302,7 @@ class Project < ActiveRecord::Base
   class << self
     %w(github gitlab).each do |provider|
       define_method "sync_with_#{ provider }_project" do |repo|
-        project = Project.find_by("meta ->> '#{ provider }_repository_id' = '?'", repo.id)
+        project = Project.find_by("meta ->> ? = '?'", "#{ provider }_repository_id", repo.id)
 
         unless project.present?
           project = Project.new.tap { |item| item.send("#{ provider }_repository_id=", repo.id) }
