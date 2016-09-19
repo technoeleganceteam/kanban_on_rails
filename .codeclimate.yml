@@ -23,3 +23,5 @@ ratings:
 exclude_paths:
   - node_modules/**/*
   - spec/**/*
+  - db/schema.rb
+  - config/initializers/rack_attack.rb
