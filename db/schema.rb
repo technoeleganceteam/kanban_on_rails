@@ -31,14 +31,14 @@ ActiveRecord::Schema.define(version: 20160704204218) do
   add_index "authentications", ["user_id"], name: "index_authentications_on_user_id", using: :btree
 
   create_table "boards", force: :cascade do |t|
-    t.boolean  "public"
-    t.string   "tags",          default: [],               array: true
-    t.string   "name"
-    t.integer  "column_width",  default: 200, null: false
-    t.integer  "column_height", default: 600, null: false
+    t.boolean  "public",        default: false, null: false
+    t.string   "tags",          default: [],                 array: true
+    t.string   "name",                          null: false
+    t.integer  "column_width",  default: 200,   null: false
+    t.integer  "column_height", default: 600,   null: false
     t.jsonb    "meta",          default: {}
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "changelogs", force: :cascade do |t|

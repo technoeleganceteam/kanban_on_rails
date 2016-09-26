@@ -1,8 +1,10 @@
-/.bundle
-/log/*.log
-/tmp
-/coverage
-/node_modules
+.git
+.dockerignore
+.bundle
+log/*.log
+tmp/
+coverage/
+node_modules/
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
