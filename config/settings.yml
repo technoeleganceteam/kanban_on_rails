@@ -32,6 +32,7 @@ issues_providers:
   - bitbucket
 postgresql:
   test_database_name: travis_ci_test
+  test_database_host:
   username: postgres
   password:
   host: postgres

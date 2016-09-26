@@ -34,7 +34,7 @@ The easiest way to install it locally is using [Docker](https://www.docker.com).
 - Clone project ```git clone git@github.com:technoeleganceteam/kanban_on_rails.git```
 - Go to the project root and run ```docker-compose up```
 
-Then open your browser and go to http://localhost:3000. That's all.
+Then open your browser and go to [http://localhost:3000](http://localhost:3000). That's all.
 
 ### How to deploy to your server
 
@@ -46,7 +46,7 @@ If you'd like to integrate with your own Gitlab server, first you must deploy th
 
 ### How to run test suite and lints
 
-After local installation you can run specs with command ```rake spec```. You can run all specs and lints with command ```rake kanban_on_rails:run_all_specs_and_lints```. If you install it with Docker you need to write ```compose-docker run web``` before, for example ```docker-compose run web rake kanban_on_rails:run_all_specs_and_lints```.
+After local installation you can run specs with command ```rake spec```. You can run all specs and lints with command ```rake kanban_on_rails:run_all_specs_and_lints```. If you install it with Docker you need to copy  write ```docker-compose run web``` before, for example ```docker-compose run web rake kanban_on_rails:run_all_specs_and_lints```.
 
 ### How to contribute
 
