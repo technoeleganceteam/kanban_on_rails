@@ -13,7 +13,6 @@ development:
 test:
   <<: *common
   database: <%= Settings.postgresql.test_database_name %>
-  host: <%= Settings.postgresql.test_database_host %>
 
 staging:
   <<: *common

@@ -16,7 +16,7 @@ bitbucket_base_url: https://bitbucket.com
 gitlab_base_url: https://gitlab.com
 gitlab_endpoint: https://gitlab.com/api/v3
 redis:
-  url: redis://redis:6379/0
+  url: redis://localhost:6379/0
 issue_binding_words:
   - connects to
   - connects with
@@ -32,10 +32,9 @@ issues_providers:
   - bitbucket
 postgresql:
   test_database_name: travis_ci_test
-  test_database_host:
   username: postgres
   password:
-  host: postgres
+  host: localhost
 story_point_values:
   - XS
   - S
