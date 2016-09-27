@@ -127,9 +127,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.11.1)
-      capybara (>= 2.3.0, < 2.8.0)
-      json
     celluloid (0.16.0)
       timers (~> 4.0.0)
     childprocess (0.5.9)
@@ -553,7 +550,6 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-sidekiq
   capybara
-  capybara-webkit
   cocoon
   codeclimate-test-reporter
   coffee-rails

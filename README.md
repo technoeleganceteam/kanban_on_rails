@@ -25,72 +25,21 @@
 - **Multi-language** Service is translated in more than 70 languages.
 - **Completely open source** This servise is licensed under MIT License and you can fork this repository or do whatever you want with the code. You can also deploy this service to your own server.
 
-### System dependencies
-
-To install this application to your server you need these services and packages:
-
-- PostgreSQL
-- Ruby
-- Memcached
-- Git
-- libpq-dev
-- Ubuntu(or some Unix)
-- Nginx
-- Sidekiq
-- RVM
-
-You can deploy it with Capistrano(config is in repository) and Puppet provisioning. May be in some future we put puppet module for this project to open source too.
-
 ### Local installation
 
-Installation is quite simple if you have already some experience with Ruby on Rails applications. Here an example for Ubuntu:
+The easiest way to install it locally is using [Docker](https://www.docker.com). All you need is:
 
-#### Ubuntu(14.04)
+- Install Docker Engine to your OS first and then install Docker Compose.
+- Pull kanban_on_rails image: ```docker pull gkopylov/kanban_on_rails:1```.
+- Clone project ```git clone git@github.com:technoeleganceteam/kanban_on_rails.git```
+- Copy ```config/settings.local.yml.example``` and rename it to ```config/settings.local.yml```
+- Go to the project root and run ```docker-compose up```
 
-##### RVM
-
-```bash
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-```
-
-```bash
-\curl -sSL https://get.rvm.io | bash
-```
-
-##### Ruby
-
-```bash
-rvm install ruby-2.3.1
-```
-
-##### PostgreSQL
-
-```bash
-deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main
-```
-
-```bash
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
-  sudo apt-key add -
-sudo apt-get update
-sudo apt-get install postgresql-9.4
-```
-
-```bash
-sudo apt-get install libpq-dev
-```
-
-##### Redis
-
-```bash
-sudo apt-get install redis-server
-```
-
-After installation packages listed above you should clone this github repository to your computer and run ```bundle install``` at the root of the project directory. Create file ```config/settings.local.yml``` with your local settings and run ```rake db:migrate```
+Then open your browser and go to [http://localhost:3000](http://localhost:3000). That's almost all. If you'd like to have integration with other services locally you need to specify your settings for these services in ```config/settings.local.yml```.
 
 ### How to deploy to your server
 
-Easiest way is to clone this repository to your computer, check that your server meets dependencies listed above and run ```cap deploy production``` from your computer. You can also create Github, Bitbucket or Gitlab Oauth app and specify it credentials in omniauth section in ```config/settings.local.yml``` on your server.
+Currenlty this service deployed by Capistrano with Puppet provision. But you can choose different way to deploy, for example by Ansible with Docker.
 
 ### How to integrate with your own Gitlab server
 
@@ -98,7 +47,7 @@ If you'd like to integrate with your own Gitlab server, first you must deploy th
 
 ### How to run test suite and lints
 
-After local installation you can run specs with command ```rake spec```. You can run all specs and lints with command ```rake kanban_on_rails:run_all_specs_and_lints```.
+After local installation you can run specs with command ```rake spec```. You can run all specs and lints with command ```rake kanban_on_rails:run_all_specs_and_lints```. If you install it with Docker you to write ```docker-compose run web``` before, for example ```docker-compose run web rake kanban_on_rails:run_all_specs_and_lints```.
 
 ### How to contribute
 

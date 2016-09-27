@@ -92,7 +92,6 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'capybara-webkit'
 end
 
 group :test do

@@ -1,0 +1,4 @@
+postgresql:
+  host: postgres
+redis:
+  url: redis://redis:6379/0

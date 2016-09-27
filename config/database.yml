@@ -1,31 +1,25 @@
-development:
+common: &common
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: kanban_on_rails_development
   username: <%= Settings.postgresql.username %>
   password: <%= Settings.postgresql.password %>
+  host: <%= Settings.postgresql.host %>
+
+development:
+  <<: *common
+  database: kanban_on_rails_development
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  <<: *common
   database: <%= Settings.postgresql.test_database_name %>
-  username: <%= Settings.postgresql.username %>
-  password: <%= Settings.postgresql.password %>
 
 staging:
-  adapter: postgresql
-  encoding: unicode
+  <<: *common
   pool: 25
   database: kanban_on_rails_staging
-  username: <%= Settings.postgresql.username %>
-  password: <%= Settings.postgresql.password %>
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 25
+  <<: *common
+  pool: 50
   database: kanban_on_rails_production
-  username: <%= Settings.postgresql.username %>
-  password: <%= Settings.postgresql.password %>
