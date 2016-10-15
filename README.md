@@ -30,12 +30,13 @@
 The easiest way to install it locally is using [Docker](https://www.docker.com). All you need is:
 
 - Install Docker Engine to your OS first and then install Docker Compose.
-- Pull kanban_on_rails image: ```docker pull gkopylov/kanban_on_rails:1```.
 - Clone project ```git clone git@github.com:technoeleganceteam/kanban_on_rails.git```
-- Copy ```config/settings.local.yml.example``` and rename it to ```config/settings.local.yml```
-- Go to the project root and run ```docker-compose up```
+- Go to the project root, copy ```config/settings.local.yml.example``` and rename it to ```config/settings.local.yml```
+- Run ```docker-compose run web rake db:create```
+- Run ```docker-compose run web rake db:migrate```
+- Run ```docker-compose up```
 
-Then open your browser and go to [http://localhost:3000](http://localhost:3000). That's almost all. If you'd like to have integration with other services locally you need to specify your settings for these services in ```config/settings.local.yml```.
+Then open your browser and go to [http://localhost:3000](http://localhost:3000) or if your work with virtual box go to [http://your-virtual-box-local-ip:3000](http://your-virtual-box-local-ip:3000). That's almost all. If you'd like to have integration with other services locally you need to specify your settings for these services in ```config/settings.local.yml```.
 
 ### How to deploy to your server
 
