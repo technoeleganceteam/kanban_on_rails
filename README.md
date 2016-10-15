@@ -29,8 +29,8 @@
 
 The easiest way to install it locally is using [Docker](https://www.docker.com). All you need is:
 
-- Install Docker Engine to your OS first and then install Docker Compose.
-- Clone project ```git clone git@github.com:technoeleganceteam/kanban_on_rails.git```
+- Install Docker Engine and Docker Compose to your OS.
+- Clone project ```git clone git@github.com:technoeleganceteam/kanban_on_rails.git``` or if you haven't profile in Github ```git clone https://github.com/technoeleganceteam/kanban_on_rails.git```
 - Go to the project root, copy ```config/settings.local.yml.example``` and rename it to ```config/settings.local.yml```
 - Run ```docker-compose run web rake db:create```
 - Run ```docker-compose run web rake db:migrate```
